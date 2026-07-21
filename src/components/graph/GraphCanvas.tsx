@@ -277,6 +277,7 @@ const GraphCanvas = forwardRef<GraphCanvasHandle, GraphCanvasProps>(
           simulationRef.current = null
         }
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [nodes, links, onNodeClick, mode, collapsedIds])
 
     // ========== 力导向图模式 ==========
