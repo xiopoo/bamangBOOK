@@ -1,0 +1,14 @@
+- [x] Checkpoint 1: 所有表格列数一致，格式符合Markdown标准
+- [x] Checkpoint 2: 段落之间有正确的空行分隔，符合Markdown标准
+- [x] Checkpoint 3: 所有表格头被正确识别并转换为Markdown表格格式
+- [x] Checkpoint 4: 修复后的文档内容与原始内容一致，仅格式调整
+- [x] Checkpoint 5: 表格数据准确完整，无遗漏或错误
+- [x] Checkpoint 6: 文本内容准确无误、逻辑清晰、语言流畅
+- [x] Checkpoint 7: 文档格式符合Markdown标准，可正常渲染
+- [x] Checkpoint 8: 所有合伙人信文档都有正确的分段和表格格式
+- [x] Checkpoint 9: 所有股东信文档都有正确的分段和表格格式
+- [x] Checkpoint 10: 所有文章、访谈、演讲文档都有正确的分段和表格格式
+- [x] Checkpoint 11: 标题、日期、正文正确分隔，文档结构清晰
+- [x] Checkpoint 12: `content/partnership/` 目录包含正确数量的合伙人信文档
+- [x] Checkpoint 13: `content/letters/` 目录包含正确数量的股东信文档
+- [x] Checkpoint 14: 索引文件已更新，内容与实际文档一致

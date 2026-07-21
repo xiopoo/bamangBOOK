@@ -1,0 +1,15 @@
+- [x] Checkpoint 1: 60封股东信成功整理到content/letters目录
+- [x] Checkpoint 2: 23封合伙人信成功整理到content/partnership目录
+- [x] Checkpoint 3: 17篇演讲文档成功整理到content/talks目录
+- [x] Checkpoint 4: /talks页面展示演讲列表，按年份分组
+- [x] Checkpoint 5: 30篇访谈文档成功整理到content/interviews目录
+- [x] Checkpoint 6: /interviews页面展示访谈列表，按年份分组
+- [x] Checkpoint 7: 40篇问答文档成功整理到content/qa目录
+- [x] Checkpoint 8: /qa页面展示问答列表，按年份分组
+- [x] Checkpoint 9: 95篇专题文章成功整理到content/articles目录
+- [x] Checkpoint 10: /articles页面展示文章列表，按主题分组
+- [x] Checkpoint 11: 首页统计数据更新，包含新内容类型
+- [x] Checkpoint 12: 导航菜单包含新分类入口链接
+- [x] Checkpoint 13: index.json包含新内容统计数据
+- [x] Checkpoint 14: 知识图谱包含新文档节点
+- [x] Checkpoint 15: 所有页面可正常访问，无404错误

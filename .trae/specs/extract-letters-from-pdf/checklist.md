@@ -1,0 +1,8 @@
+- [x] Checkpoint 1: PDF文件可成功读取，文本提取无错误
+- [x] Checkpoint 2: 正确识别1965-2024年共60封信的边界
+- [x] Checkpoint 3: 每封信字数统计准确
+- [x] Checkpoint 4: 所有Markdown文件成功生成到content/letters/目录
+- [x] Checkpoint 5: 文件格式符合项目编辑指南（标题、段落等）
+- [x] Checkpoint 6: 内容索引文件包含完整的元数据
+- [x] Checkpoint 7: 无乱码或严重格式问题
+- [x] Checkpoint 8: 抽样检查5个年份的内容质量合格

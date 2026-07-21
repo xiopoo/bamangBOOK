@@ -1,0 +1,225 @@
+{
+  "id": "topics",
+  "title": "专题研读：按兴趣深入探索",
+  "subtitle": "完成入门和进阶后，选择感兴趣的方向做垂直深耕",
+  "icon": "🌳",
+  "subPaths": [
+    {
+      "id": "companies",
+      "title": "公司分析专题",
+      "subtitle": "8 篇文章 · 深入理解巴菲特如何分析和收购公司",
+      "steps": [
+        {
+          "order": 1,
+          "title": "早期投资分析",
+          "description": "巴菲特21岁到27岁期间的四份股票分析报告",
+          "items": [
+            { "type": "article", "category": "articles", "file": "03-公司分析/我最看好的股票：GEICO_保险_1951.md", "note": "21岁：巴菲特的起点" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/我最看好的股票：西部保险_1953.md", "note": "23岁：保险行业的分析框架" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/我最看好的股票：人寿保险_1957.md", "note": "27岁：人寿保险公司的深度分析" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/我最看好的股票：油气资产管理公司_1957.md", "note": "27岁：通胀环境下的选股逻辑" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "经典收购案例",
+          "description": "从喜诗糖果到BNSF，伯克希尔的四大标志性收购",
+          "items": [
+            { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特谈喜诗糖果_1972.md", "note": "护城河型企业的原型：品牌定价权" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特谈_GEICO1976.md", "note": "困境反转：GEICO的专业判断" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特收购_LTMC_要约_1998.md", "note": "危机收购：长期资本管理公司的要约" },
+            { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特：收购_BNSF_铁路.md", "note": "260亿美元押注：对美国经济的长期信念" }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "配套概念",
+          "description": "理解这些公司分析所需的核心概念",
+          "items": [
+            { "type": "concept", "category": "concepts", "file": "浮存金", "note": "保险浮存金——伯克希尔的负成本杠杆" },
+            { "type": "concept", "category": "concepts", "file": "特许经营权", "note": "特许经营权企业为何优越" },
+            { "type": "concept", "category": "concepts", "file": "品牌价值", "note": "喜诗糖果的核心护城河" },
+            { "type": "concept", "category": "concepts", "file": "再保险", "note": "再保险业务的经营逻辑" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycles",
+      "title": "市场周期专题",
+      "subtitle": "9 篇文章 · 横跨30年，感受巴菲特在不同市场中的判断和应对",
+      "steps": [
+        {
+          "order": 1,
+          "title": "1974-1982：高通胀与熊市",
+          "description": "从70年代大熊市到金融衍生品兴起",
+          "items": [
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_1974.md", "note": "1974年：道指600点，极度看多" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈通货膨胀_1977.md", "note": "1977年：通胀如何侵蚀投资回报" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_1979.md", "note": "1979年：股票相对债券被严重低估" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈指数期货_1982.md", "note": "1982年：预警股指期货加剧市场波动" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/格雷厄姆谈股市_1976.md", "note": "1976年：价值投资教父的最后智慧" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "1999-2008：泡沫与危机",
+          "description": "从互联网泡沫到全球金融危机",
+          "items": [
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_1999.md", "note": "1999年：太阳谷演讲，警告互联网泡沫" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_2001.md", "note": "2001年：911后的三因素分析框架" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/沃伦在担心什么_2003.md", "note": "2003年：金融大规模杀伤性武器" },
+            { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特：买入美国正当时_2008.md", "note": "2008年：别人恐惧时贪婪" }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "配套概念",
+          "items": [
+            { "type": "concept", "category": "concepts", "file": "贪婪与恐惧", "note": "市场情绪的基础理解" },
+            { "type": "concept", "category": "concepts", "file": "利率", "note": "利率与资产定价的关系" },
+            { "type": "concept", "category": "concepts", "file": "通货膨胀", "note": "通胀对企业盈利的影响" },
+            { "type": "concept", "category": "concepts", "file": "衍生品", "note": "巴菲特眼中的金融武器" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "title": "政策与社会专题",
+      "subtitle": "5 篇文章 · 理解巴菲特作为公民和企业家的社会责任观",
+      "steps": [
+        {
+          "order": 1,
+          "title": "企业治理与会计改革",
+          "description": "从安然事件到期权费用化，巴菲特对企业透明度的呼吁",
+          "items": [
+            { "type": "article", "category": "articles", "file": "05-政策社会/巴菲特：股票期权与常识_2002.md", "note": "股票期权费用化：腰围决定会计原则" },
+            { "type": "article", "category": "articles", "file": "05-政策社会/巴菲特：模糊数学与股票期权_2004.md", "note": "国会法案的会计漏洞" },
+            { "type": "article", "category": "articles", "file": "05-政策社会/巴菲特：谁是真正的账房先生.md", "note": "安然事件后的治理和审计信任危机" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "税收与慈善",
+          "description": "巴菲特对税收政策和慈善捐赠的立场",
+          "items": [
+            { "type": "article", "category": "articles", "file": "05-政策社会/巴菲特：股息巫术_2003.md", "note": "股息减税法案：税收天平向富人倾斜" },
+            { "type": "article", "category": "articles", "file": "05-政策社会/巴菲特：扩大所得税抵免比提高最低工资更好.md", "note": "如何用税收政策帮助穷人" }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "配套内容",
+          "description": "相关概念和延伸阅读",
+          "items": [
+            { "type": "concept", "category": "concepts", "file": "公司治理", "note": "公司治理的基本原则" },
+            { "type": "concept", "category": "concepts", "file": "股东回报", "note": "股息、回购与利润分配" },
+            { "type": "concept", "category": "concepts", "file": "通用会计准则", "note": "会计准则与真实盈利" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "人物与思想源流",
+      "subtitle": "8 篇文章 · 追溯巴菲特思想谱系：格雷厄姆—多德—芒格的精神传承",
+      "steps": [
+        {
+          "order": 1,
+          "title": "格雷厄姆—多德体系",
+          "description": "价值投资学派的创立者与继承者",
+          "items": [
+            { "type": "article", "category": "articles", "file": "04-人物传记/恩师格雷厄姆生平回顾.md", "note": "格雷厄姆传记：理解价值投资的源头" },
+            { "type": "article", "category": "articles", "file": "04-人物传记/巴菲特：怀念恩师格雷厄姆_1976.md", "note": "巴菲特对老师的深情评价" },
+            { "type": "article", "category": "articles", "file": "04-人物传记/施洛斯：怀念恩师格雷厄姆_1976.md", "note": "另一个学生的视角：施洛斯眼中的格雷厄姆" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "芒格与巴菲特的演变",
+          "description": "芒格如何从「捡烟蒂」将巴菲特引向「以合理价格买伟大企业」",
+          "items": [
+            { "type": "article", "category": "articles", "file": "04-人物传记/查理芒格：伯克希尔的总设计师.md", "note": "巴菲特亲自讲述芒格如何改变了他的投资哲学" },
+            { "type": "article", "category": "articles", "file": "04-人物传记/巴菲特：怀念恩师格雷厄姆_2008.md", "note": "巴菲特回忆格雷厄姆与芒格的双重影响" }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "企业兴衰的旁观者",
+          "description": "理解商业世界的生命周期",
+          "items": [
+            { "type": "article", "category": "articles", "file": "09-其他/杰米·戴蒙_2008_年致股东信.md", "note": "当代优秀CEO的代表性信件" },
+            { "type": "article", "category": "articles", "file": "09-其他/财富杂志：恐龙.md", "note": "IBM、通用汽车、西尔斯三大巨头的衰落史" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "munger",
+      "title": "芒格思维模型专题",
+      "subtitle": "5 篇文章 · 芒格的多学科思维模型：理解伯克希尔投资方法的另一把钥匙",
+      "steps": [
+        {
+          "order": 1,
+          "title": "核心演讲",
+          "description": "芒格最重要的三场演讲",
+          "items": [
+            { "type": "article", "category": "articles", "file": "08-芒格专题/芒格：关于实践思维的现实思考_1996.md", "note": "芒格最完整的多元思维模型演讲" },
+            { "type": "article", "category": "articles", "file": "08-芒格专题/芒格：论学院派经济学_2003.md", "note": "为什么单一学科不够：多学科融合的必要性" },
+            { "type": "article", "category": "articles", "file": "08-芒格专题/芒格：2003_年的金融大丑闻.md", "note": "寓言式批判：股票期权、会计作假与企业堕落" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "晚年智慧",
+          "description": "芒格晚年的投资与人生智慧",
+          "items": [
+            { "type": "article", "category": "articles", "file": "08-芒格专题/芒格：DJ_年会_2013.md", "note": "Daily Journal年会讲话" },
+            { "type": "article", "category": "articles", "file": "08-芒格专题/芒格：慈善圆桌会议讲话_2000.md", "note": "慈善和基金会运作的独立见解" }
+          ]
+        },
+        {
+          "order": 3,
+          "title": "配套概念",
+          "items": [
+            { "type": "concept", "category": "concepts", "file": "机会成本", "note": "芒格反复强调的思维工具" },
+            { "type": "concept", "category": "concepts", "file": "优质企业", "note": "「以合理价格买伟大企业」vs 捡烟蒂" },
+            { "type": "concept", "category": "concepts", "file": "管理层质量", "note": "选择管理层而非更换管理层" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "伯克希尔全景史",
+      "subtitle": "7 篇文章 + 5 封关键信 · 从1956年到2025年，伯克希尔70年的完整演进",
+      "steps": [
+        {
+          "order": 1,
+          "title": "合伙公司时代（1956-1969）",
+          "description": "从有限合伙协议到关闭合伙公司",
+          "items": [
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/巴菲特合伙契约_1956.md", "note": "一切的起点：原始合伙协议书" },
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/巴菲特合伙公司时代.md", "note": "13年合伙公司的完整历程" },
+            { "type": "letter", "category": "partnership", "file": "partnership_1957-巴菲特致合伙人信.md", "note": "第一封合伙人信" },
+            { "type": "letter", "category": "partnership", "file": "partnership_1969-annual-巴菲特致合伙人信.md", "note": "宣布关闭合伙公司" },
+            { "type": "letter", "category": "partnership", "file": "partnership_1970-bond-巴菲特致合伙人信.md", "note": "推荐债券投资的退出信" }
+          ]
+        },
+        {
+          "order": 2,
+          "title": "伯克希尔时代（1965-现在）",
+          "description": "从纺织厂到超级企业帝国",
+          "items": [
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/伯克希尔哈撒韦时代.md", "note": "1965年：巴菲特致伯克希尔股东的第一封信" },
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/企业收藏家_1977.md", "note": "1977年：从投资组合经理到企业收藏家的转型" },
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/伯克希尔_50_周年：过去、现在和未来.md", "note": "2015年：巴菲特亲述50年历史" },
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/伯克希尔投资历史.md", "note": "所有重大投资的完整数据表" },
+            { "type": "article", "category": "articles", "file": "07-伯克希尔史/伯克希尔股东大会实录_2025.md", "note": "2025年：60年后的今天" }
+          ]
+        }
+      ]
+    }
+  ]
+}

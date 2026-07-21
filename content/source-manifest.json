@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "sourceProject": "/Users/lucas/Documents/bamangB/bamangBOOK",
+  "sourceContent": "/Users/lucas/Documents/bamangB/bamangBOOK/content",
+  "importedAt": "2026-07-11",
+  "policy": "只读保留原始项目；HJ 内副本用于检索、摘要、学习和内容生产",
+  "categories": {
+    "articles": { "source": "articles", "filesObserved": 74, "importedFiles": 74 },
+    "letters": { "source": "letters", "filesObserved": 61, "importedFiles": 60, "excluded": ["*.bak"] },
+    "partnership": { "source": "partnership", "filesObserved": 24, "importedFiles": 24 },
+    "talks": { "source": "talks", "filesObserved": 22, "importedFiles": 22 },
+    "interviews": { "source": "interviews", "filesObserved": 40, "importedFiles": 40 },
+    "qa": { "source": "qa", "filesObserved": 51, "importedFiles": 51 },
+    "concepts": { "source": "concepts", "filesObserved": 36, "importedFiles": 36 },
+    "companies": { "source": "companies", "filesObserved": 67, "importedFiles": 67 },
+    "people": { "source": "people", "filesObserved": 10, "importedFiles": 10 },
+    "books": { "source": "books", "filesObserved": 1, "importedFiles": 1 }
+  },
+  "excludedDirectories": [
+    "cleaned",
+    "content",
+    "graph",
+    "pdf-documents-formatted",
+    "pdfs"
+  ],
+  "excludedFiles": [
+    "巴菲特致股东信60年合集1950-2025（芒格书院精译）.pdf",
+    "local-content-summary.json"
+  ],
+  "indexWarning": "原项目各索引与实际目录存在数量差异，使用前需复核"
+}

@@ -1,0 +1,17 @@
+node_modules/
+.next/
+_debug/
+.npm/
+.env.local
+.env.*.local
+build/
+dist/
+*.log
+tools/*.exe
+*.ps1
+.DS_Store
+Thumbs.db
+content/bloggers/_inbox/
+content/bloggers_original/
+tsconfig.tsbuildinfo
+.agently-home/

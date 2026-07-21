@@ -1,0 +1,9 @@
+- [x] Checkpoint 1: "麻省投资信托"作为完整条目呈现，没有分栏错误
+- [x] Checkpoint 2: 表格中没有空栏问题，"道指"和"LP合伙人"列数据已正确填充
+- [x] Checkpoint 3: 所有分栏错位问题被修复，表格格式正确
+- [x] Checkpoint 4: 表格数据准确完整，无遗漏或错误
+- [x] Checkpoint 5: 表格格式符合Markdown标准，可正常渲染
+- [x] Checkpoint 6: 所有合伙人信文档的分栏格式正确
+- [x] Checkpoint 7: 所有股东信文档的分栏格式正确
+- [x] Checkpoint 8: 所有文章、访谈、演讲文档的分栏格式正确
+- [x] Checkpoint 9: 表格数据与PDF原件完全一致

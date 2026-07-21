@@ -1,0 +1,9 @@
+- [x] Checkpoint 1: 修复脚本能够扫描所有270+个文档
+- [x] Checkpoint 2: 修复脚本能够识别61+个表格
+- [x] Checkpoint 3: 列偏移错误（年份后"年"字分离）已修复
+- [x] Checkpoint 4: 重复表头行已删除
+- [x] Checkpoint 5: 数据单元格内容错位已修复
+- [x] Checkpoint 6: 验证检查显示0个残留错误
+- [x] Checkpoint 7: 项目构建成功（npm run build exit code 0）
+- [x] Checkpoint 8: 表格数据正确对应列标题
+- [x] Checkpoint 9: 无重复表头、无数据错位
