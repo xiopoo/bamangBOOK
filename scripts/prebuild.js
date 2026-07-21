@@ -15,6 +15,7 @@ const { execSync } = require('child_process');
 
 const BLOGGERS_DIR = path.join(__dirname, '..', 'content', 'bloggers');
 const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
+const INDEX_FILE = 'bloggers-index.json';
 
 // 跳过 _inbox 目录
 function getBloggerDirs() {
@@ -40,10 +41,10 @@ function main() {
     return;
   }
   
-  // 检查是否已经处理过
+  // 清理上一次失败构建残留的 bloggers_original
   if (fs.existsSync(ORIGINAL_DIR)) {
-    console.log('📭 已处理过，跳过（如需重新处理请先恢复：node scripts/prebuild.js --restore）');
-    return;
+    console.log('🧹 清理上次构建残留的 bloggers_original...');
+    fs.rmSync(ORIGINAL_DIR, { recursive: true, force: true });
   }
   
   console.log('🔧 Vercel 预构建：清理 base64 图片...\n');
@@ -119,6 +120,14 @@ function main() {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
+  
+  // 同时把索引文件复制到 bloggers_original，防止 Next.js 输出文件追踪时报 ENOENT
+  const srcIndex = path.join(BLOGGERS_DIR, INDEX_FILE);
+  const destIndex = path.join(ORIGINAL_DIR, INDEX_FILE);
+  if (fs.existsSync(srcIndex)) {
+    fs.copyFileSync(srcIndex, destIndex);
+    console.log('📋 索引已同步到 bloggers_original');
+  }
   
   const sizeBeforeMB = (totalSizeBefore / 1024 / 1024).toFixed(1);
   const sizeAfterMB = (totalSizeAfter / 1024 / 1024).toFixed(1);
