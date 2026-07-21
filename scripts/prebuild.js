@@ -1,10 +1,10 @@
 /**
  * Vercel 部署预构建脚本
  * 
- * 问题：content/bloggers/ 中有文章包含大量 base64 图片，目录总计 294MB，
- * 超过 Vercel Hobby 部署限制。
+ * 问题：content/bloggers/ 中有文章包含大量 base64 图片、微信专属图片链接，
+ * 导致体积过大且图片无法在站外显示。
  * 
- * 方案：构建前清理 base64 图片，替换为 [图片] 占位符，大幅缩小体积。
+ * 方案：构建前删除所有图片、视频、微信外链，替换为文字占位符。
  * 
  * 用法：在 build 命令之前自动执行
  */
@@ -17,11 +17,50 @@ const BLOGGERS_DIR = path.join(__dirname, '..', 'content', 'bloggers');
 const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
 const INDEX_FILE = 'bloggers-index.json';
 
-// 跳过 _inbox 目录
-function getBloggerDirs() {
-  return fs.readdirSync(BLOGGERS_DIR, { withFileTypes: true })
-    .filter(e => e.isDirectory() && !e.name.startsWith('_'))
-    .map(e => e.name);
+/**
+ * 清理文章内容：移除所有无法正常显示的图片、视频、微信外链
+ */
+function cleanContent(content) {
+  let count = 0;
+  
+  // 1. 删除 markdown 图片：![alt](url) → [图片]
+  content = content.replace(/!\[([^\]]*)\]\([^)]+\)/g, (match, alt) => {
+    count++;
+    return alt && alt !== '图片' ? `[${alt}]` : '[图片]';
+  });
+  
+  // 2. 删除 HTML img 标签 → [图片]
+  content = content.replace(/<img[^>]*\/?>/gi, () => {
+    count++;
+    return '[图片]';
+  });
+  
+  // 3. 删除 base64 数据（无 markdown 语法的残留）→ [图片]
+  content = content.replace(/data:image\/[^;]+;base64,[a-zA-Z0-9+/=]{100,}/g, () => {
+    count++;
+    return '[图片]';
+  });
+  
+  // 4. 删除 HTML video 元素 → [视频]
+  content = content.replace(/<video[\s\S]*?<\/video>/gi, () => {
+    count++;
+    return '[视频]';
+  });
+  
+  // 5. 删除 iframe 嵌入 → [视频]
+  content = content.replace(/<iframe[\s\S]*?<\/iframe>/gi, () => {
+    count++;
+    return '[视频]';
+  });
+  
+  // 6. 删除 mp.weixin.qq.com 外链，保留链接文字
+  // [文字](https://mp.weixin.qq.com/s/xxx) → 文字
+  content = content.replace(/\[([^\]]*)\]\((https?:\/\/mp\.weixin\.qq\.com[^)]*)\)/gi, '$1');
+  
+  // 7. 删除纯文本的微信链接
+  content = content.replace(/https?:\/\/mp\.weixin\.qq\.com\/[^\s)]*/gi, '');
+  
+  return { content, count };
 }
 
 function main() {
@@ -47,13 +86,12 @@ function main() {
     fs.rmSync(ORIGINAL_DIR, { recursive: true, force: true });
   }
   
-  console.log('🔧 Vercel 预构建：清理 base64 图片...\n');
+  console.log('🔧 Vercel 预构建：清理图片/视频/微信外链...\n');
   
   // 备份原始文件
   fs.renameSync(BLOGGERS_DIR, ORIGINAL_DIR);
   fs.mkdirSync(BLOGGERS_DIR, { recursive: true });
   
-  const bloggers = getBloggerDirs();
   let totalSizeBefore = 0;
   let totalSizeAfter = 0;
   let totalImagesStripped = 0;
@@ -76,35 +114,26 @@ function main() {
       const sizeBefore = Buffer.byteLength(content, 'utf-8');
       totalSizeBefore += sizeBefore;
       
-      // 替换 base64 图片为占位符
-      // 匹配: ![alt](data:image/png;base64,iVBOR...)
-      const base64Pattern = /!\[([^\]]*)\]\(data:image\/[^;]+;base64,[a-zA-Z0-9+/=]+\)/g;
-      let matchCount = 0;
-      const cleaned = content.replace(base64Pattern, (match, alt) => {
-        matchCount++;
-        return `![${alt || '图片'}](https://mmbiz.qpic.cn/placeholder)`;
-      });
+      const result = cleanContent(content);
+      content = result.content;
+      const matchCount = result.count;
       
-      // 也处理普通 base64 链接（不带 ![] 的）
-      const base64LinkPattern = /!?\[([^\]]*)\]\(data:image\/[^;]+;base64,[^)]+\)/g;
-      const cleaned2 = cleaned.replace(base64LinkPattern, (match, alt) => {
-        if (match.startsWith('!')) {
-          matchCount++;
-          return `![${alt || '图片'}](https://mmbiz.qpic.cn/placeholder)`;
-        }
-        return '';
-      });
-      
-      const sizeAfter = Buffer.byteLength(cleaned2, 'utf-8');
+      const sizeAfter = Buffer.byteLength(content, 'utf-8');
       totalSizeAfter += sizeAfter;
       totalImagesStripped += matchCount;
       bloggerStripped += matchCount;
       
-      fs.writeFileSync(path.join(destDir, file), cleaned2, 'utf-8');
+      fs.writeFileSync(path.join(destDir, file), content, 'utf-8');
+    }
+    
+    // 删除 assets 目录（图片已全部清理）
+    const assetsDir = path.join(destDir, 'assets');
+    if (fs.existsSync(assetsDir)) {
+      fs.rmSync(assetsDir, { recursive: true, force: true });
     }
     
     const ratio = totalSizeBefore > 0 ? ((1 - totalSizeAfter / totalSizeBefore) * 100).toFixed(0) : 0;
-    console.log(`  📂 ${name}: ${bloggerStripped} 张图片清理`);
+    console.log(`  📂 ${name}: ${bloggerStripped} 个图片/视频/外链清理`);
   }
   
   // 复制 _inbox 目录
@@ -132,7 +161,7 @@ function main() {
   const sizeBeforeMB = (totalSizeBefore / 1024 / 1024).toFixed(1);
   const sizeAfterMB = (totalSizeAfter / 1024 / 1024).toFixed(1);
   console.log(`\n✅ 清理完成:`);
-  console.log(`   ${totalImagesStripped} 张 base64 图片 → 占位符`);
+  console.log(`   ${totalImagesStripped} 个图片/视频/外链 → 占位符`);
   console.log(`   体积: ${sizeBeforeMB}MB → ${sizeAfterMB}MB`);
   console.log(`\n💡 构建完成后恢复原始文件:`);
   console.log(`   node scripts/prebuild.js --restore`);
