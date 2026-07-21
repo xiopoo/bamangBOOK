@@ -3,14 +3,12 @@ title: "世界上知道LLM是什么的人只有1‰"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2024-12-26 13:56"
-url: "https://mp.weixin.qq.com/s/8c6AnUS6FBxCEgkeGuYPCQ"
 ---
 
 # 世界上知道LLM是什么的人只有1‰
 
 > 方伟Rey · 方伟看十年 · 2024-12-26 13:56
 
-> [原文链接](https://mp.weixin.qq.com/s/8c6AnUS6FBxCEgkeGuYPCQ)
 
 说出来你可能不信，这个世界上知道LLM=大模型的人只有千分之一，你不信的话可以随机找路人测试一下，问一下他们知不知道LLM是什么。
 

@@ -3,14 +3,12 @@ title: "智谱、Minimax的暴涨会让价值投资者产生怀疑吗？"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2026-02-24 07:00"
-url: "https://mp.weixin.qq.com/s/W0h3dkdYehPbHkog3J-F9Q"
 ---
 
 # 智谱、Minimax的暴涨会让价值投资者产生怀疑吗？
 
 > 方伟Rey · 方伟看十年 · 2026-02-24 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/W0h3dkdYehPbHkog3J-F9Q)
 
 “你需要这样的性情：**不论与大众观点相同或相反，都波澜不惊。投资最重要的品质是情绪稳定，而不是智力超群。”**  
 

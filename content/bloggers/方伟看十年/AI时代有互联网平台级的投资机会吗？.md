@@ -3,22 +3,20 @@ title: "AI时代有互联网平台级的投资机会吗？"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2025-05-09 07:00"
-url: "https://mp.weixin.qq.com/s/aMfVUEA7oB3gIvXBFiHQpA"
 ---
 
 # AI时代有互联网平台级的投资机会吗？
 
 > 方伟Rey · 方伟看十年 · 2025-05-09 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/aMfVUEA7oB3gIvXBFiHQpA)
 
-我最喜欢的生意模式是互联网垄断平台与超级品牌、超级渠道，他们都是少有的有强大护城河，能够穿越周期的生意，2015年以后，再也没有出现新的互联网平台公司，全世界都一样。（参考：[在超级制造业大国，最好的生意是什么？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485852&idx=1&sn=ee61d7246a96ba0ca55b9f04dcb9f9c8&scene=21#wechat_redirect)[互联网垄断平台是世界上最好的生意](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485811&idx=1&sn=7352a230b9fbee3fae020b513a73c5f6&scene=21#wechat_redirect)；[互联网垄断平台是消费股，而不是科技股](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485827&idx=1&sn=97a6a6450c4b450945950d07c46f143e&scene=21#wechat_redirect)）
+我最喜欢的生意模式是互联网垄断平台与超级品牌、超级渠道，他们都是少有的有强大护城河，能够穿越周期的生意，2015年以后，再也没有出现新的互联网平台公司，全世界都一样。（参考：在超级制造业大国，最好的生意是什么？互联网垄断平台是世界上最好的生意；互联网垄断平台是消费股，而不是科技股）
 
 最近跟做AI创业的朋友聊：AI时代有互联网平台级的投资机会吗？我们能不能抢先占位，用《黑天鹅》作者塔勒布的观点看，对于未知不确定的东西，可以用5%成本（仓位）去进行不对称的博弈（你也理解为风险更低，概率更高的赌博，阿段买入近千万美金的英伟达也是这种心态，虽然不完全理解，先买点才有动力慢慢理解）。
 
 我的观点还是，AI时代绝大多数公司只能做成一个效率更高的工具，比拼的是技术创新能力，难以长期维持差异化与高毛利，早晚有一天因为激烈的竞争沦为5%净利率的制造业生意，更大的机会，还是那些原来的互联网巨头，在已经构建的垄断平台上用AI赋能与提效，AI将会让他们变得更加强大。
 
-以下是一些畅想，注意，价值投资者首先应该关注基本面，而不是想象力，我购买腾讯不是因为想象力，AI的想象力还没有体现在腾讯的市值里。（参考：[价值投资者不为想象力买单](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485897&idx=1&sn=48da115825b239c1046d0b9cc190136a&scene=21#wechat_redirect)）
+以下是一些畅想，注意，价值投资者首先应该关注基本面，而不是想象力，我购买腾讯不是因为想象力，AI的想象力还没有体现在腾讯的市值里。（参考：价值投资者不为想象力买单）
 
 苹果是美国人的操作系统（市场占有率65%，iMessage也是半个美国微信的存在），而微信是中国人的操作系统，苹果有 AppStore 应用生态提供服务，微信有小程序应用生态提供服务。
 
@@ -69,13 +67,13 @@ url: "https://mp.weixin.qq.com/s/aMfVUEA7oB3gIvXBFiHQpA"
 
 【为什么值得加入】
 
-1）25年1月份我们判断：[1月份的腾讯都没买的话，这么多年的互联网白干了](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485769&idx=1&sn=0c9b6d1e589df0ec45f194e00a91f671&scene=21#wechat_redirect)
+1）25年1月份我们判断：1月份的腾讯都没买的话，这么多年的互联网白干了
 
-2）24年12月微信上线送礼物，我们看空微盟有赞：[中国的股市真的魔幻，微信一个送礼物的功能，微盟一度涨了50%](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485666&idx=1&sn=f82546a1faf90aa59b779b22c2ee71ca&scene=21#wechat_redirect)
+2）24年12月微信上线送礼物，我们看空微盟有赞：中国的股市真的魔幻，微信一个送礼物的功能，微盟一度涨了50%
 
-3）此外，我长期看好美团与拼多多，静待花开：[即便无人看好，依然加仓拼多多](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485776&idx=1&sn=d92c24429c060311c41ef33e68840ce4&scene=21#wechat_redirect)；[1.2 万亿的美团真的被高估了吗？泡沫到底有多大？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485544&idx=1&sn=6eac2b1a10bec244b05113829adc1842&scene=21#wechat_redirect)
+3）此外，我长期看好美团与拼多多，静待花开：即便无人看好，依然加仓拼多多；1.2 万亿的美团真的被高估了吗？泡沫到底有多大？
 
-4）还有，我长期看空1.4万亿的小米、京东、快手、蔚来、唯品会、有赞等：[1.4万亿的小米是不是下一个特斯拉？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485805&idx=1&sn=70baecd6756e8f4e454a59d11a79a41e&scene=21#wechat_redirect)；[京东外卖别说突破100万单，突破500万单也没用](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485866&idx=1&sn=a088802027d6276062efd21564b86ceb&scene=21#wechat_redirect)；[快手电商已死，只是余温尚存](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485602&idx=1&sn=6f7a6924f988c37f7909c247e7fb9e15&scene=21#wechat_redirect)
+4）还有，我长期看空1.4万亿的小米、京东、快手、蔚来、唯品会、有赞等：1.4万亿的小米是不是下一个特斯拉？；京东外卖别说突破100万单，突破500万单也没用；快手电商已死，只是余温尚存
 
 ![图片](./assets/f8f22a6a1304dfce8f327de3669a97b3.jpg)
 

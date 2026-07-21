@@ -3,7 +3,6 @@ title: "LOOK ME IN THE EYES"
 author: "唐二僧"
 account: "唐僧的碎碎念"
 date: "2026-07-03 07:20"
-url: "https://mp.weixin.qq.com/s/CELPzd83AkA42IgKLy3RQA"
 digest: "大声说出来"
 ---
 

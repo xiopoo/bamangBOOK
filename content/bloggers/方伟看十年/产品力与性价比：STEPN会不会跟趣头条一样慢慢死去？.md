@@ -3,7 +3,6 @@ title: "产品力与性价比：STEPN会不会跟趣头条一样慢慢死去？"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2022-04-18 12:07"
-url: "https://mp.weixin.qq.com/s/zfkIM7GISswLTUqL35gFXA"
 digest: "研究一下STEPN"
 ---
 
@@ -11,7 +10,6 @@ digest: "研究一下STEPN"
 
 > 方伟Rey · 方伟看十年 · 2022-04-18 12:07
 
-> [原文链接](https://mp.weixin.qq.com/s/zfkIM7GISswLTUqL35gFXA)
 
 ![](./assets/830145f16e3e1a949cb0f0e748fc28c6.png)
 

@@ -33,17 +33,7 @@
 
 ## 第六条各有限合伙人的现金出资额
 
-如下：
-
-| 有限合伙人 | 出资额 |
-| --- | --- |
-| 小查尔斯·E·彼得森 (Charles E. Peterson, Jr.) | 5,000 美元 |
-| 伊丽莎白·B·彼得森 (Elisabeth B. Peterson) | 25,000 美元 |
-| 多丽丝·B·伍德 (Doris B. Wood) | 5,000 美元 |
-| 杜鲁门·S·伍德 (Truman S. Wood) | 5,000 美元 |
-| 小丹尼尔·J·莫内恩 (Daniel J. Monen, Jr.) | 5,000 美元 |
-| 威廉·H·汤普森 (William H. Thompson) | 25,000 美元 |
-| 爱丽丝·R·巴菲特 (Alice R. Buffett) | 35,000 美元 |
+如下：有限合伙人| 出资额---|---小查尔斯·E·彼得森 (Charles E. Peterson, Jr.)| 5,000 美元伊丽莎白·B·彼得森 (Elisabeth B. Peterson)| 25,000 美元多丽丝·B·伍德 (Doris B. Wood)| 5,000 美元杜鲁门·S·伍德 (Truman S. Wood)| 5,000 美元小丹尼尔·J·莫内恩 (Daniel J. Monen, Jr.)| 5,000 美元威廉·H·汤普森 (William H. Thompson)| 25,000 美元爱丽丝·R·巴菲特 (Alice R. Buffett)| 35,000 美元
 
 ## 第七条有
 

@@ -3,7 +3,6 @@ title: "体验上千款SaaS后，教你3步快速理解一款SaaS"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2022-04-26 11:35"
-url: "https://mp.weixin.qq.com/s/tpZYOdVeaRTaRL5xSLUGgA"
 digest: "操千曲而后晓声，观千剑而后识器。"
 ---
 
@@ -11,7 +10,6 @@ digest: "操千曲而后晓声，观千剑而后识器。"
 
 > 方伟Rey · 方伟看十年 · 2022-04-26 11:35
 
-> [原文链接](https://mp.weixin.qq.com/s/tpZYOdVeaRTaRL5xSLUGgA)
 
 ![](./assets/908557c8c2604fae8295a79335a665c7.jpg)
 

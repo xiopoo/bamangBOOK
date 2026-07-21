@@ -1,7 +1,5 @@
 # IBM
 
-> **Source**: [https://buffett-letters-eir.pages.dev/companies/IBM.html](https://buffett-letters-eir.pages.dev/companies/IBM.html)  
-> **Type**: 公司
 
 ---
 

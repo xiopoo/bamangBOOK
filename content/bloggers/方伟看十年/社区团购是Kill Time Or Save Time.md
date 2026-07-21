@@ -3,14 +3,12 @@ title: "社区团购是Kill Time Or Save Time"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2019-05-11 20:33"
-url: "https://mp.weixin.qq.com/s/ujtxSc-x7csD5jhl2KPeOw"
 ---
 
 # 社区团购是Kill Time Or Save Time
 
 > 方伟Rey · 方伟看十年 · 2019-05-11 20:33
 
-> [原文链接](https://mp.weixin.qq.com/s/ujtxSc-x7csD5jhl2KPeOw)
 
 ![](./assets/e91da56053b4e4951b34f00e77d66eb8.jpg)
 

@@ -181,7 +181,7 @@ export default function PersonDetailPage({ params }: PageProps) {
       )}
 
       <div className="max-w-4xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400 pt-8 mt-8 border-t border-gray-100 dark:border-[#2a2a4a]">
-        价值投资知识宝库
+        巴芒书房
       </div>
     </div>
   )

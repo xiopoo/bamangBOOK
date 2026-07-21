@@ -5,8 +5,8 @@ import { ProgressProvider } from '@/hooks/useProgress'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '复利书房 - 价值投资知识宝库',
-  description: '系统化梳理巴菲特股东信、芒格思维模型与经典投资书籍，构建完整的价值投资认知体系',
+  title: '巴芒书房 - 价值投资知识库',
+  description: '系统梳理巴菲特股东信、合伙人信、股东大会问答、演讲访谈及芒格思想体系，构建中文世界最完整的价值投资知识图谱',
 }
 
 export default function RootLayout({

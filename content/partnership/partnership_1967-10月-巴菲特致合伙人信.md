@@ -1,7 +1,5 @@
 # 1967年10月 巴菲特致合伙人信
 
-> **Source**: [https://buffett-letters-eir.pages.dev/partnership/1967年10月-巴菲特致合伙人信.html](https://buffett-letters-eir.pages.dev/partnership/1967年10月-巴菲特致合伙人信.html)  
-> **Type**: 合伙人信
 
 ---
 

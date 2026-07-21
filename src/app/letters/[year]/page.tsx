@@ -172,7 +172,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
 
       <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-text-muted dark:text-dark-muted">
-          价值投资知识宝库
+          巴芒书房
         </div>
       </footer>
     </div>

@@ -21,19 +21,11 @@ export default function PageFooter() {
               巴芒书房
             </h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">
-              一个人把巴菲特70年的股东信变成了一张知识图谱。
+              巴芒投资思想 · 价值投资知识库
             </p>
-            <a
-              href="https://xhslink.com/m/6OPiGk9H7w7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs text-[#AB1942] hover:opacity-80 transition-opacity"
-            >
+            <span className="text-xs text-[#AB1942]">
               BY金融街小胖
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            </span>
           </div>
 
           {/* 导航链接 */}

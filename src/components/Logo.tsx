@@ -55,7 +55,7 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
             MozOsxFontSmoothing: 'grayscale',
           }}
         >
-          复利书房
+          巴芒书房
         </div>
         {showSubtitle && (
           <div

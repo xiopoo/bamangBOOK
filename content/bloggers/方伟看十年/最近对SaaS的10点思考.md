@@ -3,7 +3,6 @@ title: "最近对SaaS的10点思考"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2022-02-09 17:54"
-url: "https://mp.weixin.qq.com/s/HzYGmDUmHhKHbVRw8NK7Kg"
 digest: "简单聊聊SaaS"
 ---
 
@@ -11,7 +10,6 @@ digest: "简单聊聊SaaS"
 
 > 方伟Rey · 方伟看十年 · 2022-02-09 17:54
 
-> [原文链接](https://mp.weixin.qq.com/s/HzYGmDUmHhKHbVRw8NK7Kg)
 
 ![](./assets/d3c67716f0a1afcaf570aef3b2e387a7.png)
 

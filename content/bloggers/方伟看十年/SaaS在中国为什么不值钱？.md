@@ -3,7 +3,6 @@ title: "SaaS在中国为什么不值钱？"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2022-07-10 22:13"
-url: "https://mp.weixin.qq.com/s/-Sl9tXQKOvtx6zUlQud90w"
 digest: "今天看到南瓜发了一条Twitter，说葡萄牙安装空调要4000欧（3万RMB）。联想到自己目前专注在干的Sa"
 ---
 
@@ -11,7 +10,6 @@ digest: "今天看到南瓜发了一条Twitter，说葡萄牙安装空调要4000
 
 > 方伟Rey · 方伟看十年 · 2022-07-10 22:13
 
-> [原文链接](https://mp.weixin.qq.com/s/-Sl9tXQKOvtx6zUlQud90w)
 
 今天看到南瓜发了一条Twitter，说葡萄牙安装空调要4000欧（3万RMB）。联想到自己目前专注在干的SaaS，有一些感悟：
 
