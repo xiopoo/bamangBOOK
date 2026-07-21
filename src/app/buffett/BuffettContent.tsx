@@ -162,7 +162,7 @@ export default function BuffettContent({
 
         <div className="mt-8 bg-gradient-to-r from-primary/5 to-white dark:from-primary/10 dark:to-dark-card rounded-xl border border-primary/10 p-6">
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed italic">
-            "投资成功的关键不在于智商，而在于纪律。"
+            &ldquo;投资成功的关键不在于智商，而在于纪律。&rdquo;
           </p>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">— 沃伦·巴菲特</p>
         </div>
@@ -329,7 +329,7 @@ export default function BuffettContent({
               key={index}
               className="bg-white dark:bg-dark-card rounded-xl border border-gray-100 dark:border-dark-border p-6 hover:shadow-md transition-shadow"
             >
-              <div className="text-gray-400 text-3xl mb-3">"</div>
+              <div className="text-gray-400 text-3xl mb-3">&ldquo;</div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 {quote.text}
               </p>
@@ -347,7 +347,7 @@ export default function BuffettContent({
 
         <div className="mt-8 bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-xl p-8 text-center">
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
-            "在别人恐惧时贪婪，在别人贪婪时恐惧。"
+            &ldquo;在别人恐惧时贪婪，在别人贪婪时恐惧。&rdquo;
           </p>
           <p className="mt-4 text-lg text-primary dark:text-primary-light font-medium">
             — 沃伦·巴菲特
