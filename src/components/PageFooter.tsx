@@ -4,6 +4,19 @@ export default function PageFooter() {
       <div className="text-center text-sm text-text-muted dark:text-dark-muted">
         价值投资知识宝库
       </div>
+      <div className="mt-3 text-center">
+        <a
+          href="https://xhslink.com/m/6OPiGk9H7w7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-dark transition-colors"
+        >
+          BY金融街小胖
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
     </footer>
   )
 }
