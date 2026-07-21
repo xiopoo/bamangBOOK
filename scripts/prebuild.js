@@ -18,10 +18,89 @@ const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
 const INDEX_FILE = 'bloggers-index.json';
 
 /**
- * 清理文章内容：移除所有无法正常显示的图片、视频、微信外链
+ * 清理文章内容：移除所有无法正常显示的图片、视频、微信外链，
+ * 以及顶部原文链接、底部营销推广（扫码加群、知识星球、点赞转发等）
  */
 function cleanContent(content) {
   let count = 0;
+  
+  // ===== 第一步：按行处理，删除营销内容 =====
+  const lines = content.split('\n');
+  const result = [];
+  
+  // 营销段起始标记 — 匹配到就截断后续所有内容
+  const MARKETING_START = [
+    /^—\s*扫码/,             // — 扫码下方微信加入...
+    /^——\s*扫码/,            // ——扫码加入社群——
+    /^##\s*本号寄语/,         // ## 本号寄语
+    /^【版权归原作者/,        // 【版权归原作者所有...】
+    /^原创不易，认可价值/,    // 原创不易，认可价值...
+    /^这里有真实的生活/,      // 这里有真实的生活，不变的梦想
+    /^需要《巴菲特致股东的信全集》/, // 需要《巴菲特致股东的信全集》...
+    /^—\s*扫码下方微信加入/,  // — 扫码下方微信加入...
+    /^—\s*扫码下面二维码/,    // — 扫码下面二维码加入...
+    /^—\s*扫码下方微信加入线下/, // — 扫码下方微信加入线下交流群 —
+    /^扫码\s*备注/,           // 扫码备注：...
+  ];
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    
+    // 删除顶部的原文链接行：> [原文链接](https://mp.weixin.qq.com/...)
+    if (/^>\s*\[原文链接\]/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    // 删除公众号信息行：> **公众号：xxx**
+    if (/^>\s*\*\*公众号/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    // 删除推广性链接行：[xxx](https://mp.weixin.qq.com/s?__biz=...)
+    if (/^\[.*\]\(https?:\/\/mp\.weixin\.qq\.com\/s\?__biz=/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    // 检测是否为营销段起始行 → 截断
+    let isMarketingStart = false;
+    for (const pattern of MARKETING_START) {
+      if (pattern.test(trimmed)) {
+        isMarketingStart = true;
+        break;
+      }
+    }
+    if (isMarketingStart) {
+      count++;
+      break;
+    }
+    
+    // 删除独立的推广语：欢迎转载、点赞、关注、转发
+    if (/欢迎转载.*点赞.*关注.*转发/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    // 删除"请点赞或转发，以支持我继续创作"
+    if (/请点赞.*转发.*支持.*创作/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    // 删除"原创不易，认可价值，动手指点"
+    if (/原创不易.*认可价值.*动手指点/.test(trimmed)) {
+      count++;
+      continue;
+    }
+    
+    result.push(line);
+  }
+  
+  content = result.join('\n');
+  
+  // ===== 第二步：正则清理图片、视频、外链 =====
   
   // 1. 删除 markdown 图片：![alt](url) → [图片]
   content = content.replace(/!\[([^\]]*)\]\([^)]+\)/g, (match, alt) => {
@@ -35,7 +114,7 @@ function cleanContent(content) {
     return '[图片]';
   });
   
-  // 3. 删除 base64 数据（无 markdown 语法的残留）→ [图片]
+  // 3. 删除 base64 数据 → [图片]
   content = content.replace(/data:image\/[^;]+;base64,[a-zA-Z0-9+/=]{100,}/g, () => {
     count++;
     return '[图片]';
@@ -54,7 +133,6 @@ function cleanContent(content) {
   });
   
   // 6. 删除 mp.weixin.qq.com 外链，保留链接文字
-  // [文字](https://mp.weixin.qq.com/s/xxx) → 文字
   content = content.replace(/\[([^\]]*)\]\((https?:\/\/mp\.weixin\.qq\.com[^)]*)\)/gi, '$1');
   
   // 7. 删除纯文本的微信链接
@@ -86,7 +164,7 @@ function main() {
     fs.rmSync(ORIGINAL_DIR, { recursive: true, force: true });
   }
   
-  console.log('🔧 Vercel 预构建：清理图片/视频/微信外链...\n');
+  console.log('🔧 Vercel 预构建：清理图片/视频/微信外链/营销推广...\n');
   
   // 备份原始文件
   fs.renameSync(BLOGGERS_DIR, ORIGINAL_DIR);
@@ -133,7 +211,7 @@ function main() {
     }
     
     const ratio = totalSizeBefore > 0 ? ((1 - totalSizeAfter / totalSizeBefore) * 100).toFixed(0) : 0;
-    console.log(`  📂 ${name}: ${bloggerStripped} 个图片/视频/外链清理`);
+    console.log(`  📂 ${name}: ${bloggerStripped} 个图片/视频/外链/营销内容清理`);
   }
   
   // 复制 _inbox 目录
@@ -161,7 +239,7 @@ function main() {
   const sizeBeforeMB = (totalSizeBefore / 1024 / 1024).toFixed(1);
   const sizeAfterMB = (totalSizeAfter / 1024 / 1024).toFixed(1);
   console.log(`\n✅ 清理完成:`);
-  console.log(`   ${totalImagesStripped} 个图片/视频/外链 → 占位符`);
+  console.log(`   ${totalImagesStripped} 个图片/视频/外链/营销内容 → 占位符`);
   console.log(`   体积: ${sizeBeforeMB}MB → ${sizeAfterMB}MB`);
   console.log(`\n💡 构建完成后恢复原始文件:`);
   console.log(`   node scripts/prebuild.js --restore`);
