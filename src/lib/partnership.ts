@@ -34,7 +34,7 @@ export const PARTNERSHIP_YEAR_RANGE: [number, number] = [1956, 1970]
  *      partnership_1968111日-巴菲特致合伙人信.md
  */
 export function parsePartnershipFilename(file: string): { year: number; subtitle: string } {
-  const match = file.match(/partnership_(\d{4})(.*?)-巴菲特致合伙人信\.md$/)
+  const match = file.match(/partnership_(\d{4})(.*?)-(?:巴菲特致合伙人信|有限合伙协议)\.md$/)
   if (!match) return { year: 0, subtitle: '' }
   return {
     year: parseInt(match[1], 10),
@@ -124,7 +124,7 @@ export function getShareholderLetters(startYear = 1965): ShareholderLetter[] {
     .filter((f) => f.endsWith('.md'))
     .map((file) => ({ year: parseShareholderYear(file), filename: file }))
     .filter((l) => l.year >= startYear)
-    .sort((a, b) => b.year - a.year)
+    .sort((a, b) => a.year - b.year)
 }
 
 export function getShareholderCount(startYear = 1965): number {
