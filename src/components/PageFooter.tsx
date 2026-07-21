@@ -18,7 +18,7 @@ export default function PageFooter() {
           {/* 品牌信息 */}
           <div>
             <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">
-              复利书房
+              巴芒书房
             </h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-3">
               一个人把巴菲特70年的股东信变成了一张知识图谱。
@@ -67,13 +67,6 @@ export default function PageFooter() {
               关注公众号
             </span>
           </div>
-        </div>
-
-        {/* 版权 */}
-        <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
-          <p className="text-xs text-gray-400 dark:text-gray-500">
-            © {new Date().getFullYear()} 灰金重组
-          </p>
         </div>
       </div>
     </footer>
