@@ -183,30 +183,6 @@ export default async function HomePage() {
         <ShelfCard href="/concepts" icon="💡" title="投资概念" desc="35个核心概念" />
       </div>
 
-      {/* About */}
-      <footer className="border-t border-gray-200 dark:border-gray-700 pt-8">
-        <div className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-center leading-relaxed">
-          <p className="mb-2 font-medium text-gray-600 dark:text-gray-300">关于复利书房</p>
-          <p>
-            一个人把巴菲特70年的股东信变成了一张互相连接的知识图谱。
-            每个概念、每家公司、每个人物——都能一键溯源到原文。
-            这是长期主义的数字实践，也是价值投资思想的现代传承。
-          </p>
-        </div>
-        <div className="mt-6 text-center">
-          <a
-            href="https://xhslink.com/m/6OPiGk9H7w7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary-dark transition-colors"
-          >
-            BY金融街小胖
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-        </div>
-      </footer>
       <PageFooter />
     </PageContainer>
   )
