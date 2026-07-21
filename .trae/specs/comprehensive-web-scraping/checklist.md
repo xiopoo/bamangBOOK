@@ -1,0 +1,10 @@
+﻿- [ ] Checkpoint 1: Playwright依赖已成功安装
+- [ ] Checkpoint 2: 核心爬虫引擎能成功访问目标网站
+- [ ] Checkpoint 3: JavaScript渲染内容能正确获取
+- [ ] Checkpoint 4: 链接提取与去重功能正常
+- [ ] Checkpoint 5: 图片资源下载功能正常
+- [ ] Checkpoint 6: 错误处理与重试机制正常工作
+- [ ] Checkpoint 7: JSON数据文件生成成功
+- [ ] Checkpoint 8: Markdown报告生成成功
+- [ ] Checkpoint 9: 成功抓取至少10个页面
+- [ ] Checkpoint 10: 遵守robots.txt协议

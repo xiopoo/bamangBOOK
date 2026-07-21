@@ -1,0 +1,112 @@
+# 知识图谱可视化体验重构 - 任务列表
+
+- [x] Task 1: 优化力导向图稳定性（修复晃动/抖动问题）
+  - **Priority**: high
+  - **Depends On**: None
+  - **Description**:
+    - 优化 `simulation.alphaTarget()` 的暂停/恢复逻辑：mouseover 时 `alphaTarget(0)` + `simulation.stop()`，mouseout 时防抖 100ms 后 `alpha(0.3).restart()`
+    - 降低 `forceCollide` 的碰撞力度，增大 `velocityDecay` 增加阻尼
+    - 移除不必要的 `transition` 动画（如 `attrTween`），改用 `d3.select().attr()` 直接设置（消除 `transition` 导致的额外 tick 抖动）
+    - 添加 `simulation.on('end', ...)` 回调，确保模拟趋于稳定后冻结渲染
+  - **Acceptance Criteria Addressed**: AC-页面稳定性
+  - **Test Requirements**:
+    - `human-judgement` TR-1.1: 悬停节点时画面不抖动
+    - `human-judgement` TR-1.2: 拖拽节点时画面不异常跳动
+    - `human-judgement` TR-1.3: 鼠标移开后模拟平滑恢复，无抖动
+
+- [x] Task 2: 增强节点视觉层级系统
+  - **Priority**: high
+  - **Depends On**: Task 1
+  - **Description**:
+    - 按 count 值将节点分为 3 个等级（高频/中频/低频），赋予不同半径、颜色深度、字体大小
+    - 高频节点（count > 50）添加"星标"或"火焰"徽章标记
+    - 节点文字不再截断（去除 `slice(0,5)+'…'`），改用换行或自动缩放
+    - 添加节点尺寸图例说明
+  - **Acceptance Criteria Addressed**: AC-关键词视觉突出
+  - **Test Requirements**:
+    - `human-judgement` TR-2.1: 高频节点在视觉上明显区别于低频节点
+    - `human-judgement` TR-2.2: 节点文字完整显示
+    - `human-judgement` TR-2.3: 图例正确解释节点尺寸含义
+
+- [x] Task 3: 重构页面架构为组件化结构
+  - **Priority**: high
+  - **Depends On**: Task 1
+  - **Description**:
+    - 创建 `src/components/graph/` 目录
+    - 拆分出：`GraphContainer`（主容器+布局）、`GraphCanvas`（SVG画布含D3）、`ControlPanel`（左侧控制面板）、`NodeDetailPanel`（节点详情弹窗）、`ModeSwitcher`（模式切换）、`SearchBar`（搜索组件）、`FilterPanel`（筛选面板）、`Legend`（图例）
+    - 确保每个组件职责单一，Props 接口清晰
+  - **Acceptance Criteria Addressed**: AC-多模式切换、AC-交互控制、AC-响应式适配
+  - **Test Requirements**:
+    - `human-judgement` TR-3.1: 组件拆分合理，职责单一
+    - `programmatic` TR-3.2: 项目构建成功
+
+- [x] Task 4: 实现可视化模式切换系统
+  - **Priority**: high
+  - **Depends On**: Task 3
+  - **Description**:
+    - **模式一：力导向图（优化版）** — 在 Task 1 基础上继续优化，增加按类型分组引力
+    - **模式二：层级树状图** — 以人物/公司/概念为根节点，按年份展开子节点，使用 `d3.tree()` 或 `d3.cluster()`
+    - **模式三：思维导图** — 以选中节点为中心辐射展开关联节点，使用 `d3.radialTree()` 布局
+    - **模式四：知识卡片集群** — 非 D3 模式，将节点渲染为 Bootstrap 风格的知识卡片，按类别分组展示，卡片内包含名称、类型徽章、提及次数、简短描述、关联实体链接
+    - 模式切换时使用 `useState` + 条件渲染，切换动画使用 CSS transition
+  - **Acceptance Criteria Addressed**: AC-多模式切换
+  - **Test Requirements**:
+    - `human-judgement` TR-4.1: 四种模式均可正常切换和显示
+    - `human-judgement` TR-4.2: 力导向图模式：可拖拽、悬停高亮
+    - `human-judgement` TR-4.3: 树状图模式：可展开/折叠子树
+    - `human-judgement` TR-4.4: 思维导图模式：以节点为中心辐射展示
+    - `human-judgement` TR-4.5: 知识卡片集群模式：卡片信息完整，可点击
+
+- [x] Task 5: 优化搜索与筛选交互
+  - **Priority**: medium
+  - **Depends On**: Task 3
+  - **Description**:
+    - 搜索：输入时实时过滤节点列表，选中后自动定位（居中+缩放），支持模糊匹配和拼音匹配（可选）
+    - 类型筛选：复选框控制 概念/人物/公司 的显示/隐藏
+    - 权重筛选：滑块控制最小关系权重阈值，低于阈值的关系淡化或隐藏
+    - 年份筛选：年份范围选择器，仅显示指定年份范围内有关联的节点
+    - 全部重置按钮：一键恢复默认视图
+  - **Acceptance Criteria Addressed**: AC-交互控制
+  - **Test Requirements**:
+    - `human-judgement` TR-5.1: 搜索框输入时实时显示匹配结果
+    - `human-judgement` TR-5.2: 选中搜索结果后图谱自动定位到该节点
+    - `human-judgement` TR-5.3: 权重滑块调整后弱关系被隐藏
+    - `human-judgement` TR-5.4: 重置按钮恢复默认视图
+
+- [x] Task 6: 实现响应式布局
+  - **Priority**: medium
+  - **Depends On**: Task 3
+  - **Description**:
+    - 桌面端（≥1024px）：左侧 280px 控制面板 + 右侧自适应图谱
+    - 平板端（768-1023px）：控制面板为左侧滑出式抽屉，使用 `translateX` 动画
+    - 移动端（<768px）：控制面板为底部弹出式抽屉，触摸友好按钮（最小 44px），图例折叠在底部
+    - 使用 TailwindCSS 的 `md:`、`lg:` 断点实现
+  - **Acceptance Criteria Addressed**: AC-响应式适配
+  - **Test Requirements**:
+    - `human-judgement` TR-6.1: 桌面端显示双栏布局
+    - `human-judgement` TR-6.2: 平板端控制面板可滑出
+    - `human-judgement` TR-6.3: 移动端全屏图谱+底部抽屉
+
+- [x] Task 7: 性能优化与最终验证
+  - **Priority**: high
+  - **Depends On**: Task 4, Task 5, Task 6
+  - **Description**:
+    - 力导向图节点数上限控制（超过 200 节点自动禁用部分动画）
+    - `useMemo` 缓存过滤后的节点/链接数据
+    - 减少 D3 的 tick 频率（在 `simulation.on('tick', ...)` 中添加节流）
+    - 构建验证（`npm run build`）
+    - 页面加载速度测试（首屏 < 2s）
+  - **Acceptance Criteria Addressed**: 全部
+  - **Test Requirements**:
+    - `programmatic` TR-7.1: `npm run build` 成功无报错
+    - `human-judgement` TR-7.2: 页面首屏加载 < 2s（正常网络下）
+    - `human-judgement` TR-7.3: 交互操作流畅，无明显卡顿
+
+# Task Dependencies
+- Task 1 → Task 2（先稳定再增强视觉）
+- Task 1 → Task 3（稳定后拆分组件）
+- Task 3 → Task 4（组件化后才能实现多模式）
+- Task 3 → Task 5（组件化后实现搜索筛选）
+- Task 3 → Task 6（组件化后适配响应式）
+- Task 4, 5, 6 可并行执行
+- Task 4, 5, 6 → Task 7（全部功能完成后再做性能优化）

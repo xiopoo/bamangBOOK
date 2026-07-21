@@ -1,0 +1,82 @@
+{
+  "year": "1968",
+  "concepts": [
+    {
+      "id": "再保险",
+      "name": "再保险",
+      "description": "保险公司将部分风险转移给其他保险公司的行为。",
+      "count": 1,
+      "totalCount": 15,
+      "years": [
+        "1971",
+        "1973",
+        "1975",
+        "1977",
+        "1979"
+      ],
+      "relatedConcepts": [
+        {
+          "id": "特许经营权",
+          "name": "特许经营权",
+          "count": 2
+        },
+        {
+          "id": "品牌价值",
+          "name": "品牌价值",
+          "count": 3
+        },
+        {
+          "id": "ROE",
+          "name": "ROE",
+          "count": 7
+        }
+      ],
+      "relatedPeople": [
+        {
+          "id": "巴菲特",
+          "name": "巴菲特",
+          "count": 2
+        },
+        {
+          "id": "费雪",
+          "name": "费雪",
+          "count": 3
+        }
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "巴菲特",
+      "name": "巴菲特",
+      "count": 5
+    }
+  ],
+  "companies": [
+    {
+      "id": "波音",
+      "name": "波音",
+      "count": 6
+    },
+    {
+      "id": "国民保险公司",
+      "name": "国民保险公司",
+      "count": 4
+    },
+    {
+      "id": "福特",
+      "name": "福特",
+      "count": 2
+    },
+    {
+      "id": "伯克希尔哈撒韦",
+      "name": "伯克希尔哈撒韦",
+      "count": 1
+    }
+  ],
+  "summary": {
+    "conceptCount": 1,
+    "peopleCount": 1,
+    "companyCount": 4
+  }
+}

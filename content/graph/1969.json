@@ -1,0 +1,163 @@
+{
+  "year": "1969",
+  "concepts": [
+    {
+      "id": "ROE",
+      "name": "ROE",
+      "description": "衡量公司盈利能力的指标，计算方式为净利润除以股东权益。",
+      "count": 1,
+      "totalCount": 13,
+      "years": [
+        "1975",
+        "1977",
+        "1979",
+        "1981",
+        "1983",
+        "1985"
+      ],
+      "relatedConcepts": [
+        {
+          "id": "安全边际",
+          "name": "安全边际",
+          "count": 3
+        },
+        {
+          "id": "股东回报",
+          "name": "股东回报",
+          "count": 5
+        },
+        {
+          "id": "特许经营权",
+          "name": "特许经营权",
+          "count": 2
+        }
+      ],
+      "relatedPeople": [
+        {
+          "id": "巴菲特",
+          "name": "巴菲特",
+          "count": 4
+        },
+        {
+          "id": "汤姆·墨菲",
+          "name": "汤姆·墨菲",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "管理层质量",
+      "name": "管理层质量",
+      "description": "公司管理团队的能力、诚信和股东导向程度。",
+      "count": 1,
+      "totalCount": 31,
+      "years": [
+        "1968",
+        "1970",
+        "1972",
+        "1974",
+        "1976",
+        "1978",
+        "1980"
+      ],
+      "relatedConcepts": [
+        {
+          "id": "价值投资",
+          "name": "价值投资",
+          "count": 3
+        },
+        {
+          "id": "GAAP",
+          "name": "GAAP",
+          "count": 4
+        },
+        {
+          "id": "ROE",
+          "name": "ROE",
+          "count": 2
+        }
+      ],
+      "relatedPeople": [
+        {
+          "id": "格雷格·阿贝尔",
+          "name": "格雷格·阿贝尔",
+          "count": 3
+        },
+        {
+          "id": "巴菲特",
+          "name": "巴菲特",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "再保险",
+      "name": "再保险",
+      "description": "保险公司将部分风险转移给其他保险公司的行为。",
+      "count": 1,
+      "totalCount": 59,
+      "years": [
+        "1977",
+        "1979",
+        "1981",
+        "1983",
+        "1985",
+        "1987",
+        "1989"
+      ],
+      "relatedConcepts": [
+        {
+          "id": "分散投资",
+          "name": "分散投资",
+          "count": 8
+        },
+        {
+          "id": "能力圈",
+          "name": "能力圈",
+          "count": 2
+        },
+        {
+          "id": "衍生品",
+          "name": "衍生品",
+          "count": 5
+        }
+      ],
+      "relatedPeople": [
+        {
+          "id": "杰克·韦尔奇",
+          "name": "杰克·韦尔奇",
+          "count": 1
+        },
+        {
+          "id": "格雷格·阿贝尔",
+          "name": "格雷格·阿贝尔",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "巴菲特",
+      "name": "巴菲特",
+      "count": 6
+    }
+  ],
+  "companies": [
+    {
+      "id": "伯克希尔哈撒韦",
+      "name": "伯克希尔哈撒韦",
+      "count": 3
+    },
+    {
+      "id": "波音",
+      "name": "波音",
+      "count": 1
+    }
+  ],
+  "summary": {
+    "conceptCount": 3,
+    "peopleCount": 1,
+    "companyCount": 2
+  }
+}

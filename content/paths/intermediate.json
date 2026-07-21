@@ -1,0 +1,60 @@
+{
+  "id": "intermediate",
+  "title": "进阶路径：系统掌握巴菲特的投资方法",
+  "subtitle": "已掌握基本概念，想深入理解估值、宏观思维和公司分析方法",
+  "estimatedTime": "约 8-12 小时",
+  "icon": "🌿",
+  "steps": [
+    {
+      "order": 1,
+      "title": "模块一：投资方法深化",
+      "description": "从经典访谈到核心概念，建立系统的分析框架",
+      "items": [
+        { "type": "article", "category": "articles", "file": "01-投资理念/巴菲特谈投资_1985.md", "note": "与亚当斯密的经典对谈：资本保值、气质重于智商" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/「所有者收益」vs「自由现金流」.md", "note": "超越了会计利润的分析框架" },
+        { "type": "concept", "category": "concepts", "file": "护城河", "note": "经济护城河的定义：品牌、转换成本、网络效应、成本优势" },
+        { "type": "concept", "category": "concepts", "file": "特许经营权", "note": "特许经营权企业为何优越" },
+        { "type": "concept", "category": "concepts", "file": "内在价值", "note": "深入理解内在价值的计算方法和不确定性" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/康布斯：在普通股中寻找价值.md", "note": "Todd Combs将格雷厄姆原则与现代商业现实对接" },
+        { "type": "concept", "category": "concepts", "file": "集中投资", "note": "为什么巴菲特主张集中而非分散" }
+      ]
+    },
+    {
+      "order": 2,
+      "title": "模块二：宏观与市场周期理解",
+      "description": "学习巴菲特如何在不同市场环境中做出判断",
+      "items": [
+        { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈通货膨胀_1977.md", "note": "通胀如何侵蚀投资回报，PB-ROE模型的经典运用" },
+        { "type": "concept", "category": "concepts", "file": "通货膨胀", "note": "通货膨胀概念的深入理解" },
+        { "type": "concept", "category": "concepts", "file": "利率", "note": "利率与资产定价的内在关系" },
+        { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_1974.md", "note": "熊市的经典判断——「便宜货到处都是」" },
+        { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_1999.md", "note": "太阳谷演讲：在互联网泡沫最狂热时冷静预警" },
+        { "type": "article", "category": "articles", "file": "02-股市宏观/巴菲特谈股市_2001.md", "note": "三因素分析框架：利率、企业盈利和投资者心理" }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "模块三：公司深度分析入门",
+      "description": "从经典案例学习巴菲特的企业分析方法",
+      "items": [
+        { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特谈喜诗糖果_1972.md", "note": "收购后的实地调研，护城河型企业的原型" },
+        { "type": "concept", "category": "concepts", "file": "品牌价值", "note": "喜诗糖果的核心——品牌定价权" },
+        { "type": "article", "category": "articles", "file": "03-公司分析/巴菲特谈_GEICO1976.md", "note": "保险公司的专业分析" },
+        { "type": "concept", "category": "concepts", "file": "浮存金", "note": "保险浮存金——伯克希尔的「负成本杠杆」" },
+        { "type": "concept", "category": "concepts", "file": "保险", "note": "保险行业的经营特点和投资价值" }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "模块四：关键股东信精读",
+      "description": "从1977年到1996年，几封标志性的股东信",
+      "items": [
+        { "type": "letter", "category": "letters", "file": "berkshire_1977-巴菲特致股东信.md", "note": "巴菲特开始系统阐述投资原则的第一封信" },
+        { "type": "letter", "category": "letters", "file": "berkshire_1985-巴菲特致股东信.md", "note": "关闭纺织业务，正式宣告转型" },
+        { "type": "letter", "category": "letters", "file": "berkshire_1986-巴菲特致股东信.md", "note": "「所有者收益」概念的完整阐述" },
+        { "type": "letter", "category": "letters", "file": "berkshire_1990-巴菲特致股东信.md", "note": "投资原则的系统回顾" },
+        { "type": "letter", "category": "letters", "file": "berkshire_1996-巴菲特致股东信.md", "note": "股东手册发布，B股发行" }
+      ]
+    }
+  ]
+}

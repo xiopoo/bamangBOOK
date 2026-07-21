@@ -1,0 +1,179 @@
+# 剩余表格系统性处理 - 实施计划（分解后的优先级任务列表）
+
+## [ ] Task 1: 投资组合表 - 第二批（1996-2005年）
+- **Priority**: high
+- **Depends On**: None
+- **Description**: 
+  - 修复 1996-2005 年共 10 个文件中的投资组合持仓表
+  - 文件：
+    - berkshire_1996-巴菲特致股东信.md
+    - berkshire_1997-巴菲特致股东信.md
+    - berkshire_1998-巴菲特致股东信.md
+    - berkshire_1999-巴菲特致股东信.md
+    - berkshire_2000-巴菲特致股东信.md
+    - berkshire_2001-巴菲特致股东信.md
+    - berkshire_2002-巴菲特致股东信.md
+    - berkshire_2003-巴菲特致股东信.md
+    - berkshire_2004-巴菲特致股东信.md
+    - berkshire_2005-巴菲特致股东信.md
+  - 每篇可能包含 1-3 个表格（普通股、优先股、可转债等）
+  - 参考 1995 年的处理方式
+- **Acceptance Criteria Addressed**: AC-1, AC-3, AC-4
+- **Test Requirements**:
+  - `human-judgement` TR-1.1: 表格列数一致，对齐正确
+  - `human-judgement` TR-1.2: 所有数字与原文一致
+  - `human-judgement` TR-1.3: 公司名称完整准确
+  - `human-judgement` TR-1.4: 表格前后有空行
+- **Notes**: 2000 年后表格列数可能增加（如新增持股比例、市值变动等）
+
+## [ ] Task 2: 投资组合表 - 第三批（2006-2015年）
+- **Priority**: high
+- **Depends On**: Task 1
+- **Description**: 
+  - 修复 2006-2015 年共 10 个文件中的投资组合持仓表
+  - 文件：
+    - berkshire_2006-巴菲特致股东信.md
+    - berkshire_2007-巴菲特致股东信.md
+    - berkshire_2008-巴菲特致股东信.md
+    - berkshire_2009-巴菲特致股东信.md
+    - berkshire_2010-巴菲特致股东信.md
+    - berkshire_2011-巴菲特致股东信.md
+    - berkshire_2012-巴菲特致股东信.md
+    - berkshire_2013-巴菲特致股东信.md
+    - berkshire_2014-巴菲特致股东信.md
+    - berkshire_2015-巴菲特致股东信.md
+- **Acceptance Criteria Addressed**: AC-1, AC-3, AC-4
+- **Test Requirements**:
+  - `human-judgement` TR-2.1: 表格列数一致，对齐正确
+  - `human-judgement` TR-2.2: 所有数字与原文一致
+  - `human-judgement` TR-2.3: 公司名称完整准确
+  - `human-judgement` TR-2.4: 表格前后有空行
+- **Notes**: 这一时期伯克希尔投资组合变化较大，表格结构可能有变化
+
+## [ ] Task 3: 投资组合表 - 第四批（2016-2022年 + 早期1965-1984年）
+- **Priority**: high
+- **Depends On**: Task 2
+- **Description**: 
+  - 修复 2016-2022 年共 7 个文件中的投资组合持仓表
+  - 文件：
+    - berkshire_2016-巴菲特致股东信.md
+    - berkshire_2017-巴菲特致股东信.md
+    - berkshire_2018-巴菲特致股东信.md
+    - berkshire_2019-巴菲特致股东信.md
+    - berkshire_2020-巴菲特致股东信.md
+    - berkshire_2022-巴菲特致股东信.md
+  - 以及早期年份（1965-1984）中尚未处理的投资组合表
+    - berkshire_1966-巴菲特致股东信.md
+    - berkshire_1967-巴菲特致股东信.md
+    - berkshire_1968-巴菲特致股东信.md
+    - berkshire_1977-巴菲特致股东信.md
+    - berkshire_1978-巴菲特致股东信.md
+    - berkshire_1979-巴菲特致股东信.md
+    - berkshire_1980-巴菲特致股东信.md
+    - berkshire_1981-巴菲特致股东信.md
+    - berkshire_1982-巴菲特致股东信.md
+    - berkshire_1983-巴菲特致股东信.md
+    - berkshire_1984-巴菲特致股东信.md
+- **Acceptance Criteria Addressed**: AC-1, AC-3, AC-4
+- **Test Requirements**:
+  - `human-judgement` TR-3.1: 表格列数一致，对齐正确
+  - `human-judgement` TR-3.2: 所有数字与原文一致
+  - `human-judgement` TR-3.3: 公司名称完整准确
+- **Notes**: 早期年份表格结构可能差异较大，需仔细辨认
+
+## [ ] Task 4: 财务年度对比表 - 第一批（1965-1989年）
+- **Priority**: high
+- **Depends On**: None
+- **Description**: 
+  - 修复 1965-1989 年共 15 个文件中的财务年度对比表
+  - 包括利润表、资产负债表、每股数据等多年对比表
+  - 文件：
+    - berkshire_1965-巴菲特致股东信.md
+    - berkshire_1973-巴菲特致股东信.md
+    - berkshire_1974-巴菲特致股东信.md
+    - berkshire_1979-巴菲特致股东信.md
+    - berkshire_1980-巴菲特致股东信.md
+    - berkshire_1983-巴菲特致股东信.md
+    - berkshire_1984-巴菲特致股东信.md
+    - berkshire_1986-巴菲特致股东信.md
+    - berkshire_1987-巴菲特致股东信.md
+    - berkshire_1988-巴菲特致股东信.md
+    - berkshire_1989-巴菲特致股东信.md
+- **Acceptance Criteria Addressed**: AC-2, AC-3, AC-4
+- **Test Requirements**:
+  - `human-judgement` TR-4.1: 财务项目名称正确
+  - `human-judgement` TR-4.2: 各年度数据准确
+  - `human-judgement` TR-4.3: 表格结构清晰
+- **Notes**: 早期年份表格结构可能较复杂，需仔细辨认行列
+
+## [ ] Task 5: 财务年度对比表 - 第二批（1990-2022年）
+- **Priority**: medium
+- **Depends On**: Task 4
+- **Description**: 
+  - 修复 1990-2022 年共 15 个文件中的财务年度对比表
+  - 包括各业务板块的损益表、资产负债表对比
+  - 文件：
+    - berkshire_1990-巴菲特致股东信.md
+    - berkshire_1992-巴菲特致股东信.md
+    - berkshire_1993-巴菲特致股东信.md
+    - berkshire_1994-巴菲特致股东信.md
+    - berkshire_1997-巴菲特致股东信.md
+    - berkshire_1998-巴菲特致股东信.md
+    - berkshire_1999-巴菲特致股东信.md
+    - berkshire_2000-巴菲特致股东信.md
+    - berkshire_2002-巴菲特致股东信.md
+    - berkshire_2003-巴菲特致股东信.md
+    - berkshire_2004-巴菲特致股东信.md
+    - berkshire_2005-巴菲特致股东信.md
+    - berkshire_2006-巴菲特致股东信.md
+    - berkshire_2007-巴菲特致股东信.md
+    - berkshire_2010-巴菲特致股东信.md
+    - berkshire_2011-巴菲特致股东信.md
+    - berkshire_2012-巴菲特致股东信.md
+    - berkshire_2013-巴菲特致股东信.md
+    - berkshire_2014-巴菲特致股东信.md
+    - berkshire_2015-巴菲特致股东信.md
+    - berkshire_2016-巴菲特致股东信.md
+- **Acceptance Criteria Addressed**: AC-2, AC-3, AC-4
+- **Test Requirements**:
+  - `human-judgement` TR-5.1: 财务项目名称正确
+  - `human-judgement` TR-5.2: 各年度数据准确
+  - `human-judgement` TR-5.3: 表格结构清晰
+- **Notes**: 后期年份可能有多个业务板块的细分表
+
+## [ ] Task 6: 浏览器端渲染验证
+- **Priority**: high
+- **Depends On**: Task 1, Task 2, Task 3, Task 4, Task 5
+- **Description**: 
+  - 启动开发服务器，在浏览器中抽样验证修复效果
+  - 验证页面（抽样）：
+    - 2000 年股东信（投资组合表较多的年份）
+    - 2010 年股东信（中期验证点）
+    - 1965 年股东信（早期财务对比表）
+    - 2022 年股东信（最近年份）
+  - 验证维度：
+    - 表格正确渲染
+    - 列数对齐正确
+    - 暗色模式兼容
+    - 移动端横向滚动
+- **Acceptance Criteria Addressed**: AC-5
+- **Test Requirements**:
+  - `human-judgement` TR-6.1: 表格以表格形式正确渲染
+  - `human-judgement` TR-6.2: 数字对齐、列数一致
+  - `human-judgement` TR-6.3: 暗色模式显示正常
+  - `human-judgement` TR-6.4: 移动端可横向滚动
+
+## [ ] Task 7: 最终检查与收尾
+- **Priority**: medium
+- **Depends On**: Task 6
+- **Description**: 
+  - TypeScript 类型检查
+  - ESLint 检查
+  - 确认所有修改可通过 Git 追溯
+  - 统计完成情况（处理表格数、文件数）
+- **Acceptance Criteria Addressed**: NFR-3
+- **Test Requirements**:
+  - `programmatic` TR-7.1: TypeScript 检查 0 error
+  - `programmatic` TR-7.2: ESLint 检查 0 error
+  - `programmatic` TR-7.3: 无临时脚本文件残留
+- **Notes**: 本轮主要是内容修改，预计不会引入代码错误

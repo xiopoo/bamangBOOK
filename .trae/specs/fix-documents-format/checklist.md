@@ -1,0 +1,10 @@
+- [ ] Checkpoint 1: 表格列数一致，格式符合Markdown标准
+- [ ] Checkpoint 2: 段落之间有正确的空行分隔，符合Markdown标准
+- [ ] Checkpoint 3: 表格头被正确识别并转换为Markdown表格格式
+- [ ] Checkpoint 4: 修复后的文档内容与原始内容一致，仅格式调整
+- [ ] Checkpoint 5: 表格数据准确完整，无遗漏或错误
+- [ ] Checkpoint 6: 文本内容准确无误、逻辑清晰、语言流畅
+- [ ] Checkpoint 7: 文档格式符合Markdown标准，可正常渲染
+- [ ] Checkpoint 8: 所有合伙人信文档都有正确的分段和表格格式
+- [ ] Checkpoint 9: 所有股东信文档都有正确的分段和表格格式
+- [ ] Checkpoint 10: 表格列名合并问题已修复（如"Lehman | (2) Tri-Cont. (2) 道指 LP 合伙人"）

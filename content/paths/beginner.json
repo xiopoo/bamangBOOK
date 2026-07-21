@@ -1,0 +1,55 @@
+{
+  "id": "beginner",
+  "title": "入门路径：从零开始理解价值投资",
+  "subtitle": "适合没有投资基础的朋友，从故事和概念入手",
+  "estimatedTime": "约 3-5 小时",
+  "icon": "🌱",
+  "steps": [
+    {
+      "order": 1,
+      "title": "第一步：了解巴菲特是谁",
+      "description": "从故事中建立情感连接，了解价值投资的源头",
+      "items": [
+        { "type": "article", "category": "articles", "file": "04-人物传记/巴菲特青春时代.md", "note": "了解巴菲特的成长故事" },
+        { "type": "article", "category": "articles", "file": "04-人物传记/恩师格雷厄姆生平回顾.md", "note": "理解价值投资教父的思想形成" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/巴菲特：500_亿美元的决定.md", "note": "巴菲特从哥大到加入格雷厄姆的故事" }
+      ]
+    },
+    {
+      "order": 2,
+      "title": "第二步：掌握六个核心概念",
+      "description": "这些概念是理解巴菲特投资方法的基础",
+      "items": [
+        { "type": "concept", "category": "concepts", "file": "价值投资", "note": "价值投资的定义与核心原则" },
+        { "type": "concept", "category": "concepts", "file": "安全边际", "note": "格雷厄姆最重要的概念：以低于内在价值的价格买入" },
+        { "type": "concept", "category": "concepts", "file": "市场先生", "note": "理解市场情绪，不随波逐流" },
+        { "type": "concept", "category": "concepts", "file": "复利", "note": "理解复利的力量：世界第八大奇迹" },
+        { "type": "concept", "category": "concepts", "file": "能力圈", "note": "知道自己的能力边界在哪里" },
+        { "type": "concept", "category": "concepts", "file": "长期持有", "note": "为什么要长期持有优质企业" }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "第三步：阅读经典文章",
+      "description": "通过文章和股东手册加深对价值投资的理解",
+      "items": [
+        { "type": "article", "category": "articles", "file": "01-投资理念/关于市场先生和人性的理解.md", "note": "配套市场先生概念，看巴菲特如何完整阐释" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/如何建立能力圈.md", "note": "巴菲特亲述如何界定并拓展自己的能力边界" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/巴菲特：回忆进入证券行业_2005.md", "note": "巴菲特求职被拒的轶事，展示坚持和热情" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/巴菲特估值逻辑.md", "note": "内在价值=未来现金流折现，简单但深刻" },
+        { "type": "article", "category": "articles", "file": "01-投资理念/巴菲特推荐过的书籍.md", "note": "理解巴菲特的四本核心书籍" },
+        { "type": "article", "category": "articles", "file": "06-备忘录/伯克希尔股东手册_1996.md", "note": "13条商业原则，理解巴菲特式公司治理" }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "第四步：感受历史与当下",
+      "description": "从历史脉络和最新内容中获得全景视角",
+      "items": [
+        { "type": "article", "category": "articles", "file": "07-伯克希尔史/巴菲特合伙公司时代.md", "note": "合伙公司13年的简史" },
+        { "type": "article", "category": "articles", "file": "07-伯克希尔史/伯克希尔大会实录_2025.md", "note": "感受最新股东会的氛围" },
+        { "type": "letter", "category": "partnership", "file": "partnership_1957-巴菲特致合伙人信.md", "note": "第一封合伙人信，感受年轻巴菲特的声音" }
+      ]
+    }
+  ]
+}

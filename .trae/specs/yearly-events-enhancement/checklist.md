@@ -1,0 +1,9 @@
+- [ ] Checkpoint 1: YearlyEvents 组件新增栏目说明文字和专属样式
+- [ ] Checkpoint 2: 大事记板块与正文有明显视觉区隔（背景、边框、标题样式）
+- [ ] Checkpoint 3: 数据模型 EventItem 支持 tags 字段
+- [ ] Checkpoint 4: 解析逻辑能正确识别 `[tag]` 格式的主题标签
+- [ ] Checkpoint 5: YearlyEvents 支持 filterTag 参数进行主题过滤
+- [ ] Checkpoint 6: yearly-events.md 中大事记条目已添加主题标签
+- [ ] Checkpoint 7: 信件详情页根据信件上下文传递 filterTag 参数
+- [ ] Checkpoint 8: 内容更新脚本可用
+- [ ] Checkpoint 9: 项目构建成功（npm run build exit code 0）

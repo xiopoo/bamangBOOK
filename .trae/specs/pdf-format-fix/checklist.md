@@ -1,0 +1,6 @@
+- [x] Checkpoint 1: "伯克希尔与标普 500 指数"文件包含正确的表格数据而非股东大会问答内容
+- [x] Checkpoint 2: 输出目录中存在多个同名文件（如`伯克希尔与标普_500_指数.md`和`伯克希尔与标普_500_指数_1.md`）
+- [x] Checkpoint 3: "伯克希尔与标普 500 指数"文件中的表格已转换为Markdown表格格式
+- [x] Checkpoint 4: "伯克希尔业务版图"文件中的表格已转换为Markdown表格格式
+- [x] Checkpoint 5: 脚本成功生成265+个文件
+- [x] Checkpoint 6: 生成的Markdown文件可正常渲染

@@ -1,0 +1,6 @@
+- [x] Checkpoint 1: `content/index.json` 中 `companies` 数组包含68条记录，`total.companies` 为68
+- [x] Checkpoint 2: 首页公司统计卡片显示"68家公司"，重要公司TOP15显示引用次数
+- [x] Checkpoint 3: `/companies` 列表页每家公司卡片显示"提及 N 次"
+- [x] Checkpoint 4: 公司详情页中 `[[护城河]]` 等双括号链接渲染为可点击链接，指向 `/concepts/护城河`
+- [x] Checkpoint 5: 公司详情页底部"相关股东信"区块包含年份链接，点击可跳转到 `/letters/{year}`
+- [x] Checkpoint 6: `npm run build` 无编译错误

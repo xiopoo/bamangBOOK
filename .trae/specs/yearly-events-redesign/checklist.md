@@ -1,0 +1,4 @@
+- [x] Checkpoint 1: YearlyEvents 组件重构完成，包含说明文字和独立视觉样式
+- [x] Checkpoint 2: 股东信详情页中大事记移至正文之后
+- [x] Checkpoint 3: 合伙人信详情页中大事记移至正文之后
+- [x] Checkpoint 4: 项目构建成功（npm run build exit code 0）

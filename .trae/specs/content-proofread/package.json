@@ -1,0 +1,16 @@
+{
+  "name": "content-proofread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "diff_letters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "diff": "^9.0.0"
+  }
+}

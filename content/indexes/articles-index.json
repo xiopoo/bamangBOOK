@@ -1,0 +1,506 @@
+[
+  {
+    "title": "伯克希尔哈撒韦时代",
+    "year": 1965,
+    "wordCount": 500,
+    "contentLength": 600,
+    "fileName": "07-伯克希尔史/伯克希尔哈撒韦时代.md"
+  },
+  {
+    "title": "巴菲特合伙公司时代",
+    "year": null,
+    "wordCount": 1000,
+    "contentLength": 1200,
+    "fileName": "07-伯克希尔史/巴菲特合伙公司时代.md"
+  },
+  {
+    "title": "伯克希尔业务版图",
+    "year": null,
+    "wordCount": 2992,
+    "contentLength": 14217,
+    "fileName": "03-公司分析/伯克希尔业务版图.md"
+  },
+  {
+    "title": "巴菲特青春时代",
+    "year": null,
+    "wordCount": 868,
+    "contentLength": 1952,
+    "fileName": "04-人物传记/巴菲特青春时代.md"
+  },
+  {
+    "title": "恩师格雷厄姆生平回顾",
+    "year": null,
+    "wordCount": 26588,
+    "contentLength": 39281,
+    "fileName": "04-人物传记/恩师格雷厄姆生平回顾.md"
+  },
+  {
+    "title": "关于市场先生和人性的理解",
+    "year": null,
+    "wordCount": 28608,
+    "contentLength": 32977,
+    "fileName": "01-投资理念/关于市场先生和人性的理解.md"
+  },
+  {
+    "title": "我最看好的股票：GEICO 保险 1951",
+    "year": 1951,
+    "wordCount": 1711,
+    "contentLength": 2480,
+    "fileName": "03-公司分析/我最看好的股票：GEICO_保险_1951.md"
+  },
+  {
+    "title": "我最看好的股票：西部保险 1953",
+    "year": 1953,
+    "wordCount": 1814,
+    "contentLength": 2373,
+    "fileName": "03-公司分析/我最看好的股票：西部保险_1953.md"
+  },
+  {
+    "title": "我最看好的股票：油气资产管理公司 1957",
+    "year": 1957,
+    "wordCount": 1727,
+    "contentLength": 2448,
+    "fileName": "03-公司分析/我最看好的股票：油气资产管理公司_1957.md"
+  },
+  {
+    "title": "我最看好的股票：人寿保险 1957",
+    "year": 1957,
+    "wordCount": 850,
+    "contentLength": 1424,
+    "fileName": "03-公司分析/我最看好的股票：人寿保险_1957.md"
+  },
+  {
+    "title": "巴菲特合伙契约 1956",
+    "year": 1956,
+    "wordCount": 809,
+    "contentLength": 1582,
+    "fileName": "07-伯克希尔史/巴菲特合伙契约_1956.md"
+  },
+  {
+    "title": "巴菲特谈喜诗糖果 1972",
+    "year": 1972,
+    "wordCount": 15676,
+    "contentLength": 22984,
+    "fileName": "03-公司分析/巴菲特谈喜诗糖果_1972.md"
+  },
+  {
+    "title": "巴菲特谈股市 1974",
+    "year": 1974,
+    "wordCount": 2414,
+    "contentLength": 3020,
+    "fileName": "02-股市宏观/巴菲特谈股市_1974.md"
+  },
+  {
+    "title": "巴菲特谈养老金问题 1975",
+    "year": 1975,
+    "wordCount": 11199,
+    "contentLength": 13353,
+    "fileName": "03-公司分析/巴菲特谈养老金问题_1975.md"
+  },
+  {
+    "title": "巴菲特谈 GEICO1976",
+    "year": 1976,
+    "wordCount": 1977,
+    "contentLength": 2668,
+    "fileName": "03-公司分析/巴菲特谈_GEICO1976.md"
+  },
+  {
+    "title": "格雷厄姆谈股市 1976",
+    "year": 1976,
+    "wordCount": 4296,
+    "contentLength": 6029,
+    "fileName": "02-股市宏观/格雷厄姆谈股市_1976.md"
+  },
+  {
+    "title": "施洛斯：怀念恩师格雷厄姆 1976",
+    "year": 1976,
+    "wordCount": 2387,
+    "contentLength": 3175,
+    "fileName": "04-人物传记/施洛斯：怀念恩师格雷厄姆_1976.md"
+  },
+  {
+    "title": "巴菲特：怀念恩师格雷厄姆 1976",
+    "year": 1976,
+    "wordCount": 804,
+    "contentLength": 929,
+    "fileName": "04-人物传记/巴菲特：怀念恩师格雷厄姆_1976.md"
+  },
+  {
+    "title": "企业收藏家 1977",
+    "year": 1977,
+    "wordCount": 3753,
+    "contentLength": 5056,
+    "fileName": "07-伯克希尔史/企业收藏家_1977.md"
+  },
+  {
+    "title": "巴菲特谈通货膨胀 1977",
+    "year": 1977,
+    "wordCount": 13229,
+    "contentLength": 16266,
+    "fileName": "02-股市宏观/巴菲特谈通货膨胀_1977.md"
+  },
+  {
+    "title": "巴菲特谈股市 1979",
+    "year": 1979,
+    "wordCount": 2622,
+    "contentLength": 3315,
+    "fileName": "02-股市宏观/巴菲特谈股市_1979.md"
+  },
+  {
+    "title": "巴菲特谈指数期货 1982",
+    "year": 1982,
+    "wordCount": 2225,
+    "contentLength": 2759,
+    "fileName": "02-股市宏观/巴菲特谈指数期货_1982.md"
+  },
+  {
+    "title": "巴菲特谈投资 1985",
+    "year": 1985,
+    "wordCount": 2572,
+    "contentLength": 3122,
+    "fileName": "01-投资理念/巴菲特谈投资_1985.md"
+  },
+  {
+    "title": "最资深的经理人桑迪威尔",
+    "year": null,
+    "wordCount": 5219,
+    "contentLength": 7771,
+    "fileName": "04-人物传记/最资深的经理人桑迪威尔.md"
+  },
+  {
+    "title": "「所有者收益」vs「自由现金流」",
+    "year": null,
+    "wordCount": 15330,
+    "contentLength": 22796,
+    "fileName": "01-投资理念/「所有者收益」vs「自由现金流」.md"
+  },
+  {
+    "title": "巴菲特谈投资 1988",
+    "year": 1988,
+    "wordCount": 4099,
+    "contentLength": 5183,
+    "fileName": "01-投资理念/巴菲特谈投资_1988.md"
+  },
+  {
+    "title": "巴菲特: 你应该了解珠宝生意",
+    "year": null,
+    "wordCount": 1504,
+    "contentLength": 1803,
+    "fileName": "03-公司分析/巴菲特_你应该了解珠宝生意.md"
+  },
+  {
+    "title": "巴菲特致所罗门股东信 1991",
+    "year": 1991,
+    "wordCount": 4029,
+    "contentLength": 4869,
+    "fileName": "06-备忘录/巴菲特致所罗门股东信_1991.md"
+  },
+  {
+    "title": "财富杂志：恐龙",
+    "year": null,
+    "wordCount": 7886,
+    "contentLength": 10927,
+    "fileName": "09-其他/财富杂志：恐龙.md"
+  },
+  {
+    "title": "巴菲特谈施洛斯的信 1994",
+    "year": 1994,
+    "wordCount": 761,
+    "contentLength": 1220,
+    "fileName": "01-投资理念/巴菲特谈施洛斯的信_1994.md"
+  },
+  {
+    "title": "伯克希尔股东手册 1996",
+    "year": 1996,
+    "wordCount": 8626,
+    "contentLength": 9900,
+    "fileName": "06-备忘录/伯克希尔股东手册_1996.md"
+  },
+  {
+    "title": "巴菲特谈微软的信 1997",
+    "year": 1997,
+    "wordCount": 5344,
+    "contentLength": 8089,
+    "fileName": "01-投资理念/巴菲特谈微软的信_1997.md"
+  },
+  {
+    "title": "巴菲特收购 LTMC 要约 1998",
+    "year": 1998,
+    "wordCount": 843,
+    "contentLength": 1321,
+    "fileName": "03-公司分析/巴菲特收购_LTMC_要约_1998.md"
+  },
+  {
+    "title": "伯克希尔：集团企业的终极折让",
+    "year": null,
+    "wordCount": 61162,
+    "contentLength": 82320,
+    "fileName": "03-公司分析/伯克希尔：集团企业的终极折让.md"
+  },
+  {
+    "title": "巴菲特谈股市 1999",
+    "year": 1999,
+    "wordCount": 4029,
+    "contentLength": 5062,
+    "fileName": "02-股市宏观/巴菲特谈股市_1999.md"
+  },
+  {
+    "title": "芒格：2003 年的金融大丑闻",
+    "year": 2003,
+    "wordCount": 8170,
+    "contentLength": 9673,
+    "fileName": "08-芒格专题/芒格：2003_年的金融大丑闻.md"
+  },
+  {
+    "title": "巴菲特：保险业的 FDIC 2001",
+    "year": 2001,
+    "wordCount": 1513,
+    "contentLength": 1743,
+    "fileName": "02-股市宏观/巴菲特：保险业的_FDIC_2001.md"
+  },
+  {
+    "title": "巴菲特：给全体经理人备忘录 2001",
+    "year": 2001,
+    "wordCount": 649,
+    "contentLength": 768,
+    "fileName": "06-备忘录/巴菲特：给全体经理人备忘录_2001.md"
+  },
+  {
+    "title": "巴菲特谈股市 2001",
+    "year": 2001,
+    "wordCount": 8261,
+    "contentLength": 10847,
+    "fileName": "02-股市宏观/巴菲特谈股市_2001.md"
+  },
+  {
+    "title": "巴菲特：股票期权与常识 2002",
+    "year": 2002,
+    "wordCount": 8182,
+    "contentLength": 10045,
+    "fileName": "05-政策社会/巴菲特：股票期权与常识_2002.md"
+  },
+  {
+    "title": "巴菲特：谁是真正的账房先生",
+    "year": null,
+    "wordCount": 1316,
+    "contentLength": 1674,
+    "fileName": "05-政策社会/巴菲特：谁是真正的账房先生.md"
+  },
+  {
+    "title": "沃伦在担心什么 2003",
+    "year": 2003,
+    "wordCount": 4025,
+    "contentLength": 4780,
+    "fileName": "02-股市宏观/沃伦在担心什么_2003.md"
+  },
+  {
+    "title": "巴菲特：股息巫术 2003",
+    "year": 2003,
+    "wordCount": 1479,
+    "contentLength": 1828,
+    "fileName": "05-政策社会/巴菲特：股息巫术_2003.md"
+  },
+  {
+    "title": "巴菲特：我为什么不看好美元 2003",
+    "year": 2003,
+    "wordCount": 7203,
+    "contentLength": 8170,
+    "fileName": "02-股市宏观/巴菲特：我为什么不看好美元_2003.md"
+  },
+  {
+    "title": "巴菲特：模糊数学与股票期权 2004",
+    "year": 2004,
+    "wordCount": 1457,
+    "contentLength": 1745,
+    "fileName": "05-政策社会/巴菲特：模糊数学与股票期权_2004.md"
+  },
+  {
+    "title": "卢米斯：我在财富杂志的 51 年",
+    "year": null,
+    "wordCount": 15628,
+    "contentLength": 23404,
+    "fileName": "04-人物传记/卢米斯：我在财富杂志的_51_年.md"
+  },
+  {
+    "title": "卢米斯：回顾职业生涯 2005",
+    "year": 2005,
+    "wordCount": 7023,
+    "contentLength": 9013,
+    "fileName": "04-人物传记/卢米斯：回顾职业生涯_2005.md"
+  },
+  {
+    "title": "巴菲特：回忆进入证券行业 2005",
+    "year": 2005,
+    "wordCount": 1111,
+    "contentLength": 1488,
+    "fileName": "01-投资理念/巴菲特：回忆进入证券行业_2005.md"
+  },
+  {
+    "title": "巴菲特：给全体经理人备忘录 2006",
+    "year": 2006,
+    "wordCount": 683,
+    "contentLength": 828,
+    "fileName": "06-备忘录/巴菲特：给全体经理人备忘录_2006.md"
+  },
+  {
+    "title": "巴菲特接见 Dardashti 2007",
+    "year": 2007,
+    "wordCount": 1825,
+    "contentLength": 2728,
+    "fileName": "01-投资理念/巴菲特接见_Dardashti_2007.md"
+  },
+  {
+    "title": "财富杂志：沃伦之思 2008",
+    "year": 2008,
+    "wordCount": 4101,
+    "contentLength": 5119,
+    "fileName": "04-人物传记/财富杂志：沃伦之思_2008.md"
+  },
+  {
+    "title": "巴菲特：给保尔森的信 2008",
+    "year": 2008,
+    "wordCount": 1930,
+    "contentLength": 2523,
+    "fileName": "02-股市宏观/巴菲特：给保尔森的信_2008.md"
+  },
+  {
+    "title": "巴菲特：买入美国正当时 2008",
+    "year": 2008,
+    "wordCount": 1251,
+    "contentLength": 1730,
+    "fileName": "02-股市宏观/巴菲特：买入美国正当时_2008.md"
+  },
+  {
+    "title": "巴菲特：怀念恩师格雷厄姆 2008",
+    "year": 2008,
+    "wordCount": 5136,
+    "contentLength": 6224,
+    "fileName": "04-人物传记/巴菲特：怀念恩师格雷厄姆_2008.md"
+  },
+  {
+    "title": "杰米·戴蒙 2008 年致股东信",
+    "year": 2008,
+    "wordCount": 26693,
+    "contentLength": 31945,
+    "fileName": "09-其他/杰米·戴蒙_2008_年致股东信.md"
+  },
+  {
+    "title": "巴菲特：美元效应 2009",
+    "year": 2009,
+    "wordCount": 1588,
+    "contentLength": 1912,
+    "fileName": "02-股市宏观/巴菲特：美元效应_2009.md"
+  },
+  {
+    "title": "巴菲特：收购 BNSF 铁路",
+    "year": null,
+    "wordCount": 14408,
+    "contentLength": 17522,
+    "fileName": "03-公司分析/巴菲特：收购_BNSF_铁路.md"
+  },
+  {
+    "title": "巴菲特：给全体经理人备忘录 2010",
+    "year": 2010,
+    "wordCount": 1730,
+    "contentLength": 2003,
+    "fileName": "06-备忘录/巴菲特：给全体经理人备忘录_2010.md"
+  },
+  {
+    "title": "巴菲特：500 亿美元的决定",
+    "year": null,
+    "wordCount": 1810,
+    "contentLength": 2120,
+    "fileName": "01-投资理念/巴菲特：500_亿美元的决定.md"
+  },
+  {
+    "title": "巴菲特：关于游牧者基金 2014",
+    "year": 2014,
+    "wordCount": 523,
+    "contentLength": 729,
+    "fileName": "01-投资理念/巴菲特：关于游牧者基金_2014.md"
+  },
+  {
+    "title": "巴菲特：给全体经理人备忘录 2014",
+    "year": 2014,
+    "wordCount": 1722,
+    "contentLength": 2003,
+    "fileName": "06-备忘录/巴菲特：给全体经理人备忘录_2014.md"
+  },
+  {
+    "title": "伯克希尔 50 周年：过去、现在和未来",
+    "year": null,
+    "wordCount": 18699,
+    "contentLength": 22953,
+    "fileName": "07-伯克希尔史/伯克希尔_50_周年：过去、现在和未来.md"
+  },
+  {
+    "title": "巴菲特：扩大所得税抵免比提高最低工资更好",
+    "year": null,
+    "wordCount": 1542,
+    "contentLength": 1847,
+    "fileName": "05-政策社会/巴菲特：扩大所得税抵免比提高最低工资更好.md"
+  },
+  {
+    "title": "考夫曼：Glenair 企业文化",
+    "year": null,
+    "wordCount": 20105,
+    "contentLength": 26715,
+    "fileName": "04-人物传记/考夫曼：Glenair_企业文化.md"
+  },
+  {
+    "title": "巴菲特：美国的未来 2017",
+    "year": 2017,
+    "wordCount": 1452,
+    "contentLength": 1833,
+    "fileName": "02-股市宏观/巴菲特：美国的未来_2017.md"
+  },
+  {
+    "title": "伯克希尔与标普 500 指数",
+    "year": null,
+    "wordCount": 16109,
+    "contentLength": 19408,
+    "fileName": "02-股市宏观/伯克希尔与标普_500_指数.md"
+  },
+  {
+    "title": "康布斯：在普通股中寻找价值",
+    "year": null,
+    "wordCount": 28548,
+    "contentLength": 46937,
+    "fileName": "01-投资理念/康布斯：在普通股中寻找价值.md"
+  },
+  {
+    "title": "查理芒格：伯克希尔的总设计师",
+    "year": null,
+    "wordCount": 706,
+    "contentLength": 864,
+    "fileName": "04-人物传记/查理芒格：伯克希尔的总设计师.md"
+  },
+  {
+    "title": "如何建立能力圈",
+    "year": null,
+    "wordCount": 42744,
+    "contentLength": 50707,
+    "fileName": "01-投资理念/如何建立能力圈.md"
+  },
+  {
+    "title": "巴菲特估值逻辑",
+    "year": null,
+    "wordCount": 8053,
+    "contentLength": 9236,
+    "fileName": "01-投资理念/巴菲特估值逻辑.md"
+  },
+  {
+    "title": "伯克希尔投资历史",
+    "year": null,
+    "wordCount": 5455,
+    "contentLength": 41912,
+    "fileName": "07-伯克希尔史/伯克希尔投资历史.md"
+  },
+  {
+    "title": "巴菲特推荐过的书籍",
+    "year": null,
+    "wordCount": 30285,
+    "contentLength": 50109,
+    "fileName": "01-投资理念/巴菲特推荐过的书籍.md"
+  }
+]

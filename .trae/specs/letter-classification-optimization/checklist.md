@@ -1,0 +1,10 @@
+- [x] Checkpoint 1: 1956年合伙人信文件创建完成，内容正确
+- [x] Checkpoint 2: /partnership页面显示1956年条目
+- [x] Checkpoint 3: 合伙人信与股东信分类完全分离（1965-1970年只显示股东信）
+- [x] Checkpoint 4: 股东信列表页无"含合伙人信"标签
+- [x] Checkpoint 5: 编号格式修正完成，编号段落不以标题样式显示
+- [x] Checkpoint 6: 年度大事记提取脚本创建完成
+- [x] Checkpoint 7: 年度大事记展示组件创建完成并集成到信件详情页面
+- [x] Checkpoint 8: 所有信件标题分类审核完成，无错误分类
+- [x] Checkpoint 9: 项目构建成功（npm run build exit code 0）
+- [x] Checkpoint 10: 所有修改内容经过测试验证

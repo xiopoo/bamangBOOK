@@ -1,0 +1,4 @@
+- [x] Checkpoint 1: 数据模型更新完成，支持重要事件标记解析
+- [x] Checkpoint 2: YearlyEvents组件更新完成，重要事件显示视觉强化样式
+- [x] Checkpoint 3: yearly-events.md中重要事件标记完成
+- [ ] Checkpoint 4: 项目构建成功（npm run build exit code 0）

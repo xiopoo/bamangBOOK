@@ -1,0 +1,8 @@
+- [x] Checkpoint 1: 所有表格被正确转换为Markdown表格格式
+- [x] Checkpoint 2: 所有表格列数一致，格式符合Markdown标准
+- [x] Checkpoint 3: 所有表格头被正确识别并转换为Markdown表格格式
+- [x] Checkpoint 4: 表格数据准确完整，无遗漏或错误
+- [x] Checkpoint 5: 表格格式符合Markdown标准，可正常渲染
+- [x] Checkpoint 6: 所有合伙人信文档的表格格式正确
+- [x] Checkpoint 7: 所有股东信文档的表格格式正确
+- [x] Checkpoint 8: 表格数据与PDF原件完全一致

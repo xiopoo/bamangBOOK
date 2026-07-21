@@ -1,0 +1,73 @@
+{
+  "year": "2025",
+  "concepts": [],
+  "people": [
+    {
+      "id": "格雷格·阿贝尔",
+      "name": "格雷格·阿贝尔",
+      "count": 5
+    },
+    {
+      "id": "芒格",
+      "name": "芒格",
+      "count": 4
+    },
+    {
+      "id": "巴菲特",
+      "name": "巴菲特",
+      "count": 3
+    },
+    {
+      "id": "格雷厄姆",
+      "name": "格雷厄姆",
+      "count": 3
+    },
+    {
+      "id": "汤姆·墨菲",
+      "name": "汤姆·墨菲",
+      "count": 1
+    }
+  ],
+  "companies": [
+    {
+      "id": "伯克希尔哈撒韦",
+      "name": "伯克希尔哈撒韦",
+      "count": 29
+    },
+    {
+      "id": "可口可乐",
+      "name": "可口可乐",
+      "count": 6
+    },
+    {
+      "id": "Meta",
+      "name": "Meta",
+      "count": 2
+    },
+    {
+      "id": "内布拉斯加家具店",
+      "name": "内布拉斯加家具店",
+      "count": 1
+    },
+    {
+      "id": "卡特彼勒",
+      "name": "卡特彼勒",
+      "count": 1
+    },
+    {
+      "id": "迪尔",
+      "name": "迪尔",
+      "count": 1
+    },
+    {
+      "id": "国民保险公司",
+      "name": "国民保险公司",
+      "count": 1
+    }
+  ],
+  "summary": {
+    "conceptCount": 0,
+    "peopleCount": 5,
+    "companyCount": 7
+  }
+}
