@@ -1,6 +1,5 @@
 # 1962年12月 巴菲特致合伙人信
 
-
 ---
 
 巴菲特合伙公司（BUFFETT PARTNERSHIP, LTD.）
