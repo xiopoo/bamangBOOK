@@ -3,14 +3,12 @@ title: "智谱、Anthropic会是AI 时代的腾讯、谷歌吗？"
 author: "投资向善"
 account: "方伟看10年"
 date: "2026-07-13 07:00"
-url: "https://mp.weixin.qq.com/s/nMKpSWj37wkooNsV3ISAwA"
 ---
 
 # 智谱、Anthropic会是AI 时代的腾讯、谷歌吗？
 
 > 投资向善 · 方伟看10年 · 2026-07-13 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/nMKpSWj37wkooNsV3ISAwA)
 
 “现在我不知道有多少家在做电动车。**就像我们当年做游戏机一样，可能有几百家。你卷到最后就剩几家。那几家是赚钱的。**但这几百家都是要倒的。所以现在看到的电动车大部分都会死掉，这个我可以肯定，**谁会活下来，我不知道。”**  
 

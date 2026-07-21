@@ -93,7 +93,7 @@ export default async function HomePage() {
       <div className="text-center mb-10 md:mb-14">
         <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 rounded-full px-4 py-1.5 mb-6">
           <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-          <span className="text-sm text-primary dark:text-primary-light">复利书房 · 价值投资知识宝库</span>
+          <span className="text-sm text-primary dark:text-primary-light">价值投资知识库</span>
         </div>
         <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 font-serif">
           中文世界最系统的<br className="md:hidden" />价值投资知识库

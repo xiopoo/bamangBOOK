@@ -3,14 +3,12 @@ title: "SaaS软件股价为什么被屠杀？从AI时代的受益者变成了受
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2026-02-06 07:00"
-url: "https://mp.weixin.qq.com/s/oX9rrO2ndmZBPeYtBmFRPw"
 ---
 
 # SaaS软件股价为什么被屠杀？从AI时代的受益者变成了受害者
 
 > 方伟Rey · 方伟看十年 · 2026-02-06 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/oX9rrO2ndmZBPeYtBmFRPw)
 
 “互联网对于整个社会来说是巨大的福祉，但对于大多数企业来说，它是一个净负面因素。 **因为互联网让对比价格变得太容易了，它消除了信息不对称，从而摧毁了利润率**。”  
 
@@ -22,13 +20,13 @@ url: "https://mp.weixin.qq.com/s/oX9rrO2ndmZBPeYtBmFRPw"
 
 Figma 其实是互联网公司的 Microsoft Office 套件，产品经理/设计师都得指望着他干活。
 
-在文章《[开盘涨了250%的设计工具Figma内在价值是多少？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247486744&idx=1&sn=0f7202a4c9be5c067505957879913985&scene=21#wechat_redirect)[](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247486744&idx=1&sn=0f7202a4c9be5c067505957879913985&scene=21#wechat_redirect)》（下图）其实分析过 Figma：**550 亿美金的市值，早就透支了 Figma 未来 8~10 年的成长性，是激起冒险的风险投资行为。**
+在文章《开盘涨了250%的设计工具Figma内在价值是多少？》（下图）其实分析过 Figma：**550 亿美金的市值，早就透支了 Figma 未来 8~10 年的成长性，是激起冒险的风险投资行为。**
 
 ![](./assets/bca47bcb80a4ef45a586b701a565205f.jpg)
 
 我其实干了好多年的 SaaS 软件行业，对中国的 SaaS 环境可谓“深恶痛疾”，谁干谁赔钱（当然，肯定是有人赚钱的的，比如恒生电子、万得）。
 
-在文章《[我为什么不投中国的软件公司？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247488546&idx=1&sn=31bb39ebeeab22d13831c532f52c020d&scene=21#wechat_redirect)[](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247488546&idx=1&sn=31bb39ebeeab22d13831c532f52c020d&scene=21#wechat_redirect)》解释过原因：
+在文章《我为什么不投中国的软件公司？》解释过原因：
 
 “**进入门槛这件事在投资中是非常重要的，甭管你是不是所谓的高科技行业、软件行业、生物医药行业、芯片行业、金融行业、机器人行业，只要你没有固若金汤的护城河，而又获得了 30%的净利率（不要说 30%，超过 10%就有大量的人愿意干），就会面临激烈的竞争，这是商业的规律。**
 

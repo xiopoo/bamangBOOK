@@ -154,6 +154,7 @@ export default function Sidebar() {
               {/* 学习路径 & 图谱 */}
               <NavLink href="/learn" icon="🗺️" label="学习路径" />
               <NavLink href="/graph" icon="🕸️" label="知识图谱" />
+              <NavLink href="/bloggers" icon="📡" label="博主文章" />
 
               {/* Buffet & Munger people pages */}
               <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-700">

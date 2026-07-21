@@ -1,5 +1,4 @@
-﻿import Link from 'next/link'
-import { BookOpen, Upload, Star, Clock, ChevronRight, FileText, Lightbulb, Quote } from 'lucide-react'
+import { BookOpen, Upload, Clock, FileText, Lightbulb, Quote } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
@@ -9,7 +8,7 @@ const books = [
     id: 1,
     title: '穷查理宝典',
     author: '彼得·考夫曼',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20Poor%20Charlies%20Almanack%20investment%20wisdom&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.9,
     readTime: '2小时',
     keyPoints: ['多元思维框架', '逆向思维', '人类误判心理学'],
@@ -19,7 +18,7 @@ const books = [
     id: 2,
     title: '聪明的投资者',
     author: '本杰明·格雷厄姆',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20The%20Intelligent%20Investor%20value%20investment&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.8,
     readTime: '3小时',
     keyPoints: ['内在价值', '安全边际', '市场先生'],
@@ -29,7 +28,7 @@ const books = [
     id: 3,
     title: '巴菲特之道',
     author: '罗伯特·哈格斯特朗',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20The%20Warren%20Buffett%20Way%20investment&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.7,
     readTime: '2.5小时',
     keyPoints: ['护城河', '资本配置', '长期持有'],
@@ -39,7 +38,7 @@ const books = [
     id: 4,
     title: '滚雪球',
     author: '艾丽斯·施罗德',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20The%20Snowball%20Warren%20Buffett%20biography&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.8,
     readTime: '4小时',
     keyPoints: ['复利', '人生选择', '财富积累'],
@@ -49,7 +48,7 @@ const books = [
     id: 5,
     title: '竞争优势',
     author: '迈克尔·波特',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20Competitive%20Advantage%20business%20strategy&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.6,
     readTime: '3小时',
     keyPoints: ['五力模型', '竞争战略', '价值链'],
@@ -59,7 +58,7 @@ const books = [
     id: 6,
     title: '投资最重要的事',
     author: '霍华德·马克斯',
-    cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=book%20cover%20of%20The%20Most%20Important%20Thing%20investing&image_size=square',
+    cover: '/images/book-placeholder.svg',
     rating: 4.7,
     readTime: '2小时',
     keyPoints: ['第二层思维', '风险控制', '周期'],
@@ -132,23 +131,22 @@ export default function BooksPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-6">已拆解书籍</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {books.map((book) => (
-            <Link
+            <div
               key={book.id}
-              href={`/books/detail/${book.id}`}
-              className="block bg-white border border-gray-100 rounded-xl overflow-hidden hover:border-primary/40 hover:shadow-md transition-all group"
+              className="block bg-white border border-gray-100 rounded-xl overflow-hidden"
             >
               <div className="aspect-square bg-gray-100 relative overflow-hidden">
                 <img
                   src={book.cover}
                   alt={book.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute top-3 right-3 bg-primary text-white px-2 py-1 rounded-lg text-sm font-medium">
                   {book.rating}
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-semibold text-gray-900 group-hover:text-primary-dark transition-colors">
+                <h3 className="font-semibold text-gray-900">
                   {book.title}
                 </h3>
                 <p className="text-gray-500 text-sm mt-1">{book.author}</p>
@@ -173,7 +171,7 @@ export default function BooksPage() {
                   ))}
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>

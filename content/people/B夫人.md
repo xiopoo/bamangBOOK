@@ -1,7 +1,5 @@
 # B夫人
 
-> **Source**: [https://buffett-letters-eir.pages.dev/people/B夫人.html](https://buffett-letters-eir.pages.dev/people/B夫人.html)  
-> **Type**: 人物
 
 ---
 

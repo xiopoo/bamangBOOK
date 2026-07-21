@@ -3,14 +3,12 @@ title: "Palantir CEO 批评 AI 模型公司的理由很牵强"
 author: "投资向善"
 account: "方伟看10年"
 date: "2026-07-07 07:00"
-url: "https://mp.weixin.qq.com/s/nHCH5g5OrlbcLZV9iAnoLA"
 ---
 
 # Palantir CEO 批评 AI 模型公司的理由很牵强
 
 > 投资向善 · 方伟看10年 · 2026-07-07 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/nHCH5g5OrlbcLZV9iAnoLA)
 
 “我喜欢我能看懂的生意。先从能不能看懂开始，**我用这一条筛选，90% 的公司都被过滤掉了**。有的生意，我看不出来十年后会怎样，我就不买...我们了解科技公司的产品、了解它对人的影响，**但我们不知道 10 年后它是什么状况**。科技行业变化太快，你没法确定它长期的经济效益，这种生意对我们来说风险太高。”  
 

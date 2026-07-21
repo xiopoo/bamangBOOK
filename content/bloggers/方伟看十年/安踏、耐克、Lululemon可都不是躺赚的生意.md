@@ -3,14 +3,12 @@ title: "安踏、耐克、Lululemon可都不是躺赚的生意"
 author: "方伟Rey"
 account: "方伟看十年"
 date: "2026-02-03 07:00"
-url: "https://mp.weixin.qq.com/s/oejsLa5OwUVFPgmdsGlBWw"
 ---
 
 # 安踏、耐克、Lululemon可都不是躺赚的生意
 
 > 方伟Rey · 方伟看十年 · 2026-02-03 07:00
 
-> [原文链接](https://mp.weixin.qq.com/s/oejsLa5OwUVFPgmdsGlBWw)
 
 “任俊杰：我持有超过10年（或10年左右）的股票先后有：华侨城、张裕、双汇、茅台、天士力、上海家化。  
 
@@ -24,7 +22,7 @@ url: "https://mp.weixin.qq.com/s/oejsLa5OwUVFPgmdsGlBWw"
 
 ——雪球问答录
 
-在文章《[我为什么不敢投资15倍市盈率的安踏？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247487233&idx=1&sn=33e991d0053ecf481b3e8b429d93dad1&scene=21#wechat_redirect)[](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247487233&idx=1&sn=33e991d0053ecf481b3e8b429d93dad1&scene=21#wechat_redirect)》讲过：
+在文章《我为什么不敢投资15倍市盈率的安踏？》讲过：
 
 “芒格常说：**钓鱼的第一原则是要去有鱼的地方钓鱼**。在过去房地产行业上升期时，你排名房产第 100 名，也是能够赚个盆满钵满，做游戏也是，但如果你很不幸，处在 SaaS 行业，你做到第一，那都是亏钱的，比如有赞微盟。
 
@@ -94,7 +92,7 @@ url: "https://mp.weixin.qq.com/s/oejsLa5OwUVFPgmdsGlBWw"
 
 其实，无论安踏、耐克还是 Lululemon，我都是很难投的下手的，我始终认为服饰的差异化很小，营销占的比重太大，安踏有超过 60%的毛利率，超过 20%的净利率，这 2 个数字是非常可怕的，当然，这也不是安踏的问题，同样也是行业的问题。安踏的产品其实是很好的，用料那都是很扎实的，这一点要比美妆的韩束好很多。
 
-我在文章《[“高毛利，低净利”，基本就没有好公司](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247488527&idx=1&sn=28cb8bda71d52608a34bab0df5d737b7&scene=21#wechat_redirect)[](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247488527&idx=1&sn=28cb8bda71d52608a34bab0df5d737b7&scene=21#wechat_redirect)》讲过：“美妆、日化、服装这些行业的特性基本都是重营销，轻产品，广告讲的全是核心科技，一看财报，1%研发费率。”
+我在文章《“高毛利，低净利”，基本就没有好公司》讲过：“美妆、日化、服装这些行业的特性基本都是重营销，轻产品，广告讲的全是核心科技，一看财报，1%研发费率。”
 
 不知道你们还喜不喜欢逛商场，你们有没有发现，过去这十多年，随着中国供应链越来越强，做家电数码的、做家居用品的、做食品饮料的，基本都成了国产品牌，比如格力替代了大金空调，TCL 替代了三星索尼电视，**但唯独法国、意大利、美国的美妆、服装、日化产品依然存在，特别是奢侈品，比如爱马仕、lv、蔻驰，他们依然强大，这么多年下来，估计就老铺黄金因为主打古法黄金，而且黄种人肤色也更适合穿戴黄金，挤进了奢侈品的行列。**
 
@@ -116,13 +114,13 @@ url: "https://mp.weixin.qq.com/s/oejsLa5OwUVFPgmdsGlBWw"
 
 【为什么值得加入】  
 
-1）25年1月份我们判断：[1月份的腾讯都没买的话，这么多年的互联网白干了](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485769&idx=1&sn=0c9b6d1e589df0ec45f194e00a91f671&scene=21#wechat_redirect)
+1）25年1月份我们判断：1月份的腾讯都没买的话，这么多年的互联网白干了
 
-2）24年12月微信上线送礼物，我们看空微盟有赞：[中国的股市真的魔幻，微信一个送礼物的功能，微盟一度涨了50%](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485666&idx=1&sn=f82546a1faf90aa59b779b22c2ee71ca&scene=21#wechat_redirect)
+2）24年12月微信上线送礼物，我们看空微盟有赞：中国的股市真的魔幻，微信一个送礼物的功能，微盟一度涨了50%
 
-3）此外，我长期看好拼多多，静待花开：[即便无人看好，依然加仓拼多多](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485776&idx=1&sn=d92c24429c060311c41ef33e68840ce4&scene=21#wechat_redirect)；苹果/腾讯（[为什么25倍的腾讯、30倍的苹果都没有太大泡沫？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247487112&idx=1&sn=25f72436e61d655d0b618d60577faf77&scene=21#wechat_redirect)）；台积电、抖音（[抖音豆包这么强，能不能做空百度？](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247487771&idx=1&sn=d8df22d1cd8e40f84a4be6b678b09cef&scene=21#wechat_redirect)）；古茗（[古茗被低估，霸王茶姬被高估](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247487456&idx=1&sn=4f7d6fdfb5353b59de304646609310f9&scene=21#wechat_redirect)）；茅台（[“九连跌”是没看懂茅台“黄金时代-白银时代-黑铁时代”的转型](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247489004&idx=1&sn=77bcc6e5c4e605f397875c3eaadf9f17&scene=21#wechat_redirect)）
+3）此外，我长期看好拼多多，静待花开：即便无人看好，依然加仓拼多多；苹果/腾讯（为什么25倍的腾讯、30倍的苹果都没有太大泡沫？）；台积电、抖音（抖音豆包这么强，能不能做空百度？）；古茗（古茗被低估，霸王茶姬被高估）；茅台（“九连跌”是没看懂茅台“黄金时代-白银时代-黑铁时代”的转型）
 
-4）还有，我长期看空百度、京东、快手、蔚来、唯品会、有赞微盟、东方甄选、永辉超市等：[京东外卖别说突破100万单，突破500万单也没用](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485866&idx=1&sn=a088802027d6276062efd21564b86ceb&scene=21#wechat_redirect)；[快手电商已死，只是余温尚存](https://mp.weixin.qq.com/s?__biz=MzU5NzAzMDg1OQ==&mid=2247485602&idx=1&sn=6f7a6924f988c37f7909c247e7fb9e15&scene=21#wechat_redirect)
+4）还有，我长期看空百度、京东、快手、蔚来、唯品会、有赞微盟、东方甄选、永辉超市等：京东外卖别说突破100万单，突破500万单也没用；快手电商已死，只是余温尚存
 
 — 扫码下面二维码加入知识星球会员 —
 

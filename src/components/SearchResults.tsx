@@ -143,7 +143,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-5xl mb-4">📖</div>
         <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
-          搜索「价值投资知识宝库」全部内容
+          搜索「巴芒书房」全部内容
         </h3>
         <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
           输入关键词搜索概念、公司、人物或信件，探索巴菲特与芒格的价值投资知识体系

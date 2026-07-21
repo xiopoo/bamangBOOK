@@ -2,14 +2,12 @@
 title: "AI时代，更需要一个有血有肉的人。"
 account: "方伟看十年"
 date: "2025-01-11 21:11"
-url: "https://mp.weixin.qq.com/s/lrXugv1RC_tyqA4vMbXqvQ"
 ---
 
 # AI时代，更需要一个有血有肉的人。
 
 > 方伟看十年 · 2025-01-11 21:11
 
-> [原文链接](https://mp.weixin.qq.com/s/lrXugv1RC_tyqA4vMbXqvQ)
 
 刚刷了一下视频号，发现几件事情背后，本质上是一样的：
 

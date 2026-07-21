@@ -102,6 +102,8 @@ export default function LetterReader({
   }, [topConcepts, relatedPeople, relatedCompanies])
 
   const markdownComponents = useMemo(() => ({
+    // 隐藏 h1：页面 header 已显示标题，内容中的 h1 冗余且字号过大
+    h1: () => null,
     a: ({ href, children }: any) => (
       <a href={href} className="text-primary hover:text-primary-light underline underline-offset-4 decoration-1">
         {children}
