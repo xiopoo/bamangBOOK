@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/prebuild.js",
-    "build": "node scripts/prebuild.js && next build",
-    "postbuild": "node scripts/prebuild.js --restore",
+    "build": "node scripts/prebuild.js && next build && node scripts/prebuild.js --restore",
     "start": "next start",
     "lint": "next lint",
     "sync-bloggers": "node scripts/sync-bloggers.js",

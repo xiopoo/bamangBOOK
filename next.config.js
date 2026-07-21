@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Vercel 部署：确保 content/bloggers/ 在运行时可用
-  experimental: {
-    outputFileTracingIncludes: {
-      '/bloggers': ['./content/bloggers/**/*'],
-    },
-  },
+  // 大文件目录不打包进 serverless function，运行时通过 fs 直接读取
+  serverExternalPackages: [],
 }
 
 module.exports = nextConfig
