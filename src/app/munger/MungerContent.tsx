@@ -413,7 +413,7 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
               key={index}
               className="bg-white dark:bg-dark-card rounded-xl border border-gray-100 dark:border-dark-border p-6 hover:shadow-md transition-shadow"
             >
-              <div className="text-gray-400 text-3xl mb-3">"</div>
+              <div className="text-gray-400 text-3xl mb-3">&ldquo;</div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                 {quote.text}
               </p>
@@ -431,7 +431,7 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
 
         <div className="mt-8 bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-xl p-8 text-center">
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
-            "想要得到某样东西，最好的办法是让自己配得上它。"
+            &ldquo;想要得到某样东西，最好的办法是让自己配得上它。&rdquo;
           </p>
           <p className="mt-4 text-lg text-primary dark:text-primary-light font-medium">
             — 查理·芒格

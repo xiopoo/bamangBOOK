@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ReadingProgress, getAllProgress, clearProgress } from '@/lib/reading-progress'
 
@@ -63,7 +63,7 @@ interface ReadingHistoryProps {
 export default function ReadingHistory({ filterType, onDataChange }: ReadingHistoryProps) {
   const [history, setHistory] = useState<ReadingProgress[]>([])
 
-  const loadData = () => {
+  const loadData = useCallback(() => {
     const all = getAllProgress()
     const filtered = filterType
       ? all.filter((item) => item.letterType === filterType)
@@ -73,11 +73,11 @@ export default function ReadingHistory({ filterType, onDataChange }: ReadingHist
     )
     setHistory(filtered)
     onDataChange?.(filtered)
-  }
+  }, [filterType, onDataChange])
 
   useEffect(() => {
     loadData()
-  }, [filterType, onDataChange])
+  }, [loadData])
 
   if (history.length === 0) {
     return (
