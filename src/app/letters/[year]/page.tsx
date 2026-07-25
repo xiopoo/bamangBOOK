@@ -7,6 +7,9 @@ import LetterReader from '@/components/LetterReader'
 import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import ContentTrustPanel from '@/components/ContentTrustPanel'
+import BerkshireSourceLink from '@/components/BerkshireSourceLink'
+import type { Metadata } from 'next'
 
 interface LetterGraphData {
   year: string
@@ -31,6 +34,15 @@ interface LetterGraphData {
 
 interface PageProps {
   params: { year: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  return {
+    title: `${params.year}年巴菲特致股东信`,
+    description: `阅读${params.year}年巴菲特致伯克希尔股东的信，并浏览相关概念、人物与公司索引。`,
+    alternates: { canonical: `/letters/${params.year}` },
+    openGraph: { title: `${params.year}年巴菲特致股东信`, type: 'article' },
+  }
 }
 
 function loadLetterGraphData(year: string): LetterGraphData | null {
@@ -84,6 +96,10 @@ export default async function LetterDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+        <ContentTrustPanel
+          source="伯克希尔·哈撒韦年度股东信中文整理稿"
+          method="本站提供阅读与知识索引；翻译、段落和引语存在整理差异时，应以伯克希尔发布的英文原文为准。"
+        />
         {showKnowledgePanel && (
           <div className="furnish-border bg-bg-card dark:bg-dark-card p-6 mb-8 shadow-card hover:shadow-card-hover transition-shadow">
             <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4 flex items-center gap-2">
@@ -137,7 +153,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
         )}
 
         <div className="flex gap-8">
-          <main className="flex-1">
+          <main className="min-w-0 flex-1">
             <LetterReader
               letterData={letterData}
               graphData={graphData}
@@ -146,6 +162,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
               isPartnerLetter={false}
               isMultiLetter={!!isMultiLetter}
             />
+            <BerkshireSourceLink year={yearNum} />
           </main>
           <ArticleTableOfContents />
         </div>
@@ -172,7 +189,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
 
       <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-text-muted dark:text-dark-muted">
-          巴芒书房
+          小胖书房
         </div>
       </footer>
     </div>

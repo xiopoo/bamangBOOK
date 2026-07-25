@@ -1,201 +1,97 @@
-import { BookOpen, Upload, Clock, FileText, Lightbulb, Quote } from 'lucide-react'
+import Link from 'next/link'
+import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
+import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
+import PageFooter from '@/components/PageFooter'
+import { getBooksByCategory, getBookStats } from '@/lib/books'
 
-const books = [
-  {
-    id: 1,
-    title: '穷查理宝典',
-    author: '彼得·考夫曼',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.9,
-    readTime: '2小时',
-    keyPoints: ['多元思维框架', '逆向思维', '人类误判心理学'],
-    chapters: 12,
-  },
-  {
-    id: 2,
-    title: '聪明的投资者',
-    author: '本杰明·格雷厄姆',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.8,
-    readTime: '3小时',
-    keyPoints: ['内在价值', '安全边际', '市场先生'],
-    chapters: 20,
-  },
-  {
-    id: 3,
-    title: '巴菲特之道',
-    author: '罗伯特·哈格斯特朗',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.7,
-    readTime: '2.5小时',
-    keyPoints: ['护城河', '资本配置', '长期持有'],
-    chapters: 15,
-  },
-  {
-    id: 4,
-    title: '滚雪球',
-    author: '艾丽斯·施罗德',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.8,
-    readTime: '4小时',
-    keyPoints: ['复利', '人生选择', '财富积累'],
-    chapters: 25,
-  },
-  {
-    id: 5,
-    title: '竞争优势',
-    author: '迈克尔·波特',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.6,
-    readTime: '3小时',
-    keyPoints: ['五力模型', '竞争战略', '价值链'],
-    chapters: 18,
-  },
-  {
-    id: 6,
-    title: '投资最重要的事',
-    author: '霍华德·马克斯',
-    cover: '/images/book-placeholder.svg',
-    rating: 4.7,
-    readTime: '2小时',
-    keyPoints: ['第二层思维', '风险控制', '周期'],
-    chapters: 12,
-  },
-]
-
-const benefits = [
-  {
-    icon: FileText,
-    title: '结构化拆解',
-    description: '核心观点、案例分析、金句摘录、深度思考',
-  },
-  {
-    icon: Lightbulb,
-    title: 'AI深度解读',
-    description: '智能提炼精华，节省80%阅读时间',
-  },
-  {
-    icon: Quote,
-    title: '知识关联',
-    description: '与股东信、投资概念相互链接',
-  },
-]
+export const metadata: Metadata = {
+  title: '深度拆书',
+  description: '价值投资经典书籍的结构化拆解：核心观点、金句摘录与知识关联。',
+}
 
 export default function BooksPage() {
-  return (
-    <PageContainer maxWidth="5xl">
-      {/* Header */}
-      <div className="bg-gradient-to-br from-primary/5 to-white border-b border-primary/10 -mx-4 -mt-8 md:-mt-12 mb-8">
-        <div className="px-6 py-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-primary font-medium">拆书专栏</span>
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">深度拆书</h1>
-          <p className="text-gray-600">
-            AI驱动的书籍拆解，提炼核心观点，建立知识关联，让阅读更高效
-          </p>
-        </div>
-      </div>
+  const groups = getBooksByCategory()
+  const stats = getBookStats()
 
-      {/* Benefits Section */}
-      <div className="mb-8">
-        <div className="grid grid-cols-3 gap-4">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.title}
-              className="bg-gray-50 rounded-xl p-4 text-center"
-            >
-              <benefit.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-              <div className="font-semibold text-gray-900">{benefit.title}</div>
-              <div className="text-sm text-gray-500 mt-1">{benefit.description}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+  return (
+    <PageContainer maxWidth="6xl">
+      <PageHeader
+        title="📚 深度拆书"
+        subtitle="价值投资经典的结构化拆解：核心观点、金句摘录与知识关联"
+        backHref="/"
+        backLabel="返回首页"
+        sticky
+      />
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-12">
-        <StatBadge icon={<BookOpen className="w-6 h-6 text-primary" />} count="16" label="已拆解书籍" />
-        <StatBadge icon={<FileText className="w-6 h-6 text-primary" />} count="200+" label="核心要点" />
-        <StatBadge icon={<Quote className="w-6 h-6 text-primary" />} count="50+" label="知识关联" />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+        <StatBadge icon="📚" count={`${stats.total}本`} label="已拆解书籍" sub="持续更新" />
+        <StatBadge icon="📂" count={`${stats.categories}类`} label="主题分类" sub="按主题浏览" />
+        <StatBadge icon="📖" count={`${stats.totalChapters}章`} label="拆解章节" sub="结构化内容" />
+        <StatBadge icon="⭐" count={stats.avgRating.toFixed(1)} label="平均评分" sub="精选好书" />
       </div>
 
-      {/* Books Grid */}
-      <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-6">已拆解书籍</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {books.map((book) => (
-            <div
-              key={book.id}
-              className="block bg-white border border-gray-100 rounded-xl overflow-hidden"
-            >
-              <div className="aspect-square bg-gray-100 relative overflow-hidden">
-                <img
-                  src={book.cover}
-                  alt={book.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-3 right-3 bg-primary text-white px-2 py-1 rounded-lg text-sm font-medium">
-                  {book.rating}
-                </div>
+      {groups.length === 0 ? (
+        <div className="text-center text-text-muted dark:text-dark-muted py-16">
+          暂无拆书内容，敬请期待。
+        </div>
+      ) : (
+        <div className="space-y-8">
+          {groups.map(group => (
+            <section key={group.category}>
+              <div className="flex items-center gap-3 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">{group.category}</h2>
+                <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full">
+                  {group.books.length}本
+                </span>
+                <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-900">
-                  {book.title}
-                </h3>
-                <p className="text-gray-500 text-sm mt-1">{book.author}</p>
-                <div className="flex items-center gap-4 mt-3 text-xs text-gray-500">
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    {book.readTime}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <BookOpen className="w-3 h-3" />
-                    {book.chapters} 章
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {book.keyPoints.map((point) => (
-                    <span
-                      key={point}
-                      className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
-                    >
-                      {point}
-                    </span>
-                  ))}
-                </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {group.books.map(book => (
+                  <Link
+                    key={book.slug}
+                    href={`/books/${encodeURIComponent(book.slug)}`}
+                    className="group flex flex-col bg-white dark:bg-dark-card p-5 rounded-card border border-gray-100 dark:border-dark-border hover:shadow-card-hover hover:border-primary/30 transition-all"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-base font-bold text-text dark:text-dark-text group-hover:text-primary transition-colors">
+                        {book.title}
+                      </h3>
+                      <span className="flex-shrink-0 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-lg whitespace-nowrap">
+                        ★ {book.rating}
+                      </span>
+                    </div>
+                    {(book.author || book.originalAuthor) && (
+                      <p className="text-sm text-text-muted dark:text-dark-muted mt-1">
+                        {book.originalAuthor ? `${book.originalAuthor}` : book.author}
+                      </p>
+                    )}
+                    {book.oneLiner && (
+                      <p className="text-sm text-text-muted dark:text-dark-muted mt-3 flex-1">{book.oneLiner}</p>
+                    )}
+                    <div className="flex items-center gap-4 mt-3 text-xs text-text-muted dark:text-dark-muted">
+                      {book.readTime && <span>⏱ {book.readTime}</span>}
+                      {book.chapters > 0 && <span>📖 {book.chapters} 章</span>}
+                    </div>
+                    {book.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {book.tags.slice(0, 3).map(tag => (
+                          <span key={tag} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </Link>
+                ))}
               </div>
-            </div>
+            </section>
           ))}
         </div>
-      </section>
-
-      {/* Upload Section */}
-      <section className="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-            <Upload className="w-6 h-6" />
-          </div>
-          <div>
-            <h3 className="font-bold text-xl">上传你的书籍</h3>
-            <p className="text-white/80 text-sm mt-1">
-              上传 PDF 或 TXT，AI 将按结构化模板拆解
-            </p>
-          </div>
-        </div>
-        <p className="text-white/80 mb-6">
-          拆解内容包括：核心观点提炼、经典案例分析、金句摘录、深度思考问题
-        </p>
-        <button className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-white/90 transition-colors">
-          选择文件上传
-        </button>
-      </section>
+      )}
 
       <PageFooter />
     </PageContainer>

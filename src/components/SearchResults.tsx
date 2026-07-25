@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 interface SearchResult {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'article' | 'qa' | 'talk' | 'interview'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model'
   description: string
   count: number
   years: number[]
@@ -23,10 +23,15 @@ const typeLabels: Record<string, string> = {
   company: '公司',
   person: '人物',
   letter: '信件',
+  partnership: '合伙人信',
   article: '文章',
   qa: '问答',
   talk: '演讲',
   interview: '访谈',
+  blogger: '博主文章',
+  book: '拆书',
+  column: '专栏',
+  model: '思维模型',
 }
 
 const typeIcons: Record<string, string> = {
@@ -34,10 +39,15 @@ const typeIcons: Record<string, string> = {
   company: '🏢',
   person: '👤',
   letter: '📄',
+  partnership: '🤝',
   article: '📝',
   qa: '❓',
   talk: '🎤',
   interview: '🎙️',
+  blogger: '📚',
+  book: '📖',
+  column: '✍️',
+  model: '🧠',
 }
 
 const typeColors: Record<string, string> = {
@@ -45,10 +55,15 @@ const typeColors: Record<string, string> = {
   company: 'border-blue-200 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-600',
   person: 'border-purple-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600',
   letter: 'border-green-200 dark:border-green-900/50 hover:border-green-300 dark:hover:border-green-600',
+  partnership: 'border-emerald-200 dark:border-emerald-900/50 hover:border-emerald-300 dark:hover:border-emerald-600',
   article: 'border-amber-200 dark:border-amber-900/50 hover:border-amber-300 dark:hover:border-amber-600',
   qa: 'border-red-200 dark:border-red-900/50 hover:border-red-300 dark:hover:border-red-600',
   talk: 'border-cyan-200 dark:border-cyan-900/50 hover:border-cyan-300 dark:hover:border-cyan-600',
   interview: 'border-pink-200 dark:border-pink-900/50 hover:border-pink-300 dark:hover:border-pink-600',
+  blogger: 'border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500',
+  book: 'border-teal-200 dark:border-teal-900/50 hover:border-teal-300 dark:hover:border-teal-600',
+  column: 'border-indigo-200 dark:border-indigo-900/50 hover:border-indigo-300 dark:hover:border-indigo-600',
+  model: 'border-purple-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600',
 }
 
 const sectionColors: Record<string, string> = {
@@ -56,10 +71,15 @@ const sectionColors: Record<string, string> = {
   company: 'text-blue-600 dark:text-blue-400',
   person: 'text-purple-600 dark:text-purple-400',
   letter: 'text-green-600 dark:text-green-400',
+  partnership: 'text-emerald-600 dark:text-emerald-400',
   article: 'text-amber-600 dark:text-amber-400',
   qa: 'text-red-600 dark:text-red-400',
   talk: 'text-cyan-600 dark:text-cyan-400',
   interview: 'text-pink-600 dark:text-pink-400',
+  blogger: 'text-gray-700 dark:text-gray-300',
+  book: 'text-teal-600 dark:text-teal-400',
+  column: 'text-indigo-600 dark:text-indigo-400',
+  model: 'text-purple-600 dark:text-purple-400',
 }
 
 const sectionBg: Record<string, string> = {
@@ -67,10 +87,15 @@ const sectionBg: Record<string, string> = {
   company: 'bg-blue-50 dark:bg-blue-900/30',
   person: 'bg-purple-50 dark:bg-purple-900/30',
   letter: 'bg-green-50 dark:bg-green-900/30',
+  partnership: 'bg-emerald-50 dark:bg-emerald-900/30',
   article: 'bg-amber-50 dark:bg-amber-900/30',
   qa: 'bg-red-50 dark:bg-red-900/30',
   talk: 'bg-cyan-50 dark:bg-cyan-900/30',
   interview: 'bg-pink-50 dark:bg-pink-900/30',
+  blogger: 'bg-gray-100 dark:bg-gray-800',
+  book: 'bg-teal-50 dark:bg-teal-900/30',
+  column: 'bg-indigo-50 dark:bg-indigo-900/30',
+  model: 'bg-purple-50 dark:bg-purple-900/30',
 }
 
 // 高亮匹配关键词
@@ -103,10 +128,15 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
     company: results.filter(r => r.type === 'company'),
     person: results.filter(r => r.type === 'person'),
     letter: results.filter(r => r.type === 'letter'),
+    partnership: results.filter(r => r.type === 'partnership'),
     article: results.filter(r => r.type === 'article'),
     qa: results.filter(r => r.type === 'qa'),
     talk: results.filter(r => r.type === 'talk'),
     interview: results.filter(r => r.type === 'interview'),
+    blogger: results.filter(r => r.type === 'blogger'),
+    book: results.filter(r => r.type === 'book'),
+    column: results.filter(r => r.type === 'column'),
+    model: results.filter(r => r.type === 'model'),
   }
 
   // 加载状态
@@ -143,10 +173,10 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-5xl mb-4">📖</div>
         <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
-          搜索「巴芒书房」全部内容
+          搜索「小胖书房」全部内容
         </h3>
         <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
-          输入关键词搜索概念、公司、人物或信件，探索巴菲特与芒格的价值投资知识体系
+          输入关键词搜索信件、问答、演讲、概念或公司，回到具体原文和研究材料
         </p>
       </div>
     )
@@ -164,7 +194,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
 
       {/* 按分类展示结果 */}
       <div className="space-y-8">
-        {(['concept', 'company', 'person', 'letter', 'article', 'qa', 'talk', 'interview'] as const).map(type => {
+        {(['concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger', 'book', 'column', 'model'] as const).map(type => {
           const items = grouped[type]
           if (items.length === 0) return null
 
@@ -199,11 +229,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
                         )}
                       </div>
                       <div className="flex flex-col items-end gap-1 flex-shrink-0">
-                        {item.type === 'letter' ? (
-                          <span className="text-xs text-gray-400 dark:text-gray-500">
-                            {item.years[0]}年
-                          </span>
-                        ) : (
+                        {(item.type === 'concept' || item.type === 'company' || item.type === 'person') ? (
                           <>
                             <span className="text-xs text-gray-400 dark:text-gray-500">
                               提及 {item.count} 次
@@ -214,7 +240,11 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
                               </span>
                             )}
                           </>
-                        )}
+                        ) : item.years.length > 0 ? (
+                          <span className="text-xs text-gray-400 dark:text-gray-500">
+                            {item.years[0]}年
+                          </span>
+                        ) : null}
                       </div>
                     </div>
                   </Link>

@@ -7,9 +7,20 @@ import StatBadge from '@/components/StatBadge'
 import MarkdownContent from '@/components/MarkdownContent'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
+import ContentTrustPanel from '@/components/ContentTrustPanel'
+import type { Metadata } from 'next'
 
 interface PageProps {
   params: { name: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const name = decodeURIComponent(params.name)
+  return {
+    title: `${name}：公司档案与投资线索`,
+    description: `${name}在巴菲特与芒格公开资料中的投资历程、相关观点、概念与股东信年份。`,
+    alternates: { canonical: `/companies/${encodeURIComponent(name)}` },
+  }
 }
 
 export default async function CompanyDetailPage({ params }: PageProps) {
@@ -53,6 +64,11 @@ export default async function CompanyDetailPage({ params }: PageProps) {
         backHref="/companies"
         backLabel="返回公司列表"
         sticky
+      />
+
+      <ContentTrustPanel
+        source="公司知识档案，由本站收录的股东信与公开资料整理"
+        method="历史数据与引语应结合正文年份和相关股东信核对，不代表对公司当前状况的判断。"
       />
 
       <div className="mb-6">

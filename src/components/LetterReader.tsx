@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import { useReadingProgress } from '@/hooks/useReadingProgress'
 import ReadingProgressBar from '@/components/ReadingProgress'
 import type { LetterData, LetterItem } from '@/lib/letters'
+import { normalizeLetterMarkdown } from '@/lib/normalize-letter-markdown'
 
 function slugify(text: string): string {
   return text
@@ -161,23 +162,23 @@ export default function LetterReader({
       <pre className="bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">{children}</pre>
     ),
     table: ({ children }: any) => (
-      <div className="overflow-x-auto my-4">
-        <table className="w-full border-collapse">{children}</table>
+      <div className="max-w-full overflow-x-auto my-6 rounded-lg border border-gray-200 dark:border-dark-border">
+        <table className="w-full min-w-max border-collapse text-sm">{children}</table>
       </div>
     ),
     th: ({ children }: any) => (
-      <th className="border border-gray-200 dark:border-dark-border px-4 py-2 bg-gray-50 dark:bg-gray-800 font-semibold text-left dark:text-dark-text">{children}</th>
+      <th className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2.5 bg-gray-50 dark:bg-gray-800 font-semibold text-right first:text-left dark:text-dark-text">{children}</th>
     ),
     td: ({ children }: any) => (
-      <td className="border border-gray-200 dark:border-dark-border px-4 py-2 dark:text-dark-text">{children}</td>
+      <td className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2 text-right first:text-left dark:text-dark-text">{children}</td>
     ),
     hr: () => <hr className="my-8 border-gray-200 dark:border-dark-border" />,
   }), [])
 
   const renderContent = (content: string, index?: number) => {
-    const processed = processContent(content)
+    const processed = processContent(normalizeLetterMarkdown(content))
     return (
-      <div key={index ?? 0} className="prose prose-gray mx-auto overflow-x-hidden break-words dark:text-dark-text">
+      <div key={index ?? 0} className="prose prose-gray min-w-0 max-w-none break-words dark:text-dark-text">
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processed}
         </ReactMarkdown>
@@ -196,7 +197,7 @@ export default function LetterReader({
         title={letterTitle}
       />
 
-      <article ref={contentRef} className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
+      <article ref={contentRef} className="min-w-0 max-w-full bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
         {isMultiLetter ? (
           <div className="space-y-8">
             {letterData.letters!.map((letter: LetterItem, index: number) => (

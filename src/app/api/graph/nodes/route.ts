@@ -9,6 +9,11 @@ const CONCEPTS_DIR = path.join(CONTENT_DIR, 'concepts')
 const COMPANIES_DIR = path.join(CONTENT_DIR, 'companies')
 const PEOPLE_DIR = path.join(CONTENT_DIR, 'people')
 
+// 该接口需读取 index.json 并对每个实体逐文件解析描述，成本较高。
+// 结果内容基本静态，用进程级缓存避免每次请求都全量读盘。
+const GRAPH_CACHE_TTL = 1000 * 60 * 60
+let graphCache: { data: unknown; timestamp: number } | null = null
+
 interface IndexItem {
   id: string
   count: number
@@ -71,6 +76,10 @@ function getFileIds(dir: string): string[] {
 
 export async function GET() {
   try {
+    if (graphCache && Date.now() - graphCache.timestamp < GRAPH_CACHE_TTL) {
+      return NextResponse.json(graphCache.data, { headers: { 'X-Cache': 'HIT' } })
+    }
+
     const indexPath = path.join(CONTENT_DIR, 'index.json')
     if (!existsSync(indexPath)) {
       return NextResponse.json({ error: 'Index not found' }, { status: 404 })
@@ -217,9 +226,10 @@ export async function GET() {
 
     // 2. 基于年份共现建立概念-人物、概念-公司、人物-公司关系（提及）
     // 将people/companies展开为按年份的索引
+    // 注意：index.json 中部分实体可能缺失 years 字段，需用 `|| []` 兜底，否则 forEach 会抛错。
     const peopleByYear = new Map<number, string[]>()
     people.forEach(p => {
-      p.years.forEach(year => {
+      (p.years || []).forEach(year => {
         if (!peopleByYear.has(year)) peopleByYear.set(year, [])
         peopleByYear.get(year)!.push(p.id)
       })
@@ -227,7 +237,7 @@ export async function GET() {
 
     const companiesByYear = new Map<number, string[]>()
     companies.forEach(c => {
-      c.years.forEach(year => {
+      (c.years || []).forEach(year => {
         if (!companiesByYear.has(year)) companiesByYear.set(year, [])
         companiesByYear.get(year)!.push(c.id)
       })
@@ -235,7 +245,7 @@ export async function GET() {
 
     const conceptsByYear = new Map<number, string[]>()
     concepts.forEach(c => {
-      c.years.forEach(year => {
+      (c.years || []).forEach(year => {
         if (!conceptsByYear.has(year)) conceptsByYear.set(year, [])
         conceptsByYear.get(year)!.push(c.id)
       })
@@ -264,7 +274,7 @@ export async function GET() {
 
     const links = Array.from(linkMap.values())
 
-    return NextResponse.json({
+    const responseData = {
       nodes,
       links,
       stats: {
@@ -274,7 +284,11 @@ export async function GET() {
         totalCompanies: nodes.filter(n => n.type === 'company').length,
         totalLinks: links.length
       }
-    })
+    }
+
+    graphCache = { data: responseData, timestamp: Date.now() }
+
+    return NextResponse.json(responseData, { headers: { 'X-Cache': 'MISS' } })
   } catch (error) {
     console.error('Error building graph:', error)
     return NextResponse.json({ error: 'Failed to build graph' }, { status: 500 })

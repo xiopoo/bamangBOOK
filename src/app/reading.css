@@ -1,0 +1,70 @@
+/* ===== 长文阅读优化（专注学习与阅读场景） ===== */
+
+.prose {
+  font-size: 1.0625rem; /* 约 17px，长文更舒适 */
+  line-height: 1.85;
+}
+
+.prose p {
+  line-height: 1.9;
+  margin-bottom: 1.6em;
+  letter-spacing: 0.01em;
+}
+
+/* 正文首段作为导语，提升进入阅读的引导感 */
+.prose > p:first-of-type {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: #4a3526;
+}
+
+.dark .prose > p:first-of-type {
+  color: #cbb89d;
+}
+
+/* 标题层级节奏：长文更易于扫读与定位 */
+.prose h1 {
+  margin-bottom: 0.6em;
+}
+
+.prose h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+}
+
+.prose h3 {
+  margin-top: 1.9em;
+  margin-bottom: 0.6em;
+}
+
+.prose h4 {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+/* 引用块在长文中更柔和、更聚焦 */
+.prose blockquote {
+  font-size: 1.02em;
+  line-height: 1.9;
+}
+
+.prose blockquote p {
+  line-height: 1.9;
+}
+
+/* 列表项间距更适合连续阅读 */
+.prose li {
+  line-height: 1.8;
+}
+
+/* 长文中链接保留细下划线以明确可点，hover 轻微高亮 */
+.prose a {
+  border-bottom: 1px solid rgba(200, 90, 23, 0.25);
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.prose a:hover {
+  background-color: rgba(200, 90, 23, 0.08);
+  border-bottom-color: #c85a17;
+}

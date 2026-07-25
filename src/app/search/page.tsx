@@ -11,7 +11,7 @@ import PageFooter from '@/components/PageFooter'
 
 interface SearchResult {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'article' | 'qa' | 'talk' | 'interview'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger'
   description: string
   count: number
   years: number[]
@@ -23,10 +23,12 @@ interface TypeStats {
   company: number
   person: number
   letter: number
+  partnership: number
   article: number
   qa: number
   talk: number
   interview: number
+  blogger: number
 }
 
 const typeLabels: Record<string, string> = {
@@ -35,10 +37,12 @@ const typeLabels: Record<string, string> = {
   company: '公司',
   person: '人物',
   letter: '信件',
+  partnership: '合伙人信',
   article: '文章',
   qa: '问答',
   talk: '演讲',
   interview: '访谈',
+  blogger: '博主文章',
 }
 
 const typeIcons: Record<string, string> = {
@@ -47,16 +51,18 @@ const typeIcons: Record<string, string> = {
   company: '🏢',
   person: '👤',
   letter: '📄',
+  partnership: '🤝',
   article: '📝',
   qa: '❓',
   talk: '🎤',
   interview: '🎙️',
+  blogger: '📚',
 }
 
 function SearchContent() {
   const searchParams = useSearchParams()
   const initialQuery = searchParams.get('q') || ''
-  const initialType = searchParams.get('type') as 'concept' | 'company' | 'person' | 'letter' | 'article' | 'qa' | 'talk' | 'interview' | 'all' || 'all'
+  const initialType = searchParams.get('type') as 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'all' || 'all'
 
   const [query, setQuery] = useState(initialQuery)
   const [selectedType, setSelectedType] = useState(initialType)
@@ -67,10 +73,12 @@ function SearchContent() {
     company: 0,
     person: 0,
     letter: 0,
+    partnership: 0,
     article: 0,
     qa: 0,
     talk: 0,
     interview: 0,
+    blogger: 0,
   })
   const [isLoading, setIsLoading] = useState(false)
 
@@ -79,7 +87,7 @@ function SearchContent() {
     if (!searchQuery.trim()) {
       setResults([])
       setTotal(0)
-      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, article: 0, qa: 0, talk: 0, interview: 0 })
+      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
       return
     }
 
@@ -90,12 +98,12 @@ function SearchContent() {
       const data = await res.json()
       setResults(data.results || [])
       setTotal(data.total || 0)
-      setTypeStats(data.typeStats || { concept: 0, company: 0, person: 0, letter: 0, article: 0, qa: 0, talk: 0, interview: 0 })
+      setTypeStats(data.typeStats || { concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
     } catch (err) {
       console.error('Search error:', err)
       setResults([])
       setTotal(0)
-      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, article: 0, qa: 0, talk: 0, interview: 0 })
+      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
     } finally {
       setIsLoading(false)
     }
@@ -121,7 +129,7 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
-  const handleTypeFilter = (type: 'concept' | 'company' | 'person' | 'letter' | 'article' | 'qa' | 'talk' | 'interview' | 'all') => {
+  const handleTypeFilter = (type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'all') => {
     setSelectedType(type)
     performSearch(query, type)
     // 更新URL参数
@@ -135,7 +143,7 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
-  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'article', 'qa', 'talk', 'interview'] as const
+  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger'] as const
 
   return (
     <PageContainer maxWidth="4xl">

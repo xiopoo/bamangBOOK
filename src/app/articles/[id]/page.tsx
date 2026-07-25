@@ -5,9 +5,24 @@ import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import ContentTrustPanel from '@/components/ContentTrustPanel'
+import RelatedArticles from '@/components/RelatedArticles'
+import type { Metadata } from 'next'
 
 interface PageProps {
   params: { id: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const fileName = decodeURIComponent(params.id)
+  const doc = getDocumentByFileName('articles', fileName)
+  if (!doc) return { title: '文章未找到' }
+  return {
+    title: doc.title,
+    description: doc.content.replace(/[#>*_`\[\]]/g, '').replace(/\s+/g, ' ').trim().slice(0, 150),
+    alternates: { canonical: `/articles/${encodeURIComponent(fileName)}` },
+    openGraph: { title: doc.title, type: 'article' },
+  }
 }
 
 // Get readable category name from directory
@@ -70,6 +85,10 @@ export default function ArticleDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+        <ContentTrustPanel
+          source="专题文章与公开资料整理稿"
+          method="出处与作者信息以正文标注为准；未标注部分应视为待进一步核验的整理内容。"
+        />
         <div className="flex gap-8">
           <main className="flex-1 min-w-0">
             <article className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
@@ -110,6 +129,9 @@ export default function ArticleDetailPage({ params }: PageProps) {
                 </div>
               </div>
             )}
+
+            <RelatedArticles source="articles" fileName={fileName} />
+
           </main>
           <ArticleTableOfContents />
         </div>
@@ -117,7 +139,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
 
       <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-text-muted dark:text-dark-muted">
-          巴芒书房
+          小胖书房
         </div>
       </footer>
     </div>

@@ -102,7 +102,7 @@ export default function ReadingDetailPage({ params }: { params: { id: string } }
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-100 text-center">
         <p className="text-gray-500 text-sm">
-          巴芒书房
+          小胖书房
         </p>
       </footer>
     </div>

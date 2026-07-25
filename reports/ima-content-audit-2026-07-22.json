@@ -1,0 +1,5443 @@
+{
+  "generatedAt": "2026-07-23T00:51:38.825Z",
+  "downloadStats": {
+    "lettersDownloaded": 69,
+    "comparableLetterDocs": 60,
+    "qaDownloaded": 152,
+    "qaTotal": 152
+  },
+  "stableStats": {
+    "total": 225,
+    "letters": 60
+  },
+  "letters": [
+    {
+      "year": 1965,
+      "websitePath": "content/letters/berkshire_1965-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 2,
+        "currentHeadings": 2,
+        "baselineParagraphs": 1,
+        "currentParagraphs": 12,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.004472615519701459,
+        "missingBlockCount": 52,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 34,
+        "websiteParagraphs": 12,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1966,
+      "websitePath": "content/letters/berkshire_1966-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 19,
+        "currentParagraphs": 24,
+        "baselineTables": 0,
+        "currentTables": 1,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0,
+        "missingBlockCount": 90,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 55,
+        "websiteParagraphs": 24,
+        "sourceTables": 0,
+        "websiteTables": 1,
+        "sourceTableRows": 0,
+        "websiteTableRows": 8,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1967,
+      "websitePath": "content/letters/berkshire_1967-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 6,
+        "currentHeadings": 6,
+        "baselineParagraphs": 9,
+        "currentParagraphs": 13,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.0025497378438554914,
+        "missingBlockCount": 111,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 68,
+        "websiteParagraphs": 13,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1968,
+      "websitePath": "content/letters/berkshire_1968-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 4,
+        "currentHeadings": 4,
+        "baselineParagraphs": 5,
+        "currentParagraphs": 9,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.010086941171278521,
+        "missingBlockCount": 105,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 84,
+        "websiteParagraphs": 9,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1969,
+      "websitePath": "content/letters/berkshire_1969-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 4,
+        "currentHeadings": 4,
+        "baselineParagraphs": 4,
+        "currentParagraphs": 13,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.001489256068110939,
+        "missingBlockCount": 364,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 178,
+        "websiteParagraphs": 13,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 3
+      }
+    },
+    {
+      "year": 1970,
+      "websitePath": "content/letters/berkshire_1970-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 4,
+        "currentHeadings": 4,
+        "baselineParagraphs": 8,
+        "currentParagraphs": 15,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": null
+    },
+    {
+      "year": 1971,
+      "websitePath": "content/letters/berkshire_1971-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 5,
+        "currentHeadings": 5,
+        "baselineParagraphs": 5,
+        "currentParagraphs": 14,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.07524676786868047,
+        "missingBlockCount": 31,
+        "partialBlockCount": 5,
+        "sourceParagraphs": 17,
+        "websiteParagraphs": 14,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1972,
+      "websitePath": "content/letters/berkshire_1972-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 6,
+        "currentHeadings": 6,
+        "baselineParagraphs": 7,
+        "currentParagraphs": 19,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.10116772183411467,
+        "missingBlockCount": 30,
+        "partialBlockCount": 9,
+        "sourceParagraphs": 26,
+        "websiteParagraphs": 19,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1973,
+      "websitePath": "content/letters/berkshire_1973-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 7,
+        "currentHeadings": 7,
+        "baselineParagraphs": 11,
+        "currentParagraphs": 28,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.11283710766152802,
+        "missingBlockCount": 42,
+        "partialBlockCount": 13,
+        "sourceParagraphs": 41,
+        "websiteParagraphs": 28,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1974,
+      "websitePath": "content/letters/berkshire_1974-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 7,
+        "currentHeadings": 7,
+        "baselineParagraphs": 9,
+        "currentParagraphs": 24,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.09572442427804023,
+        "missingBlockCount": 48,
+        "partialBlockCount": 9,
+        "sourceParagraphs": 26,
+        "websiteParagraphs": 24,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1975,
+      "websitePath": "content/letters/berkshire_1975-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 9,
+        "currentHeadings": 9,
+        "baselineParagraphs": 11,
+        "currentParagraphs": 31,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.0752511090090442,
+        "missingBlockCount": 51,
+        "partialBlockCount": 7,
+        "sourceParagraphs": 35,
+        "websiteParagraphs": 31,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1976,
+      "websitePath": "content/letters/berkshire_1976-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 7,
+        "currentHeadings": 7,
+        "baselineParagraphs": 8,
+        "currentParagraphs": 24,
+        "baselineTables": 1,
+        "currentTables": 1,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.09287045620062699,
+        "missingBlockCount": 51,
+        "partialBlockCount": 10,
+        "sourceParagraphs": 41,
+        "websiteParagraphs": 24,
+        "sourceTables": 0,
+        "websiteTables": 1,
+        "sourceTableRows": 0,
+        "websiteTableRows": 13,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1977,
+      "websitePath": "content/letters/berkshire_1977-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 6,
+        "currentHeadings": 6,
+        "baselineParagraphs": 8,
+        "currentParagraphs": 25,
+        "baselineTables": 0,
+        "currentTables": 1,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.06078710367349394,
+        "missingBlockCount": 32,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 39,
+        "websiteParagraphs": 25,
+        "sourceTables": 0,
+        "websiteTables": 1,
+        "sourceTableRows": 0,
+        "websiteTableRows": 2,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1978,
+      "websitePath": "content/letters/berkshire_1978-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 7,
+        "currentHeadings": 7,
+        "baselineParagraphs": 9,
+        "currentParagraphs": 25,
+        "baselineTables": 0,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.0411093945165327,
+        "missingBlockCount": 44,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 53,
+        "websiteParagraphs": 25,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 3,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1979,
+      "websitePath": "content/letters/berkshire_1979-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 9,
+        "currentParagraphs": 49,
+        "baselineTables": 0,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.03898428283459279,
+        "missingBlockCount": 89,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 83,
+        "websiteParagraphs": 49,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 16,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1980,
+      "websitePath": "content/letters/berkshire_1980-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 12,
+        "currentParagraphs": 49,
+        "baselineTables": 0,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.02748378173763075,
+        "missingBlockCount": 96,
+        "partialBlockCount": 2,
+        "sourceParagraphs": 100,
+        "websiteParagraphs": 49,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 20,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1981,
+      "websitePath": "content/letters/berkshire_1981-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 9,
+        "currentHeadings": 9,
+        "baselineParagraphs": 30,
+        "currentParagraphs": 47,
+        "baselineTables": 0,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.014745653842728015,
+        "missingBlockCount": 75,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 37,
+        "websiteParagraphs": 47,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 28,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1982,
+      "websitePath": "content/letters/berkshire_1982-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 7,
+        "currentHeadings": 7,
+        "baselineParagraphs": 13,
+        "currentParagraphs": 57,
+        "baselineTables": 0,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.03332114988067499,
+        "missingBlockCount": 88,
+        "partialBlockCount": 4,
+        "sourceParagraphs": 61,
+        "websiteParagraphs": 57,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 25,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1983,
+      "websitePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 64,
+        "currentParagraphs": 102,
+        "baselineTables": 0,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.024769398040176572,
+        "missingBlockCount": 100,
+        "partialBlockCount": 2,
+        "sourceParagraphs": 94,
+        "websiteParagraphs": 102,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 38,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1984,
+      "websitePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 42,
+        "currentParagraphs": 82,
+        "baselineTables": 1,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.017399443202024037,
+        "missingBlockCount": 120,
+        "partialBlockCount": 0,
+        "sourceParagraphs": 108,
+        "websiteParagraphs": 82,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 47,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1985,
+      "websitePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 38,
+        "currentParagraphs": 92,
+        "baselineTables": 1,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.018853425221886183,
+        "missingBlockCount": 146,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 120,
+        "websiteParagraphs": 92,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 46,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1986,
+      "websitePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 20,
+        "currentHeadings": 20,
+        "baselineParagraphs": 42,
+        "currentParagraphs": 114,
+        "baselineTables": 1,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.031022320330652765,
+        "missingBlockCount": 156,
+        "partialBlockCount": 8,
+        "sourceParagraphs": 138,
+        "websiteParagraphs": 114,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 55,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1987,
+      "websitePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 17,
+        "currentHeadings": 17,
+        "baselineParagraphs": 26,
+        "currentParagraphs": 94,
+        "baselineTables": 0,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.030201909427019696,
+        "missingBlockCount": 158,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 168,
+        "websiteParagraphs": 94,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 32,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1988,
+      "websitePath": "content/letters/berkshire_1988-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 20,
+        "currentHeadings": 20,
+        "baselineParagraphs": 45,
+        "currentParagraphs": 111,
+        "baselineTables": 1,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.049073568340190166,
+        "missingBlockCount": 167,
+        "partialBlockCount": 6,
+        "sourceParagraphs": 181,
+        "websiteParagraphs": 111,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 34,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1989,
+      "websitePath": "content/letters/berkshire_1989-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 26,
+        "currentHeadings": 26,
+        "baselineParagraphs": 76,
+        "currentParagraphs": 116,
+        "baselineTables": 1,
+        "currentTables": 3,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.041785094775299916,
+        "missingBlockCount": 190,
+        "partialBlockCount": 7,
+        "sourceParagraphs": 192,
+        "websiteParagraphs": 116,
+        "sourceTables": 0,
+        "websiteTables": 3,
+        "sourceTableRows": 0,
+        "websiteTableRows": 36,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1990,
+      "websitePath": "content/letters/berkshire_1990-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 18,
+        "currentHeadings": 18,
+        "baselineParagraphs": 68,
+        "currentParagraphs": 126,
+        "baselineTables": 1,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.034656240980430755,
+        "missingBlockCount": 193,
+        "partialBlockCount": 6,
+        "sourceParagraphs": 227,
+        "websiteParagraphs": 126,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 89,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1991,
+      "websitePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 13,
+        "baselineParagraphs": 20,
+        "currentParagraphs": 72,
+        "baselineTables": 1,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.04662199870183878,
+        "missingBlockCount": 104,
+        "partialBlockCount": 3,
+        "sourceParagraphs": 120,
+        "websiteParagraphs": 72,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 86,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1992,
+      "websitePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 29,
+        "currentParagraphs": 88,
+        "baselineTables": 0,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.03800489233677136,
+        "missingBlockCount": 140,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 138,
+        "websiteParagraphs": 88,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 94,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1993,
+      "websitePath": "content/letters/berkshire_1993-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 61,
+        "currentParagraphs": 84,
+        "baselineTables": 0,
+        "currentTables": 4,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.043658441218060964,
+        "missingBlockCount": 142,
+        "partialBlockCount": 5,
+        "sourceParagraphs": 142,
+        "websiteParagraphs": 84,
+        "sourceTables": 0,
+        "websiteTables": 4,
+        "sourceTableRows": 0,
+        "websiteTableRows": 74,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1994,
+      "websitePath": "content/letters/berkshire_1994-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 16,
+        "currentParagraphs": 67,
+        "baselineTables": 0,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.06008959522767606,
+        "missingBlockCount": 115,
+        "partialBlockCount": 8,
+        "sourceParagraphs": 126,
+        "websiteParagraphs": 67,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 100,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1995,
+      "websitePath": "content/letters/berkshire_1995-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 12,
+        "currentParagraphs": 77,
+        "baselineTables": 0,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.04915221793830803,
+        "missingBlockCount": 153,
+        "partialBlockCount": 3,
+        "sourceParagraphs": 155,
+        "websiteParagraphs": 77,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 67,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1996,
+      "websitePath": "content/letters/berkshire_1996-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 0.9997188269247091,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 14,
+        "currentHeadings": 14,
+        "baselineParagraphs": 59,
+        "currentParagraphs": 86,
+        "baselineTables": 0,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.04227109310108567,
+        "missingBlockCount": 134,
+        "partialBlockCount": 10,
+        "sourceParagraphs": 144,
+        "websiteParagraphs": 86,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 75,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1997,
+      "websitePath": "content/letters/berkshire_1997-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 15,
+        "currentHeadings": 15,
+        "baselineParagraphs": 69,
+        "currentParagraphs": 94,
+        "baselineTables": 0,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.05217798610297838,
+        "missingBlockCount": 135,
+        "partialBlockCount": 4,
+        "sourceParagraphs": 149,
+        "websiteParagraphs": 94,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 84,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 1998,
+      "websitePath": "content/letters/berkshire_1998-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 13,
+        "currentHeadings": 13,
+        "baselineParagraphs": 65,
+        "currentParagraphs": 95,
+        "baselineTables": 0,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.03556513982163814,
+        "missingBlockCount": 141,
+        "partialBlockCount": 4,
+        "sourceParagraphs": 147,
+        "websiteParagraphs": 95,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 61,
+        "sourceExplicitBreaks": 5
+      }
+    },
+    {
+      "year": 1999,
+      "websitePath": "content/letters/berkshire_1999-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 14,
+        "currentHeadings": 14,
+        "baselineParagraphs": 70,
+        "currentParagraphs": 93,
+        "baselineTables": 0,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.0355770262151791,
+        "missingBlockCount": 143,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 156,
+        "websiteParagraphs": 93,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 68,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2000,
+      "websitePath": "content/letters/berkshire_2000-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 80,
+        "currentParagraphs": 116,
+        "baselineTables": 1,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.03971539073188888,
+        "missingBlockCount": 168,
+        "partialBlockCount": 2,
+        "sourceParagraphs": 178,
+        "websiteParagraphs": 116,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 94,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2001,
+      "websitePath": "content/letters/berkshire_2001-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 60,
+        "currentParagraphs": 113,
+        "baselineTables": 0,
+        "currentTables": 4,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.04891356140574989,
+        "missingBlockCount": 149,
+        "partialBlockCount": 3,
+        "sourceParagraphs": 158,
+        "websiteParagraphs": 113,
+        "sourceTables": 0,
+        "websiteTables": 4,
+        "sourceTableRows": 0,
+        "websiteTableRows": 80,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2002,
+      "websitePath": "content/letters/berkshire_2002-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 13,
+        "currentHeadings": 13,
+        "baselineParagraphs": 70,
+        "currentParagraphs": 122,
+        "baselineTables": 1,
+        "currentTables": 4,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.05160729454158642,
+        "missingBlockCount": 185,
+        "partialBlockCount": 10,
+        "sourceParagraphs": 201,
+        "websiteParagraphs": 122,
+        "sourceTables": 0,
+        "websiteTables": 4,
+        "sourceTableRows": 0,
+        "websiteTableRows": 83,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2003,
+      "websitePath": "content/letters/berkshire_2003-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 16,
+        "currentHeadings": 16,
+        "baselineParagraphs": 62,
+        "currentParagraphs": 110,
+        "baselineTables": 0,
+        "currentTables": 10,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.05135389062853218,
+        "missingBlockCount": 166,
+        "partialBlockCount": 7,
+        "sourceParagraphs": 189,
+        "websiteParagraphs": 110,
+        "sourceTables": 0,
+        "websiteTables": 10,
+        "sourceTableRows": 0,
+        "websiteTableRows": 122,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2004,
+      "websitePath": "content/letters/berkshire_2004-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 65,
+        "currentParagraphs": 118,
+        "baselineTables": 0,
+        "currentTables": 10,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.041695405606965046,
+        "missingBlockCount": 174,
+        "partialBlockCount": 3,
+        "sourceParagraphs": 184,
+        "websiteParagraphs": 118,
+        "sourceTables": 0,
+        "websiteTables": 10,
+        "sourceTableRows": 0,
+        "websiteTableRows": 155,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2005,
+      "websitePath": "content/letters/berkshire_2005-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 80,
+        "currentParagraphs": 118,
+        "baselineTables": 0,
+        "currentTables": 8,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.10504703768068026,
+        "missingBlockCount": 319,
+        "partialBlockCount": 74,
+        "sourceParagraphs": 169,
+        "websiteParagraphs": 118,
+        "sourceTables": 0,
+        "websiteTables": 8,
+        "sourceTableRows": 0,
+        "websiteTableRows": 73,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2006,
+      "websitePath": "content/letters/berkshire_2006-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 15,
+        "currentHeadings": 15,
+        "baselineParagraphs": 35,
+        "currentParagraphs": 102,
+        "baselineTables": 1,
+        "currentTables": 8,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.0184765278611603,
+        "missingBlockCount": 419,
+        "partialBlockCount": 12,
+        "sourceParagraphs": 189,
+        "websiteParagraphs": 102,
+        "sourceTables": 0,
+        "websiteTables": 8,
+        "sourceTableRows": 0,
+        "websiteTableRows": 112,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2007,
+      "websitePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 0.9996911725427351,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 66,
+        "currentParagraphs": 115,
+        "baselineTables": 0,
+        "currentTables": 10,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.07901238826430013,
+        "missingBlockCount": 298,
+        "partialBlockCount": 54,
+        "sourceParagraphs": 180,
+        "websiteParagraphs": 115,
+        "sourceTables": 0,
+        "websiteTables": 10,
+        "sourceTableRows": 0,
+        "websiteTableRows": 116,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2008,
+      "websitePath": "content/letters/berkshire_2008-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 30,
+        "currentParagraphs": 106,
+        "baselineTables": 0,
+        "currentTables": 6,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.07145273109699608,
+        "missingBlockCount": 293,
+        "partialBlockCount": 35,
+        "sourceParagraphs": 202,
+        "websiteParagraphs": 106,
+        "sourceTables": 0,
+        "websiteTables": 6,
+        "sourceTableRows": 0,
+        "websiteTableRows": 95,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2009,
+      "websitePath": "content/letters/berkshire_2009-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 73,
+        "currentParagraphs": 106,
+        "baselineTables": 0,
+        "currentTables": 8,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.08625163678647546,
+        "missingBlockCount": 234,
+        "partialBlockCount": 36,
+        "sourceParagraphs": 163,
+        "websiteParagraphs": 106,
+        "sourceTables": 0,
+        "websiteTables": 8,
+        "sourceTableRows": 0,
+        "websiteTableRows": 112,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2010,
+      "websitePath": "content/letters/berkshire_2010-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 0.9994964617344664,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 16,
+        "currentHeadings": 16,
+        "baselineParagraphs": 69,
+        "currentParagraphs": 125,
+        "baselineTables": 0,
+        "currentTables": 11,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.07788705019563165,
+        "missingBlockCount": 319,
+        "partialBlockCount": 45,
+        "sourceParagraphs": 202,
+        "websiteParagraphs": 125,
+        "sourceTables": 0,
+        "websiteTables": 11,
+        "sourceTableRows": 0,
+        "websiteTableRows": 152,
+        "sourceExplicitBreaks": 1
+      }
+    },
+    {
+      "year": 2011,
+      "websitePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 94,
+        "currentParagraphs": 122,
+        "baselineTables": 0,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.08346463014822986,
+        "missingBlockCount": 395,
+        "partialBlockCount": 59,
+        "sourceParagraphs": 183,
+        "websiteParagraphs": 122,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 102,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2012,
+      "websitePath": "content/letters/berkshire_2012-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 99,
+        "currentParagraphs": 132,
+        "baselineTables": 0,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.10996476425310546,
+        "missingBlockCount": 291,
+        "partialBlockCount": 72,
+        "sourceParagraphs": 219,
+        "websiteParagraphs": 132,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 114,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2013,
+      "websitePath": "content/letters/berkshire_2013-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 79,
+        "currentParagraphs": 124,
+        "baselineTables": 0,
+        "currentTables": 7,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.09873211116927086,
+        "missingBlockCount": 297,
+        "partialBlockCount": 62,
+        "sourceParagraphs": 215,
+        "websiteParagraphs": 124,
+        "sourceTables": 0,
+        "websiteTables": 7,
+        "sourceTableRows": 0,
+        "websiteTableRows": 113,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2014,
+      "websitePath": "content/letters/berkshire_2014-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 0.9996960327369474,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 84,
+        "currentParagraphs": 119,
+        "baselineTables": 0,
+        "currentTables": 8,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.045714138128348986,
+        "missingBlockCount": 401,
+        "partialBlockCount": 38,
+        "sourceParagraphs": 86,
+        "websiteParagraphs": 119,
+        "sourceTables": 0,
+        "websiteTables": 8,
+        "sourceTableRows": 0,
+        "websiteTableRows": 126,
+        "sourceExplicitBreaks": 262
+      }
+    },
+    {
+      "year": 2015,
+      "websitePath": "content/letters/berkshire_2015-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 0.9994574098259296,
+        "currentCoverageInBaseline": 0.9997783582680281,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 12,
+        "currentHeadings": 12,
+        "baselineParagraphs": 103,
+        "currentParagraphs": 142,
+        "baselineTables": 1,
+        "currentTables": 9,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.06557052589392869,
+        "missingBlockCount": 346,
+        "partialBlockCount": 56,
+        "sourceParagraphs": 213,
+        "websiteParagraphs": 142,
+        "sourceTables": 0,
+        "websiteTables": 9,
+        "sourceTableRows": 0,
+        "websiteTableRows": 126,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2016,
+      "websitePath": "content/letters/berkshire_2016-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 11,
+        "currentHeadings": 11,
+        "baselineParagraphs": 36,
+        "currentParagraphs": 122,
+        "baselineTables": 1,
+        "currentTables": 10,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.07781763121434278,
+        "missingBlockCount": 267,
+        "partialBlockCount": 45,
+        "sourceParagraphs": 156,
+        "websiteParagraphs": 122,
+        "sourceTables": 0,
+        "websiteTables": 10,
+        "sourceTableRows": 0,
+        "websiteTableRows": 158,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2017,
+      "websitePath": "content/letters/berkshire_2017-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 6,
+        "currentHeadings": 6,
+        "baselineParagraphs": 59,
+        "currentParagraphs": 93,
+        "baselineTables": 1,
+        "currentTables": 5,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.10795289377158587,
+        "missingBlockCount": 142,
+        "partialBlockCount": 37,
+        "sourceParagraphs": 121,
+        "websiteParagraphs": 93,
+        "sourceTables": 0,
+        "websiteTables": 5,
+        "sourceTableRows": 0,
+        "websiteTableRows": 99,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2018,
+      "websitePath": "content/letters/berkshire_2018-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 15,
+        "currentParagraphs": 60,
+        "baselineTables": 0,
+        "currentTables": 4,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.10847550896953095,
+        "missingBlockCount": 183,
+        "partialBlockCount": 35,
+        "sourceParagraphs": 132,
+        "websiteParagraphs": 60,
+        "sourceTables": 0,
+        "websiteTables": 4,
+        "sourceTableRows": 0,
+        "websiteTableRows": 89,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2019,
+      "websitePath": "content/letters/berkshire_2019-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 1,
+        "currentHeadings": 1,
+        "baselineParagraphs": 28,
+        "currentParagraphs": 48,
+        "baselineTables": 0,
+        "currentTables": 0,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.15052968642191167,
+        "missingBlockCount": 147,
+        "partialBlockCount": 47,
+        "sourceParagraphs": 128,
+        "websiteParagraphs": 48,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2020,
+      "websitePath": "content/letters/berkshire_2020-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 9,
+        "currentHeadings": 9,
+        "baselineParagraphs": 21,
+        "currentParagraphs": 68,
+        "baselineTables": 1,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.1506907987357478,
+        "missingBlockCount": 165,
+        "partialBlockCount": 71,
+        "sourceParagraphs": 175,
+        "websiteParagraphs": 68,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 77,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2021,
+      "websitePath": "content/letters/berkshire_2021-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": false,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 0.9985150088404154,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 28,
+        "currentParagraphs": 53,
+        "baselineTables": 0,
+        "currentTables": 1,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.09283958007154022,
+        "missingBlockCount": 107,
+        "partialBlockCount": 19,
+        "sourceParagraphs": 104,
+        "websiteParagraphs": 53,
+        "sourceTables": 0,
+        "websiteTables": 1,
+        "sourceTableRows": 0,
+        "websiteTableRows": 18,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2022,
+      "websitePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 9,
+        "currentHeadings": 9,
+        "baselineParagraphs": 39,
+        "currentParagraphs": 62,
+        "baselineTables": 0,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.08327552887664351,
+        "missingBlockCount": 101,
+        "partialBlockCount": 21,
+        "sourceParagraphs": 110,
+        "websiteParagraphs": 62,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 66,
+        "sourceExplicitBreaks": 0
+      }
+    },
+    {
+      "year": 2023,
+      "websitePath": "content/letters/berkshire_2023-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 8,
+        "currentHeadings": 8,
+        "baselineParagraphs": 20,
+        "currentParagraphs": 53,
+        "baselineTables": 1,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.06466286407676568,
+        "missingBlockCount": 221,
+        "partialBlockCount": 27,
+        "sourceParagraphs": 162,
+        "websiteParagraphs": 53,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 69,
+        "sourceExplicitBreaks": 1
+      }
+    },
+    {
+      "year": 2024,
+      "websitePath": "content/letters/berkshire_2024-巴菲特致股东信.md",
+      "inStableImaList": true,
+      "baselineAudit": {
+        "canonicalEqual": true,
+        "baselineCoverageInCurrent": 1,
+        "currentCoverageInBaseline": 1,
+        "missingBlocks": [],
+        "addedBlocks": [],
+        "baselineHeadings": 10,
+        "currentHeadings": 10,
+        "baselineParagraphs": 10,
+        "currentParagraphs": 57,
+        "baselineTables": 2,
+        "currentTables": 2,
+        "longCurrentHeadings": []
+      },
+      "wordAudit": {
+        "contentCoverage": 0.1497617804677122,
+        "missingBlockCount": 60,
+        "partialBlockCount": 24,
+        "sourceParagraphs": 76,
+        "websiteParagraphs": 57,
+        "sourceTables": 0,
+        "websiteTables": 2,
+        "sourceTableRows": 0,
+        "websiteTableRows": 72,
+        "sourceExplicitBreaks": 1
+      }
+    },
+    {
+      "year": 2025,
+      "websitePath": "content/letters/berkshire_2025-巴菲特致股东信.md",
+      "inStableImaList": false,
+      "baselineAudit": null,
+      "wordAudit": {
+        "contentCoverage": 0.006680270946377842,
+        "missingBlockCount": 139,
+        "partialBlockCount": 1,
+        "sourceParagraphs": 127,
+        "websiteParagraphs": 85,
+        "sourceTables": 0,
+        "websiteTables": 0,
+        "sourceTableRows": 0,
+        "websiteTableRows": 0,
+        "sourceExplicitBreaks": 123
+      }
+    }
+  ],
+  "qa": [
+    {
+      "year": "1994",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1994.md",
+      "expectedParts": 4,
+      "downloadedParts": 4,
+      "complete": true,
+      "contentCoverage": 0.9415322512051083,
+      "missingBlocks": [
+        {
+          "text": "这本书是杰夫·考恩(Jeff Cowen)所著，书名叫《克拉伦斯.达罗的审判》 (The Trial of Clarence Darrow)。",
+          "normalizedLength": 55,
+          "coverage": 0.08333333333333333
+        }
+      ],
+      "partialBlockCount": 34,
+      "sourceHeadings": 89,
+      "websiteHeadings": 63,
+      "sourceParagraphs": 921,
+      "websiteParagraphs": 353,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "1995",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1995.md",
+      "expectedParts": 5,
+      "downloadedParts": 5,
+      "complete": true,
+      "contentCoverage": 0.8974383287032466,
+      "missingBlocks": [
+        {
+          "text": "因此，你可以说，伯克希尔-哈撒韦公司近40%的净资产——35%至40%——在美国以外运营，仅就这两项投资而言。",
+          "normalizedLength": 43,
+          "coverage": 0
+        },
+        {
+          "text": "我们寻找一家公司，因为这样或那样的原因而有一条护城河环绕自己的公司——比如说，因为是某个领域的低成本制造商、因为服务能力而拥有天然的特许经营权、因为在顾客的心目中占据了一定地位、因为有技术优势等等。",
+          "normalizedLength": 91,
+          "coverage": 0.19047619047619047
+        },
+        {
+          "text": "假如我们对护城河满意，我们就要琢磨领主是不是有意独占所有财富，或者会不会用城堡的财富做蠢事等等问题。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "微观经济的商业优势，总的来说，就是规模优势——市场主导地位的规模优势，它可以成为一个在每平方英尺购买更便宜，享受更高销售额方面拥有巨大优势的零售商。",
+          "normalizedLength": 67,
+          "coverage": 0
+        },
+        {
+          "text": "假如你的某个业务很成功，那么竞争对手就会马上去你的店里，研究你的成功秘诀，他们能够把你的成功秘诀学了去，可能还能有所创新。",
+          "normalizedLength": 56,
+          "coverage": 0
+        },
+        {
+          "text": "不仅仅是关于你能得到多少钱，而是关于你能把成千上万加入你公司的人——你把他们送到谁那里。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        }
+      ],
+      "partialBlockCount": 91,
+      "sourceHeadings": 81,
+      "websiteHeadings": 69,
+      "sourceParagraphs": 1337,
+      "websiteParagraphs": 534,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "1996",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1996.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8926717835870682,
+      "missingBlocks": [
+        {
+          "text": "我买了100股那家公司的股票——它叫做房地产资本信托——我买了100股。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我买了100股那家公司的股票——它叫做房地产资本信托——我买了100股。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "(笑声)我的一些董事会成员会对他们没有被包括在这个总数中感到不满。",
+          "normalizedLength": 30,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 110,
+      "sourceHeadings": 90,
+      "websiteHeadings": 72,
+      "sourceParagraphs": 1348,
+      "websiteParagraphs": 579,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "1997",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1997.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8605542205383035,
+      "missingBlocks": [
+        {
+          "text": "在这个房间里，不应该有任何那些在面对股价下跌50%时，却不变的积极热情的人。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，我们在经营霹雳猫的生意——我应该解释一下，霹雳猫的生意就像它听起来的那样。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "但是如果你不能找到一个最佳的组合——低估值下快速增长，你认为哪个更重要，更快的增长还是低估？",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "因此，业务波动越大——或者说可能性越大——但假设你仍想投资于该业务，那你需要安全边际就越大。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但是，你不可能拥有通用汽车，然后把它转换成通用电气的股票，而不需要缴税和经纪人。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "巴菲特：是的，我们——查理和我很乐意接受世界上任何一家管理资金的机构——哦，我们刚刚收到一张纸条，上面写着:“不幸的是，我们没有额外的年度报告。",
+          "normalizedLength": 60,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "所以很抱歉，有需要的股东请拨打346-1400，那有个年报专线并会有人寄纸质年报给你。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "我想告诉你，我是因为喝樱桃可乐才这样的，但我已经设法让它恢复到正常状态。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "我每年都会指定一个巴菲特基金会，然后巴菲特基金会，反过来，把钱捐给其他事情，包括计划生育。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "我可以用更少的时间来做这件事，但是我喜欢做这件事，所以我会坚持下去。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        }
+      ],
+      "partialBlockCount": 156,
+      "sourceHeadings": 75,
+      "websiteHeadings": 54,
+      "sourceParagraphs": 1392,
+      "websiteParagraphs": 544,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "1998",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1998.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8314576278814064,
+      "missingBlocks": [
+        {
+          "text": "事实上，如果有的话，我们不太可能去看那些相对于账面价值而言出售价格较低的公司，而会去看那些出售价格相对较好的东西，因为很有可能在第一种情况下，我们看到的是一家糟糕的公司，在第二种情况下看到的是一家好公司。",
+          "normalizedLength": 95,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "所以我们所做的就是把钱借给USAir，期限为10年，我们在那里有转换成普通股的权利。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "我们没有兴趣以50美金或40美金或30美金或20美金的价格购买USAir。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "现在，这种情况发生在我身上——我相信在座的一些人也有这种情况——我并不总是能接触到报纸——或者互联网，就这一点而言——那些每天，甚至每周，甚至每月都刊登伯克希尔-哈撒韦公司业绩的报纸。",
+          "normalizedLength": 78,
+          "coverage": 0
+        },
+        {
+          "text": "我不能告诉你它在1983年5月4日或1986年5月4日卖多少钱，所以我不在乎它在1998年5月4日卖多少钱。",
+          "normalizedLength": 52,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我们不认为——(当巴菲特拿起刚给他的一个冰雪皇后迪利巧克力棒时，大家笑了)——我们不认为相关系数会对我们有帮助。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "如果花钱有吸引力，你就得疯狂地花钱;如果花钱没有吸引力，你也得疯狂地花钱。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：一个成功的特许经营商，可以以比他在有形资产上投资多得多的价格出售他的商品。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "我经营伯克希尔哈撒韦公司——我的意思是，我经营巴菲特合伙公司很多年了，而我们在个人层面只有一项税收。",
+          "normalizedLength": 45,
+          "coverage": 0
+        },
+        {
+          "text": "你知道，关于经济的商业判断——在某种程度上还有人——但是商业经济学——占交易的99%。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "实际上，如果你有房子想买，你知道，我绝对相信只要出去走走就能完成工作。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "他以一种合理的方式进行了巨额投资，他会告诉你——他已经拥有了所需的所有资金，同时他不愿意承担市场可能承受的风险。",
+          "normalizedLength": 51,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "管理层确实会查看其他公司的高管委托书，我想每位CEO都会这么做。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "冻结公司是一家公司，其章程禁止其向其所有者支付任何款项，或被清算，或被出售和——",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "例如，波仙珠宝用美国运通(American Express)、喜诗糖果（See 's）用美国运通，而家具市场则没有。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "股东：我在想，比起投资伯克希尔哈撒韦持有的股票，投资伯克希尔哈撒韦有什么优势?",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "对《布法罗新闻报》(Buffalo News)、喜诗糖果（See 's Candy）、飞行安全公司（FlightSafety）或冰雪皇后（Dairy Queen）的估值并不神秘。",
+          "normalizedLength": 71,
+          "coverage": 0.125
+        },
+        {
+          "text": "从数据中可以看出，总体需求(主要来自摄影、工业用途和装饰性珠宝类用途)非常接近。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "所以你有5亿盎司左右的矿山生产，你有1.5亿盎司左右的回收银，其中很大一部分与摄影用途有关。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "安迪•格鲁夫(Andy Grove)或许比可口可乐(Coke)更擅长搞清楚英特尔。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "查理和我可以夜以继日地工作，如果他每周花十分钟打桥牌，他会打得比我们好。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们买下了盖可保险（GEICO）、我们买下了喜诗糖果（See 's Candy）、买下了布法罗新闻（Buffalo News）——我们买这些东西不是为了转售。",
+          "normalizedLength": 64,
+          "coverage": 0.13333333333333333
+        },
+        {
+          "text": "查理和我可能会认为——我们当然更愿意——我们的行为不会以（这种现象的）可持续为前提。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "现在，问题在于，一个实际GDP增长3%的体系——名义GDP增长4%到5%——企业的业绩能持续20%的增长吗?",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "《费马定理》是一本书——这也不是一个确切的书名——但它讲述的是发现答案的故事。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        }
+      ],
+      "partialBlockCount": 177,
+      "sourceHeadings": 113,
+      "websiteHeadings": 92,
+      "sourceParagraphs": 1535,
+      "websiteParagraphs": 643,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "1999",
+      "websitePath": "content/qa/伯克希尔股东大会实录_1999.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8402214459896351,
+      "missingBlocks": [
+        {
+          "text": "如果你购买它是为了30年后获得报酬，你肯定会从伯克希尔公司获得报酬，而不一定一定会从其他公司获得报酬。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "巴菲特：关于A和B的问题，我写了一些东西——几个月前写的，贴在了网站上——关于我自己的想法。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "我不能告诉你是哪些公司，但我知道不会有很多很多这样的公司一年赚两亿美元。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：我认为这是非常，非常不可能的，但是我——我在过去的十年或更长的时间里一直都错了，至少在那个时期通货膨胀是被控制的。",
+          "normalizedLength": 54,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我们已经达成过这样的增长率，但我们无法维持，因为我们的规模太大了。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "然后你去找那个人，他们想要把银弹穿过去，然后找出他想把银弹穿过去的人。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "他们没有寻找很多从总部回过头来的人，也没有寻找很多不必要的往返航班，等等。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "如果你点击berkshirehathaway.com，你可以看到旧的信件。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "或者在很多情况下——这些情况不是一般的情况，进行合理的摊销——事实上，是必需的。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "但早在20世纪20年代，本•格雷厄姆(Ben Graham)和杰瑞•纽曼(Jerry Newman)就拥有一只经典的对冲基金。",
+          "normalizedLength": 53,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "同时，波仙珠宝（Borsheims）卖的珠宝比Tiffany的便宜很多。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        }
+      ],
+      "partialBlockCount": 175,
+      "sourceHeadings": 80,
+      "websiteHeadings": 59,
+      "sourceParagraphs": 1481,
+      "websiteParagraphs": 544,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2000",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2000.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8785101714647028,
+      "missingBlocks": [
+        {
+          "text": "现在，年度报告都已经被送到了——那些寄给注册持有者的报告在我们到达奥马哈的几天后就被放到了他们的电子邮箱里。",
+          "normalizedLength": 50,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "大型业务包括通用再保险（General Re）和盖可保险（GEICO），以及Ajit运营的National Indemnity再保险业务。",
+          "normalizedLength": 61,
+          "coverage": 0
+        },
+        {
+          "text": "我们会认为报纸——在20年、25年前，我想查理和我可能认为日报，你知道，在一个单一的报业城镇——可能是你能找到的最可靠的投资。",
+          "normalizedLength": 54,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "这与上世纪30年代一样极端，只是不同的方向——失业率为零、投机盛行等等。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "如果你对蒂诺当年从公司窃取的收入账户、或与之相关的法律费用进行收费，你将面临重大损失。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我们的计划是过一会儿在这里讨论一下会议的商业部分，时间是9:30到12:00。",
+          "normalizedLength": 35,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 114,
+      "sourceHeadings": 63,
+      "websiteHeadings": 49,
+      "sourceParagraphs": 1341,
+      "websiteParagraphs": 566,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2001",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2001.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.842286679902331,
+      "missingBlocks": [
+        {
+          "text": "8个月后，不，可能是10个月后，我为《商业与金融纪事报》(The Commercial and Financial Chronicle)写了一篇关于“我最喜欢的证券”(The Security I Like Best)的文章。",
+          "normalizedLength": 93,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "巴菲特：General Re和科隆再保险，与National Indemnity历史上的再保险业务有很大不同。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "他们对一种完全不同形式的再保险有着丰富的知识，这是我们在National Indemnity中所无法积累的。",
+          "normalizedLength": 51,
+          "coverage": 0
+        },
+        {
+          "text": "做一些比较，也许和一些毕业生——最近的毕业生——看看他们有什么样的经历。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "因为他们不了解自己，他们就教一些东西，“没有人知道任何事”，这就是有效市场理论。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，我不认为有很多公司——特别是证券交易所的大公司——处于这种境地。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我想说的是，在这些年来我们一直想做空的事情中，最终的击球率是非常高的——如果你坚持做空，最终的结果会非常好。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "这个问题可能属于查理•芒格(Charlie Munger)古怪投资活动的范畴。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "作为一个再保险方你可以这么做，但作为主要保险人你却往往不能这样做。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "你知道，我认为股票是在未来15年或20年里每年赚取6%或7%的完美方式。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "不要因此担心See 's Candy、Dairy Queen或可口可乐。",
+          "normalizedLength": 30,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 174,
+      "sourceHeadings": 70,
+      "websiteHeadings": 54,
+      "sourceParagraphs": 1443,
+      "websiteParagraphs": 638,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2002",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2002.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.9075606565405411,
+      "missingBlocks": [
+        {
+          "text": "如果你仔细想想，伯克希尔公司本身——好吧，忘了平克顿吧——绝对是疯了，才会涉足为机场提供警卫的业务。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "（Were it offered to me as part of my employment, I would rather make my living playing a piano in a whorehouse）”（笑声）**",
+          "normalizedLength": 89,
+          "coverage": 0
+        },
+        {
+          "text": "对了我刚被告知，我刚出给出了错误的数字——我说人们每年摄入64盎司液体，这不对，那应该是一天。",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "但它的基本优势在整个时期都存在，你必须做的是摆脱管理不善，回到基本业务上来。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：第二，或者有谁想对这个动议发表意见，现在可以走到第一区的麦克风前。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "如果有人想要发言，如果你走到麦克风前，我们会准备好的——你可以在合适的时候准备好谈论它。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "我在PPT上写了——我也看不清上面写的是什么——查理也没有看到这些，所以我给他看一下这幻灯片。",
+          "normalizedLength": 41,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 105,
+      "sourceHeadings": 64,
+      "websiteHeadings": 41,
+      "sourceParagraphs": 1672,
+      "websiteParagraphs": 429,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2003",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2003.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8015703403708904,
+      "missingBlocks": [
+        {
+          "text": "我的意思是，我们知道，200年后那里（现在天然气的源头）将不会有天然气。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "而且，你知道，他们根本就不面对现实，他们不想面对现实，因为这会使得他们承受打击。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "那么利润表只要在上面写上“销售额”，然后在净利润上写上同样的数字就可以了。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "在这个国家，有很多——我应该说，有一些银行——是相当大的，你知道，有形资产的盈利可能有20%。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "而我们持有的中石油股份，实际上现在有13%，它们只占所谓的H股的13%。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我的意思是，我在上一份年度报告中使用了14,000个单词，这导致我的某些家庭成员问我是否按单词获得报酬。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**芒格：**但如果这种情况发生在日本，那么对投资阶层来说不那么可怕的事情也可能发生在美国。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但是我们将会有——你知道，我们将会有，也许在目前，几十亿欧元的债务，而对应的，我们至少有那么多的资产。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "而国民赔偿保险公司（National Indemnity）本身是700万，国民消防公司（National Fire Marine）是170万。",
+          "normalizedLength": 62,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "这是——你知道，我看到了投入的所有时间和精力，因为，坦率地说，CEO这样做是值得的。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**我们正在承保——然后我们将结束这个话题——但你已经读到很多、或者你可能会听到很多、也许你已经听说过了，百事可乐正在举办一场比赛。",
+          "normalizedLength": 59,
+          "coverage": 0.07692307692307693
+        },
+        {
+          "text": "对于你们中任何一个做生意的人来说，基本上你们缺乏足够的会计知识。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**巴菲特：就竞争优势而言，重新获得——失去然后重新获得——这样的例子并不多。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "但我们会很高兴，就像在那部电影里一样——如果他们明天关闭证券交易所，你知道，迪克·格拉索（Dick Grasso）不会高兴，我们的专家吉米·马奎尔（Jimmy Maquire）也不会高兴（注：电影《甜心先生》剧中人物，该片讲述了吉米·马圭尔被一家国际体育运动管理公司无理解雇后，没有灰心，热心面对生活，并得到了众人帮助最后走向成功的故事。",
+          "normalizedLength": 145,
+          "coverage": 0.08571428571428572
+        },
+        {
+          "text": "因此，这是必须要做一些事情的一年，而且是我们是一直计划要做些什么。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**股东：那您觉得这个从演出费到不收演出费的转变，是不是非常值得赞赏？",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "但我们确实有——我的意思是，我们看到很多很多的企业是由金融运营商类型（即私募基金）的人拥有的。",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "**沃尔特·斯科特：**我提议沃伦·E·巴菲特、查尔斯·T·芒格、苏珊·T·巴菲特、霍华德·巴菲特、马尔科姆·G·蔡斯、罗纳德·L·奥尔森和小沃尔特·斯科特当选为董事。",
+          "normalizedLength": 60,
+          "coverage": 0.07142857142857142
+        }
+      ],
+      "partialBlockCount": 247,
+      "sourceHeadings": 81,
+      "websiteHeadings": 45,
+      "sourceParagraphs": 1605,
+      "websiteParagraphs": 546,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2004",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2004.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8480681062797303,
+      "missingBlocks": [
+        {
+          "text": "**巴菲特：**但是约翰曼维尔（Johns Manville）——我们拥有约翰曼维尔。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**芒格：**他想让你分析一下政府雇员保险公司的营销方法——政府雇员保险公司的直接营销方法——以及戴尔的营销方法。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "**在多年前的会议上，你，巴菲特先生，提到了你对《聪明的投资者》（The Intelligent Investor）第8章和第20章的喜爱，以及《证券分析》（Security Analysis）的第一版，还有菲尔·费雪（Phil Fisher）的前两本书。",
+          "normalizedLength": 105,
+          "coverage": 0.16
+        },
+        {
+          "text": "我估计我们的透视盈余（look-through earnings）约为9.15亿美元。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "当他们在我们的方向上做出令我们震惊的事情时，你知道，我们就会采取行动。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的第二个问题是，你对纽约证券交易所（New York Stock Exchange）对专家的需求有何看法？",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "这样做的一个好处是——如果是比尔，这不一定是个缺点——但有一个好处是，我们真的很喜欢伯克希尔的文化。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "真正有趣的是，当你把市场表现不佳（比如共同基金行业的表现）加在一起时，结果可能是每年表现比指数差几个点，而这仍然有所低估。",
+          "normalizedLength": 55,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "**巴菲特：**或许我们最引人注目的方式——证明我们的担忧——就是我们不相信太多的杠杆。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "现在大约是中午，所以我们将回来，从2号区域开始，大约从1点45分开始",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**今天和我们在一起的还有德勤会计师事务所的合伙人，我们的审计师。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        }
+      ],
+      "partialBlockCount": 169,
+      "sourceHeadings": 70,
+      "websiteHeadings": 54,
+      "sourceParagraphs": 1457,
+      "websiteParagraphs": 527,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2005",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2005.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.9023078673446207,
+      "missingBlocks": [
+        {
+          "text": "但是，你知道，这是一项非常重要的业务，而且非常非常有吸引力——价格非常有吸引力。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        }
+      ],
+      "partialBlockCount": 112,
+      "sourceHeadings": 68,
+      "websiteHeadings": 45,
+      "sourceParagraphs": 1461,
+      "websiteParagraphs": 517,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2006",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2006.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8730159302272472,
+      "missingBlocks": [
+        {
+          "text": "**我想很快将会有一项研究——我认为是哈佛商学院——有人把它从哈佛商学院寄给了我，你知道，关于大都会公司的研究。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "霍华德·巴菲特——豪伊——马尔科姆·查斯、比尔·盖茨、大卫·戈特斯曼、夏洛特·盖曼、唐·基奥、汤姆·墨菲、罗恩·奥尔森和小沃尔特·斯科特，这是一群了不起的董事。",
+          "normalizedLength": 59,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 125,
+      "sourceHeadings": 60,
+      "websiteHeadings": 45,
+      "sourceParagraphs": 1416,
+      "websiteParagraphs": 556,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2007",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2007.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8304602639956349,
+      "missingBlocks": [
+        {
+          "text": "在吉列，毫不夸张地说，我们连续有十笔交易从未达成——接近达成——当时提交给董事会的提案。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "我的朋友有一笔非常好的生意，而另一边的人，在他们把它作为政府公司的股票买下后，说，“这是一笔非常棒的交易。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "**但最重要的事情，也是在你的基本原则中需要有一些东西，这样你就不会做任何你可能会失去很多的事情。",
+          "normalizedLength": 44,
+          "coverage": 0.1
+        },
+        {
+          "text": "首先，我的意思是，仅仅是所涉及的费用、摩擦成本和提出的胡扯就很棘手了。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "如果韦斯科的一位股东——你可能会——马克，你可能会贴出一张图表，显示与中国和与——",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**巴菲特：**但如果你——这么说吧，我们都决定要买一个——或者说考虑买一个农场。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "但我认为你可能有这样的案例——我不是说我们的审计师，我是说所有四家公司——但他们有很多案例证明价值——完全相同的一张纸——而双方的数字大不相同。",
+          "normalizedLength": 62,
+          "coverage": 0
+        },
+        {
+          "text": "这些灾难比高斯（德国数学家卡尔·弗里德里希·高斯，Carl Friedrich Gauss）所预测的更大、更恼人。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "**播音员：**现在，请大家欢迎这位迷人的、富有洞察力的、机智的、相当聪明的、温文尔雅的、有影响力的、富有而又脚踏实地的、有才华的、令人惊讶的谦虚的、英俊的和优雅的典型人物，巴菲特先生。",
+          "normalizedLength": 76,
+          "coverage": 0
+        },
+        {
+          "text": "（音乐家吉米·巴菲特（Jimmy Buffett）拿着吉他上台时的掌声和欢呼声）",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "令人不安的消息是，作为伯克希尔哈撒韦公司的长期股东和股东，最大的问题是，你知道，这些人的年龄越来越大，你知道，我说的是查理和沃伦。",
+          "normalizedLength": 58,
+          "coverage": 0
+        },
+        {
+          "text": "大约6000年前，在斯堪的纳维亚半岛的某个古老村庄，巴菲特的基因在那发生了一些转变，而我得到了音乐的天赋。",
+          "normalizedLength": 49,
+          "coverage": 0
+        },
+        {
+          "text": "所以，在后来的生活中，在多丽丝（巴菲特的妹妹）介绍我们认识之后——我不太记得，大概是30年前吧——我就搞明白了，我知道怎么把商业上的事做好（即买入伯克希尔）。",
+          "normalizedLength": 66,
+          "coverage": 0
+        },
+        {
+          "text": "所以，我想我会——这首歌对我来说非常好，所以我想我会把这首歌带到奥马哈的奎斯特中心，作为我在奥马哈的首次亮相——我会用伯克希尔的风格改写一下“玛格丽塔维尔”（Margaritaville）——",
+          "normalizedLength": 83,
+          "coverage": 0
+        },
+        {
+          "text": "我从来没有在大清早唱过，除了在NBC的《今日秀》上，所以你不用付钱，所以不用担心，所以——（笑声）",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "正如你所看到的，沃伦给了我一个很大的预算，在这里添置了一个提词器。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "you stockholders buying the rounds.",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "people claim that Charlie Munger’s to blame,",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "oh. I made a mistake here. All right. Hold on.",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "planes, diamonds, and underwear cover the floor.",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "away again in Berkshire Hathaway-ville,",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "people claim privatization’s to blame,",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "we know, this holding company’s on fire.",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "sell car insurance to humans while making some jokes?",
+          "normalizedLength": 44,
+          "coverage": 0
+        },
+        {
+          "text": "someone show me where they’re sitting those rich Geico bulbs?",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "away again in Berkshire Hathaway-ville,",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "some people claim that Doris Buffett’s to blame,",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "some people claim that ukulele’s to blame,",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "there’s a God, he’ll turn that thing into (inaubible).",
+          "normalizedLength": 40,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 176,
+      "sourceHeadings": 64,
+      "websiteHeadings": 52,
+      "sourceParagraphs": 1681,
+      "websiteParagraphs": 518,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2008",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2008.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8453559723280957,
+      "missingBlocks": [
+        {
+          "text": "**股东：**我是来自伊利诺伊州埃尔克格罗夫村的Larry Tidrick。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "我认为，今天所发生的一切，关于金融和经济，都与我们的宪法有关，宪法是建立在财产权和契约权的基础上的。",
+          "normalizedLength": 45,
+          "coverage": 0
+        },
+        {
+          "text": "只是——有一家叫Fairfax Financial的公司——一家相对较小的公司——我记得，它在信用违约互换方面做了超过10亿美元。",
+          "normalizedLength": 56,
+          "coverage": 0.07692307692307693
+        },
+        {
+          "text": "但是你们的父母——我告诉学生们，你们知道，你们最重要的工作，你们知道，是作为你们孩子的老师。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "所以我们去了15个——我的意思是，我觉得（我做的不够）我欠伯克希尔的股东们——（笑声）",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我个人——你知道，我个人认为奥运会——我希望他们——你知道，永远都在每个人的参与下进行。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "所以我只是认为这是一个可怕的错误，试图阻止——奥运会有一个美好的事件。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "1月24日，它的市场价格为3.15%（注：债券收益率和债券价格成反比）；1月31日，4.0%；2月7日，3.5%；2月14日，8%。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "在一个标书上，你会发现一个问题——我们会出价所有这些——我们碰巧出价11.3%。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "还有另一家公司叫Lindt and Sprungli（注：一个巧克力牌子）。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，需求将保持不变——即使是在这样的价格下——我很难想象需求会大幅下降。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "如果你们将掌声保持到最后——如果你们愿意，甚至更长时间——（笑声）——我将介绍他们。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，他们一直在努力——对他们来说，它们是一件艺术品，而且它们在家庭中有时多达四代人。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        }
+      ],
+      "partialBlockCount": 154,
+      "sourceHeadings": 20,
+      "websiteHeadings": 54,
+      "sourceParagraphs": 1501,
+      "websiteParagraphs": 479,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2009",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2009.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.801260954721149,
+      "missingBlocks": [
+        {
+          "text": "在某些情况下，我们向人们提供数亿或数十亿美元，向我们出售他们的业务。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我认为可能发生的一个例外是，如果监管足够疯狂的话，你知道，你可以想象一些可能导致伯克希尔一分为二的事情。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "你知道，首席执行官们花了很多时间思考谁是他们的薪酬委员会的成员。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "最糟糕的是——我曾经说过，我们可能会承担4%到5%的行业损失——任何特大灾难。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "然后，当你进入我们所有的其他业务时，除了几个例外——这些业务基本上都在下滑。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "如果你看看我们的运营收益，10亿美元，或者更多一点，来自中美能源公司——基本上来自我们的能源业务——我们将继续把资金留在这一业务。",
+          "normalizedLength": 57,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "评级机构很难，如果他们有一个复选框系统的比率等，来衡量像管理对债权人的态度。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "因此，如果他的资产是2亿美元，他每年要拿出10美元，他要花15年的时间，就因为这个信贷部门的要求。",
+          "normalizedLength": 44,
+          "coverage": 0
+        },
+        {
+          "text": "在那个特殊的案例中，Dynegy公司——那是在2002年左右——公司非常需要资金。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "但是乔和塔德，当他们接手的时候，2001年9月，实际上——正好是世贸中心问题的时候——他们解决了所有的问题。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "但我确实认为，大型机构——如果他们说出来——你只需要其中三、四个机构联合说出来（就能成）。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**是的，嗯，这非常——嗯，我们有一个经理，你知道，一个很棒的——我的意思是，一个我们在韦斯科都很喜欢的人。",
+          "normalizedLength": 44,
+          "coverage": 0
+        },
+        {
+          "text": "**我的意思是，Tony——Tony很好——在GEICO工作的时候，你知道，他还是个青少年。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "**36、关于Russell Athletic Plant工作条件的股东动议**",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "它们有可能，而且在某些地方，它们已经被击垮了，它们有可能只是走向无休止的损失。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "对于伯克希尔、你的继任者和你本人来说，这些好处是如此的引人注目，而你的不情愿令人费解。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "在纽约证券交易所——我不知道——大概有4到5000家公司，在纳斯达克有更多的公司。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "time，大概意思是一个新的科学真理取得胜利并不是通过让它的反对者们信服并看到真理的光明，而是通过这些反对者们最终死去，熟悉它的新一代成长起来。",
+          "normalizedLength": 68,
+          "coverage": 0
+        },
+        {
+          "text": "但从长期来看，拥有大量浮存金（你以低于零的成本获得浮存金）将是一个巨大的优势。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "在这5年时间里——或者说在任何时间里——我们从来没有在5年时间里表现不佳。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**但我在报告中也提到，当我们认为它们定价错误时，我们会经常在自己的业务中使用它们。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "Competition Around World）中获得了第二名，仅次于查理。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "你知道，在这一点上我们非常不成功，查理和我，在所罗门说，“好吧，我们只是不想做这种事情。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "但对投资官员来说——一个或多个，很可能是更多——他们不需要在第二天或下个星期做什么。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        }
+      ],
+      "partialBlockCount": 165,
+      "sourceHeadings": 19,
+      "websiteHeadings": 50,
+      "sourceParagraphs": 1614,
+      "websiteParagraphs": 496,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2010",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2010.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8402844463483194,
+      "missingBlocks": [
+        {
+          "text": "国会——参议院——以88票对9票告诉他们，你知道，会计准则委员会对会计到底了解多少，参议院会告诉他们会计是怎么回事。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "为了获得某种应该是资产的东西，你知道，每天都有报价，又有极好的流动性——而没有人会说，我的农场的流动性有多好?",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**他说：“你看，你可以有一家餐厅，上面可以写着‘法国菜’，如果你在里面吃法国菜，你知道，人们会去——你会得到一个满意的回头客。",
+          "normalizedLength": 50,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "六、七年前——也许没那么久——六、七年前，当我看韩国股票的时候，我从来没有想到韩国股票会是我会买的东西。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "查理，我想，当他从事法律工作的时候，他肯定遇到了很多客户，这些客户都觉得自己什么都知道，就好像他拥有这个地方一样。",
+          "normalizedLength": 51,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "然后他补充道，“顺便说一句，我本来是坐火车来的，但火车车厢里没有座位。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "我想说，你知道，如果我们一年接到几个——三个或四个认真的电话，符合我们的标准，看起来有可能，那是一个好的年份，我喜欢。",
+          "normalizedLength": 50,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "但请不要认为会有什么让我们感兴趣的东西出现的频率会有大的变化。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "部分原因是，我们这样做——这符合我们的品性和天性——部分原因是，我们这样做是因为我们通过经验发现，它的效果更好，至少在我们坐着的时候更好。",
+          "normalizedLength": 60,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "我在获取年度报表信息时遇到了一些麻烦，所以我终于在一周前的周五，也就是昨天上网发送了参会请求，并在会议之前拿到了我的票。",
+          "normalizedLength": 56,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：**是的，你知道，旧金山的大地震，不管它是什么，06年，引起了一场可怕的大火。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**贝基·奎克：**这个问题来自Ben Soh，他住在加拿大不列颠哥伦比亚省的大温哥华地区。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "现在，新西兰的时间是凌晨四点一刻，所以我可以肯定地说，我的妻子正在熟睡。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**我真的相信养成良好的理财习惯——还有其他一些习惯，但我在这里想的是主要的理财习惯——在人生的早期养成这些习惯是非常重要的。",
+          "normalizedLength": 55,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**但NetJets所犯的最大错误是我们保留了——我们购买飞机的价格是虚构的，以我们后来能够出售的价格计算。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "ACA是这样，MBIA是这样，Ambec是这样，FGIC是这样，FSA也是这样。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "现在，几年前，有人找到我们，一家大型投资银行，他们说，“看看这个投资组合。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**巴菲特：**另外，我认为他们会看到——有一整张清单，事实上，我认为我甚至有一页专门写这个。",
+          "normalizedLength": 36,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 168,
+      "sourceHeadings": 20,
+      "websiteHeadings": 57,
+      "sourceParagraphs": 1696,
+      "websiteParagraphs": 441,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2011",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2011.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.7868511501125592,
+      "missingBlocks": [
+        {
+          "text": "**巴菲特：**我认为你最好不要登一条广告，在我离开后，上面写着首席执行官想要10万美元的薪酬和舒适的环境。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "顺便说一句，我们本可以做得更好——我本可以做得更好——分配我们的资金，你知道，就后恐慌时期而言。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：不，这些是——当然，我们会根据不同的机会成本在不同的时间进行不同的交易。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "你知道，有一个伍迪·艾伦的老故事，关于他如何参加快速阅读课程，他遇到了一个人，他告诉他这是多么美妙，那个人说，“好吧，给我举个例子。",
+          "normalizedLength": 56,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "**巴菲特：**我对自己说，查理也同意，谁他妈知道他们会说什么，当我们去还钱的时候，第纳尔的价值是多少。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "他们说，因为伯克希尔哈撒韦公司捐钱，可能主要是捐给支持堕胎权利的组织，而这正是方向——我们有其他股东把钱捐给了反对堕胎的组织。",
+          "normalizedLength": 57,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "它确实影响了集中在全国各地某些社区的成千上万人，主要是妇女的收入。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我认为，当你为计算机编程来进行长时间的向前预测时，会产生巨大的错误精度。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "**不，因为我不知道那么多——我当时不知道，现在也不知道，中国税法的所有错综复杂之处以及可能的政策。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**芒格：当我们突然需要用钱的时候，为什么还要浪费精力在一些可疑的投资上呢？",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，我在报告中提出，你知道，我希望我们的正常盈利能力在170亿美元或税前的范围。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**贝基·奎克：**这个问题来自Scott Wilkin，他来自芝加哥，但他现在就坐在观众席上。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "它通常以某种惨败告终，但——好吧，我不应该说它通常如此，但它在某个时候耗尽了能量。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们花了七百万买下了国民赔偿保险公司，花了四百万买下了它的姐妹公司国家消防和海事公司。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "而且，你知道，我们有一个糖果生意，例如，美元的价值自从我们买了那个糖果生意以来可能已经下降了至少85%，我会说——80%到85%——并且那个糖果生意比我们买它的时候多卖了75%磅的糖果，但是它有十倍的收入并且它不需要更多的资本。",
+          "normalizedLength": 99,
+          "coverage": 0.17391304347826086
+        },
+        {
+          "text": "嗯，实际上，我们已经把它分拆了，你知道，1500对1，因为A股可以转换成B股。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "还有——如果你愿意把手伸进口袋——我不喜欢这样做，但是——掏出你的钱包——你正在观看一场历史性的事件。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "and Westerns of the world）， 还有利顿世界（the Littons of the",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "现在，你知道，我们的铁路车载量的峰值是21.9万辆，我相信，是在2006年，但是——我们的底部是15万或15万1千辆。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        }
+      ],
+      "partialBlockCount": 242,
+      "sourceHeadings": 19,
+      "websiteHeadings": 53,
+      "sourceParagraphs": 1495,
+      "websiteParagraphs": 487,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2012",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2012.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.7598033250221672,
+      "missingBlocks": [
+        {
+          "text": "**PDD、TB等平台上的一切商业化均与本人无关，翻译工作不易，请尊重译者劳动成果，谢谢。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "在所罗门的会议上，沃伦和我会互相看着对方，当风险控制人员谈话时，我们会翻白眼。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "所以这是一个——我不认为我们能有一个更好的——这是相同的薪酬结构，基本上，我们与卢·辛普森合作了20多年，除了他没有合伙人。",
+          "normalizedLength": 53,
+          "coverage": 0
+        },
+        {
+          "text": "这将是疯狂的尝试，并有一些总的安排，你知道，涉及资本回报——有一些业务不使用任何资本在我们的公司——或营业利润率。",
+          "normalizedLength": 49,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**PDD、TB等平台上的一切商业化均与本人无关，翻译工作不易，请尊重译者劳动成果，谢谢。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "而且，即使因为A股和B股，当我把它们送出去的时候，A股也会转换成B股。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "甚至10年后，我可能会拥有，或者我的家族可能会拥有大约20%的股份。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**巴菲特：巴尔的摩的百货公司，在霍华德和列克星敦街（Howard and Lexington Street）。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "当然，蓝筹银行公司是另一个例子，因为那是另一家公司——当然，伯克希尔是纺织企业。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**我的意思是，有人今天把一些东西带到市场上，一个卖家可以选择什么时候进入市场，而这种证券，将会有很多与之相关的宣传，将被称之为是世界上成千上万的企业中最便宜的东西，你知道，这是无稽之谈。",
+          "normalizedLength": 87,
+          "coverage": 0.05
+        },
+        {
+          "text": "但我可以向你保证，如果你在世界各地的股票中有成千上万的机会——其中大多数都没有被推广或以特别佣金或其他方式出售，然后同时一些其他的证券在那一天进入市场——并且卖方可以选择时间来销售它的时候，那么相对于那些在二级市场交易的公司，花5秒钟去思考新发行的证券是没有意义的。",
+          "normalizedLength": 124,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "但总体而言，我们的收益可能至少比账面价值收益高出35%左右，当你计算时，这是很多美元。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "我们没有——我们没有——我们是最不协调的一对个体，无论是在体育还是在执行层面。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**PDD、TB等平台上的一切商业化均与本人无关，翻译工作不易，请尊重译者劳动成果，谢谢。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**你知道，当我们有300亿——目前我们的现金头寸——嗯，真的，如果你算上所有的公司，它可能是360或370亿美元——你知道，我们基本上在这些资金上什么都得不到。",
+          "normalizedLength": 70,
+          "coverage": 0.1875
+        },
+        {
+          "text": "好吧，如果没有人——没有其他人，我会说，马斯先生，你知道，我们在同一条船上。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**PDD、TB等平台上的一切商业化均与本人无关，翻译工作不易，请尊重译者劳动成果，谢谢。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "如果你知道你能看重的业务和你不能看重的业务之间的区别，你知道，这是关键，你就会赚钱。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**好的，但是税率，在慈善扣除之后，在慈善扣除之后，你必须支付——如果你要支付50%并获得扣除——必须全部是现金。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "伯克希尔·哈撒韦公司是否打算对他们从美国运走的任何工作都这样做？",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我不认为我们有超过15000人在外面——在这270,000人中——在美国之外。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "他们描述了各种替代方案，其中没有一个——好吧，不是这样——他们推荐的那些，你知道，不涉及一天的住院治疗。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "你所要做的就是偶尔迫使他在任何一天以相同的价格向你买入或卖出任何特定的证券。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "还有——你知道，有很多不好的地方——我买了我的第一只股票，你知道，在1942年6月，发生了什么？",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "毫无疑问，尽管我们没有——好吧，我们没有拥有全部，但我们实际上在过去五年里拥有了伯灵顿北方公司的一块重要资产。",
+          "normalizedLength": 49,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "**PDD、TB等平台上的一切商业化均与本人无关，翻译工作不易，请尊重译者劳动成果，谢谢。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "我不认为——我认为不太可能是谁跟着我——好吧，他们会加入——会有几个投资人士跟着我，至少两个，他们现在已经加入了，托德·库姆斯和泰德·韦施勒。",
+          "normalizedLength": 58,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "另一个是，在巨大的资本盈余中，它拥有类似于伯灵顿北方铁路的资产，这使得它从投保人的角度来看非常强大。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "**我认为报纸的未来是存在于这样一个地区，那里有一种社区的感觉，人们真正关心他们的学校，他们关心特定地理区域发生的事情。",
+          "normalizedLength": 54,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "然后它开始改变——虽然不是把邮件完全留在后面——而是把渠道放到了电视上。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "现在你可以把封皮打开，精彩的部分就来了，查理和我有——我们这里有软糖，我们有花生糖。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "我不知道观众是否能看到这里的人，但如果你能把灯光或什么的调高，他们就能看到。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们要做的是，我们将从这里开始，先是媒体，然后是一位分析师，然后再是一位股东。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "但他不是——他与GEICO的托尼（很好地）之间没有协调，与伯克希尔哈撒韦再保险公司的阿吉特（贾恩）也没有协调。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "而且，你知道，当你关闭机场的餐厅时——你知道，2000英里之外，因为9/11而机场关闭了几天，那是属于业务中断保险吗？",
+          "normalizedLength": 50,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "所以我们的营销工作非常好，我们的风险选择工作非常好，我们的保留工作也很好。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        }
+      ],
+      "partialBlockCount": 271,
+      "sourceHeadings": 26,
+      "websiteHeadings": 66,
+      "sourceParagraphs": 1782,
+      "websiteParagraphs": 596,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2013",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2013.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.7504891019251777,
+      "missingBlocks": [
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "**股票市场将为你提供利润的机会，但你只能购买一定的百分比，而你很难在购买整家公司的时候遇到这样的机会。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "他只需要考虑董事会和他自己——但作为董事会的一员——董事会是否需要更换首席执行官。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "损失——如果他们靠自己的收入生活，你知道——购买力的损失，当你进入低利率时，这是令人震惊的。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "在伯克希尔周围，你会注意到寿险业务——我们有自己的保单，与再保险不同——规模很小，对吧？",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "实际上，抵押贷款业务——我的意思是，你知道，查理和我从事储蓄和贷款业务。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "我的意思是，那是——你在那些货币市场基金中看到的，当1750亿美元，你知道，在三天内消逝。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "我的意思是，每个人都会——当人们感到害怕的时候，你知道，他们——这是非常普遍的。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**但我认为，我们有能力——也许比大多数人更好——我们不会去追随别人在做什么。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**但事实是，它在整个年龄范围内传播得非常非常快，这是一个巨大的变化。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**嗯，这些年来变化很大，但有——我们不能确定100%的欺诈，或者只有90%，或者80%，但有一些特定的你会发现，只是——他们也经常暴露自己。",
+          "normalizedLength": 58,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "好吧，你会——你实际上会——同一家审计公司会审计两家不同的公司，这两家公司在衍生品交易的另一方，并证明同一份合同的不同价值。",
+          "normalizedLength": 54,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "正如我所记得的，菲布罗或其他人——他们中的一个是在交易日期系统上，那是在结算日期系统上。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "2009年3月，乔·克南（JoeKernen）问我这个问题：“你为什么不买美国运通的股票？",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "**芒格：**我们认为，伯灵顿北方公司在15年后将拥有一台电脑，这是一种竞争优势，我们对此高度自信。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "但我没有——他对未来的看法对我来说没有任何区别，对我来说没有任何区别，你知道，任何经济学家对它的看法。",
+          "normalizedLength": 45,
+          "coverage": 0.1
+        },
+        {
+          "text": "我确实拥有过——我打赌我曾经拥有过4到500个公司，但大部分钱都是在其中的10个公司里赚到的。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**当时有很多技术书籍，比如《爱德华兹和麦基》，我是说，那是当时的经典，还有很多，《加菲猫德鲁》。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "我和（首席执行官）埃德·科洛德尼（Ed Colodny）一起在戈拉特航空公司（Gorat's），他向我解释了这家航空公司有多棒——顺便说一句，他是个好人——我写了一张支票。",
+          "normalizedLength": 70,
+          "coverage": 0.1875
+        },
+        {
+          "text": "然后——可能会有这样的情况——这不太可能——但可能会有这样的情况，我们会以对留在公司的股东有吸引力的价格买下一大批。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**安德鲁·罗斯·索尔金：**完整的问题是——我把它简化了——你对碳的价格的辩论有什么看法？",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "它不会帮助太多——我的意思是，我们收购了——当我们收购警卫保险（GUARD Insurance）时——它主要是针对工人的赔偿，但它只是一个小收购。",
+          "normalizedLength": 61,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们从奥蒂斯·斯坦顿那里买了一部分，他是塞伯里·斯坦顿的兄弟，但奥蒂斯想卖掉。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "我们从奥蒂斯·斯坦顿和马尔科姆·切斯的一些亲戚那里得到了两个大街区，但他们很乐意出售。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "蔡斯家族也是如此，不是马尔科姆本人，而是一些亲戚，他们卖给我们10万股。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "当然，现实是，沃伦和我都完全生活在自动驾驶仪上，在生活中的日常决定方面，这完全是习惯性的，所以我们不浪费——在任何决策上——我的意思是我们不浪费能源——我们摄入咖啡因和糖。",
+          "normalizedLength": 74,
+          "coverage": 0.17647058823529413
+        },
+        {
+          "text": "但它最终将是一个非常——我认为这将是一个非常体面的回报，与所使用的资本相比。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们是一个花钱的国家，我们会说——你会得到不同的数字——但这个赤字为GDP的17.5%左右。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "我几乎可以肯定，你知道，我们有70多家子公司，其中一些——其中一家——本身就有100多家。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "我们实际上要做的是——正如你所知道的，我们在集中的基础上做很少的事情——但这是我们所有公司都将努力了解为他们准备的东西，并试图找出一些答案。",
+          "normalizedLength": 63,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "但在过去的四年里——这些是基金的基金，所以它们实际上可能代表了2或300个对冲基金。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "霍华德·巴菲特、史蒂夫·伯克、苏珊·德克尔、所以，请站起来，一直站着——我们就在那里。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "比尔·盖茨、桑迪·戈特斯曼、夏洛特·盖曼、唐·基奥、汤姆·墨菲、罗恩·奥尔森、小沃尔特·斯科特，还有我们即将成为新成员的梅丽尔·威特默。",
+          "normalizedLength": 52,
+          "coverage": 0.08333333333333333
+        }
+      ],
+      "partialBlockCount": 262,
+      "sourceHeadings": 17,
+      "websiteHeadings": 64,
+      "sourceParagraphs": 1828,
+      "websiteParagraphs": 578,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2014",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2014.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.7776693650639638,
+      "missingBlocks": [
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "**卡罗尔·卢米斯：**这是古德海文基金的拉里·皮特科夫斯基和基思·特劳纳说的。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**但在某种程度上，这是人类的本性，你知道，不断地想要——我的意思是，通常成为首席执行官的人不是胆怯的人。",
+          "normalizedLength": 44,
+          "coverage": 0.1
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "今天，我和我的同事一诺教育公司（Yi Nuo Education Company）有一个问题。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "我的意思是，查理和我尽了我们的一份力来保持声誉不变，但这需要很多其他人也以一种让人们想要加入他们的方式行事，让人们想要信任他们。",
+          "normalizedLength": 60,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的名字是沃尔特·张（Walter Chang），我从台湾来参加这次会议。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "**贝基·奎克：**让我们看看，这是一个问题，我希望我能正确地念出你的名字，迈克尔。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "我叫戴夫·康特萨利亚（Dev Contessaria），是一名来自费城的基金经理。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "但我们在那段时间的支出上做得很好，但显然我们做得不是很好，远远没有那么好，就好像我们把所有的钱都保存好了，然后在底部一下子就花光了。",
+          "normalizedLength": 61,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "但我不这么认为——我觉得这个游戏仍然是非常有趣，而且在一段时间内都是如此。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "虽然这种随时间的流逝而规模增大不会永远继续，也不可能永远继续下去。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**而这种能力——知道你什么时候在玩你会赢的游戏，以及在游戏之外玩的能力，是一笔巨大的财富。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但这一切都包含在最初的交易中，所以一个是一个——价格完全相同，实际上是一个三阶段交易的一部分。",
+          "normalizedLength": 42,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：**在这两种情况下，我也应该说，在Marmon的普利兹克家族和在伊斯卡的韦特海默家族，是不可能——他们表现得再好不过了——或者说感觉非常好，每个人都对交易感觉良好——对初始交易和后续交易。",
+          "normalizedLength": 84,
+          "coverage": 0.15
+        },
+        {
+          "text": "我打电话进去，我不知道是八个还是十个经理——我周五下午刚到那里，现在是周六早上，我们必须在东京的周日晚上营业，我必须有人来管理这个地方。",
+          "normalizedLength": 61,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "顺便说一句，奥马哈希尔顿酒店就在街对面，他们——他们在整个过程中都很棒，就像其他许多酒店一样。",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "信不信由你，辛普森-鲍尔斯律师事务所的厄斯金·鲍尔斯代表他们，我的朋友厄斯金——我当时并不知道这一点。",
+          "normalizedLength": 44,
+          "coverage": 0.1
+        },
+        {
+          "text": "马特·罗斯（Matt Rose）最近从伯灵顿北方公司（Burlington Northern）的首席执行官变成了伯灵顿的执行董事长。",
+          "normalizedLength": 58,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "我的意思是，如果你要公布CNBC的五个最高工资，我不认为下一年的整体工资会下降。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "所以，我们会——我们希望我们会——到目前为止，我们已经能够——在BH能源公司收购真正的大型企业。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "一个是资本的分配，以及你如何与运营公司角力，以及有多少现金流向运营公司——或者说流向母公司——而不是运营公司。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "“但问题是，他们的继任者能够让它继续运行得几乎一样好的可能性似乎并不大。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "如果我们收支平衡，那770亿美元，需要从净资产中减去——我的意思是，这是资产负债表上的负债，但如果它是免费的，它确实给我们带来了和净资产本身一样多的好处。",
+          "normalizedLength": 69,
+          "coverage": 0.125
+        },
+        {
+          "text": "好吧，有些人，顺便说一句，认为“奇怪”和“不像巴菲特的行为”无关是不太正确的。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "事实上，我的意思是，他们中的大多数——绝大多数——都是在精益的基础上管理的。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "例如，在过去的一年里，我对政府雇员保险公司（GEICO）的情况非常具体。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "而且——虽然每天不是很多，但肯定会发生变化，你知道，在过去的几个季度和几年里。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "一些公司谈到——可口可乐（Coca-Cola）就是这么做的——他们谈到购买股票以覆盖期权。",
+          "normalizedLength": 37,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 238,
+      "sourceHeadings": 14,
+      "websiteHeadings": 61,
+      "sourceParagraphs": 1848,
+      "websiteParagraphs": 664,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2015",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2015.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.7086020542282292,
+      "missingBlocks": [
+        {
+          "text": "他们工作——他们工作七天——他们有选择，但其中一个选择，也是主要的选择，是工作七天，休息七天。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "至于衰退的业务部分，电池业务将是一个衰退的业务，但它将在全球范围内存在很长、很长、很长一段时间。",
+          "normalizedLength": 43,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我——以及查理——你知道，当你弄清楚你用你的钱做什么的时候，选择变得非常有限。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "就像查理那天说的，你知道，他说他要去的地方反正也不会给他带来什么好处。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**卡罗尔·卢米斯：**提问者的名字是安德烈·巴特尔（Andre Bartel），他是伯克希尔的股东。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "但是，根据法规，没有办法使用增值证券来赎回你自己的股票，你可以用它来收购，比如你可以将其交换为金霸王交易安排中的资产类型，但没有办法在不支付全额资本利得税的情况下将其分配给股东。",
+          "normalizedLength": 83,
+          "coverage": 0.15789473684210525
+        },
+        {
+          "text": "我的意思是，我知道各种各样的情况，人们在有价证券中有大量未实现的收益，尽管在我职业生涯的早期，当法律不同的时候，我确实看到了这一点，但近年来我没有看到人们以任何方式能够将钱交到股东手中，却不在公司层面纳税。",
+          "normalizedLength": 95,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "我的名字是马克·罗伊（MarkRoy），我是奥马哈以马内利愿景基金会的执行董事。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "你知道，人们在这个星期天捐钱，你知道，实际上，这以一种微小的方式改变了他们的生活方式，而这并没有发生在我身上。",
+          "normalizedLength": 49,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "如果我们要这样做，我们可能不得不补偿那些做保险工作的人——或者做保险销售的人——在范图伊尔。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我的意思是，我在年度报告中列出——这对伯克希尔来说有很多好处，因为两家公司在同一个公司纳税申报单上。",
+          "normalizedLength": 45,
+          "coverage": 0.1
+        },
+        {
+          "text": "但如果不这样做，他们似乎不会停下来，也没有人试图——似乎想要阻止他们。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**巴菲特：你真的——你知道，有人说习惯的锁链太轻而感觉不到，直到它们太重而无法打破。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "但我认为，以我们现在的合同，这是不太可能的，所以我认为它们很可能会随着时间的推移而到期。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我们的债务远远超过——我认为它在35亿到40亿美元之间——而今天的结算价值是4亿美元。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "**这是一个我们想要面对的问题，毕竟如果真的有一些如此吸引人的公司，我们——**",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们宁愿以10倍或12倍于坏年景的价格买入，也不愿以8倍于好年景的价格买入。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "我认为收入不平等是——我认为这是非同寻常的，在美国，看到我们已经走了多远。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**因此，我更相信改革和扩大劳动所得税抵免，它奖励工作的人，但也照顾那些技能不能很好地适应市场体系的人。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "**但后来，合作关系的记录吸引了资金，但最初更多的是那些了解我并对我有信心的人。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "如果你通过比别人精明和购买小纸片来从生活中攫取财富，我不认为这是一个足够的贡献来换取你所得到的。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "从那开始，在一个令人难以置信的增长行业，金融，在接下来的30或40年里，他们——我忘了他们进入的几个企业，他们买了一家连锁小报纸，我记得，有一次——但他们完全错过了将要发生的事情。",
+          "normalizedLength": 78,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "他正在进入——他基本上正在进入竞争，或者他已经进入竞争——与《纽约时报》，但这是他喜欢的游戏。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "而且，坦率地说，你知道，它给伯克希尔带来了很大的帮助，伯克希尔获得了成为一家与众不同的公司的声誉。",
+          "normalizedLength": 44,
+          "coverage": 0.1
+        },
+        {
+          "text": "**我的意思是，我不认为我们一开始是这样做的，但确切地说，这种方式已经给我们带来了成功。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "我们可以缩小两个百分点的差距，而不会让债务占GDP的比例比现在更大，所以我们有这个余地。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我想我们现在有一个女人在那里，她也通过别人，让路易斯公司（Louis）引起了我们的注意。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但我不认为任何大规模的公司的费率，会比政府雇员保险公司更经常性地处于最低水平。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "伯克希尔能够以低价借到钱，但我忘了约翰的负债是否让他在上个季度损失了12个基点。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "我能想到这个国家的很多公司——非常大的公司，我不认为如果查理和我在他们身边呆上十年，我们就能完成很多事情。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "第一个指标比较很大程度上受到我们生活在利率环境中这一事实的影响，查理和我可能认为这在几年前几乎是不可能的。",
+          "normalizedLength": 51,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "所以我不会——我看这些数字，但我也会在一个事实的背景下看这些数字：我们生活在一个利率极低的世界，问题是这些利率会持续多久。",
+          "normalizedLength": 55,
+          "coverage": 0
+        },
+        {
+          "text": "它会像日本一样，十年又十年地继续下去，还是我们会回到我们认为的正常利率？",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "当然，我们携带的最危险的东西是——作为一种常见的载体，我们必须携带氯——我们必须携带氨，我们被要求携带这些。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "我们的安全数据——伯灵顿北方公司在安全方面处于行业领先地位——但安全数据一年比一年好。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "首先，巴肯原油（Bakken crude）已被证明比大多数原油更不稳定——",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我们最终在GEICO公司成立了几家公司，它是GEICO本身的控股公司。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "我很晚才说，这个问题来自缅因州沃特维尔的詹姆斯·库克（James Cook）。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我的意思是，我们将得到相应的股权回报，这对我们来说不是免费的东西。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我的意思是，政府雇员保险公司在1936年都是直接邮寄的，当时利奥·古德温和他的妻子坐在那里塞信封。",
+          "normalizedLength": 45,
+          "coverage": 0.1
+        },
+        {
+          "text": "我们印刷了——我们认为我们印刷了15,000份，我们昨天卖了5,000本，然后就不卖了。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "**卡罗尔·卢米斯：**我的第一个问题来自德克萨斯州蒂姆森市的一名男子，他碰巧有一个熟悉的名字，弗兰克·吉福德（Frank Gifford），但他想澄清的是，他不是足球运动员弗兰克·吉福德，而是一名旅行摄影师。",
+          "normalizedLength": 88,
+          "coverage": 0.19047619047619047
+        },
+        {
+          "text": "我在这里看不到，但是——它可能看起来像小字——但它是一页纸，多个贷款人都在那张纸上。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "有时人们会借钱——如果圣安东尼奥有一家很大的信用合作社，当地的银行也很大，我们也会借钱给房子的买家，如果他们愿意的话。",
+          "normalizedLength": 53,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "此外，在克来顿——几乎在每一个州都受到监管——在我们有融资生意的每一个州。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "你已经看到蒂姆·霍顿（Tim Horton）在第一季度有一些非常好的数据。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "** 我们不可能做到这一点——我们不仅不可能晚一天完成，也不可能晚一个小时完成。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "路易斯夫人，在德国——这是一种迂回的方式——但她想卖给伯克希尔哈撒韦公司。",
+          "normalizedLength": 31,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 319,
+      "sourceHeadings": 17,
+      "websiteHeadings": 67,
+      "sourceParagraphs": 1744,
+      "websiteParagraphs": 547,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2016",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2016.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.6976803181302165,
+      "missingBlocks": [
+        {
+          "text": "**事实上，我们自己的——我们和律师事务所芒格·托尔斯（Munger Tolles）谈过，这是我得到的问题之一，为什么我们不做更多的尽职调查，可能是因为我们会按小时给他们报酬的。",
+          "normalizedLength": 76,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**所以，如果我们认为有尽职调查的项目——顺便说一句，有一些的确有尽职调查。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "我确实认为它可能会促进事情，至少，我们的交易方法确实减少了某些无畏的花销。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**我们将在它被收购后领导业务，但我不认为它会通过使用一些不同的方法得到改善。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "如果我在正确的条件下达成协议——这是汤姆·墨菲教我的——我的意思是，你知道，你不必要面面俱到。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但是——泰德是——我的意思是，他很棒，我试了好几次，可能成功了几个月，但不是几年，想让他多待一会儿。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：我们不觉得有必要遵循任何一种组织共识，你知道，你这样做，你有——只有这么多人可以向你报告或任何这类事情。",
+          "normalizedLength": 49,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**卡罗尔·卢米斯**：关于伯克希尔几年前与3G公司建立的融资和工作关系的问题不断出现，这是其中一个问题：",
+          "normalizedLength": 45,
+          "coverage": 0.1
+        },
+        {
+          "text": "但有各种各样的美国公司，他们的员工不是真的在做什么，就是在做错误的事情。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "有时，当你减少销量时，这是非常明智的，因为你在你丢弃的销量上损失了金钱。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "尽管这很难确定，因为它的业绩与德国摩托车服装收购的业绩被混为一谈，后者也只在2015年的一段时间内被收购。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "我认为，在一定程度上，这是因为人们认为我们为VanTuyl支付的钱比我们实际得到的多。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "当我想起自己年轻时通用汽车（General Motors）的强大力量，以及所发生的一切——他们消灭了所有股东——我再也不会预料到这一点。",
+          "normalizedLength": 59,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "你知道，我的意思是，如果有人进来说，好吧，如果你对利润进行奖励——你不想单独奖励利润。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "**巴菲特：**你知道，在70或80家企业之间进行激励性薪酬的协调安排的想法完全是胡说八道。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "在一些企业中，最高领导人非常重要，或者在一些企业中，企业本身主导着结果。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "如果我加上，比如说CDs——我知道你在卖CDs，它的数量是70或80亿。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "请评论对国民赔偿保险公司和伯克希尔的影响，以及这家公司是否有另一个阿吉特。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我认为，在很大程度上，这肯定是2008年和2009年发生的事情的原因，但我不认为——我不认为这会是它的翻版。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**巴菲特：**我们已经有了这么多好的因素，仅仅是在这里的企业和人员方面，你知道，在公司里。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "他们没有给他们期权，或者他们没有——如果我一直在董事会，董事会往往会给我股票，你知道，他们——我得到它是非常自然的事情。",
+          "normalizedLength": 51,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "我们希望我们的股东站在股东的立场上——我的意思是，我们的董事站在股东的立场上。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "很明显，在我看来，在查理看来，在董事会看来，这只股票的价值远远超过1.2，但它的价值应该更高，否则我们不会让它处于那个水平。",
+          "normalizedLength": 54,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "但是，如果你记得9/11之后，人们开始收到一些装有炭疽的信封，他们去了《国家询问报》（National Enquirer）、汤姆·布罗考（Tom Brokaw）和汤姆·达施勒（Tom Daschle）——我不记得了。",
+          "normalizedLength": 87,
+          "coverage": 0.1
+        },
+        {
+          "text": "我叫埃里克·西尔伯格（Eric Silberger），是纽约市的一名小提琴家。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "所以我们——我们知道很多，或者熟悉很多，我应该说，几乎所有的宏观经济因素。",
+          "normalizedLength": 31,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "也许在填写表格的时候，有某种方式——因为我是伯克希尔的首席执行官，所以在某一行上，它把所有权归于我或其他什么东西。",
+          "normalizedLength": 51,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**多年来，上市公司为投资增加了800多亿美元，超出了我们的收益允许范围，这是一个巨大的因素。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**美国的商业已经足够好了，你不需要——你不需要真的很聪明才能得到一个像样的结果。",
+          "normalizedLength": 35,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "非常感谢你的慷慨和分享你一生的知识积累和金融资本，为人类的进步。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "你**不需要——你不需要你在生活中的某些活动中所需要的投资业务的智商。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "只要抓住那些变得非常富有的人，然后以某种方式利用他们自己，他们就会失去一切。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "我们遇到了更多的问题，例如，在我们西部的公用事业公司，太平洋公司引进可再生能源的时候，因为实际上，它是由六个州管理的——我相信是六个州——如果我们引进一大堆可再生能源，他们不一定就成本和收益应该如何分配达成一致，我们必须遵循他们的指示。",
+          "normalizedLength": 106,
+          "coverage": 0.12
+        },
+        {
+          "text": "我认为我们——我喜欢所有这些向可再生能源的转变，但我有一个不同的理由。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "我想保存碳氢化合物，因为最终，我认为，我们将使用其中的每一滴作为化学原料。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "在离我们所在地三英里——两英里——的地方，就在河对岸，人们在康瑟尔布拉夫斯买电比在奥马哈更便宜。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我想它起源于30年代，当时乔治·诺里斯是一位非常有权势的参议员，它一直是一个自豪的来源。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "我想我们这里有格雷格·阿贝尔，他是伯克希尔·哈撒韦能源公司中美能源公司的子公司。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "我认为，如果你期望美国高等教育有很高的效率——金融效率，那你就是在望风兴叹。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "但我想我不记得我们在很长一段时间内进行过投资银行购买——一种涉及投资银行的有价证券。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "在1974年期间，1973年和1974年，你知道，有一些公司——非常好的公司——其中之一是汤姆·墨菲经营的大都会公司，它的售价远远低于其价值。",
+          "normalizedLength": 61,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "**其他人支持比尔，很多人都支持他们两个人——事实上，如果大多数有很多钱的人把一部分钱给桑迪，一部分钱给比尔，我不会很惊讶的。",
+          "normalizedLength": 54,
+          "coverage": 0
+        },
+        {
+          "text": "可能有一个，或者两个，但它比标准普尔指数好得多，你不会找到很多持续30到40年的记录比标准普尔指数好。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "**你知道——如果你有一个聪明、精力充沛的男人或女人，他正在追求一种某些可以登上头条的行动，这会让你很不开心，你会有很多麻烦。",
+          "normalizedLength": 54,
+          "coverage": 0
+        },
+        {
+          "text": "但查理和我看到了，我们在这方面还不够完美，我不是这个意思，但我们看到了模式。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "而且，模式识别不是百分之百的，没有一个模式是完全重复的，但在商业和证券市场中，我们一再看到某些事情，而这些事情往往以失败告终。",
+          "normalizedLength": 57,
+          "coverage": 0.15384615384615385
+        },
+        {
+          "text": "**这些经理——a），你有一个最高层的基金经理，他可能收取1/2%的费用，我不确定，而下面的经理可能收取1.5%到2%的费用。",
+          "normalizedLength": 48,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "整体必须是各部分的总和，根据定义，这一组不能改变其最终投资结果的一半。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**这一半人将会有同样的总结果——你将会和低能量——无能量的人有同样的结果，而且他们也会有可怕的开支，因为他们都会四处流动，雇佣对冲基金，雇佣顾问，支付大量的佣金等等。",
+          "normalizedLength": 72,
+          "coverage": 0.17647058823529413
+        },
+        {
+          "text": "**所以，我想说的是，我觉得确定的——我不确定是因为什么都不确定——你不能确定任何10年的时间都能胜出——但它肯定是非常可能的，否则我不会冒这个险。",
+          "normalizedLength": 62,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "**从极度活跃的人到我所说的帮助者的资金流动是戏剧性的，而坐在这里的这群人绝对获得了美国工业的记录。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "1998年与通用再保险公司（Gen Re）合并后，我们发行了略多于1,500,000股的A股。",
+          "normalizedLength": 40,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "所以我想说的是，我们已经获得了精密铸造的主要资产，并使其在这种情况下，对公司更有价值。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        },
+        {
+          "text": "**巴菲特：是的，我们很想找到——我们无法找到它们，因为它们是非常稀有的鸟类——但我们很想再找到三到四只类似的鸟类。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "比如精密铸件公司，在那里，他们将永远生产质量非常重要的东西，当客户非常依赖他们时，当合同持续多年时，人们不会为了得到这样或那样的小玩意而简单地接受低价。",
+          "normalizedLength": 70,
+          "coverage": 0
+        },
+        {
+          "text": "**这是非常重要的，你要是有一个在飞机发动机制造领域拥有巨大技能和声誉的人来掌管业务，你知道，这绝对是无与伦比的。",
+          "normalizedLength": 51,
+          "coverage": 0.09090909090909091
+        },
+        {
+          "text": "如果伯克希尔哈撒韦再保险公司（Berkshire Hathaway Reinsurance）和通用再保险公司（GeneralRe）是上市公司，你会减少它们的风险敞口吗？",
+          "normalizedLength": 76,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "浮存金的整个概念是，它应该以一个正利率——一个相当可观的正利率——进行投资。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "这场游戏已经结束了一段时间，看起来在未来相当长的一段时间内，如果不是很糟糕的话，它看起来至少是没有吸引力的。",
+          "normalizedLength": 50,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "很久以前，我在政府雇员保险公司模式和模Progressive式之间下了一个赌注——一个心理上的赌注。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "顺便说一句，我的一个朋友，阿杰·米勒（Arjay Miller），一个了不起的人——出生在离这里大约100英里的西部——在内布拉斯加州谢尔比附近。",
+          "normalizedLength": 61,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "但阿杰后来成为了福特汽车公司的总裁，在谢尔比附近的这个农场，他在今年3月4日度过了自己的100岁生日。",
+          "normalizedLength": 48,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "**所以我回来了，在网上查了一下——我去看了人口普查数据——果然，这就是比例。",
+          "normalizedLength": 30,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 364,
+      "sourceHeadings": 12,
+      "websiteHeadings": 56,
+      "sourceParagraphs": 1644,
+      "websiteParagraphs": 566,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2019",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2019.md",
+      "expectedParts": 1,
+      "downloadedParts": 1,
+      "complete": true,
+      "contentCoverage": 0.06756323796221618,
+      "missingBlocks": [
+        {
+          "text": "风险提示：本文所提到的观点仅代表个人的意见，所涉及标的不作推荐，据此买卖，风险自负。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "去年第三季度，您投入了 10 亿美元，以每股 207 美元的平均价回购伯克希尔 B 股。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "然而，从去年 12 月 26 日到今年 4 月 11 日，这四个月里，伯克希尔的 B 股股价一直在 207 美元以下徘徊，您却没怎么回购，伯克希尔的账上可是躺着 1120 亿美元的现金。",
+          "normalizedLength": 73,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：我们如何回购，与我们手里有多少现金无关，无论是我们有 1000 亿美元、2000 亿美元，还是 500 亿美元，都无关。",
+          "normalizedLength": 52,
+          "coverage": 0
+        },
+        {
+          "text": "回购的根本原则是，只有在回购价格合适，与回购之前相比，留下来的股东的股份价值能够得到提升的情况下，才进行回购。",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "因为他退出后，公司现在的价值是 210 万美元，剩下的两个合伙人的股份价值从原来的各自 100 万美元，提升到了 105 万美元。",
+          "normalizedLength": 55,
+          "coverage": 0
+        },
+        {
+          "text": "大多数公司的回购计划只说自己要拿出多少资金用于回购，它们就是要花那么多钱，就是要买，不看价格。",
+          "normalizedLength": 43,
+          "coverage": 0
+        },
+        {
+          "text": "内在价值不是一个具体的数字，在我头脑中，伯克希尔的内在价值是个区间，或许高低值相差 10% 左右。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "在真正回购的时候，我们必须保证，在我们回购之后，没有卖出股票、留下来的那些股东，他们的股份价值得到了提升。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "在后续披露的数据中，各位股东可以看到，在今年第一季度，我们用了超过 10 亿美元回购。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "我认为，我们在第一个季度的回购操作符合我们的原则，留下来的股东持有的股份价值得到了提升，但不是特别显著的提升。",
+          "normalizedLength": 51,
+          "coverage": 0
+        },
+        {
+          "text": "当我们的股价低于价值 25% 或 30% 的时候，而且我们没有更好的机会，请放心，我们一定会投入大量资金回购。",
+          "normalizedLength": 45,
+          "coverage": 0
+        },
+        {
+          "text": "我们考虑的是能否提升股东拥有的价值，而不是一定要在某个季度投入多少资金用于回购。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "有人认为，点到点的时刻服务以及最少中转机制有利于提升资本回报率和客户服务水平。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "有人认为，准确时刻机制没起到让铁路运输准时准点的作用，而且其僵化的方式还破坏了铁路公司与监管机构和客户的已有协议。",
+          "normalizedLength": 54,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "请问你们两位以及 BNSF 的管理层是否认为 BNSF 也应该采用“准确时刻铁路运输机制”？",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：嗯，“准确时刻铁路运输机制”这个概念，最早应该是一个叫亨特·哈里森 (Hunter Harrison) 的人提出来的。",
+          "normalizedLength": 51,
+          "coverage": 0.18181818181818182
+        },
+        {
+          "text": "亨特·哈里森大概一年前去世了，有一本关于他的书，其中介绍了他对铁路运输机制的探索。",
+          "normalizedLength": 37,
+          "coverage": 0
+        },
+        {
+          "text": "比尔·盖茨应该是加拿大国家铁路公司最大的股东，他投资这只股票赚了很多钱。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "引入这一机制的公司，利润率都有明显提升，在实施过程中，也遇到了不同程度的客户服务问题。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "只要是能提升客户服务水平的，只要是能提高我们的效率的，我们都愿意将别人的长处为我所用。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "沃伦，在最近接受《Financial Times》采访时，您表示将来伯克希尔有可能动用 1000 亿美元回购自己的股票。",
+          "normalizedLength": 52,
+          "coverage": 0
+        },
+        {
+          "text": "设想一下，真需要我们动用 1000 亿美元回购股票的时候，伯克希尔的市值应该不到 5000 亿美元，所以说，我们回购的比例可能远远超过 20%。",
+          "normalizedLength": 61,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "在我们投资过的公司中，有的公司通过长期回购把股份减少了 70% 到 80%。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "我们认为，股东是我们的合伙人，当股票很便宜、我们决定回购的时候，我们应当保证我们的股东已经掌握了充足的事实，可以对自己的股份的价值做出评估，就像我们真是一家私营合伙企业一样。",
+          "normalizedLength": 80,
+          "coverage": 0
+        },
+        {
+          "text": "假如一个合伙企业，有三个合伙人，其中两个排挤另一个，向他隐瞒重要的信息。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们一定要保证，我们向包括我的姐姐妹妹在内的众多股东，披露同样的信息。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "我真的觉得，我们的股东如果决定卖出自己的股份，我们应该做到已经向他们提供了重要的信息，也就是，如果查理和我是其他股东，我们需要了解的信息。",
+          "normalizedLength": 63,
+          "coverage": 0
+        },
+        {
+          "text": "我们不是经常表态，但是一旦情况很明显，举个例子，你和我是合伙人，我们的合伙公司值 100 万美元，你要把你的一半股份以 30 万美元卖给我，你很快会拿到这 30 万美元。",
+          "normalizedLength": 72,
+          "coverage": 0
+        },
+        {
+          "text": "**Q6：……请问，在伯克希尔哈撒韦之外，在你们的个人投资中，哪笔投资是你们觉得最有意思的、最开心的？",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "圣路易斯有 100 个人，有出 50 美元的、有出 100 美元的，在路易斯安纳成立了一个猎鸭俱乐部，买了一块地。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "Delta 猎鸭俱乐部后来把这片油田卖了，如果留到现在，一股应该值两三百万美元。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "**（Yahoo Finance 注：Atled 这个投资故事，巴菲特讲得比较少。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "在 1995 年的股东会上，奥马哈先知讲过 Delta 猎鸭俱乐部，说这是他捡过的一个烟蒂。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特说，这笔投资可以说明市场中存在缺陷，他利用市场的缺陷赚了很多钱。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "有人联系我，要以 29,000 美元的价格，卖给我一股股份，这一股背后有 20,000 美元的现金，还有每年 11,000 美元的采矿权收入。",
+          "normalizedLength": 57,
+          "coverage": 0
+        },
+        {
+          "text": "第一笔投资，我还是个穷小子的时候，我花了 1000 美元买了一份油田开采权，在那以后许多年，我每年都能获得 100,000 美元的开采权使用费。",
+          "normalizedLength": 62,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "**第二笔投资，我买入了一些埃尔德里奇石油 (Eldridge Oil) 的股份，很快就涨了 30倍。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "可惜，我买入第一批股票后，别人想卖给我更多，数量是第一批的五倍，我拒绝了。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "在过去五年时间里，A 类股平均每天成交 313 股，成交额 7700 万美元；B 类股平均每天成交 370 万股，成交额 6.22 亿美元左右。",
+          "normalizedLength": 56,
+          "coverage": 0
+        },
+        {
+          "text": "根据我们的观察，在去年下半年和 2019 年第一季度，伯克希尔确实是这么做的。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：在回购时，在我们投入大量资金回购的时候，我们将投入更多资金从 B 股中回购，因为 B 股的成交额远远高于 A 股。",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "我们的股票，在最理想的情况下，如果我们规模很小，我希望我们每年选一个时间，计算一个公允的价格，就像私营企业一样，有希望退出的股东可以退出，可以把股份卖给别人，也可以卖给公司。",
+          "normalizedLength": 78,
+          "coverage": 0
+        },
+        {
+          "text": "我们不想让自己的股票高估，不想让伯克希尔的价格高达价值的两倍，不想有人失望。",
+          "normalizedLength": 35,
+          "coverage": 0
+        },
+        {
+          "text": "单纯从商业角度讲，如果我们的股价特别便宜，我们没办法不看好，只能回购。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "请问，我们需要掌握怎样的核心能力，才能抓住 5G 时代最好的投资机会？",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**我们的子公司的业务会受到 5G 发展的影响，也会受到世界上其他各种变化的影响，例如，在铁路行业应用液化天然气，这些问题，我们的子公司的经理人非常了解，比我们了解得多。",
+          "normalizedLength": 74,
+          "coverage": 0
+        },
+        {
+          "text": "**我们相信我们的经理人，他们能为应对所在行业即将发生的变化做好准备。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**我们希望我们的经理人，我们的所有经理人，都能站在他们所在行业的最前沿。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "无论是 BNSF、伯克希尔哈撒韦能源、还是 Lubrizol，他们都非常清楚各自所在行业的情况。",
+          "normalizedLength": 42,
+          "coverage": 0
+        },
+        {
+          "text": "在有些变化中，我们受到了冲击：我们的纺织厂受到了冲击；我们的制鞋厂受到了冲击；我们的百货公司受到了冲击；我们的印花票公司收到了冲击。",
+          "normalizedLength": 60,
+          "coverage": 0
+        },
+        {
+          "text": "如果没有世界的变化，美国现在 80% 的人口仍在生产粮食和棉花，我们的社会必然是另一番景象。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "您在接受采访时说，伯克希尔收购卡夫亨氏，出的价格高了……像卡夫亨氏这样的传统消费品品牌将来还能拥有护城河吗？",
+          "normalizedLength": 49,
+          "coverage": 0
+        },
+        {
+          "text": "**卡夫亨氏，粗略地讲，70 亿美元的有形资产，能赚 60 亿美元的税前净利润，实在是了不起的公司。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "……假设我们出 500 亿美元的大价钱买下卡夫亨氏，它本身该赚多少还是多少。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "我刚开始做投资的时候，是以很便宜的价格捡烟头，买那些走下坡路的烂公司。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**Q14：我知道，伯克希尔买入亚马逊这笔投资不是沃伦做的，而且这笔投资对伯克希尔来说规模很小，但是这笔投资还是让我感到很意外。",
+          "normalizedLength": 57,
+          "coverage": 0
+        },
+        {
+          "text": "伯克希尔的投资哲学是否会变，是否会背离当前管理层践行了 70 年的价值投资原则？",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "亚马逊是个伟大的公司，但是它的股价高高在上，已经走了 10 年的大牛行情，买入亚马逊，似乎与“在他人贪婪时恐惧”的理念相反。",
+          "normalizedLength": 53,
+          "coverage": 0
+        },
+        {
+          "text": "除了买入亚马逊，伯克希尔最近还投资了 StoneCo 公司，伯克希尔在将来做投资时不会不考虑价格和价值了吧？",
+          "normalizedLength": 49,
+          "coverage": 0
+        },
+        {
+          "text": "我们有两位管理投资的经理人，其中一位在第一季度买入了亚马逊的股票，我可以向所有股东保证，他们两人都是价值投资者。",
+          "normalizedLength": 52,
+          "coverage": 0
+        },
+        {
+          "text": "所有的投资，都一样，都是这些计算，无论是以 70% 的净资产买入银行股，还是以非常高的市盈率买入亚马逊的股票。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "现在，我们这位经理人投资了亚马逊的股票，他和我完全一样，也是纯粹的价值投资。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "**我们管理投资的两位经理人可以从几千只股票中寻找机会，他们可以看的机会更多，因为他们管理的资金规模比我的小，他们的投资范围更大。",
+          "normalizedLength": 59,
+          "coverage": 0.07692307692307693
+        },
+        {
+          "text": "现在的营业收入、现在的毛利率、有形资产、多余的现金、过度的负债，所有这些因素，在考虑是买入 A、B，还是 C 时，都要计算在内。",
+          "normalizedLength": 51,
+          "coverage": 0
+        },
+        {
+          "text": "他们两位之间的观点可能不同，他们两位与我的观点也可能不同，但是他们都是非常明智的投资者。",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "买入亚马逊的推理过程，与买入低市净率、低市盈率的银行股，是完全一致的。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**在买入亚马逊时，我们的经理人考虑的是今后能换来林中的三只鸟、四只鸟、还是五只鸟，何时能换来，能换来的确定性多大，是否可能有人来林中抢鸟。",
+          "normalizedLength": 61,
+          "coverage": 0
+        },
+        {
+          "text": "投资做得如何，主要看你有没有把这些问题搞清楚：林子有鸟的确定性如何、需要等多久能得到林子中的鸟、最差的情况可能是什么，只有一只鸟的概率如何、有 4 只、5 只、10 只、20 只的概率如何。",
+          "normalizedLength": 80,
+          "coverage": 0
+        },
+        {
+          "text": "我们能看到广告投放的效果，我们知道自己为每次点击支付 10 美元左右的费用，但是用户多点击一次，Google 的边际成本几乎为零。",
+          "normalizedLength": 58,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：我们能看到，我们在 Google 投放的广告，转化成了我们的业务量。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：刚才他说到“咬手指头”的时候，我松了口气，幸亏他没用别的表达方式。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "（笑）我的答案是：延迟满足这东西基本上是天生的，我相信，人身上的很多性格特点都是天生的。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：查理有养育八个子女的经验，他越来越相信很多东西是天生的，不是后天培养的。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：你可能会看到一位 95 岁的慈祥的老奶奶，她穿的衣服很破旧，但是她持有 4000 股 A 股，她践行延迟满足，直到生命的尽头。",
+          "normalizedLength": 54,
+          "coverage": 0.08333333333333333
+        },
+        {
+          "text": "假设你买了一只 30 年期的政府债券，利率是 3%，你收到的 3% 的利息收入中有一部分要交税。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "你持有这只长期政府债券，坚持延迟满足，结果这笔钱，你现在拿它去迪斯尼乐园能玩几次过山车，30 年后，仍然只能玩同样的次数。",
+          "normalizedLength": 54,
+          "coverage": 0
+        },
+        {
+          "text": "**几十年前，我年轻的时候，总是一遍又一遍地向我的妻子和孩子们讲，向我身边的人讲，今天只能买个汉堡的钱，省下来投资，将来能变成买牛排的钱。",
+          "normalizedLength": 60,
+          "coverage": 0
+        },
+        {
+          "text": "然而，在低利率的环境中，进行固定收益投资的人不可能把汉堡变成牛排。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**所以说，我并不认为，对于所有家庭、在任何情况下，储蓄都是生活中最好的选择。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "在教育孩子的时候，你和他们讲，我们不去看电影、我们不去迪斯尼乐园、我们省、省、省，把钱攒下来，现在只能玩两天，30 年之后，能玩一个星期。",
+          "normalizedLength": 57,
+          "coverage": 0
+        },
+        {
+          "text": "我一直都是这么想的：我每赚 1 块钱，从中拿出两三分钱花，其余的存起来，很合理嘛。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "一个人身上有 5 万块钱或 10 万块钱的时候，他不觉得幸福，等他有了 5000 万、1 亿的时候，他还是不会觉得幸福。",
+          "normalizedLength": 48,
+          "coverage": 0
+        },
+        {
+          "text": "**一定数量的钱，确实可以提升自己和家人的幸福程度，包括因为更有安全感而觉得幸福。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "但是，钱太多了呢，我接触过许多富人，根据我的观察，巨额金钱本身不能让富人感到幸福，不为金钱所累才能让富人幸福。",
+          "normalizedLength": 49,
+          "coverage": 0
+        },
+        {
+          "text": "在股东大会召开之际，我获得了比特币人士的邀请，请我出席他们的酒会。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "（笑）我就琢磨，搞比特币的开酒会能干什么呢，最后我弄明白了，他们赞美和颂扬犹大。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：提起比特币，我想起了 1952 年，我妻子 19 岁，我 21 岁，我们在度蜜月的旅程中在拉斯维加斯逗留。",
+          "normalizedLength": 45,
+          "coverage": 0.1
+        },
+        {
+          "text": "在 Flamingo 游玩时，我看到许多西装革履的人，那个年代，人们着装比现在正式。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "他们每个人心里都清楚自己来做的事，从数学上讲很蠢，但还是照来不误。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**你想想，这些人，他们在包含 0 和 00 的轮盘赌上下注，虽然他们知道概率是多少。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "我想向两位请教，当年你们开始管理别人的资金时，你们怎么知道自己已经做好了准备？",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "在给别人管钱之前，我做过一段股票经纪人的工作，1956 年 5 月，从纽约回来之后，我的家人让我帮着打理股票投资。",
+          "normalizedLength": 49,
+          "coverage": 0
+        },
+        {
+          "text": "我特别确信，自己绝对没有任何亏钱的可能，否则我不会答应给别人管钱。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "我担心的不是自己做的如何，而是合伙人的表现，我需要我的合伙人与我同心同德。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "1956 年 5 月，我们坐到了一起，有七个合伙人，都是我的亲戚和朋友，其中一个是我的大学室友，还有他的母亲。",
+          "normalizedLength": 46,
+          "coverage": 0.1
+        },
+        {
+          "text": "我给他们发了一份合伙协议，我说：“这东西你们不用细看，我不可能在这个合同里藏着掖着什么，你们不用找律师看这东西。",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "但是，我写了我们合伙的基本原则，其中说明了我觉得自己能做到什么，你们评判我的标准是什么。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "假如我们没达成共识，在我觉得更值得投资的时候，你们却可能感到很不满意。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "**所以说，在给别人管理资金之前，一定要通过一套方式，把和自己志同道合的人吸引过来。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "**我们当年的合伙人中没有任何一家机构，机构都是设有委员会的，而委员会……**",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**假如你的父母能放心地把他们的所有钱交给你，让你管，你也敢去管，这时候你就已经对自己有信心了，你能有底气地说出来：“我也许无法取得最漂亮的业绩，但是我的长期收益不会比别人差。",
+          "normalizedLength": 78,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：一会儿，你要认真听查理的回答，他比我年纪大，对于年纪增长带来的深刻理解，他比我更有发言权。",
+          "normalizedLength": 43,
+          "coverage": 0
+        },
+        {
+          "text": "现在让我去参加高考，我考出来的分数，肯定没法看，不可能和自己 20 出头时同日而语。",
+          "normalizedLength": 36,
+          "coverage": 0
+        },
+        {
+          "text": "查理和我可以举出许多具体的例子，告诉你人在变老的过程中方方面面的衰退，有些例子我们不会和你讲。",
+          "normalizedLength": 44,
+          "coverage": 0
+        },
+        {
+          "text": "只要是我们感兴趣的领域，查理和我会读遍这个领域中所有相关的书籍。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "**但是，只是通过书本上的知识，即使你智商再高，即使你有高人指点，也仍然根本不可能获得对人类行为的深刻理解。",
+          "normalizedLength": 47,
+          "coverage": 0
+        },
+        {
+          "text": "有时候，没别的办法，只能靠自己多经历几次，才能对人类的行为有些深入的理解。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "**我觉得，现在的我，虽然有很多方面已经衰退了，我心算的能力没过去那么快了，阅读的速度没过去那么快了，但是与 25 岁、30 岁时的自己相比，我对人类行为的理解确实更深刻了。",
+          "normalizedLength": 74,
+          "coverage": 0
+        },
+        {
+          "text": "查理和我亲眼见到了人类的种种极端行为，若非亲眼所见，我们根本无法想象。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "Q24：巴菲特先生，您说过，您经常与 Ajit 先生讨论非常规的保险合约，你们讨论的是概率很小，但赔付额极高的合约。",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "你们是怎么分析的，思维过程是什么，怎么才能保证伯克希尔能够盈利，而不承受巨大风险带来的损失？",
+          "normalizedLength": 42,
+          "coverage": 0
+        },
+        {
+          "text": "首先，我们还是尽可能从科学的角度开始，寻找与一个风险相关的历史数据，或者类似风险的历史数据。",
+          "normalizedLength": 42,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "然后，如果没有足够的历史数据可供参考，我们只能自行判断，该风险发生的概率是多少。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "我们必须要清楚地知道，一旦风险发生，或我们计算失误，我们能亏多少钱，能否承受得起，能否不影响伯克希尔的利润表或资产负债表。",
+          "normalizedLength": 55,
+          "coverage": 0
+        },
+        {
+          "text": "有时候，一个风险，我们认为根据自己主观判断的概率，可以给出一个存在显著安全边际的价格。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：真不是伯克希尔有什么秘籍不外传，其实是 Ajit 拥有罕见的天赋。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我这一生，非常、非常幸运，因为我拥有极大的自由，自己的时间，能完全由自己掌控。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "只要是能省下来的时间，我们一定会省下来，把最多的时间腾出来，做自己喜欢的事。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "Q32：……过去，您投资了世界级的品牌，例如可口可乐、美国运通、喜诗糖果，以及传媒公司，如 Cap Cities、ABC、华盛顿邮报。",
+          "normalizedLength": 53,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "美国的亚马逊、Google、Facebook、微软，中国的阿里巴巴、腾讯，都是强大的平台型公司，它们都拥有宽广的护城河、强大的品牌、优秀的企业家。",
+          "normalizedLength": 63,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "……我的问题是：伯克希尔的传统是投资拥有宽广的护城河和强大品牌的公司，特别是资本收益率高的公司，您认为伯克希尔是否应当扩大投资范围，将领先的大型平台型科技公司包含在内？",
+          "normalizedLength": 77,
+          "coverage": 0.05555555555555555
+        },
+        {
+          "text": "您是否应当应用您已有的投资理念拥抱科技公司，而不是远离科技公司？",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特：你说的没错，我们确实喜欢护城河，过去，在一座城市中唯一的报业公司中，在一家具备垄断优势的广播电视公司中，在一家产品有提价潜力的糖果公司中，我们看到了护城河。",
+          "normalizedLength": 74,
+          "coverage": 0
+        },
+        {
+          "text": "我始终对自己缺乏信心，我觉得，在高科技方面，我不可能做出最准确的判断。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "我能看出来在某一阶段哪家公司胜出了，也能看明白各家公司的生意是怎么做的。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "伯克希尔现在有 Ted 和 Todd，他们在某些领域比我更在行，查理在某些领域也比我更在行。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "**我们在伯克希尔里管投资的人都会努力扩大自己的能力圈，尽量不错过太多机会。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "**我的问题是：您成功地建立起了自己的能力圈，我们怎么才能像您一样，也建立起自己的能力圈？",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：是的，与我开始投资时的那个年代相比，在今天的投资环境中，竞争更加激烈。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "我当年开始做投资时，只是抱着《穆迪工业公司手册》、《穆迪银行业和金融业公司手册》，一页一页地翻，至少每家公司都扫上几眼，从中寻找值得进一步研究的。",
+          "normalizedLength": 63,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "我努力地寻找，我要找的是那种我确实具备独到而重要的知识和理解的公司，而绝大多数竞争对手看不懂。",
+          "normalizedLength": 44,
+          "coverage": 0
+        },
+        {
+          "text": "一方面，我尽可能扩大自己的能力圈，另一方面，我也尽可能客观地认清自己的能力圈的边界。",
+          "normalizedLength": 38,
+          "coverage": 0.125
+        },
+        {
+          "text": "那天是星期六，他花了三四个小时的时间，给我讲保险行业，我觉得特别有收获。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "查理和我都在同一个杂货店打过工，我们都没学到多少关于零售业的知识，不喜欢那么累的活。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "但是，你哪怕只在一个很狭小的领域比其他人都懂得更多，而且你能管住那种总要做些什么的冲动感觉，只是耐心地等待概率完全站在你这一边，投资仍然很好玩，只是比过去要难。",
+          "normalizedLength": 74,
+          "coverage": 0
+        },
+        {
+          "text": "我到了那儿，我说我想了解某某公司，他说“你是第一个来了解这家公司的人。",
+          "normalizedLength": 31,
+          "coverage": 0
+        },
+        {
+          "text": "**即使你只把一个小领域了解得很透彻，早晚有一天，你也能取得领先别人的优势。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "这正是 IBM 的老托马斯·沃森 (Thomas Watson Sr. ) 所说的：“我不是天才，我只是在某些点很聪明，而且只在这些点附近活动。",
+          "normalizedLength": 56,
+          "coverage": 0
+        },
+        {
+          "text": "Q 43：过去几年，在伯克希尔的股东信中，关于下属企业的运营情况和财务状况的信息，提供的越来越少。",
+          "normalizedLength": 43,
+          "coverage": 0
+        },
+        {
+          "text": "例如，股东信中不再提供金融和金融产品分部的具体信息，不再提供制造业和零售分部的资产负债表，不再单独提供各个保险公司的浮存金情况。",
+          "normalizedLength": 60,
+          "coverage": 0.07142857142857142
+        },
+        {
+          "text": "以今年为例，在写这封信的时候，我仍然像往年一样，一提笔开头，我想到的是写给我的姐姐和妹妹。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "她们和许多其他大部分资产都在伯克希尔的投资者一样，他们都是很聪明的人，但他们不了解我们各个公司的行业术语。",
+          "normalizedLength": 50,
+          "coverage": 0
+        },
+        {
+          "text": "我希望自己能把该讲的讲清楚，用他们能看懂的话和他们讲，让他们都能读得懂。",
+          "normalizedLength": 33,
+          "coverage": 0
+        },
+        {
+          "text": "我们的家具公司的竞争对手，他们可能想从伯克希尔的报告中了解到我们的家具公司的经营业绩。",
+          "normalizedLength": 41,
+          "coverage": 0
+        },
+        {
+          "text": "伯克希尔是一家市值 5000 亿美元的公司，家具公司的经营业绩在其中占比无足轻重。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "有时候，一份 300 页的报告，其中包含的信息，可能还不如一份 50 页的报告。",
+          "normalizedLength": 32,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "就像我们的公司是一个私营企业一样，我姐姐和妹妹各占三分之一股份，我占三分之一股份。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "她们不知道综合比率是什么，这是保险业里约定俗成的一个术语，还不如说毛利率更明白。",
+          "normalizedLength": 37,
+          "coverage": 0.125
+        },
+        {
+          "text": "**她们不知道营业比率是什么，这是铁路行业的一个约定俗成的术语，也不如说毛利率更清楚。",
+          "normalizedLength": 38,
+          "coverage": 0
+        },
+        {
+          "text": "他们能了解公司拥有什么，我们对公司经营情况的分析，我们的长期目标。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "我们可以提供详细的信息，告诉你生产内衬赚了多少钱、生产围巾赚了多少钱。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "再比如，1980 年、1985 年，你读我们的股东信，只盯着那些细枝末节，关注喜诗糖果向东部发展的情况，我们可以告诉你，喜诗糖果开拓市场的行动失败了。",
+          "normalizedLength": 65,
+          "coverage": 0
+        },
+        {
+          "text": "股东们不一样，他们需要关注的是：谁在管理资金，管理得怎么样，过去业绩如何，将来的目标如何，业绩衡量标准是什么。",
+          "normalizedLength": 48,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：我觉得我似乎应该把每个小公司的每一分钱都看得清清楚楚，但我没那么做。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "我的问题是：世界在变化，与 40 年前相比，当今世界变化的速度要快得多，以后变化的速度会更快。",
+          "normalizedLength": 40,
+          "coverage": 0
+        },
+        {
+          "text": "在这样的环境中，我们每个人是应该持续不断地拓展自己的能力圈，还是应该坚守自己固有的能力圈，即使坚守固有能力圈可能导致投资机会变少，也仍然坚守？",
+          "normalizedLength": 66,
+          "coverage": 0.06666666666666667
+        },
+        {
+          "text": "在世界变化的过程中，如果变化发生在你现有的能力圈范围内，你应该是最早、最清楚地看到变化的人，否则这不算是你的能力圈。",
+          "normalizedLength": 53,
+          "coverage": 0
+        },
+        {
+          "text": "在与 Walter 和 Greg 共事的过程中，我从他们身上学到了一些东西，对能源行业有了更多的了解。",
+          "normalizedLength": 44,
+          "coverage": 0.1
+        },
+        {
+          "text": "有的人天生有经济头脑，在赚钱方面，他们天生有那个能力，和智商没关系。",
+          "normalizedLength": 30,
+          "coverage": 0
+        },
+        {
+          "text": "巴菲特先生，您说过，您管理 100 万美元的投资组合，每年可以获得 50% 的收益率。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "不管怎样，如果管理 100 万美元，无论是我，还是查理，我敢保证，我们都能找到办法赚那么多，而且基本上不承担风险、不用很高的杠杆。",
+          "normalizedLength": 55,
+          "coverage": 0
+        },
+        {
+          "text": "**在市场中的犄角旮旯里，在人们没看到的地方，有一些规模很小的市场无效的机会。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "我看到很多天赋异禀的投资者取得了辉煌的业绩，很快管理的资金规模上升到 300 亿美元，手下雇佣了两个楼层的年轻才俊，漂亮的业绩也成为过去。",
+          "normalizedLength": 63,
+          "coverage": 0
+        },
+        {
+          "text": "一个人真想赚到 100 万美元，或者实现 100 万美元、每年 50% 的收益率，只要愿意付出努力，是有可能做到的。",
+          "normalizedLength": 46,
+          "coverage": 0
+        },
+        {
+          "text": "**芒格：李录上大学时拿全额奖学金，他单靠把助学贷款拿去投资，毕业没多久就赚到了 100 万美元。",
+          "normalizedLength": 41,
+          "coverage": 0.1111111111111111
+        },
+        {
+          "text": "**芒格：有一次，在一个宴会上，我遇到了一位著名作家，他写了一本特别棒的书。",
+          "normalizedLength": 31,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 17,
+      "sourceHeadings": 1,
+      "websiteHeadings": 3,
+      "sourceParagraphs": 241,
+      "websiteParagraphs": 465,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2020",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2020.md",
+      "expectedParts": 2,
+      "downloadedParts": 2,
+      "complete": true,
+      "contentCoverage": 0.8326222146067188,
+      "missingBlocks": [
+        {
+          "text": "1949 年，他还写了《聪明的投资者》(The Intelligent Investor)，这本书改变了我的一生。",
+          "normalizedLength": 47,
+          "coverage": 0.1
+        },
+        {
+          "text": "**我是几天前查的这个数字，也许其中有不少还是最近新增的点击，这个具体情况我就不知道了。",
+          "normalizedLength": 39,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：我想告诉大家，股票是非常可靠的投资，只要你真做投资，不赌博，不借钱，不上杠杆。",
+          "normalizedLength": 36,
+          "coverage": 0.125
+        },
+        {
+          "text": "但是我要提醒你，你必须自己想明白了，自己能看清楚，自己独立决定要分散投资美国公司，否则别下注。",
+          "normalizedLength": 42,
+          "coverage": 0
+        },
+        {
+          "text": "总的来说，对大多数人而言，最合适的做法是分散买入美国的公司，没必要多花心思。",
+          "normalizedLength": 34,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "我们做多美国的方法有两个：一个是收购整个公司，另一个是买入公司的部分股份。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "一个好公司，我们非常愿意持有它 6%、7%、8% 的股份，把这个公司作为我们的参股公司。",
+          "normalizedLength": 34,
+          "coverage": 0
+        },
+        {
+          "text": "**巴菲特：所有的 CFO 学的都是同一套东西，想方设法把净资产收益率最大化。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "只说最主要的一点，四大航空公司每家都要去借 100 亿或 120 亿美元的钱。",
+          "normalizedLength": 33,
+          "coverage": 0.14285714285714285
+        },
+        {
+          "text": "只有 XYZ 公司像航空公司一样，生意真的恶化了，那我们才觉得遭受了损失。",
+          "normalizedLength": 32,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 26,
+      "sourceHeadings": 2,
+      "websiteHeadings": 18,
+      "sourceParagraphs": 168,
+      "websiteParagraphs": 224,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2021",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2021.md",
+      "expectedParts": 5,
+      "downloadedParts": 5,
+      "complete": true,
+      "contentCoverage": 0.9539895290895336,
+      "missingBlocks": [
+        {
+          "text": "格雷格：[译注：这里有1300多字的英文，格雷格详细讲了伯克希尔能源和铁路在环保方面做的很多具体工作，包括一直在披露环保报告。",
+          "normalizedLength": 57,
+          "coverage": 0
+        }
+      ],
+      "partialBlockCount": 16,
+      "sourceHeadings": 61,
+      "websiteHeadings": 47,
+      "sourceParagraphs": 389,
+      "websiteParagraphs": 376,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    },
+    {
+      "year": "2022",
+      "websitePath": "content/qa/伯克希尔股东大会实录_2022.md",
+      "expectedParts": 6,
+      "downloadedParts": 6,
+      "complete": true,
+      "contentCoverage": 0.8812249229729521,
+      "missingBlocks": [
+        {
+          "text": "保守估计，格雷格持有的伯克希尔·哈撒韦能源股票，价值在 5 亿美元以上。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**前些年，在伯克希尔旗下的子公司里，我们有两三位经理人确实得了老年痴呆。",
+          "normalizedLength": 32,
+          "coverage": 0
+        },
+        {
+          "text": "那是一个星期六，阿吉特来到了我的面前，表示愿意管理我们的保险业务。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "**在股东大会的售卖活动区，有一家名叫 The Bookworm 的书店。",
+          "normalizedLength": 30,
+          "coverage": 0.16666666666666666
+        },
+        {
+          "text": "现在已经电子化了，没人去银行排队了，但所有人同时通过网络银行取钱，一样会出现银行挤兑。",
+          "normalizedLength": 39,
+          "coverage": 0.125
+        }
+      ],
+      "partialBlockCount": 92,
+      "sourceHeadings": 32,
+      "websiteHeadings": 30,
+      "sourceParagraphs": 1222,
+      "websiteParagraphs": 474,
+      "sourceTables": 0,
+      "websiteTables": 0,
+      "longWebsiteHeadings": []
+    }
+  ],
+  "letterSummary": {
+    "canonicalEqual": 16,
+    "changed": 44,
+    "versionMismatch": 60
+  },
+  "qaSummary": {
+    "completeYearsWithMissing": 27
+  }
+}

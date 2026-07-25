@@ -1,0 +1,1362 @@
+[
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_安全边际.md",
+    "site": "content/concepts/安全边际.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4301,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4380,
+      "headings": 10,
+      "paragraphs": 61,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_市场先生.md",
+    "site": "content/concepts/市场先生.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4199,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4269,
+      "headings": 10,
+      "paragraphs": 60,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_科技与互联网.md",
+    "site": "content/concepts/科技与互联网.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1297,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1375,
+      "headings": 10,
+      "paragraphs": 29,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_税收效率.md",
+    "site": "content/concepts/税收效率.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1441,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1508,
+      "headings": 8,
+      "paragraphs": 34,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_竞争优势.md",
+    "site": "content/concepts/竞争优势.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4391,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4478,
+      "headings": 10,
+      "paragraphs": 69,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_管理层.md",
+    "site": "content/concepts/管理层.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3651,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3721,
+      "headings": 10,
+      "paragraphs": 59,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_纺织业务.md",
+    "site": "content/concepts/纺织业务.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3015,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3084,
+      "headings": 10,
+      "paragraphs": 48,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_股东导向.md",
+    "site": "content/concepts/股东导向.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4029,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4091,
+      "headings": 10,
+      "paragraphs": 60,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_股息.md",
+    "site": "content/concepts/股息.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2571,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2632,
+      "headings": 9,
+      "paragraphs": 43,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_能力圈.md",
+    "site": "content/concepts/能力圈.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4106,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4181,
+      "headings": 10,
+      "paragraphs": 56,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_能源.md",
+    "site": "content/concepts/能源.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1238,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1307,
+      "headings": 9,
+      "paragraphs": 29,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_航空业.md",
+    "site": "content/concepts/航空业.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1229,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1302,
+      "headings": 10,
+      "paragraphs": 28,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_衍生品.md",
+    "site": "content/concepts/衍生品.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3048,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3112,
+      "headings": 10,
+      "paragraphs": 55,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_诚信.md",
+    "site": "content/concepts/诚信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1439,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1495,
+      "headings": 8,
+      "paragraphs": 33,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_账面价值.md",
+    "site": "content/concepts/账面价值.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3673,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3716,
+      "headings": 10,
+      "paragraphs": 60,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_资本配置.md",
+    "site": "content/concepts/资本配置.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3378,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3451,
+      "headings": 10,
+      "paragraphs": 61,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_透视盈余.md",
+    "site": "content/concepts/透视盈余.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3637,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3719,
+      "headings": 10,
+      "paragraphs": 63,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_通货膨胀.md",
+    "site": "content/concepts/通货膨胀.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2754,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2812,
+      "headings": 10,
+      "paragraphs": 50,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_铁路运输.md",
+    "site": "content/concepts/铁路运输.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1143,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1218,
+      "headings": 9,
+      "paragraphs": 26,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_银行业.md",
+    "site": "content/concepts/银行业.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1190,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1267,
+      "headings": 10,
+      "paragraphs": 26,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_长期持有.md",
+    "site": "content/concepts/长期持有.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4336,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4394,
+      "headings": 10,
+      "paragraphs": 63,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_集中投资.md",
+    "site": "content/concepts/集中投资.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3882,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3959,
+      "headings": 10,
+      "paragraphs": 69,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/concepts_零售与消费.md",
+    "site": "content/concepts/零售与消费.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1227,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1299,
+      "headings": 10,
+      "paragraphs": 28,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1956-有限合伙协议.md",
+    "site": "content/partnership/partnership_1956-有限合伙协议.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 1599,
+      "headings": 15,
+      "paragraphs": 57,
+      "tables": 1
+    },
+    "after": {
+      "chars": 1599,
+      "headings": 15,
+      "paragraphs": 49,
+      "tables": 1
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1957-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1957-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2008,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2008,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1958-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1958-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2240,
+      "headings": 5,
+      "paragraphs": 27,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2240,
+      "headings": 5,
+      "paragraphs": 27,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1959-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1959-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1478,
+      "headings": 4,
+      "paragraphs": 13,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1603,
+      "headings": 4,
+      "paragraphs": 24,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1960-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1960-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 4030,
+      "headings": 6,
+      "paragraphs": 50,
+      "tables": 2
+    },
+    "after": {
+      "chars": 4030,
+      "headings": 6,
+      "paragraphs": 40,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1961-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1961-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 7122,
+      "headings": 10,
+      "paragraphs": 128,
+      "tables": 8
+    },
+    "after": {
+      "chars": 7122,
+      "headings": 10,
+      "paragraphs": 81,
+      "tables": 8
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1961年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1961-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 2166,
+      "headings": 5,
+      "paragraphs": 36,
+      "tables": 1
+    },
+    "after": {
+      "chars": 2166,
+      "headings": 5,
+      "paragraphs": 32,
+      "tables": 1
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1962-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1962-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 9015,
+      "headings": 10,
+      "paragraphs": 161,
+      "tables": 9
+    },
+    "after": {
+      "chars": 9015,
+      "headings": 10,
+      "paragraphs": 105,
+      "tables": 9
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1962年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1962-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1816,
+      "headings": 1,
+      "paragraphs": 16,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1906,
+      "headings": 1,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1962年12月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1962-12月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 796,
+      "headings": 1,
+      "paragraphs": 18,
+      "tables": 0
+    },
+    "after": {
+      "chars": 861,
+      "headings": 1,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1962年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1962-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 3524,
+      "headings": 8,
+      "paragraphs": 64,
+      "tables": 4
+    },
+    "after": {
+      "chars": 3524,
+      "headings": 8,
+      "paragraphs": 35,
+      "tables": 4
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1963-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1963-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 9967,
+      "headings": 9,
+      "paragraphs": 153,
+      "tables": 6
+    },
+    "after": {
+      "chars": 9967,
+      "headings": 9,
+      "paragraphs": 97,
+      "tables": 6
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1963年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1963-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1266,
+      "headings": 1,
+      "paragraphs": 13,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1337,
+      "headings": 1,
+      "paragraphs": 20,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1963年12月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1963-12月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 802,
+      "headings": 1,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "after": {
+      "chars": 802,
+      "headings": 1,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1963年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1963-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 4343,
+      "headings": 6,
+      "paragraphs": 93,
+      "tables": 4
+    },
+    "after": {
+      "chars": 4343,
+      "headings": 6,
+      "paragraphs": 51,
+      "tables": 4
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1964-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1964-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 12107,
+      "headings": 9,
+      "paragraphs": 162,
+      "tables": 8
+    },
+    "after": {
+      "chars": 12107,
+      "headings": 9,
+      "paragraphs": 104,
+      "tables": 8
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1964年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1964-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 3091,
+      "headings": 4,
+      "paragraphs": 52,
+      "tables": 2
+    },
+    "after": {
+      "chars": 3091,
+      "headings": 4,
+      "paragraphs": 30,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1965-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1965-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 9965,
+      "headings": 7,
+      "paragraphs": 122,
+      "tables": 4
+    },
+    "after": {
+      "chars": 9965,
+      "headings": 7,
+      "paragraphs": 80,
+      "tables": 4
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1965年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1965-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1738,
+      "headings": 1,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1815,
+      "headings": 2,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1965年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1965-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 3184,
+      "headings": 5,
+      "paragraphs": 56,
+      "tables": 2
+    },
+    "after": {
+      "chars": 3184,
+      "headings": 5,
+      "paragraphs": 32,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1966-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1966-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 6734,
+      "headings": 10,
+      "paragraphs": 109,
+      "tables": 4
+    },
+    "after": {
+      "chars": 6734,
+      "headings": 10,
+      "paragraphs": 62,
+      "tables": 4
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1966年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1966-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1920,
+      "headings": 1,
+      "paragraphs": 17,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2004,
+      "headings": 1,
+      "paragraphs": 18,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1966年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1966-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 4203,
+      "headings": 5,
+      "paragraphs": 59,
+      "tables": 2
+    },
+    "after": {
+      "chars": 4203,
+      "headings": 5,
+      "paragraphs": 33,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1967-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1967-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4592,
+      "headings": 4,
+      "paragraphs": 46,
+      "tables": 3
+    },
+    "after": {
+      "chars": 4050,
+      "headings": 5,
+      "paragraphs": 36,
+      "tables": 3
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1967年10月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1967-10月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3583,
+      "headings": 1,
+      "paragraphs": 29,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3675,
+      "headings": 1,
+      "paragraphs": 27,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1967年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1967-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1078,
+      "headings": 1,
+      "paragraphs": 12,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1158,
+      "headings": 1,
+      "paragraphs": 13,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1967年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1967-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 2335,
+      "headings": 5,
+      "paragraphs": 53,
+      "tables": 2
+    },
+    "after": {
+      "chars": 2335,
+      "headings": 5,
+      "paragraphs": 25,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1968-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1968-annual-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 5779,
+      "headings": 6,
+      "paragraphs": 59,
+      "tables": 4
+    },
+    "after": {
+      "chars": 5442,
+      "headings": 10,
+      "paragraphs": 54,
+      "tables": 4
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1968年11月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1968-11月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1118,
+      "headings": 1,
+      "paragraphs": 13,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1186,
+      "headings": 1,
+      "paragraphs": 14,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1968年中-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1968-interim-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 2839,
+      "headings": 5,
+      "paragraphs": 56,
+      "tables": 2
+    },
+    "after": {
+      "chars": 2839,
+      "headings": 5,
+      "paragraphs": 26,
+      "tables": 2
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1969年10月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1969-10月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4881,
+      "headings": 1,
+      "paragraphs": 34,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4969,
+      "headings": 1,
+      "paragraphs": 21,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1969年12月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1969-12月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3815,
+      "headings": 1,
+      "paragraphs": 29,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3896,
+      "headings": 1,
+      "paragraphs": 32,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1969年12月26日-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1969-12月26日-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 3523,
+      "headings": 1,
+      "paragraphs": 41,
+      "tables": 0
+    },
+    "after": {
+      "chars": 3608,
+      "headings": 1,
+      "paragraphs": 42,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1969年5月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1969-5月-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2516,
+      "headings": 1,
+      "paragraphs": 21,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2600,
+      "headings": 1,
+      "paragraphs": 20,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/partnership_1970年2月-巴菲特致合伙人信.md",
+    "site": "content/partnership/partnership_1970-bond-巴菲特致合伙人信.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 7930,
+      "headings": 9,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "after": {
+      "chars": 8475,
+      "headings": 9,
+      "paragraphs": 52,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_B夫人.md",
+    "site": "content/people/B夫人.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2605,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2519,
+      "headings": 5,
+      "paragraphs": 24,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_托德·库姆斯.md",
+    "site": "content/people/托德·库姆斯.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2112,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2049,
+      "headings": 5,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_格雷厄姆.md",
+    "site": "content/people/本杰明·格雷厄姆.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2156,
+      "headings": 5,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2156,
+      "headings": 5,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_格雷格·阿贝尔.md",
+    "site": "content/people/格雷格·阿贝尔.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 1992,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "after": {
+      "chars": 1992,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_泰德·韦施勒.md",
+    "site": "content/people/泰德·韦施勒.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2158,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2129,
+      "headings": 5,
+      "paragraphs": 22,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_芒格.md",
+    "site": "content/people/查理·芒格.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2290,
+      "headings": 5,
+      "paragraphs": 24,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2290,
+      "headings": 5,
+      "paragraphs": 24,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/people_阿吉特·贾恩.md",
+    "site": "content/people/阿吉特·贾恩.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 2002,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "after": {
+      "chars": 2002,
+      "headings": 5,
+      "paragraphs": 23,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/special_2014-伯克希尔的过去现在与未来.md",
+    "site": "content/special/2014-伯克希尔的过去现在与未来.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 15276,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 15383,
+      "headings": 5,
+      "paragraphs": 142,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/special_2014-副董事长的思考.md",
+    "site": "content/special/2014-副董事长的思考-芒格.md",
+    "exists": true,
+    "action": "skip",
+    "before": {
+      "chars": 4491,
+      "headings": 1,
+      "paragraphs": 3,
+      "tables": 0
+    },
+    "after": {
+      "chars": 4585,
+      "headings": 11,
+      "paragraphs": 89,
+      "tables": 0
+    },
+    "containsSite": false,
+    "identical": false
+  },
+  {
+    "stable": "tmp/ima-audit/raw/stable/special_2025-感恩节致辞.md",
+    "site": "content/special/2025-感恩节致辞.md",
+    "exists": true,
+    "action": "replace-with-stable-format",
+    "before": {
+      "chars": 6880,
+      "headings": 4,
+      "paragraphs": 96,
+      "tables": 0
+    },
+    "after": {
+      "chars": 6880,
+      "headings": 4,
+      "paragraphs": 96,
+      "tables": 0
+    },
+    "containsSite": true,
+    "identical": true
+  }
+]

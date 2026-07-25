@@ -1,14 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { Send, MessageCircle, BookOpen, Sparkles, Clock, User, Bot } from 'lucide-react'
+import Link from 'next/link'
+import { Send, MessageCircle, BookOpen, Search, ShieldCheck, User, Bot } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
 
 interface Message {
   role: 'user' | 'assistant'
   content: string
-  sources?: string[]
+  sources?: Array<{ title: string; url: string }>
+  searchUrl?: string
 }
 
 const suggestions = [
@@ -44,8 +46,9 @@ export default function TalkPage() {
 
       const assistantMessage: Message = {
         role: 'assistant',
-        content: data.answer || '抱歉，AI服务暂时不可用。',
+        content: data.answer || data.error || '资料检索暂时不可用。',
         sources: data.sources,
+        searchUrl: data.searchUrl,
       }
       setMessages(prev => [...prev, assistantMessage])
     } catch (error) {
@@ -61,26 +64,26 @@ export default function TalkPage() {
   return (
     <PageContainer maxWidth="5xl">
       {/* Header */}
-      <div className="bg-gradient-to-br from-primary/5 to-bg-card border-b border-primary/20 -mx-4 md:-mx-6 -mt-8 md:-mt-12 rounded-xl">
+      <div className="bg-primary/5 dark:bg-primary/10 border-b border-primary/20 -mx-4 md:-mx-6 -mt-8 md:-mt-12">
         <div className="px-6 py-12">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
-            <span className="text-primary font-medium">AI 对话</span>
+            <span className="text-primary font-medium">资料问答 · 测试版</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">巴菲特下午茶</h1>
-          <p className="text-gray-600">
-            拉把椅子，听老先生慢慢讲投资与人生
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">巴芒资料助手</h1>
+          <p className="text-gray-600 dark:text-gray-300">
+            从本站已收录的信件、概念、公司与文章中查找答案
           </p>
-          <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              每日免费对话 3 次
+              <Search className="w-4 h-4" />
+              只检索本站资料
             </span>
             <span className="flex items-center gap-1">
-              <Sparkles className="w-4 h-4" />
-              RAG 技术支持
+              <ShieldCheck className="w-4 h-4" />
+              找不到时明确说明
             </span>
           </div>
         </div>
@@ -90,19 +93,19 @@ export default function TalkPage() {
       <div className="py-8">
         {/* Suggestions */}
         {messages.length === 0 && (
-          <div className="bg-gray-50 rounded-xl p-6 mb-8">
-            <h3 className="font-medium text-gray-900 mb-4">不知道问什么？试试这些话题</h3>
+          <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-6 mb-8">
+            <h3 className="font-medium text-gray-900 dark:text-white mb-4">试试从这些问题开始</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {suggestions.map((item, i) => (
                 <button
                   key={i}
                   onClick={() => handleSend(item.question)}
-                  className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg hover:border-orange-300 hover:shadow-sm transition-all text-left group"
+                  className="flex items-center justify-between p-4 bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary/50 transition-all text-left group"
                 >
-                  <span className="text-gray-900 group-hover:text-orange-600 transition-colors">
+                  <span className="text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">
                     {item.question}
                   </span>
-                  <span className="text-xs bg-orange-50 text-orange-600 px-2 py-1 rounded-full">
+                  <span className="text-xs bg-primary/5 dark:bg-primary/15 text-primary px-2 py-1 rounded-full">
                     {item.category}
                   </span>
                 </button>
@@ -128,22 +131,28 @@ export default function TalkPage() {
                 <div className={`inline-block p-4 rounded-xl ${
                   msg.role === 'user'
                     ? 'bg-primary text-white rounded-br-md'
-                    : 'bg-gray-100 text-gray-900 rounded-bl-md'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-md'
                 }`}>
                   <p className="whitespace-pre-wrap">{msg.content}</p>
                 </div>
                 {msg.sources && msg.sources.length > 0 && (
                   <div className={`mt-2 ${msg.role === 'user' ? 'text-right' : ''}`}>
-                    <div className="inline-flex items-center gap-1 text-xs text-gray-500">
+                    <div className="inline-flex flex-wrap items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                       <BookOpen className="w-3 h-3" />
-                      <span>原文溯源：</span>
+                      <span>相关资料：</span>
                       {msg.sources.map((source, j) => (
-                        <span key={j} className="text-orange-600 hover:underline cursor-pointer">
-                          {source}{j < (msg.sources?.length ?? 0) - 1 ? '、' : ''}
-                        </span>
+                        <Link key={source.url} href={source.url} className="text-primary hover:underline">
+                          {source.title}{j < (msg.sources?.length ?? 0) - 1 ? '、' : ''}
+                        </Link>
                       ))}
                     </div>
                   </div>
+                )}
+                {msg.role === 'assistant' && msg.searchUrl && (
+                  <Link href={msg.searchUrl} className="mt-2 inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                    <Search className="w-3 h-3" />
+                    查看完整搜索结果
+                  </Link>
                 )}
               </div>
             </div>
@@ -166,7 +175,7 @@ export default function TalkPage() {
         </div>
 
         {/* Input Area */}
-        <div className="bg-gray-50 rounded-xl p-4">
+        <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4">
           <div className="flex gap-3">
             <input
               type="text"
@@ -174,7 +183,7 @@ export default function TalkPage() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               placeholder="输入你的问题..."
-              className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:border-orange-400 transition-colors"
+              className="flex-1 min-w-0 px-4 py-3 bg-white dark:bg-dark-card dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
             />
             <button
               onClick={() => handleSend()}
@@ -186,7 +195,7 @@ export default function TalkPage() {
             </button>
           </div>
           <p className="text-xs text-gray-400 mt-3 text-center">
-            内容由 AI 生成，基于巴菲特公开信件整理，不构成任何投资建议
+            回答由本站资料片段自动整理，可能遗漏上下文；请以来源原文为准，不构成投资建议
           </p>
         </div>
       </div>

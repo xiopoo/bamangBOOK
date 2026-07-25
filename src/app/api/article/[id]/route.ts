@@ -8,28 +8,29 @@ export async function GET(
 ) {
   try {
     const id = decodeURIComponent(params.id)
-    const articlesDir = path.join(process.cwd(), 'content/articles')
-    
-    // 查找文件
-    const files = [
-      path.join(articlesDir, `${id}.md`),
-      path.join(articlesDir, `${decodeURIComponent(id)}.md`)
-    ]
 
-    let filePath = ''
-    for (const fp of files) {
-      if (existsSync(fp)) {
-        filePath = fp
-        break
-      }
+    // 允许子目录路径（如 "buffett/xxx"）；仍拒绝上跳序列与空字节，防止目录遍历。
+    if (!id || id.includes('\\') || id.includes('\0') || id.includes('..')) {
+      return NextResponse.json({ error: 'Article not found' }, { status: 404 })
     }
 
-    if (!filePath) {
+    const articlesDir = path.join(process.cwd(), 'content/articles')
+    const filePath = path.resolve(articlesDir, `${id}.md`)
+
+    // 二次防线：解析后的绝对路径必须仍位于文章目录内。
+    if (filePath !== path.join(articlesDir, `${id}.md`) ||
+        !filePath.startsWith(articlesDir + path.sep)) {
+      return NextResponse.json({ error: 'Article not found' }, { status: 404 })
+    }
+
+    if (!existsSync(filePath)) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 })
     }
 
     const content = readFileSync(filePath, 'utf-8')
-    const title = id.replace('.md', '')
+
+    const titleMatch = content.match(/^#\s+(.+)$/m)
+    const title = titleMatch ? titleMatch[1].trim() : id
 
     return NextResponse.json({
       id,

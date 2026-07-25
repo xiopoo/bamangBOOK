@@ -60,11 +60,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Markdown prose 基础样式 */
 .prose {
-  max-width: none;
   font-size: var(--text-size-base);
   line-height: 1.8;
   color: #333333;
   word-break: break-word;
+}
+
+/* 表格首列（通常为文字描述）左对齐，末列数字可保留居中，提升可读性 */
+.prose table th:first-child,
+.prose table td:first-child {
+  text-align: left;
 }
 
 .dark .prose {

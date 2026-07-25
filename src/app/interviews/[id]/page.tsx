@@ -5,6 +5,7 @@ import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import RelatedArticles from '@/components/RelatedArticles'
 
 interface PageProps {
   params: { id: string }
@@ -50,9 +51,11 @@ export default function InterviewDetailPage({ params }: PageProps) {
         </div>
       </div>
 
+      <RelatedArticles source="interviews" fileName={fileName} />
+
       <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-text-muted dark:text-dark-muted">
-          巴芒书房
+          小胖书房
         </div>
       </footer>
     </div>

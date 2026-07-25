@@ -38,6 +38,11 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { year: string } }
 ) {
+  // 年份必须为 4 位数字：防止非法/超长参数被用作缓存 key 无限膨胀内存。
+  if (!/^\d{4}$/.test(params.year)) {
+    return NextResponse.json({ error: 'Invalid year' }, { status: 400 })
+  }
+
   const cacheKey = params.year
   const cachedData = getGraphFromCache(cacheKey)
   if (cachedData) {

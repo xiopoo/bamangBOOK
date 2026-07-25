@@ -8,16 +8,23 @@ export async function GET(
 ) {
   try {
     const year = params.year
+
+    // 年份必须为 4 位数字：既防止用户输入被直接拼进 RegExp 造成正则注入 / ReDoS，
+    // 也避免非法参数触发无意义的目录扫描。
+    if (!/^\d{4}$/.test(year)) {
+      return NextResponse.json({ error: 'Invalid year' }, { status: 400 })
+    }
+
     const qaDir = path.join(process.cwd(), 'content/qa')
     
     // 读取QA目录下的所有文件
     const files = readdirSync(qaDir)
     
-    // 筛选出该年份的QA文件
+    // 筛选出该年份的QA文件（用字符串前缀匹配替代动态正则）
+    const yearPrefix = `${year}年伯克希尔股东大会`
     const yearQAFiles = files.filter(file => {
-      // 匹配格式：YYYY年伯克希尔股东大会Q&A...
-      const yearPattern = new RegExp(`^${year}年伯克希尔股东大会`)
-      return yearPattern.test(file) || file.startsWith(`${year}-`)
+      // 匹配格式：YYYY年伯克希尔股东大会Q&A... 或 YYYY-...
+      return file.startsWith(yearPrefix) || file.startsWith(`${year}-`)
     })
     
     // 读取每个文件的标题

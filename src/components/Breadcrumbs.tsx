@@ -16,7 +16,7 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/munger': [
     { label: '首页', href: '/' },
-    { label: '查理·芒格', href: '/munger' },
+    { label: '芒格', href: '/munger' },
   ],
   '/partnership': [
     { label: '首页', href: '/' },
@@ -76,6 +76,7 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/model': [
     { label: '首页', href: '/' },
+    { label: '芒格', href: '/munger' },
     { label: '思维模型', href: '/model' },
   ],
   '/reading': [

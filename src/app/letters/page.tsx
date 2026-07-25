@@ -20,8 +20,8 @@ export default function LettersPage() {
   const letters = getShareholderLetters()
   const totalCount = getShareholderCount()
   const years = letters.map((l) => l.year)
-  const firstYear = years[years.length - 1]
-  const lastYear = years[0]
+  const firstYear = Math.min(...years)
+  const lastYear = Math.max(...years)
 
   return (
     <PageContainer maxWidth="7xl">
@@ -80,11 +80,11 @@ export default function LettersPage() {
                   <Link
                     key={letter.year}
                     href={`/letters/${letter.year}`}
-                    className="bg-white dark:bg-dark-card p-3 rounded-card border text-center hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 hover:border-primary/40 hover:-translate-y-0.5 transition-all shadow-card border-gray-100 dark:border-dark-border hover:border-primary/30"
+                    className="rounded-card border border-gray-100 bg-white p-3 text-center shadow-card transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-card-hover dark:border-dark-border dark:bg-dark-card dark:hover:shadow-lg dark:hover:shadow-black/20"
                   >
-                    <div className="text-base font-semibold text-[#2c2c2c] dark:text-[#e0e0e0]">
+                    <span className="text-base font-semibold text-[#2c2c2c] dark:text-[#e0e0e0]">
                       {letter.year}
-                    </div>
+                    </span>
                   </Link>
                 ))}
               </div>

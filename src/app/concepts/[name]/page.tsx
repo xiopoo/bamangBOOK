@@ -8,6 +8,8 @@ import MarkdownContent from '@/components/MarkdownContent'
 import { RecommendationList } from '@/components/RecommendationList'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
+import ContentTrustPanel from '@/components/ContentTrustPanel'
+import type { Metadata } from 'next'
 
 function processConceptLinks(content: string): string {
   if (!content.includes('[[')) return content
@@ -20,6 +22,15 @@ function processConceptLinks(content: string): string {
 
 interface PageProps {
   params: { name: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const name = decodeURIComponent(params.name)
+  return {
+    title: `${name}：概念解释与原文线索`,
+    description: `了解价值投资概念“${name}”的定义、相关年份、公司案例与原文线索。`,
+    alternates: { canonical: `/concepts/${encodeURIComponent(name)}` },
+  }
 }
 
 export default function ConceptDetailPage({ params }: PageProps) {
@@ -54,6 +65,11 @@ export default function ConceptDetailPage({ params }: PageProps) {
         backHref="/concepts"
         backLabel="返回概念列表"
         sticky
+      />
+
+      <ContentTrustPanel
+        source="知识卡片，由股东信、演讲及本站专题资料交叉整理"
+        method="引用年份可进入相关股东信核对；卡片中的归纳表述不等同于原作者原话。"
       />
 
       <div className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 dark:border-primary/30 shadow-sm hover:shadow-md transition-shadow">

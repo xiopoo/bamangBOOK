@@ -10,7 +10,6 @@ interface LogoProps {
 export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
   const content = (
     <div className="flex items-center gap-3 select-none">
-      {/* SVG Icon - 书本+铜钱组合 */}
       <svg
         width="36"
         height="36"
@@ -42,7 +41,6 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
         <circle cx="18" cy="18" r="2" fill="currentColor" />
       </svg>
 
-      {/* Text - 使用强健的中文字体回退栈，避免乱码 */}
       <div lang="zh-CN" className="whitespace-nowrap">
         <div
           className="font-serif text-lg font-semibold text-text dark:text-gray-100 leading-tight"
@@ -55,7 +53,7 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
             MozOsxFontSmoothing: 'grayscale',
           }}
         >
-          巴芒书房
+          小胖书房
         </div>
         {showSubtitle && (
           <div
@@ -66,7 +64,7 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
               letterSpacing: '0.02em',
             }}
           >
-            价值投资知识宝库
+            个人阅读与研究库
           </div>
         )}
       </div>

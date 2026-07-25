@@ -1,0 +1,2944 @@
+[
+  {
+    "slug": "accounting-as-language-its-limits",
+    "title": "会计作为商业语言及其局限",
+    "english": "Accounting as Language & Its Limits",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "会计是理解商业的必备语言，但它有系统性局限：财务报表只是现实的近似映射，而非现实本身。芒格强调必须学会会计，更要懂得它的边界。"
+  },
+  {
+    "slug": "agency-costs",
+    "title": "代理成本",
+    "english": "Agency Costs",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策"
+    ],
+    "description": "当替你做决策的人与你的利益不完全一致时你总会为这种不一致付出代价——从理发师到基金经理，代理成本无处不在且极其隐蔽。"
+  },
+  {
+    "slug": "authority-misinfluence-tendency",
+    "title": "权威错误影响倾向",
+    "english": "Authority-Misinfluence Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "谈判、说服与人际影响"
+    ],
+    "description": "人类对权威的服从反应强大到可以压倒道德判断和独立思考。米尔格拉姆实验证明，65%的普通人在权威指令下会施加致命电击。"
+  },
+  {
+    "slug": "automation-checklists",
+    "title": "自动化与检查清单",
+    "english": "Automation & Checklists",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "一张能夹在手掌中的检查清单挽救了波音B-17轰炸机项目——当任务复杂性超过人类认知可靠处理能力时，用系统化流程替代对记忆的依赖。"
+  },
+  {
+    "slug": "availability-misweighing-tendency",
+    "title": "错误衡量易得性倾向",
+    "english": "Availability-Misweighing Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "大脑在判断概率和重要性时过度依赖容易想到的信息——越生动、越近期、越情绪化的信息权重越高。9·11后弃飞开车的人反而因车祸多死了1595人。"
+  },
+  {
+    "slug": "avoiding-ideology",
+    "title": "避免意识形态偏见",
+    "english": "Avoiding Ideology",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "意识形态用一套理论回答所有问题，当现实与理论冲突时选择修正现实而非理论。芒格警告：深受意识形态影响无异于将大脑禁锢在不幸的模式中。"
+  },
+  {
+    "slug": "avoiding-stupidity-over-seeking-brilliance",
+    "title": "避蠢优于求智",
+    "english": "Avoiding Stupidity over Seeking Brilliance",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "大多数人的失败不是因为做了太少正确的事，而是做了太多愚蠢的事。投资中亏损50%需要100%涨幅才能回本，减少错误比增加正确更能提升总体结果。"
+  },
+  {
+    "slug": "basic-arithmetic-order-of-magnitude-estimation",
+    "title": "基本算术与数量级估算",
+    "english": "Basic Arithmetic & Order-of-Magnitude Estimation",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "基本算术与费米估算是芒格视为最被低估的思维工具——不是计算能力而是计算习惯，一支铅笔和餐巾纸就能在三分钟内揭穿大多数商业骗局。"
+  },
+  {
+    "slug": "bayes-theorem",
+    "title": "贝叶斯定理",
+    "english": "Bayes' Theorem",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "学习、复盘与认知提升",
+      "投资决策与资产评估"
+    ],
+    "description": "贝叶斯定理揭示了新证据必须在先验概率背景下解读的核心逻辑，它从根本上改变你处理信息、更新判断和避免基础比率忽视的方式。"
+  },
+  {
+    "slug": "bet-seldom-bet-big",
+    "title": "少下注下大注",
+    "english": "Bet Seldom, Bet Big",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": "芒格一生的大部分财富来自不超过十个决策。少下注、下大注的核心是极端的选择性：等待极少数胜率和赔率都极高的机会，然后重仓出击。"
+  },
+  {
+    "slug": "brand-power",
+    "title": "品牌认同",
+    "english": "Brand Power",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "可口可乐的物理成分不值几分钱但公司价值数千亿——品牌价值不在瓶子里而在消费者脑子里，建立在多种心理学效应的叠加与互相强化之上。"
+  },
+  {
+    "slug": "breakpoints",
+    "title": "断裂点",
+    "english": "Breakpoints",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "塔科马海峡大桥在不算猛烈的风中摇晃一小时后瞬间断裂——系统的退化是渐进甚至不可见的，但崩溃是突然的、剧烈的、不可逆的。"
+  },
+  {
+    "slug": "cash-flow-vs-earnings",
+    "title": "现金流量vs利润",
+    "english": "Cash Flow vs. Earnings",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "利润是会计概念，可被操纵；现金流是真金白银，难以造假。芒格和巴菲特始终关注自由现金流而非账面利润，因为现金才是企业的氧气。"
+  },
+  {
+    "slug": "checklist-method",
+    "title": "检查清单方法",
+    "english": "Checklist Method",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "学习、复盘与认知提升"
+    ],
+    "description": "B-17轰炸机因飞行员遗漏一个操作步骤而坠毁，一份飞行检查清单拯救了整个机型。芒格主张将思维技能编排成清单，用系统性方法对抗人类遗漏的必然性。"
+  },
+  {
+    "slug": "circle-of-competence",
+    "title": "能力圈",
+    "english": "Circle of Competence",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "团队管理与组织决策",
+      "学习、复盘与认知提升",
+      "个人重大决策与人生规划"
+    ],
+    "description": "能力圈要求清晰界定自己真正理解的领域，只在圈内行动。知道边界在哪里比扩大边界更重要——大多数灾难源于在能力圈之外做决策。"
+  },
+  {
+    "slug": "circle-of-competence-management-level",
+    "title": "能力圈（管理层面）",
+    "english": "Circle of Competence - Management Level",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "个人重大决策与人生规划"
+    ],
+    "description": ""
+  },
+  {
+    "slug": "circle-of-competence-metacognitive-level",
+    "title": "能力圈（元认知层面）",
+    "english": "Circle of Competence - Metacognitive Level",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": ""
+  },
+  {
+    "slug": "competitive-destruction",
+    "title": "竞争性毁灭",
+    "english": "Competitive Destruction",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "商业创新与竞争战略"
+    ],
+    "description": "新技术不是在现有框架内竞争，而是直接摧毁旧框架——芒格用马鞭工厂的故事警示投资者：你的企业可能被一种你今天还看不到的力量彻底消灭。"
+  },
+  {
+    "slug": "complex-systems",
+    "title": "复杂系统",
+    "english": "Complex Systems",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断",
+      "学习、复盘与认知提升"
+    ],
+    "description": "复杂适应系统(CAS)是整体行为无法由部件推导的系统：蚁群、大脑、市场、生态圈都属此类。讲清它的构成与涌现机制、与简单系统的本质区别，以及在风险识别与系统韧性中的应用——用简单系统的直觉处理复杂系统，是最昂贵的认知错误之一。"
+  },
+  {
+    "slug": "compound-interest",
+    "title": "复利效应",
+    "english": "Compound Interest",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "复利是利滚利的指数增长力量，前期平淡后期爆发，芒格视其为地球上最重要的模型之一，它不仅适用于金融，更是知识积累和人生成长的底层规律。"
+  },
+  {
+    "slug": "conditional-probability-base-rates",
+    "title": "条件概率与基础比率",
+    "english": "Conditional Probability & Base Rates",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "条件概率与基础比率揭示了人类判断中最常见的错误——忽视先验概率而被表面证据误导，出租车问题经典地展示了为何直觉与正确答案相差甚远。"
+  },
+  {
+    "slug": "contrast-misreaction-tendency",
+    "title": "对比错误反应倾向",
+    "english": "Contrast-Misreaction Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "人类感知系统以对比而非绝对值评估事物，导致参照物被操控时判断系统性偏离。渐进变化时对比机制完全失灵，形成温水煮青蛙效应。"
+  },
+  {
+    "slug": "critical-mass",
+    "title": "临界质量",
+    "english": "Critical Mass",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 5,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "临界质量是系统从量变到质变的那道看不见的线——跨过它一切都变了，从核反应堆到社交网络，理解引爆点机制是把握突变性变革的关键。"
+  },
+  {
+    "slug": "deprival-superreaction-tendency",
+    "title": "被剥夺超级反应倾向",
+    "english": "Deprival-Superreaction Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "谈判、说服与人际影响"
+    ],
+    "description": "人类对失去已有事物的痛苦反应强度远超获得同等事物时的快乐，这种损失厌恶驱动大量非理性行为，是芒格眼中破坏力最大的心理倾向之一。"
+  },
+  {
+    "slug": "economies-of-scale",
+    "title": "规模优势",
+    "english": "Economies of Scale",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "从油罐的几何学到广告的分摊效应，规模优势解释了为什么大多数行业最终整合为少数巨头，以及为什么赢家通吃是经济学的内在逻辑。"
+  },
+  {
+    "slug": "ecosystem-thinking",
+    "title": "生态系统思维",
+    "english": "Ecosystem Thinking",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "生态系统思维将市场经济视为一个由共生、竞争和协同进化构成的生态系统，帮助你看到企业在竞争格局中的隐藏位置和相互依存关系。"
+  },
+  {
+    "slug": "engineering-margin-of-safety",
+    "title": "安全边际（工程源头）",
+    "english": "Engineering Margin of Safety",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "投资决策与资产评估"
+    ],
+    "description": "泰河铁路桥用75条人命教会工程界一个教训：你必须假设自己的计算是错的，然后让结构在你错了的情况下依然安全——这是安全边际的血写起源。"
+  },
+  {
+    "slug": "excessive-self-regard-tendency",
+    "title": "自视过高的倾向",
+    "english": "Excessive Self-Regard Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "团队管理与组织决策"
+    ],
+    "description": "人类天生高估自己的能力、品质和所拥有事物的价值，且这种高估是无意识的、持续运行的。禀赋效应和托尔斯泰效应是其延伸。"
+  },
+  {
+    "slug": "extinction-irreversibility",
+    "title": "灭绝与不可逆性",
+    "english": "Extinction & Irreversibility",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "灭绝与不可逆性警示我们某些错误只需犯一次就足以致命——如同给一串数字乘以零，无论之前多辉煌结果都是零，避免归零是一切策略的前提。"
+  },
+  {
+    "slug": "falsification",
+    "title": "否证思维",
+    "english": "Falsification",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "再多白天鹅也不能证明所有天鹅都是白色的，但一只黑天鹅就够了。否证性证据的信息价值远大于确认性证据，芒格要求对最钟爱的观点最严格地审视。"
+  },
+  {
+    "slug": "feedback-loops",
+    "title": "反馈环",
+    "english": "Feedback Loops",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "反馈环分为正反馈（自我放大）和负反馈（自我修正）两种，2008年金融危机揭示了正反馈环如何让可控的局部问题在几个月内演变为系统性灾难。"
+  },
+  {
+    "slug": "fragility-antifragility",
+    "title": "脆弱性与反脆弱性",
+    "english": "Fragility & Antifragility",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "脆弱的真正反义词不是不碎而是越摔越硬——伯克希尔在2008年危机中不仅生存还获益超百亿美元，这是精心设计的反脆弱系统属性在发挥作用。"
+  },
+  {
+    "slug": "incentive-structure-agency-problem",
+    "title": "激励结构与代理问题",
+    "english": "Incentive Structure & Agency Problem",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "投资决策与资产评估"
+    ],
+    "description": "当代理人的利益与委托人不一致时，激励错位会驱使聪明人做出损害他人利益的事。芒格认为理解激励结构是理解人类行为的第一把钥匙。"
+  },
+  {
+    "slug": "incentive-structure-design",
+    "title": "激励结构设计",
+    "english": "Incentive Structure Design",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策"
+    ],
+    "description": "给我看激励机制我就能预测结果——芒格相信理解一个组织内部的激励结构就能以相当高的准确率预测其行为，无论使命宣言写了什么。"
+  },
+  {
+    "slug": "incentives-economic-view",
+    "title": "激励机制",
+    "english": "Incentives - Economic View",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策",
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "当无法改变人性时该如何设计制度来利用人性——芒格将心理学的激励洞见与经济学的机制设计焊接在一起，形成了对激励问题的完整理解。"
+  },
+  {
+    "slug": "inconsistency-avoidance-tendency",
+    "title": "避免不一致性倾向",
+    "english": "Inconsistency-Avoidance Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "个人重大决策与人生规划",
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "大脑天生抗拒改变已有结论、习惯和承诺，会无意识地过滤与既有认知不一致的信息。芒格将其比喻为卵子锁定精子后关闭通道的机制。"
+  },
+  {
+    "slug": "independence",
+    "title": "独立思考",
+    "english": "Independence",
+    "discipline": "decision",
+    "disciplineName": "投资原则与品格",
+    "importance": 5,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "独立思考要求基于自己的分析而非市场共识做决策。当所有人都在恐慌抛售时敢于买入，当所有人都在狂热追捧时敢于旁观，这是投资成功的核心品格。"
+  },
+  {
+    "slug": "influence-from-mere-association-tendency",
+    "title": "受简单联想影响的倾向",
+    "english": "Influence-from-Mere-Association Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "大脑会自动在同时出现的事物之间建立因果或评价性联系，即使不存在真实因果关系。波斯信使综合症和品牌联想都源于这一古老的条件反射机制。"
+  },
+  {
+    "slug": "intellectual-humility",
+    "title": "知识谦逊",
+    "english": "Intellectual Humility",
+    "discipline": "decision",
+    "disciplineName": "投资原则与品格",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "知识谦逊是诚实面对自己认知边界的品格。芒格和巴菲特说得最多的三个字是'我不知道'，正是这种坦诚让他们避开了无数灾难。"
+  },
+  {
+    "slug": "intrinsic-value",
+    "title": "内在价值",
+    "english": "Intrinsic Value",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "内在价值是企业未来全部现金流的折现总和，与市场报价无关。芒格和巴菲特的投资体系建立在一个核心区分之上：价格不是价值。"
+  },
+  {
+    "slug": "inversion",
+    "title": "逆向思维",
+    "english": "Inversion",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "芒格从数学家雅各比和达尔文身上提炼的核心方法论：在急着弄清楚如何成功之前，先搞清楚什么会导致失败，然后系统性地避免。反过来想，总是反过来想。"
+  },
+  {
+    "slug": "latticework-of-mental-models",
+    "title": "多元思维模型框架",
+    "english": "Latticework of Mental Models",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "芒格思维体系的第一原则：在头脑中建立由多学科核心模型编织而成的格栅结构，用这个格栅过滤现实。只用一个模型看问题注定只能看到一个切面。"
+  },
+  {
+    "slug": "lessons-of-history",
+    "title": "以史为鉴",
+    "english": "Lessons of History",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "历史不会简单重复，但人性的剧本从未改写。通过大量阅读历史，将个人经验的有限样本扩展到几千年，识别穿越时间的不变模式。"
+  },
+  {
+    "slug": "lifelong-learning",
+    "title": "终身学习",
+    "english": "Lifelong Learning",
+    "discipline": "decision",
+    "disciplineName": "投资原则与品格",
+    "importance": 5,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "芒格是一台'长了两条腿的学习机器'。终身学习不是兴趣爱好，而是在不断变化的世界中保持竞争力的唯一可靠策略，也是复利效应在智识上的体现。"
+  },
+  {
+    "slug": "lollapalooza-tendency",
+    "title": "Lollapalooza倾向",
+    "english": "Lollapalooza Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性",
+      "学习、复盘与认知提升"
+    ],
+    "description": "当多种心理倾向同时作用于同一方向时，它们不是简单相加而是相互放大，产生核爆式的极端后果。芒格认为这是学术心理学最大的盲区。"
+  },
+  {
+    "slug": "man-with-a-hammer-syndrome",
+    "title": "铁锤人倾向",
+    "english": "Man-with-a-Hammer Syndrome",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "在手里拿着铁锤的人看来，每个问题都像钉子。过度依赖单一工具或思维框架会不自觉地将所有问题重新定义为该工具能解决的形状。"
+  },
+  {
+    "slug": "margin-of-safety",
+    "title": "安全边际",
+    "english": "Margin of Safety",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性",
+      "学习、复盘与认知提升"
+    ],
+    "description": "安全边际是以显著低于内在价值的价格买入，为判断错误和意外事件留出缓冲空间。这一源自工程学的冗余思想，是价值投资最核心的原则。"
+  },
+  {
+    "slug": "moat",
+    "title": "护城河（Moat）",
+    "english": "Moat",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "芒格说服巴菲特以三倍净资产溢价收购See's Candies，由此开启了从捡烟蒂到买伟大企业的投资哲学转变——护城河是企业持久竞争优势的终极隐喻。"
+  },
+  {
+    "slug": "modern-darwinian-synthesis",
+    "title": "进化论",
+    "english": "Modern Darwinian Synthesis",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "现代达尔文综合进化论是芒格最重要的思维模型之一——随机变异、自然选择和遗传三个齿轮驱动的淘汰机制，是理解竞争和商业本质的基石。"
+  },
+  {
+    "slug": "monopoly-oligopoly",
+    "title": "垄断与寡头",
+    "english": "Monopoly & Oligopoly",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "决定企业长期盈利能力的首先不是管理层多聪明，而是它所处的市场结构——芒格投资的核心是寻找接近垄断地位的企业。"
+  },
+  {
+    "slug": "moral-hazard",
+    "title": "道德风险",
+    "english": "Moral Hazard",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "当行为者不承担自己行为的全部后果时其行为会系统性偏离最优——2008年金融危机的根源不是人性贪婪，而是收益私有化损失社会化的制度设计。"
+  },
+  {
+    "slug": "mr-market",
+    "title": "市场先生",
+    "english": "Mr. Market",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "格雷厄姆将市场比喻为一个情绪不稳定的合伙人：每天给你报价，但报价反映的是他的情绪而非企业的价值。投资者应利用市场先生，而非被他左右。"
+  },
+  {
+    "slug": "multidisciplinary-approach",
+    "title": "跨学科思维",
+    "english": "Multidisciplinary Approach",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "现实世界不分学科，解决重要问题所需的工具几乎从不在你最熟悉的抽屉里。芒格主张从各学科提取约一百个核心模型，编织成多元思维格栅。"
+  },
+  {
+    "slug": "natural-selection-survival-of-the-fittest",
+    "title": "自然选择与适者生存",
+    "english": "Natural Selection & Survival of the Fittest",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "市场趋势与宏观判断"
+    ],
+    "description": "自然选择中的适者不是最强者而是最适合当前环境者，没有绝对的适者只有相对于特定环境的适配，这一洞见深刻改变了对竞争和成功的理解。"
+  },
+  {
+    "slug": "network-effects",
+    "title": "网络效应",
+    "english": "Network Effects",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "网络的价值随用户数呈超线性增长，一旦形成其韧性远超想象——巴菲特在美国运通丑闻中重仓买入正是因为理解了网络效应的结构性稳定。"
+  },
+  {
+    "slug": "opportunity-cost",
+    "title": "机会成本",
+    "english": "Opportunity Cost",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "个人重大决策与人生规划"
+    ],
+    "description": "每个选择的真实代价不是花了多少钱，而是放弃的最佳替代方案的价值——芒格用这个隐形过滤器拒绝了99%的投资机会。"
+  },
+  {
+    "slug": "pari-mutuel-system",
+    "title": "彩池投注系统",
+    "english": "Pari-mutuel System",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "市场趋势与宏观判断"
+    ],
+    "description": "芒格用赛马场的彩池投注类比股市：市场价格反映了大多数人的共识预期，真正的超额回报只存在于共识判断出错的地方。"
+  },
+  {
+    "slug": "patents-trademarks-franchises",
+    "title": "专利权、商标权与特许经营权",
+    "english": "Patents, Trademarks & Franchises",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "专利提供有限期垄断，商标可无限期自我强化，经济特许经营权赋予持久定价权——理解这三种无形资产是芒格从捡烟蒂转向买伟大企业的关键转折。"
+  },
+  {
+    "slug": "patience-discipline",
+    "title": "耐心与纪律",
+    "english": "Patience & Discipline",
+    "discipline": "decision",
+    "disciplineName": "投资原则与品格",
+    "importance": 5,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "像泰德·威廉姆斯只在最佳击球区挥棒一样，芒格的耐心与纪律要求投资者忍受长期等待，只在极少数高确定性机会出现时果断出手。"
+  },
+  {
+    "slug": "price-elasticity",
+    "title": "价格弹性与定价权",
+    "english": "Price Elasticity",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 5,
+    "scenarios": [
+      "商业创新与竞争战略"
+    ],
+    "description": "需求对价格变化的敏感程度决定了企业能否涨价而不失去客户——芒格认为定价权是评估企业质量最重要的单一指标。"
+  },
+  {
+    "slug": "probabilistic-thinking-expected-value",
+    "title": "概率思维与期望值",
+    "english": "Probabilistic Thinking & Expected Value",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "概率思维与期望值计算是芒格视为生存必备的决策工具，它将思考从二元的会不会发生升级为概率加权的期望值分析，是理性决策的及格线。"
+  },
+  {
+    "slug": "reciprocation-tendency",
+    "title": "回馈倾向",
+    "english": "Reciprocation Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "团队管理与组织决策"
+    ],
+    "description": "人类有自动以相似方式回报他人行为的强烈倾向——善意回报善意，恶意回报恶意，且回报强度往往超过初始行为。一瓶可乐就能撬动五倍购买。"
+  },
+  {
+    "slug": "redundancy",
+    "title": "冗余备份系统",
+    "english": "Redundancy",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "155条命挂在冗余系统上——在后果不可逆的领域，冗余不是浪费而是你能买到的最便宜的保险，其成本持续可见但价值偶发不可见。"
+  },
+  {
+    "slug": "regression-to-the-mean",
+    "title": "回归均值",
+    "english": "Regression to the Mean",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "回归均值是一个纯粹的统计事实：任何包含随机成分的极端结果都倾向于向长期平均值靠拢，理解这一点能避免对短期异常表现的过度反应。"
+  },
+  {
+    "slug": "reversibility-irreversibility",
+    "title": "可逆性与不可逆性",
+    "english": "Reversibility & Irreversibility",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 5,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "个人重大决策与人生规划"
+    ],
+    "description": "可逆与不可逆决策的区分是芒格投资哲学的基石——单向门决策必须深思熟虑，双向门决策应快速行动，你一生中真正关键的是没搞砸的不可逆决策。"
+  },
+  {
+    "slug": "reward-and-punishment-superresponse-tendency",
+    "title": "奖励和惩罚超级反应倾向",
+    "english": "Reward and Punishment Superresponse Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "谈判、说服与人际影响"
+    ],
+    "description": "激励机制不仅改变行为，更会在无意识中扭曲认知本身。芒格将其列为25个心理倾向之首，并坦言自己一辈子都低估了激励的力量。"
+  },
+  {
+    "slug": "risk-first",
+    "title": "风险优先",
+    "english": "Risk First",
+    "discipline": "decision",
+    "disciplineName": "投资原则与品格",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性"
+    ],
+    "description": "芒格的第一个问题永远不是'能赚多少'，而是'可能亏多少'。风险优先意味着在考虑收益之前，先确保不会遭受不可逆转的损失。"
+  },
+  {
+    "slug": "second-order-thinking",
+    "title": "二阶效应",
+    "english": "Second-Order Thinking",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "一阶思维只看直接后果，二阶思维追问后果的后果。美国禁酒令消灭了合法酒业却催生了有组织犯罪帝国——旨在解决问题的政策在二阶层面制造了更大的灾难。"
+  },
+  {
+    "slug": "social-proof-tendency",
+    "title": "社会认同倾向",
+    "english": "Social-Proof Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "人类天生根据周围人的行为来决定自己的行动，尤其在困惑和压力下更甚。这种从众本能在现代社会中会引发信息级联、泡沫与恐慌。"
+  },
+  {
+    "slug": "sunk-cost-fallacy",
+    "title": "沉没成本谬误",
+    "english": "Sunk Cost Fallacy",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "为什么明知亏本却停不下来？沉没成本谬误的核心机制：已经付出的钱在影响你对未来的判断。从英法协和飞机到日常关系陷阱，看穿这一最常见的认知陷阱。"
+  },
+  {
+    "slug": "survivorship-bias",
+    "title": "幸存者偏差",
+    "english": "Survivorship Bias",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 5,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "由于只观察到通过筛选存活下来的样本而忽略被淘汰者，人们对整体情况做出系统性的过度乐观判断。芒格说：去墓地看看。"
+  },
+  {
+    "slug": "switching-costs",
+    "title": "转换成本",
+    "english": "Switching Costs",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 5,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "客户想换但没换往往比不想换是更强的护城河信号——真正强大的转换成本不是合同锁定，而是学习成本、关系成本和心理成本的叠加。"
+  },
+  {
+    "slug": "systems-thinking",
+    "title": "系统思维",
+    "english": "Systems Thinking",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 5,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "通用汽车砸数十亿建最先进工厂却质量更差，丰田用旧厂房同批工人生产出最高质量汽车——系统的行为由组件间的交互决定而非组件本身。"
+  },
+  {
+    "slug": "two-track-analysis",
+    "title": "双轨分析",
+    "english": "Two-Track Analysis",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 5,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "对任何问题必须同时从理性分析和心理分析两条轨道思考。第一轨看客观因素，第二轨看潜意识心理力量。可口可乐的成功是双轨合力的经典案例。"
+  },
+  {
+    "slug": "action-reaction",
+    "title": "作用力与反作用力",
+    "english": "Action & Reaction",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "牛顿第三定律在社会系统中的体现——每个政策干预都会引发等大反向的反作用力，美国禁酒令催生有组织犯罪是忽视二阶效应的经典教训。"
+  },
+  {
+    "slug": "adaptation",
+    "title": "适应性",
+    "english": "Adaptation",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "个人重大决策与人生规划"
+    ],
+    "description": "适应性是生物在环境变化中生存的核心能力，诺基亚与苹果的对比揭示了企业适应性的关键——不是预测变化，而是拥有重新定义自我的能力。"
+  },
+  {
+    "slug": "adversarial-system",
+    "title": "对抗制与辩证过程",
+    "english": "Adversarial System",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "投资决策与资产评估"
+    ],
+    "description": "对抗制让双方各自尽力论证己方立场，通过激烈的思想碰撞逼近真相。芒格将这一法律方法转化为投资决策中的双轨分析，主动寻找反面证据。"
+  },
+  {
+    "slug": "adverse-selection",
+    "title": "逆向选择",
+    "english": "Adverse Selection",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响"
+    ],
+    "description": "当交易一方无法区分对方的质量时，高质量参与者退出市场而低质量参与者涌入，导致市场品质螺旋下降——这是保险、二手车和人才市场的共同困境。"
+  },
+  {
+    "slug": "anchoring-bias",
+    "title": "锚定偏差",
+    "english": "Anchoring Bias",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "市场趋势与宏观判断"
+    ],
+    "description": "人们在做判断时过度依赖最先获得的信息（锚点），导致后续估计系统性偏离真实值。芒格将其视为最常见的决策陷阱之一。"
+  },
+  {
+    "slug": "antifragile-design",
+    "title": "反脆弱设计",
+    "english": "Antifragile Design",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "2008年金融危机中伯克希尔不仅没受伤反而在挑选猎物——反脆弱不是坚韧地承受冲击保持不变，而是一种从冲击中获益变得更强的结构性设计。"
+  },
+  {
+    "slug": "arithmetic-expected-value",
+    "title": "算术期望值",
+    "english": "Arithmetic Expected Value",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": ""
+  },
+  {
+    "slug": "asymmetric-information",
+    "title": "信息不对称",
+    "english": "Asymmetric Information",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响"
+    ],
+    "description": "卖家比买家更了解商品真实状况，这种信息差导致柠檬市场效应和市场失灵——芒格一生的投资策略核心就是永远站在信息优势的一方。"
+  },
+  {
+    "slug": "asymmetry-convexity",
+    "title": "不对称性与凸性",
+    "english": "Asymmetry & Convexity",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性"
+    ],
+    "description": "不对称性与凸性是芒格投资哲学的几何学基础——系统性地构建下行有限、上行开放的收益结构，让波动成为盟友而非敌人。"
+  },
+  {
+    "slug": "audit-independent-verification",
+    "title": "审计与独立验证",
+    "english": "Audit & Independent Verification",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性"
+    ],
+    "description": "审计通过独立第三方验证财务信息的真实性，是商业信任体系的基石。安达信的覆灭警示：审计师的独立性一旦丧失，整个验证机制便形同虚设。"
+  },
+  {
+    "slug": "autocatalysis",
+    "title": "自我催化模型",
+    "english": "Autocatalysis",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "自我催化模型描述了产物本身加速反应进程的化学机制，芒格最爱的Costco正是商业自催化的典范——低价吸引会员、规模压低成本、更低价格吸引更多会员。"
+  },
+  {
+    "slug": "basic-game-theory",
+    "title": "博弈论基础",
+    "english": "Basic Game Theory",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响"
+    ],
+    "description": "博弈论研究理性决策者之间的策略互动，从囚徒困境到纳什均衡，揭示了竞争结构如何决定参与者的最优策略和商业生态的长期演化。"
+  },
+  {
+    "slug": "bayesian-updating",
+    "title": "贝叶斯更新",
+    "english": "Bayesian Updating",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "不是对错而是校准——面对新证据按比例调整信念概率，既不顽固拒绝改变也不在一条坏消息面前完全崩溃，这是不确定世界中修正判断的操作系统。"
+  },
+  {
+    "slug": "burden-of-proof",
+    "title": "举证责任与证据标准",
+    "english": "Burden of Proof",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "举证责任决定谁必须提供证据，证据标准决定证据须达到何种程度。同一事实在不同标准下可得出截然不同的结论，深刻影响决策质量。"
+  },
+  {
+    "slug": "catalysts",
+    "title": "催化剂",
+    "english": "Catalysts",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "团队管理与组织决策"
+    ],
+    "description": "催化剂不创造新的可能性，而是把理论上可行但实际上不会发生的变化变成现在就发生——哈伯法合成氨养活了四十亿人，展示了加速既有反应的巨大力量。"
+  },
+  {
+    "slug": "co-evolution",
+    "title": "协同进化",
+    "english": "Co-evolution",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "协同进化揭示了物种间相互施加选择压力、彼此塑造演化轨迹的耦合关系——花的颜色和蜜蜂的口器都是被对方的存在雕刻出来的。"
+  },
+  {
+    "slug": "comparative-advantage",
+    "title": "比较优势",
+    "english": "Comparative Advantage",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略"
+    ],
+    "description": "即使一方在所有领域都更强，双方通过各自专注于相对优势最大的领域并交换仍能互利——这是经济学中既真实又最不显而易见的洞见。"
+  },
+  {
+    "slug": "complex-adaptive-systems",
+    "title": "复杂适应系统",
+    "english": "Complex Adaptive Systems",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "风险识别与系统韧性"
+    ],
+    "description": "复杂适应系统由大量个体遵循简单规则、相互影响而产生无法预见的整体行为，从交通系统到经济体，理解涌现和自组织是把握复杂世界的关键。"
+  },
+  {
+    "slug": "concentration-less-is-more",
+    "title": "集中持仓",
+    "english": "Concentration / Less is More",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "好主意太少了，当你发现一个就必须大下注——芒格认为对于真正理解自己在做什么的投资者，分散投资不是降低风险而是降低回报。"
+  },
+  {
+    "slug": "confidence-calibration",
+    "title": "置信度校准",
+    "english": "Confidence Calibration",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "校准良好的人知道自己有多确定——主观信心与客观概率高度吻合。天气预报员通过持续的预测-反馈循环实现了精准校准，而政治评论员越自信准确率越低。"
+  },
+  {
+    "slug": "conservation-of-energy",
+    "title": "能量守恒",
+    "english": "Conservation of Energy",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "能量守恒定律的商业表达就是没有免费午餐——从庞氏骗局到高收益理财产品，所有声称无中生有创造价值的方案都违反了宇宙最基本的物理定律。"
+  },
+  {
+    "slug": "corporate-culture-as-asset",
+    "title": "企业文化作为资产",
+    "english": "Corporate Culture as Asset",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "大多数管理成本的本质是不信任成本——正确的文化用共享价值观替代外部控制系统，是最难复制、最持久也最被低估的竞争优势。"
+  },
+  {
+    "slug": "correlation-is-not-causation",
+    "title": "相关不等于因果",
+    "english": "Correlation is not Causation",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "两个变量的统计相关性不能证明因果关系，可能是反向因果、共同原因或纯巧合，理解这四种可能性是正确解读数据和避免决策错误的起点。"
+  },
+  {
+    "slug": "critical-mass-phase-transitions-in-systems",
+    "title": "临界质量与相变",
+    "english": "Critical Mass & Phase Transitions in Systems",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略"
+    ],
+    "description": "水在99度时还是水但101度变成了完全不同的蒸汽——世界上最重要的变化总是出人意料，因为迹象是线性的而变化是非线性的质的跃迁。"
+  },
+  {
+    "slug": "darwinian-objectivity",
+    "title": "达尔文式客观态度",
+    "english": "Darwinian Objectivity",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "达尔文养成铁律：遇到与理论矛盾的事实必须立即记录，因为大脑会自动遗忘不利证据。芒格从中提取出一种对自身思维过程的深刻不信任和系统性自我纠偏方法。"
+  },
+  {
+    "slug": "decision-tree-theory",
+    "title": "决策树理论",
+    "english": "Decision Tree Theory",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": "决策树理论通过将复杂决策拆解为概率节点和选择节点，强迫你思考后果的后果，在不确定性中找到期望值最优的路径。"
+  },
+  {
+    "slug": "deferred-revenue-revenue-recognition",
+    "title": "递延收入与收入确认",
+    "english": "Deferred Revenue & Revenue Recognition",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性"
+    ],
+    "description": "收入确认决定企业何时把交易记成收入，一行规则就能制造或拆穿利润幻觉。从安然到瑞幸，理解收入质量是识破财务造假的第一道防线，也是巴菲特看年报的第一组数字。"
+  },
+  {
+    "slug": "delay-effects",
+    "title": "延迟效应",
+    "english": "Delay Effects",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "美联储加息的全面影响需要12到18个月才能显现——因与果之间的时间滞后让人类大脑系统性地误判因果关系，这是长期思维的物理学基础。"
+  },
+  {
+    "slug": "depreciation-amortization",
+    "title": "折旧与摊销",
+    "english": "Depreciation & Amortization",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "折旧与摊销将资产的消耗分摊到其使用寿命中，不同的折旧方法可以让同一家企业呈现截然不同的利润面貌，是理解真实盈利能力的关键。"
+  },
+  {
+    "slug": "discounted-cash-flow",
+    "title": "现金流贴现法",
+    "english": "Discounted Cash Flow",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "现金流贴现法将未来现金流折算为当前价值，是评估一切资产内在价值的基本框架。芒格强调其核心是思想方式而非精确计算。"
+  },
+  {
+    "slug": "disliking-hating-tendency",
+    "title": "讨厌与憎恨倾向",
+    "english": "Disliking/Hating Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "当人讨厌某人或某事时，大脑会自动忽略其优点、放大负面信息，并为维持仇恨而扭曲事实。这种认知扭曲能让投资者错过十倍股。"
+  },
+  {
+    "slug": "disruptive-innovation",
+    "title": "破坏性创新",
+    "english": "Disruptive Innovation",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "在位者在每一步都做出正确决策却通向毁灭——颠覆者从被嘲笑的低端市场起步，沿经验曲线向上攀爬，这就是创新者的窘境。"
+  },
+  {
+    "slug": "double-entry-bookkeeping",
+    "title": "复式记账法",
+    "english": "Double-Entry Bookkeeping",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "复式记账法要求每笔交易同时记录借方和贷方，通过内在的自我校验机制确保账目平衡。芒格称其为人类文明最伟大的发明之一。"
+  },
+  {
+    "slug": "doubt-avoidance-tendency",
+    "title": "避免怀疑倾向",
+    "english": "Doubt-Avoidance Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "个人重大决策与人生规划"
+    ],
+    "description": "大脑天生倾向于尽快消除怀疑、锁定结论，而非在不确定中等待。困惑和压力越大，这种倾向越强——恰恰在最需要深思的时刻最不能容忍怀疑。"
+  },
+  {
+    "slug": "drug-misinfluence-tendency",
+    "title": "化学物质错误影响倾向",
+    "english": "Drug-Misinfluence Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "酒精、毒品等化学物质能直接劫持大脑奖赏系统，摧毁理性判断力，制造出压倒一切的依赖。芒格视其为最能摧毁人生的心理倾向之一。"
+  },
+  {
+    "slug": "emergence",
+    "title": "涌现性",
+    "english": "Emergence",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "风险识别与系统韧性"
+    ],
+    "description": "一滴水不会湿，一只蚂蚁无智能，但数十亿水分子产生湿润、数十万蚂蚁涌现出超级有机体——整体展现出组成部分所不具有的全新属性。"
+  },
+  {
+    "slug": "empiricism",
+    "title": "经验主义",
+    "english": "Empiricism",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "经验主义主张知识源于可观察的证据而非纯粹推理，芒格将这一哲学传统转化为投资决策的操作系统：永远从事实出发，警惕精确的错误。"
+  },
+  {
+    "slug": "entropy",
+    "title": "熵",
+    "english": "Entropy",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "熵即热力学第二定律揭示了宇宙从有序走向无序的基本趋势——花园无人照料必然荒废，维持秩序需要持续投入能量，这是理解组织衰败的底层物理定律。"
+  },
+  {
+    "slug": "envy-jealousy-tendency",
+    "title": "艳羡与妒忌倾向",
+    "english": "Envy/Jealousy Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "学习、复盘与认知提升"
+    ],
+    "description": "嫉妒是所有情绪中最不愿被承认、因此最难防御的一种。它以相对比较为触发器，在意识地下室运作，驱动破坏性决策。巴菲特说驱动世界的不是贪婪而是妒忌。"
+  },
+  {
+    "slug": "evolutionary-arms-race",
+    "title": "进化军备竞赛",
+    "english": "Evolutionary Arms Race",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "进化军备竞赛描述了竞争双方不断升级各自能力但相对关系不变的螺旋，毒蛇与地松鼠的万年对抗揭示了商业竞争中无休止升级的底层逻辑。"
+  },
+  {
+    "slug": "exponential-growth",
+    "title": "指数增长与种群动力学",
+    "english": "Exponential Growth",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "指数增长与种群动力学揭示了J曲线和S曲线的本质——培养皿在第59分钟才半满，理解指数增长的反直觉特性是识别机会与危机的关键。"
+  },
+  {
+    "slug": "externalities",
+    "title": "外部性",
+    "english": "Externalities",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "市场价格只反映买卖双方的成本收益，却遗漏了溢出到第三方的影响——理解外部性是理解政府为什么干预市场以及何时应该干预的钥匙。"
+  },
+  {
+    "slug": "failure-mode-analysis",
+    "title": "故障模式分析",
+    "english": "Failure Mode Analysis",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "挑战者号航天飞机因一个已知的O型环故障被忽视而爆炸——系统性地在事前回答什么可能出错以及出错后会怎样，是工程学最重要的预防性思维工具。"
+  },
+  {
+    "slug": "falsifiability-criterion",
+    "title": "可证伪性标准",
+    "english": "Falsifiability Criterion",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "波普尔提出的划界标准：理论的价值不在于能解释多少东西，而在于排除了多少东西。一个与任何可能观察结果都兼容的理论实际上什么都没说。"
+  },
+  {
+    "slug": "fault-tolerance",
+    "title": "容错设计与优雅降级",
+    "english": "Fault Tolerance",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "Netflix每天故意在生产环境中杀死服务器却无用户感知异常——好的系统不追求永不出错，而是确保出错时功能逐步减少但核心仍然运转。"
+  },
+  {
+    "slug": "fiduciary-duty",
+    "title": "信托责任",
+    "english": "Fiduciary Duty",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "投资决策与资产评估"
+    ],
+    "description": "信托责任要求受托人将他人利益置于自身利益之上，是法律体系中最高等级的义务标准。芒格和巴菲特以身作则，将其视为商业道德的基石。"
+  },
+  {
+    "slug": "first-principles-thinking",
+    "title": "第一性原理思维",
+    "english": "First Principles Thinking",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "把复杂问题简化到最基本的事实层面，然后从那里重新推理，而非依赖类比和惯例。马斯克用此方法将火箭成本降低了98%的行业溢价。"
+  },
+  {
+    "slug": "flywheel-effect",
+    "title": "飞轮效应",
+    "english": "Flywheel Effect",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "贝索斯在餐巾纸上画的循环图成为商业史上最著名的战略草图——飞轮的力量在于每一圈的努力都不会白费，而是存储为下一圈的动能。"
+  },
+  {
+    "slug": "franklins-self-improvement-system",
+    "title": "富兰克林的自我修炼",
+    "english": "Franklin's Self-Improvement System",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "富兰克林用十三条美德清单和数据追踪系统，将品格发展从模糊的道德愿望变成精确的自我迭代工程，深刻启发了芒格的终身自我修炼哲学。"
+  },
+  {
+    "slug": "goodwill-impairment",
+    "title": "商誉及其减值",
+    "english": "Goodwill & Impairment",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "会计商誉是收购溢价的记录，经济商誉则是企业超额盈利能力的真实来源。理解两者的区别是评估收购交易和企业价值的核心能力。"
+  },
+  {
+    "slug": "herding-behavior",
+    "title": "羊群行为",
+    "english": "Herding Behavior",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "市场趋势与宏观判断",
+      "学习、复盘与认知提升"
+    ],
+    "description": "个体在不确定性中放弃独立判断、模仿群体行为，即使与自身分析矛盾。在金融市场中，这种本能成为泡沫和崩盘的系统性放大器。"
+  },
+  {
+    "slug": "immune-system-antifragility",
+    "title": "免疫系统与抗脆弱性",
+    "english": "Immune System & Antifragility",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "免疫系统是抗脆弱性的生物学原型——有些系统不只能承受伤害，而是需要伤害才能变强，疫苗的原理正是通过可控的小伤害换取对大威胁的免疫。"
+  },
+  {
+    "slug": "intellectual-property-law",
+    "title": "知识产权法",
+    "english": "Intellectual Property Law",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "知识产权法通过专利、商标和版权制度，在激励创新与促进知识传播之间寻求平衡，是理解企业护城河和竞争优势的关键法律框架。"
+  },
+  {
+    "slug": "intellectual-property-moats",
+    "title": "知识产权与护城河",
+    "english": "Intellectual Property & Moats",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "苹果向市值远小于自己的高通认输并支付47亿美元和解金——知识产权构建的法律护城河能让小公司对抗巨头，其壁垒高度取决于专利组合的战略布局。"
+  },
+  {
+    "slug": "law-of-large-numbers",
+    "title": "大数定律",
+    "english": "Law of Large Numbers",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "大数定律揭示了样本越大真实规律越清晰的统计本质，解释了为何短期表现无法区分运气与能力，以及赌场和投资中如何利用长期确定性。"
+  },
+  {
+    "slug": "liking-loving-tendency",
+    "title": "喜欢与热爱倾向",
+    "english": "Liking/Loving Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响"
+    ],
+    "description": "当人喜欢或热爱某人、某事物或某想法时，大脑自动启动认知扭曲程序，系统性地过滤负面信息、放大正面信息。爱上一只股票就会失去客观判断力。"
+  },
+  {
+    "slug": "limits-of-extrapolation-nonlinearity",
+    "title": "趋势外推的局限",
+    "english": "Limits of Extrapolation & Nonlinearity",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "人类大脑天生用直线思考，但现实世界充满指数增长、S曲线和突变等非线性现象，将过去趋势简单延伸到未来是代价最高昂的认知陷阱。"
+  },
+  {
+    "slug": "map-is-not-the-territory",
+    "title": "地图不是疆域",
+    "english": "Map is Not the Territory",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "任何对现实的表示——模型、理论、财务报表——都必然是简化，而简化意味着遗漏。2008年金融危机证明，盯着精致的风险模型走路可能一脚踏入深渊。"
+  },
+  {
+    "slug": "marginal-analysis",
+    "title": "边际分析",
+    "english": "Marginal Analysis",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "边际分析的核心是关注下一个单位的增量变化而非总量，这种导数思维解决了水与钻石悖论，也是正确评估商业决策和资源配置的基本功。"
+  },
+  {
+    "slug": "marginal-cost-marginal-revenue",
+    "title": "边际成本与边际收益",
+    "english": "Marginal Cost & Marginal Revenue",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "投资决策与资产评估"
+    ],
+    "description": "只要边际收益大于边际成本就继续生产——这个最强大的经济决策工具同时也是最危险的陷阱，柯达正是死于每一次都正确的边际分析。"
+  },
+  {
+    "slug": "marginal-utility",
+    "title": "边际效用",
+    "english": "Marginal Utility",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "投资决策与资产评估"
+    ],
+    "description": "每多消费一单位商品带来的额外满足感递减，这条神经科学证实的规律解释了钻石与水的悖论，也揭示了定价和消费行为的深层逻辑。"
+  },
+  {
+    "slug": "mental-accounting",
+    "title": "心理账户",
+    "english": "Mental Accounting",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "人们在心理上将金钱划分为不同'账户'，对不同来源和用途的钱执行不同的决策规则，违反了经济学中金钱可替代性的基本原则。"
+  },
+  {
+    "slug": "momentum",
+    "title": "动量与惯性",
+    "english": "Momentum",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "动量与惯性解释了运动中的物体倾向于保持运动的物理定律，柯达明知数码技术却无法转身的案例展示了组织惯性如何将优势变成致命枷锁。"
+  },
+  {
+    "slug": "moral-hazard-legal-view",
+    "title": "道德风险法学视角",
+    "english": "Moral Hazard - Legal View",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "当法律制度（如有限责任、保险、政府救助）将风险后果从决策者身上转移走时，决策者会倾向于承担更大风险，这就是道德风险的制度根源。"
+  },
+  {
+    "slug": "multiplicative-systems",
+    "title": "乘法系统思维",
+    "english": "Multiplicative Systems",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "投资决策与资产评估"
+    ],
+    "description": "乘法系统思维揭示了串联系统的残酷算术——当成功要求每个环节都成功时，总成功率是各环节概率的乘积，衰减速度远超直觉预期。"
+  },
+  {
+    "slug": "narrative-fallacy",
+    "title": "叙事谬误",
+    "english": "Narrative Fallacy",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "人类大脑天生将随机的、多因素的事件编织成简洁连贯的因果故事并深信不疑。这种叙事本能让人在事后解释中看到虚假的因果关系和可预测性。"
+  },
+  {
+    "slug": "niche-differentiation",
+    "title": "利基分化",
+    "english": "Niche Differentiation",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "利基分化通过占据独特的生态位来避免直接竞争，达尔文雀的十三种喙型揭示了商业铁律——与其争夺同一张桌子不如找到属于自己的饭碗。"
+  },
+  {
+    "slug": "nonlinear-consequences",
+    "title": "非线性后果",
+    "english": "Nonlinear Consequences",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "非线性后果揭示了输入与输出之间的非比例关系——泰坦尼克号速度仅增50%但制动距离增125%，人类直觉的线性假设在非线性世界中会导致灾难性误判。"
+  },
+  {
+    "slug": "normal-accidents",
+    "title": "正常事故",
+    "english": "Normal Accidents",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "三里岛核事故不是因为某人犯了愚蠢错误，而是系统太复杂太紧耦合——对于复杂且紧耦合的系统，灾难性事故不是异常而是统计必然。"
+  },
+  {
+    "slug": "normal-non-normal-distributions",
+    "title": "正态与非正态分布",
+    "english": "Normal & Non-Normal Distributions",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "投资决策与资产评估"
+    ],
+    "description": "正态分布与肥尾分布的本质区别决定了极端事件的发生概率，LTCM的崩溃警示我们不能用钟形曲线的假设来建模真实世界的风险。"
+  },
+  {
+    "slug": "occams-razor",
+    "title": "奥卡姆剃刀",
+    "english": "Occam's Razor",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "在解释同一现象的多个假说中应优先选择假设最少的那个。如无必要勿增实体——这条七百年前的原则指引彭齐亚斯和威尔逊发现了宇宙微波背景辐射。"
+  },
+  {
+    "slug": "off-balance-sheet-contingent-liabilities",
+    "title": "表外负债与或有负债",
+    "english": "Off-Balance-Sheet & Contingent Liabilities",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "风险识别与系统韧性"
+    ],
+    "description": "表外负债是不出现在资产负债表上的真实义务，或有负债是尚未确定的潜在损失。安然案证明忽视它们可以让千亿帝国在一夜之间崩塌。"
+  },
+  {
+    "slug": "opportunity-cost-in-accounting",
+    "title": "机会成本会计视角",
+    "english": "Opportunity Cost in Accounting",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": "传统会计只记录已发生的交易，却忽略了放弃的最佳替代方案的价值。芒格认为不考虑机会成本的决策注定是糟糕的决策。"
+  },
+  {
+    "slug": "overoptimism-tendency",
+    "title": "过度乐观倾向",
+    "english": "Overoptimism Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "人类天生倾向于高估积极结果的概率、低估消极结果的概率，这种神经层面的乐观滤镜导致规划谬误和系统性的风险低估。"
+  },
+  {
+    "slug": "parasitism-mutualism",
+    "title": "寄生与共生",
+    "english": "Parasitism & Mutualism",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "寄生与共生是两种截然不同的关系模式——互利共生让双方都更强大、关系更持久，而寄生关系终将耗尽宿主，芒格以Costco为典范阐释商业中的共生智慧。"
+  },
+  {
+    "slug": "path-dependence-lock-in",
+    "title": "路径依赖与锁定",
+    "english": "Path Dependence & Lock-in",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "为什么明明 Dvorak 键盘更快，全世界还在用 QWERTY？路径依赖与锁定效应：一次偶然选择如何通过网络效应和互补资产被锁死成不可逆的标准。看穿技术选择、平台战争、个人路径的真实机制。"
+  },
+  {
+    "slug": "permutations-and-combinations",
+    "title": "排列组合原理",
+    "english": "Permutations and Combinations",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "投资决策与资产评估"
+    ],
+    "description": "排列组合原理揭示了多环节串联系统的概率衰减效应——当一个计划需要多个独立环节全部成功时，整体成功率远低于任何单一环节的成功率。"
+  },
+  {
+    "slug": "phase-transitions",
+    "title": "相变与临界现象",
+    "english": "Phase Transitions",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "相变揭示了系统在临界点发生突然、不连续跳跃的本质——从99度到100度只多了一度但水变成了蒸汽，商业和社会中的剧变同样遵循这种非渐进逻辑。"
+  },
+  {
+    "slug": "power-laws",
+    "title": "幂律分布",
+    "english": "Power Laws",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "幂律分布揭示了极少数事件贡献绝大部分影响的不均匀世界——从风投回报到地震能量，理解帕累托法则背后的数学结构是正确配置资源的关键。"
+  },
+  {
+    "slug": "pragmatism",
+    "title": "实用主义",
+    "english": "Pragmatism",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "实用主义检验观念的方式不是看理论是否优美，而是看它在实践中造成什么具体差异。芒格是这一美国哲学传统最忠实的践行者之一。"
+  },
+  {
+    "slug": "premortems",
+    "title": "极端情景模拟",
+    "english": "Premortems",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "学习、复盘与认知提升"
+    ],
+    "description": "在项目启动前预设'已经失败'，然后逆推失败原因，可以释放被共识压力抑制的风险洞察。芒格的逆向思维本质上就是贯穿终生的事前验尸。"
+  },
+  {
+    "slug": "price-discrimination",
+    "title": "价格歧视",
+    "english": "Price Discrimination",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "对不同类型消费者收取不同价格，企业同时实现了利润最大化和让更多人买得起——这是现代商业中最普遍也最被误解的定价策略。"
+  },
+  {
+    "slug": "principal-agent-solutions",
+    "title": "委托代理问题的管理解法",
+    "english": "Principal-Agent Solutions",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "大多数代理问题不是品格问题而是制度设计问题——芒格用股权激励、文化约束和信息透明三种手段实践了数十年的代理问题解决实验。"
+  },
+  {
+    "slug": "prisoners-dilemma",
+    "title": "囚徒困境",
+    "english": "Prisoner's Dilemma",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响"
+    ],
+    "description": "每个参与者做出对自己最有利的选择，最终集体结果却对所有人最差——航空业价格战到军备竞赛都遵循这一令人沮丧的博弈结构。"
+  },
+  {
+    "slug": "quality-control",
+    "title": "质量控制",
+    "english": "Quality Control",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "德明用八个晚上的课程改变了日本制造业的命运——20个环节各95%合格率最终只有36%的产品合格，质量必须在过程中控制而非终端检验。"
+  },
+  {
+    "slug": "reason-respecting-tendency",
+    "title": "重视理由倾向",
+    "english": "Reason-Respecting Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "人类天生倾向于接受附带理由的请求，即使理由毫无意义。兰格的复印机实验证明，'因为'二字本身就能触发服从，这既是文明基础也是可被利用的漏洞。"
+  },
+  {
+    "slug": "red-queen-effect",
+    "title": "红皇后效应",
+    "english": "Red Queen Effect",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "红皇后效应揭示了竞争环境中必须不断进化才能维持现有地位的残酷现实——物种存在时间越久并不意味着越安全，停止奔跑就是开始落后。"
+  },
+  {
+    "slug": "regulatory-capture",
+    "title": "监管俘获",
+    "english": "Regulatory Capture",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "风险识别与系统韧性"
+    ],
+    "description": "监管俘获指本应保护公众利益的监管机构反被被监管行业所控制，波音737 MAX空难等案例揭示了这一制度失灵的致命后果。"
+  },
+  {
+    "slug": "rent-seeking",
+    "title": "寻租行为",
+    "english": "Rent-Seeking",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "当社会中最聪明的大脑被引导去影响规则而非改善产品时，资源从创造价值转向争夺现有价值，整个文明的根基正在被侵蚀。"
+  },
+  {
+    "slug": "rent-seeking-legal-view",
+    "title": "寻租行为法学视角",
+    "english": "Rent-Seeking - Legal View",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "寻租行为是利用法律和制度漏洞获取不劳而获的利益，而非通过创造价值获利。芒格尖锐批判这种将聪明才智用在错误地方的社会现象。"
+  },
+  {
+    "slug": "resonance",
+    "title": "共振",
+    "english": "Resonance",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "谈判、说服与人际影响"
+    ],
+    "description": "共振揭示了当外力频率与系统固有频率吻合时能量会被极度放大的物理机制——74名士兵齐步走就能摧毁一座铁桥，关键不在力量大小而在频率匹配。"
+  },
+  {
+    "slug": "rise-and-fall-of-empires",
+    "title": "帝国兴衰周期",
+    "english": "Rise and Fall of Empires",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "市场趋势与宏观判断"
+    ],
+    "description": "从罗马帝国到通用汽车，帝国的毁灭几乎从不来自外部，而是来自内部腐蚀。当繁荣让人们忘记繁荣是怎么来的，衰败就已经开始。"
+  },
+  {
+    "slug": "sample-size-statistical-significance",
+    "title": "样本量与统计显著性",
+    "english": "Sample Size & Statistical Significance",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "样本量是区分信号与噪声的分辨率，人类天生倾向于从小样本中过度推断规律，理解统计显著性能避免将运气误认为能力。"
+  },
+  {
+    "slug": "scale-effects-management-perspective",
+    "title": "规模效应管理视角",
+    "english": "Scale Effects - Management Perspective",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "从采购优势到品牌规模效应，芒格在南加州大学演讲中系统拆解了规模如何在管理维度上从盟友变成敌人的六种机制。"
+  },
+  {
+    "slug": "scaling-effects-diseconomies-in-engineering",
+    "title": "规模效应与反效应",
+    "english": "Scaling Effects & Diseconomies in Engineering",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "伽利略发现蚂蚁不能等比放大到大象尺寸——平方立方定律决定了放大和缩小从来不是简单的等比例变化，规模改变时系统特性以不同速率变化。"
+  },
+  {
+    "slug": "seamless-web-of-deserved-trust",
+    "title": "值得信赖的无缝网络",
+    "english": "Seamless Web of Deserved Trust",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "伯克希尔总部30个人管理39万名员工——芒格和巴菲特用信任网络替代了层级控制，证明值得信赖的人之间的相互承诺是最高效的管理方式。"
+  },
+  {
+    "slug": "self-organized-criticality",
+    "title": "自组织临界性",
+    "english": "Self-Organized Criticality",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "沙堆会自发演化到临界状态，每添一粒沙都可能引发任意规模的雪崩——从地震到金融崩盘，灾难性大事件与日常小波动有完全相同的触发机制。"
+  },
+  {
+    "slug": "separation-of-powers",
+    "title": "权力分立与制衡",
+    "english": "Separation of Powers",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "权力分立与制衡基于对人性弱点的深刻不信任，通过将权力分散到相互制约的机构中，防止任何个人或集团垄断决策，是制度设计的基石。"
+  },
+  {
+    "slug": "signaling-theory",
+    "title": "信号理论",
+    "english": "Signaling Theory",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 4,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "为什么孔雀长尾巴、人类炫学历——本质都是一回事？信号理论的核心：可信的信号必须代价高昂到无法伪造。从生物学到企业品牌、从奢侈品到广告，看透价格背后的真正信息。"
+  },
+  {
+    "slug": "simple-pain-avoiding-psychological-denial",
+    "title": "避免痛苦的心理否认",
+    "english": "Simple, Pain-Avoiding Psychological Denial",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "风险识别与系统韧性"
+    ],
+    "description": "当现实造成的心理痛苦超过承受阈值时，大脑会自动扭曲对现实的感知使其变得可忍受。这种否认不是选择，而是无意识的自动保护机制。"
+  },
+  {
+    "slug": "simplicity-in-business",
+    "title": "简单化在商业中的应用",
+    "english": "Simplicity in Business",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "Costco用3700个SKU击败了12万个SKU的沃尔玛——复杂性的危害是指数级的组合爆炸，刻意做减法的企业往往更强大。"
+  },
+  {
+    "slug": "single-point-of-failure",
+    "title": "单点故障",
+    "english": "Single Point of Failure",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "一条错误命令瘫痪半个互联网——当整个系统的存亡取决于一个不可替代的环节时，那个环节的任何闪失都会转化为系统级灾难。"
+  },
+  {
+    "slug": "sit-on-your-ass-investing",
+    "title": "坐等投资法",
+    "english": "Sit-on-Your-Ass Investing",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": "坐等投资法的核心是买入优秀企业后长期持有、什么都不做。逻辑最简单、回报最惊人、执行却最困难，因为它要求对抗人类活动的本能。"
+  },
+  {
+    "slug": "socratic-method",
+    "title": "苏格拉底式追问",
+    "english": "Socratic Method",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "谈判、说服与人际影响"
+    ],
+    "description": "苏格拉底式追问通过层层深入的连续提问，暴露思维中隐含的假设与矛盾，迫使思考从表层滑行切换到深层开掘，是发现根因的核心工具。"
+  },
+  {
+    "slug": "stoicism",
+    "title": "斯多葛主义",
+    "english": "Stoicism",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "斯多葛主义的核心是控制的二分法：区分你能控制的和不能控制的，把全部精力集中在前者上。芒格将此内化为投资和人生的理性操作系统。"
+  },
+  {
+    "slug": "stress-influence-tendency",
+    "title": "压力影响倾向",
+    "english": "Stress-Influence Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "轻度压力可改善表现，但极端压力会摧毁后天建立的认知结构，让大脑回退到原始反应模式。巴甫洛夫的洪水实验揭示了压力对条件反射的毁灭性重置。"
+  },
+  {
+    "slug": "sunk-cost-economic-perspective",
+    "title": "沉没成本（经济视角）",
+    "english": "Sunk Cost - Economic Perspective",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "已经发生且不可回收的成本不应影响未来决策——协和飞机耗资120亿美元的惨痛教训证明，这可能是最简单也最难执行的经济学原则。"
+  },
+  {
+    "slug": "sunk-cost-vs-marginal-cost",
+    "title": "沉没成本vs边际成本",
+    "english": "Sunk Cost vs. Marginal Cost",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "沉没成本是已经花掉且无法收回的钱，边际成本是多做一单位的增量成本。理性决策应只看边际成本而忽略沉没成本，但人性使这极难做到。"
+  },
+  {
+    "slug": "superposition-and-emergence",
+    "title": "叠加原理与涌现",
+    "english": "Superposition and Emergence",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "市场趋势与宏观判断"
+    ],
+    "description": "叠加原理描述独立输入的线性相加，涌现则揭示整体大于部分之和的非线性现象——芒格的lollapalooza效应正是多种心理倾向涌现出极端后果的典型。"
+  },
+  {
+    "slug": "supply-and-demand",
+    "title": "供给与需求",
+    "english": "Supply and Demand",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "供给与需求是理解价格行为的起点，面对任何价格变动首先要问是供给变了还是需求变了——这个简单框架能帮你避免在极端价格面前做出愚蠢决策。"
+  },
+  {
+    "slug": "surfing-model",
+    "title": "冲浪模型",
+    "english": "Surfing Model",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "在技术变革的大浪形成之初就踏上冲浪板，乘着指数级增长的正反馈循环获得巨大优势——比尔·盖茨和微软就是冲浪模型的经典范本。"
+  },
+  {
+    "slug": "technology-help-vs-destroy",
+    "title": "技术对企业的利弊",
+    "english": "Technology: Help vs. Destroy",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "商业创新与竞争战略"
+    ],
+    "description": "更好的织布机并没有让织布商更有钱——当技术进步被竞争对手同步复制时，效率提升全部以降价形式转移给了消费者而非转化为利润。"
+  },
+  {
+    "slug": "theory-of-constraints",
+    "title": "瓶颈理论",
+    "english": "Theory of Constraints",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "整支队伍的行进速度永远等于最慢那个人的速度——高德拉特的约束理论揭示了系统优化的反直觉真相：改善非瓶颈环节对整体毫无帮助。"
+  },
+  {
+    "slug": "thought-experiments",
+    "title": "思想实验",
+    "english": "Thought Experiments",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 4,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "个人重大决策与人生规划"
+    ],
+    "description": "在大脑中创造精确的假想场景并严格追踪其逻辑后果，不需要实际实验就能揭示认知盲区。爱因斯坦追赶光束的思想实验催生了相对论。"
+  },
+  {
+    "slug": "tight-coupling-loose-coupling",
+    "title": "紧耦合与松耦合",
+    "english": "Tight Coupling & Loose Coupling",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "同样的地震海啸下福岛核电站堆芯熔毁而120公里外的女川核电站安然无恙——差别不在运气而在系统的耦合度，紧耦合系统留给人类干预的时间几乎为零。"
+  },
+  {
+    "slug": "too-hard-pile",
+    "title": "太难堆",
+    "english": "Too Hard Pile",
+    "discipline": "invest",
+    "disciplineName": "投资学与金融学",
+    "importance": 4,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "芒格的'太难堆'是一种决策纪律：果断将超出理解能力的问题扔进太难堆不予处理，把精力集中在少数真正能看懂的机会上。"
+  },
+  {
+    "slug": "trade-off-analysis",
+    "title": "权衡分析",
+    "english": "Trade-off Analysis",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "投资决策与资产评估"
+    ],
+    "description": "SpaceX在可回收与一次性火箭之间的抉择——承认取舍的必然性而不是幻想存在无代价的完美方案，是成熟决策者与天真思考者的根本分界线。"
+  },
+  {
+    "slug": "tragedy-of-the-commons",
+    "title": "公地悲剧",
+    "english": "Tragedy of the Commons",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 4,
+    "scenarios": [
+      "团队管理与组织决策",
+      "市场趋势与宏观判断"
+    ],
+    "description": "当资源归集体所有而收益归个人时，每个理性个体的最优选择会导致集体灾难。制度设计的核心挑战是通过规则将个体激励与集体利益对齐。"
+  },
+  {
+    "slug": "transaction-costs",
+    "title": "交易成本",
+    "english": "Transaction Costs",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 4,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "科斯发现市场和企业是两种替代的经济组织方式，它们的边界由交易成本决定——理解交易成本就能预判哪些行业会被技术变革颠覆。"
+  },
+  {
+    "slug": "use-it-or-lose-it-tendency",
+    "title": "不用就忘倾向",
+    "english": "Use-It-or-Lose-It Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 4,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "所有技能若不被定期使用都会退化，这不是心理弱点而是大脑资源管理系统的正常运作。突触修剪机制会主动回收不再使用的神经连接。"
+  },
+  {
+    "slug": "adaptation-path-dependence",
+    "title": "适应性与路径依赖",
+    "english": "Adaptation & Path Dependence",
+    "discipline": "complex",
+    "disciplineName": "复杂系统与决策科学",
+    "importance": 3,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "市场趋势与宏观判断"
+    ],
+    "description": "MS-DOS击败技术更优的CP/M源于一系列偶然事件被递增回报放大为四十年垄断——在复杂适应系统中，历史不是背景而是原因。"
+  },
+  {
+    "slug": "adaptive-radiation",
+    "title": "适应性辐射",
+    "english": "Adaptive Radiation",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 3,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "适应性辐射是单一祖先物种在新环境中快速分化为多种形态以占据不同生态位的进化过程，商业世界中同样的模式可在几年内上演。"
+  },
+  {
+    "slug": "basics-of-contract-law",
+    "title": "合同法基本原则",
+    "english": "Basics of Contract Law",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 3,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "团队管理与组织决策"
+    ],
+    "description": "合同法将非正式的承诺转化为可执行的法律义务，其核心原则——合意、对价、善意履行——构成一切商业交易的底层基础设施。"
+  },
+  {
+    "slug": "biological-redundancy",
+    "title": "生物冗余设计",
+    "english": "Biological Redundancy",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 3,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "生物冗余设计是三十亿年进化对不确定性的终极回应——你有两个肾不是浪费而是生存智慧，安全边际的本质就是为未知风险留出余量。"
+  },
+  {
+    "slug": "bottleneck-effect-founder-effect",
+    "title": "瓶颈效应与创始人效应",
+    "english": "Bottleneck Effect & Founder Effect",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 3,
+    "scenarios": [
+      "团队管理与组织决策",
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "瓶颈效应与创始人效应揭示了种群经历急剧缩小后基因多样性被永久刻印的规律，多巴火山事件解释了为何全人类的基因差异远小于一群黑猩猩。"
+  },
+  {
+    "slug": "consequentialism-vs-deontology",
+    "title": "后果主义vs义务论",
+    "english": "Consequentialism vs Deontology",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 3,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "团队管理与组织决策"
+    ],
+    "description": "后果主义以结果判断行为的道德价值，义务论则坚持有些规则不论结果都须遵守。芒格试图同时对得起边沁和康德，在商业决策中平衡两者。"
+  },
+  {
+    "slug": "convergent-evolution",
+    "title": "趋同进化",
+    "english": "Convergent Evolution",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 3,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "趋同进化表明不同起点在相似环境压力下会演化出相似的解决方案——眼睛独立进化了40多次，因为物理定律约束下的最优解往往趋于一致。"
+  },
+  {
+    "slug": "design-for-maintainability",
+    "title": "可维护性设计",
+    "english": "Design for Maintainability",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 3,
+    "scenarios": [
+      "团队管理与组织决策",
+      "风险识别与系统韧性"
+    ],
+    "description": "F-104战斗机和平时期坠毁比战斗中被击落还多，根源是维护性设计的灾难——系统的长期价值不取决于最佳状态下能做什么，而取决于维护修复的难度。"
+  },
+  {
+    "slug": "enlightenment-rationalism",
+    "title": "启蒙运动的理性传统",
+    "english": "Enlightenment Rationalism",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 3,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "启蒙运动确立了理性优先于权威、信念须经验证检验、怀疑是美德三大原则，构成芒格整个思维体系的底层操作系统。"
+  },
+  {
+    "slug": "equilibrium-and-far-from-equilibrium",
+    "title": "均衡与远离均衡态",
+    "english": "Equilibrium and Far-from-Equilibrium",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 3,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "团队管理与组织决策"
+    ],
+    "description": "均衡是死亡、远离均衡是生命——生命体通过持续摄入低熵能量维持有序结构，普利高津的耗散结构理论揭示了企业和经济体维持活力的深层逻辑。"
+  },
+  {
+    "slug": "evolutionary-epistemology",
+    "title": "进化认识论",
+    "english": "Evolutionary Epistemology",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 3,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "人类知识的进步遵循与生物进化相同的逻辑：新思想如基因突变般出现，经受现实检验的选择压力，在残酷竞争中逐渐逼近真理。"
+  },
+  {
+    "slug": "feynman-technique",
+    "title": "费曼技巧",
+    "english": "Feynman Technique",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "能否用简单语言解释一件事，是检验是否真正理解它的唯一可靠方法。费曼技巧通过'以教代学'暴露被动识别与主动生成之间的认知鸿沟。"
+  },
+  {
+    "slug": "five-ws-principle",
+    "title": "五何原则",
+    "english": "Five W's Principle",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "传达任何信息必须说明何人因何故在何时何地做了何事。这条卡尔·布劳恩的铁律对模糊性零容忍，因为模糊的语言几乎总是模糊思维的症状。"
+  },
+  {
+    "slug": "half-life",
+    "title": "半衰期",
+    "english": "Half-Life",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 3,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "半衰期揭示了事物按固定比例指数衰减的规律——从药物浓度到知识过时，不同事物的持久性差异巨大，聪明人应把资源投入半衰期最长的事物。"
+  },
+  {
+    "slug": "hanlons-razor",
+    "title": "汉隆剃刀",
+    "english": "Hanlon's Razor",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "永远不要把能用愚蠢充分解释的事归咎于恶意。从概率角度看，犯错是人类默认状态，而蓄意的恶意需要动机、能力和机会的精确配合。"
+  },
+  {
+    "slug": "historical-contingency-path-dependence",
+    "title": "历史偶然性与路径依赖",
+    "english": "Historical Contingency & Path Dependence",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 3,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "个人重大决策与人生规划"
+    ],
+    "description": "历史的走向不由内在必然性决定，而在关键节点受偶然事件深刻影响；一旦发生便锁定此后的发展路径，对投资和决策有重大启示。"
+  },
+  {
+    "slug": "inventory-valuation-methods",
+    "title": "存货计价方法",
+    "english": "Inventory Valuation Methods",
+    "discipline": "accounting",
+    "disciplineName": "会计学",
+    "importance": 3,
+    "scenarios": [
+      "投资决策与资产评估"
+    ],
+    "description": "先进先出与后进先出等存货计价方法的选择，可以让完全相同的企业呈现截然不同的利润，尤其在通胀环境下差异巨大，是财务分析的关键盲区。"
+  },
+  {
+    "slug": "iteration-prototyping",
+    "title": "迭代与原型",
+    "english": "Iteration & Prototyping",
+    "discipline": "eng",
+    "disciplineName": "工程学",
+    "importance": 3,
+    "scenarios": [
+      "商业创新与竞争战略",
+      "团队管理与组织决策"
+    ],
+    "description": "SpaceX四次发射三次失败后改写了航天经济学，而NASA的SLS十一年230亿美元才完成一次发射——迭代开发承认你无法在动手前完全理解问题。"
+  },
+  {
+    "slug": "kantian-fairness-tendency",
+    "title": "康德式公平倾向",
+    "english": "Kantian Fairness Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 3,
+    "scenarios": [
+      "团队管理与组织决策",
+      "谈判、说服与人际影响"
+    ],
+    "description": "人类天生期待公平的规则，并愿意为惩罚不公平行为承受远超理性计算的代价。这种刻在神经回路中的公平直觉深刻影响商业交易和组织管理。"
+  },
+  {
+    "slug": "lindy-effect",
+    "title": "林迪效应",
+    "english": "Lindy Effect",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 3,
+    "scenarios": [
+      "投资决策与资产评估",
+      "个人重大决策与人生规划"
+    ],
+    "description": "对于不易腐烂的事物，预期剩余寿命与已存在时间成正比——时间是最严苛的筛选器，存活本身就是最有价值的信息。"
+  },
+  {
+    "slug": "negligence-vs-strict-liability",
+    "title": "过失与严格责任",
+    "english": "Negligence vs. Strict Liability",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 3,
+    "scenarios": [
+      "风险识别与系统韧性",
+      "团队管理与组织决策"
+    ],
+    "description": "过失责任要求证明被告未尽合理注意义务，严格责任则不论是否有过错均须担责。两种归责模式深刻影响企业的风险管理和产品安全决策。"
+  },
+  {
+    "slug": "network-theory",
+    "title": "网络理论",
+    "english": "Network Theory",
+    "discipline": "math",
+    "disciplineName": "数学与统计学",
+    "importance": 3,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "网络理论研究节点之间的连接模式如何决定系统行为，从六度分隔到无标度网络，揭示了信息传播、系统韧性和商业竞争格局的隐藏结构。"
+  },
+  {
+    "slug": "physics-envy",
+    "title": "物理学妒忌",
+    "english": "Physics Envy",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "把适用于物理世界的精确方法论不加修正地移植到人类社会系统中，是一种致命的类比错误。LTCM用物理学般的数学模型交易，却遭遇了'不可能'的崩溃。"
+  },
+  {
+    "slug": "pluralistic-ignorance",
+    "title": "多数无知与从众谬误",
+    "english": "Pluralistic Ignorance",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "学习、复盘与认知提升"
+    ],
+    "description": "每个人私下都不相信某件事，但以为其他人相信，于是都假装相信——群体的公开行为可以与每个个体的真实想法完全相反。皇帝新衣效应无处不在。"
+  },
+  {
+    "slug": "precedent",
+    "title": "先例原则",
+    "english": "Precedent",
+    "discipline": "law",
+    "disciplineName": "法学与政治学",
+    "importance": 3,
+    "scenarios": [
+      "学习、复盘与认知提升",
+      "市场趋势与宏观判断"
+    ],
+    "description": "先例原则要求法官遵循此前已确立的判决，以确保法律的可预测性和一致性。这一原则在商业和投资决策中同样提供了稳定性与路径依赖的双刃剑效应。"
+  },
+  {
+    "slug": "principle-of-least-energy",
+    "title": "最小能量原理",
+    "english": "Principle of Least Energy",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 3,
+    "scenarios": [
+      "团队管理与组织决策",
+      "个人重大决策与人生规划"
+    ],
+    "description": "最小能量原理揭示了自然界从光的路径到河流走向都倾向于选择消耗最少能量的路径，理解这一宇宙基本倾向有助于预测系统行为和设计高效策略。"
+  },
+  {
+    "slug": "punctuated-equilibrium",
+    "title": "间断均衡",
+    "english": "Punctuated Equilibrium",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 3,
+    "scenarios": [
+      "市场趋势与宏观判断",
+      "商业创新与竞争战略"
+    ],
+    "description": "间断均衡颠覆了进化渐进主义的传统图景——化石记录显示物种在长期稳定后突然剧变，进化不是平滑斜坡而是被短暂跃升打断的长长阶梯。"
+  },
+  {
+    "slug": "regulation-as-moat",
+    "title": "监管作为护城河",
+    "english": "Regulation as Moat",
+    "discipline": "mgmt",
+    "disciplineName": "管理学与商业",
+    "importance": 3,
+    "scenarios": [
+      "企业竞争力与商业模式分析"
+    ],
+    "description": "对在位者来说监管不是负担而是城墙——合规成本的不对称性、牌照稀缺性和制度惯性使监管护城河往往比市场竞争形成的护城河更持久。"
+  },
+  {
+    "slug": "repeat-what-works",
+    "title": "重复有效的行为",
+    "english": "Repeat What Works",
+    "discipline": "meta",
+    "disciplineName": "元认知与思维方法论",
+    "importance": 3,
+    "scenarios": [
+      "学习、复盘与认知提升"
+    ],
+    "description": "自然界最古老的优化算法：有效的行为被保留和重复，无效的被淘汰。芒格认为其力量和危险都被严重低估——过度重复会导致路径依赖和创新停滞。"
+  },
+  {
+    "slug": "search-costs",
+    "title": "搜寻成本",
+    "english": "Search Costs",
+    "discipline": "econ",
+    "disciplineName": "微观经济学",
+    "importance": 3,
+    "scenarios": [
+      "企业竞争力与商业模式分析",
+      "商业创新与竞争战略"
+    ],
+    "description": "获取信息本身需要付出代价，当继续搜寻的边际收益低于搜寻成本时理性选择就是停止——这解释了价格差异、品牌溢价和中介存在的经济逻辑。"
+  },
+  {
+    "slug": "senescence-misinfluence-tendency",
+    "title": "衰老错误影响倾向",
+    "english": "Senescence-Misinfluence Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 3,
+    "scenarios": [
+      "个人重大决策与人生规划",
+      "学习、复盘与认知提升"
+    ],
+    "description": "衰老带来的认知衰退虽不可避免，但持续的智力活动可显著延缓。芒格与巴菲特的终身学习实践证明，用进废退是对抗认知衰老的最有效策略。"
+  },
+  {
+    "slug": "survivorship-bias-historical-perspective",
+    "title": "生存者偏差（历史视角）",
+    "english": "Survivorship Bias - Historical Perspective",
+    "discipline": "history",
+    "disciplineName": "历史学与哲学",
+    "importance": 3,
+    "scenarios": [
+      "投资决策与资产评估",
+      "学习、复盘与认知提升"
+    ],
+    "description": "我们看到的历史由幸存者书写、关于幸存者、为幸存者服务。那些未能幸存的人、物、制度从记录中消失，系统性扭曲了我们对过去的理解。"
+  },
+  {
+    "slug": "tipping-moment",
+    "title": "倾覆力矩",
+    "english": "Tipping Moment",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 3,
+    "scenarios": [
+      "风险识别与系统韧性"
+    ],
+    "description": "倾覆力矩描述了系统重心越过支撑点后从可挽救变为不可挽救的精确瞬间，雷曼兄弟的倒塌揭示了企业和组织中同样存在这个不可逆转折点。"
+  },
+  {
+    "slug": "twaddle-tendency",
+    "title": "废话倾向",
+    "english": "Twaddle Tendency",
+    "discipline": "psych",
+    "disciplineName": "心理学",
+    "importance": 3,
+    "scenarios": [
+      "谈判、说服与人际影响",
+      "学习、复盘与认知提升"
+    ],
+    "description": "人类在没有有价值信息可传递时仍会产出大量言语，如同蜜蜂在无法描述方位时跳出杂乱无意义的舞蹈。废话会驱逐有价值的信息并制造虚假成就感。"
+  },
+  {
+    "slug": "viscosity-friction",
+    "title": "粘滞性与摩擦力",
+    "english": "Viscosity & Friction",
+    "discipline": "physics",
+    "disciplineName": "物理学与化学",
+    "importance": 3,
+    "scenarios": [
+      "团队管理与组织决策",
+      "商业创新与竞争战略"
+    ],
+    "description": "粘滞性与摩擦力是流体和固体中抵抗运动的隐性力量，它们在商业中对应着制度惰性、转换成本和交易摩擦，决定了变革的实际难度远超理论预期。"
+  },
+  {
+    "slug": "epigenetics",
+    "title": "表观遗传学",
+    "english": "Epigenetics",
+    "discipline": "bio",
+    "disciplineName": "生物学与进化论",
+    "importance": 2,
+    "scenarios": [
+      "个人重大决策与人生规划"
+    ],
+    "description": "表观遗传学揭示了不改变DNA序列本身、环境也能改变基因表达方式且这种改变可以遗传的深刻事实，荷兰饥荒的跨代效应是其经典案例。"
+  }
+]

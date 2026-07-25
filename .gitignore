@@ -15,3 +15,7 @@ content/bloggers/_inbox/
 content/bloggers_original/
 tsconfig.tsbuildinfo
 .agently-home/
+tmp/
+.cache/
+.codebuddy/
+.trae/

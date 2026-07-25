@@ -4,12 +4,15 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Brain, BookOpen, ChevronRight } from 'lucide-react'
 import type { Person, RelatedPerson } from '@/lib/people'
+import type { ModelMeta } from '@/lib/models'
 
 interface MungerContentProps {
   person: Person
   relatedPeople: RelatedPerson[]
   talksCount: number
   qaCount: number
+  modelGroups?: Array<{ id: string; name: string; icon: string; models: ModelMeta[] }>
+  modelStats?: { total: number; disciplines: number; scenarios: number; core: number }
 }
 
 const navSections = [
@@ -53,30 +56,16 @@ const categories = [
   { name: '宏观经济', count: 1, color: 'gray' },
 ]
 
-const mentalModels = [
-  {
-    title: '多元思维框架',
-    description: '跨学科思维，避免锤子思维',
-    keyPoints: ['掌握多学科基本原理', '避免单一思维模式', '从多个角度分析问题'],
-  },
-  {
-    title: '逆向思维',
-    description: '想要成功，先想如何失败',
-    keyPoints: ['先考虑风险而非收益', '避免灾难性错误', '从反面思考问题'],
-  },
-  {
-    title: '人类误判心理学',
-    description: '25个心理倾向影响决策',
-    keyPoints: ['确认偏误', '从众心理', '损失厌恶'],
-  },
-  {
-    title: '排列组合',
-    description: '用数学思维分析商业',
-    keyPoints: ['概率思维', '期望值计算', '决策树分析'],
-  },
-]
+function ImportanceDots({ value }: { value: number }) {
+  return (
+    <span className="text-xs text-primary tracking-tighter" title={`重要度 ${value}/5`}>
+      {'●'.repeat(value)}
+      <span className="opacity-25">{'●'.repeat(Math.max(0, 5 - value))}</span>
+    </span>
+  )
+}
 
-export default function MungerContent({ person, relatedPeople, talksCount, qaCount }: MungerContentProps) {
+export default function MungerContent({ person, relatedPeople, talksCount, qaCount, modelGroups, modelStats }: MungerContentProps) {
   const [activeNav, setActiveNav] = useState('overview')
 
   const scrollToSection = (id: string) => {
@@ -205,31 +194,51 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
         </div>
 
         <div className="mb-8">
-          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-6 flex items-center gap-3">
-            <Brain className="w-5 h-5 text-primary" />
-            核心思维模型
-          </h3>
-          <div className="space-y-4">
-            {mentalModels.map((model) => (
-              <div
-                key={model.title}
-                className="bg-gradient-to-r from-primary/5 to-white dark:from-primary/10 dark:to-dark-card border border-primary/10 rounded-xl p-5 hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h4 className="font-semibold text-text dark:text-dark-text text-lg">{model.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-400 mt-1">{model.description}</p>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-primary-light" />
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {model.keyPoints.map((point) => (
-                    <span
-                      key={point}
-                      className="text-xs bg-white dark:bg-dark-card border border-primary/20 text-primary dark:text-primary-light px-3 py-1 rounded-full"
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-lg font-semibold text-text dark:text-dark-text flex items-center gap-3">
+              <Brain className="w-5 h-5 text-primary" />
+              多元思维格栅
+            </h3>
+            {modelStats && (
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+                {modelStats.total} 个模型 · {modelStats.disciplines} 个学科
+              </span>
+            )}
+          </div>
+          <div className="space-y-6">
+            {(modelGroups ?? []).map((group) => (
+              <div key={group.id}>
+                <h4 className="flex items-center gap-2 text-base font-serif font-bold text-primary dark:text-primary-light mb-3">
+                  <span>{group.icon}</span>
+                  <span>{group.name}</span>
+                  <span className="text-xs font-normal text-text-muted dark:text-dark-muted">
+                    {group.models.length} 个
+                  </span>
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {group.models.map((m) => (
+                    <Link
+                      key={m.slug}
+                      href={`/model/${m.slug}`}
+                      className="group bg-white dark:bg-dark-card rounded-card shadow-card p-4 hover:shadow-lg hover:-translate-y-0.5 transition-all"
                     >
-                      {point}
-                    </span>
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="font-medium text-text dark:text-dark-text group-hover:text-primary transition-colors">
+                          {m.title}
+                        </div>
+                        <ImportanceDots value={m.importance} />
+                      </div>
+                      {m.english && (
+                        <div className="text-xs text-text-muted dark:text-dark-muted font-mono mt-0.5">
+                          {m.english}
+                        </div>
+                      )}
+                      {m.description && (
+                        <p className="text-xs text-text-muted dark:text-dark-muted mt-2 line-clamp-2">
+                          {m.description}
+                        </p>
+                      )}
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -333,7 +342,9 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
           >
             <div className="text-2xl mb-2">🧠</div>
             <div className="text-sm font-medium text-text dark:text-dark-text">思维模型</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">7个</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+              {modelStats?.total ?? 0} 个
+            </div>
           </Link>
         </div>
 

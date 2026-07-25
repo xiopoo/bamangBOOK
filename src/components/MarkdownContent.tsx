@@ -26,12 +26,17 @@ export default function MarkdownContent({
   isQA = false,
 }: MarkdownContentProps) {
   const processedContent = useMemo(() => {
-    if (!content || !content.includes('[[')) return content
-    return content.replace(/\[\[([^\]]+)\]\]/g, (match, entity: string) => {
-      const resolved = linkResolver?.(entity)
-      const target = resolved ?? `/concepts/${encodeURIComponent(entity)}`
-      return `[${entity}](${target})`
-    })
+    let result = content || ''
+    if (result.includes('[[')) {
+      result = result.replace(/\[\[([^\]]+)\]\]/g, (match, entity: string) => {
+        const resolved = linkResolver?.(entity)
+        const target = resolved ?? `/concepts/${encodeURIComponent(entity)}`
+        return `[${entity}](${target})`
+      })
+    }
+    // 详情页头部已展示标题，移除正文开头的 H1 行，避免页面内出现重复 H1（语义与视觉问题）
+    result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
+    return result
   }, [content, linkResolver])
 
   const markdownComponents = useMemo(
@@ -39,7 +44,7 @@ export default function MarkdownContent({
       a: ({ href, children }: any) => (
         <a
           href={href}
-          className="text-orange-600 hover:text-orange-700 underline underline-offset-4 decoration-1"
+          className="text-primary hover:text-primary-light underline underline-offset-4 decoration-1"
         >
           {children}
         </a>
@@ -50,7 +55,7 @@ export default function MarkdownContent({
           return (
             <h2 
               id={slugify(text)}
-              className="text-2xl md:text-2.5xl font-serif font-bold text-text dark:text-dark-text mt-10 mb-2 flex items-start gap-3 pb-2 border-b border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-4 py-3 rounded-lg"
+              className="font-serif font-bold text-text dark:text-dark-text flex items-start gap-3 pb-2 border-b border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-4 py-3 rounded-lg"
             >
               <span className="text-primary dark:text-primary-light text-xl shrink-0 mt-1">Q</span>
               <span className="flex-1">{children}</span>
@@ -60,7 +65,7 @@ export default function MarkdownContent({
         return (
           <h2 
             id={slugify(text)}
-            className="text-2xl md:text-2.5xl font-serif font-bold text-text dark:text-dark-text mt-10 mb-5 flex items-center gap-3 pb-2 border-b border-primary/20 dark:border-primary/30"
+            className="font-serif font-bold text-text dark:text-dark-text flex items-center gap-3 pb-2 border-b border-primary/20 dark:border-primary/30"
           >
             <span className="w-1 h-8 bg-primary dark:bg-primary-light rounded-full" />
             {children}
@@ -134,11 +139,20 @@ export default function MarkdownContent({
         </strong>
       ),
       em: ({ children }: any) => <em className="italic">{children}</em>,
-      code: ({ children }: any) => (
-        <code className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded text-sm font-mono">
-          {children}
-        </code>
-      ),
+      code: ({ className: codeClassName, children }: any) => {
+        // 代码块（围栏代码）由 <pre> 包裹，globals.css 中 .prose pre code 已重置样式；
+        // 这里仅对「行内代码」套用高亮背景，避免代码块内出现嵌套底色块。
+        const isBlock = (typeof codeClassName === 'string' && /language-/.test(codeClassName)) ||
+          String(children).includes('\n')
+        if (isBlock) {
+          return <code className={codeClassName}>{children}</code>
+        }
+        return (
+          <code className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded text-sm font-mono">
+            {children}
+          </code>
+        )
+      },
       pre: ({ children }: any) => (
         <pre className="bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
           {children}
@@ -169,7 +183,7 @@ export default function MarkdownContent({
 
   return (
     <div
-      className={`prose prose-gray max-w-none overflow-x-hidden break-words dark:text-dark-text ${className}`}
+      className={`prose max-w-3xl mx-auto overflow-x-hidden break-words dark:text-dark-text ${className}`}
     >
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
         {processedContent}
