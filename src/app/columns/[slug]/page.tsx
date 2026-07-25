@@ -7,6 +7,13 @@ import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
+import { columnParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return columnParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { slug: string }

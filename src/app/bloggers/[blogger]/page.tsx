@@ -4,6 +4,13 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
 import { getBloggers, getBloggerArticles, getBloggerStats } from '@/lib/bloggers'
+import { bloggerParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return bloggerParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string }

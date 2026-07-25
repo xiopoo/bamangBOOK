@@ -3,6 +3,13 @@ import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import MarkdownContent from '@/components/MarkdownContent'
 import { resolveEntityLink, resolvePersonContentFile } from '@/lib/entity-resolver'
+import { personParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return personParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { name: string }

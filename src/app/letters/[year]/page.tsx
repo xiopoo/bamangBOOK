@@ -10,6 +10,13 @@ import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import BerkshireSourceLink from '@/components/BerkshireSourceLink'
 import type { Metadata } from 'next'
+import { letterYearParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return letterYearParams()
+}
+
+export const dynamicParams = false
 
 interface LetterGraphData {
   year: string

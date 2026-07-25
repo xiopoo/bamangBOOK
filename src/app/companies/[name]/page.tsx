@@ -9,6 +9,13 @@ import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import type { Metadata } from 'next'
+import { companyParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return companyParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { name: string }

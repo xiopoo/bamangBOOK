@@ -10,6 +10,13 @@ import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import type { Metadata } from 'next'
+import { conceptParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return conceptParams()
+}
+
+export const dynamicParams = false
 
 function processConceptLinks(content: string): string {
   if (!content.includes('[[')) return content
