@@ -51,7 +51,7 @@ export default function QADetailPage({ params }: PageProps) {
         <div className="flex gap-8">
           <main className="flex-1">
             <article className="bg-bg-card dark:bg-dark-card p-6 md:p-10 shadow-card rounded-card">
-              <MarkdownContent content={doc.content} isQA={true} />
+              <MarkdownContent content={doc.content} isQA={true} className="max-w-none" />
             </article>
           </main>
           <ArticleTableOfContents />

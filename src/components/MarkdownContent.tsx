@@ -19,6 +19,50 @@ function escapeTextAngleBrackets(content: string): string {
   )
 }
 
+function escapeAllAngleBrackets(content: string): string {
+  return content.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
+function formatQAContent(content: string): string {
+  let result = content || ''
+
+  // 详情页头部已展示标题，移除正文开头的 H1 行，避免重复 H1。
+  result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
+
+  // 部分实录原文把下一个问题直接接在上一段末尾，先切回独立段落。
+  result = result
+    .replace(/([。！？；）)])(?=(?:#{2,6}\s*)?\d{1,3}[,，、.．]\s*)/g, '$1\n\n')
+    .replace(/([^\n])(?=#{2,6}\s*\d{1,3}[,，、.．]\s*)/g, '$1\n\n')
+    .replace(/([^\n])(?=\d{1,3}[,，、.．]\s*(?:股东|问题|关于|为什么|如何|能否|是否|[A-Za-z]))/g, '$1\n\n')
+
+  result = result
+    .split('\n')
+    .map((line) => {
+      const trimmed = line.trim()
+      if (!trimmed) return line
+
+      const headingQuestion = line.match(/^(\s*#{2,6}\s*)(\d{1,3}[,，、.．]\s*.+)$/)
+      if (headingQuestion) {
+        return `${headingQuestion[1]}**${headingQuestion[2].trim()}**`
+      }
+
+      const numberedQuestion = line.match(/^(\s*)(\d{1,3}[,，、.．]\s*.+)$/)
+      if (numberedQuestion && !trimmed.startsWith('**')) {
+        return `${numberedQuestion[1]}**${numberedQuestion[2].trim()}**`
+      }
+
+      const explicitQuestion = line.match(/^(\s*)((?:股东|提问|问题|问|Q)[：:].+)$/i)
+      if (explicitQuestion && !trimmed.startsWith('**')) {
+        return `${explicitQuestion[1]}**${explicitQuestion[2].trim()}**`
+      }
+
+      return line
+    })
+    .join('\n')
+
+  return escapeAllAngleBrackets(result)
+}
+
 interface MarkdownContentProps {
   content: string
   className?: string
@@ -33,6 +77,10 @@ export default function MarkdownContent({
   isQA = false,
 }: MarkdownContentProps) {
   const processedContent = useMemo(() => {
+    if (isQA) {
+      return formatQAContent(content)
+    }
+
     let result = content || ''
     if (result.includes('[[')) {
       result = result.replace(/\[\[([^\]]+)\]\]/g, (match, entity: string) => {
@@ -44,7 +92,7 @@ export default function MarkdownContent({
     // 详情页头部已展示标题，移除正文开头的 H1 行，避免页面内出现重复 H1（语义与视觉问题）
     result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
     return escapeTextAngleBrackets(result)
-  }, [content, linkResolver])
+  }, [content, linkResolver, isQA])
 
   const markdownComponents = useMemo(
     () => ({
@@ -81,6 +129,17 @@ export default function MarkdownContent({
       },
       h3: ({ children }: any) => {
         const text = typeof children === 'string' ? children : ''
+        if (isQA) {
+          return (
+            <h3
+              id={slugify(text)}
+              className="font-serif font-bold text-text dark:text-dark-text flex items-start gap-3 pb-2 border-b border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-4 py-3 rounded-lg"
+            >
+              <span className="text-primary dark:text-primary-light text-lg shrink-0 mt-1">Q</span>
+              <span className="flex-1">{children}</span>
+            </h3>
+          )
+        }
         return (
           <h3 
             id={slugify(text)}
@@ -92,28 +151,43 @@ export default function MarkdownContent({
         )
       },
       p: ({ children }: any) => {
-        const text = typeof children === 'string' ? children : ''
+        const text = Array.isArray(children)
+          ? children.map((child) => (typeof child === 'string' ? child : '')).join('')
+          : typeof children === 'string' ? children : ''
         
         if (isQA) {
-          if (text.startsWith('股东：') || text.startsWith('股东提问：') || text.startsWith('Q：')) {
+          if (/^(股东|股东提问|提问|问题|问|Q)[：:]/i.test(text)) {
             return (
               <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary pl-4 py-3 rounded-r-lg mb-4">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   <span className="font-semibold text-primary dark:text-primary-light">股东：</span>
-                  {text.replace(/^股东[：:]|^股东提问[：:]|^Q[：:]/, '')}
+                  {text.replace(/^(股东|股东提问|提问|问题|问|Q)[：:]/i, '')}
                 </p>
               </div>
             )
           }
           
-          if (text.startsWith('巴菲特：') || text.startsWith('芒格：') || text.startsWith('A：')) {
+          if (/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i.test(text)) {
+            const speaker = text.match(/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i)?.[1] || '回答'
+            const speakerLabel = speaker.toUpperCase() === 'A' ? '回答' : speaker
             return (
               <div className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-3 rounded-r-lg mb-4">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {text.startsWith('巴菲特：') ? '巴菲特：' : text.startsWith('芒格：') ? '芒格：' : '回答：'}
+                    {speakerLabel}：
                   </span>
-                  {text.replace(/^巴菲特[：:]|^芒格[：:]|^A[：:]/, '')}
+                  {text.replace(/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i, '')}
+                </p>
+              </div>
+            )
+          }
+
+          const hasBoldQuestion = Array.isArray(children) && children.some((child: any) => child?.type === 'strong')
+          if (hasBoldQuestion || /^\d{1,3}[,，、.．]/.test(text)) {
+            return (
+              <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary pl-4 py-3 rounded-r-lg mb-4">
+                <p className="text-gray-800 dark:text-gray-200 leading-relaxed font-semibold">
+                  {children}
                 </p>
               </div>
             )
@@ -188,9 +262,11 @@ export default function MarkdownContent({
     [isQA]
   )
 
+  const widthClass = className.includes('max-w-') ? '' : 'max-w-3xl'
+
   return (
     <div
-      className={`prose max-w-3xl mx-auto overflow-x-hidden break-words dark:text-dark-text ${className}`}
+      className={`prose ${widthClass} mx-auto overflow-x-hidden break-words dark:text-dark-text ${className}`}
     >
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
         {processedContent}
