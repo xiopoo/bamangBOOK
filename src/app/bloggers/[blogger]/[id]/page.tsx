@@ -4,6 +4,13 @@ import { getBloggerArticle, getBloggerArticles } from '@/lib/bloggers'
 import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import { bloggerArticleParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return bloggerArticleParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string; id: string }

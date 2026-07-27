@@ -1,6 +1,7 @@
 import { readdirSync, existsSync } from 'fs'
 import path from 'path'
 import { getBloggers, getBloggerArticles } from './bloggers'
+import { getDocuments } from './documents'
 
 const CONTENT_DIR = path.join(process.cwd(), 'content')
 
@@ -44,6 +45,24 @@ export function personParams() {
 export function qaParams() {
   return listIds(path.join(CONTENT_DIR, 'qa'), { keepExtension: true }).map((id) => ({
     id,
+  }))
+}
+
+export function talkParams() {
+  return getDocuments('talks').map((doc) => ({
+    id: doc.fileName,
+  }))
+}
+
+export function interviewParams() {
+  return getDocuments('interviews').map((doc) => ({
+    id: doc.fileName,
+  }))
+}
+
+export function articleParams() {
+  return getDocuments('articles').map((doc) => ({
+    id: doc.fileName,
   }))
 }
 

@@ -8,6 +8,13 @@ import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import RelatedArticles from '@/components/RelatedArticles'
 import type { Metadata } from 'next'
+import { articleParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return articleParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { id: string }

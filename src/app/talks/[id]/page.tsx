@@ -7,6 +7,13 @@ import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
+import { talkParams } from '@/lib/staticParams'
+
+export function generateStaticParams() {
+  return talkParams()
+}
+
+export const dynamicParams = false
 
 interface PageProps {
   params: { id: string }
