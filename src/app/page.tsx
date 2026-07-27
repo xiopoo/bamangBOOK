@@ -15,6 +15,7 @@ import PageFooter from '@/components/PageFooter'
 import ColumnNav from '@/components/ColumnNav'
 import { getDocuments } from '@/lib/documents'
 import { getBloggers } from '@/lib/bloggers'
+import { getShareholderLetters } from '@/lib/partnership'
 
 function PrimaryLink({
   href,
@@ -73,6 +74,10 @@ export default function HomePage() {
   const talkCount = getDocuments('talks').length
   const interviewCount = getDocuments('interviews').length
   const bloggerCount = getBloggers().reduce((sum, blogger) => sum + blogger.count, 0)
+  const shareholderYears = getShareholderLetters().map((letter) => letter.year)
+  const shareholderYearRange = shareholderYears.length > 0
+    ? `${Math.min(...shareholderYears)}-${Math.max(...shareholderYears)}`
+    : '1965-'
 
   return (
     <PageContainer maxWidth="5xl">
@@ -122,7 +127,7 @@ export default function HomePage() {
             icon={<BookOpen className="h-5 w-5" />}
             title="伯克希尔股东信"
             description="作为长期主义和企业经营的主线阅读材料，保持精校排版。"
-            meta="1965-2024"
+            meta={shareholderYearRange}
           />
           <PrimaryLink
             href="/qa"

@@ -4,46 +4,46 @@ import { getBloggers, getBloggerArticles } from './bloggers'
 
 const CONTENT_DIR = path.join(process.cwd(), 'content')
 
-function listIds(dir: string): string[] {
+function listIds(dir: string, options: { keepExtension?: boolean } = {}): string[] {
   if (!existsSync(dir)) return []
   return readdirSync(dir)
     .filter((f) => f.endsWith('.md'))
-    .map((f) => f.replace(/\.md$/, ''))
+    .map((f) => options.keepExtension ? f : f.replace(/\.md$/, ''))
 }
 
 export function bookParams() {
   return listIds(path.join(CONTENT_DIR, 'books')).map((slug) => ({
-    slug: encodeURIComponent(slug),
+    slug,
   }))
 }
 
 export function columnParams() {
   return listIds(path.join(CONTENT_DIR, 'columns')).map((slug) => ({
-    slug: encodeURIComponent(slug),
+    slug,
   }))
 }
 
 export function companyParams() {
   return listIds(path.join(CONTENT_DIR, 'companies')).map((name) => ({
-    name: encodeURIComponent(name),
+    name,
   }))
 }
 
 export function conceptParams() {
   return listIds(path.join(CONTENT_DIR, 'concepts')).map((name) => ({
-    name: encodeURIComponent(name),
+    name,
   }))
 }
 
 export function personParams() {
   return listIds(path.join(CONTENT_DIR, 'people')).map((name) => ({
-    name: encodeURIComponent(name),
+    name,
   }))
 }
 
 export function qaParams() {
-  return listIds(path.join(CONTENT_DIR, 'qa')).map((id) => ({
-    id: encodeURIComponent(id),
+  return listIds(path.join(CONTENT_DIR, 'qa'), { keepExtension: true }).map((id) => ({
+    id,
   }))
 }
 
@@ -61,7 +61,7 @@ export function letterYearParams() {
 }
 
 export function bloggerParams() {
-  return getBloggers().map((b) => ({ blogger: encodeURIComponent(b.name) }))
+  return getBloggers().map((b) => ({ blogger: b.name }))
 }
 
 export function bloggerArticleParams() {
@@ -69,8 +69,8 @@ export function bloggerArticleParams() {
   for (const b of getBloggers()) {
     for (const a of getBloggerArticles(b.name)) {
       result.push({
-        blogger: encodeURIComponent(b.name),
-        id: encodeURIComponent(a.fileName),
+        blogger: b.name,
+        id: a.fileName,
       })
     }
   }

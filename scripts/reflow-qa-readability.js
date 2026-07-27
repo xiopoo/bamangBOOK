@@ -14,6 +14,7 @@
  * 用法：
  *   node scripts/reflow-qa-readability.js --dry   # 干跑，仅输出统计
  *   node scripts/reflow-qa-readability.js         # 实际写入
+ *   node scripts/reflow-qa-readability.js 2024 --dry # 只处理指定年份
  */
 
 const fs = require('fs')
@@ -21,6 +22,9 @@ const path = require('path')
 
 const QA_DIR = path.join(__dirname, '..', 'content', 'qa')
 const DRY_RUN = process.argv.includes('--dry')
+const requestedYears = process.argv
+  .filter((arg) => /^\d{4}$/.test(arg))
+  .map(Number)
 
 // 已知说话人标签（段首或句中粘连时用于拆段）
 const SPEAKERS = [
@@ -209,6 +213,11 @@ function processFile(raw) {
 const files = fs
   .readdirSync(QA_DIR)
   .filter((f) => f.endsWith('.md'))
+  .filter((f) => {
+    if (!requestedYears.length) return true
+    const match = f.match(/^伯克希尔股东大会实录_(\d{4})\.md$/)
+    return match && requestedYears.includes(Number(match[1]))
+  })
   .sort()
 
 let changed = 0

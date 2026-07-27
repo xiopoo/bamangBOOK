@@ -146,7 +146,7 @@ function loadIndexedContent() {
           filePath: `content/talks/${t.fileName}`,
           year: t.year,
           sourceDir: 'talks',
-          href: `/talks/${encodeURIComponent(t.fileName.replace(/\.md$/, ''))}`,
+          href: `/talks/${encodeURIComponent(t.fileName)}`,
         })
       })
     } catch { /* ignore */ }
@@ -169,7 +169,7 @@ function loadIndexedContent() {
           filePath: `content/interviews/${t.fileName}`,
           year: t.year,
           sourceDir: 'interviews',
-          href: `/interviews/${encodeURIComponent(t.fileName.replace(/\.md$/, ''))}`,
+          href: `/interviews/${encodeURIComponent(t.fileName)}`,
         })
       })
     } catch { /* ignore */ }
@@ -189,7 +189,7 @@ function loadIndexedContent() {
           filePath: `content/qa/${t.fileName}`,
           year: t.year,
           sourceDir: 'qa',
-          href: `/qa/${encodeURIComponent(t.fileName.replace(/\.md$/, ''))}`,
+          href: `/qa/${encodeURIComponent(t.fileName)}`,
         })
       })
     } catch { /* ignore */ }
@@ -214,7 +214,7 @@ function loadIndexedContent() {
           filePath: `content/articles/${t.fileName}`,
           year: t.year,
           sourceDir: 'articles',
-          href: `/reading/article/${encodeURIComponent(t.fileName.replace(/\.md$/, ''))}`,
+          href: `/articles/${encodeURIComponent(t.fileName)}`,
         })
       })
     } catch { /* ignore */ }

@@ -12,6 +12,13 @@ function slugify(text: string): string {
     .trim()
 }
 
+function escapeTextAngleBrackets(content: string): string {
+  return content.replace(
+    /<(?!(?:[A-Za-z][A-Za-z0-9-]*\b|\/[A-Za-z][A-Za-z0-9-]*\b|!--|!\[CDATA\[|\?))/g,
+    '&lt;'
+  )
+}
+
 interface MarkdownContentProps {
   content: string
   className?: string
@@ -36,7 +43,7 @@ export default function MarkdownContent({
     }
     // 详情页头部已展示标题，移除正文开头的 H1 行，避免页面内出现重复 H1（语义与视觉问题）
     result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
-    return result
+    return escapeTextAngleBrackets(result)
   }, [content, linkResolver])
 
   const markdownComponents = useMemo(

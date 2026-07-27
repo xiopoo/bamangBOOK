@@ -74,7 +74,8 @@ export function countDocumentsByPerson(category: DocumentCategory, personId: str
 
 export function getDocumentByFileName(category: DocumentCategory, fileName: string): DocumentData | null {
   const dir = path.join(process.cwd(), categories[category].dir)
-  const filePath = path.join(dir, fileName)
+  const normalizedFileName = fileName.endsWith('.md') ? fileName : `${fileName}.md`
+  const filePath = path.join(dir, normalizedFileName)
   
   if (!existsSync(filePath)) {
     return null
@@ -82,10 +83,10 @@ export function getDocumentByFileName(category: DocumentCategory, fileName: stri
   
   const content = readFileSync(filePath, 'utf-8')
   const documents = getDocuments(category)
-  const doc = documents.find(d => d.fileName === fileName)
+  const doc = documents.find(d => d.fileName === normalizedFileName || d.fileName === fileName)
   
   return {
-    title: doc?.title || fileName.replace('.md', ''),
+    title: doc?.title || normalizedFileName.replace('.md', ''),
     content,
     year: doc?.year || null,
     wordCount: doc?.wordCount || 0,

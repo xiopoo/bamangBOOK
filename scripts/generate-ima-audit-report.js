@@ -202,10 +202,17 @@ async function extractDocx(filePath) {
 
 function qaAudit(manifest) {
   const results = [];
-  const qaEntries = manifest.filter((item) => item.category === 'qa');
-  const years = [...new Set(qaEntries.map((item) => item.relativeFolder).filter((item) => /^\d{4}$/.test(item)))].sort();
+  const qaEntries = manifest
+    .filter((item) => item.category === 'qa')
+    .map((item) => {
+      const folderYear = /^\d{4}$/.test(item.relativeFolder || '') ? item.relativeFolder : null;
+      const titleYear = String(item.title || '').match(/\b(19|20)\d{2}\b/)?.[0] || null;
+      return { ...item, auditYear: folderYear || titleYear };
+    })
+    .filter((item) => item.auditYear);
+  const years = [...new Set(qaEntries.map((item) => item.auditYear))].sort();
   for (const year of years) {
-    const allEntries = qaEntries.filter((item) => item.relativeFolder === year);
+    const allEntries = qaEntries.filter((item) => item.auditYear === year);
     const downloaded = allEntries.filter((item) => item.status === 'downloaded');
     const websitePath = `content/qa/伯克希尔股东大会实录_${year}.md`;
     const absoluteWebsitePath = path.join(ROOT, websitePath);
@@ -213,6 +220,7 @@ function qaAudit(manifest) {
     const website = fs.readFileSync(absoluteWebsitePath, 'utf8');
     const websiteStructure = markdownStructure(website);
     const sourceStructures = downloaded.map((item) => markdownStructure(fs.readFileSync(path.join(ROOT, item.filePath), 'utf8')));
+    const omittedQuestionMarkers = sourceStructures.reduce((sum, item) => sum + (item.body.match(/\bQ\s*\d+\s*略/g) || []).length, 0);
     const sourceBlocks = sentenceBlocks(sourceStructures
       .flatMap((item) => item.paragraphs)
       .filter((block) => !isSourceEditorialNoise(block)));
@@ -224,6 +232,8 @@ function qaAudit(manifest) {
       downloadedParts: downloaded.length,
       complete: downloaded.length === allEntries.length,
       contentCoverage: downloaded.length ? content.weightedCoverage : null,
+      sourceTitles: allEntries.map((item) => item.title),
+      omittedQuestionMarkers,
       missingBlocks: content.missing,
       partialBlockCount: content.partial.length,
       sourceHeadings: sourceStructures.reduce((sum, item) => sum + item.headings.length, 0),
@@ -308,6 +318,13 @@ function percent(value) {
 
 function renderReport(data) {
   const lines = [];
+  const completeQaYears = data.qa.filter((item) => item.complete).length;
+  const excerptQaYears = data.qa.filter((item) => item.omittedQuestionMarkers > 0).map((item) => item.year);
+  const lowComparabilityQaYears = data.qa
+    .filter((item) => item.contentCoverage !== null && item.contentCoverage < 0.2)
+    .map((item) => item.year);
+  const comparableQaWithMissing = data.qa
+    .filter((item) => item.complete && item.contentCoverage !== null && item.contentCoverage >= 0.2 && !item.omittedQuestionMarkers && item.missingBlocks.length);
   lines.push('# IMA 与网站文档内容/格式审计');
   lines.push('');
   lines.push('> 审计日期：2026-07-22');
@@ -317,7 +334,7 @@ function renderReport(data) {
   lines.push('## 证据范围');
   lines.push('');
   lines.push(`- “巴菲特致股东信/中文精校-按年度”：已下载 ${data.downloadStats.lettersDownloaded} 份，其中可与网站股东信年份直接对应的 Word 文档为 ${data.downloadStats.comparableLetterDocs} 份。`);
-  lines.push(`- “巴菲特股东大会1994-2025”：已下载 ${data.downloadStats.qaDownloaded}/${data.downloadStats.qaTotal} 个分卷；完整覆盖 1994-2006，2007 缺 1 个分卷，2008 以后受 IMA 当日读取配额限制。`);
+  lines.push(`- “巴菲特股东大会1994-2025”：已下载 ${data.downloadStats.qaDownloaded}/${data.downloadStats.qaTotal} 个分卷；本轮已将 2008-2025 年可取得源文纳入审计，目录中仍未提供 2017、2018 年源文。`);
   lines.push(`- “巴菲特知识库”：已确认 ${data.stableStats.total} 个标准 MD，其中股东信 ${data.stableStats.letters} 封（1965-2024）；该目录没有股东大会 MD。今天只取得文件清单，原文读取被 IMA 配额阻止。`);
   lines.push('- 为继续审计标准 MD，使用项目 Git `HEAD` 中此前已同步版本作为“本地同步基线”；凡引用该基线的结论均不等同于今天实时下载的 IMA 原文。');
   lines.push('');
@@ -326,7 +343,7 @@ function renderReport(data) {
   lines.push(`1. 股东信网站文件覆盖 1965-2025；标准 MD 样本覆盖 1965-2024，网站新增 2025。标准 MD 清单与网站 1965-2024 的文件名逐年对应，无整年文件缺失。`);
   lines.push(`2. 当前股东信相对本地同步基线，${data.letterSummary.canonicalEqual} 封纯文本完全一致；${data.letterSummary.changed} 封存在字符级变化。多数变化是清理粘连标记、补空行和修表格；未发现覆盖率低于 20% 的基线长句缺失。`);
   lines.push(`3. IMA Word“中文精校”与网站不是同一译本：${data.letterSummary.versionMismatch} 封覆盖率低于 80%，不能把全部差异直接判为网站缺漏。2024 年尤其明显，Word 版缺少网站中的“错误”“皮特·利格尔”等整节，同时译文措辞也大量不同。`);
-  lines.push(`4. 已完整下载的大会年份中，正文覆盖率总体较高，但段落和标题结构被明显压缩；${data.qaSummary.completeYearsWithMissing} 个完整年份仍有未逐字覆盖候选。抽查显示其中既有真实未出现句子，也有同义改写，需按下表逐篇复核。`);
+  lines.push(`4. 已完整下载的 ${completeQaYears} 个大会年份中，2008-2016、2020-2022 覆盖率可用于逐段复核，段落和标题结构仍被明显压缩；${comparableQaWithMissing.length} 个可比年份仍有未逐字覆盖候选。`);
   lines.push(`5. 大会基准目录本身缺少 2017、2018 两个年份；网站含这两年，因此它们属于“网站额外收录”，不能用该目录证明正确或错误。`);
   lines.push('');
   lines.push('## 已同步到网站');
@@ -335,7 +352,7 @@ function renderReport(data) {
   lines.push('- 股东信主要持仓表：恢复 33 个年度中因 PDF/Word 提取而粘连或缺行的表格，并统一为可渲染的 Markdown 表格。');
   lines.push('- 重点细节：修复 1991 年固定收益脚注、1999 年增长率表、2007 年承保业绩表、2021 年持仓表及脚注。');
   lines.push('- 全库校验：股东信与大会实录 Markdown 表格列数错误为 0；修复脚本重复运行无新增变更。');
-  lines.push('- 当前边界：2007 年大会资料仍缺 1 个分卷，2008 年以后受 IMA 当日读取配额限制，尚未做同等强度的逐篇源文复核。');
+  lines.push('- 当前边界：2017、2018 年大会资料未在 IMA 目录中提供；2019 年 IMA 源文为带“Qxx 略”的节选稿，只能据此确认局部段落与分段，不能证明网站全文缺漏。');
   lines.push('');
   lines.push('## 股东信审计');
   lines.push('');
@@ -378,17 +395,22 @@ function renderReport(data) {
     lines.push(`| ${item.year} | ${item.downloadedParts}/${item.expectedParts}${item.complete ? '' : '（不完整）'} | ${coverage} | ${item.sourceHeadings}/${item.websiteHeadings} | ${item.sourceParagraphs}/${item.websiteParagraphs} | ${item.sourceTables}/${item.websiteTables} | ${item.longWebsiteHeadings.length} |`);
   }
   lines.push('');
+  if (lowComparabilityQaYears.length) {
+    lines.push(`低可比性年份：${lowComparabilityQaYears.join('、')}。这些 IMA 源文与网站稿存在节选、同声传译稿/精校稿或版本来源差异，只能确认已出现的局部内容和发言人分段，不足以反推网站缺段。`);
+    lines.push('');
+  }
   lines.push('### 大会未逐字覆盖候选（需人工复核）');
   lines.push('');
-  for (const item of data.qa.filter((entry) => entry.complete && entry.missingBlocks.length)) {
+  for (const item of comparableQaWithMissing) {
     lines.push(`- **${item.year}**（${item.missingBlocks.length} 段）：${item.missingBlocks.slice(0, 4).map((block) => `“${excerpt(block.text)}”`).join('；')}`);
   }
   lines.push('');
   lines.push('### 格式问题说明');
   lines.push('');
   lines.push('- 大会来源分卷使用标准 Markdown：每个问题为三级标题，提问者/巴菲特/芒格发言按自然段分开。网站合并稿普遍把多个发言段压成一个长段，标题数量也显著减少。');
+  if (excerptQaYears.length) lines.push(`- ${excerptQaYears.join('、')} 年 IMA 源文含“Qxx 略”等节选标记；这些年份的低覆盖段只作为“来源未逐字覆盖候选”，不直接判定为网站缺漏。`);
   lines.push('- 表格按结构统计，不只看文字是否存在。网站中若数字仍在但被压成连续文本，仍记为“表格格式缺失”。');
-  lines.push('- 2007 仅下载 5/6 个分卷，2008 以后未取到原文，因此这些年份今天不能给出完整缺漏结论。');
+  lines.push('- 2023-2025 年源文在 IMA 目录根部以单个 TXT 文件保存，已按文件名年份并入年度审计。');
   lines.push('');
   lines.push('## 范围差异');
   lines.push('');
@@ -399,7 +421,7 @@ function renderReport(data) {
   lines.push('');
   lines.push('## 后续复核');
   lines.push('');
-  lines.push('IMA 配额恢复后，运行 `node scripts/audit-ima-vs-site.js` 可断点续取剩余大会分卷；标准 MD 原文需继续单独下载，届时用实时 IMA 内容替换本报告中的 Git 本地同步基线。');
+  lines.push('后续若 IMA 目录新增 2017、2018 年大会源文，运行 `node scripts/audit-ima-vs-site.js` 与 `node scripts/generate-ima-audit-report.js` 可继续补齐；标准 MD 原文需继续单独下载，届时用实时 IMA 内容替换本报告中的 Git 本地同步基线。');
   lines.push('');
   return `${lines.join('\n')}\n`;
 }
@@ -434,6 +456,9 @@ async function main() {
   };
   data.qaSummary = {
     completeYearsWithMissing: qa.filter((item) => item.complete && item.missingBlocks.length).length,
+    comparableCompleteYearsWithMissing: qa
+      .filter((item) => item.complete && item.contentCoverage !== null && item.contentCoverage >= 0.2 && !item.omittedQuestionMarkers && item.missingBlocks.length)
+      .length,
   };
   fs.mkdirSync(REPORT_DIR, { recursive: true });
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
