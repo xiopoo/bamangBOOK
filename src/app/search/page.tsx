@@ -8,10 +8,11 @@ import SearchResults from '@/components/SearchResults'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
+import { searchStaticContent, type StaticSearchItemType } from '@/lib/static-search-client'
 
 interface SearchResult {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger'
+  type: StaticSearchItemType
   description: string
   count: number
   years: number[]
@@ -19,16 +20,23 @@ interface SearchResult {
 }
 
 interface TypeStats {
-  concept: number
-  company: number
-  person: number
-  letter: number
-  partnership: number
-  article: number
-  qa: number
-  talk: number
-  interview: number
-  blogger: number
+  [key: string]: number
+}
+
+const emptyTypeStats: TypeStats = {
+  concept: 0,
+  company: 0,
+  person: 0,
+  letter: 0,
+  partnership: 0,
+  article: 0,
+  qa: 0,
+  talk: 0,
+  interview: 0,
+  blogger: 0,
+  book: 0,
+  column: 0,
+  model: 0,
 }
 
 const typeLabels: Record<string, string> = {
@@ -43,6 +51,9 @@ const typeLabels: Record<string, string> = {
   talk: '演讲',
   interview: '访谈',
   blogger: '博主文章',
+  book: '拆书',
+  column: '专栏',
+  model: '思维模型',
 }
 
 const typeIcons: Record<string, string> = {
@@ -57,53 +68,50 @@ const typeIcons: Record<string, string> = {
   talk: '🎤',
   interview: '🎙️',
   blogger: '📚',
+  book: '📖',
+  column: '✍️',
+  model: '🧠',
 }
 
 function SearchContent() {
   const searchParams = useSearchParams()
   const initialQuery = searchParams.get('q') || ''
-  const initialType = searchParams.get('type') as 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'all' || 'all'
+  const initialType = searchParams.get('type') as StaticSearchItemType | 'all' || 'all'
 
   const [query, setQuery] = useState(initialQuery)
   const [selectedType, setSelectedType] = useState(initialType)
   const [results, setResults] = useState<SearchResult[]>([])
   const [total, setTotal] = useState(0)
-  const [typeStats, setTypeStats] = useState<TypeStats>({
-    concept: 0,
-    company: 0,
-    person: 0,
-    letter: 0,
-    partnership: 0,
-    article: 0,
-    qa: 0,
-    talk: 0,
-    interview: 0,
-    blogger: 0,
-  })
+  const [typeStats, setTypeStats] = useState<TypeStats>(emptyTypeStats)
   const [isLoading, setIsLoading] = useState(false)
 
   // 执行搜索
-  const performSearch = useCallback(async (searchQuery: string, filterType: string = 'all') => {
+  const performSearch = useCallback(async (searchQuery: string, filterType: StaticSearchItemType | 'all' = 'all') => {
     if (!searchQuery.trim()) {
       setResults([])
       setTotal(0)
-      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
+      setTypeStats(emptyTypeStats)
       return
     }
 
     setIsLoading(true)
     try {
-      const typeParam = filterType !== 'all' ? `&type=${filterType}` : ''
-      const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}&mode=search${typeParam}`)
-      const data = await res.json()
-      setResults(data.results || [])
-      setTotal(data.total || 0)
-      setTypeStats(data.typeStats || { concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
+      const allResults = await searchStaticContent(searchQuery)
+      const filteredResults = filterType === 'all'
+        ? allResults
+        : allResults.filter((item) => item.type === filterType)
+      const stats = allResults.reduce<TypeStats>((acc, item) => {
+        acc[item.type] = (acc[item.type] || 0) + 1
+        return acc
+      }, { ...emptyTypeStats })
+      setResults(filteredResults)
+      setTotal(filteredResults.length)
+      setTypeStats(stats)
     } catch (err) {
       console.error('Search error:', err)
       setResults([])
       setTotal(0)
-      setTypeStats({ concept: 0, company: 0, person: 0, letter: 0, partnership: 0, article: 0, qa: 0, talk: 0, interview: 0, blogger: 0 })
+      setTypeStats(emptyTypeStats)
     } finally {
       setIsLoading(false)
     }
@@ -129,7 +137,7 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
-  const handleTypeFilter = (type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'all') => {
+  const handleTypeFilter = (type: StaticSearchItemType | 'all') => {
     setSelectedType(type)
     performSearch(query, type)
     // 更新URL参数
@@ -143,7 +151,7 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
-  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger'] as const
+  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger', 'book', 'column', 'model'] as const
 
   return (
     <PageContainer maxWidth="4xl">

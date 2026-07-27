@@ -2,10 +2,11 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { suggestStaticContent } from '@/lib/static-search-client'
 
 interface Suggestion {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'article' | 'qa' | 'talk' | 'interview'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model'
   count: number
   url: string
 }
@@ -15,10 +16,15 @@ const typeLabels: Record<string, string> = {
   company: '公司',
   person: '人物',
   letter: '信件',
+  partnership: '合伙人信',
   article: '文章',
   qa: '问答',
   talk: '演讲',
   interview: '访谈',
+  blogger: '博主文章',
+  book: '拆书',
+  column: '专栏',
+  model: '思维模型',
 }
 
 const typeColors: Record<string, string> = {
@@ -26,10 +32,15 @@ const typeColors: Record<string, string> = {
   company: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
   person: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
   letter: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
+  partnership: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
   article: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400',
   qa: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
   talk: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400',
   interview: 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-400',
+  blogger: 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300',
+  book: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400',
+  column: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400',
+  model: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
 }
 
 export default function SearchBar({ 
@@ -61,9 +72,13 @@ export default function SearchBar({
 
     setIsLoading(true)
     try {
-      const res = await fetch(`/api/search?q=${encodeURIComponent(value)}&mode=suggest`)
-      const data = await res.json()
-      setSuggestions(data.suggestions || [])
+      const data = await suggestStaticContent(value)
+      setSuggestions(data.map((item) => ({
+        name: item.name,
+        type: item.type as Suggestion['type'],
+        count: item.count,
+        url: item.url,
+      })))
       setIsOpen(true)
     } catch {
       setSuggestions([])

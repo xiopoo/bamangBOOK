@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import Link from 'next/link'
 import { ArrowLeft, BookOpen, FileText, Tag, ChevronRight } from 'lucide-react'
-import { readFileSync, existsSync } from 'fs'
+import { readFileSync, existsSync, readdirSync } from 'fs'
 import path from 'path'
 
 interface ConceptPageProps {
@@ -11,30 +11,40 @@ interface ConceptPageProps {
   }
 }
 
-async function getIndexData() {
+export const dynamicParams = false
+
+export function generateStaticParams() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const res = await fetch(`${baseUrl}/api/index`, { cache: 'no-store' })
-    if (res.ok) {
-      return await res.json()
-    }
-  } catch (e) {
-    console.error('Failed to fetch index data:', e)
+    const conceptsDir = path.join(process.cwd(), 'content/concepts')
+    return readdirSync(conceptsDir)
+      .filter((file) => file.endsWith('.md'))
+      .map((file) => ({ name: file.replace(/\.md$/, '') }))
+  } catch {
+    return []
   }
-  return null
 }
 
-async function getLetters() {
+function getIndexData() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const res = await fetch(`${baseUrl}/api/letters`, { cache: 'no-store' })
-    if (res.ok) {
-      return await res.json()
+    const indexPath = path.join(process.cwd(), 'content/index.json')
+    const index = JSON.parse(readFileSync(indexPath, 'utf-8'))
+    return {
+      concepts: (index.concepts || []).map((concept: any) => ({
+        id: concept.id,
+        name: concept.name,
+        description: concept.description,
+        count: concept.count,
+        years: concept.years,
+        qaCount: concept.qaCount,
+        relatedConcepts: concept.relatedConcepts || [],
+        relatedPeople: concept.relatedPeople || [],
+      })),
+      letters: index.letters || [],
     }
   } catch (e) {
-    console.error('Failed to fetch letters:', e)
+    console.error('Failed to read index data:', e)
   }
-  return []
+  return { concepts: [], letters: [] }
 }
 
 async function getConceptContent(name: string): Promise<string | null> {
@@ -51,8 +61,8 @@ async function getConceptContent(name: string): Promise<string | null> {
 
 export default async function ConceptPage({ params }: ConceptPageProps) {
   const { name } = params
-  const index = await getIndexData()
-  const letters = await getLetters()
+  const index = getIndexData()
+  const letters = index.letters
   const conceptContent = await getConceptContent(name)
 
   // Find concept data from index

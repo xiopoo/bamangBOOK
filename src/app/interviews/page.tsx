@@ -12,12 +12,8 @@ const DECADES: { label: string; range: [number, number] }[] = [
   { label: '20年代', range: [2020, 2029] },
 ]
 
-interface PageProps {
-  searchParams: { person?: string }
-}
-
-export default function InterviewsPage({ searchParams }: PageProps) {
-  const personId = searchParams.person
+export default function InterviewsPage() {
+  const personId: string | undefined = undefined
   const documents = getDocuments('interviews', personId)
   const totalCount = documents.length
   const years = documents.map((d) => d.year).filter(y => y) as number[]

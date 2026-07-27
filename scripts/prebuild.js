@@ -227,6 +227,12 @@ function main() {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
+
+  console.log('\n🔄 生成静态前端数据...');
+  execSync('node scripts/generate-static-data.js', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
   
   // 同时把索引文件复制到 bloggers_original，防止 Next.js 输出文件追踪时报 ENOENT
   const srcIndex = path.join(BLOGGERS_DIR, INDEX_FILE);

@@ -64,7 +64,7 @@ export default function ConnectionExplorer() {
     async function fetchData() {
       setLoading(true)
       try {
-        const res = await fetch('/api/graph/nodes')
+        const res = await fetch('/graph-nodes.json')
         const data: NodesApiResponse = await res.json()
         setAllNodes(data.nodes)
         setAllLinks(data.links)

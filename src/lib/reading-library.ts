@@ -282,7 +282,7 @@ function loadPdfFormattedContent(existingDirs: Record<AuthorId, Set<string>>) {
       fileName,
       filePath: `content/pdf-documents-formatted/${fileName}`,
       sourceDir: 'pdf-documents-formatted',
-      href: `/reading/article/${encodeURIComponent(fileName.replace(/\.md$/, ''))}`,
+      href: `/articles/${encodeURIComponent(fileName.replace(/\.md$/, ''))}`,
     })
   })
 

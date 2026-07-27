@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Send, MessageCircle, BookOpen, Search, ShieldCheck, User, Bot } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
+import { searchStaticContent } from '@/lib/static-search-client'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -37,18 +38,21 @@ export default function TalkPage() {
     setLoading(true)
 
     try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: q }),
-      })
-      const data = await res.json()
+      const docs = await searchStaticContent(q, 'all', 5)
+      const sources = docs.map((item) => ({ title: item.name, url: item.url }))
+      const context = docs
+        .map((item) => `【${item.name}】\n${item.description || '可打开来源页阅读全文。'}`)
+        .join('\n\n')
 
       const assistantMessage: Message = {
         role: 'assistant',
-        content: data.answer || data.error || '资料检索暂时不可用。',
-        sources: data.sources,
-        searchUrl: data.searchUrl,
+        content:
+          `（巴芒知识助手 · 静态检索模式）\n\n` +
+          `根据站内资料，与「${q}」最相关的内容如下：\n\n` +
+          (context || '未找到相关资料，建议调整关键词或在左侧导航浏览原著。') +
+          `\n\n> 说明：当前回答基于本站静态索引整理，不连接外部模型。`,
+        sources,
+        searchUrl: `/search?q=${encodeURIComponent(q)}`,
       }
       setMessages(prev => [...prev, assistantMessage])
     } catch (error) {
