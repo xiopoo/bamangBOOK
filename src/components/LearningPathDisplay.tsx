@@ -8,6 +8,7 @@ interface PathItem {
   category: string
   file: string
   note: string
+  href?: string
 }
 
 interface PathStep {
@@ -50,6 +51,7 @@ function cleanFileName(file: string, category: string): string {
 }
 
 function getItemHref(item: PathItem): string {
+  if (item.href) return item.href
   const fileName = cleanFileName(item.file, item.category)
   const encoded = encodeURIComponent(fileName)
   switch (item.category) {
@@ -90,7 +92,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
   const percent = totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0
 
   return (
-    <section className="mb-14">
+    <section id="beginner" className="mb-14 scroll-mt-24">
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 rounded-2xl border border-green-200 dark:border-green-800 p-6 md:p-8">
         {/* Header */}
         <div className="flex items-center justify-between gap-3 mb-2">
@@ -145,11 +147,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
                         }`}
                         aria-label={done ? '标记为未读' : '标记为已读'}
                       >
-                        {done && (
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
+                        {done && <span className="text-xs font-bold" aria-hidden="true">✓</span>}
                       </button>
                       {/* Link */}
                       <Link
@@ -194,7 +192,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
   const percent = totalItems > 0 ? Math.round((completedCount / totalItems) * 100) : 0
 
   return (
-    <section className="mb-14">
+    <section id="intermediate" className="mb-14 scroll-mt-24">
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-2xl border border-blue-200 dark:border-blue-800 p-6 md:p-8">
         <div className="flex items-center justify-between gap-3 mb-2">
           <div className="flex items-center gap-3">
@@ -245,11 +243,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
                         }`}
                         aria-label={done ? '标记为未读' : '标记为已读'}
                       >
-                        {done && (
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
+                        {done && <span className="text-xs font-bold" aria-hidden="true">✓</span>}
                       </button>
                       <Link
                         href={getItemHref(item)}
@@ -281,7 +275,7 @@ export function LearningPathTopics({ topics }: { topics: TopicsPath }) {
   const { isCompleted, toggleItem } = useProgress()
 
   return (
-    <section className="mb-8">
+    <section id="topics" className="mb-8 scroll-mt-24">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-serif">
           {topics.icon} {topics.title}
@@ -338,11 +332,7 @@ export function LearningPathTopics({ topics }: { topics: TopicsPath }) {
                           }`}
                           aria-label={done ? '标记为未读' : '标记为已读'}
                         >
-                          {done && (
-                            <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                            </svg>
-                          )}
+                          {done && <span className="text-[10px] font-bold" aria-hidden="true">✓</span>}
                         </button>
                         <Link
                           href={getItemHref(item)}

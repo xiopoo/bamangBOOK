@@ -3,7 +3,9 @@ import { readdirSync, existsSync } from 'fs'
 import path from 'path'
 import { getDocuments } from '@/lib/documents'
 import { getAllPartnershipLetters } from '@/lib/partnership'
+import { getBusinessHistories } from '@/lib/business-history'
 import { siteConfig } from '@/lib/site'
+import { almanackSections } from '@/lib/poor-charlies-almanack'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -16,8 +18,9 @@ function namesIn(directory: string): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
-    '', '/about', '/search', '/learn', '/graph', '/talk', '/letters', '/partnership',
+    '', '/about', '/search', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
+    '/business-history', '/poor-charlies-almanack',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
 
@@ -30,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getDocuments('talks').forEach(doc => urls.add(`${baseUrl}/talks/${encodeURIComponent(doc.fileName)}`))
   getDocuments('interviews').forEach(doc => urls.add(`${baseUrl}/interviews/${encodeURIComponent(doc.fileName)}`))
   getAllPartnershipLetters().forEach(letter => urls.add(`${baseUrl}/partnership/${letter.id}`))
+  getBusinessHistories().forEach(item => urls.add(`${baseUrl}/business-history/${encodeURIComponent(item.slug)}`))
+  almanackSections.forEach(section => urls.add(`${baseUrl}/poor-charlies-almanack/${section.slug}`))
 
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]

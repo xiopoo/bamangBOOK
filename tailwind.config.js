@@ -10,31 +10,31 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#C85A17', // 暖橙色主色
-          light: '#E8772E',
-          dark: '#A0440F',
+          DEFAULT: '#7C2A22',
+          light: '#9D453B',
+          dark: '#5D1D18',
         },
         accent: {
-          DEFAULT: '#D4A853', // 金色点缀
-          light: '#E4C078',
-          dark: '#B8903A',
+          DEFAULT: '#A3812F',
+          light: '#C9A958',
+          dark: '#6F5614',
         },
         bg: {
-          DEFAULT: '#F5F0E8', // 米色背景
-          card: '#FAF7F2',
-          dark: '#1A1A2E',
+          DEFAULT: '#F7F2E7',
+          card: '#F7F2E7',
+          dark: '#17140F',
         },
         text: {
-          DEFAULT: '#3C2415', // 深棕正文
-          muted: '#8B7355',
-          light: '#A09080',
+          DEFAULT: '#211D16',
+          muted: '#665D4B',
+          light: '#9B927D',
         },
         dark: {
-          bg: '#1a1a2e',
-          card: '#16213e',
-          text: '#e0e0e0',
-          muted: '#a0a0a0',
-          border: '#2a2a4a',
+          bg: '#17140F',
+          card: '#211D16',
+          text: '#F1EADA',
+          muted: '#B9AE97',
+          border: '#4A4235',
         },
       },
       fontFamily: {

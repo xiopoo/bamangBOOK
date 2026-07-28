@@ -73,7 +73,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
       <ReadingProgress />
-      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10 sticky top-1 z-30">
+      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0 flex-1">

@@ -45,7 +45,7 @@ export default function BuffettContent({
 
   return (
     <>
-      <nav className="sticky top-4 z-30 bg-white/95 dark:bg-dark-card/95 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 px-4 py-3 mb-8">
+      <nav className="bg-white/95 dark:bg-dark-card/95 rounded-lg border border-gray-200 dark:border-gray-700 px-4 py-3 mb-8">
         <div className="flex flex-wrap gap-1">
           {navSections.map((section) => (
             <button

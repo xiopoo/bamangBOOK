@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import StatBadge from '@/components/StatBadge'
 import PageFooter from '@/components/PageFooter'
-import { getDocuments, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
+import { getDocuments, getCategoryTitle } from '@/lib/documents'
 import { people } from '@/lib/people'
 
 const DECADES: { label: string; range: [number, number] }[] = [
@@ -21,18 +20,20 @@ export default function TalksPage() {
   const years = documents.map((d) => d.year).filter(y => y) as number[]
   const firstYear = years.length > 0 ? Math.min(...years) : null
   const lastYear = years.length > 0 ? Math.max(...years) : null
-  const totalWords = documents.reduce((sum, d) => sum + d.wordCount, 0)
+  const totalWords = documents.reduce(
+    (sum, document) => sum + (Number.isFinite(document.wordCount) ? document.wordCount : 0),
+    0
+  )
   
   const currentPerson = personId ? people[personId] : null
 
   return (
     <PageContainer maxWidth="7xl">
       <PageHeader
-        title={`${getCategoryIcon('talks')} ${getCategoryTitle('talks')}${currentPerson ? ` - ${currentPerson.name}` : ''}`}
-        subtitle={currentPerson ? `${currentPerson.name}的重要演讲，分享投资智慧和人生经验` : `巴菲特和芒格的重要演讲，分享投资智慧和人生经验`}
+        title={`${getCategoryTitle('talks')}${currentPerson ? ` · ${currentPerson.name}` : ''}`}
+        subtitle={currentPerson ? `${currentPerson.name}公开演讲与文字记录` : '巴菲特与芒格历年公开演讲及文字记录'}
         backHref="/"
         backLabel="返回首页"
-        sticky
       />
 
       <div className="flex flex-wrap gap-2 mb-6">
@@ -61,13 +62,14 @@ export default function TalksPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
-        <StatBadge icon="🎤" count={`${totalCount}篇`} label="演讲" sub="公开演讲" />
+      <div className="talks-ledger">
+        <div><strong>{totalCount}</strong><span>篇演讲</span></div>
         {firstYear && lastYear && (
-          <StatBadge icon="📅" count={`${lastYear - firstYear + 1}年`} label="时间跨度" sub={`${firstYear}-${lastYear}`} />
+          <div><strong>{lastYear - firstYear + 1}</strong><span>年时间跨度 · {firstYear}—{lastYear}</span></div>
         )}
-        <StatBadge icon="📝" count={`${(totalWords / 10000).toFixed(1)}万`} label="总字数" sub="演讲内容" />
-        <StatBadge icon="💡" count="投资智慧" label="主题" sub="经验分享" />
+        {totalWords > 0 && (
+          <div><strong>{(totalWords / 10000).toFixed(1)}万</strong><span>正文总字数</span></div>
+        )}
       </div>
 
       <div className="space-y-8">

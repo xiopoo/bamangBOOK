@@ -6,9 +6,12 @@ import PageFooter from '@/components/PageFooter'
 import {
   getPartnershipYearGroups,
   getPartnershipCount,
-  formatPartnershipSubtitle,
+  getPartnershipTimelineSlot,
+  formatPartnershipLabel,
   type PartnershipLetter,
 } from '@/lib/partnership'
+
+const monthLabels = Array.from({ length: 12 }, (_, index) => `${index + 1}月`)
 
 export default function PartnershipPage() {
   const yearGroups = getPartnershipYearGroups()
@@ -63,38 +66,66 @@ export default function PartnershipPage() {
         </p>
       </div>
 
-      {/* 年份时间轴 */}
-      <div className="relative pl-6 border-l-2 border-primary/15 space-y-4">
-        {yearGroups.map((group) => (
-          <div key={group.year} className="relative">
-            {/* 时间轴节点 */}
-            <span className="absolute -left-[1.95rem] top-3 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-bg-card dark:ring-dark-bg" />
-
-            <div className="bg-bg-card dark:bg-dark-card rounded-card border border-primary/10 p-4 sm:p-5 hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 hover:border-primary/30 transition-all">
-              <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-primary dark:text-primary-light font-serif">
-                    {group.year}
-                  </span>
-                  <span className="text-sm text-text-muted dark:text-dark-muted">年</span>
-                </div>
-                <span className="text-xs px-2.5 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full font-medium">
-                  {group.letters.length}封
-                </span>
-              </div>
-
-              {group.letters.length === 1 ? (
-                <LetterChip letter={group.letters[0]} year={group.year} single />
-              ) : (
-                <div className="flex flex-wrap gap-2">
-                  {group.letters.map((letter) => (
-                    <LetterChip key={letter.filename} letter={letter} year={group.year} />
-                  ))}
-                </div>
-              )}
+      {/* 年份月份表 */}
+      <div className="overflow-x-auto rounded-card border border-primary/10 bg-bg-card dark:bg-dark-card shadow-card">
+        <div className="min-w-[980px]">
+          <div className="grid grid-cols-[88px_repeat(12,minmax(68px,1fr))] border-b border-primary/10 bg-primary/5 dark:bg-primary/10">
+            <div className="px-4 py-3 text-sm font-semibold text-primary dark:text-primary-light">
+              年份
             </div>
+            {monthLabels.map((month) => (
+              <div
+                key={month}
+                className="px-2 py-3 text-center text-xs font-medium text-text-muted dark:text-dark-muted"
+              >
+                {month}
+              </div>
+            ))}
           </div>
-        ))}
+
+          <div className="divide-y divide-primary/10">
+            {yearGroups.map((group) => {
+              const lettersByMonth = group.letters.reduce<Record<number, PartnershipLetter[]>>(
+                (slots, letter) => {
+                  const month = getPartnershipTimelineSlot(letter.subtitle)
+                  if (!slots[month]) slots[month] = []
+                  slots[month].push(letter)
+                  return slots
+                },
+                {}
+              )
+
+              return (
+                <div
+                  key={group.year}
+                  className="grid grid-cols-[88px_repeat(12,minmax(68px,1fr))] min-h-[72px] hover:bg-primary/[0.03] dark:hover:bg-primary/5 transition-colors"
+                >
+                  <div className="flex items-center px-4 py-3 border-r border-primary/10">
+                    <span className="text-xl font-bold text-primary dark:text-primary-light font-serif">
+                      {group.year}
+                    </span>
+                  </div>
+
+                  {monthLabels.map((_, index) => {
+                    const month = index + 1
+                    const letters = lettersByMonth[month] || []
+
+                    return (
+                      <div
+                        key={month}
+                        className="flex min-h-[72px] flex-col items-center justify-center gap-1 border-r border-primary/5 px-1.5 py-2 last:border-r-0"
+                      >
+                        {letters.map((letter) => (
+                          <LetterChip key={letter.filename} letter={letter} />
+                        ))}
+                      </div>
+                    )
+                  })}
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
 
       <PageFooter />
@@ -105,21 +136,15 @@ export default function PartnershipPage() {
 /** 单封信件的可点击标签 */
 function LetterChip({
   letter,
-  year,
-  single = false,
 }: {
   letter: PartnershipLetter
-  year: number
-  single?: boolean
 }) {
-  const label = single ? '致合伙人信' : `${formatPartnershipSubtitle(letter.subtitle)}信`
+  const label = formatPartnershipLabel(letter)
   const href = `/partnership/${letter.id}`
   return (
     <Link
       href={href}
-      className={`inline-flex items-center px-3.5 py-1.5 rounded-card border border-primary/10 text-sm font-medium text-text dark:text-dark-text hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary-light transition-all ${
-        single ? 'text-base py-2' : ''
-      }`}
+      className="inline-flex min-h-8 w-full items-center justify-center rounded-card border border-primary/15 bg-bg dark:bg-dark-bg px-2 py-1 text-center text-xs font-medium leading-snug text-text dark:text-dark-text hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary-light transition-all"
     >
       {label}
     </Link>

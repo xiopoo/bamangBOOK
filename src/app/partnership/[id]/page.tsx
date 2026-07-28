@@ -8,6 +8,7 @@ import {
   getPartnershipLetterById,
   getAdjacentLettersById,
   formatPartnershipSubtitle,
+  formatPartnershipLabel,
   getAllPartnershipLetters,
   type PartnershipLetter,
 } from '@/lib/partnership'
@@ -18,10 +19,7 @@ interface PageProps {
 }
 
 function formatLetterTitle(letter: PartnershipLetter): string {
-  if (!letter.subtitle) {
-    return `${letter.year}年巴菲特致合伙人信`
-  }
-  return `${letter.year}年${formatPartnershipSubtitle(letter.subtitle)}巴菲特致合伙人信`
+  return `${letter.year}年${formatPartnershipLabel(letter)}`
 }
 
 export async function generateStaticParams() {
@@ -52,7 +50,7 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
       <ReadingProgress />
       
-      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10 sticky top-1 z-30">
+      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -63,8 +61,9 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
                 {letter.year}年
               </h1>
               <p className="text-sm text-text-muted dark:text-dark-muted">
-                巴菲特致合伙人的信
-                {letter.subtitle && `（${formatPartnershipSubtitle(letter.subtitle)}）`}
+                {letter.filename.includes('有限合伙协议')
+                  ? '巴菲特有限合伙协议'
+                  : `巴菲特致合伙人的信（${formatPartnershipSubtitle(letter.subtitle)}）`}
               </p>
             </div>
             

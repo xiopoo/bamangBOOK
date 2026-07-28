@@ -215,7 +215,7 @@ const files = fs
   .filter((f) => f.endsWith('.md'))
   .filter((f) => {
     if (!requestedYears.length) return true
-    const match = f.match(/^伯克希尔股东大会实录_(\d{4})\.md$/)
+    const match = f.match(/^伯克希尔股东大会(?:实录|问答)_(\d{4})\.md$/)
     return match && requestedYears.includes(Number(match[1]))
   })
   .sort()

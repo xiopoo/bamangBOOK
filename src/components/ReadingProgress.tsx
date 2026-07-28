@@ -31,7 +31,7 @@ export default function ReadingProgress({ progress: externalProgress, hasSavedPr
   if (externalProgress !== undefined) {
     // LetterReader内部使用模式
     return (
-      <div className="bg-primary/5 dark:bg-primary/10 border-b border-primary/10 py-3 sticky top-1 z-20">
+      <div className="bg-primary/5 dark:bg-primary/10 border-b border-primary/10 py-3">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center justify-between text-sm">
             <span className="text-text-muted dark:text-dark-muted">{title}</span>

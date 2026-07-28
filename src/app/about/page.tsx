@@ -19,11 +19,11 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <PageContainer maxWidth="4xl">
-      <PageHeader title="关于与编辑原则" subtitle="这座书房如何整理资料，以及哪些结论不应由它代替你做出" backHref="/" backLabel="返回首页" />
+      <PageHeader title="关于与编辑原则" subtitle="资料范围、编辑方法、出处核验与使用边界" backHref="/" backLabel="返回首页" />
 
       <section className="py-4">
         <p className="text-lg leading-8 text-gray-700 dark:text-gray-300">
-          小胖书房是一套个人阅读与研究库。它先服务日常阅读、资料检索、摘录复盘和写作准备，再逐步沉淀概念、公司、人物和年份之间的关联。
+          小胖书房系统整理巴菲特、查理·芒格及长期主义投资相关资料，馆藏包括原始信件、股东大会实录、公开演讲、访谈、思维模型、公司档案与商业史研究。本站尽可能保留出处和上下文，并区分原文、翻译与编辑整理。
         </p>
       </section>
 

@@ -13,14 +13,27 @@ interface MungerContentProps {
   qaCount: number
   modelGroups?: Array<{ id: string; name: string; icon: string; models: ModelMeta[] }>
   modelStats?: { total: number; disciplines: number; scenarios: number; core: number }
+  archiveStats: { profiles: number; recordings: number; quotes: number; total: number }
 }
 
 const navSections = [
   { id: 'overview', label: '人物简介' },
+  { id: 'archive', label: '芒格档案' },
   { id: 'philosophy', label: '思维模型' },
   { id: 'content', label: '核心著作' },
   { id: 'cases', label: '投资案例' },
   { id: 'quotes', label: '经典语录' },
+]
+
+const archiveProfiles = [
+  { href: '/munger/archive/life', title: '生平', description: '1924—2023 年的人生轨迹' },
+  { href: '/munger/archive/investing-philosophy', title: '投资哲学', description: '从烟蒂股到伟大企业' },
+  { href: '/munger/archive/companies', title: '公司与职务', description: '伯克希尔、Wesco 与每日期刊' },
+  { href: '/munger/archive/daily-journal', title: '每日期刊', description: '长期主持的股东问答档案' },
+  { href: '/munger/archive/family', title: '家庭', description: '婚姻、子女与长期伙伴关系' },
+  { href: '/munger/archive/philanthropy', title: '慈善', description: '教育捐赠与公共项目' },
+  { href: '/munger/archive/architecture', title: '建筑', description: '宿舍设计及无窗方案争议' },
+  { href: '/munger/archive/books', title: '书籍', description: '著述、推荐书目与相关传记' },
 ]
 
 const concepts = [
@@ -65,7 +78,15 @@ function ImportanceDots({ value }: { value: number }) {
   )
 }
 
-export default function MungerContent({ person, relatedPeople, talksCount, qaCount, modelGroups, modelStats }: MungerContentProps) {
+export default function MungerContent({
+  person,
+  relatedPeople,
+  talksCount,
+  qaCount,
+  modelGroups,
+  modelStats,
+  archiveStats,
+}: MungerContentProps) {
   const [activeNav, setActiveNav] = useState('overview')
 
   const scrollToSection = (id: string) => {
@@ -78,7 +99,7 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
 
   return (
     <>
-      <nav className="sticky top-4 z-30 bg-white/95 dark:bg-dark-card/95 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 px-4 py-3 mb-8">
+      <nav className="bg-white/95 dark:bg-dark-card/95 rounded-lg border border-gray-200 dark:border-gray-700 px-4 py-3 mb-8">
         <div className="flex flex-wrap gap-1">
           {navSections.map((section) => (
             <button
@@ -148,6 +169,25 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
           </div>
         </div>
 
+        <Link
+          href="/poor-charlies-almanack"
+          className="group mt-6 flex flex-col justify-between gap-5 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-white to-amber-50 p-6 transition hover:border-primary/40 hover:shadow-card-hover dark:from-primary/20 dark:via-dark-card dark:to-amber-950/20 sm:flex-row sm:items-center"
+        >
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] text-primary">FEATURED READING</p>
+            <h3 className="mt-2 font-serif text-2xl font-bold text-text dark:text-dark-text">
+              《穷查理宝典》统一阅读
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-text-muted dark:text-dark-muted">
+              按原书顺序阅读卷首导读、三章方法论、十一场演讲与芒格推荐书目。
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 whitespace-nowrap font-medium text-primary">
+            开始阅读
+            <ChevronRight className="transition group-hover:translate-x-1" size={18} />
+          </span>
+        </Link>
+
         {relatedPeople.length > 0 && (
           <div className="mt-6 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20 dark:border-primary/30 p-6">
             <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4 flex items-center gap-2">
@@ -173,6 +213,61 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
             </div>
           </div>
         )}
+      </section>
+
+      <section id="archive" className="munger-column-archive">
+        <header className="munger-column-archive__heading">
+          <div>
+            <p>CHARLIE MUNGER ARCHIVE</p>
+            <h2>芒格档案</h2>
+          </div>
+          <p>
+            把生平、事业、演讲访谈和主题语录归入同一栏目，所有条目均可在站内连续阅读。
+          </p>
+        </header>
+
+        <div className="munger-column-archive__stats">
+          <div><strong>{archiveStats.profiles}</strong><span>篇生平与事业</span></div>
+          <div><strong>{archiveStats.recordings}</strong><span>篇演讲与访谈</span></div>
+          <div><strong>{archiveStats.quotes}</strong><span>组主题语录</span></div>
+          <div><strong>{modelStats?.total ?? 0}</strong><span>个思维模型</span></div>
+        </div>
+
+        <div className="munger-column-archive__profiles">
+          {archiveProfiles.map((item, index) => (
+            <Link key={item.href} href={item.href}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+              <b aria-hidden="true">↗</b>
+            </Link>
+          ))}
+        </div>
+
+        <div className="munger-column-archive__categories">
+          <Link href="/munger/archive#recordings">
+            <span>演讲与访谈</span>
+            <strong>{archiveStats.recordings} 篇 →</strong>
+          </Link>
+          <Link href="/munger/archive#quotes">
+            <span>主题语录</span>
+            <strong>{archiveStats.quotes} 组 →</strong>
+          </Link>
+          <Link href="/model">
+            <span>多元思维模型</span>
+            <strong>{modelStats?.total ?? 0} 个 →</strong>
+          </Link>
+          <Link href="/munger/originals">
+            <span>芒格原典</span>
+            <strong>第一手资料 →</strong>
+          </Link>
+        </div>
+
+        <Link href="/munger/archive" className="munger-column-archive__all">
+          查看全部 {archiveStats.total} 篇芒格档案 →
+        </Link>
       </section>
 
       <section id="philosophy" className="mb-12">
@@ -303,7 +398,7 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
           核心著作 / 言论集
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
           <Link
             href="/munger"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
@@ -329,12 +424,19 @@ export default function MungerContent({ person, relatedPeople, talksCount, qaCou
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{qaCount}场</div>
           </Link>
           <Link
-            href="/interviews"
+            href="/munger/archive"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🎙️</div>
-            <div className="text-sm font-medium text-text dark:text-dark-text">访谈</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">30场</div>
+            <div className="text-sm font-medium text-text dark:text-dark-text">芒格档案</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{archiveStats.total}篇</div>
+          </Link>
+          <Link
+            href="/munger/originals"
+            className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
+          >
+            <div className="text-2xl mb-2">📜</div>
+            <div className="text-sm font-medium text-text dark:text-dark-text">原典</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">13篇</div>
           </Link>
           <Link
             href="/model"

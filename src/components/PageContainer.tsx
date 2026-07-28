@@ -27,7 +27,7 @@ export default function PageContainer({
 }: PageContainerProps) {
   return (
     <div
-      className={`min-h-screen bg-bg-card dark:bg-dark-bg text-text dark:text-dark-text ${maxWidthMap[maxWidth]} mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10 ${className}`}
+      className={`archive-page min-h-screen text-text dark:text-dark-text ${maxWidthMap[maxWidth]} mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12 ${className}`}
     >
       {children}
     </div>

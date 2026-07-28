@@ -31,6 +31,7 @@ export interface ModelMeta {
   importance: number
   scenarios: string[]
   description: string
+  source: string
   sourceUrl: string
 }
 
@@ -66,9 +67,52 @@ function parseModel(slug: string, raw: string): ModelDetail {
     importance: typeof data.importance === 'number' ? data.importance : Number(data.importance) || 0,
     scenarios: toStringArray(data.scenarios),
     description: typeof data.description === 'string' ? data.description : '',
+    source: typeof data.source === 'string' ? data.source : '',
     sourceUrl: typeof data.sourceUrl === 'string' ? data.sourceUrl : '',
     content,
   }
+}
+
+export const MUNGER_ARCHIVE_MODEL_SLUG_MAP: Record<string, string> = {
+  'authority-misinfluence': 'authority-misinfluence-tendency',
+  'availability-misweighing': 'availability-misweighing-tendency',
+  'circle-of-competence': 'circle-of-competence',
+  'contrast-misreaction': 'contrast-misreaction-tendency',
+  curiosity: 'curiosity-tendency',
+  'deprival-superreaction': 'deprival-superreaction-tendency',
+  'disliking-hating': 'disliking-hating-tendency',
+  'doubt-avoidance': 'doubt-avoidance-tendency',
+  'drug-misinfluence': 'drug-misinfluence-tendency',
+  'envy-jealousy': 'envy-jealousy-tendency',
+  'excessive-self-regard': 'excessive-self-regard-tendency',
+  'incentive-superresponse': 'reward-and-punishment-superresponse-tendency',
+  'inconsistency-avoidance': 'inconsistency-avoidance-tendency',
+  inversion: 'inversion',
+  'kantian-fairness': 'kantian-fairness-tendency',
+  'latticework-of-mental-models': 'latticework-of-mental-models',
+  'liking-loving': 'liking-loving-tendency',
+  lollapalooza: 'lollapalooza-tendency',
+  'man-with-a-hammer': 'man-with-a-hammer-syndrome',
+  'margin-of-safety': 'margin-of-safety',
+  'mere-association': 'influence-from-mere-association-tendency',
+  'moats-and-durable-advantage': 'moat',
+  'opportunity-cost': 'opportunity-cost',
+  overoptimism: 'overoptimism-tendency',
+  'psychological-denial': 'simple-pain-avoiding-psychological-denial',
+  'psychology-of-human-misjudgment': 'psychology-of-human-misjudgment',
+  'reason-respecting': 'reason-respecting-tendency',
+  reciprocation: 'reciprocation-tendency',
+  'senescence-misinfluence': 'senescence-misinfluence-tendency',
+  'sit-on-your-ass-investing': 'sit-on-your-ass-investing',
+  'social-proof': 'social-proof-tendency',
+  'stress-influence': 'stress-influence-tendency',
+  twaddle: 'twaddle-tendency',
+  'two-track-analysis': 'two-track-analysis',
+  'use-it-or-lose-it': 'use-it-or-lose-it-tendency',
+}
+
+export function getCanonicalModelSlugForArchiveSlug(archiveSlug: string): string | null {
+  return MUNGER_ARCHIVE_MODEL_SLUG_MAP[archiveSlug] ?? null
 }
 
 function toMeta(detail: ModelDetail): ModelMeta {

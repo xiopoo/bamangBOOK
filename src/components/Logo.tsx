@@ -9,62 +9,14 @@ interface LogoProps {
 
 export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
   const content = (
-    <div className="flex items-center gap-3 select-none">
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        className="text-primary shrink-0"
-        aria-hidden="true"
-      >
-        <circle
-          cx="18"
-          cy="18"
-          r="16"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          fill="none"
-        />
-        <rect
-          x="12"
-          y="12"
-          width="12"
-          height="12"
-          rx="1.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          fill="none"
-        />
-        <path d="M9 18h18" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M18 9v18" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="18" cy="18" r="2" fill="currentColor" />
-      </svg>
-
+    <div className="archive-logo select-none">
       <div lang="zh-CN" className="whitespace-nowrap">
-        <div
-          className="font-serif text-lg font-semibold text-text dark:text-gray-100 leading-tight"
-          style={{
-            fontFamily:
-              "'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, STSong, 'PingFang SC', 'Microsoft YaHei', serif",
-            fontVariantLigatures: 'normal',
-            textRendering: 'optimizeLegibility',
-            WebkitFontSmoothing: 'antialiased',
-            MozOsxFontSmoothing: 'grayscale',
-          }}
-        >
+        <div className="archive-logo__title">
           小胖书房
         </div>
         {showSubtitle && (
-          <div
-            className="text-xs text-text-muted dark:text-gray-400 leading-tight mt-0.5"
-            style={{
-              fontFamily:
-                "'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, STSong, 'PingFang SC', 'Microsoft YaHei', serif",
-              letterSpacing: '0.02em',
-            }}
-          >
-            个人阅读与研究库
+          <div className="archive-logo__subtitle">
+            投资思想与商业史档案
           </div>
         )}
       </div>

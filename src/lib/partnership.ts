@@ -20,6 +20,8 @@ export interface YearGroup {
   letters: PartnershipLetter[]
 }
 
+export type PartnershipTimelineSlot = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+
 export interface ShareholderLetter {
   year: number
   filename: string
@@ -43,16 +45,37 @@ export function parsePartnershipFilename(file: string): { year: number; subtitle
 }
 
 /**
- * 子标题排序键：全年 < 年中 < 具体日期（按月/日）
+ * 子标题排序键：按自然时间排序。
  */
 export function getPartnershipSortKey(subtitle: string): [number, number] {
-  if (subtitle === '') return [0, 0]
-  if (subtitle === '年中') return [1, 0]
-  const monthMatch = subtitle.match(/(\d+)月/)
-  const dayMatch = subtitle.match(/(\d+)日/)
-  const month = monthMatch ? parseInt(monthMatch[1], 10) : 99
+  const normalized = normalizePartnershipSubtitle(subtitle)
+  if (!normalized) return [12, 31]
+  if (normalized === 'interim' || normalized === '年中') return [6, 30]
+  if (normalized === 'liquidation') return [5, 1]
+  if (normalized === 'annual') return [12, 31]
+  if (normalized === 'bond') return [12, 31]
+  const monthMatch = normalized.match(/(\d+)月/)
+  const dayMatch = normalized.match(/(\d+)日/)
+  const month = monthMatch ? parseInt(monthMatch[1], 10) : 12
   const day = dayMatch ? parseInt(dayMatch[1], 10) : 0
-  return [month + 2, day]
+  return [month, day]
+}
+
+export function getPartnershipTimelineSlot(subtitle: string): PartnershipTimelineSlot {
+  const [month] = getPartnershipSortKey(subtitle)
+  return Math.min(Math.max(month, 1), 12) as PartnershipTimelineSlot
+}
+
+function normalizePartnershipSubtitle(subtitle: string): string {
+  return subtitle.replace(/^-/, '').replace(/^年/, '')
+}
+
+function formatDateSubtitle(subtitle: string): string {
+  const normalized = normalizePartnershipSubtitle(subtitle)
+  const monthMatch = normalized.match(/(\d+)月/)
+  const dayMatch = subtitle.match(/(\d+)日/)
+  if (!monthMatch) return ''
+  return dayMatch ? `${monthMatch[1]}月${dayMatch[1]}日` : `${monthMatch[1]}月`
 }
 
 export function sortPartnershipLetters(letters: PartnershipLetter[]): PartnershipLetter[] {
@@ -66,9 +89,18 @@ export function sortPartnershipLetters(letters: PartnershipLetter[]): Partnershi
 
 /** 把原始 subtitle 格式化为展示用的副标题 */
 export function formatPartnershipSubtitle(subtitle: string): string {
-  if (!subtitle) return '全年'
-  if (subtitle === '年中') return '年中'
-  return subtitle.replace(/^年/, '')
+  const normalized = normalizePartnershipSubtitle(subtitle)
+  if (!normalized) return '年度'
+  if (normalized === 'interim' || normalized === '年中') return '半年'
+  if (normalized === 'annual') return '年度'
+  if (normalized === 'liquidation') return '清算'
+  if (normalized === 'bond') return '债券'
+  return formatDateSubtitle(normalized) || normalized
+}
+
+export function formatPartnershipLabel(letter: PartnershipLetter): string {
+  if (letter.filename.includes('有限合伙协议')) return '合伙协议'
+  return `${formatPartnershipSubtitle(letter.subtitle)}信`
 }
 
 /**

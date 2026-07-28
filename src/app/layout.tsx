@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Sidebar from '@/components/Sidebar'
+import SiteHeader from '@/components/SiteHeader'
 import ThemeProvider from '@/components/ThemeProvider'
 import { ProgressProvider } from '@/hooks/useProgress'
 import './globals.css'
@@ -22,11 +22,13 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: '小胖书房学习室：没有课表，只有问题与线索' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
+    images: ['/og.png'],
   },
   robots: { index: true, follow: true },
 }
@@ -41,7 +43,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script dangerouslySetInnerHTML={{
           __html: `
             (function() {
@@ -58,12 +59,10 @@ export default function RootLayout({
       <body className="bg-bg dark:bg-dark-bg text-text dark:text-dark-text min-h-screen transition-colors duration-300 overflow-x-hidden">
         <ThemeProvider>
           <ProgressProvider>
-            <div className="flex min-h-screen">
-              <Sidebar />
-              <main className="min-w-0 flex-1 min-h-screen md:ml-60">
-                {children}
-              </main>
-            </div>
+            <SiteHeader />
+            <main className="min-w-0 min-h-screen">
+              {children}
+            </main>
           </ProgressProvider>
         </ThemeProvider>
       </body>

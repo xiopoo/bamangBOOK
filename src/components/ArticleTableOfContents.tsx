@@ -55,23 +55,17 @@ export default function ArticleTableOfContents() {
   if (headings.length === 0) return null
 
   return (
-    <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-24 max-h-[calc(100vh-120px)] overflow-y-auto">
-      <div className="bg-bg-card dark:bg-dark-card rounded-card border border-primary/10 p-4 shadow-card">
-        <h3 className="font-semibold text-text dark:text-dark-text mb-3 flex items-center gap-2">
-          <span>📋</span>
-          文章目录
-        </h3>
-        <nav className="space-y-1">
+    <aside className="article-toc hidden lg:block">
+      <div>
+        <p>CONTENTS</p>
+        <h3>文章目录</h3>
+        <nav>
           {headings.map((heading) => (
             <a
               key={heading.id}
               href={`#${heading.id}`}
-              className={`block text-sm py-1.5 px-2 rounded hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors truncate ${
-                activeId === heading.id
-                  ? 'text-primary dark:text-primary-light font-medium'
-                  : 'text-text-muted dark:text-dark-muted'
-              }`}
-              style={{ paddingLeft: `${(heading.level - 2) * 12 + 8}px` }}
+              className={activeId === heading.id ? 'is-active' : ''}
+              style={{ paddingLeft: `${(heading.level - 2) * 12}px` }}
               title={heading.text}
             >
               {heading.text}

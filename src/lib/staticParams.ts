@@ -24,6 +24,12 @@ export function columnParams() {
   }))
 }
 
+export function businessHistoryParams() {
+  return listIds(path.join(CONTENT_DIR, 'business-history')).map((slug) => ({
+    slug,
+  }))
+}
+
 export function companyParams() {
   return listIds(path.join(CONTENT_DIR, 'companies')).map((name) => ({
     name,
