@@ -26,9 +26,10 @@ const navGroups = [
     description: '生平、原典、演讲访谈与多元思维模型',
     links: [
       { href: getSpaceHref('munger'), label: '芒格档案', meta: '栏目首页' },
+      { href: '/munger/wesco', label: 'Wesco 股东大会', meta: '中文问答' },
       { href: '/poor-charlies-almanack', label: '穷查理宝典', meta: '统一阅读' },
       { href: '/munger/archive', label: '芒格档案', meta: '生平·演讲·语录' },
-      { href: '/munger/originals', label: '芒格原典', meta: '13 篇' },
+      { href: '/munger/originals', label: 'Wesco 股东信', meta: '英文原文' },
       { href: '/model', label: '思维模型', meta: '232 个' },
       { href: '/concepts', label: '重要概念', meta: '主题索引' },
       { href: '/books', label: '深度拆书', meta: '书籍' },

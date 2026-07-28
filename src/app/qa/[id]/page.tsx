@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getDocumentByFileName, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
 import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
@@ -20,6 +20,10 @@ interface PageProps {
 
 export default function QADetailPage({ params }: PageProps) {
   const fileName = decodeURIComponent(params.id)
+  const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})\.md$/)
+  if (wescoMatch) {
+    redirect(`/munger/wesco/${wescoMatch[1]}`)
+  }
   const doc = getDocumentByFileName('qa', fileName)
 
   if (!doc) {

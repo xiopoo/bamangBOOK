@@ -182,14 +182,17 @@ function loadIndexedContent() {
       const qas: { title: string; year: number | null; fileName: string }[] =
         JSON.parse(readFileSync(qaIndexPath, 'utf-8'))
       qas.forEach(t => {
-        // 股东大会主要是巴菲特和芒格
-        result.buffett.items.push({
+        const isWesco = t.fileName.startsWith('Wesco_股东大会_')
+        const author = isWesco ? result.munger : result.buffett
+        author.items.push({
           title: t.title,
           fileName: t.fileName,
           filePath: `content/qa/${t.fileName}`,
           year: t.year,
           sourceDir: 'qa',
-          href: `/qa/${encodeURIComponent(t.fileName)}`,
+          href: isWesco && t.year
+            ? `/munger/wesco/${t.year}`
+            : `/qa/${encodeURIComponent(t.fileName)}`,
         })
       })
     } catch { /* ignore */ }

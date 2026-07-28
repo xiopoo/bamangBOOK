@@ -27,9 +27,10 @@ const sections = [
     description: '查理·芒格的文章、演讲与多元思维模型',
     links: [
       { href: '/munger', icon: '🧔', label: '文章·演讲' },
+      { href: '/munger/wesco', icon: '❓', label: 'Wesco 股东大会', count: '14' },
       { href: '/poor-charlies-almanack', icon: '📕', label: '穷查理宝典' },
       { href: '/munger/archive', icon: '🎧', label: '影音档案', count: '35' },
-      { href: '/munger/originals', icon: '📜', label: '原典', count: '13' },
+      { href: '/munger/originals', icon: '📜', label: 'Wesco 股东信', count: '13' },
       { href: '/model', icon: '🧠', label: '思维模型', count: '232' },
     ],
   },

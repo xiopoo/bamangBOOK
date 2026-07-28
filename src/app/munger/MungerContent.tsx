@@ -260,8 +260,12 @@ export default function MungerContent({
             <strong>{modelStats?.total ?? 0} 个 →</strong>
           </Link>
           <Link href="/munger/originals">
-            <span>芒格原典</span>
-            <strong>第一手资料 →</strong>
+            <span>Wesco 股东信</span>
+            <strong>官方英文原文 →</strong>
+          </Link>
+          <Link href="/munger/wesco">
+            <span>Wesco 股东大会</span>
+            <strong>中文问答 →</strong>
           </Link>
         </div>
 
@@ -416,7 +420,7 @@ export default function MungerContent({
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{talksCount}场</div>
           </Link>
           <Link
-            href="/qa?person=munger"
+            href="/munger/wesco"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
             <div className="text-2xl mb-2">❓</div>

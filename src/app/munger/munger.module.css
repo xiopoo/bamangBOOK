@@ -17,17 +17,17 @@
 .drawers h2 { color: var(--archive-ink); font-size: 1.2rem; font-weight: 600; }
 .drawers p { margin-top: .35rem; color: var(--archive-ink-faint); font-size: .74rem; }
 .drawers > a:hover h2 { color: var(--archive-oxblood); }
-.originals, .groups { margin-top: 4.5rem; }
-.originals > header, .groups > div > header { padding-bottom: .8rem; display: grid; grid-template-columns: 3rem 1fr auto; align-items: end; border-bottom: 1px solid var(--archive-ink); }
-.originals > header > span, .groups header > span { color: var(--archive-oxblood); font-family: var(--archive-sans); font-size: .7rem; font-weight: 700; }
-.originals h2, .groups h2 { color: var(--archive-ink); font-size: 1.5rem; font-weight: 600; }
-.originals header a, .groups header small { color: var(--archive-ink-faint); font-family: var(--archive-sans); font-size: .67rem; }
-.originals > div { display: grid; grid-template-columns: repeat(2, 1fr); }
-.originals > div a { min-height: 4.6rem; padding: 1rem 0; display: grid; grid-template-columns: 4rem 1fr auto; gap: 1rem; color: var(--archive-ink); border-bottom: 1px solid var(--archive-rule-soft); font-size: .8rem; }
-.originals > div a:nth-child(odd) { padding-right: 1.5rem; border-right: 1px solid var(--archive-rule-soft); }
-.originals > div a:nth-child(even) { padding-left: 1.5rem; }
-.originals strong { color: var(--archive-oxblood); font-family: var(--archive-sans); font-size: .7rem; }
-.originals b { color: var(--archive-ink-faint); font-size: .7rem; font-weight: 400; }
+.meetings, .originals, .groups { margin-top: 4.5rem; }
+.meetings > header, .originals > header, .groups > div > header { padding-bottom: .8rem; display: grid; grid-template-columns: 3rem 1fr auto; align-items: end; border-bottom: 1px solid var(--archive-ink); }
+.meetings > header > span, .originals > header > span, .groups header > span { color: var(--archive-oxblood); font-family: var(--archive-sans); font-size: .7rem; font-weight: 700; }
+.meetings h2, .originals h2, .groups h2 { color: var(--archive-ink); font-size: 1.5rem; font-weight: 600; }
+.meetings header a, .originals header a, .groups header small { color: var(--archive-ink-faint); font-family: var(--archive-sans); font-size: .67rem; }
+.meetings > div, .originals > div { display: grid; grid-template-columns: repeat(2, 1fr); }
+.meetings > div a, .originals > div a { min-height: 4.6rem; padding: 1rem 0; display: grid; grid-template-columns: 4rem 1fr auto; gap: 1rem; color: var(--archive-ink); border-bottom: 1px solid var(--archive-rule-soft); font-size: .8rem; }
+.meetings > div a:nth-child(odd), .originals > div a:nth-child(odd) { padding-right: 1.5rem; border-right: 1px solid var(--archive-rule-soft); }
+.meetings > div a:nth-child(even), .originals > div a:nth-child(even) { padding-left: 1.5rem; }
+.meetings strong, .originals strong { color: var(--archive-oxblood); font-family: var(--archive-sans); font-size: .7rem; }
+.meetings b, .originals b { color: var(--archive-ink-faint); font-size: .7rem; font-weight: 400; }
 .groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem 2rem; }
 .groups > div > div a { padding: .9rem 0; display: flex; justify-content: space-between; gap: 1rem; color: var(--archive-ink); border-bottom: 1px solid var(--archive-rule-soft); font-size: .8rem; }
 .groups > div > div span { color: var(--archive-ink-faint); }
@@ -35,7 +35,6 @@
   .ledger { grid-template-columns: repeat(2, 1fr); }
   .ledger > div:nth-child(2) { border-right: 0; }
   .ledger > div:nth-child(-n+2) { border-bottom: 1px solid var(--archive-rule-soft); }
-  .drawers, .originals > div, .groups { grid-template-columns: 1fr; }
-  .drawers > a:nth-child(odd), .drawers > a:nth-child(even), .originals > div a:nth-child(odd), .originals > div a:nth-child(even) { padding-left: 0; padding-right: 0; border-right: 0; }
+  .drawers, .meetings > div, .originals > div, .groups { grid-template-columns: 1fr; }
+  .drawers > a:nth-child(odd), .drawers > a:nth-child(even), .meetings > div a:nth-child(odd), .meetings > div a:nth-child(even), .originals > div a:nth-child(odd), .originals > div a:nth-child(even) { padding-left: 0; padding-right: 0; border-right: 0; }
 }
-

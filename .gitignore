@@ -19,6 +19,7 @@ public/search-index.json
 tsconfig.tsbuildinfo
 .agently-home/
 tmp/
+output/ebook/
 .cache/
 .codebuddy/
 .trae/

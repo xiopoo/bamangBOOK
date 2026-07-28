@@ -16,7 +16,7 @@ const DECADES: { label: string; range: [number, number] }[] = [
 
 export default function QAPage() {
   const personId: string | undefined = undefined
-  const documents = getDocuments('qa', personId)
+  const documents = getDocuments('qa', personId).filter((doc) => !doc.fileName.startsWith('Wesco_股东大会_'))
   const totalCount = documents.length
   const years = documents.map((d) => d.year).filter(y => y) as number[]
   const firstYear = years.length > 0 ? Math.min(...years) : null
@@ -26,7 +26,7 @@ export default function QAPage() {
   const currentPerson = personId ? people[personId] : null
   const subtitle = currentPerson
     ? `${currentPerson.name}在伯克希尔和Wesco股东大会上的问答实录`
-    : '伯克希尔股东大会问答实录，近距离聆听投资大师的智慧'
+    : '伯克希尔股东大会问答实录；Wesco 公司问答已归入芒格档案'
 
   return (
     <PageContainer maxWidth="7xl">
@@ -62,6 +62,12 @@ export default function QAPage() {
             {person.name}
           </Link>
         ))}
+        <Link
+          href="/munger/wesco"
+          className="px-4 py-2 rounded-lg text-sm font-medium bg-white dark:bg-dark-card text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
+          Wesco 问答移至芒格档案 →
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">

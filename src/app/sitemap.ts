@@ -6,6 +6,7 @@ import { getAllPartnershipLetters } from '@/lib/partnership'
 import { getBusinessHistories } from '@/lib/business-history'
 import { siteConfig } from '@/lib/site'
 import { almanackSections } from '@/lib/poor-charlies-almanack'
+import { getWescoMeetings } from '@/lib/wesco-meetings'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -20,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '', '/about', '/search', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
-    '/business-history', '/poor-charlies-almanack',
+    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/munger/originals',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
 
@@ -29,7 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   namesIn('people').forEach(name => urls.add(`${baseUrl}/people/${encodeURIComponent(name)}`))
 
   getDocuments('articles').forEach(doc => urls.add(`${baseUrl}/articles/${encodeURIComponent(doc.fileName)}`))
-  getDocuments('qa').forEach(doc => urls.add(`${baseUrl}/qa/${encodeURIComponent(doc.fileName)}`))
+  getDocuments('qa')
+    .filter(doc => !doc.fileName.startsWith('Wesco_股东大会_'))
+    .forEach(doc => urls.add(`${baseUrl}/qa/${encodeURIComponent(doc.fileName)}`))
+  getWescoMeetings().forEach(item => urls.add(`${baseUrl}/munger/wesco/${item.year}`))
   getDocuments('talks').forEach(doc => urls.add(`${baseUrl}/talks/${encodeURIComponent(doc.fileName)}`))
   getDocuments('interviews').forEach(doc => urls.add(`${baseUrl}/interviews/${encodeURIComponent(doc.fileName)}`))
   getAllPartnershipLetters().forEach(letter => urls.add(`${baseUrl}/partnership/${letter.id}`))

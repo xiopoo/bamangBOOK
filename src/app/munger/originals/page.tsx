@@ -7,8 +7,8 @@ import StatBadge from '@/components/StatBadge'
 import { getMungerOriginals } from '@/lib/munger-originals'
 
 export const metadata: Metadata = {
-  title: '芒格原典 · 官方原文',
-  description: '查理·芒格官方公开材料原文阅读库，当前收录 Wesco 1997-2009 股东信。',
+  title: 'Wesco 股东信 · 英文原文',
+  description: '伯克希尔官网 Wesco 1997-2009 股东信英文原文，与中文股东大会问答分开归档。',
 }
 
 export default function MungerOriginalsPage() {
@@ -20,8 +20,8 @@ export default function MungerOriginalsPage() {
   return (
     <PageContainer maxWidth="6xl">
       <PageHeader
-        title="📜 芒格原典"
-        subtitle="官方公开来源的英文原文，先读原典，再做提炼。"
+        title="Wesco 股东信 · 英文原文"
+        subtitle="来自伯克希尔官网的 1997-2009 年官方股东信。它们不是 Wesco 股东大会问答。"
         backHref="/munger"
         backLabel="返回芒格专栏"
         sticky
@@ -32,6 +32,13 @@ export default function MungerOriginalsPage() {
         <StatBadge icon="📝" count={`${(totalWords / 10000).toFixed(1)}万`} label="英文词数" sub="粗略统计" />
         <StatBadge icon="📅" count={`${firstYear}-${lastYear}`} label="年份" sub="Wesco 股东信" />
         <StatBadge icon="✓" count="官方" label="来源" sub="Berkshire/Wesco" />
+      </div>
+
+      <div className="mb-8 border-y border-gray-200 dark:border-gray-700 py-4 text-sm text-text-muted dark:text-dark-muted">
+        想直接阅读芒格在现场回答股东的问题？
+        <Link href="/munger/wesco" className="ml-2 text-primary dark:text-primary-light hover:underline">
+          前往 Wesco 股东大会中文问答 →
+        </Link>
       </div>
 
       <section>
