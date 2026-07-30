@@ -11,9 +11,9 @@ import { getSpaceHref } from '@/lib/site-spaces'
 const navGroups = [
   {
     label: '巴菲特',
-    description: '亲笔信、股东大会与公开表达',
+    description: '原始记录、思想、事业与公司',
     links: [
-      { href: getSpaceHref('buffett'), label: '巴菲特知识库', meta: '栏目首页' },
+      { href: getSpaceHref('buffett'), label: '巴菲特档案', meta: '总览' },
       { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
       { href: '/letters', label: '伯克希尔股东信', meta: '历年原文' },
       { href: '/qa', label: '股东大会实录', meta: '问答档案' },
@@ -23,9 +23,9 @@ const navGroups = [
   },
   {
     label: '芒格',
-    description: '生平、原典、演讲访谈与多元思维模型',
+    description: '原始记录、思想、生平与事业',
     links: [
-      { href: getSpaceHref('munger'), label: '芒格档案', meta: '栏目首页' },
+      { href: getSpaceHref('munger'), label: '芒格档案', meta: '总览' },
       { href: '/munger/wesco', label: 'Wesco 股东大会', meta: '中文问答' },
       { href: '/poor-charlies-almanack', label: '穷查理宝典', meta: '统一阅读' },
       { href: '/munger/archive', label: '芒格档案', meta: '生平·演讲·语录' },
@@ -37,11 +37,11 @@ const navGroups = [
   },
   {
     label: '专栏',
-    description: '研究文章、商业史与作者档案',
+    description: '公司研究、专题文章与作者档案',
     links: [
       { href: '/columns', label: '投资专栏', meta: '专题写作' },
       { href: '/articles', label: '研究文章', meta: '文章库' },
-      { href: '/business-history', label: '商业史研究', meta: '公司案例' },
+      { href: '/business-history', label: '公司深度研究', meta: '16 家公司' },
       { href: '/bloggers', label: '博主专栏', meta: '作者索引' },
       { href: '/bloggers/唐僧的碎碎念', label: '唐僧的碎碎念', meta: '专栏' },
       { href: '/bloggers/在苍茫中传灯', label: '在苍茫中传灯', meta: '专栏' },

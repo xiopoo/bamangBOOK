@@ -9,6 +9,7 @@ interface PageHeaderProps {
   backLabel?: string
   rightSlot?: ReactNode
   sticky?: boolean
+  showFontSize?: boolean
 }
 
 export default function PageHeader({
@@ -17,6 +18,7 @@ export default function PageHeader({
   backHref,
   backLabel = '返回',
   rightSlot,
+  showFontSize = false,
 }: PageHeaderProps) {
   return (
     <header className="archive-page-header">
@@ -41,7 +43,7 @@ export default function PageHeader({
             )}
           </div>
           <div className="archive-page-header__tools">
-            <FontSizeControlFixed />
+            {showFontSize && <FontSizeControlFixed />}
             {rightSlot && rightSlot}
           </div>
         </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: '小胖书房学习室：没有课表，只有问题与线索' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: '小胖书房：巴菲特、芒格与长期主义投资档案' }],
   },
   twitter: {
     card: 'summary_large_image',

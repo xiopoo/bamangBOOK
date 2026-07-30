@@ -21,9 +21,9 @@ interface PageProps {
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const item = getBusinessHistoryBySlug(decodeURIComponent(params.slug))
-  if (!item) return { title: '商业史研究未找到' }
+  if (!item) return { title: '公司深度研究未找到' }
   return {
-    title: `${item.title} · 商业史研究`,
+    title: `${item.title} · 公司深度研究`,
     description: item.summary
       || item.content.replace(/[#>*_`\[\]]/g, '').replace(/\s+/g, ' ').trim().slice(0, 150),
     alternates: { canonical: `/business-history/${encodeURIComponent(item.slug)}` },
@@ -51,7 +51,7 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0 flex-1">
               <Link href="/business-history" className="mb-1 inline-flex items-center gap-1 text-sm text-primary transition-colors hover:text-primary-light">
-                ← 返回商业史研究
+                ← 返回公司深度研究
               </Link>
               <h1 className="font-serif text-xl font-bold text-primary dark:text-primary-light sm:text-2xl md:text-3xl">{item.title}</h1>
               <p className="flex flex-wrap items-center gap-2 text-sm text-text-muted dark:text-dark-muted">

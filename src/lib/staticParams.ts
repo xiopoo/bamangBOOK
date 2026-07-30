@@ -1,6 +1,7 @@
 import { readdirSync, existsSync } from 'fs'
 import path from 'path'
 import { getBloggers, getBloggerArticles } from './bloggers'
+import { getBusinessHistories } from './business-history'
 import { getDocuments } from './documents'
 
 const CONTENT_DIR = path.join(process.cwd(), 'content')
@@ -25,9 +26,7 @@ export function columnParams() {
 }
 
 export function businessHistoryParams() {
-  return listIds(path.join(CONTENT_DIR, 'business-history')).map((slug) => ({
-    slug,
-  }))
+  return getBusinessHistories().map(({ slug }) => ({ slug }))
 }
 
 export function companyParams() {

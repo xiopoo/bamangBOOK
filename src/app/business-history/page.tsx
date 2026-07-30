@@ -8,8 +8,8 @@ import StatBadge from '@/components/StatBadge'
 import { getBusinessHistories, getBusinessHistoryStats } from '@/lib/business-history'
 
 export const metadata: Metadata = {
-  title: '商业史研究',
-  description: '基于 Worldly Partners 公司研究 PDF 整理的中文商业史研究笔记。',
+  title: '公司深度研究',
+  description: '16 家代表性公司的中文深度研究：商业模式、护城河、资本配置、风险与长期价值。',
 }
 
 export default function BusinessHistoryPage() {
@@ -19,8 +19,8 @@ export default function BusinessHistoryPage() {
   return (
     <PageContainer maxWidth="5xl">
       <PageHeader
-        title="商业史研究"
-        subtitle="从优秀公司的历史、商业模式、护城河和资本配置里，提炼可复用的企业研究框架。"
+        title="公司深度研究"
+        subtitle="16 家公司，16 份完整研究。回到历史、商业模式、护城河、资本配置与风险，而不是只看一张估值表。"
         backHref="/"
         backLabel="返回首页"
         sticky
@@ -28,13 +28,13 @@ export default function BusinessHistoryPage() {
 
       <div className="mb-10 grid grid-cols-3 gap-3">
         <StatBadge icon="🏢" count={`${stats.companies}家`} label="研究对象" sub="公司与资产" />
-        <StatBadge icon="📄" count={`${stats.total}篇`} label="中文研究" sub="持续精修" />
+        <StatBadge icon="📄" count={`${stats.total}篇`} label="深度研究" sub="完整长稿" />
         <StatBadge icon="🏷️" count={`${stats.tags}个`} label="主题标签" sub="多维检索" />
       </div>
 
       {histories.length === 0 ? (
         <div className="py-16 text-center text-text-muted dark:text-dark-muted">
-          暂无商业史研究。
+          暂无公司深度研究。
         </div>
       ) : (
         <div className="space-y-3">

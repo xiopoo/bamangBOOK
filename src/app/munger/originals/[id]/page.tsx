@@ -38,6 +38,7 @@ export default function MungerOriginalPage({ params }: PageProps) {
         backHref="/munger/originals"
         backLabel="返回 Wesco 股东信"
         sticky
+        showFontSize
       />
 
       <div className="mb-6 flex flex-wrap items-center gap-3 text-sm">

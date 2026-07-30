@@ -10,7 +10,7 @@ const footerLinks = [
   { href: '/munger/originals', label: 'Wesco 股东信' },
   { href: '/model', label: '思维模型' },
   { href: '/columns', label: '投资专栏' },
-  { href: '/business-history', label: '商业史研究' },
+  { href: '/business-history', label: '公司深度研究' },
 ]
 
 export default function PageFooter() {
@@ -23,7 +23,7 @@ export default function PageFooter() {
             <h3>
               小胖书房
             </h3>
-            <p>系统整理巴菲特、芒格、长期主义投资与商业史资料。</p>
+            <p>巴菲特、芒格、公司与商业史的长期档案。</p>
             <blockquote>“反过来想，总是反过来想。”</blockquote>
             <a
               href="https://xhslink.com/m/6OPiGk9H7w7"

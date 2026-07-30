@@ -72,6 +72,7 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
           : '查理·芒格档案'}
         backHref="/munger/archive"
         backLabel="返回芒格档案"
+        showFontSize
       />
 
       <article className="archive-document">

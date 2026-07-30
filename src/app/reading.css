@@ -1,7 +1,7 @@
 /* ===== 长文阅读优化（专注学习与阅读场景） ===== */
 
 .prose {
-  font-size: 1.0625rem; /* 约 17px，长文更舒适 */
+  font-size: var(--text-size-base);
   line-height: 1.85;
 }
 
@@ -13,7 +13,7 @@
 
 /* 正文首段作为导语，提升进入阅读的引导感 */
 .prose > p:first-of-type {
-  font-size: 1.125rem;
+  font-size: 1.04em;
   line-height: 1.85;
   color: #4a3526;
 }

@@ -6,7 +6,7 @@
 
 :root {
   --font-size-base: 16px;
-  --text-size-base: 16px;
+  --text-size-base: 18px;
   --archive-paper: #f7f2e7;
   --archive-paper-deep: #e9e0cc;
   --archive-paper-tint: #f1eada;
@@ -41,7 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-wrap: break-word;
-  font-size: var(--text-size-base);
+  font-size: 17px;
   background-image:
     repeating-linear-gradient(
       45deg,
@@ -657,12 +657,63 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
 }
 
+.reader-font-control {
+  display: grid;
+  grid-template-columns: 2.5rem 3.25rem 2.5rem;
+  align-items: center;
+  color: var(--archive-ink-faint);
+  border: 1px solid var(--archive-rule);
+  background: var(--archive-paper);
+  font-family: var(--archive-sans);
+}
+
+.reader-font-control button {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  color: var(--archive-ink-soft);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.reader-font-control button:hover:not(:disabled) {
+  color: var(--archive-paper);
+  background: var(--archive-oxblood);
+}
+
+.reader-font-control button:focus-visible {
+  outline: 2px solid var(--archive-oxblood);
+  outline-offset: -2px;
+}
+
+.reader-font-control button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.reader-font-control output {
+  min-height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-inline: 1px solid var(--archive-rule);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .archive-home {
-  padding-top: clamp(3.5rem, 7vw, 7.5rem);
+  padding-top: clamp(4.5rem, 9vw, 9rem);
 }
 
 .archive-hero {
   position: relative;
+  min-height: min(43rem, calc(100vh - 5rem));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--archive-rule);
 }
 
 .archive-eyebrow {
@@ -677,44 +728,22 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 12ch;
   margin-top: 1.25rem;
   color: var(--archive-ink);
-  font-size: clamp(4rem, 2.5rem + 6vw, 8.4rem);
+  font-size: clamp(4rem, 2.8rem + 4.5vw, 7rem);
   font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.075em;
+  line-height: 0.92;
+  letter-spacing: -0.085em;
 }
 
 .archive-hero__lede {
-  max-width: 39em;
-  margin-top: 1.8rem;
+  max-width: 42em;
+  margin-top: 2.25rem;
   color: var(--archive-ink-soft);
-  font-size: clamp(1.25rem, 1rem + 0.85vw, 1.78rem);
+  font-size: clamp(1.2rem, 1rem + 0.65vw, 1.52rem);
   line-height: 1.75;
 }
 
-.archive-aphorism {
-  max-width: 44rem;
-  margin-top: 3.2rem;
-  padding-left: 1.4rem;
-  border-left: 3px solid var(--archive-gold);
-}
-
-.archive-aphorism blockquote {
-  margin: 0.75rem 0 0.55rem;
-  color: var(--archive-ink);
-  font-size: clamp(1.55rem, 1.2rem + 1.25vw, 2.45rem);
-  font-style: italic;
-  line-height: 1.55;
-}
-
-.archive-aphorism > p:last-child {
-  color: var(--archive-ink-faint);
-  font-family: var(--archive-sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-}
-
 .archive-hero__actions {
-  margin-top: 2.7rem;
+  margin: 2.7rem 0 4.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
@@ -750,6 +779,213 @@ h1, h2, h3, h4, h5, h6 {
 .archive-button--solid:hover {
   color: #fff8ec;
   background: var(--archive-oxblood-deep);
+}
+
+.archive-thinkers {
+  margin-top: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.archive-thinkers > header,
+.archive-thought-map > header {
+  margin-bottom: 1.8rem;
+}
+
+.archive-thinkers h2,
+.archive-thought-map h2 {
+  margin-top: 0.55rem;
+  color: var(--archive-ink);
+  font-size: clamp(2rem, 1.55rem + 1.45vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+}
+
+.archive-thinkers > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid var(--archive-ink);
+  border-bottom: 1px solid var(--archive-rule);
+}
+
+.archive-thinker {
+  min-height: 28rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  color: var(--archive-ink);
+}
+
+.archive-thinker + .archive-thinker {
+  border-left: 1px solid var(--archive-rule);
+}
+
+.archive-thinker > p {
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.archive-thinker h3 {
+  margin-top: 1.8rem;
+  color: var(--archive-ink);
+  font-size: clamp(1.85rem, 3vw, 2.8rem);
+  font-weight: 550;
+  letter-spacing: -0.045em;
+  line-height: 1.35;
+}
+
+.archive-thinker > span {
+  max-width: 29rem;
+  margin-top: 1.6rem;
+  color: var(--archive-ink-faint);
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.archive-thinker strong {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.archive-thinker:hover {
+  color: var(--archive-ink);
+  background: var(--archive-paper-tint);
+}
+
+.archive-thought-map {
+  margin-top: clamp(5rem, 9vw, 8rem);
+}
+
+.archive-thought-map > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--archive-ink);
+  border-left: 1px solid var(--archive-rule);
+}
+
+.archive-thought-map a {
+  min-height: 16rem;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--archive-ink);
+  border-right: 1px solid var(--archive-rule);
+  border-bottom: 1px solid var(--archive-rule);
+}
+
+.archive-thought-map a > span {
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.archive-thought-map h3 {
+  margin-top: auto;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.archive-thought-map a p {
+  margin-top: 0.8rem;
+  color: var(--archive-ink-faint);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.archive-thought-map a:hover h3 {
+  color: var(--archive-oxblood);
+}
+
+.archive-today {
+  margin-top: clamp(5rem, 9vw, 8rem);
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.55fr) minmax(20rem, 1.4fr) minmax(18rem, 1fr);
+  color: var(--archive-ink);
+  border-top: 1px solid var(--archive-rule);
+  border-bottom: 1px solid var(--archive-rule);
+}
+
+.archive-today > * {
+  padding: clamp(1.5rem, 3vw, 2.6rem);
+}
+
+.archive-today > * + * {
+  border-left: 1px solid var(--archive-rule);
+}
+
+.archive-today__label span {
+  margin-top: 0.65rem;
+  display: block;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.archive-today__content h2 {
+  margin-top: 0.75rem;
+  font-size: clamp(1.9rem, 1.5rem + 1vw, 2.7rem);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+.archive-today__content h2 a {
+  color: var(--archive-ink);
+}
+
+.archive-today__content h2 a:hover {
+  color: var(--archive-oxblood);
+}
+
+.archive-today__content > p:not(.archive-kicker) {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: var(--archive-ink-faint);
+  line-height: 1.8;
+}
+
+.archive-today__link {
+  margin-top: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.archive-today blockquote {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--archive-ink-soft);
+  background: color-mix(in srgb, var(--archive-paper-deep) 45%, transparent);
+  font-size: clamp(1.22rem, 1.05rem + 0.45vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.archive-today cite {
+  margin-top: 1rem;
+  display: block;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.08em;
 }
 
 .archive-flourish {
@@ -790,7 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
 .archive-index h2 {
   margin-top: 0.55rem;
   color: var(--archive-ink);
-  font-size: clamp(2rem, 1.4rem + 2vw, 3.45rem);
+  font-size: clamp(1.9rem, 1.5rem + 1.35vw, 3rem);
   font-weight: 650;
   line-height: 1.2;
   letter-spacing: -0.045em;
@@ -848,7 +1084,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .archive-drawer small {
   color: var(--archive-oxblood);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   letter-spacing: 0.08em;
 }
 
@@ -862,9 +1098,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.35rem;
   color: var(--archive-oxblood);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   letter-spacing: 0.08em;
 }
 
@@ -887,7 +1124,7 @@ h1, h2, h3, h4, h5, h6 {
 .archive-reading-card h3 {
   margin-top: 1rem;
   color: var(--archive-ink);
-  font-size: clamp(1.6rem, 1.25rem + 0.7vw, 2.15rem);
+  font-size: clamp(1.5rem, 1.3rem + 0.55vw, 1.95rem);
   font-weight: 650;
   line-height: 1.35;
 }
@@ -1197,6 +1434,21 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .archive-thought-map > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .archive-today {
+    grid-template-columns: minmax(8rem, 0.45fr) minmax(0, 1.55fr);
+  }
+
+  .archive-today blockquote {
+    grid-column: 1 / -1;
+    min-height: 13rem;
+    border-top: 1px solid var(--archive-rule);
+    border-left: 0;
+  }
+
   .archive-index,
   .archive-footer__grid {
     grid-template-columns: 1fr 1fr;
@@ -1226,6 +1478,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .archive-mobile-menu__grid,
+  .archive-thinkers > div,
+  .archive-thought-map > div,
   .archive-drawers,
   .archive-reading-grid,
   .archive-index,
@@ -1237,9 +1491,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 3rem;
   }
 
+  .archive-hero {
+    min-height: auto;
+  }
+
   .archive-hero h1 {
     margin-top: 1rem;
-    font-size: clamp(3.8rem, 21vw, 5.4rem);
+    font-size: clamp(3.65rem, 20vw, 5.2rem);
+    line-height: 0.98;
   }
 
   .archive-hero__lede {
@@ -1251,8 +1510,34 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
   }
 
+  .archive-today {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-today > * + * {
+    border-top: 1px solid var(--archive-rule);
+    border-left: 0;
+  }
+
+  .archive-today blockquote {
+    grid-column: auto;
+  }
+
   .archive-button {
     width: 100%;
+  }
+
+  .archive-thinker {
+    min-height: 22rem;
+  }
+
+  .archive-thinker + .archive-thinker {
+    border-top: 1px solid var(--archive-rule);
+    border-left: 0;
+  }
+
+  .archive-thought-map a {
+    min-height: 13rem;
   }
 
   .archive-section__heading {

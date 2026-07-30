@@ -60,7 +60,7 @@ export default function LearnPage() {
     },
     disney && {
       href: `/business-history/${encodeURIComponent(disney.slug)}`,
-      meta: `商业史 · ${disney.readMinutes} 分钟`,
+      meta: `公司研究 · ${disney.readMinutes} 分钟`,
       title: disney.title,
       note: disney.summary || '把一个长期复利故事还原为真实的经营系统。',
     },
@@ -98,7 +98,7 @@ export default function LearnPage() {
           <div><strong>{archiveStats.total}</strong><span>篇芒格档案</span></div>
           <div><strong>{models.length}</strong><span>个思维模型</span></div>
           <div><strong>{letters.length + partnerships.length}</strong><span>封长期信件</span></div>
-          <div><strong>{histories.length}</strong><span>篇商业史研究</span></div>
+          <div><strong>{histories.length}</strong><span>篇公司深度研究</span></div>
         </div>
 
         <section className={styles.section}>

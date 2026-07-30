@@ -71,6 +71,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
         backHref="/companies"
         backLabel="返回公司列表"
         sticky
+        showFontSize
       />
 
       <ContentTrustPanel

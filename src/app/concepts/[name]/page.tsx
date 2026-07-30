@@ -72,6 +72,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
         backHref="/concepts"
         backLabel="返回概念列表"
         sticky
+        showFontSize
       />
 
       <ContentTrustPanel
