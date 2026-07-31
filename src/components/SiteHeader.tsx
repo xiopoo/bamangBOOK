@@ -2,44 +2,70 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChevronDown, Menu, Moon, Search, Sun, UserRound, X } from 'lucide-react'
+import { ChevronDown, Menu, Moon, Search, Sun, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
-import { getSpaceHref } from '@/lib/site-spaces'
 
 const navGroups = [
   {
-    label: '巴菲特',
-    description: '信件、股东大会与长期投资方法',
-    activePrefixes: ['/buffett', '/partnership', '/letters', '/qa'],
+    label: '内容',
+    description: '信件、问答、演讲与文章',
+    activePrefixes: [
+      '/reading',
+      '/partnership',
+      '/letters',
+      '/qa',
+      '/talks',
+      '/interviews',
+      '/articles',
+      '/columns',
+      '/books',
+      '/poor-charlies-almanack',
+    ],
     links: [
-      { href: getSpaceHref('buffett'), label: '巴菲特', meta: '人物专题' },
+      { href: '/reading', label: '全部内容', meta: '按人物和类型浏览' },
       { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
       { href: '/letters', label: '伯克希尔股东信', meta: '1965—至今' },
-      { href: '/qa', label: '伯克希尔股东大会', meta: '现场问答' },
+      { href: '/qa', label: '股东大会与问答', meta: '现场记录' },
+      { href: '/talks', label: '演讲', meta: '公开表达' },
+      { href: '/interviews', label: '访谈', meta: '对话记录' },
+      { href: '/articles', label: '文章与文集', meta: '长期写作' },
+      { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '芒格演讲与文章' },
     ],
   },
   {
-    label: '芒格',
-    description: '演讲、问答与多元思维方法',
-    activePrefixes: ['/munger', '/poor-charlies-almanack'],
+    label: '人物',
+    description: '巴菲特与芒格的第一手资料',
+    activePrefixes: ['/buffett', '/munger'],
     links: [
-      { href: getSpaceHref('munger'), label: '查理·芒格', meta: '人物专题' },
-      { href: '/munger/wesco', label: 'Wesco 问答', meta: '会议记录' },
-      { href: '/munger/archive', label: '演讲与访谈', meta: '公开表达' },
-      { href: '/munger/originals', label: 'Wesco 股东信', meta: '英文原文' },
-      { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '演讲与文章' },
+      { href: '/buffett', label: '巴菲特', meta: '人物主页' },
+      { href: '/munger', label: '芒格', meta: '人物主页' },
+    ],
+  },
+  {
+    label: '研究',
+    description: '公司深度研究与思维模型',
+    activePrefixes: ['/business-history', '/model'],
+    links: [
+      { href: '/business-history', label: '公司深度研究', meta: '经营与资本配置' },
+      { href: '/model', label: '多元思维模型', meta: '跨学科工具' },
+    ],
+  },
+  {
+    label: '索引',
+    description: '按概念、公司、人物查找',
+    activePrefixes: ['/concepts', '/companies', '/people'],
+    links: [
+      { href: '/concepts', label: '概念索引', meta: '投资概念' },
+      { href: '/companies', label: '公司索引', meta: '按公司查找' },
+      { href: '/people', label: '人物索引', meta: '按人物查找' },
     ],
   },
 ]
 
 const directLinks = [
-  { href: '/business-history', label: '企业研究' },
-  { href: '/concepts', label: '主题索引' },
-  { href: '/learn', label: '阅读室' },
   { href: '/bound-edition', label: '合订本' },
-  { href: '/about', label: '关于' },
 ]
 
 export default function SiteHeader() {
@@ -74,9 +100,6 @@ export default function SiteHeader() {
       <div className="archive-masthead__inner">
         <Logo />
         <nav className="archive-nav" aria-label="主要栏目">
-          <Link href="/reading" className={pathname.startsWith('/reading') ? 'is-active' : ''}>
-            原典
-          </Link>
           {navGroups.map(group => {
             const isOpen = openGroup === group.label
             return (
@@ -123,9 +146,6 @@ export default function SiteHeader() {
           <Link href="/search" className="archive-tool" aria-label="全站搜索">
             <Search size={18} /><span>搜索</span>
           </Link>
-          <Link href="/login" className="archive-tool" aria-label="登录或进入我的书房">
-            <UserRound size={17} /><span>登录</span>
-          </Link>
           <button type="button" className="archive-tool archive-tool--icon" onClick={toggleTheme} aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}>
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
@@ -139,7 +159,6 @@ export default function SiteHeader() {
         <div className="archive-mobile-menu">
           <div className="archive-mobile-menu__tools">
             <Link href="/search"><Search size={17} />搜索人物、公司、年份或概念</Link>
-            <Link href="/login"><UserRound size={17} />登录 / 我的书房</Link>
           </div>
           <div className="archive-mobile-menu__grid">
             {navGroups.map(group => (
@@ -154,7 +173,6 @@ export default function SiteHeader() {
             ))}
             <section>
               <p>主要栏目</p>
-              <Link href="/reading"><span>原典</span></Link>
               {directLinks.map(link => <Link key={`mobile-${link.href}`} href={link.href}><span>{link.label}</span></Link>)}
             </section>
           </div>

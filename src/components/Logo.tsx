@@ -16,7 +16,7 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
         </div>
         {showSubtitle && (
           <div className="archive-logo__subtitle">
-            投资思想与商业史档案
+            巴菲特、芒格与公司研究
           </div>
         )}
       </div>

@@ -203,7 +203,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '搭建多元思维格栅的延伸书目',
     kind: '延伸阅读',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-recommended-reading.md',
-    sourceNote: '依据 Stripe Press 版推荐书目整理，并与站内芒格书架互联。',
+    sourceNote: '依据 Stripe Press 版推荐书目整理，并与站内芒格资料互联。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/recommended-reading',
   },
 ]

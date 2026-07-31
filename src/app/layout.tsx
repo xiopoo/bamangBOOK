@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
-    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '小胖书房：投资思想与商业史档案' }],
+    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '小胖书房：巴菲特、芒格与公司研究' }],
   },
   twitter: {
     card: 'summary_large_image',

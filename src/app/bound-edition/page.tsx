@@ -24,7 +24,7 @@ export default function BoundEditionPage() {
     <>
       <PageContainer maxWidth="6xl" className="edition-page">
         <section className="edition-hero">
-          <p className="study-label">装订版阅读 · 两本分别出售</p>
+          <p className="study-label">电子合订本 · 两本分别出售</p>
           <h1>把分散多年的文字，<br />放进一条完整脉络</h1>
           <p>网站适合搜索和查阅，合订本适合从头到尾连续阅读。两本分别出售，可以只选择现在真正想系统阅读的一位。</p>
           <Link href="#editions" className="archive-button archive-button--solid">查看两本合订本 <ArrowRight size={17} /></Link>

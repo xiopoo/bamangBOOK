@@ -5,9 +5,8 @@ const footerLinks = [
   { href: '/buffett', label: '巴菲特' },
   { href: '/munger', label: '芒格' },
   { href: '/business-history', label: '公司研究' },
-  { href: '/concepts', label: '主题索引' },
-  { href: '/reading', label: '原典' },
-  { href: '/learn', label: '阅读室' },
+  { href: '/concepts', label: '投资方法' },
+  { href: '/reading', label: '全部内容' },
   { href: '/bound-edition', label: '合订本' },
   { href: '/search', label: '全站搜索' },
   { href: '/about', label: '关于' },
@@ -23,7 +22,7 @@ export default function PageFooter() {
         <div className="archive-footer__grid">
           <div className="archive-footer__brand">
             <h3>小胖书房</h3>
-            <p>投资思想与商业史档案。</p>
+            <p>巴菲特、芒格与公司研究。</p>
             <blockquote>阅读原典，形成自己的判断。</blockquote>
           </div>
           <nav aria-label="页脚阅读入口">

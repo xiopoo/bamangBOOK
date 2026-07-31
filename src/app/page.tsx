@@ -24,29 +24,29 @@ const contentEntrances = [
   {
     number: '01',
     href: '/reading',
-    title: '原典档案',
-    eyebrow: 'ORIGINAL · 原典',
+    title: '信件与演讲',
+    eyebrow: '原文与谈话',
     description: '在完整上下文中理解他们真正表达了什么。',
   },
   {
     number: '02',
     href: '/business-history',
-    title: '企业研究',
-    eyebrow: 'BUSINESS · 企业',
+    title: '公司研究',
+    eyebrow: '经营与资本',
     description: '研究一家公司如何赚钱、扩张、犯错，以及资本最终流向哪里。',
   },
   {
     number: '03',
     href: '/concepts',
-    title: '主题索引',
-    eyebrow: 'ARCHIVE · 索引',
+    title: '投资方法',
+    eyebrow: '概念与模型',
     description: '围绕安全边际、企业质量和资本配置连接分散材料。',
   },
   {
     number: '04',
     href: '/search',
-    title: '档案检索',
-    eyebrow: 'SEARCH · 检索',
+    title: '全站搜索',
+    eyebrow: '按人物、公司、年份检索',
     description: '通过人物、公司、年份和概念找到可以核验的资料。',
   },
 ]
@@ -56,9 +56,9 @@ const contentMap = [
   ['02', '伯克希尔股东信', '1965—至今'],
   ['03', '股东大会问答', '现场记录'],
   ['04', '芒格演讲与问答', '公开表达'],
-  ['05', '企业研究', '商业模式'],
-  ['06', '思维模型', '概念与判断'],
-  ['07', '商业史', '长期视角'],
+  ['05', '公司研究', '商业模式'],
+  ['06', '投资方法', '概念与判断'],
+  ['07', '商业史文章', '长期视角'],
 ]
 
 export default function HomePage() {
@@ -77,34 +77,34 @@ export default function HomePage() {
       <PageContainer maxWidth="7xl" className="study-home">
         <section className="study-hero">
           <div className="study-hero__copy">
-            <p className="study-label">一个长期主义投资档案馆</p>
-            <h1>阅读原典，<br />形成自己的判断</h1>
+            <p className="study-label">一个长期更新的投资研究网站</p>
+            <h1>巴菲特、芒格与<br />长期投资研究</h1>
             <p className="study-hero__lede">
-              小胖书房系统整理巴菲特、芒格的信件、谈话与企业研究，尽可能保留年份、出处与上下文。这里不提供荐股，只帮助你更接近事实。
+              这里整理巴菲特、芒格的信件、演讲和股东大会记录，也持续发布公司研究与投资方法文章。重要内容尽量保留出处、年份和上下文。
             </p>
             <div className="study-actions">
               <Link href="/partnership/1" className="archive-button archive-button--solid">
-                从一封信开始 <ArrowRight size={17} aria-hidden="true" />
+                从巴菲特合伙人信开始 <ArrowRight size={17} aria-hidden="true" />
               </Link>
               <Link href="/reading" className="archive-button">
-                浏览全部馆藏
+                查看全部内容
               </Link>
             </div>
           </div>
           <aside className="study-archive-map" aria-label="网站主要内容">
-            <header><span>COLLECTION MAP</span><strong>核心馆藏</strong></header>
+            <header><strong>网站内容</strong></header>
             <ol>
               {contentMap.map(([number, title, meta]) => (
                 <li key={number}><span>{number}</span><strong>{title}</strong><small>{meta}</small></li>
               ))}
             </ol>
-            <footer><span>小胖书房</span><span>公开档案 / 付费合订本</span></footer>
+            <footer><span>小胖书房</span><span>公开内容 / 付费合订本</span></footer>
           </aside>
         </section>
 
         <section className="study-proof" aria-labelledby="collection-proof-title">
           <div className="study-proof__numbers">
-            <p id="collection-proof-title" className="study-label">内容规模与编辑说明</p>
+            <p id="collection-proof-title" className="study-label">内容与编辑说明</p>
             <div>
               <strong>1956—{latestYear || '至今'}</strong>
               <span>{letterCount} 封信件</span>
@@ -127,8 +127,8 @@ export default function HomePage() {
         <section className="study-section study-desk">
           <header className="study-section__header">
             <div>
-              <p className="study-label">EDITOR&apos;S DESK · 编辑案头</p>
-              <h2>本周案头</h2>
+              <p className="study-label">每周推荐</p>
+              <h2>本周推荐</h2>
             </div>
             <p>不是最新的三篇，而是本周值得花时间的三篇。</p>
           </header>
@@ -164,7 +164,7 @@ export default function HomePage() {
           <header className="study-section__header">
             <div>
               <p className="study-label">人物专题</p>
-              <h2>两个人，一套不断校正的方法</h2>
+              <h2>巴菲特与芒格</h2>
             </div>
           </header>
           <div className="study-thinkers__grid">
@@ -172,13 +172,13 @@ export default function HomePage() {
               <p>沃伦·巴菲特</p>
               <h3>从价格出发，<br />最后走向企业。</h3>
               <span>阅读合伙人信、伯克希尔股东信与六十余年的资本配置记录。</span>
-              <Link href={getSpaceHref('buffett')}>进入巴菲特档案 <ArrowRight size={16} /></Link>
+              <Link href={getSpaceHref('buffett')}>进入巴菲特 <ArrowRight size={16} /></Link>
             </article>
             <article>
               <p>查理·芒格</p>
               <h3>从投资出发，<br />最后走向判断。</h3>
               <span>阅读 Wesco 问答、公开演讲与多元思维模型。</span>
-              <Link href={getSpaceHref('munger')}>进入芒格档案 <ArrowRight size={16} /></Link>
+              <Link href={getSpaceHref('munger')}>进入芒格 <ArrowRight size={16} /></Link>
             </article>
           </div>
         </section>
@@ -186,8 +186,8 @@ export default function HomePage() {
         <section className="study-section study-entrances">
           <header className="study-section__header">
             <div>
-              <p className="study-label">COLLECTION · 核心馆藏</p>
-              <h2>核心馆藏地图</h2>
+              <p className="study-label">主要内容</p>
+              <h2>主要内容</h2>
             </div>
             <Link href="/search" className="study-search-link"><Search size={17} /> 搜索人物、公司、年份或概念</Link>
           </header>
