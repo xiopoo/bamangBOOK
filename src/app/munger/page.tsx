@@ -1,4 +1,11 @@
 import PageContainer from '@/components/PageContainer'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '查理·芒格档案',
+  description: '查理·芒格的生平、演讲、Wesco资料与多元思维模型档案。',
+  alternates: { canonical: '/munger' },
+}
 import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getModels } from '@/lib/models'

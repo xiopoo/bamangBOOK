@@ -8,6 +8,13 @@ import { getMungerLocalArchiveItems, getMungerLocalArchiveStats } from '@/lib/mu
 import { getMungerOriginals } from '@/lib/munger-originals'
 import { getAllPartnershipLetters, getShareholderLetters } from '@/lib/partnership'
 import styles from './learn.module.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '学习室',
+  description: '从问题、原典、思维模型和公司研究进入小胖书房的个人学习路径。',
+  alternates: { canonical: '/learn' },
+}
 
 const questions = [
   { query: '护城河', title: '什么样的生意值得长期拥有？', note: '从护城河、定价权与资本回报开始' },

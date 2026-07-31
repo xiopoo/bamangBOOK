@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '演讲档案',
+  description: '巴菲特、芒格与价值投资相关公开演讲资料。',
+  alternates: { canonical: '/talks' },
+}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'

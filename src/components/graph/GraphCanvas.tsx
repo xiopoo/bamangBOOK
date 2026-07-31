@@ -441,7 +441,7 @@ const GraphCanvas = forwardRef<GraphCanvasHandle, GraphCanvasProps>(
           .attr('stroke', l => {
             const sId = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id
             const tId = typeof l.target === 'string' ? l.target : (l.target as GraphNode).id
-            return sId === d.id || tId === d.id ? '#C85A17' : '#d1d5db'
+            return sId === d.id || tId === d.id ? '#AB1942' : '#d1d5db'
           })
           .attr('opacity', l => {
             const sId = typeof l.source === 'string' ? l.source : (l.source as GraphNode).id
@@ -861,7 +861,7 @@ const GraphCanvas = forwardRef<GraphCanvasHandle, GraphCanvasProps>(
 
       // 类型标题栏
       const typeTitleColors: Record<GraphNode['type'], { bg: string; text: string; border: string }> = {
-        concept: { bg: '#FFF5EB', text: '#C85A17', border: '#FED7AA' },
+        concept: { bg: '#F3E2E7', text: '#AB1942', border: '#DDA7B7' },
         company: { bg: '#EFF6FF', text: '#3b82f6', border: '#BFDBFE' },
         person: { bg: '#F0FDF4', text: '#22c55e', border: '#BBF7D0' },
       }
@@ -938,7 +938,7 @@ const GraphCanvas = forwardRef<GraphCanvasHandle, GraphCanvasProps>(
 
           // 类型徽章
           const badgeColors: Record<GraphNode['type'], { bg: string; text: string }> = {
-            concept: { bg: '#FFF5EB', text: '#C85A17' },
+            concept: { bg: '#F3E2E7', text: '#AB1942' },
             company: { bg: '#EFF6FF', text: '#3b82f6' },
             person: { bg: '#F0FDF4', text: '#22c55e' },
           }

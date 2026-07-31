@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "preview": "node scripts/serve-export.mjs",
     "build": "node scripts/prebuild.js && next build && if [ -z \"$VERCEL\" ]; then node scripts/prebuild.js --restore; fi",
     "start": "next start",
     "lint": "next lint",

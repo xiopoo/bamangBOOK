@@ -7,6 +7,7 @@ import { useReadingProgress } from '@/hooks/useReadingProgress'
 import ReadingProgressBar from '@/components/ReadingProgress'
 import type { LetterData, LetterItem } from '@/lib/letters'
 import { normalizeLetterMarkdown } from '@/lib/normalize-letter-markdown'
+import { resolveConceptCanonicalName, resolvePersonCanonicalName } from '@/lib/entity-aliases'
 
 function slugify(text: string): string {
   return text
@@ -78,15 +79,15 @@ export default function LetterReader({
     const convert = (segment: string) =>
       segment.replace(/\[\[([^\]]+)\]\]/g, (_match: string, entity: string) => {
         if (topConcepts.some(c => c.name === entity)) {
-          return `[${entity}](/concepts/${encodeURIComponent(entity)})`
+          return `[${entity}](/concepts/${encodeURIComponent(resolveConceptCanonicalName(entity))})`
         }
         if (relatedPeople.some(p => p.name === entity)) {
-          return `[${entity}](/people/${encodeURIComponent(entity)})`
+          return `[${entity}](/people/${encodeURIComponent(resolvePersonCanonicalName(entity))})`
         }
         if (relatedCompanies.some(c => c.name === entity)) {
           return `[${entity}](/companies/${encodeURIComponent(entity)})`
         }
-        return `[${entity}](/concepts/${encodeURIComponent(entity)})`
+        return entity
       })
     let result = ''
     let lastIndex = 0

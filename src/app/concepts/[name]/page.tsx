@@ -6,11 +6,12 @@ import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
 import MarkdownContent from '@/components/MarkdownContent'
 import { RecommendationList } from '@/components/RecommendationList'
-import { resolveEntityLink } from '@/lib/entity-resolver'
+import { resolveMarkdownEntityLinks } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import type { Metadata } from 'next'
 import { conceptParams } from '@/lib/staticParams'
+import { getLetterHrefForYear } from '@/lib/partnership'
 
 export function generateStaticParams() {
   return conceptParams()
@@ -19,12 +20,7 @@ export function generateStaticParams() {
 export const dynamicParams = false
 
 function processConceptLinks(content: string): string {
-  if (!content.includes('[[')) return content
-  return content.replace(/\[\[([^\]]+)\]\]/g, (_match, entity: string) => {
-    const href = resolveEntityLink(entity)
-    // 未识别为任何实体（人物/公司/概念/信件）时降级为纯文本，避免生成空占位页链接
-    return href ? `[${entity}](${href})` : entity
-  })
+  return resolveMarkdownEntityLinks(content)
 }
 
 interface PageProps {
@@ -107,7 +103,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
             {stats.years.slice(0, 20).map((year) => (
               <Link
                 key={year}
-                href={`/letters/${year}`}
+                href={getLetterHrefForYear(year)}
                 className="px-3 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm hover:bg-orange-50 dark:hover:bg-orange-900/30 hover:text-primary dark:hover:text-orange-400 transition-all border border-transparent hover:border-orange-200 dark:hover:border-orange-900/50"
               >
                 {year}年
@@ -154,7 +150,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
                   <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 border border-gray-100 dark:border-gray-700 hover:border-primary/30 transition-colors">
                     <div className="flex items-center justify-between">
                       <Link 
-                        href={`/letters/${year}`}
+                        href={getLetterHrefForYear(year)}
                         className="text-lg font-semibold text-primary hover:text-primary-light transition-colors"
                       >
                         {year}年

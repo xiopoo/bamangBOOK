@@ -1,314 +1,225 @@
 import Link from 'next/link'
-import { ArrowRight, Search } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight, Check, Search } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
+import SubdomainRootRouter from '@/components/SubdomainRootRouter'
 import { getDocuments } from '@/lib/documents'
-import { getBloggers } from '@/lib/bloggers'
 import { getPartnershipCount, getShareholderLetters } from '@/lib/partnership'
 import { getBusinessHistories } from '@/lib/business-history'
-import { getBooks } from '@/lib/books'
-import { getColumns } from '@/lib/columns'
-import SubdomainRootRouter from '@/components/SubdomainRootRouter'
+import { getModels } from '@/lib/models'
 import { getSpaceHref } from '@/lib/site-spaces'
 
-type Drawer = {
-  href: string
-  title: string
-  count: string
-  description: string
-}
+const trustSignals = [
+  '原文、翻译、编辑整理分别标注',
+  '保留年份、出处与上下文',
+  '发现错误，持续修订',
+]
 
-const sharedIdeas = [
+const archiveEntrances = [
   {
-    href: '/concepts/价值投资',
     number: '01',
-    title: '企业',
-    description: '股票不是代码，而是一门生意的一部分。先看它怎样赚钱，再看市场怎样报价。',
+    href: '/reading',
+    title: '原典档案',
+    description: '在完整上下文中，理解巴菲特和芒格真正表达了什么。',
   },
   {
-    href: '/concepts/优质企业',
     number: '02',
-    title: '质量',
-    description: '能提价、少追加资本、让客户反复回来——好生意通常有很朴素的特征。',
+    href: '/business-history',
+    title: '企业研究',
+    description: '看清一家公司如何赚钱、扩张、犯错，以及资本最终流向哪里。',
   },
   {
-    href: '/concepts/安全边际',
     number: '03',
-    title: '价格',
-    description: '再好的企业也有价格。未知无法消除，只能在买入时给它留下余地。',
+    href: '/concepts',
+    title: '主题索引',
+    description: '围绕安全边际、企业质量和资本配置，把分散材料连接起来。',
   },
   {
-    href: '/concepts/股东回报',
     number: '04',
-    title: '资本',
-    description: '利润留下来以后怎样使用，最终决定一家公司的复利能走多远。',
-  },
-  {
-    href: '/model/lollapalooza-tendency',
-    number: '05',
-    title: '判断',
-    description: '数字之外还有激励、情绪与偏见。很多大错，是几个小偏差同时发生。',
-  },
-  {
-    href: '/concepts/长期持有',
-    number: '06',
-    title: '时间',
-    description: '耐心不是等待行情，而是让优秀的企业和正确的结构有时间兑现。',
+    href: '/search',
+    title: '档案检索',
+    description: '通过人物、公司、年份和概念，找到可以核验和继续阅读的资料。',
   },
 ]
 
-function ReadingCard({
-  href,
-  kicker,
-  title,
-  description,
-  meta,
-}: {
-  href: string
-  kicker: string
-  title: string
-  description: string
-  meta: string
-}) {
-  return (
-    <article className="archive-reading-card">
-      <p className="archive-kicker">{kicker}</p>
-      <h3>
-        <Link href={href}>{title}</Link>
-      </h3>
-      <p>{description}</p>
-      <Link href={href} className="archive-reading-card__meta">
-        <span>{meta}</span>
-        <ArrowRight size={17} strokeWidth={1.5} />
-      </Link>
-    </article>
-  )
-}
-
 export default function HomePage() {
-  const articleCount = getDocuments('articles').length
-  const qaCount = getDocuments('qa').length
-  const talkCount = getDocuments('talks').length
-  const interviewCount = getDocuments('interviews').length
-  const bloggerCount = getBloggers().reduce((sum, blogger) => sum + blogger.count, 0)
-  const businessHistoryCount = getBusinessHistories().length
-  const bookCount = getBooks().length
-  const columnCount = getColumns().length
   const partnershipCount = getPartnershipCount()
-  const shareholderYears = getShareholderLetters().map((letter) => letter.year)
-  const shareholderYearRange = shareholderYears.length > 0
-    ? `${Math.min(...shareholderYears)}—${Math.max(...shareholderYears)}`
-    : '1965—'
-
-  const drawers: Drawer[] = [
-    {
-      href: getSpaceHref('buffett'),
-      title: '巴菲特原典',
-      count: `${partnershipCount + shareholderYears.length} 封`,
-      description: '从合伙人时期到伯克希尔，六十余年的亲笔信与资本配置记录。',
-    },
-    {
-      href: getSpaceHref('munger'),
-      title: '查理·芒格',
-      count: '原典与模型',
-      description: 'Wesco 问答、公开演讲、《穷查理宝典》与多元思维模型。',
-    },
-    {
-      href: '/qa',
-      title: '股东大会',
-      count: `${qaCount} 篇`,
-      description: '历年现场问答。问题很具体，回答往往比问题走得更远。',
-    },
-    {
-      href: '/books',
-      title: '书籍',
-      count: `${bookCount} 本`,
-      description: '经典书目、核心章节，以及书与书之间相互照亮的部分。',
-    },
-    {
-      href: '/columns',
-      title: '文章',
-      count: `${columnCount + articleCount} 篇`,
-      description: '关于价格、价值、企业、市场，以及那些容易被忽略的细节。',
-    },
-    {
-      href: '/business-history',
-      title: '公司',
-      count: `${businessHistoryCount} 篇`,
-      description: '把公司放回历史里，看它如何赚钱、扩张、犯错和分配资本。',
-    },
-  ]
+  const shareholderLetters = getShareholderLetters()
+  const qaCount = getDocuments('qa').length
+  const companyStudies = getBusinessHistories()
+  const modelCount = getModels().length
+  const latestYear = shareholderLetters.at(-1)?.year
+  const letterCount = partnershipCount + shareholderLetters.length
+  const featuredCompany = companyStudies[0]
 
   return (
     <>
       <SubdomainRootRouter />
-      <PageContainer maxWidth="7xl" className="archive-home">
-        <section className="archive-hero">
-          <p className="archive-eyebrow">巴菲特 · 芒格 · 企业 · 商业史</p>
-          <h1>小胖书房</h1>
-          <p className="archive-hero__lede">
-            巴菲特和芒格留下了很多结论。更有价值的，是这些结论从哪里来，
-            在什么情况下成立，又被什么事实改变。
+      <PageContainer maxWidth="7xl" className="study-home">
+        <section className="study-hero">
+          <div className="study-hero__copy">
+            <p className="study-label">一个长期主义投资档案馆</p>
+            <h1>阅读原典，<br />形成自己的判断</h1>
+            <p className="study-hero__lede">
+              小胖书房系统整理巴菲特、芒格的信件、谈话与企业研究，尽可能保留年份、出处与上下文。这里不提供荐股，只帮助你更接近事实。
+            </p>
+            <div className="study-actions">
+              <Link href="/partnership/1" className="archive-button archive-button--solid">
+                从一封信开始 <ArrowRight size={17} aria-hidden="true" />
+              </Link>
+              <Link href="/reading" className="archive-button">
+                浏览全部馆藏
+              </Link>
+            </div>
+          </div>
+          <figure className="study-hero__visual">
+            <Image
+              src="/buffett-collection-cover.png"
+              alt="《巴菲特文集》1956—2025 合订本封面"
+              width={595}
+              height={842}
+              priority
+              sizes="(max-width: 760px) 58vw, 24vw"
+              className="study-hero__book study-hero__book--front"
+            />
+            <Image
+              src="/munger-collection-cover.png"
+              alt="《芒格文集》1924—2023 合订本封面"
+              width={595}
+              height={842}
+              sizes="(max-width: 760px) 52vw, 21vw"
+              className="study-hero__book study-hero__book--back"
+            />
+            <figcaption>
+              <span>XP · ARCHIVE 001</span>
+              <span>两份真实合订本</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section className="study-proof" aria-labelledby="collection-proof-title">
+          <div className="study-proof__numbers">
+            <p id="collection-proof-title" className="study-label">馆藏与编辑标准</p>
+            <div>
+              <strong>1956—{latestYear || '至今'}</strong>
+              <span>{letterCount} 封信件</span>
+              <span>{qaCount} 篇问答</span>
+              <span>{modelCount} 个思维模型</span>
+              <span>{companyStudies.length} 份公司研究</span>
+            </div>
+          </div>
+          <div className="study-proof__trust">
+            {trustSignals.map(signal => (
+              <span key={signal}><Check size={15} aria-hidden="true" />{signal}</span>
+            ))}
+          </div>
+          <p className="study-proof__statement">
+            你不需要先相信我的观点。这里提供出处和核验线索，让你自己作出判断。
           </p>
+        </section>
 
-          <div className="archive-hero__actions">
-            <Link href="/reading" className="archive-button archive-button--solid">
-              看全部内容
-              <ArrowRight size={17} strokeWidth={1.7} />
-            </Link>
-            <Link href="/partnership" className="archive-button">
-              翻开一封合伙人信
-            </Link>
-            <Link href="/search" className="archive-button">
-              <Search size={18} strokeWidth={1.7} />
-              搜索
-            </Link>
+        <section className="study-section study-desk">
+          <header className="study-section__header">
+            <div>
+              <p className="study-label">CURATED THIS WEEK</p>
+              <h2>本周案头</h2>
+            </div>
+            <p>不是最新的三篇，而是本周值得花时间的三篇。</p>
+          </header>
+          <div className="study-desk__list">
+            <article>
+              <span>原始信件 · 约 8 分钟</span>
+              <h3><Link href="/partnership/1">1956年巴菲特致合伙人信</Link></h3>
+              <p>从第一封记录开始，看一种投资方法如何向合伙人解释风险与结果。</p>
+              <Link href="/partnership/1">打开原文 <ArrowRight size={15} /></Link>
+            </article>
+            <article>
+              <span>企业研究 · {featuredCompany?.readMinutes || 18} 分钟</span>
+              <h3>
+                <Link href={featuredCompany ? `/business-history/${featuredCompany.slug}` : '/business-history'}>
+                  {featuredCompany?.title || '企业如何把优势变成长期结构'}
+                </Link>
+              </h3>
+              <p>{featuredCompany?.summary || '把公司放回经营历史里，观察优势、约束和资本流向。'}</p>
+              <Link href={featuredCompany ? `/business-history/${featuredCompany.slug}` : '/business-history'}>
+                打开研究 <ArrowRight size={15} />
+              </Link>
+            </article>
+            <article>
+              <span>继续思考 · 主题索引</span>
+              <h3><Link href="/concepts/资本配置">管理层怎样分配资本？</Link></h3>
+              <p>利润留下来以后怎样使用，往往比某一年的利润本身更重要。</p>
+              <Link href="/concepts/资本配置">沿问题阅读 <ArrowRight size={15} /></Link>
+            </article>
           </div>
         </section>
 
-        <section className="archive-thinkers">
-          <header>
-            <p className="archive-kicker">两个人</p>
-            <h2>一套不断校正的方法</h2>
+        <section className="study-section study-thinkers">
+          <header className="study-section__header">
+            <div>
+              <p className="study-label">TWO ARCHIVES</p>
+              <h2>两个人，一套不断校正的方法</h2>
+            </div>
           </header>
-          <div>
-            <Link href={getSpaceHref('buffett')} className="archive-thinker">
-              <p>WARREN E. BUFFETT · 1930—</p>
+          <div className="study-thinkers__grid">
+            <article>
+              <p>沃伦·巴菲特档案</p>
               <h3>从价格出发，<br />最后走向企业。</h3>
-              <span>
-                合伙人信 · 伯克希尔股东信 · 股东大会 · 公司与资本配置
-              </span>
-              <strong>进入巴菲特档案 <ArrowRight size={16} /></strong>
-            </Link>
-            <Link href={getSpaceHref('munger')} className="archive-thinker">
-              <p>CHARLES T. MUNGER · 1924—2023</p>
+              <span>阅读合伙人信、伯克希尔股东信与六十余年的资本配置记录。</span>
+              <Link href={getSpaceHref('buffett')}>进入巴菲特档案 <ArrowRight size={16} /></Link>
+            </article>
+            <article>
+              <p>查理·芒格档案</p>
               <h3>从投资出发，<br />最后走向判断。</h3>
-              <span>
-                Wesco 问答 · 演讲与访谈 · 思维模型 · 生平与事业
-              </span>
-              <strong>进入芒格档案 <ArrowRight size={16} /></strong>
-            </Link>
+              <span>阅读 Wesco 问答、公开演讲与多元思维模型。</span>
+              <Link href={getSpaceHref('munger')}>进入芒格档案 <ArrowRight size={16} /></Link>
+            </article>
           </div>
         </section>
 
-        <section className="archive-thought-map">
-          <header>
-            <p className="archive-kicker">共同的地图</p>
-            <h2>六个问题，彼此相连</h2>
+        <section className="study-section study-entrances">
+          <header className="study-section__header">
+            <div>
+              <p className="study-label">COLLECTIONS</p>
+              <h2>四个核心馆藏入口</h2>
+            </div>
+            <Link href="/search" className="study-search-link"><Search size={17} /> 搜索人物、公司、年份或概念</Link>
           </header>
-          <div>
-            {sharedIdeas.map((idea) => (
-              <Link key={idea.number} href={idea.href}>
-                <span>{idea.number}</span>
-                <h3>{idea.title}</h3>
-                <p>{idea.description}</p>
+          <div className="study-entrances__grid">
+            {archiveEntrances.map(item => (
+              <Link key={item.number} href={item.href}>
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <ArrowRight size={17} aria-hidden="true" />
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="archive-today" aria-label="今天读这篇">
-          <div className="archive-today__label">
-            <p className="archive-kicker">今天读这篇</p>
-            <span>约 8 分钟</span>
-          </div>
-          <div className="archive-today__content">
-            <p className="archive-kicker">能力圈</p>
-            <h2>
-              <Link href="/columns/能力圈的真正边界">能力圈的真正边界</Link>
-            </h2>
-            <p>
-              熟悉一个行业，不等于理解一门生意。真正的边界，
-              往往藏在那些无法回答的问题里。
-            </p>
-            <Link href="/columns/能力圈的真正边界" className="archive-today__link">
-              打开 <ArrowRight size={16} />
+        <section className="study-section study-editions">
+          <div className="study-editions__intro">
+            <p className="study-label">装订版阅读</p>
+            <h2>把分散多年的文字，<br />放进一条完整脉络</h2>
+            <p>网站适合搜索和查阅，合订本适合从头到尾连续阅读。两本分别出售，可以只选择现在真正想系统阅读的一位。</p>
+            <Link href="/bound-edition" className="archive-button archive-button--solid">
+              查看两本合订本 <ArrowRight size={17} />
             </Link>
           </div>
-          <blockquote>
-            “重要的不是能力圈有多大，而是你清楚它的边界在哪里。”
-            <cite>—— 沃伦·巴菲特</cite>
-          </blockquote>
-        </section>
-
-        <div className="archive-flourish" aria-hidden="true">❧</div>
-
-        <section className="archive-section archive-section--collection">
-          <div className="archive-section__heading">
-            <div>
-              <p className="archive-kicker">全部内容</p>
-              <h2>六个入口</h2>
-            </div>
-            <p>
-              巴菲特、芒格、股东大会、书籍、文章和公司。
-            </p>
-          </div>
-          <div className="archive-drawers">
-            {drawers.map((drawer, index) => (
-              <Link key={drawer.href} href={drawer.href} className="archive-drawer">
-                <div>
-                  <span>{drawer.title}</span>
-                  <small>{drawer.count}</small>
-                </div>
-                <p>{drawer.description}</p>
-                <strong>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <ArrowRight size={15} />
-                </strong>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="archive-section archive-section--ruled">
-          <div className="archive-section__heading">
-            <div>
-              <p className="archive-kicker">反复重读</p>
-              <h2>三组原典</h2>
-            </div>
-            <Link href="/reading">完整索引 →</Link>
-          </div>
-          <div className="archive-reading-grid">
-            <ReadingCard
-              href="/partnership"
-              kicker="巴菲特 · 早期原典"
-              title="巴菲特合伙人信"
-              description="在成为“股神”以前，他怎样向合伙人解释收益、风险和自己做过的决定。"
-              meta="1956—1970"
-            />
-            <ReadingCard
-              href="/letters"
-              kicker="伯克希尔 · 年度原典"
-              title="伯克希尔股东信"
-              description="六十年，数十家公司，一套不断进化、又很少改变的资本配置方法。"
-              meta={shareholderYearRange}
-            />
-            <ReadingCard
-              href="/poor-charlies-almanack"
-              kicker="查理·芒格 · 思想原典"
-              title="《穷查理宝典》"
-              description="商业、心理学、工程学和人生经验，被放进同一张思考的网。"
-              meta="演讲 · 文章 · 书单"
-            />
-          </div>
-        </section>
-
-        <section className="archive-index">
-          <div>
-            <p className="archive-kicker">再往里走</p>
-            <h2>演讲、访谈和长期写作</h2>
-            <p className="archive-index__intro">
-              有些判断只在当时的现场里才完整，有些东西经得起一再重读。
-              两种都留在这里。
-            </p>
-          </div>
-          <div className="archive-index__links">
-            <Link href="/talks"><span>公开演讲</span><small>{talkCount} 篇</small></Link>
-            <Link href="/interviews"><span>访谈记录</span><small>{interviewCount} 篇</small></Link>
-            <Link href="/articles"><span>研究文章</span><small>{articleCount} 篇</small></Link>
-            <Link href="/business-history"><span>公司深度研究</span><small>{businessHistoryCount} 篇</small></Link>
-            <Link href="/bloggers"><span>长期写作者</span><small>{bloggerCount.toLocaleString()} 篇</small></Link>
-            <Link href="/search"><span>全站搜索</span><small>查找全部馆藏</small></Link>
+          <div className="study-editions__books">
+            <article>
+              <span>01 · BUFFETT</span>
+              <h3>《巴菲特文集合订本》</h3>
+              <strong>99<small>元</small></strong>
+              <p>沿着信件与公开文字，系统理解巴菲特的投资方法、企业判断与资本配置思想。</p>
+            </article>
+            <article>
+              <span>02 · MUNGER</span>
+              <h3>《芒格文集合订本》</h3>
+              <strong>99<small>元</small></strong>
+              <p>通过演讲、问答与重要文章，系统理解芒格的商业判断与多元思维方法。</p>
+            </article>
           </div>
         </section>
       </PageContainer>

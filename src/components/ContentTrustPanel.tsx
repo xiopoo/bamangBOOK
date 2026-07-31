@@ -1,4 +1,5 @@
 import { AlertCircle, BookOpenCheck, ShieldCheck } from 'lucide-react'
+import Link from 'next/link'
 
 interface ContentTrustPanelProps {
   source: string
@@ -26,6 +27,11 @@ export default function ContentTrustPanel({
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
           <div><span className="font-medium text-gray-800 dark:text-gray-200">使用边界</span><br />{note}</div>
         </div>
+      </div>
+      <div className="mt-3 text-right text-xs">
+        <Link href="/references" className="text-primary underline decoration-primary/30 underline-offset-4 hover:text-primary-light">
+          查看引用与参考总表 →
+        </Link>
       </div>
     </aside>
   )

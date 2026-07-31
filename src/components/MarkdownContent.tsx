@@ -23,8 +23,12 @@ function escapeAllAngleBrackets(content: string): string {
   return content.replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
+function stripInternalComments(content: string): string {
+  return content.replace(/<!--[\s\S]*?-->/g, '')
+}
+
 function formatQAContent(content: string): string {
-  let result = content || ''
+  let result = stripInternalComments(content || '')
 
   // 详情页头部已展示标题，移除正文开头的 H1 行，避免重复 H1。
   result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
@@ -81,12 +85,11 @@ export default function MarkdownContent({
       return formatQAContent(content)
     }
 
-    let result = content || ''
+    let result = stripInternalComments(content || '')
     if (result.includes('[[')) {
       result = result.replace(/\[\[([^\]]+)\]\]/g, (match, entity: string) => {
         const resolved = linkResolver?.(entity)
-        const target = resolved ?? `/concepts/${encodeURIComponent(entity)}`
-        return `[${entity}](${target})`
+        return resolved ? `[${entity}](${resolved})` : entity
       })
     }
     // 详情页头部已展示标题，移除正文开头的 H1 行，避免页面内出现重复 H1（语义与视觉问题）

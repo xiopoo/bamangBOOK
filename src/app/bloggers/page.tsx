@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '博主文章档案',
+  description: '按作者与年份浏览长期投资、商业研究与市场观察文章。',
+  alternates: { canonical: '/bloggers' },
+}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'

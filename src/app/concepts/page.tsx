@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '投资概念索引',
+  description: '价值投资、商业分析与资本配置核心概念的解释和原文线索。',
+  alternates: { canonical: '/concepts' },
+}
 import { readdirSync, readFileSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'

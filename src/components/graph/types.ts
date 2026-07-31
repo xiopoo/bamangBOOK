@@ -54,13 +54,13 @@ export type GraphMode = 'force' | 'tree' | 'mindmap' | 'cards'
 
 // 颜色映射
 export const colorMap: Record<NodeType, string> = {
-  concept: '#C85A17',
+  concept: '#AB1942',
   company: '#3b82f6',
   person: '#22c55e',
 }
 
 export const bgColorMap: Record<NodeType, string> = {
-  concept: 'bg-orange-100 text-orange-600',
+  concept: 'bg-primary/10 text-primary',
   company: 'bg-blue-100 text-blue-600',
   person: 'bg-green-100 text-green-600',
 }

@@ -143,6 +143,7 @@ function addBloggerItems(items) {
   const bloggers = readJson(path.join(CONTENT_DIR, 'bloggers', 'bloggers-index.json'), [])
   for (const blogger of bloggers) {
     for (const article of blogger.articles || []) {
+      if ((article.wordCount || 0) < 80) continue
       const searchableText = [article.title, article.author, blogger.name, ...(article.tags || [])]
         .filter(Boolean)
         .join(' ')
@@ -208,19 +209,32 @@ function readEntityDescription(directory, id) {
 function generateGraphData(index) {
   const nodes = []
   const nodeIds = new Set()
+  const personAliases = {
+    '巴菲特': '沃伦·巴菲特',
+    '芒格': '查理·芒格',
+    '格雷厄姆': '本杰明·格雷厄姆',
+    '费雪': '菲尔·费雪',
+  }
+  const conceptAliases = {
+    'GAAP': '通用会计准则',
+    'ROE': '净资产收益率',
+  }
 
   function addNode(type, id, count, years) {
-    const nodeId = `${type}_${id}`
+    const canonicalId = type === 'person'
+      ? (personAliases[id] || id)
+      : type === 'concept' ? (conceptAliases[id] || id) : id
+    const nodeId = `${type}_${canonicalId}`
     if (nodeIds.has(nodeId)) return
     nodeIds.add(nodeId)
     nodes.push({
       id: nodeId,
-      name: id,
+      name: canonicalId,
       type,
       count: count || 0,
       years: years || [],
       category: type === 'concept' ? '投资概念' : type === 'company' ? '公司' : '人物',
-      description: readEntityDescription(type === 'concept' ? 'concepts' : type === 'company' ? 'companies' : 'people', id),
+      description: readEntityDescription(type === 'concept' ? 'concepts' : type === 'company' ? 'companies' : 'people', canonicalId),
     })
   }
 
@@ -228,20 +242,67 @@ function generateGraphData(index) {
   ;(index.companies || []).forEach(item => addNode('company', item.id, item.count, item.years))
   ;(index.people || []).forEach(item => addNode('person', item.id, item.count, item.years))
 
-  const links = []
+  const linkMap = new Map()
+
+  function addLink(source, target, type, weight, label) {
+    if (!nodeIds.has(source) || !nodeIds.has(target) || source === target) return
+    const [left, right] = source < target ? [source, target] : [target, source]
+    const key = `${left}|${right}|${type}`
+    const existing = linkMap.get(key)
+    if (existing) {
+      existing.weight += Math.max(1, weight || 1)
+      return
+    }
+    linkMap.set(key, {
+      source: left,
+      target: right,
+      type,
+      weight: Math.max(1, weight || 1),
+      label,
+    })
+  }
+
   for (const item of index.cooccurrence || []) {
     if (!Array.isArray(item.concepts) || item.concepts.length !== 2) continue
     const source = `concept_${item.concepts[0]}`
     const target = `concept_${item.concepts[1]}`
-    if (!nodeIds.has(source) || !nodeIds.has(target)) continue
-    links.push({
-      source,
-      target,
-      type: 'cooccurrence',
-      weight: item.count || 1,
-      label: `共同出现 ${item.count || 1} 次`,
-    })
+    addLink(source, target, 'cooccurrence', item.count, '在年度资料中共同出现')
   }
+
+  // 年度知识图谱已经记录了经过整理的相关概念和人物，优先复用这些显式关系。
+  const graphDir = path.join(CONTENT_DIR, 'graph')
+  if (fs.existsSync(graphDir)) {
+    for (const fileName of fs.readdirSync(graphDir).filter(name => name.endsWith('.json'))) {
+      const graph = readJson(path.join(graphDir, fileName), {})
+      for (const concept of graph.concepts || []) {
+        const conceptName = concept.name || concept.id
+        const source = `concept_${conceptAliases[conceptName] || conceptName}`
+        for (const related of concept.relatedConcepts || []) {
+          const relatedName = related.name || related.id
+          addLink(source, `concept_${conceptAliases[relatedName] || relatedName}`, 'cooccurrence', related.count, '在股东信中共同出现')
+        }
+        for (const person of concept.relatedPeople || []) {
+          const personName = personAliases[person.name || person.id] || person.name || person.id
+          addLink(source, `person_${personName}`, 'mention', person.count, '在股东信中相关')
+        }
+      }
+    }
+  }
+
+  // 公司档案中的 [[概念]] 标签是编辑确认过的关系，可直接用于公司—概念连线。
+  const companyDir = path.join(CONTENT_DIR, 'companies')
+  if (fs.existsSync(companyDir)) {
+    for (const fileName of fs.readdirSync(companyDir).filter(name => name.endsWith('.md'))) {
+      const company = path.basename(fileName, '.md')
+      const content = readMarkdown(path.join(companyDir, fileName))
+      for (const match of content.matchAll(/\[\[([^\]]+)\]\]/g)) {
+        addLink(`company_${company}`, `concept_${conceptAliases[match[1]] || match[1]}`, 'mention', 1, '公司档案主题')
+      }
+    }
+  }
+
+  const links = Array.from(linkMap.values())
+    .sort((a, b) => b.weight - a.weight || a.source.localeCompare(b.source, 'zh-CN'))
 
   const data = {
     nodes,

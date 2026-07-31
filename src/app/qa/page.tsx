@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '股东大会问答',
+  description: '伯克希尔与Wesco股东大会问答、现场记录和主题索引。',
+  alternates: { canonical: '/qa' },
+}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'

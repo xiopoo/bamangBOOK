@@ -1,49 +1,76 @@
-import { BookOpenCheck, CheckCircle2, Scale, SearchCheck } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
-import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
+import Link from 'next/link'
 
 const principles = [
-  { icon: BookOpenCheck, title: '区分原文与整理', text: '股东信、合伙人信等原始资料与概念卡片、公司档案等二次整理内容分别标注，避免把归纳表述当作原话。' },
-  { icon: SearchCheck, title: '提供核对线索', text: '概念和公司页面尽可能关联相关年份、人物与资料入口，帮助读者回到上下文核对。' },
-  { icon: CheckCircle2, title: '持续修订', text: '发现翻译、标题、段落或实体关系错误后进行修订；尚未核验的内容不包装成确定结论。' },
-  { icon: Scale, title: '保持使用边界', text: '本站用于学习、研究和资料检索，不提供个股推荐、收益承诺、实时估值或个性化投资建议。' },
+  ['原文', '保留作者、年份、原始来源与上下文；不以二次概括替代原始表达。'],
+  ['翻译', '与原文状态分开标注，尽可能保留原意；存在歧义时保留核验线索。'],
+  ['编辑整理', '用于补充结构、背景和相互关联，不包装成作者原话或唯一解释。'],
 ]
 
 export const metadata = {
   title: '关于与编辑原则',
-  description: '了解小胖书房的资料范围、编辑方法、核验边界与内容使用说明。',
+  description: '了解小胖书房的定位、编辑方法、修订机制与平台关系。',
   alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
   return (
-    <PageContainer maxWidth="4xl">
-      <PageHeader title="关于与编辑原则" subtitle="资料范围、编辑方法、出处核验与使用边界" backHref="/" backLabel="返回首页" />
+    <>
+      <PageContainer maxWidth="5xl" className="about-study">
+        <header className="about-study__hero">
+          <p className="study-label">ABOUT THE ARCHIVE</p>
+          <h1>一座由长期研究者<br />维护的私人投资档案馆</h1>
+          <p>小胖书房不是荐股网站、行情网站或普通财经博客。这里系统整理投资思想、企业研究与商业史资料，帮助读者节省查找、比对和整理的时间。</p>
+        </header>
 
-      <section className="py-4">
-        <p className="text-lg leading-8 text-gray-700 dark:text-gray-300">
-          小胖书房系统整理巴菲特、查理·芒格及长期主义投资相关资料，馆藏包括原始信件、股东大会实录、公开演讲、访谈、思维模型、公司档案与商业史研究。本站尽可能保留出处和上下文，并区分原文、翻译与编辑整理。
-        </p>
-      </section>
+        <section>
+          <p className="study-label">01 · 为什么建立</p>
+          <h2>让分散的材料，重新拥有脉络</h2>
+          <p>巴菲特与芒格的重要材料散落在不同年份、网页、录音和版本里。书房的工作不是宣称掌握独家信息，而是把这些资料整理成适合长期阅读、查询与重读的档案体系。</p>
+          <blockquote>你不需要先相信我的观点。这里提供出处、上下文和核验线索，让你自己作出判断。</blockquote>
+          <p><Link href="/references">查看全部引用与参考来源 →</Link></p>
+        </section>
 
-      <section className="mt-6 border-t border-gray-200 dark:border-gray-700">
-        {principles.map(({ icon: Icon, title, text }) => (
-          <div key={title} className="grid gap-3 border-b border-gray-200 py-6 dark:border-gray-700 sm:grid-cols-[180px_1fr]">
-            <h2 className="flex items-center gap-2 font-semibold text-gray-900 dark:text-white"><Icon className="h-5 w-5 text-primary" />{title}</h2>
-            <p className="text-sm leading-7 text-gray-600 dark:text-gray-400">{text}</p>
+        <section>
+          <p className="study-label">02 · 编辑边界</p>
+          <h2>原文、翻译与编辑整理，分别标注</h2>
+          <div className="about-study__principles">
+            {principles.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}
           </div>
-        ))}
-      </section>
+        </section>
 
-      <section className="mt-10 bg-primary/5 px-6 py-7">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white">内容与隐私说明</h2>
-        <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-gray-400">
-          当前站点不提供账户、付费或个性化投资服务。搜索和阅读功能以资料浏览为目的；外部链接由第三方独立运营。若内容涉及版权、署名或事实修订，可通过页脚标注的公众号联系维护者。
-        </p>
-      </section>
+        <section className="about-study__rules">
+          <div>
+            <p className="study-label">03 · 核验与修订</p>
+            <h2>不隐藏不确定性</h2>
+          </div>
+          <ul>
+            <li>尽可能标注年份、出处与完整上下文</li>
+            <li>未核验内容明确标记状态，不包装成确定结论</li>
+            <li>发现翻译、标题、段落或实体关系错误后持续修订</li>
+            <li>第三方内容尽可能保留作者、原始标题、平台与授权状态</li>
+          </ul>
+        </section>
 
+        <section>
+          <p className="study-label">04 · 书房主理人</p>
+          <h2>长期阅读，也长期整理</h2>
+          <p>我长期阅读巴菲特、芒格、企业史与资本配置案例。小胖书房用于系统整理原典、企业研究与长期档案；其他平台保留个人思考和阅读过程中产生的记录。</p>
+          <div className="about-study__platforms">
+            <article><span>微信公众号</span><h3>金家岭小胖</h3><p>记录个人思考、长期文章与阶段性判断。公众号内容不代表网站全部馆藏已经同步发布。</p></article>
+            <article><span>小红书</span><h3>金融街小胖</h3><p>转发和保存长期阅读中遇到的优质长文，不把第三方内容包装为原创。</p></article>
+          </div>
+          <p>名称不同，都是我维护的阅读空间。小胖书房则是这些长期阅读与资料整理最终沉淀下来的地方。</p>
+        </section>
+
+        <section className="about-study__boundary">
+          <p className="study-label">05 · 内容使用边界</p>
+          <h2>学习、研究与资料检索</h2>
+          <p>本站不提供个股推荐、收益承诺、实时估值或个性化投资建议。公开资料不会被描述为独家拥有；合订本购买的是整理、校订与连续阅读所节省的时间，而不是秘密信息。</p>
+        </section>
+      </PageContainer>
       <PageFooter />
-    </PageContainer>
+    </>
   )
 }

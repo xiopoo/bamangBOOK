@@ -8,6 +8,8 @@ import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
 import { talkParams } from '@/lib/staticParams'
+import type { Metadata } from 'next'
+import { summarizeContent } from '@/lib/content-metadata'
 
 export function generateStaticParams() {
   return talkParams()
@@ -17,6 +19,18 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { id: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const fileName = decodeURIComponent(params.id)
+  const doc = getDocumentByFileName('talks', fileName)
+  if (!doc) return { title: '演讲未找到', robots: { index: false } }
+  return {
+    title: `${doc.title} · 演讲档案`,
+    description: summarizeContent(doc.content),
+    alternates: { canonical: `/talks/${encodeURIComponent(fileName)}` },
+    openGraph: { title: doc.title, type: 'article' },
+  }
 }
 
 export default function TalkDetailPage({ params }: PageProps) {

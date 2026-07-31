@@ -2,67 +2,44 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const footerLinks = [
-  { href: '/partnership', label: '合伙人信' },
-  { href: '/letters', label: '股东信' },
-  { href: '/qa', label: '股东大会问答' },
-  { href: '/munger/wesco', label: 'Wesco 股东大会' },
-  { href: '/munger/archive', label: '芒格影音档案' },
-  { href: '/munger/originals', label: 'Wesco 股东信' },
-  { href: '/model', label: '思维模型' },
-  { href: '/columns', label: '投资专栏' },
-  { href: '/business-history', label: '公司深度研究' },
+  { href: '/buffett', label: '巴菲特档案' },
+  { href: '/munger', label: '芒格档案' },
+  { href: '/business-history', label: '企业研究' },
+  { href: '/concepts', label: '主题索引' },
+  { href: '/bound-edition', label: '合订本' },
+  { href: '/search', label: '全站搜索' },
+  { href: '/references', label: '引用与参考' },
+  { href: '/about', label: '编辑原则' },
 ]
 
 export default function PageFooter() {
   return (
     <footer id="follow" className="archive-footer">
       <div className="archive-footer__inner">
-        <div className="archive-footer__flourish">❧</div>
+        <div className="archive-footer__seal" aria-hidden="true">藏</div>
         <div className="archive-footer__grid">
           <div className="archive-footer__brand">
-            <h3>
-              小胖书房
-            </h3>
-            <p>巴菲特、芒格、公司与商业史的长期档案。</p>
-            <blockquote>“反过来想，总是反过来想。”</blockquote>
-            <a
-              href="https://xhslink.com/m/6OPiGk9H7w7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              BY 金融街小胖
-            </a>
+            <h3>小胖书房</h3>
+            <p>投资思想与商业史的长期档案。</p>
+            <blockquote>阅读原典，形成自己的判断。</blockquote>
           </div>
-
           <nav aria-label="页脚阅读入口">
-            <p>阅读入口</p>
+            <p>核心入口</p>
             <div>
-              {footerLinks.map(link => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {footerLinks.map(link => <Link key={link.href} href={link.href}>{link.label}</Link>)}
             </div>
           </nav>
-
           <div className="archive-footer__follow">
-            <p>关注公众号</p>
-            <Image
-              src="/qrcode.jpeg"
-              alt="微信公众号二维码"
-              width={96}
-              height={96}
-            />
-            <span>在微信继续阅读</span>
+            <p>书房之外</p>
+            <Image src="/qrcode.jpeg" alt="微信公众号“金家岭小胖”二维码" width={92} height={92} />
+            <span><strong>金家岭小胖</strong><br />个人思考与长期文章</span>
+            <a href="https://xhslink.com/m/6OPiGk9H7w7" target="_blank" rel="noopener noreferrer">小红书：金融街小胖</a>
           </div>
         </div>
         <div className="archive-footer__note">
           <span>© 2026 小胖书房</span>
-          <span>本站内容仅供研究与资料参考，不构成投资建议。</span>
-          <span><Link href="/about">编辑原则</Link> · <Link href="/search">全站搜索</Link></span>
+          <span>本站内容用于学习、研究和资料检索，不构成投资建议，不提供收益承诺。</span>
+          <span><Link href="/about">编辑原则</Link> · <Link href="/references">引用与参考</Link> · <Link href="/search">全站搜索</Link></span>
         </div>
       </div>
     </footer>

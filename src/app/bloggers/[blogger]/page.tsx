@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
 import { getBloggers, getBloggerArticles, getBloggerStats } from '@/lib/bloggers'
 import { bloggerParams } from '@/lib/staticParams'
+import type { Metadata } from 'next'
 
 export function generateStaticParams() {
   return bloggerParams()
@@ -14,6 +15,15 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const blogger = decodeURIComponent(params.blogger)
+  return {
+    title: `${blogger} · 文章档案`,
+    description: `${blogger}的历史文章、主题与年份索引。`,
+    alternates: { canonical: `/bloggers/${encodeURIComponent(blogger)}` },
+  }
 }
 
 export default function BloggerArticlesPage({ params }: PageProps) {

@@ -19,8 +19,8 @@ function namesIn(directory: string): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
-    '', '/about', '/search', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
-    '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
+    '', '/about', '/references', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/letters', '/partnership',
+    '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers',
     '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/munger/originals',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))

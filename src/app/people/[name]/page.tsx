@@ -4,6 +4,9 @@ import path from 'path'
 import MarkdownContent from '@/components/MarkdownContent'
 import { resolveEntityLink, resolvePersonContentFile } from '@/lib/entity-resolver'
 import { personParams } from '@/lib/staticParams'
+import type { Metadata } from 'next'
+import { PEOPLE_ALIAS_MAP } from '@/lib/entity-aliases'
+import { getLetterHrefForYear } from '@/lib/partnership'
 
 export function generateStaticParams() {
   return personParams()
@@ -13,6 +16,15 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { name: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const name = decodeURIComponent(params.name)
+  return {
+    title: `${name}：人物档案与原文线索`,
+    description: `${name}在巴菲特、芒格及价值投资资料中的人物档案、相关年份与原文线索。`,
+    alternates: { canonical: `/people/${encodeURIComponent(name)}` },
+  }
 }
 
 function processPersonLinks(content: string): string {
@@ -35,17 +47,7 @@ export default function PersonDetailPage({ params }: PageProps) {
     const indexData = JSON.parse(readFileSync(indexPath, 'utf-8'))
     const allPeople = indexData.people || []
 
-    const aliasMap: { [key: string]: string[] } = {
-      '巴菲特': ['Buffett', '沃伦·巴菲特', 'Warren Buffett'],
-      '芒格': ['Munger', 'Charlie Munger', '查理·芒格'],
-      '格雷厄姆': ['Graham', '本杰明·格雷厄姆'],
-      '格雷格·阿贝尔': ['Greg Abel', 'Abel', '阿贝尔'],
-      '汤姆·墨菲': ['Tom Murphy'],
-      '费雪': ['Fisher'],
-      '皮特·利格尔': ['Pete Liegl']
-    }
-
-    aliases = aliasMap[personName] || []
+    aliases = PEOPLE_ALIAS_MAP[personName] || []
 
     const matchingPeople = allPeople.filter((p: { id: string }) =>
       p.id === personName || aliases.includes(p.id)
@@ -62,15 +64,15 @@ export default function PersonDetailPage({ params }: PageProps) {
   }
 
   const personInfo: { [key: string]: { title: string; description: string } } = {
-    '巴菲特': {
+    '沃伦·巴菲特': {
       title: '沃伦·巴菲特 (Warren Buffett)',
       description: '伯克希尔哈撒韦公司董事长兼CEO，被誉为"奥马哈先知"，价值投资的践行者'
     },
-    '芒格': {
+    '查理·芒格': {
       title: '查理·芒格 (Charlie Munger)',
       description: '伯克希尔哈撒韦公司副董事长，巴菲特的长期合作伙伴，多元思维模型的倡导者'
     },
-    '格雷厄姆': {
+    '本杰明·格雷厄姆': {
       title: '本杰明·格雷厄姆 (Benjamin Graham)',
       description: '价值投资之父，《证券分析》和《聪明的投资者》作者，巴菲特的投资启蒙导师'
     },
@@ -82,7 +84,7 @@ export default function PersonDetailPage({ params }: PageProps) {
       title: '汤姆·墨菲 (Tom Murphy)',
       description: '大都会ABC公司CEO，巴菲特推崇的管理者典范'
     },
-    '费雪': {
+    '菲尔·费雪': {
       title: '菲利普·费雪 (Philip Fisher)',
       description: '成长股投资之父，《普通股和不普通的利润》作者'
     },
@@ -160,7 +162,7 @@ export default function PersonDetailPage({ params }: PageProps) {
             {stats.years.slice(0, 30).map((year) => (
               <Link
                 key={year}
-                href={`/letters/${year}`}
+                href={getLetterHrefForYear(year)}
                 className="px-3 py-1 bg-white dark:bg-[#16213e] border border-gray-200 dark:border-[#2a2a4a] rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:border-purple-200 dark:hover:border-purple-600 transition-colors"
               >
                 {year}

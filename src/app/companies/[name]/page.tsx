@@ -10,6 +10,8 @@ import path from 'path'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
+import { resolveMarkdownEntityLinks } from '@/lib/entity-resolver'
+import { getLetterHrefForYear } from '@/lib/partnership'
 
 export function generateStaticParams() {
   return companyParams()
@@ -40,7 +42,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
     notFound()
   }
   
-  const content = readFileSync(filePath, 'utf-8')
+  const content = resolveMarkdownEntityLinks(readFileSync(filePath, 'utf-8'))
   
   // 从内容中提取标题
   const titleMatch = content.match(/^#\s*(.+)/)
@@ -95,7 +97,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
             {years.map((year) => (
               <Link
                 key={year}
-                href={`/letters/${year}`}
+                href={getLetterHrefForYear(year)}
                 className="inline-flex items-center px-3 py-1.5 rounded-card border border-primary/20 text-sm text-text-muted dark:text-dark-muted hover:border-primary hover:text-primary dark:hover:text-primary-light transition-all"
               >
                 {year}年
