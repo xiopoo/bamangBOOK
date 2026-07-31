@@ -25,6 +25,8 @@ source: "https://mungerarchive.com/zh/recordings/stanford-1996-worldly-wisdom/"
 
 [worldly wisdom](https://mungerarchive.com/zh/recordings/?topic=worldly%20wisdom) [law](https://mungerarchive.com/zh/recordings/?topic=law) [incentives](https://mungerarchive.com/zh/recordings/?topic=incentives) [mental models](https://mungerarchive.com/zh/recordings/?topic=mental%20models)
 
+本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%B3%95%E5%AD%A6%E9%99%A2%E6%BC%94%E8%AE%B2_1996.md)可读。
+
 他的原话——出自本场谈话
 
 以下语录均出自本场谈话。

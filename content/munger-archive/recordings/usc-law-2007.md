@@ -25,4 +25,6 @@ source: "https://mungerarchive.com/zh/recordings/usc-law-2007/"
 
 [deserved trust](https://mungerarchive.com/zh/recordings/?topic=deserved%20trust) [life advice](https://mungerarchive.com/zh/recordings/?topic=life%20advice) [inversion](https://mungerarchive.com/zh/recordings/?topic=inversion) [learning](https://mungerarchive.com/zh/recordings/?topic=learning) [worldly wisdom](https://mungerarchive.com/zh/recordings/?topic=worldly%20wisdom)
 
+本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E5%8D%97%E5%8A%A0%E5%A4%A7%E6%B3%95%E5%AD%A6%E9%99%A2%E6%BC%94%E8%AE%B2_2007.md)可读。
+
 由 YouTube 字幕自动生成并经轻度校订——标点和专有名词  可能有误。我们不拥有该内容;所有权利归 YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=jY1eNlL6NKs)

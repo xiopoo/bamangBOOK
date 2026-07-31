@@ -106,7 +106,7 @@ export const people: Record<string, Person> = {
     contentCategories: [
       { id: 'munger-concepts', label: '核心概念', href: '/munger', count: 49, icon: '💡' },
       { id: 'wesco-meetings', label: 'Wesco 股东大会', href: '/munger/wesco', count: 14, icon: '❓' },
-      { id: 'talks', label: '演讲', href: '/talks?person=munger', count: 10, icon: '🎤' },
+      { id: 'talks', label: '演讲', href: '/talks?person=munger', count: 4, icon: '🎤' },
       { id: 'interviews', label: '访谈', href: '/interviews?person=munger', count: 0, icon: '🎙️' },
     ],
     relatedPeople: [

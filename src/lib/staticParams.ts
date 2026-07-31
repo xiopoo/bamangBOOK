@@ -54,8 +54,10 @@ export function qaParams() {
 }
 
 export function talkParams() {
-  return getDocuments('talks').map((doc) => ({
-    id: doc.fileName,
+  // 以文件系统实际文件为准：部分芒格演讲已从索引移入影音体系，
+  // 但记录页仍链接站内全文，需保留其静态页面。
+  return listIds(path.join(CONTENT_DIR, 'talks'), { keepExtension: true }).map((id) => ({
+    id,
   }))
 }
 

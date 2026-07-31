@@ -25,6 +25,8 @@ source: "https://mungerarchive.com/zh/recordings/harvard-law-1998-multidisciplin
 
 [multidisciplinary](https://mungerarchive.com/zh/recordings/?topic=multidisciplinary) [professions](https://mungerarchive.com/zh/recordings/?topic=professions) [education](https://mungerarchive.com/zh/recordings/?topic=education) [mental models](https://mungerarchive.com/zh/recordings/?topic=mental%20models)
 
+本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E5%93%88%E4%BD%9B%E6%B3%95%E5%AD%A6%E9%99%A2%E6%BC%94%E8%AE%B2_1998.md)可读。
+
 ## 相关录音
 
 [TEXTSpeech](https://mungerarchive.com/zh/recordings/stanford-1996-worldly-wisdom/)

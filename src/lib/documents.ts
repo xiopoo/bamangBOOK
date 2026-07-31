@@ -8,6 +8,8 @@ export interface DocumentItem {
   contentLength: number
   fileName: string
   person: string | string[]
+  /** 索引迁移前的主题目录路径（如 01-投资理念/…），用于主题分类展示 */
+  origFileName?: string
 }
 
 export interface DocumentData {
