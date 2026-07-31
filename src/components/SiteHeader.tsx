@@ -41,6 +41,7 @@ const navGroups = [
     links: [
       { href: '/buffett', label: '巴菲特', meta: '人物主页' },
       { href: '/munger', label: '芒格', meta: '人物主页' },
+      { href: '/munger/archive', label: '芒格演讲与访谈', meta: '1986—2023' },
     ],
   },
   {
