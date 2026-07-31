@@ -13,23 +13,9 @@ import {
   type PartnershipLetter,
 } from '@/lib/partnership'
 import RelatedArticles from '@/components/RelatedArticles'
-import type { Metadata } from 'next'
-import { summarizeContent } from '@/lib/content-metadata'
 
 interface PageProps {
   params: { id: string }
-}
-
-export function generateMetadata({ params }: PageProps): Metadata {
-  const result = getPartnershipLetterById(Number(params.id))
-  if (!result?.letter) return { title: '合伙人信未找到', robots: { index: false } }
-  const title = formatLetterTitle(result.letter)
-  return {
-    title: `${title} · 巴菲特合伙人信`,
-    description: summarizeContent(result.content),
-    alternates: { canonical: `/partnership/${result.letter.id}` },
-    openGraph: { title, type: 'article' },
-  }
 }
 
 function formatLetterTitle(letter: PartnershipLetter): string {

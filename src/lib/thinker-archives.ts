@@ -37,7 +37,7 @@ export const buffettArchive: ThinkerArchive = {
   headline: '从价格出发，最后走向企业。',
   introduction:
     '早年的巴菲特寻找被低估的资产，后来的巴菲特愿意为好生意支付合理价格。贯穿始终的，是把股票当作企业的一部分、只做看得懂的判断，以及对资本配置近乎苛刻的要求。',
-  sourceHeading: '他留下的原始记录',
+  sourceHeading: '信件、问答与公开记录',
   sources: [
     {
       href: '/partnership',
@@ -95,7 +95,7 @@ export const mungerArchive: ThinkerArchive = {
   headline: '从投资出发，最后走向判断。',
   introduction:
     '芒格谈投资，却很少只谈投资。他把心理学、工程学、生物学、经济学与人生经验放进同一张格栅，用来识别好企业，也用来避免那些反复出现的人类错误。',
-  sourceHeading: '他留下的原始记录',
+  sourceHeading: '演讲、问答与公开记录',
   sources: [
     {
       href: '/poor-charlies-almanack',

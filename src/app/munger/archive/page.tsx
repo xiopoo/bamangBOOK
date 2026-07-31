@@ -9,7 +9,7 @@ import {
 } from '@/lib/munger-archive'
 
 export const metadata: Metadata = {
-  title: '芒格档案',
+  title: '芒格资料',
   description: '查理·芒格的生平、事业、演讲访谈与主题语录。',
 }
 
@@ -21,14 +21,14 @@ export default function MungerArchivePage() {
   return (
     <PageContainer maxWidth="6xl" className="archive-catalog">
       <PageHeader
-        title="芒格档案"
+        title="芒格资料"
         subtitle="生平、事业、演讲访谈与主题语录"
         backHref="/munger"
-        backLabel="返回芒格专题"
+        backLabel="返回芒格"
       />
 
-      <div className="archive-catalog__ledger" aria-label="档案统计">
-        <div><strong>{readableTotal}</strong><span>篇可读档案</span></div>
+      <div className="archive-catalog__ledger" aria-label="内容统计">
+        <div><strong>{readableTotal}</strong><span>篇可读内容</span></div>
         <div><strong>{stats.recordings}</strong><span>篇演讲与访谈</span></div>
         <div><strong>{stats.quotes}</strong><span>组主题语录</span></div>
         <div><strong>232</strong><span>个思维模型</span></div>

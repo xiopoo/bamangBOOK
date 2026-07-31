@@ -16,6 +16,7 @@ const sections = [
       { href: '/letters', icon: '✉️', label: '股东信', count: '60' },
       { href: '/qa', icon: '❓', label: '股东大会实录', count: '52' },
       { href: '/talks?person=buffett', icon: '🎤', label: '演讲' },
+      { href: '/articles', icon: '📝', label: '研究文章' },
       { href: '/interviews', icon: '🎙️', label: '访谈' },
       { href: '/columns', icon: '✍️', label: '投资专栏' },
       { href: '/books', icon: '📖', label: '深度拆书' },
@@ -28,7 +29,7 @@ const sections = [
       { href: '/munger', icon: '🧔', label: '文章·演讲' },
       { href: '/munger/wesco', icon: '❓', label: 'Wesco 股东大会', count: '14' },
       { href: '/poor-charlies-almanack', icon: '📕', label: '穷查理宝典' },
-      { href: '/munger/archive', icon: '🎧', label: '影音档案', count: '35' },
+      { href: '/munger/archive', icon: '🎧', label: '演讲与访谈', count: '35' },
       { href: '/munger/originals', icon: '📜', label: 'Wesco 股东信', count: '13' },
       { href: '/model', icon: '🧠', label: '思维模型', count: '232' },
     ],
@@ -44,12 +45,12 @@ const sections = [
     ],
   },
   {
-    label: '百科与索引',
-    description: '概念、公司与人物的速查词典',
+    label: '主题索引',
+    description: '概念、公司与人物的档案入口',
     links: [
       { href: '/concepts', icon: '💡', label: '投资概念' },
-      { href: '/companies', icon: '🏢', label: '公司档案' },
-      { href: '/people', icon: '👤', label: '人物档案' },
+      { href: '/companies', icon: '🏢', label: '公司索引' },
+      { href: '/people', icon: '👤', label: '相关人物' },
     ],
   },
 ]
@@ -141,7 +142,7 @@ export default function Sidebar() {
 
               <div className="border-t border-gray-100 pt-3 dark:border-gray-700">
                 <NavLink href="/search" icon="🔎" label="全站搜索" />
-                <NavLink href="/about" icon="ⓘ" label="编辑原则" />
+                <NavLink href="/about" icon="ⓘ" label="关于" />
               </div>
             </div>
           </nav>

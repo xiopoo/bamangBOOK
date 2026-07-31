@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '博主文章档案',
-  description: '按作者与年份浏览长期投资、商业研究与市场观察文章。',
-  alternates: { canonical: '/bloggers' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
@@ -25,8 +18,8 @@ export default function BloggersPage() {
   return (
     <PageContainer maxWidth="6xl">
       <PageHeader
-        title="📡 博主文章"
-        subtitle="精选知名投资公众号博主的优质内容，多视角理解价值投资"
+        title="博主文章"
+        subtitle={`四位长期关注的投资写作者，共 ${totalArticles.toLocaleString()} 篇文章。可以按作者、年份和主题浏览。`}
         backHref="/"
         backLabel="返回首页"
         sticky

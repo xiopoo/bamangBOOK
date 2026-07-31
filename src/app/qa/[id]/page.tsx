@@ -7,8 +7,6 @@ import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
 import { qaParams } from '@/lib/staticParams'
-import type { Metadata } from 'next'
-import { summarizeContent } from '@/lib/content-metadata'
 
 export function generateStaticParams() {
   return qaParams()
@@ -18,18 +16,6 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { id: string }
-}
-
-export function generateMetadata({ params }: PageProps): Metadata {
-  const fileName = decodeURIComponent(params.id)
-  const doc = getDocumentByFileName('qa', fileName)
-  if (!doc) return { title: '问答未找到', robots: { index: false } }
-  return {
-    title: `${doc.title} · 股东大会问答`,
-    description: summarizeContent(doc.content),
-    alternates: { canonical: `/qa/${encodeURIComponent(fileName)}` },
-    openGraph: { title: doc.title, type: 'article' },
-  }
 }
 
 export default function QADetailPage({ params }: PageProps) {

@@ -145,15 +145,15 @@ export default function ControlPanel({
           <h3 className="text-sm font-medium text-gray-700 mb-3">节点尺寸</h3>
           <div className="space-y-2 text-xs text-gray-500">
             <div className="flex items-center gap-3">
-              <span className="w-3 h-3 rounded-full bg-orange-600 shrink-0 border-2 border-white ring-1 ring-orange-300" />
+              <span className="w-3 h-3 rounded-full bg-primary shrink-0 border-2 border-white ring-1 ring-primary/30" />
               <span>高频节点 (提及 &gt;50 次)</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-orange-500 shrink-0" />
+              <span className="w-2.5 h-2.5 rounded-full bg-primary/75 shrink-0" />
               <span>中频节点 (提及 10–50 次)</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-orange-300 shrink-0" />
+              <span className="w-2 h-2 rounded-full bg-primary/40 shrink-0" />
               <span>低频节点 (提及 &lt;10 次)</span>
             </div>
           </div>

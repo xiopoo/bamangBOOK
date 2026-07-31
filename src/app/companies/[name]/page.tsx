@@ -10,8 +10,7 @@ import path from 'path'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
-import { resolveMarkdownEntityLinks } from '@/lib/entity-resolver'
-import { getLetterHrefForYear } from '@/lib/partnership'
+import { getLetterArchiveHref } from '@/lib/letter-links'
 
 export function generateStaticParams() {
   return companyParams()
@@ -26,7 +25,7 @@ interface PageProps {
 export function generateMetadata({ params }: PageProps): Metadata {
   const name = decodeURIComponent(params.name)
   return {
-    title: `${name}：公司档案与投资线索`,
+    title: `${name}：公司资料与投资线索`,
     description: `${name}在巴菲特与芒格公开资料中的投资历程、相关观点、概念与股东信年份。`,
     alternates: { canonical: `/companies/${encodeURIComponent(name)}` },
   }
@@ -42,7 +41,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
     notFound()
   }
   
-  const content = resolveMarkdownEntityLinks(readFileSync(filePath, 'utf-8'))
+  const content = readFileSync(filePath, 'utf-8')
   
   // 从内容中提取标题
   const titleMatch = content.match(/^#\s*(.+)/)
@@ -69,7 +68,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
     <PageContainer maxWidth="5xl">
       <PageHeader
         title={title}
-        subtitle="巴菲特投资案例公司档案"
+        subtitle="巴菲特与芒格相关公司资料"
         backHref="/companies"
         backLabel="返回公司列表"
         sticky
@@ -77,7 +76,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
       />
 
       <ContentTrustPanel
-        source="公司知识档案，由本站收录的股东信与公开资料整理"
+        source="公司资料，由本站收录的股东信与公开资料整理"
         method="历史数据与引语应结合正文年份和相关股东信核对，不代表对公司当前状况的判断。"
       />
 
@@ -97,7 +96,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
             {years.map((year) => (
               <Link
                 key={year}
-                href={getLetterHrefForYear(year)}
+                href={getLetterArchiveHref(year)}
                 className="inline-flex items-center px-3 py-1.5 rounded-card border border-primary/20 text-sm text-text-muted dark:text-dark-muted hover:border-primary hover:text-primary dark:hover:text-primary-light transition-all"
               >
                 {year}年

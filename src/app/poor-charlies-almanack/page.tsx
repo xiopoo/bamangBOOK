@@ -48,7 +48,7 @@ export default function PoorCharliesAlmanackPage() {
         title="《穷查理宝典》"
         subtitle="The Essential Wit and Wisdom of Charles T. Munger"
         backHref="/munger"
-        backLabel="返回芒格专栏"
+        backLabel="返回芒格"
       />
 
       <section className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-white to-amber-50 p-6 shadow-card dark:from-primary/20 dark:via-dark-card dark:to-amber-950/20 md:p-10">

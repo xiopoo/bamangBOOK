@@ -1,11 +1,4 @@
 import PageContainer from '@/components/PageContainer'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '查理·芒格档案',
-  description: '查理·芒格的生平、演讲、Wesco资料与多元思维模型档案。',
-  alternates: { canonical: '/munger' },
-}
 import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getModels } from '@/lib/models'
@@ -23,7 +16,7 @@ export default function MungerPage() {
         <ThinkerArchivePage
           archive={mungerArchive}
           stats={[
-            { value: stats.total, label: '篇人物档案' },
+            { value: stats.total, label: '篇相关内容' },
             { value: getWescoMeetings().length, label: '场 Wesco 问答' },
             { value: getModels().length, label: '个思维模型' },
             { value: getMungerOriginals().length, label: '封 Wesco 股东信' },

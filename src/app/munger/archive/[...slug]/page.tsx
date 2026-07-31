@@ -37,8 +37,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const doc = getMungerLocalArchiveBySlug(params.slug)
   if (!doc) return {}
   return {
-    title: `${doc.title} · 芒格档案`,
-    description: `芒格档案本地归档文档：${doc.title}`,
+    title: `${doc.title} · 芒格资料`,
+    description: `查理·芒格相关资料：${doc.title}`,
+    alternates: { canonical: `/munger/archive/${doc.slug}` },
   }
 }
 
@@ -55,9 +56,9 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
   return (
     <PageContainer maxWidth="4xl">
       <nav className="archive-document__breadcrumb" aria-label="当前位置">
-        <Link href="/munger">芒格栏目</Link>
+        <Link href="/munger">芒格</Link>
         <span>/</span>
-        <Link href="/munger/archive">芒格档案</Link>
+        <Link href="/munger/archive">芒格资料</Link>
         {navigation && (
           <>
             <span>/</span>
@@ -69,9 +70,9 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
         title={doc.title}
         subtitle={navigation
           ? `${navigation.sectionLabel} · 第 ${navigation.position} / ${navigation.total} 篇`
-          : '查理·芒格档案'}
+          : '查理·芒格资料'}
         backHref="/munger/archive"
-        backLabel="返回芒格档案"
+        backLabel="返回芒格资料"
         showFontSize
       />
 
@@ -80,7 +81,7 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
       </article>
 
       {navigation && (
-        <nav className="archive-document__pagination" aria-label="同类档案上下篇">
+        <nav className="archive-document__pagination" aria-label="同类内容上下篇">
           {navigation.previous ? (
             <Link href={`/munger/archive/${navigation.previous.slug}`}>
               <span>上一篇</span>
@@ -97,8 +98,8 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
       )}
 
       <div className="archive-document__return">
-        <Link href="/munger">返回芒格栏目</Link>
-        <Link href="/munger/archive">查看全部芒格档案</Link>
+        <Link href="/munger">返回芒格</Link>
+        <Link href="/munger/archive">查看全部芒格资料</Link>
       </div>
 
       <PageFooter />

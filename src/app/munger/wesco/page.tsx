@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，按年份连续阅读。',
   openGraph: {
     title: 'Wesco 股东大会',
-    description: '查理·芒格中文问答档案，1996-2011。',
-    images: [{ url: '/og-wesco.png', width: 1728, height: 910, alt: 'Wesco 股东大会：查理·芒格中文问答档案' }],
+    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
+    images: [{ url: '/og-wesco.png', width: 1728, height: 910, alt: 'Wesco 股东大会：查理·芒格中文问答' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Wesco 股东大会',
-    description: '查理·芒格中文问答档案，1996-2011。',
+    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
     images: ['/og-wesco.png'],
   },
 }
@@ -35,7 +35,7 @@ export default function WescoMeetingsPage() {
         title="Wesco 股东大会"
         subtitle="只收录 Wesco 公司股东大会资料。中文实录与英文会议笔记整理版分别标注，不与伯克希尔股东大会混放。"
         backHref="/munger"
-        backLabel="返回芒格档案"
+        backLabel="返回芒格"
         sticky
       />
 

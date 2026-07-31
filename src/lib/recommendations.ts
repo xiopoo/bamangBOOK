@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
+import { companyIds, conceptIds, resolvePersonRouteId } from './entity-resolver'
 
 export interface Recommendation {
   id: string
@@ -51,7 +52,7 @@ export function getRelatedConcepts(targetConcept: string, limit: number = 5): Re
     if (idx !== -1) {
       const otherConcept = item.concepts[1 - idx]
       const conceptData = concepts.find((c: IndexItem) => c.id === otherConcept)
-      if (conceptData) {
+      if (conceptData && conceptIds.has(otherConcept)) {
         related.push({
           id: otherConcept,
           type: 'concept',
@@ -68,7 +69,7 @@ export function getRelatedConcepts(targetConcept: string, limit: number = 5): Re
 }
 
 export function getRecommendedConceptsByYear(year: number, limit: number = 6): Recommendation[] {
-  const yearConcepts = concepts.map((concept: IndexItem) => {
+  const yearConcepts = concepts.filter(concept => conceptIds.has(concept.id)).map((concept: IndexItem) => {
     const yearCount = concept.years.filter((y: number) => y === year).length
     return {
       id: concept.id,
@@ -85,6 +86,7 @@ export function getRecommendedConceptsByYear(year: number, limit: number = 6): R
 
 export function getTopConcepts(limit: number = 10): Recommendation[] {
   return concepts
+    .filter(c => conceptIds.has(c.id))
     .map((c: IndexItem) => ({
       id: c.id,
       type: 'concept' as const,
@@ -108,7 +110,9 @@ export function getTopPeople(limit: number = 5): Recommendation[] {
   })
   
   return Object.entries(uniquePeople)
-    .map(([name, count]) => ({
+    .map(([name, count]) => ({ name: resolvePersonRouteId(name), count }))
+    .filter((item): item is { name: string; count: number } => Boolean(item.name))
+    .map(({ name, count }) => ({
       id: name,
       type: 'person' as const,
       name,
@@ -130,6 +134,7 @@ export function getTopCompanies(limit: number = 5): Recommendation[] {
   })
   
   return Object.entries(uniqueCompanies)
+    .filter(([name]) => companyIds.has(name))
     .map(([name, count]) => ({
       id: name,
       type: 'company' as const,

@@ -5,8 +5,6 @@ import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import { bloggerArticleParams } from '@/lib/staticParams'
-import type { Metadata } from 'next'
-import { summarizeContent } from '@/lib/content-metadata'
 
 export function generateStaticParams() {
   return bloggerArticleParams()
@@ -16,23 +14,6 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string; id: string }
-}
-
-export function generateMetadata({ params }: PageProps): Metadata {
-  const blogger = decodeURIComponent(params.blogger)
-  const fileName = decodeURIComponent(params.id)
-  const doc = getBloggerArticle(blogger, fileName)
-  if (!doc) return { title: '文章未找到', robots: { index: false } }
-  const dateLabel = doc.date?.slice(0, 10)
-  const summary = summarizeContent(doc.content)
-  const isThinArchive = summary.length < 80
-  return {
-    title: `${doc.title}${dateLabel ? ` · ${dateLabel}` : ''} · ${blogger}`,
-    description: summary || `${blogger}文章存档：${doc.title}`,
-    alternates: { canonical: `/bloggers/${encodeURIComponent(blogger)}/${encodeURIComponent(fileName)}` },
-    openGraph: { title: doc.title, description: summary, type: 'article' },
-    robots: isThinArchive ? { index: false, follow: true } : undefined,
-  }
 }
 
 export default function BloggerArticleDetailPage({ params }: PageProps) {
@@ -47,7 +28,7 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
   // 同博主的推荐文章（按日期临近的5篇）
   const allArticles = getBloggerArticles(bloggerName)
   const relatedDocs = allArticles
-    .filter(a => a.fileName !== fileName && a.wordCount >= 80)
+    .filter(a => a.fileName !== fileName)
     .slice(0, 6)
 
   return (

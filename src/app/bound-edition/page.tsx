@@ -1,31 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { ArrowRight, Check } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
-
-const products = [
-  {
-    number: '01',
-    eyebrow: 'BUFFETT COLLECTION',
-    title: '《巴菲特文集合订本》',
-    description: '沿着信件与公开文字，连续理解巴菲特的投资方法、企业判断与资本配置思想如何形成和变化。',
-    button: '购买巴菲特文集合订本 · 99元',
-    cover: '/buffett-collection-cover.png',
-    alt: '《巴菲特文集》1956—2025 PDF 合订本封面',
-    pages: 'A4 · 4585 页 · PDF',
-  },
-  {
-    number: '02',
-    eyebrow: 'MUNGER COLLECTION',
-    title: '《芒格文集合订本》',
-    description: '通过演讲、问答与重要文章，系统理解芒格如何连接商业、心理学和多元思维模型。',
-    button: '购买芒格文集合订本 · 99元',
-    cover: '/munger-collection-cover.png',
-    alt: '《芒格文集》1924—2023 PDF 合订本封面',
-    pages: 'A4 · 1905 页 · PDF',
-  },
-]
+import ProductCover from '@/components/ProductCover'
+import { productList } from '@/lib/commerce'
 
 const faqs = [
   ['网站已经可以免费阅读，为什么还要买合订本？', '网站适合搜索和随时查阅，合订本适合按完整脉络连续阅读。如果你只想偶尔查一两篇，免费使用网站就够了。'],
@@ -53,19 +31,19 @@ export default function BoundEditionPage() {
         </section>
 
         <section id="editions" className="edition-products" aria-label="两本合订本">
-          {products.map(product => (
-            <article key={product.number}>
+          {productList.map((product, index) => (
+            <article key={product.slug}>
               <div>
-                <span>{product.number}</span>
-                <small>{product.eyebrow}</small>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <small>{product.coverVariant === 'buffett' ? 'BUFFETT EDITION' : 'MUNGER EDITION'}</small>
               </div>
-              <Image src={product.cover} alt={product.alt} width={238} height={337} />
+              <ProductCover variant={product.coverVariant} title={product.title} yearRange={product.yearRange} />
               <h2>{product.title}</h2>
-              <strong>99<small>元</small></strong>
-              <small className="edition-product-spec">{product.pages}</small>
+              <strong>{product.price}<small>元</small></strong>
+              <small className="edition-product-spec">A4 · {product.pages} 页 · {product.deliveryType}</small>
               <p>{product.description}</p>
-              <Link href="#purchase-contact" className="archive-button archive-button--solid">
-                {product.button}
+              <Link href={`/checkout/${product.slug}`} className="archive-button archive-button--solid">
+                购买{product.shortTitle}合订本 · {product.price}元
               </Link>
             </article>
           ))}
@@ -112,6 +90,19 @@ export default function BoundEditionPage() {
           </div>
         </section>
 
+        <section className="edition-section edition-samples">
+          <div className="edition-section__heading">
+            <p className="study-label">SAMPLE · 免费试读</p>
+            <h2>先读原文，再决定是否购买</h2>
+          </div>
+          <div>
+            <Link href="/partnership/1"><span>01</span><div><strong>巴菲特合伙人信</strong><small>从第一封原始记录开始</small></div><ArrowRight size={16} /></Link>
+            <Link href="/letters/1965"><span>02</span><div><strong>伯克希尔股东信</strong><small>阅读1965年股东信</small></div><ArrowRight size={16} /></Link>
+            <Link href="/poor-charlies-almanack"><span>03</span><div><strong>《穷查理宝典》</strong><small>进入完整免费目录</small></div><ArrowRight size={16} /></Link>
+            <Link href="/munger/wesco"><span>04</span><div><strong>Wesco 股东大会问答</strong><small>查看芒格现场记录</small></div><ArrowRight size={16} /></Link>
+          </div>
+        </section>
+
         <section className="edition-section edition-faq">
           <div className="edition-section__heading">
             <p className="study-label">购买疑虑</p>
@@ -131,13 +122,11 @@ export default function BoundEditionPage() {
           <p className="study-label">从第一篇开始</p>
           <h2>长期判断，始于今天读下第一篇原文</h2>
           <p>不必继续收藏零散文章。选择巴菲特或芒格，从第一篇开始系统阅读。</p>
-          <div>
-            <Image src="/qrcode.jpeg" alt="微信公众号“金家岭小胖”购买联系二维码" width={132} height={132} />
-            <div className="edition-final__actions">
-              {products.map(product => <a key={product.number} href="#purchase-contact" className="archive-button archive-button--solid">{product.button}</a>)}
-            </div>
+          <div className="edition-final__actions">
+            <Link href="/checkout/buffett-collection" className="archive-button archive-button--solid">购买巴菲特文集合订本 · 99元</Link>
+            <Link href="/checkout/munger-collection" className="archive-button archive-button--solid">购买芒格文集合订本 · 99元</Link>
           </div>
-          <small>扫码联系“金家岭小胖”购买，交付对应的完整 PDF 文件。每本99元，分别出售；不提供荐股或收益承诺，请按自己的阅读需要选择。</small>
+          <small>每本99元，分别出售，分别发放产品权益；不提供荐股或收益承诺，请按自己的阅读需要选择。</small>
         </section>
       </PageContainer>
       <PageFooter />

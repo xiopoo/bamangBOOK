@@ -1,12 +1,5 @@
 import { existsSync, readFileSync } from 'fs'
-import type { Metadata } from 'next'
 import path from 'path'
-
-export const metadata: Metadata = {
-  title: '可选阅读地图',
-  description: '价值投资入门与进阶阅读地图；它是一张可选地图，不是必须完成的课表。',
-  alternates: { canonical: '/learn/path' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
 import PageHeader from '@/components/PageHeader'
@@ -57,7 +50,7 @@ function resolveItemHref(item: PathItem): string {
   if (item.category === 'articles') {
     const docs = getDocuments('articles') as Array<ReturnType<typeof getDocuments>[number] & { origFileName?: string }>
     const matched = docs.find((doc) => doc.origFileName === item.file || doc.fileName === item.file)
-    return matched ? `/articles/${encodeURIComponent(matched.fileName)}` : '/reading'
+    return matched ? `/articles/${encodeURIComponent(matched.fileName)}` : '/articles'
   }
   if (item.category === 'letters') {
     const year = item.file.match(/(?:19|20)\d{2}/)?.[0]
@@ -105,7 +98,7 @@ export default function OptionalLearningPathPage() {
         title="可选阅读地图"
         subtitle="当你需要一个起点时使用；它不是课表，也不要求按顺序完成。"
         backHref="/learn"
-        backLabel="返回学习室"
+        backLabel="返回投资学习"
       />
       {beginner && <LearningPathBeginner path={beginner} />}
       {intermediate && <LearningPathIntermediate path={intermediate} />}

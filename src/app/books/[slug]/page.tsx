@@ -8,7 +8,6 @@ import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import { bookParams } from '@/lib/staticParams'
-import { resolveMarkdownEntityLinks } from '@/lib/entity-resolver'
 
 export function generateStaticParams() {
   return bookParams()
@@ -99,7 +98,7 @@ export default function BookDetailPage({ params }: PageProps) {
         <div className="flex gap-8">
           <main className="flex-1 min-w-0">
             <article className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
-              <MarkdownContent content={resolveMarkdownEntityLinks(book.content)} />
+              <MarkdownContent content={book.content} />
             </article>
 
             {related.length > 0 && (

@@ -7,6 +7,11 @@ import { getBusinessHistories } from '@/lib/business-history'
 import { siteConfig } from '@/lib/site'
 import { almanackSections } from '@/lib/poor-charlies-almanack'
 import { getWescoMeetings } from '@/lib/wesco-meetings'
+import { getModels } from '@/lib/models'
+import { getBooks } from '@/lib/books'
+import { getColumns } from '@/lib/columns'
+import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
+import { getMungerOriginals } from '@/lib/munger-originals'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -19,9 +24,10 @@ function namesIn(directory: string): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
-    '', '/about', '/references', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/letters', '/partnership',
-    '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers',
-    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/munger/originals',
+    '', '/about', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
+    '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
+    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/munger/originals', '/model', '/books', '/columns',
+    '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
 
@@ -39,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getAllPartnershipLetters().forEach(letter => urls.add(`${baseUrl}/partnership/${letter.id}`))
   getBusinessHistories().forEach(item => urls.add(`${baseUrl}/business-history/${encodeURIComponent(item.slug)}`))
   almanackSections.forEach(section => urls.add(`${baseUrl}/poor-charlies-almanack/${section.slug}`))
+  getModels().forEach(model => urls.add(`${baseUrl}/model/${encodeURIComponent(model.slug)}`))
+  getBooks().forEach(book => urls.add(`${baseUrl}/books/${encodeURIComponent(book.slug)}`))
+  getColumns().forEach(column => urls.add(`${baseUrl}/columns/${encodeURIComponent(column.slug)}`))
+  getMungerLocalArchiveItems()
+    .filter(item => item.section !== 'mental-models')
+    .forEach(item => urls.add(`${baseUrl}/munger/archive/${item.slug.split('/').map(encodeURIComponent).join('/')}`))
+  getMungerOriginals().forEach(item => urls.add(`${baseUrl}/munger/originals/${encodeURIComponent(item.id)}`))
 
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]

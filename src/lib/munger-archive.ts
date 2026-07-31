@@ -139,7 +139,7 @@ export const MUNGER_ARCHIVE_DRAWERS = [
     count: '1924-2023',
     href: '/people/munger',
     externalHref: 'https://mungerarchive.com/zh/life/',
-    description: '年表、公司、建筑、慈善与家庭档案',
+    description: '年表、公司、建筑、慈善与家庭资料',
   },
 ]
 
@@ -280,7 +280,7 @@ export function getMungerLocalArchiveGroups() {
 }
 
 export function getMungerArchiveSectionLabel(section: string): string {
-  return LOCAL_SECTION_LABELS[section] ?? '芒格档案'
+  return LOCAL_SECTION_LABELS[section] ?? '芒格资料'
 }
 
 export function getMungerLocalArchiveNavigation(slug: string) {

@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
@@ -22,15 +21,17 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: '小胖书房：巴菲特、芒格与长期主义投资档案' }],
+    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '小胖书房：投资思想与商业史档案' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ['/og.png'],
+    images: ['/og-v2.png'],
   },
-  robots: { index: true, follow: true },
+  robots: siteConfig.hasProductionUrl
+    ? { index: true, follow: true }
+    : { index: false, follow: false },
 }
 
 export default function RootLayout({

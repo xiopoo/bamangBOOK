@@ -24,8 +24,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const meeting = getWescoMeetingByYear(Number(params.year))
   if (!meeting) return {}
   return {
-    title: `${meeting.title} · 芒格档案`,
-    description: `${meeting.year} 年 Wesco 股东大会${meeting.edition}，归入查理·芒格档案。`,
+    title: `${meeting.title} · Wesco 股东大会`,
+    description: `${meeting.year} 年 Wesco 股东大会${meeting.edition}，查理·芒格中文问答与会议笔记。`,
   }
 }
 

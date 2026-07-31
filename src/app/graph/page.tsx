@@ -345,7 +345,7 @@ function ConnectionCard({ node, weight, highlight }: { node: GraphNode; weight: 
       href={getNodeUrl(node)}
       className={`flex items-center gap-3 p-3 rounded-lg border transition-all ${
         highlight
-          ? 'bg-orange-50 dark:bg-orange-900/10 border-orange-200 dark:border-orange-800 hover:bg-orange-100 dark:hover:bg-orange-900/20'
+          ? 'bg-primary/5 dark:bg-primary/10 border-primary/20 hover:bg-primary/10 dark:hover:bg-primary/20'
           : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 hover:border-primary/30'
       }`}
     >
@@ -360,7 +360,7 @@ function ConnectionCard({ node, weight, highlight }: { node: GraphNode; weight: 
       </div>
       <div className={`text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0 ${
         highlight
-          ? 'bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200'
+          ? 'bg-primary/15 dark:bg-primary/25 text-primary dark:text-primary-light'
           : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
       }`}>
         ×{weight}

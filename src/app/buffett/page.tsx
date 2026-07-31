@@ -1,11 +1,4 @@
 import PageContainer from '@/components/PageContainer'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '沃伦·巴菲特档案',
-  description: '从合伙人信、股东信、演讲和公司案例进入巴菲特的投资与资本配置思想。',
-  alternates: { canonical: '/buffett' },
-}
 import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getDocuments } from '@/lib/documents'

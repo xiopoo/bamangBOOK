@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '股东大会问答',
-  description: '伯克希尔与Wesco股东大会问答、现场记录和主题索引。',
-  alternates: { canonical: '/qa' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
@@ -33,7 +26,7 @@ export default function QAPage() {
   const currentPerson = personId ? people[personId] : null
   const subtitle = currentPerson
     ? `${currentPerson.name}在伯克希尔和Wesco股东大会上的问答实录`
-    : '伯克希尔股东大会问答实录；Wesco 公司问答已归入芒格档案'
+    : '伯克希尔股东大会问答实录；Wesco 公司问答请前往芒格页面'
 
   return (
     <PageContainer maxWidth="7xl">
@@ -73,7 +66,7 @@ export default function QAPage() {
           href="/munger/wesco"
           className="px-4 py-2 rounded-lg text-sm font-medium bg-white dark:bg-dark-card text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
         >
-          Wesco 问答移至芒格档案 →
+          查看 Wesco 问答 →
         </Link>
       </div>
 

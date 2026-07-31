@@ -22,6 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: `${item.title} · Wesco 股东信`,
     description: `${item.year} 年 Wesco 股东信英文原文，来源为 Berkshire Hathaway official Wesco archive。`,
+    alternates: { canonical: `/munger/originals/${item.id}` },
   }
 }
 

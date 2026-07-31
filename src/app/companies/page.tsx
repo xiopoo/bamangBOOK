@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '企业研究',
-  description: '巴菲特、芒格公开资料中出现的公司档案、商业模式与资本配置线索。',
-  alternates: { canonical: '/companies' },
-}
 import { readdirSync, readFileSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'
@@ -43,8 +36,8 @@ export default function CompaniesPage() {
   return (
     <PageContainer maxWidth="7xl">
       <PageHeader
-        title="投资公司"
-        subtitle="巴菲特投资案例公司档案"
+        title="公司索引"
+        subtitle="巴菲特与芒格相关投资案例和公司资料"
         sticky
       />
 

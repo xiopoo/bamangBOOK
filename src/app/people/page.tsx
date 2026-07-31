@@ -5,14 +5,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
-import type { Metadata } from 'next'
-import { resolvePersonCanonicalName } from '@/lib/entity-aliases'
-
-export const metadata: Metadata = {
-  title: '关键人物',
-  description: '巴菲特、芒格及价值投资资料中反复出现的投资者、管理者与思想源流人物档案。',
-  alternates: { canonical: '/people' },
-}
+import { resolvePersonRouteId } from '@/lib/entity-resolver'
 
 interface Person {
   id: string
@@ -32,13 +25,30 @@ export default function PeoplePage() {
 
   const mergedPeople: { [key: string]: Person } = {}
   people.forEach(person => {
-    const normalizedName = resolvePersonCanonicalName(person.id)
-
-    if (!mergedPeople[normalizedName]) {
-      mergedPeople[normalizedName] = { id: normalizedName, count: 0, years: [] }
+    let normalizedName = person.id
+    if (person.id === 'Buffett' || person.id === '沃伦·巴菲特' || person.id === 'Warren Buffett') {
+      normalizedName = '巴菲特'
+    } else if (person.id === 'Munger' || person.id === 'Charlie Munger' || person.id === '查理·芒格') {
+      normalizedName = '芒格'
+    } else if (person.id === 'Graham' || person.id === '本杰明·格雷厄姆') {
+      normalizedName = '格雷厄姆'
+    } else if (person.id === 'Greg Abel' || person.id === '格雷格·阿贝尔' || person.id === 'Abel' || person.id === '阿贝尔') {
+      normalizedName = '格雷格·阿贝尔'
+    } else if (person.id === 'Tom Murphy' || person.id === '汤姆·墨菲') {
+      normalizedName = '汤姆·墨菲'
+    } else if (person.id === 'Fisher' || person.id === '费雪') {
+      normalizedName = '费雪'
+    } else if (person.id === 'Pete Liegl' || person.id === '皮特·利格尔') {
+      normalizedName = '皮特·利格尔'
     }
-    mergedPeople[normalizedName].count += person.count
-    mergedPeople[normalizedName].years = [...new Set([...mergedPeople[normalizedName].years, ...person.years])]
+
+    const routeId = resolvePersonRouteId(normalizedName)
+    if (!routeId) return
+    if (!mergedPeople[routeId]) {
+      mergedPeople[routeId] = { id: routeId, count: 0, years: [] }
+    }
+    mergedPeople[routeId].count += person.count
+    mergedPeople[routeId].years = [...new Set([...mergedPeople[routeId].years, ...person.years])]
   })
 
   const uniquePeople = Object.values(mergedPeople).sort((a, b) => b.count - a.count)
@@ -46,8 +56,8 @@ export default function PeoplePage() {
   return (
     <PageContainer maxWidth="7xl">
       <PageHeader
-        title="关键人物"
-        subtitle="巴菲特投资生涯中的关键人物档案"
+        title="相关人物"
+        subtitle="巴菲特、芒格及价值投资相关人物"
         sticky
       />
 
@@ -60,7 +70,7 @@ export default function PeoplePage() {
           <Link
             key={person.id}
             href={`/people/${encodeURIComponent(person.id)}`}
-            className="bg-white dark:bg-[#16213e] p-5 rounded-lg border border-gray-100 dark:border-[#2a2a4a] hover:border-purple-200 dark:hover:border-purple-600 hover:shadow-sm dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all"
+            className="bg-white dark:bg-[#16213e] p-5 rounded-lg border border-gray-100 dark:border-[#2a2a4a] hover:border-primary/30 dark:hover:border-primary/50 hover:shadow-sm dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all"
           >
             <div className="font-medium text-text dark:text-dark-text mb-2">{person.id}</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">

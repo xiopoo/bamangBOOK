@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '巴菲特合伙人信',
-  description: '1956—1970年巴菲特合伙企业时期的信件、协议与投资方法演变。',
-  alternates: { canonical: '/partnership' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'

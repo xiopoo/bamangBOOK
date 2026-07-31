@@ -18,7 +18,7 @@ interface MungerContentProps {
 
 const navSections = [
   { id: 'overview', label: '人物简介' },
-  { id: 'archive', label: '芒格档案' },
+  { id: 'archive', label: '芒格资料' },
   { id: 'philosophy', label: '思维模型' },
   { id: 'content', label: '核心著作' },
   { id: 'cases', label: '投资案例' },
@@ -29,7 +29,7 @@ const archiveProfiles = [
   { href: '/munger/archive/life', title: '生平', description: '1924—2023 年的人生轨迹' },
   { href: '/munger/archive/investing-philosophy', title: '投资哲学', description: '从烟蒂股到伟大企业' },
   { href: '/munger/archive/companies', title: '公司与职务', description: '伯克希尔、Wesco 与每日期刊' },
-  { href: '/munger/archive/daily-journal', title: '每日期刊', description: '长期主持的股东问答档案' },
+  { href: '/munger/archive/daily-journal', title: '每日期刊', description: '长期主持的股东问答记录' },
   { href: '/munger/archive/family', title: '家庭', description: '婚姻、子女与长期伙伴关系' },
   { href: '/munger/archive/philanthropy', title: '慈善', description: '教育捐赠与公共项目' },
   { href: '/munger/archive/architecture', title: '建筑', description: '宿舍设计及无窗方案争议' },
@@ -218,8 +218,8 @@ export default function MungerContent({
       <section id="archive" className="munger-column-archive">
         <header className="munger-column-archive__heading">
           <div>
-            <p>CHARLIE MUNGER ARCHIVE</p>
-            <h2>芒格档案</h2>
+            <p>查理·芒格</p>
+            <h2>演讲、访谈与相关资料</h2>
           </div>
           <p>
             把生平、事业、演讲访谈和主题语录归入同一栏目，所有条目均可在站内连续阅读。
@@ -270,7 +270,7 @@ export default function MungerContent({
         </div>
 
         <Link href="/munger/archive" className="munger-column-archive__all">
-          查看全部 {archiveStats.total} 篇芒格档案 →
+          查看全部 {archiveStats.total} 篇芒格资料 →
         </Link>
       </section>
 
@@ -431,7 +431,7 @@ export default function MungerContent({
             href="/munger/archive"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-sm font-medium text-text dark:text-dark-text">芒格档案</div>
+            <div className="text-sm font-medium text-text dark:text-dark-text">芒格资料</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{archiveStats.total}篇</div>
           </Link>
           <Link
@@ -439,7 +439,7 @@ export default function MungerContent({
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
             <div className="text-2xl mb-2">📜</div>
-            <div className="text-sm font-medium text-text dark:text-dark-text">原典</div>
+            <div className="text-sm font-medium text-text dark:text-dark-text">第一手资料</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">13篇</div>
           </Link>
           <Link
@@ -581,7 +581,7 @@ export default function MungerContent({
           >
             <div className="text-2xl mb-2">🏢</div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资公司</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">61家公司档案</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">61家公司资料</div>
           </Link>
           <Link
             href="/talk"

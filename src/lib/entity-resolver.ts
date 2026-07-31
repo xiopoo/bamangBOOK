@@ -1,11 +1,19 @@
 import { readdirSync, existsSync } from 'fs'
 import path from 'path'
-import { getPartnershipHrefForYear, PARTNERSHIP_YEAR_RANGE } from './partnership'
-import {
-  PEOPLE_ALIAS_MAP,
-  resolveConceptCanonicalName,
-  resolvePersonCanonicalName,
-} from './entity-aliases'
+import { getLetterArchiveHref } from './letter-links'
+
+// 人物标准化映射：canonical name -> 别名列表（包含中英文变体）
+// 仍保留用于规范化（如 [[沃伦·巴菲特]] / [[Buffett]] 统一指向 巴菲特），
+// 但识别人物不再仅依赖此表，而是同时用 content/people/ 实际文件名。
+const PEOPLE_ALIAS_MAP: Record<string, string[]> = {
+  '巴菲特': ['Buffett', '沃伦·巴菲特', 'Warren Buffett'],
+  '芒格': ['Munger', 'Charlie Munger', '查理·芒格'],
+  '格雷厄姆': ['Graham', '本杰明·格雷厄姆'],
+  '格雷格·阿贝尔': ['Greg Abel', 'Abel', '阿贝尔'],
+  '汤姆·墨菲': ['Tom Murphy'],
+  '费雪': ['Fisher', '菲尔·费雪'],
+  '皮特·利格尔': ['Pete Liegl'],
+}
 
 function getContentIds(dir: string): Set<string> {
   const dirPath = path.join(process.cwd(), dir)
@@ -28,8 +36,10 @@ const allPeopleIds = new Set<string>([
 ])
 
 export function resolvePersonCanonical(id: string): string {
-  const canonical = resolvePersonCanonicalName(id)
-  if (canonical !== id) return canonical
+  // 优先：别名表命中（处理 Buffett -> 巴菲特 这类规范化）
+  for (const [canonical, aliases] of Object.entries(PEOPLE_ALIAS_MAP)) {
+    if (canonical === id || aliases.includes(id)) return canonical
+  }
   // 其次：恰好是 people/ 下存在的文件名
   if (peopleFileIds.has(id)) return id
   return id
@@ -40,11 +50,11 @@ export function resolveEntityLink(entity: string): string {
     return `/companies/${encodeURIComponent(entity)}`
   }
   if (allPeopleIds.has(entity)) {
-    return `/people/${encodeURIComponent(resolvePersonCanonical(entity))}`
+    const routeId = resolvePersonRouteId(entity)
+    return routeId ? `/people/${encodeURIComponent(routeId)}` : ''
   }
-  const canonicalConcept = resolveConceptCanonicalName(entity)
-  if (conceptIds.has(canonicalConcept)) {
-    return `/concepts/${encodeURIComponent(canonicalConcept)}`
+  if (conceptIds.has(entity)) {
+    return `/concepts/${encodeURIComponent(entity)}`
   }
   // 兜底：判断是否是“信件标题”模式，命中则指向对应年份信件
   const letterHref = resolveLetterTitleHref(entity)
@@ -61,32 +71,14 @@ export function resolveEntityLink(entity: string): string {
 // 命中则返回 /letters/{year}
 export function resolveLetterTitleHref(entity: string): string {
   let m = entity.match(/(\d{4})年/) // “2012年股东信”
-  if (m) return resolveYearHref(Number(m[1]))
+  if (m) return getLetterArchiveHref(m[1])
   m = entity.match(/berkshire_(\d{4})/) // “berkshire_1979-巴菲特致股东信”
-  if (m) return resolveYearHref(Number(m[1]))
+  if (m) return getLetterArchiveHref(m[1])
   m = entity.match(/partnership_(\d{4})/) // “partnership_1965-...”
-  if (m) return getPartnershipHrefForYear(Number(m[1]))
+  if (m) return getLetterArchiveHref(m[1])
   m = entity.match(/^(\d{4})/) // 纯年份开头
-  if (m && entity.length <= 8) return resolveYearHref(Number(m[1]))
+  if (m && entity.length <= 8) return getLetterArchiveHref(m[1])
   return ''
-}
-
-function resolveYearHref(year: number): string {
-  if (year >= PARTNERSHIP_YEAR_RANGE[0] && year < 1965) {
-    return getPartnershipHrefForYear(year)
-  }
-  return `/letters/${year}`
-}
-
-export function resolveMarkdownEntityLinks(content: string): string {
-  return content
-    .replace(/\[\[([^\]]+)\]\]/g, (_match, entity: string) => {
-      const href = resolveEntityLink(entity)
-      return href ? `[${entity}](${href})` : entity
-    })
-    .replace(/\]\(\/letters\/(\d{4})\)/g, (_match, year: string) => {
-      return `](${resolveYearHref(Number(year))})`
-    })
 }
 
 export function resolvePersonContentFile(personName: string): string | null {
@@ -106,6 +98,11 @@ export function resolvePersonContentFile(personName: string): string | null {
     if (name.includes(canonical)) return path.join(peopleDir, file)
   }
   return null
+}
+
+export function resolvePersonRouteId(personName: string): string | null {
+  const filePath = resolvePersonContentFile(personName)
+  return filePath ? path.basename(filePath, '.md') : null
 }
 
 export { companyIds, conceptIds, peopleFileIds, allPeopleIds, PEOPLE_ALIAS_MAP }

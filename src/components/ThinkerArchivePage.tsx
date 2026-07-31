@@ -37,7 +37,7 @@ export default function ThinkerArchivePage({
 
       <section className={styles.sources}>
         <header>
-          <p>THE RECORD</p>
+          <p>第一手资料</p>
           <h2>{archive.sourceHeading}</h2>
         </header>
         <div>

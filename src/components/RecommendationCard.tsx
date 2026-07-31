@@ -1,4 +1,5 @@
 import type { Recommendation } from '@/lib/recommendations'
+import Link from 'next/link'
 
 interface RecommendationCardProps {
   item: Recommendation
@@ -44,7 +45,7 @@ export function RecommendationCard({ item }: RecommendationCardProps) {
       case 'person':
         return 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
       case 'letter':
-        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300'
+        return 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light'
       default:
         return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'
     }
@@ -66,7 +67,7 @@ export function RecommendationCard({ item }: RecommendationCardProps) {
   }
 
   return (
-    <a
+    <Link
       href={getLink()}
       className="flex items-center gap-3 p-3 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:border-primary/30 hover:shadow-md transition-all group"
     >
@@ -101,6 +102,6 @@ export function RecommendationCard({ item }: RecommendationCardProps) {
           d="M9 5l7 7-7 7"
         />
       </svg>
-    </a>
+    </Link>
   )
 }

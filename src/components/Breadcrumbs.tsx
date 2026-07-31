@@ -44,7 +44,7 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   '/articles': [
     { label: '首页', href: '/' },
     { label: '沃伦·巴菲特', href: '/buffett' },
-    { label: '专题文章', href: '/reading' },
+    { label: '专题文章', href: '/articles' },
   ],
   '/concepts': [
     { label: '首页', href: '/' },

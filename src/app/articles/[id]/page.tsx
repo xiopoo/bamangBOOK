@@ -77,7 +77,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0 flex-1">
-              <Link href="/reading" className="text-sm text-primary hover:text-primary-light transition-colors mb-1 inline-flex items-center gap-1">
+              <Link href="/articles" className="text-sm text-primary hover:text-primary-light transition-colors mb-1 inline-flex items-center gap-1">
                 ← 返回{getCategoryTitle('articles')}列表
               </Link>
               <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary dark:text-primary-light">{doc.title}</h1>
@@ -130,7 +130,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
                   ))}
                 </div>
                 <div className="text-center mt-4">
-                  <Link href="/reading" className="text-sm text-primary hover:text-primary-light">
+                  <Link href="/articles" className="text-sm text-primary hover:text-primary-light">
                     查看全部{categoryName} →
                   </Link>
                 </div>

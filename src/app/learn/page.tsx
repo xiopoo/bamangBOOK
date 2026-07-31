@@ -8,13 +8,6 @@ import { getMungerLocalArchiveItems, getMungerLocalArchiveStats } from '@/lib/mu
 import { getMungerOriginals } from '@/lib/munger-originals'
 import { getAllPartnershipLetters, getShareholderLetters } from '@/lib/partnership'
 import styles from './learn.module.css'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '学习室',
-  description: '从问题、原典、思维模型和公司研究进入小胖书房的个人学习路径。',
-  alternates: { canonical: '/learn' },
-}
 
 const questions = [
   { query: '护城河', title: '什么样的生意值得长期拥有？', note: '从护城河、定价权与资本回报开始' },
@@ -43,7 +36,7 @@ export default function LearnPage() {
   const loosePages = [
     firstOriginal && {
       href: `/munger/originals/${firstOriginal.id}`,
-      meta: `芒格原典 · ${firstOriginal.year}`,
+      meta: `芒格原文 · ${firstOriginal.year}`,
       title: '从一封 Wesco 股东信开始',
       note: '不先读总结，直接听芒格如何讨论生意、治理与人的判断。',
     },
@@ -73,14 +66,14 @@ export default function LearnPage() {
     },
     archivePage && {
       href: `/munger/archive/${archivePage.slug}`,
-      meta: '芒格档案 · 演讲与访谈',
+      meta: '芒格 · 演讲与访谈',
       title: archivePage.title,
-      note: '沿着一次公开表达，继续追踪人物、概念与原典。',
+      note: '从一次公开表达继续了解相关人物、概念与第一手资料。',
     },
   ].filter((item): item is NonNullable<typeof item> => Boolean(item))
 
   const shelves = [
-    { number: '01', href: '/munger/originals', title: '读原典', note: '演讲、信件与第一手文本', count: `${originals.length} 篇` },
+    { number: '01', href: '/munger/originals', title: '读原文', note: '演讲、信件与第一手文本', count: `${originals.length} 篇` },
     { number: '02', href: '/model', title: '找一个模型', note: '跨学科工具与心理误判', count: `${models.length} 个` },
     { number: '03', href: '/business-history', title: '研究一家公司', note: '经营系统、护城河与资本配置', count: `${histories.length} 篇` },
     { number: '04', href: '/letters', title: '沿年份阅读', note: '在六十年股东信中观察变化', count: `${letters.length} 封` },
@@ -92,8 +85,8 @@ export default function LearnPage() {
     <>
       <PageContainer maxWidth="6xl" className={`${styles.page} archive-catalog`}>
         <header className={styles.hero}>
-          <p className={styles.kicker}>Personal archive · 个人学习档案</p>
-          <h1>学习室</h1>
+          <p className={styles.kicker}>投资学习</p>
+          <h1>从一个问题开始</h1>
           <p>
             没有课表，也不要求完成。选一个此刻真正困扰你的问题，打开一篇原文，
             再顺着其中的人物、公司和概念继续走。
@@ -101,8 +94,8 @@ export default function LearnPage() {
           <Link href="/search">搜索此刻想弄明白的事 <span aria-hidden="true">→</span></Link>
         </header>
 
-        <div className="archive-catalog__ledger" aria-label="可探索馆藏">
-          <div><strong>{archiveStats.total}</strong><span>篇芒格档案</span></div>
+        <div className="archive-catalog__ledger" aria-label="可浏览内容">
+          <div><strong>{archiveStats.total}</strong><span>篇芒格资料</span></div>
           <div><strong>{models.length}</strong><span>个思维模型</span></div>
           <div><strong>{letters.length + partnerships.length}</strong><span>封长期信件</span></div>
           <div><strong>{histories.length}</strong><span>篇公司深度研究</span></div>
@@ -132,10 +125,10 @@ export default function LearnPage() {
             <span>02</span>
             <div>
               <h2>从一种材料开始</h2>
-              <p>像翻档案柜一样进入馆藏，不规定阅读顺序。</p>
+              <p>可以按资料类型进入，也可以直接从感兴趣的内容开始。</p>
             </div>
           </header>
-          <nav className={styles.shelves} aria-label="馆藏入口">
+          <nav className={styles.shelves} aria-label="内容入口">
             {shelves.map((shelf) => (
               <Link key={shelf.href} href={shelf.href}>
                 <span>{shelf.number}</span>
@@ -153,8 +146,8 @@ export default function LearnPage() {
           <header className={styles.sectionHeader}>
             <span>03</span>
             <div>
-              <h2>桌上摊开的几页</h2>
-              <p>不是“今日任务”，只是几处可以随手翻开的入口。</p>
+              <h2>推荐阅读</h2>
+              <p>几篇适合用来开始或继续阅读的内容。</p>
             </div>
           </header>
           <div className={styles.loosePages}>

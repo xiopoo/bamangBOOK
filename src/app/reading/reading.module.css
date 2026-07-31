@@ -13,10 +13,10 @@
 .hero h1 {
   margin-top: .8rem;
   color: var(--archive-ink);
-  font-size: clamp(3.8rem, 7.5vw, 6.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
   font-weight: 600;
-  letter-spacing: -.07em;
-  line-height: .98;
+  letter-spacing: -.055em;
+  line-height: 1.05;
 }
 
 .hero > span {
@@ -24,8 +24,8 @@
   margin-top: 1.5rem;
   display: block;
   color: var(--archive-ink-soft);
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.18rem;
+  line-height: 1.85;
 }
 
 .stats {

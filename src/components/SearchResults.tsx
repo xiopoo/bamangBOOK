@@ -51,7 +51,7 @@ const typeIcons: Record<string, string> = {
 }
 
 const typeColors: Record<string, string> = {
-  concept: 'border-orange-200 dark:border-orange-900/50 hover:border-orange-300 dark:hover:border-orange-600',
+  concept: 'border-primary/20 hover:border-primary/45',
   company: 'border-blue-200 dark:border-blue-900/50 hover:border-blue-300 dark:hover:border-blue-600',
   person: 'border-purple-200 dark:border-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600',
   letter: 'border-green-200 dark:border-green-900/50 hover:border-green-300 dark:hover:border-green-600',
@@ -105,12 +105,13 @@ function highlightMatch(text: string, query: string): React.ReactNode {
   const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
   const regex = new RegExp(`(${escapedQuery})`, 'gi')
   const parts = text.split(regex)
+  const normalizedQuery = query.toLocaleLowerCase()
 
   return (
     <>
       {parts.map((part, i) =>
-        regex.test(part) ? (
-          <mark key={i} className="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 rounded-sm px-0.5">
+        part.toLocaleLowerCase() === normalizedQuery ? (
+          <mark key={i} className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light rounded-sm px-0.5">
             {part}
           </mark>
         ) : (

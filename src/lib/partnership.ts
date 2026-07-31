@@ -171,20 +171,6 @@ export function getAllPartnershipLetters(): PartnershipLetter[] {
   return yearGroups.flatMap(group => group.letters)
 }
 
-export function getPartnershipHrefForYear(year: number): string {
-  const group = getPartnershipYearGroups().find((item) => item.year === year)
-  if (!group || group.letters.length === 0) return '/partnership'
-  const primary = group.letters.find((letter) => {
-    const subtitle = normalizePartnershipSubtitle(letter.subtitle)
-    return subtitle === 'annual' || subtitle === ''
-  }) || group.letters[group.letters.length - 1]
-  return `/partnership/${primary.id}`
-}
-
-export function getLetterHrefForYear(year: number): string {
-  return year < 1965 ? getPartnershipHrefForYear(year) : `/letters/${year}`
-}
-
 /**
  * 根据ID获取合伙人信
  */

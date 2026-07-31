@@ -11,7 +11,8 @@ import ContentTrustPanel from '@/components/ContentTrustPanel'
 import BerkshireSourceLink from '@/components/BerkshireSourceLink'
 import type { Metadata } from 'next'
 import { letterYearParams } from '@/lib/staticParams'
-import { resolveConceptCanonicalName, resolvePersonCanonicalName } from '@/lib/entity-aliases'
+import { getLetterArchiveHref } from '@/lib/letter-links'
+import { companyIds, conceptIds, resolvePersonRouteId } from '@/lib/entity-resolver'
 
 export function generateStaticParams() {
   return letterYearParams()
@@ -75,7 +76,15 @@ export default async function LetterDetailPage({ params }: PageProps) {
   const isMultiLetter = letterData.letters && letterData.letters.length > 1
   const letterTitle = `${year}年巴菲特致股东信`
 
-  const graphData = loadLetterGraphData(year)
+  const rawGraphData = loadLetterGraphData(year)
+  const graphData = rawGraphData ? {
+    ...rawGraphData,
+    concepts: rawGraphData.concepts.filter(item => conceptIds.has(item.name)),
+    people: rawGraphData.people
+      .map(item => ({ ...item, name: resolvePersonRouteId(item.name) }))
+      .filter((item): item is { id: string; name: string; count: number } => Boolean(item.name)),
+    companies: rawGraphData.companies.filter(item => companyIds.has(item.name)),
+  } : null
   const topConcepts = graphData?.concepts?.slice(0, 5) || []
   const relatedPeople = graphData?.people || []
   const relatedCompanies = graphData?.companies || []
@@ -121,7 +130,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
                   {topConcepts.map((concept) => (
                     <Link
                       key={concept.id}
-                      href={`/concepts/${encodeURIComponent(resolveConceptCanonicalName(concept.name))}`}
+                      href={`/concepts/${encodeURIComponent(concept.name)}`}
                       className="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all hover:shadow-sm"
                     >
                       {concept.name}
@@ -137,7 +146,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
                   <h3 className="text-sm font-medium text-gray-700 dark:text-gray-400 mb-3 flex items-center gap-1"><span>👤</span> 人物</h3>
                   <div className="flex flex-wrap gap-2">
                     {relatedPeople.slice(0, 5).map((person: any) => (
-                      <Link key={person.id} href={`/people/${encodeURIComponent(resolvePersonCanonicalName(person.name))}`} className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all">
+                      <Link key={person.id} href={`/people/${encodeURIComponent(person.name)}`} className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all">
                         {person.name}
                       </Link>
                     ))}
@@ -176,8 +185,8 @@ export default async function LetterDetailPage({ params }: PageProps) {
         </div>
 
         <div className="flex justify-between mt-8 gap-4">
-          {yearNum > 1965 && (
-            <Link href={`/letters/${yearNum - 1}`} className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card">
+          {yearNum > 1956 && (
+            <Link href={getLetterArchiveHref(yearNum - 1)} className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card">
               <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>

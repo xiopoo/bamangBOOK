@@ -23,7 +23,7 @@ export default function MungerOriginalsPage() {
         title="Wesco 股东信 · 英文原文"
         subtitle="来自伯克希尔官网的 1997-2009 年官方股东信。它们不是 Wesco 股东大会问答。"
         backHref="/munger"
-        backLabel="返回芒格专栏"
+        backLabel="返回芒格"
         sticky
       />
 

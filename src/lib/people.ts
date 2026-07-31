@@ -64,6 +64,7 @@ export const people: Record<string, Person> = {
       { id: 'talks', label: '演讲', href: '/talks?person=buffett', count: 11, icon: '🎤' },
       { id: 'interviews', label: '访谈', href: '/interviews?person=buffett', count: 40, icon: '🎙️' },
       { id: 'qa', label: '股东大会问答', href: '/qa', count: 40, icon: '❓' },
+      { id: 'articles', label: '专题文章', href: '/articles', count: 95, icon: '📝' },
     ],
     relatedPeople: [
       { id: 'munger', name: '查理·芒格', nameEn: 'Charlie Munger', href: '/munger', relationship: '黄金搭档' },

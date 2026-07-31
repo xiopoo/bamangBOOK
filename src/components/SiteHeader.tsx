@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChevronDown, Menu, Moon, Search, Sun, X } from 'lucide-react'
+import { ChevronDown, Menu, Moon, Search, Sun, UserRound, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
@@ -10,52 +10,34 @@ import { getSpaceHref } from '@/lib/site-spaces'
 
 const navGroups = [
   {
-    label: '原典',
-    description: '按文献类型与年份进入完整目录',
+    label: '巴菲特',
+    description: '信件、股东大会与长期投资方法',
+    activePrefixes: ['/buffett', '/partnership', '/letters', '/qa'],
     links: [
+      { href: getSpaceHref('buffett'), label: '巴菲特', meta: '人物专题' },
       { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
       { href: '/letters', label: '伯克希尔股东信', meta: '1965—至今' },
-      { href: '/qa', label: '股东大会实录', meta: '问答档案' },
-      { href: '/munger/wesco', label: 'Wesco 股东大会', meta: '中文问答' },
-      { href: '/poor-charlies-almanack', label: '穷查理宝典', meta: '统一阅读' },
-      { href: '/talks', label: '演讲与访谈', meta: '公开记录' },
-    ],
-  },
-  {
-    label: '巴菲特',
-    description: '从合伙人时期到伯克希尔',
-    links: [
-      { href: getSpaceHref('buffett'), label: '巴菲特档案', meta: '人物总览' },
-      { href: '/partnership', label: '合伙人信', meta: '早期原典' },
-      { href: '/letters', label: '伯克希尔股东信', meta: '年度原典' },
-      { href: '/qa', label: '股东大会问答', meta: '现场记录' },
+      { href: '/qa', label: '伯克希尔股东大会', meta: '现场问答' },
     ],
   },
   {
     label: '芒格',
-    description: '判断方法、原始记录与跨学科思想',
+    description: '演讲、问答与多元思维方法',
+    activePrefixes: ['/munger', '/poor-charlies-almanack'],
     links: [
-      { href: getSpaceHref('munger'), label: '芒格档案', meta: '人物总览' },
+      { href: getSpaceHref('munger'), label: '查理·芒格', meta: '人物专题' },
       { href: '/munger/wesco', label: 'Wesco 问答', meta: '会议记录' },
-      { href: '/poor-charlies-almanack', label: '穷查理宝典', meta: '演讲与文章' },
-      { href: '/model', label: '多元思维模型', meta: '主题索引' },
-    ],
-  },
-  {
-    label: '主题索引',
-    description: '从问题出发，连接概念与原始材料',
-    links: [
-      { href: '/concepts', label: '核心概念', meta: '问题索引' },
-      { href: '/model', label: '思维模型', meta: '判断工具' },
-      { href: '/companies', label: '公司档案', meta: '企业索引' },
-      { href: '/people', label: '人物档案', meta: '人物索引' },
+      { href: '/munger/archive', label: '演讲与访谈', meta: '公开表达' },
+      { href: '/munger/originals', label: 'Wesco 股东信', meta: '英文原文' },
+      { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '演讲与文章' },
     ],
   },
 ]
 
 const directLinks = [
   { href: '/business-history', label: '企业研究' },
-  { href: '/reading', label: '阅读室' },
+  { href: '/concepts', label: '主题索引' },
+  { href: '/learn', label: '阅读室' },
   { href: '/bound-edition', label: '合订本' },
   { href: '/about', label: '关于' },
 ]
@@ -80,14 +62,21 @@ export default function SiteHeader() {
     return () => document.removeEventListener('mousedown', close)
   }, [])
 
-  const isGroupActive = (links: typeof navGroups[number]['links']) =>
-    links.some(({ href }) => pathname.startsWith(href.split('?')[0]))
+  const isGroupActive = (prefixes: string[]) =>
+    prefixes.some(prefix => pathname === prefix || pathname.startsWith(`${prefix}/`))
+
+  if (pathname.startsWith('/checkout') || pathname.startsWith('/payment') || pathname.startsWith('/login')) {
+    return null
+  }
 
   return (
     <header ref={headerRef} className="archive-masthead">
       <div className="archive-masthead__inner">
         <Logo />
         <nav className="archive-nav" aria-label="主要栏目">
+          <Link href="/reading" className={pathname.startsWith('/reading') ? 'is-active' : ''}>
+            原典
+          </Link>
           {navGroups.map(group => {
             const isOpen = openGroup === group.label
             return (
@@ -99,7 +88,7 @@ export default function SiteHeader() {
               >
                 <button
                   type="button"
-                  className={`archive-nav__trigger ${isGroupActive(group.links) ? 'is-active' : ''}`}
+                  className={`archive-nav__trigger ${isGroupActive(group.activePrefixes) ? 'is-active' : ''}`}
                   aria-expanded={isOpen}
                   onClick={() => setOpenGroup(isOpen ? null : group.label)}
                 >
@@ -134,6 +123,9 @@ export default function SiteHeader() {
           <Link href="/search" className="archive-tool" aria-label="全站搜索">
             <Search size={18} /><span>搜索</span>
           </Link>
+          <Link href="/login" className="archive-tool" aria-label="登录或进入我的书房">
+            <UserRound size={17} /><span>登录</span>
+          </Link>
           <button type="button" className="archive-tool archive-tool--icon" onClick={toggleTheme} aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}>
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
@@ -147,6 +139,7 @@ export default function SiteHeader() {
         <div className="archive-mobile-menu">
           <div className="archive-mobile-menu__tools">
             <Link href="/search"><Search size={17} />搜索人物、公司、年份或概念</Link>
+            <Link href="/login"><UserRound size={17} />登录 / 我的书房</Link>
           </div>
           <div className="archive-mobile-menu__grid">
             {navGroups.map(group => (
@@ -160,7 +153,8 @@ export default function SiteHeader() {
               </section>
             ))}
             <section>
-              <p>书房入口</p>
+              <p>主要栏目</p>
+              <Link href="/reading"><span>原典</span></Link>
               {directLinks.map(link => <Link key={`mobile-${link.href}`} href={link.href}><span>{link.label}</span></Link>)}
             </section>
           </div>

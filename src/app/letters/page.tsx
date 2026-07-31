@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '巴菲特股东信',
-  description: '按年份阅读伯克希尔·哈撒韦股东信中文整理稿与原文线索。',
-  alternates: { canonical: '/letters' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'

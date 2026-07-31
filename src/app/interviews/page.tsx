@@ -1,11 +1,4 @@
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '访谈档案',
-  description: '巴菲特、芒格及相关投资者的公开访谈与对话资料。',
-  alternates: { canonical: '/interviews' },
-}
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
