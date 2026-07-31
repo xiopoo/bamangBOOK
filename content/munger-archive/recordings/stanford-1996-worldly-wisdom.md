@@ -27,19 +27,15 @@ source: "https://mungerarchive.com/zh/recordings/stanford-1996-worldly-wisdom/"
 
 他的原话——出自本场谈话
 
-"你必须了解各大学科里的那些大道理,并且日常地运用它们——是全部,而不只是其中几个。"
+以下语录均出自本场谈话。
 
-Stanford Law School, 1996 (Poor Charlie's Almanack) · 1996
+"你必须了解各大学科里的那些大道理,并且日常地运用它们——是全部,而不只是其中几个。"
 
 出自《穷查理宝典》中收录的1996年斯坦福演讲,而非人们常误以为的1994年南加州大学演讲。
 
 "所以,如果你想成为一个善于思考的人,就必须培养出一种能够跨越各学科疆界的头脑。你不必什么都懂,只需把这些学科里最好的那些大道理吸收进来。而这件事并没有那么难做到。"
 
-"A Lesson on Elementary, Worldly Wisdom, Revisited," Stanford Law School, April 19, 1996 (Poor Charlie's Almanack, Talk Three) · 1996
-
 "别人是头蠢驴，并不等于你也得当头蠢驴。你完全可以伸手去抓住那个能更好地解决全局问题的模型。"
-
-"A Lesson on Elementary, Worldly Wisdom, Revisited," Stanford Law School, April 19, 1996 (Poor Charlie's Almanack, Talk Three) · 1996
 
 ## 相关录音
 

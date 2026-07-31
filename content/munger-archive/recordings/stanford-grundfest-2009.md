@@ -21,8 +21,4 @@ source: "https://mungerarchive.com/zh/recordings/stanford-grundfest-2009/"
 
 [financial crisis](https://mungerarchive.com/zh/recordings/?topic=financial%20crisis) [economics](https://mungerarchive.com/zh/recordings/?topic=economics) [regulation](https://mungerarchive.com/zh/recordings/?topic=regulation) [accounting](https://mungerarchive.com/zh/recordings/?topic=accounting)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经轻度校对——标点与专有名词  可能有误。我们不拥有此内容;一切权利归斯坦福所有。 [来源 ↗](https://www.youtube.com/watch?v=RtvTOJISXKg)

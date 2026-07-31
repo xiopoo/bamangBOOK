@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/yahoo-2019-wealth/"
 
 [wealth](https://mungerarchive.com/zh/recordings/?topic=wealth) [temperament](https://mungerarchive.com/zh/recordings/?topic=temperament) [patience](https://mungerarchive.com/zh/recordings/?topic=patience)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并略经整理——标点与专有名词  可能有误。我们不拥有这段内容;一切权利归雅虎财经 / YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=RFxXl9eAWV4)

@@ -27,6 +27,6 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2017-fireside/"
 
 对照阅读
 
-[完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2017-daily-journal-corp-post-meeting-fireside-chat-transcript-of-charlie-mungers-remarks.pdf)粗略自动转录（机器生成）
+[完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2017-daily-journal-corp-post-meeting-fireside-chat-transcript-of-charlie-mungers-remarks.pdf)
 
 由 YouTube 字幕自动生成并经轻度整理——标点和专有名词可能有误。我们不拥有该内容；所有权利归每日期刊 / CNBC 所有。 [来源 ↗](https://www.youtube.com/watch?v=mTlVP9ucVHQ)

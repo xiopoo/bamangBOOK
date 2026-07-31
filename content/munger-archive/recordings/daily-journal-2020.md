@@ -27,6 +27,6 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2020/"
 
 对照阅读
 
-[完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2020-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks.pdf)粗略自动转录（机器生成）
+[完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2020-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks.pdf)
 
 由YouTube字幕自动生成,并经轻度整理——标点与专有名词  可能有误。本站不拥有版权;一切权利归每日期刊 / CNBC所有。 [来源 ↗](https://www.youtube.com/watch?v=HS8neXkNnhw)

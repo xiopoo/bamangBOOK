@@ -27,29 +27,19 @@ source: "https://mungerarchive.com/zh/recordings/ucsb-2003-academic-economics/"
 
 他的原话——出自本场谈话
 
-"那些设计出轻易就能被钻空子的制度的人，活该下到地狱最底层那一圈。"
+以下语录均出自本场谈话。
 
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, University of California, Santa Barbara, October 3, 2003 · 2003
+"那些设计出轻易就能被钻空子的制度的人，活该下到地狱最底层那一圈。"
 
 "收银机对人类道德的贡献,比公理会教堂还要大。"
 
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, University of California, Santa Barbara, October 3, 2003 · 2003
-
 "有些制度应该被刻意设计得对个人不公平,因为这样一来,它们对我们所有人而言平均下来反而更公平。"
-
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, University of California, Santa Barbara, October 3, 2003 · 2003
 
 "如果你娴熟地走上跨学科这条路,你就再也不会想回头了。那感觉就像砍掉自己的双手一样。"
 
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, University of California, Santa Barbara, October 3, 2003 (closing line) · 2003
-
 "我有一条厚脸皮的黑带，与生俱来。"
 
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, University of California, Santa Barbara, October 3, 2003 (opening remarks) · 2003
-
 "我希望经济学能学到硬科学的基本精神,学到那种凡引用必注明出处的习惯,但别染上那种源自'物理学嫉妒'、对无法企及之精确度的痴迷。"
-
-"Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs," Herb Kay Undergraduate Lecture, UC Santa Barbara, October 3, 2003 · 2003
 
 ## 相关录音
 

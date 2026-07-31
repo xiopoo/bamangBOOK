@@ -31,41 +31,29 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2016/"
 
 他的原话——出自本场谈话
 
-"打桥牌的人懂机会成本。打扑克的人懂机会成本。可那些工商管理硕士的教授和别的什么大人物，连屁股和一盘热南瓜泥都分不太清。"
+以下语录均出自本场谈话。
 
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016
+"打桥牌的人懂机会成本。打扑克的人懂机会成本。可那些工商管理硕士的教授和别的什么大人物，连屁股和一盘热南瓜泥都分不太清。"
 
 "你要这样过一生:当你离开人世时,真的会有人怀念你。"
 
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016
-
 "我认为,任何人若对管理层究竟有多精明毫无感觉,就根本不可能去收购一家银行。银行业是一个很容易自欺欺人、把根本没真正赚到的大数字报上去的领域。对投资者来说,这是个极其危险的地方。"
-
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016 · as recalled
 
 根据一份粗略的口语记录稿略作整理。
 
 "你不必费心去记住自己撒过的谎,而如果你成天不停地撒谎,这事就变得很麻烦。事实上,它会变得如此麻烦,以至于你迟早会露馅,被人识破是个骗子。"
 
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016 · as recalled
-
 他为诚实给出的现实理由——你永远不必费心去记住真相。
 
 "人生的诀窍在于，当那一两个、三个属于你这辈子应得的机会来临时，你得有所作为。"
-
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016 · as recalled
 
 这是他1962年从艾尔·马歇尔那笔石油矿区使用费横财中悟出的道理——'麻烦在于，这种事只发生过一次。'
 
 "这个世界把我提拔到了一个让我倍感压力的位置。如果你足够幸运，这样的事也会落到你头上。倍感压力，正是你想要抵达的地方。你会希望自己的全副本领都派上用场。"
 
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016 · as recalled
-
 谈的是希望自己的全副本领都派上用场；保留了口语化的语法。
 
 "只要结果看起来是应得的,人们就会欣然容忍相当大的差距。没人会介意老虎伍兹收入丰厚,因为他是有史以来最出色的高尔夫球手。但那些被认为不应得的结果差距,往往会动摇民主的根基。"
-
-Daily Journal Corporation annual meeting (February 11, 2016) · 2016 · as recalled
 
 他把这个"应得的不平等"观点归功于亚里士多德。
 

@@ -21,8 +21,4 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2015/"
 
 [Daily Journal](https://mungerarchive.com/zh/recordings/?topic=daily%20journal) [investing](https://mungerarchive.com/zh/recordings/?topic=investing) [banking](https://mungerarchive.com/zh/recordings/?topic=banking) [temperament](https://mungerarchive.com/zh/recordings/?topic=temperament)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由YouTube字幕自动生成并经轻度整理——标点和专有名词  可能有误。我们并不拥有它；一切权利归Buffett Online所有。 [来源 ↗](https://www.youtube.com/watch?v=GcWYv6vy80Y)

@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/singleton-prize-2022/"
 
 [Singleton](https://mungerarchive.com/zh/recordings/?topic=singleton) [capital allocation](https://mungerarchive.com/zh/recordings/?topic=capital%20allocation) [leadership](https://mungerarchive.com/zh/recordings/?topic=leadership)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经过轻度校订——标点和专有名词  可能有误。我们不拥有此内容；所有权利归 YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=m7CkqR8CLhs)

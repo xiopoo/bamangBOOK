@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/munger-li-lu-2018/"
 
 [China](https://mungerarchive.com/zh/recordings/?topic=china) [Li Lu](https://mungerarchive.com/zh/recordings/?topic=li%20lu) [investing](https://mungerarchive.com/zh/recordings/?topic=investing)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经过轻度整理——标点和专有名词可能有误。我们不拥有该内容；所有权利归 Weekly in Stocks / YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=mRXS7tByziI)

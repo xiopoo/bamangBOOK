@@ -27,6 +27,6 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2017/"
 
 对照阅读
 
-[完整文字记录 · Santangel's Review ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2017-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks-santangels-review.pdf)粗略自动转录（机器生成）
+[完整文字记录 · Santangel's Review ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2017-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks-santangels-review.pdf)
 
 由 YouTube 字幕自动生成并经轻度整理——标点和专有名词  可能有误。我们不拥有该内容；所有权利归每日期刊 / CNBC 所有。 [来源 ↗](https://www.youtube.com/watch?v=BLctqhNClqY)

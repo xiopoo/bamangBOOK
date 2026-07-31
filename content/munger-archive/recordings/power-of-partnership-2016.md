@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/power-of-partnership-2016/"
 
 [Buffett](https://mungerarchive.com/zh/recordings/?topic=buffett) [partnership](https://mungerarchive.com/zh/recordings/?topic=partnership)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由YouTube字幕自动生成并经轻度校对——标点和专有名词  可能有误。我们对此并无版权;一切权利归YouTube所有。 [来源 ↗](https://www.youtube.com/watch?v=F6s2HAzMeL0)

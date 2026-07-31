@@ -21,8 +21,4 @@ source: "https://mungerarchive.com/zh/recordings/berkshire-2023-annual-meeting/"
 
 [Berkshire Hathaway](https://mungerarchive.com/zh/recordings/?topic=berkshire%20hathaway) [investing](https://mungerarchive.com/zh/recordings/?topic=investing) [Warren Buffett](https://mungerarchive.com/zh/recordings/?topic=warren%20buffett) [capital allocation](https://mungerarchive.com/zh/recordings/?topic=capital%20allocation)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由YouTube字幕自动生成并经轻度校订——标点和专有名词  可能有误。本内容版权不属于我们;一切权利归CNBC电视台所有。 [来源 ↗](https://www.youtube.com/watch?v=Dv97-S9ZL-8)

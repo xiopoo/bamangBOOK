@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/yahoo-2019-china/"
 
 [China](https://mungerarchive.com/zh/recordings/?topic=china) [Tesla](https://mungerarchive.com/zh/recordings/?topic=tesla) [Musk](https://mungerarchive.com/zh/recordings/?topic=musk)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并稍作整理——标点和专有名词  可能有误。我们不拥有此内容，一切权利归雅虎财经 / YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=AIYPu4MFLl4)

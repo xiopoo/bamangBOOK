@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/michigan-ross-2017/"
 
 [Michigan](https://mungerarchive.com/zh/recordings/?topic=michigan) [business](https://mungerarchive.com/zh/recordings/?topic=business) [investing](https://mungerarchive.com/zh/recordings/?topic=investing) [life advice](https://mungerarchive.com/zh/recordings/?topic=life%20advice)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经过轻度整理——标点和专有名词可能有误。我们不拥有该内容；所有权利归密歇根罗斯商学院 / YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=S9HgIGzOENA)

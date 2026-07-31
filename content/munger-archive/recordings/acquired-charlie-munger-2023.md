@@ -33,63 +33,41 @@ source: "https://mungerarchive.com/zh/recordings/acquired-charlie-munger-2023/"
 
 他的原话——出自本场谈话
 
-"把钱投得好本就很难，而要在风险投资里一次又一次地做到这一点，我认为几乎是不可能的。有些项目太抢手，你又必须当机立断，到头来大家不过都是在赌一把。"
+以下语录均出自本场谈话。
 
-Acquired podcast, October 2023 · 2023
+"把钱投得好本就很难，而要在风险投资里一次又一次地做到这一点，我认为几乎是不可能的。有些项目太抢手，你又必须当机立断，到头来大家不过都是在赌一把。"
 
 "资本主义理应预期，时不时会撞上几个大赢家。"
 
-Acquired podcast, October 2023 · 2023 · as recalled
-
 "发财的意义，就在于让你不必再有求于人，不必再迁就别人。"
 
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode (released Oct. 30, 2023) · 2023
-
 "一生中或许只有五六次机会能让你这么做。那些早年只做过两三次就成功的人最后都破产了，因为他们以为这很容易。事实上，这很难，也很罕见。"
-
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
 
 措辞依据一段口头讲话略作规范化处理。
 
 "我们很快就发现，每年可以把价格提高 10%，谁都不在乎。我们并没有让销量上去之类，只是让利润上去了。"
 
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
-
 谈喜诗糖果的定价能力。
 
 "番茄酱浇在那该死的炸土豆上，那股味道里有种东西……能让你真的愿意为它换牌子。他们就要亨氏！所以亨氏的价格，你基本上想提就能提。"
-
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
 
 谈亨氏的品牌定价能力。
 
 "沃伦要的是赔率站在自己这边，而不是别人那边。换作沃伦，道理简单得很：你要当庄家，别当下注的赌客。"
 
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
-
 谈巴菲特的做法；"punter"是英国俚语，指下注的赌客。
 
 "可一旦你确知自己占了上风，就该重注下手。当你确知自己是对的。这一点大多数人在商学院里不教。简直荒唐。对自己最有把握的押注，当然要重注下手。"
 
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
-
 "凭什么赚钱就该是难的？又凭什么该是容易的？"
-
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
 
 "在保险业要发财，得是个极有耐心的人。任何东西都要等上很久才能拿到手，要把别人挤开也要等上很久。赚钱真的很难。"
 
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
-
 "大自然用来变聪明的那套机制,对于身在败方的人来说,是相当不好受的。"
-
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023
 
 谈的是通过淘汰来实现的进化。
 
 "从来都不容易。大家都很清楚它从来都不容易,而且现在更难了。但这需要时间。你要留心自己是怎么对待打交道的人的。等你做完这一切,你想要的是好名声,而不是坏名声。"
-
-Acquired podcast (Ben Gilbert & David Rosenthal), "Charlie Munger" episode, 2023 · 2023 · as recalled
 
 ## 相关录音
 

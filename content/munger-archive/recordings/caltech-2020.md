@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/caltech-2020/"
 
 [rationality](https://mungerarchive.com/zh/recordings/?topic=rationality) [career advice](https://mungerarchive.com/zh/recordings/?topic=career%20advice) [late-life](https://mungerarchive.com/zh/recordings/?topic=late-life) [Caltech](https://mungerarchive.com/zh/recordings/?topic=caltech)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经轻度校订——标点与专有名词  可能有误。我们不拥有该内容;所有权利归 加州理工学院 / YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=WaDU1J91hY8)

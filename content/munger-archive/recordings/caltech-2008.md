@@ -25,8 +25,4 @@ source: "https://mungerarchive.com/zh/recordings/caltech-2008/"
 
 [engineering](https://mungerarchive.com/zh/recordings/?topic=engineering) [problem-solving](https://mungerarchive.com/zh/recordings/?topic=problem-solving) [Caltech](https://mungerarchive.com/zh/recordings/?topic=caltech) [mental models](https://mungerarchive.com/zh/recordings/?topic=mental%20models)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经轻度校订——标点与专有名词  可能有误。我们不拥有该内容;所有权利归 YouTube 所有。 [来源 ↗](https://www.youtube.com/watch?v=4ibabROYccs)

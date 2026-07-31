@@ -240,6 +240,84 @@ function internalArchiveHref(rawUrl: string): string | null {
   }
 }
 
+/** mungerarchive.com 的 topic 筛选标签 → 中文主题词（站内无对应筛选页，降级为纯文本） */
+const RECORDING_TOPIC_LABELS: Record<string, string> = {
+  accounting: '会计',
+  'annual meetings': '年会',
+  banking: '银行业',
+  berkshire: '伯克希尔',
+  'berkshire hathaway': '伯克希尔哈撒韦',
+  bitcoin: '比特币',
+  bubbles: '泡沫',
+  buffett: '巴菲特',
+  business: '商业',
+  caltech: '加州理工',
+  candid: '直言不讳',
+  'capital allocation': '资本配置',
+  'career advice': '职业建议',
+  china: '中国',
+  civilization: '文明',
+  'cognitive bias': '认知偏差',
+  collison: '科利森',
+  costco: '好市多',
+  'daily journal': '每日期刊',
+  'decision-making': '决策',
+  'deserved trust': '应得的信任',
+  economics: '经济学',
+  education: '教育',
+  'efficient-market critique': '有效市场批判',
+  engineering: '工程思维',
+  fed: '美联储',
+  'financial crisis': '金融危机',
+  'his only podcast': '唯一播客',
+  ibm: 'IBM',
+  incentives: '激励',
+  inflation: '通货膨胀',
+  interdisciplinary: '跨学科',
+  inversion: '逆向思考',
+  investing: '投资',
+  'late-life': '晚年',
+  latticework: '思维格栅',
+  law: '法律',
+  leadership: '领导力',
+  learning: '学习',
+  legacy: '遗产',
+  'li lu': '李录',
+  life: '人生',
+  'life advice': '人生建议',
+  lollapalooza: '多重因素叠加',
+  'mental models': '思维模型',
+  michigan: '密歇根',
+  misery: '痛苦',
+  multidisciplinary: '多学科',
+  musk: '马斯克',
+  partnership: '伙伴关系',
+  patience: '耐心',
+  "poor charlie's almanack": '穷查理宝典',
+  'problem-solving': '解决问题',
+  professions: '行业',
+  psychology: '心理学',
+  'q&a': '问答',
+  rationality: '理性',
+  reading: '阅读',
+  regulation: '监管',
+  reliability: '可信赖',
+  robinhood: '罗宾汉',
+  singleton: '辛格尔顿',
+  spacs: 'SPAC',
+  'stock-picking': '选股',
+  stripe: 'Stripe',
+  succession: '继任',
+  temperament: '性情',
+  tesla: '特斯拉',
+  unhappiness: '不幸福',
+  'value investing': '价值投资',
+  'warren buffett': '沃伦·巴菲特',
+  wealth: '财富',
+  'worldly wisdom': '普世智慧',
+  wsj: '华尔街日报',
+}
+
 /**
  * 抓取稿只保留正式正文：
  * - 删除原站面包屑、重复栏目名和页面标题；
@@ -249,6 +327,15 @@ function internalArchiveHref(rawUrl: string): string | null {
 function cleanArchiveContent(content: string): string {
   const firstHeading = content.search(/^#\s+/m)
   let cleaned = firstHeading >= 0 ? content.slice(firstHeading) : content
+
+  // topic 筛选标签在站内没有对应页面，先翻译成中文纯文本（不保留链接）
+  cleaned = cleaned.replace(
+    /\[([^\]]+)\]\(https?:\/\/(?:www\.)?mungerarchive\.com\/zh\/recordings\/\?topic=([^)\s]*)\)/g,
+    (_match, label: string, topic: string) => {
+      const key = decodeURIComponent(topic).toLowerCase()
+      return RECORDING_TOPIC_LABELS[key] ?? label
+    }
+  )
 
   cleaned = cleaned.replace(
     /\[([^\]]+)\]\((https?:\/\/(?:www\.)?mungerarchive\.com\/[^)\s]*)\)/g,

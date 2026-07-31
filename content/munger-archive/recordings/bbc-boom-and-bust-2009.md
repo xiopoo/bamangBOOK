@@ -23,8 +23,4 @@ source: "https://mungerarchive.com/zh/recordings/bbc-boom-and-bust-2009/"
 
 [financial crisis](https://mungerarchive.com/zh/recordings/?topic=financial%20crisis) [temperament](https://mungerarchive.com/zh/recordings/?topic=temperament) [investing](https://mungerarchive.com/zh/recordings/?topic=investing)
 
-对照阅读
-
-粗略自动转录（机器生成）
-
 由 YouTube 字幕自动生成并经轻度整理——标点和专有名词  可能有误。我们不拥有其版权；一切权利归 BBC News 所有。 [来源 ↗](https://www.youtube.com/watch?v=3XlBrohrIUc)

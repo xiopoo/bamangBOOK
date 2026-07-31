@@ -27,45 +27,33 @@ source: "https://mungerarchive.com/zh/recordings/harvard-1986-misery/"
 
 他的原话——出自本场谈话
 
-"我让人活得痛苦的第二条药方是:尽可能只从你自己的亲身经历中去学习,尽量少从别人——无论活人还是死人——的成败经验里间接汲取教训。"
+以下语录均出自本场谈话。
 
-Harvard School (Los Angeles) commencement address, June 13, 1986 (Poor Charlie's Almanack, Talk One) · 1986
+"我让人活得痛苦的第二条药方是:尽可能只从你自己的亲身经历中去学习,尽量少从别人——无论活人还是死人——的成败经验里间接汲取教训。"
 
 这是反话——一剂反着说的'痛苦药方'。真正的意思恰恰相反:你应当从别人(无论生者还是逝者)那里间接学习。
 
 "我让人活得悲惨的第三条药方是：当你在人生战场上遭遇头一回、第二回、第三回沉重挫败时，就一蹶不振、一直消沉下去。"
 
-Harvard School commencement address, "Prescriptions for Guaranteed Misery in Life," June 1986 (Poor Charlie's Almanack) · 1986
-
 这是反话（一剂"让人活得悲惨的药方"）；真正的忠告是，在最初的挫败之后要坚韧不拔。
 
 "怨恨对我起的作用，向来和它对卡森起的作用一模一样。倘若你渴望活得悲惨，我对它的推荐再怎么强烈也不为过。"
-
-Harvard School (Los Angeles) commencement address, "How to Guarantee a Life of Misery" (Talk One, Poor Charlie's Almanack), June 13, 1986 · 1986
 
 语带讥讽——这是他那套颠倒过来的"让人活得悲惨的药方"的一部分，是对约翰尼·卡森一段毕业演讲段子的发挥。真正的劝诫是放下怨恨。
 
 "达尔文的成就，很大程度上要归功于他的工作方法，那方法违背了我那套自寻烦恼的全部法则，尤其有个反其道而行之的扭转：他总是优先关注那些倾向于推翻他既有的、苦心得来又视若珍宝的理论的证据。"
 
-Harvard School (Los Angeles) commencement address, "Prescriptions for Guaranteed Misery in Life," June 1986 (Poor Charlie's Almanack) · 1986
-
 芒格在描述达尔文优先看重反面证据的习惯——这并非达尔文本人的原话。
 
 "第一,做个不可靠的人。凡是答应过要做的事,都别认真去做。只要你把这一个习惯练到家,它带来的祸害就足以抵消你所有美德的总和,无论那些美德有多么了不起。"
-
-Charlie Munger, Harvard School (Los Angeles) commencement address, "How to Guarantee a Life of Misery," June 13, 1986 (Poor Charlie's Almanack, Talk One) · 1986
 
 这是他那套反讽的'如何保证活得悲惨'药方中的第一条——真正的劝诫是反过来的(要做个可靠的人)。
 
 "先生们，愿你们每一位都以漫长一生中日日立志于低处，而攀登至高处。"
 
-Charlie Munger, Harvard School (Los Angeles) commencement address, "How to Guarantee a Life of Misery," June 13, 1986 (Poor Charlie's Almanack, Talk One) — closing toast · 1986
-
 这是他那篇《如何确保过上痛苦的人生》演讲中那句反讽的收尾祝酒词。
 
 "成瘾可能降临到我们任何人身上，它通过一个不易察觉的过程慢慢发生：堕落的枷锁起初轻得感觉不到，等到察觉时，却已沉重得无法挣脱。"
-
-Charlie Munger, Harvard School (Los Angeles) commencement address, "How to Guarantee a Life of Misery," June 13, 1986 (Poor Charlie's Almanack, Talk One) · 1986 · as recalled
 
 他对那句谚语'习惯的锁链，起初轻得感觉不到，直到沉重得无法挣脱'（源自塞缪尔·约翰逊）的自创变体。
 

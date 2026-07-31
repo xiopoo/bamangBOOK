@@ -35,47 +35,31 @@ CNBC是这段影像唯一获授权的归处。请在上方链接的官方页面�
 
 他的原话——出自本场谈话
 
+以下语录均出自本场谈话。
+
 "人生的铁律是：每个人都在苦苦挣扎。"
 
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
-
 "只要你硬挺过去，几乎任何事你都能熬过来。……如果硬挺的过程中，你每天得在街上哭上几个钟头，那就尽管去哭吧。但你必须——你不能放弃。哭可以，但不能放弃。"
-
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023 · as recalled
 
 由CNBC的文字稿浓缩而来（删去了一处插入句）；"alright"按CNBC的记录保留。
 
 "我非常擅长向已故之人学习。这正是每个人都该学会的本事。"
 
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
-
 这是他对自己毕生奉行的'向卓越的逝者学习'这一主题在2023年的重新表述。
 
 "不惜一切代价远离疯狂。疯狂远比你以为的更常见。人很容易就滑进疯狂里。总之就是躲开它，躲开它，躲开它。"
 
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
-
 "我躲开了那些惯常的失败方式。……我这辈子的策略，从来都是避开一切惯常的失败方式。你教我打牌的错误打法，我就会把它避开。"
-
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
 
 一处省略号替换了一个连接词；其余措辞未作改动。
 
 "别把日子过成这样：一个糟糕的日子就能要了你的命。"
 
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
-
 "比起贫穷，我可喜欢不平等多了。"
-
-CNBC, "Charlie Munger: A Life of Wit and Wisdom" (final interview with Becky Quick, taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
 
 "我们俩都够聪明，眼看着那些发了财的朋友盖起这些极尽奢华的大宅。我得说，几乎在每一个例子里，这些大宅都让人变得更不快乐，而不是更快乐。"
 
-CNBC, "Charlie Munger: A Life of Wit and Wisdom," final interview with Becky Quick (taped Nov. 14, 2023; aired Nov. 30, 2023) · 2023
-
 "我很善于识别不公平的优势。我年老时得到过这种不公平的优势，就像我没那么老时也得到过一样；它们一来，我就一把抓住。砰，砰，砰。"
-
-CNBC, excerpts from Becky Quick's interview with Charlie Munger, released November 28, 2023 (the day of his death) · 2023
 
 出自CNBC在他去世当天发布的采访。
 

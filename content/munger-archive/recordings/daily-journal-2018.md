@@ -31,61 +31,41 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2018/"
 
 他的原话——出自本场谈话
 
-"比特币是有毒的毒药。"
+以下语录均出自本场谈话。
 
-Daily Journal Corporation annual meeting, 2018 · 2018
+"比特币是有毒的毒药。"
 
 这有别于他早先那句把比特币称作"老鼠药"的说法(2013年);这是在2018年的股东大会上讲的。
 
 "你为什么要拿自己已经拥有、也确实需要的东西，去冒险换取自己既没有、也不需要的东西？真是蠢透了。"
 
-Daily Journal Corporation annual meeting, 2018 · 2018
-
 谈保证金交易与杠杆——他在前面铺垫道：'当你已经富有时，那简直是疯了。'
 
 "人世间有一桩好处：人们总是在干一些彻头彻尾荒唐的事。要是你不稍微一笑置之，这些事会把你压垮。"
 
-Daily Journal Corporation annual meeting, 2018 · 2018
-
 "这种'挑个白痴来听'的获取新闻方式，我不怎么喜欢。我在不同类型的白痴之间来回切换。我才不会只盯着一种白痴看。"
 
-Daily Journal Corporation annual meeting, 2018 · 2018
-
 "这是非常富有的一个好处:你可以表现得比别人更体面。"
-
-Daily Journal Corporation annual meeting, 2018 · 2018
 
 放在上下文里看,这说的是独立自主带来的、能够正直行事的自由——并非自夸。
 
 "我这辈子之所以过得这么好，靠的就是有条理的常识，所以我从来不想涉足人工智能这类领域。只要金块还在不断被发现、被捡起，你就可以沿着海岸漫步，捡起一块块金块；我可不想去搞砂矿开采，从海量数据里筛淘那一点点优势。"
 
-Daily Journal Corporation annual meeting (2018) · 2018 · as recalled
-
 措辞略有还原（转录稿中标注了一处单词[听不清]）；谈他为何不去追逐用人工智能/数据挖掘来获取优势。
 
 "钓鱼的第一条规矩是，到鱼多的地方去钓；第二条规矩是，别忘了第一条。投资也是一个道理。有些地方鱼成群结队，你不必是多高明的渔夫也能干得不错。有些地方早就被钓滥了，无论你钓技多好，都很难有什么收成。"
-
-Daily Journal Corporation annual meeting (2018) · 2018
 
 他把'到鱼多的地方去钓'当作一条古老的钓鱼规矩；而把这条规矩套用到被过度'垂钓'的市场上，则是他自己的发挥。
 
 "银行业是一门非常古怪的生意。在银行业里干蠢事的诱惑,远比在大多数生意里要大得多。在银行里,有许多办法可以靠承担本不该为了长远未来而冒的风险,让自己的近期业绩看上去很漂亮。"
 
-Daily Journal Corporation annual meeting (2018) · 2018
-
 "我认为那种做法，不如让人在同一门生意里长久待下去、让他们认同这门生意来得有效——伯克希尔就是这么做的。"
-
-Daily Journal Corporation annual meeting (February 14, 2018) · 2018
 
 谈通用电气的企业文化与伯克希尔的对比——让人长期待在同一门生意里。
 
 "嗯，大众消费品牌依然很值钱。但它们在过去那个时代日子过得比未来要轻松。"
 
-Daily Journal Corporation annual meeting (February 14, 2018) · 2018
-
 "过这一生的正确方式，是兵来将挡、随遇而安，并尽你所能做到最好。只要你活到老，该是你的那一份总会到手。"
-
-Daily Journal Corporation annual meeting (February 14, 2018) · 2018 · as recalled
 
 ## 相关录音
 
