@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 import { getWescoMeetings } from '@/lib/wesco-meetings'
 
@@ -81,7 +80,6 @@ export default function WescoMeetingsPage() {
         </div>
       </section>
 
-      <PageFooter />
     </PageContainer>
   )
 }

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Logo from '@/components/Logo'
 
 export const metadata = {
-  title: '登录小胖书房',
+  title: '登录复利书房',
   description: '登录后查看已购合订本、订单与阅读进度。',
   alternates: { canonical: '/login' },
   robots: { index: false, follow: false },
@@ -15,7 +15,7 @@ export default function LoginPage() {
         <Logo />
         <div className="auth-panel__heading">
           <p className="study-label">ACCOUNT · 账户</p>
-          <h1>登录小胖书房</h1>
+          <h1>登录复利书房</h1>
           <p>登录后查看已购合订本、订单与阅读进度。</p>
         </div>
         <form className="auth-form">

@@ -7,7 +7,6 @@ import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
-import PageFooter from '@/components/PageFooter'
 
 interface PageProps {
   params: { slug: string }
@@ -158,7 +157,6 @@ export default function ModelDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      <PageFooter />
     </div>
   )
 }

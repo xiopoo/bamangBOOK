@@ -174,7 +174,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-5xl mb-4">📖</div>
         <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
-          搜索「小胖书房」全部内容
+          搜索「复利书房」全部内容
         </h3>
         <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
           输入关键词搜索信件、问答、演讲、概念或公司，回到具体原文和研究材料

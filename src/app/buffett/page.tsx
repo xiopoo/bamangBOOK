@@ -1,5 +1,4 @@
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getDocuments } from '@/lib/documents'
 import { getAllPartnershipLetters, getShareholderLetters } from '@/lib/partnership'
@@ -24,7 +23,6 @@ export default function BuffettPage() {
           ]}
         />
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

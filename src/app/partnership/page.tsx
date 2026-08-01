@@ -2,7 +2,6 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
-import PageFooter from '@/components/PageFooter'
 import {
   getPartnershipYearGroups,
   getPartnershipCount,
@@ -128,7 +127,6 @@ export default function PartnershipPage() {
         </div>
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

@@ -21,7 +21,7 @@ export default function PageFooter() {
         <div className="archive-footer__seal" aria-hidden="true">研</div>
         <div className="archive-footer__grid">
           <div className="archive-footer__brand">
-            <h3>小胖书房</h3>
+            <h3>复利书房</h3>
             <p>巴菲特、芒格与公司研究。</p>
             <blockquote>阅读原典，形成自己的判断。</blockquote>
           </div>
@@ -39,7 +39,7 @@ export default function PageFooter() {
           </div>
         </div>
         <div className="archive-footer__note">
-          <span>© 2026 小胖书房</span>
+          <span>© 2026 复利书房</span>
           <span>本站内容用于学习、研究和资料检索，不构成投资建议，不提供收益承诺。</span>
           <span><Link href="/about">关于</Link> · <Link href="/search">全站搜索</Link></span>
         </div>

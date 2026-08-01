@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import { getBloggers, getBloggerArticles, getBloggerStats } from '@/lib/bloggers'
 import { bloggerParams } from '@/lib/staticParams'
 
@@ -42,6 +41,10 @@ export default function BloggerArticlesPage({ params }: PageProps) {
     if (b === '未知') return -1
     return parseInt(b) - parseInt(a)
   })
+
+  // 最近 3 年默认展开，更早的年份折叠，避免单页过长
+  const RECENT_YEARS = 3
+  const expandedYears = new Set(sortedYears.slice(0, RECENT_YEARS))
 
   const tagList = stats.tags.slice(0, 8)
 
@@ -87,19 +90,47 @@ export default function BloggerArticlesPage({ params }: PageProps) {
         ))}
       </div>
 
-      {/* Articles by year */}
-      <div className="space-y-10">
+      {/* 年份快速跳转 */}
+      {sortedYears.length > 6 && (
+        <nav className="mb-6" aria-label="按年份跳转">
+          <div className="flex flex-wrap gap-2">
+            {sortedYears.map(year => (
+              <a
+                key={year}
+                href={`#year-${year}`}
+                className="text-xs px-3 py-1.5 bg-white dark:bg-dark-card text-gray-600 dark:text-gray-400 rounded-full border border-gray-200 dark:border-gray-700 hover:border-primary/40 hover:text-primary transition-colors"
+              >
+                {year}
+              </a>
+            ))}
+          </div>
+        </nav>
+      )}
+
+      {/* Articles by year（最近 3 年展开，旧年份折叠） */}
+      <div className="space-y-4">
         {sortedYears.map(year => (
-          <section key={year}>
-            <div className="flex items-center gap-3 mb-4">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 font-serif">{year}</h2>
+          <details
+            key={year}
+            id={`year-${year}`}
+            open={expandedYears.has(year)}
+            className="group border border-gray-100 dark:border-dark-border rounded-lg bg-white dark:bg-dark-card scroll-mt-24 overflow-hidden"
+          >
+            <summary className="flex items-center gap-3 px-4 py-3 bg-gray-50 dark:bg-gray-800/50 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">{year}</h2>
               <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full">
                 {articlesByYear[year].length}篇
               </span>
               <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-            </div>
+              <span
+                className="text-xs text-gray-400 dark:text-gray-500 transition-transform duration-200 group-open:rotate-180"
+                aria-hidden="true"
+              >
+                ▾
+              </span>
+            </summary>
 
-            <div className="space-y-2">
+            <div className="space-y-2 p-3">
               {articlesByYear[year].map(article => (
                 <Link
                   key={article.fileName}
@@ -133,11 +164,10 @@ export default function BloggerArticlesPage({ params }: PageProps) {
                 </Link>
               ))}
             </div>
-          </section>
+          </details>
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

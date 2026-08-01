@@ -3,7 +3,6 @@ import { notFound, redirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import MarkdownContent from '@/components/MarkdownContent'
 import {
   getMungerLocalArchiveBySlug,
@@ -102,7 +101,6 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
         <Link href="/munger/archive">查看全部芒格资料</Link>
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

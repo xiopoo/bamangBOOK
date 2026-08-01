@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import { getDocuments, getCategoryTitle } from '@/lib/documents'
 import { people } from '@/lib/people'
 
@@ -119,7 +118,6 @@ export default function TalksPage() {
         })}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

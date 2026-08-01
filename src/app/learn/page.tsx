@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import { getBusinessHistories } from '@/lib/business-history'
 import { getDocuments } from '@/lib/documents'
 import { getModels } from '@/lib/models'
@@ -163,7 +162,6 @@ export default function LearnPage() {
           <Link href="/learn/path">查看可选阅读地图 <span aria-hidden="true">→</span></Link>
         </aside>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

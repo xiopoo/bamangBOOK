@@ -3,6 +3,7 @@ import SiteHeader from '@/components/SiteHeader'
 import ThemeProvider from '@/components/ThemeProvider'
 import { ProgressProvider } from '@/hooks/useProgress'
 import BackToTop from '@/components/BackToTop'
+import PageFooter from '@/components/PageFooter'
 import './globals.css'
 import './reading.css'
 import { siteConfig } from '@/lib/site'
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
-    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '小胖书房：巴菲特、芒格与公司研究' }],
+    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '复利书房：巴菲特、芒格与公司研究' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -81,6 +82,7 @@ export default function RootLayout({
             <main className="min-w-0 min-h-screen">
               {children}
             </main>
+            <PageFooter />
             <BackToTop />
           </ProgressProvider>
         </ThemeProvider>

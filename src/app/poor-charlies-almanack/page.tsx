@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { BookOpen, ChevronRight, Library, Route } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import { almanackSections } from '@/lib/poor-charlies-almanack'
 
 export const metadata: Metadata = {
@@ -147,7 +146,6 @@ export default function PoorCharliesAlmanackPage() {
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

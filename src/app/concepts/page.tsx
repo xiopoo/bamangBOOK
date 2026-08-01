@@ -3,7 +3,6 @@ import { readdirSync, readFileSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 
 interface Concept {
@@ -62,7 +61,6 @@ export default function ConceptsPage() {
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

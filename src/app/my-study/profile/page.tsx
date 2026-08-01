@@ -1,6 +1,5 @@
 import AccountNav from '@/components/AccountNav'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 
 export const metadata = {
   title: '个人资料',
@@ -23,7 +22,6 @@ export default function ProfilePage() {
           </section>
         </main>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

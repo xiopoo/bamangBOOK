@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 import MarkdownContent from '@/components/MarkdownContent'
 import { readFileSync, existsSync } from 'fs'
@@ -130,7 +129,6 @@ export default async function CompanyDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

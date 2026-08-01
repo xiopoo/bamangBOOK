@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { ArrowRight, BookOpen, Download, ReceiptText } from 'lucide-react'
 import AccountNav from '@/components/AccountNav'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 
 export const metadata = {
   title: '已购内容',
@@ -38,7 +37,6 @@ export default function MyStudyPage() {
           </section>
         </main>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

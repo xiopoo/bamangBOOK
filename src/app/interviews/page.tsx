@@ -2,7 +2,6 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
-import PageFooter from '@/components/PageFooter'
 import { getDocuments, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
 import { people } from '@/lib/people'
 
@@ -115,7 +114,6 @@ export default function InterviewsPage() {
         })}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

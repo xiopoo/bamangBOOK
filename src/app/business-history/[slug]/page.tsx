@@ -102,12 +102,6 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
           <ArticleTableOfContents />
         </div>
       </div>
-
-      <footer className="mt-12 border-t border-primary/10 bg-bg-card py-6 dark:bg-dark-card">
-        <div className="mx-auto max-w-5xl px-4 text-center text-sm text-text-muted dark:text-dark-muted sm:px-6">
-          小胖书房
-        </div>
-      </footer>
     </div>
   )
 }

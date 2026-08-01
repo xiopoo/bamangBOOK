@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { ArrowRight, ReceiptText } from 'lucide-react'
 import AccountNav from '@/components/AccountNav'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 
 export const metadata = {
   title: '我的订单',
@@ -25,7 +24,6 @@ export default function OrdersPage() {
           </section>
         </main>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

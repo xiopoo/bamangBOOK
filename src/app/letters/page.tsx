@@ -2,7 +2,6 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
-import PageFooter from '@/components/PageFooter'
 import { getShareholderLetters, getShareholderCount } from '@/lib/partnership'
 
 // 股东信按"年代"分组，便于纵览60+年脉络
@@ -93,7 +92,6 @@ export default function LettersPage() {
         })}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

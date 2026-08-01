@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
-import PageFooter from '@/components/PageFooter'
 import { getBooksByCategory, getBookStats } from '@/lib/books'
 
 export const metadata: Metadata = {
@@ -93,7 +92,6 @@ export default function BooksPage() {
         </div>
       )}
 
-      <PageFooter />
     </PageContainer>
   )
 }

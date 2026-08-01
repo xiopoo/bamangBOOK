@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
-import PageFooter from '@/components/PageFooter'
 import { getColumnsBySeries, getColumnStats } from '@/lib/columns'
 
 export const metadata: Metadata = {
@@ -85,7 +84,6 @@ export default function ColumnsPage() {
         </div>
       )}
 
-      <PageFooter />
     </PageContainer>
   )
 }

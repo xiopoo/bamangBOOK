@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Send, MessageCircle, BookOpen, Search, ShieldCheck, User, Bot } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import { searchStaticContent } from '@/lib/static-search-client'
 
 interface Message {
@@ -204,7 +203,6 @@ export default function TalkPage() {
         </div>
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

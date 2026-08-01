@@ -1,7 +1,6 @@
 import { existsSync, readFileSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import PageHeader from '@/components/PageHeader'
 import { LearningPathBeginner, LearningPathIntermediate, LearningPathTopics } from '@/components/LearningPathDisplay'
 import { getAllPartnershipLetters } from '@/lib/partnership'
@@ -97,7 +96,6 @@ export default function OptionalLearningPathPage() {
       {beginner && <LearningPathBeginner path={beginner} />}
       {intermediate && <LearningPathIntermediate path={intermediate} />}
       {topics && <LearningPathTopics topics={topics} />}
-      <PageFooter />
     </PageContainer>
   )
 }

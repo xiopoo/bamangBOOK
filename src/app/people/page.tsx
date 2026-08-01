@@ -3,7 +3,6 @@ import { readFileSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 import { resolvePersonRouteId } from '@/lib/entity-resolver'
 
@@ -85,7 +84,6 @@ export default function PeoplePage() {
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

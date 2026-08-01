@@ -7,7 +7,6 @@ import SearchBar from '@/components/SearchBar'
 import SearchResults from '@/components/SearchResults'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import { searchStaticContent, type StaticSearchItemType } from '@/lib/static-search-client'
 
 interface SearchResult {
@@ -209,7 +208,6 @@ function SearchContent() {
         isLoading={isLoading}
       />
 
-      <PageFooter />
     </PageContainer>
   )
 }

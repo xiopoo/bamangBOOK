@@ -3,7 +3,6 @@ import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import MarkdownContent from '@/components/MarkdownContent'
 import { RecommendationList } from '@/components/RecommendationList'
 import { resolveEntityLink } from '@/lib/entity-resolver'
@@ -189,7 +188,6 @@ export default function ConceptDetailPage({ params }: PageProps) {
         </div>
       )}
 
-      <PageFooter />
     </PageContainer>
   )
 }

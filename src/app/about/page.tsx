@@ -1,5 +1,4 @@
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 
 const principles = [
   ['原文', '保留作者、年份、原始来源与上下文；不以二次概括替代原始表达。'],
@@ -8,8 +7,8 @@ const principles = [
 ]
 
 export const metadata = {
-  title: '关于小胖书房',
-  description: '了解小胖书房的定位、编辑方法、修订机制与平台关系。',
+  title: '关于复利书房',
+  description: '了解复利书房的定位、编辑方法、修订机制与平台关系。',
   alternates: { canonical: '/about' },
 }
 
@@ -19,8 +18,8 @@ export default function AboutPage() {
       <PageContainer maxWidth="5xl" className="about-study">
         <header className="about-study__hero">
           <p className="study-label">关于</p>
-          <h1>关于小胖书房</h1>
-          <p>小胖书房是一个由个人长期维护的投资研究网站，重点整理巴菲特、芒格的第一手资料，并持续发布公司研究、投资方法与商业史文章。</p>
+          <h1>关于复利书房</h1>
+          <p>复利书房是一个由个人长期维护的投资研究网站，重点整理巴菲特、芒格的第一手资料，并持续发布公司研究、投资方法与商业史文章。</p>
         </header>
 
         <section>
@@ -59,7 +58,7 @@ export default function AboutPage() {
             <article><span>微信公众号</span><h3>金家岭小胖</h3><p>记录个人思考、长期文章与阶段性判断。网站与公众号各有侧重，内容不会完全同步。</p></article>
             <article><span>小红书</span><h3>金融街小胖</h3><p>转发和保存长期阅读中遇到的优质长文，不把第三方内容包装为原创。</p></article>
           </div>
-          <p>名称不同，但都由我维护。小胖书房集中呈现经过整理的资料、研究文章和长期专题。</p>
+          <p>名称不同，但都由我维护。复利书房集中呈现经过整理的资料、研究文章和长期专题。</p>
         </section>
 
         <section className="about-study__boundary">
@@ -68,7 +67,6 @@ export default function AboutPage() {
           <p>本站不提供个股推荐、收益承诺、实时估值或个性化投资建议。公开资料不会被描述为独家拥有；合订本购买的是整理、校订与连续阅读所节省的时间，而不是秘密信息。</p>
         </section>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

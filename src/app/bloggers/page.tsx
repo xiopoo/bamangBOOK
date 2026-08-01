@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import { getBloggers } from '@/lib/bloggers'
 
 const BLOGGER_DESCRIPTIONS: Record<string, string> = {
@@ -75,7 +74,6 @@ export default function BloggersPage() {
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

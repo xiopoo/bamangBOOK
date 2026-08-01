@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import { getModelsByDiscipline, getModelStats } from '@/lib/models'
 
 export const metadata: Metadata = {
@@ -89,7 +88,6 @@ export default function ModelPage() {
         本库综合原有模型资料与 Munger Archive 整理；同名及同义模型已归并为单一条目，并在详情页保留来源。
       </p>
 
-      <PageFooter />
     </PageContainer>
   )
 }

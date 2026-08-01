@@ -12,7 +12,7 @@ export default function Logo({ href = '/', showSubtitle = true }: LogoProps) {
     <div className="archive-logo select-none">
       <div lang="zh-CN" className="whitespace-nowrap">
         <div className="archive-logo__title">
-          小胖书房
+          复利书房
         </div>
         {showSubtitle && (
           <div className="archive-logo__subtitle">

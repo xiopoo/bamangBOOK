@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import { getReadingStats, type ReadingAuthor } from '@/lib/reading-library'
 import styles from './reading.module.css'
 
@@ -41,7 +40,6 @@ export default function ReadingPage() {
           ))}
         </div>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

@@ -27,7 +27,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
 
         <section className="checkout-summary">
           <ProductCover compact variant={product.coverVariant} title={product.title} yearRange={product.yearRange} />
-          <div><h2>{product.title}</h2><p>{product.version}</p><span>{product.deliveryType} · {product.pages} 页 · 数量 1</span></div>
+          <div><h2>{product.title}</h2><p>{product.subtitle}</p><span>{product.deliveryType} · 约 {product.pages} 页 · 数量 1</span></div>
           <strong>¥{product.price}</strong>
         </section>
 
@@ -57,7 +57,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
           <div className="checkout-manual__content">
             <Image src="/qrcode.jpeg" alt="微信公众号“金家岭小胖”二维码" width={132} height={132} />
             <div>
-              <strong>扫码联系“小胖书房主理人”</strong>
+              <strong>扫码联系“复利书房主理人”</strong>
               <p>关注微信公众号“金家岭小胖”，发送“合订本 + {product.shortTitle}”。客服会在付款前再次确认价格、版本、PDF 交付方式、更新范围与退款条件。</p>
               <small>请勿向非官方页面提交付款信息；当前页面不会收集银行卡资料。</small>
             </div>
@@ -79,7 +79,6 @@ export default function CheckoutPage({ params }: { params: { product: string } }
           <p><MessageCircle size={16} />客服：微信公众号“金家岭小胖”</p>
         </section>
       </main>
-      <footer className="checkout-footer">小胖书房 · 读原文，做研究，形成自己的判断</footer>
     </div>
   )
 }

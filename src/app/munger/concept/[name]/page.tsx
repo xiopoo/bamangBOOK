@@ -202,7 +202,7 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
       <footer className="py-8 border-t border-gray-100 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-gray-500 text-sm">
-            小胖书房
+            复利书房
           </p>
         </div>
       </footer>

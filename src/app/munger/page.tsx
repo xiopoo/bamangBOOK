@@ -1,5 +1,4 @@
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getModels } from '@/lib/models'
 import { getMungerLocalArchiveStats } from '@/lib/munger-archive'
@@ -22,7 +21,6 @@ export default function MungerPage() {
           ]}
         />
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

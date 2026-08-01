@@ -5,7 +5,6 @@ import { BookOpen, CheckCircle, BarChart3 } from 'lucide-react'
 import ReadingHistory from '@/components/ReadingHistory'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 import { ReadingProgress, getAllProgress, clearAllProgress } from '@/lib/reading-progress'
 
@@ -122,7 +121,6 @@ export default function HistoryPage() {
 
       <ReadingHistory filterType={filterType || undefined} onDataChange={handleDataChange} />
 
-      <PageFooter />
     </PageContainer>
   )
 }

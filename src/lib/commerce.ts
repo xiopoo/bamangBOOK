@@ -4,6 +4,7 @@ export type Product = {
   id: string
   slug: ProductSlug
   title: string
+  subtitle: string
   shortTitle: string
   price: number
   currency: 'CNY'
@@ -19,30 +20,32 @@ export const products: Record<ProductSlug, Product> = {
   'buffett-collection': {
     id: 'prod_buffett_collection',
     slug: 'buffett-collection',
-    title: '《巴菲特文集合订本》',
-    shortTitle: '巴菲特文集',
+    title: '《所有者的眼光》',
+    subtitle: '巴菲特论企业、资本与长期复利',
+    shortTitle: '巴菲特卷',
     price: 99,
     currency: 'CNY',
-    version: '1956—2025 精读编排版',
+    version: '2026年8月终稿版',
     deliveryType: 'PDF',
-    pages: 4585,
+    pages: 400,
     coverVariant: 'buffett',
     yearRange: '1956—2025',
-    description: '沿着信件与公开文字，连续理解巴菲特的投资方法、企业判断与资本配置思想如何形成和变化。',
+    description: '沿着巴菲特六十年的公开记录，按「所有者起点—企业质量—人与制度—资本配置—风险与复利」五篇十五章，讲清他的投资方法如何形成与变化。',
   },
   'munger-collection': {
     id: 'prod_munger_collection',
     slug: 'munger-collection',
-    title: '《芒格文集合订本》',
-    shortTitle: '芒格文集',
+    title: '《理性的格栅》',
+    subtitle: '芒格论思维模型、商业判断与人生智慧',
+    shortTitle: '芒格卷',
     price: 99,
     currency: 'CNY',
-    version: '1924—2023 精读编排版',
+    version: '2026年8月终稿版',
     deliveryType: 'PDF',
-    pages: 1905,
+    pages: 360,
     coverVariant: 'munger',
     yearRange: '1924—2023',
-    description: '通过演讲、问答与重要文章，系统理解芒格如何连接商业、心理学和多元思维模型。',
+    description: '从「一把锤子」的比喻出发，用十六章把芒格的多元思维模型、误判心理学与避错方法组织成一套可以实际使用的判断框架。',
   },
 }
 

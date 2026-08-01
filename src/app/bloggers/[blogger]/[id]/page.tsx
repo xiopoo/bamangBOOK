@@ -4,6 +4,7 @@ import { getBloggerArticle, getBloggerArticles } from '@/lib/bloggers'
 import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import { bloggerArticleParams } from '@/lib/staticParams'
 
 export function generateStaticParams() {
@@ -114,14 +115,10 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
               </div>
             )}
           </main>
+          <ArticleTableOfContents />
         </div>
       </div>
 
-      <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center text-sm text-text-muted dark:text-dark-muted">
-          小胖书房 · 博主文章
-        </div>
-      </footer>
     </div>
   )
 }

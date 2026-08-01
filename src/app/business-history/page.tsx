@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Building2, Clock, FileText, Tags } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import StatBadge from '@/components/StatBadge'
 import { getBusinessHistories, getBusinessHistoryStats } from '@/lib/business-history'
 
@@ -74,7 +73,6 @@ export default function BusinessHistoryPage() {
         </div>
       )}
 
-      <PageFooter />
     </PageContainer>
   )
 }

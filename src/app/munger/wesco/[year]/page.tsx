@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import MarkdownContent from '@/components/MarkdownContent'
 import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
@@ -108,7 +107,6 @@ export default function WescoMeetingDetailPage({ params }: PageProps) {
           <ArticleTableOfContents />
         </div>
       </PageContainer>
-      <PageFooter />
     </div>
   )
 }

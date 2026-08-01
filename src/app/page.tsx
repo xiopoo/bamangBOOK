@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { ArrowRight, Check, Search } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
-import PageFooter from '@/components/PageFooter'
 import SubdomainRootRouter from '@/components/SubdomainRootRouter'
 import { getDocuments } from '@/lib/documents'
 import { getPartnershipCount, getShareholderLetters } from '@/lib/partnership'
@@ -97,7 +96,7 @@ export default function HomePage() {
                 <li key={number}><span>{number}</span><strong>{title}</strong><small>{meta}</small></li>
               ))}
             </ol>
-            <footer><span>小胖书房</span><span>公开内容 / 付费合订本</span></footer>
+            <footer><span>复利书房</span><span>公开内容 / 付费合订本</span></footer>
           </aside>
         </section>
 
@@ -214,20 +213,19 @@ export default function HomePage() {
           <div className="study-editions__books">
             <article>
               <span>01 · BUFFETT</span>
-              <h3>《巴菲特文集合订本》</h3>
+              <h3>《所有者的眼光》</h3>
               <strong>99<small>元</small></strong>
-              <p>沿着信件与公开文字，系统理解巴菲特的投资方法、企业判断与资本配置思想。</p>
+              <p>巴菲特论企业、资本与长期复利。五篇 15 章，把股东信与长期实践编成一条完整脉络。</p>
             </article>
             <article>
               <span>02 · MUNGER</span>
-              <h3>《芒格文集合订本》</h3>
+              <h3>《理性的格栅》</h3>
               <strong>99<small>元</small></strong>
-              <p>通过演讲、问答与重要文章，系统理解芒格的商业判断与多元思维方法。</p>
+              <p>芒格论思维模型、商业判断与人生智慧。16 章正文，附 232 个思维模型对照与心理倾向速查。</p>
             </article>
           </div>
         </section>
       </PageContainer>
-      <PageFooter />
     </>
   )
 }

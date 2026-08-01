@@ -2,7 +2,6 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import PageFooter from '@/components/PageFooter'
 import {
   getMungerLocalArchiveGroups,
   getMungerLocalArchiveStats,
@@ -73,7 +72,6 @@ export default function MungerArchivePage() {
         ))}
       </div>
 
-      <PageFooter />
     </PageContainer>
   )
 }

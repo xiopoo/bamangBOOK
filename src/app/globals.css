@@ -1324,7 +1324,7 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
-/* ===== 小胖书房 2026：出版社式首页与产品页 ===== */
+/* ===== 复利书房 2026：出版社式首页与产品页 ===== */
 .study-home,
 .edition-page,
 .about-study {
@@ -2271,6 +2271,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: auto;
 }
 
+.edition-products article > .archive-button {
+  margin-top: auto;
+}
+
 .archive-button:disabled {
   cursor: not-allowed;
   opacity: 0.58;
@@ -2828,15 +2832,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.72rem;
 }
 
-.checkout-footer {
-  width: min(100%, 42rem);
-  margin: 2rem auto 0;
-  color: var(--archive-ink-faint);
-  text-align: center;
-  font-family: var(--archive-sans);
-  font-size: 0.65rem;
-}
-
 .payment-result {
   padding: clamp(2rem, 6vw, 4rem);
   background: var(--archive-paper-tint);
@@ -3089,6 +3084,283 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 2px solid var(--archive-ink);
 }
 
+/* === 合订本销售页：新板块 === */
+
+/* Hero 关键数字 */
+.edition-hero__stats {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.edition-hero__stats span {
+  padding: 0.6rem 1.05rem;
+  border: 1px solid var(--archive-rule);
+  border-radius: 999px;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+.edition-hero__stats strong {
+  color: var(--archive-oxblood);
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+}
+.edition-hero .archive-button + .archive-button {
+  margin-left: 0.8rem;
+}
+
+/* 产品卡：副题、规格、卖点 */
+.edition-products article > p.edition-product-sub {
+  margin: 0.45rem 0 0;
+  color: var(--archive-ink-soft);
+  font-size: 1.08rem;
+}
+.edition-product-stats {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.edition-product-stats span {
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--archive-rule);
+  border-radius: 999px;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+}
+.edition-product-points {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.7rem;
+  color: var(--archive-ink-soft);
+}
+.edition-product-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+.edition-product-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1.5px solid var(--archive-oxblood);
+  transform: rotate(45deg);
+}
+.edition-products article > p.edition-product-desc {
+  margin: 1.4rem 0 0;
+}
+
+/* 目录预览 */
+.edition-toc__books {
+  display: grid;
+  gap: 1.4rem;
+}
+.edition-toc__book {
+  border-top: 2px solid var(--archive-ink);
+  background: var(--archive-paper);
+}
+.edition-toc__book summary {
+  min-height: 4.6rem;
+  padding: 1.1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+.edition-toc__book summary::-webkit-details-marker {
+  display: none;
+}
+.edition-toc__book summary > span {
+  color: var(--archive-gold);
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+}
+.edition-toc__book summary > div {
+  flex: 1;
+}
+.edition-toc__book summary h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.edition-toc__book summary small {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.78rem;
+}
+.edition-toc__book summary > svg {
+  color: var(--archive-ink-faint);
+  transition: transform 0.2s ease;
+}
+.edition-toc__book[open] summary > svg {
+  transform: rotate(90deg);
+}
+.edition-toc__chapters {
+  padding: 0.5rem 0 1.8rem;
+  border-top: 1px solid var(--archive-rule);
+}
+.edition-toc__part + .edition-toc__part {
+  margin-top: 1.2rem;
+}
+.edition-toc__part h4 {
+  margin-bottom: 0.45rem;
+  color: var(--archive-oxblood);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+.edition-toc__part ol,
+.edition-toc__flat {
+  display: grid;
+  gap: 0.4rem;
+}
+.edition-toc__part li,
+.edition-toc__flat li {
+  color: var(--archive-ink);
+  line-height: 1.7;
+}
+.edition-toc__appendix {
+  margin-top: 1.4rem;
+  padding: 0.9rem 1.1rem;
+  color: var(--archive-ink-soft);
+  background: var(--archive-paper-tint);
+  border-left: 3px solid var(--archive-gold);
+  font-family: var(--archive-sans);
+  font-size: 0.8rem;
+  line-height: 1.9;
+}
+
+/* 编辑标准 */
+.edition-craft__list {
+  border-top: 2px solid var(--archive-ink);
+}
+.edition-craft__list > p {
+  padding: 1.1rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: baseline;
+  border-bottom: 1px solid var(--archive-rule);
+}
+.edition-craft__list span {
+  color: var(--archive-gold);
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+}
+.edition-craft__list strong {
+  display: block;
+  font-size: 1.08rem;
+}
+.edition-craft__list small {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* 读者反馈 */
+.edition-feedback__body {
+  display: grid;
+  gap: 1.4rem;
+}
+.edition-feedback__empty {
+  padding: 2.2rem 2rem;
+  border: 1.5px dashed var(--archive-rule);
+  background: var(--archive-paper-tint);
+  text-align: center;
+}
+.edition-feedback__empty p {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.edition-feedback__empty small {
+  display: block;
+  max-width: 30rem;
+  margin: 0.7rem auto 0;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+.edition-feedback__alternatives {
+  display: grid;
+  gap: 0.6rem;
+}
+.edition-feedback__alternatives > a {
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid var(--archive-rule);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.edition-feedback__alternatives > a:hover {
+  border-color: var(--archive-oxblood);
+  background: var(--archive-paper-tint);
+}
+.edition-feedback__alternatives svg {
+  color: var(--archive-oxblood);
+  flex-shrink: 0;
+}
+.edition-feedback__alternatives div {
+  flex: 1;
+}
+.edition-feedback__alternatives strong {
+  font-size: 1rem;
+}
+.edition-feedback__alternatives small {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.8rem;
+}
+
+/* 购买流程三步 */
+.edition-steps {
+  max-width: 46rem;
+  margin: 2.4rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--archive-ink);
+  border-bottom: 1px solid var(--archive-rule);
+}
+.edition-steps > div {
+  padding: 1.4rem 1.2rem;
+  text-align: left;
+}
+.edition-steps > div + div {
+  border-left: 1px solid var(--archive-rule);
+}
+.edition-steps span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--archive-gold);
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+}
+.edition-steps strong {
+  font-size: 1.08rem;
+}
+.edition-steps small {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
 @media (max-width: 720px) {
   .edition-hero h1,
   .about-study h1 {
@@ -3117,6 +3389,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   .edition-final > div {
     display: grid;
+  }
+  .edition-hero .archive-button + .archive-button {
+    margin-left: 0;
+  }
+  .edition-steps {
+    grid-template-columns: 1fr;
+  }
+  .edition-steps > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--archive-rule);
+  }
+  .edition-feedback__empty {
+    padding: 1.6rem 1.2rem;
   }
   .about-study__rules {
     gap: 2rem;
