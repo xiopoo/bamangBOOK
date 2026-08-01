@@ -48,12 +48,10 @@ export default function WescoMeetingsPage() {
 
       <div className="mb-8 border-y border-gray-200 dark:border-gray-700 py-4 text-sm text-text-muted dark:text-dark-muted leading-7">
         <p>
-          伯克希尔官网的 Wesco 档案提供 1997-2009 年年度股东信，但不提供股东大会问答逐字稿。
-          本栏目因此将官方股东信作为同期公司材料，将公开会议笔记标为“中文整理”，避免混淆两种文献。
+          Wesco 公司 1997-2009 年年度股东大会资料。
+          <span className="font-medium text-text dark:text-dark-text">&ldquo;中文实录&rdquo;</span> 为现有完整逐字稿，
+          <span className="font-medium text-text dark:text-dark-text">&ldquo;中文整理&rdquo;</span> 为根据公开会议笔记整理的版本，两者已在每一条目中分别标注。
         </p>
-        <Link href="/munger/originals" className="mt-2 inline-block text-primary dark:text-primary-light hover:underline">
-          查看 Wesco 官方股东信 →
-        </Link>
       </div>
 
       <section>

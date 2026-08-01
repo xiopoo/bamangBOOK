@@ -43,16 +43,8 @@ export default function MungerArchivePage() {
           </div>
           <b>→</b>
         </Link>
-        <Link href="/munger/originals">
-          <span>02</span>
-          <div>
-            <h2>Wesco 股东信</h2>
-            <p>伯克希尔官网英文原文</p>
-          </div>
-          <b>→</b>
-        </Link>
         <Link href="/model">
-          <span>03</span>
+          <span>02</span>
           <div>
             <h2>多元思维模型</h2>
             <p>合并整理后的统一模型库</p>

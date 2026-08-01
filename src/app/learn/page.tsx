@@ -5,7 +5,6 @@ import { getBusinessHistories } from '@/lib/business-history'
 import { getDocuments } from '@/lib/documents'
 import { getModels } from '@/lib/models'
 import { getMungerLocalArchiveItems, getMungerLocalArchiveStats } from '@/lib/munger-archive'
-import { getMungerOriginals } from '@/lib/munger-originals'
 import { getAllPartnershipLetters, getShareholderLetters } from '@/lib/partnership'
 import styles from './learn.module.css'
 
@@ -21,7 +20,6 @@ const questions = [
 export default function LearnPage() {
   const archiveStats = getMungerLocalArchiveStats()
   const models = getModels()
-  const originals = getMungerOriginals()
   const letters = getShareholderLetters()
   const partnerships = getAllPartnershipLetters()
   const histories = getBusinessHistories()
@@ -31,20 +29,13 @@ export default function LearnPage() {
   const circle = models.find((item) => item.slug === 'circle-of-competence')
   const disney = histories.find((item) => item.company.includes('迪士尼')) || histories[0]
   const archivePage = getMungerLocalArchiveItems().find((item) => item.section === 'recordings')
-  const firstOriginal = originals[0]
 
   const loosePages = [
-    firstOriginal && {
-      href: `/munger/originals/${firstOriginal.id}`,
-      meta: `芒格原文 · ${firstOriginal.year}`,
-      title: '从一封 Wesco 股东信开始',
-      note: '不先读总结，直接听芒格如何讨论生意、治理与人的判断。',
-    },
     {
       href: '/letters/1986',
       meta: '巴菲特股东信 · 1986',
       title: '所有者收益：会计数字之外',
-      note: '回到“所有者收益”概念出现的原始语境。',
+      note: '回到"所有者收益"概念出现的原始语境。',
     },
     inversion && {
       href: `/model/${inversion.slug}`,
@@ -72,8 +63,10 @@ export default function LearnPage() {
     },
   ].filter((item): item is NonNullable<typeof item> => Boolean(item))
 
+  const wescoCount = 14
+
   const shelves = [
-    { number: '01', href: '/munger/originals', title: '读原文', note: '演讲、信件与第一手文本', count: `${originals.length} 篇` },
+    { number: '01', href: '/munger/wesco', title: '读 Wesco 问答', note: '芒格独自回答投资与人的判断', count: `${wescoCount} 场` },
     { number: '02', href: '/model', title: '找一个模型', note: '跨学科工具与心理误判', count: `${models.length} 个` },
     { number: '03', href: '/business-history', title: '研究一家公司', note: '经营系统、护城河与资本配置', count: `${histories.length} 篇` },
     { number: '04', href: '/letters', title: '沿年份阅读', note: '在六十年股东信中观察变化', count: `${letters.length} 封` },

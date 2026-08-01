@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import SiteHeader from '@/components/SiteHeader'
 import ThemeProvider from '@/components/ThemeProvider'
 import { ProgressProvider } from '@/hooks/useProgress'
+import BackToTop from '@/components/BackToTop'
 import './globals.css'
 import './reading.css'
 import { siteConfig } from '@/lib/site'
@@ -44,18 +45,34 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              try {
-                var theme = localStorage.getItem('theme');
-                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  // ====== 1. 主题先于渲染生效（避免白/黑闪烁）======
+                  var theme = localStorage.getItem('theme');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (theme === 'dark' || (!theme && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                  }
+
+                  // ====== 2. 正文字号先于渲染生效（避免 16→19px 的 FOUC 抖动）======
+                  var STORAGE_KEY = 'reader-font-size';
+                  var MIN_SIZE = 17, DEFAULT_SIZE = 19, MAX_SIZE = 26;
+                  var stored = Number(localStorage.getItem(STORAGE_KEY));
+                  var size = Number.isFinite(stored) && stored > 0 ? stored : DEFAULT_SIZE;
+                  size = Math.min(MAX_SIZE, Math.max(MIN_SIZE, size));
+                  document.documentElement.style.setProperty('--text-size-base', size + 'px');
+                  document.documentElement.dataset.readerFontSize = String(size);
+                  document.documentElement.classList.add('reading-no-fouc');
+                } catch (e) {
+                  // 隐私模式等 localStorage 不可用时静默降级
                 }
-              } catch(e) {}
-            })();
-          `
-        }} />
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="bg-bg dark:bg-dark-bg text-text dark:text-dark-text min-h-screen transition-colors duration-300 overflow-x-hidden">
         <ThemeProvider>
@@ -64,6 +81,7 @@ export default function RootLayout({
             <main className="min-w-0 min-h-screen">
               {children}
             </main>
+            <BackToTop />
           </ProgressProvider>
         </ThemeProvider>
       </body>

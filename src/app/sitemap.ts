@@ -11,7 +11,6 @@ import { getModels } from '@/lib/models'
 import { getBooks } from '@/lib/books'
 import { getColumns } from '@/lib/columns'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
-import { getMungerOriginals } from '@/lib/munger-originals'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -26,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '', '/about', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
-    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/munger/originals', '/model', '/books', '/columns',
+    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
@@ -51,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getMungerLocalArchiveItems()
     .filter(item => item.section !== 'mental-models')
     .forEach(item => urls.add(`${baseUrl}/munger/archive/${item.slug.split('/').map(encodeURIComponent).join('/')}`))
-  getMungerOriginals().forEach(item => urls.add(`${baseUrl}/munger/originals/${encodeURIComponent(item.id)}`))
 
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]

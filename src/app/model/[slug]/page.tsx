@@ -99,6 +99,34 @@ export default function ModelDetailPage({ params }: PageProps) {
               <MarkdownContent content={model.content} />
             </article>
 
+            {/* —— 思维模型阅读闭环：回到模型库 / 随机下一个 —— */}
+            <nav
+              className="reading-nav-pair reading-adjacent"
+              aria-label="模型库继续阅读导航"
+            >
+              <Link href="/model" className="nav-prev">
+                <span className="reading-adjacent__label">‹ 返回</span>
+                <span className="reading-adjacent__title">
+                  回到多元思维模型库（{getModels().length} 个）
+                </span>
+              </Link>
+              {related[0] ? (
+                <Link href={`/model/${related[0].slug}`} className="nav-next" rel="next">
+                  <span className="reading-adjacent__label">继续阅读 ›</span>
+                  <span className="reading-adjacent__title">
+                    下一模型 · {related[0].title}
+                  </span>
+                </Link>
+              ) : (
+                <Link href="/model" className="nav-next">
+                  <span className="reading-adjacent__label">继续探索 ›</span>
+                  <span className="reading-adjacent__title">
+                    浏览全部 {getModels().length} 个模型
+                  </span>
+                </Link>
+              )}
+            </nav>
+
             {related.length > 0 && (
               <section className="model-detail__related">
                 <header>

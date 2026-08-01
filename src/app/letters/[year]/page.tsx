@@ -184,24 +184,47 @@ export default async function LetterDetailPage({ params }: PageProps) {
           <ArticleTableOfContents />
         </div>
 
-        <div className="flex justify-between mt-8 gap-4">
-          {yearNum > 1956 && (
-            <Link href={getLetterArchiveHref(yearNum - 1)} className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              <span>{yearNum - 1}年</span>
+        {/* —— 上下篇（年份）导航：统一使用 CN Reading 阅读规范样式 —— */}
+        <nav className="reading-nav-pair reading-adjacent" aria-label="相邻股东信导航">
+          {yearNum > 1956 ? (
+            <Link
+              href={getLetterArchiveHref(yearNum - 1)}
+              className="nav-prev"
+              rel="prev"
+            >
+              <span className="reading-adjacent__label">
+                ‹ 上一封信 · 前一年
+              </span>
+              <span className="reading-adjacent__title">
+                {yearNum - 1} 年巴菲特致股东信
+              </span>
             </Link>
+          ) : (
+            <span className="nav-pair-btn nav-prev" aria-disabled>
+              <span className="reading-adjacent__label">已是最早一封</span>
+              <span className="reading-adjacent__title">1956 年起的股东信</span>
+            </span>
           )}
-          {yearNum < 2025 && (
-            <Link href={`/letters/${yearNum + 1}`} className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card ml-auto">
-              <span>{yearNum + 1}年</span>
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+          {yearNum < 2025 ? (
+            <Link
+              href={`/letters/${yearNum + 1}`}
+              className="nav-next"
+              rel="next"
+            >
+              <span className="reading-adjacent__label">
+                下一封信 · 后一年 ›
+              </span>
+              <span className="reading-adjacent__title">
+                {yearNum + 1} 年巴菲特致股东信
+              </span>
             </Link>
+          ) : (
+            <span className="nav-pair-btn nav-next" aria-disabled>
+              <span className="reading-adjacent__label">已是最新一封</span>
+              <span className="reading-adjacent__title">后续年度会持续整理</span>
+            </span>
           )}
-        </div>
+        </nav>
       </div>
 
       <footer className="bg-bg-card dark:bg-dark-card border-t border-primary/10 py-6 mt-12">

@@ -80,31 +80,35 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
           <ArticleTableOfContents />
         </div>
 
-        {/* 信件导航 */}
-        <div className="flex justify-between mt-8 gap-4">
-          {prev && (
-            <Link
-              href={`/partnership/${prev.id}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card"
-            >
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              <span>{prev.year}年{prev.subtitle ? formatPartnershipSubtitle(prev.subtitle) : ''}</span>
+        {/* —— 合伙人信相邻导航：统一 CN Reading 阅读规范样式 —— */}
+        <nav className="reading-nav-pair reading-adjacent" aria-label="相邻合伙人信导航">
+          {prev ? (
+            <Link href={`/partnership/${prev.id}`} className="nav-prev" rel="prev">
+              <span className="reading-adjacent__label">‹ 上一封</span>
+              <span className="reading-adjacent__title">
+                {prev.year}年合伙人信{prev.subtitle ? ` · ${formatPartnershipSubtitle(prev.subtitle)}` : ''}
+              </span>
             </Link>
+          ) : (
+            <span className="nav-pair-btn nav-prev" aria-disabled>
+              <span className="reading-adjacent__label">已是第一封</span>
+              <span className="reading-adjacent__title">巴菲特合伙人信归档起点</span>
+            </span>
           )}
-          {next && (
-            <Link
-              href={`/partnership/${next.id}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-bg-card dark:bg-dark-card border border-primary/20 rounded-card hover:border-primary hover:text-primary dark:hover:text-primary-light text-text-muted dark:text-dark-muted transition-all hover:shadow-card-hover shadow-card ml-auto"
-            >
-              <span>{next.year}年{next.subtitle ? formatPartnershipSubtitle(next.subtitle) : ''}</span>
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+          {next ? (
+            <Link href={`/partnership/${next.id}`} className="nav-next" rel="next">
+              <span className="reading-adjacent__label">下一封 ›</span>
+              <span className="reading-adjacent__title">
+                {next.year}年合伙人信{next.subtitle ? ` · ${formatPartnershipSubtitle(next.subtitle)}` : ''}
+              </span>
             </Link>
+          ) : (
+            <span className="nav-pair-btn nav-next" aria-disabled>
+              <span className="reading-adjacent__label">已是最后一封</span>
+              <span className="reading-adjacent__title">后续内容会持续更新</span>
+            </span>
           )}
-        </div>
+        </nav>
       </div>
 
       <RelatedArticles source="partnership" fileName={letter.filename} />

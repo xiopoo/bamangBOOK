@@ -29,33 +29,20 @@ export default function ArticleContent({ content }: ArticleContentProps) {
     [content]
   )
 
+  // 不再用 Tailwind utility 覆盖样式，统一切换到 reading.css
+  // 的 .prose (CN Reading Typography) 排版规范。
+  // —— 合伙人信 (ArticleContent) 正文采用标准 prose 结构，
+  //    首行缩进/两端对齐/段距全部由 reading.css 控制。
   const components = useMemo(() => ({
-    p: ({ children }: any) => (
-      <p className="text-text/80 dark:text-dark-text leading-[1.8] text-justify [text-indent:2em] mb-6">
-        {children}
-      </p>
-    ),
-    table: ({ children }: any) => (
-      <div className="max-w-full overflow-x-auto my-6 rounded-lg border border-gray-200 dark:border-dark-border">
-        <table className="w-full min-w-max border-collapse text-sm">{children}</table>
-      </div>
-    ),
-    th: ({ children }: any) => (
-      <th className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2.5 bg-gray-50 dark:bg-gray-800 font-semibold text-right first:text-left dark:text-dark-text">
-        {children}
-      </th>
-    ),
-    td: ({ children }: any) => (
-      <td className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2 text-right first:text-left dark:text-dark-text">
-        {children}
-      </td>
-    ),
+    table: ({ children }: any) => <table>{children}</table>,
+    th: ({ children }: any) => <th>{children}</th>,
+    td: ({ children }: any) => <td>{children}</td>,
   }), [])
 
   return (
-    <article className="prose prose-lg min-w-0 max-w-none dark:prose-invert">
-      <ReactMarkdown 
-        remarkPlugins={[remarkGfm, remarkNumberedList]} 
+    <article className="prose mx-auto overflow-x-hidden break-words">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm, remarkNumberedList]}
         rehypePlugins={[rehypeNumberedList, rehypeSectionHeadings]}
         components={components}
       >

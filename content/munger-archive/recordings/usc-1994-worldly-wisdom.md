@@ -25,8 +25,6 @@ source: "https://mungerarchive.com/zh/recordings/usc-1994-worldly-wisdom/"
 
 [mental models](https://mungerarchive.com/zh/recordings/?topic=mental%20models) [latticework](https://mungerarchive.com/zh/recordings/?topic=latticework) [stock-picking](https://mungerarchive.com/zh/recordings/?topic=stock-picking) [worldly wisdom](https://mungerarchive.com/zh/recordings/?topic=worldly%20wisdom)
 
-本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E5%8D%97%E5%8A%A0%E5%A4%A7%E5%95%86%E5%AD%A6%E9%99%A2%E6%BC%94%E8%AE%B2_1994.md)可读。
-
 ## 相关录音
 
 [TEXTSpeech](https://mungerarchive.com/zh/recordings/stanford-1996-worldly-wisdom/)

@@ -31,7 +31,7 @@ export type ThinkerArchive = {
 }
 
 export const buffettArchive: ThinkerArchive = {
-  eyebrow: 'WARREN E. BUFFETT · 1930—',
+  eyebrow: '沃伦·巴菲特 · 1930—',
   name: '沃伦·巴菲特',
   years: '1956—至今',
   headline: '从价格出发，最后走向企业。',
@@ -89,7 +89,7 @@ export const buffettArchive: ThinkerArchive = {
 }
 
 export const mungerArchive: ThinkerArchive = {
-  eyebrow: 'CHARLES T. MUNGER · 1924—2023',
+  eyebrow: '查理·芒格 · 1924—2023',
   name: '查理·芒格',
   years: '1924—2023',
   headline: '从投资出发，最后走向判断。',
@@ -114,12 +114,6 @@ export const mungerArchive: ThinkerArchive = {
       label: '演讲与访谈',
       meta: '1986—2023',
       description: '从哈佛毕业演讲到最后一次访谈，按时间、媒介与出处整理的公开记录。',
-    },
-    {
-      href: '/munger/originals',
-      label: 'Wesco 股东信',
-      meta: '英文原文',
-      description: '作为董事长与资本配置者的第一手文本，也是理解 Wesco 这家“小伯克希尔”的入口。',
     },
   ],
   ideas: [

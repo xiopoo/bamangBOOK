@@ -95,177 +95,132 @@ export default function MarkdownContent({
 
   const markdownComponents = useMemo(
     () => ({
-      a: ({ href, children }: any) => (
-        <a
-          href={href}
-          className="text-primary hover:text-primary-light underline underline-offset-4 decoration-1"
-        >
-          {children}
-        </a>
-      ),
+      // —— 所有元素不再使用 Tailwind utility 硬编码样式，
+      //    统一切换到 reading.css 中的 .prose (CN Reading Typography) 规范。
+      //    —— 仅对 QA 模式保留结构包装（is-question / is-answer class），
+      //    样式也通过 CSS 变量走全局规范。
       h2: ({ children }: any) => {
         const text = typeof children === 'string' ? children : ''
-        if (isQA) {
-          return (
-            <h2 
-              id={slugify(text)}
-              className="font-serif font-bold text-text dark:text-dark-text flex items-start gap-3 pb-2 border-b border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-4 py-3 rounded-lg"
-            >
-              <span className="text-primary dark:text-primary-light text-xl shrink-0 mt-1">Q</span>
-              <span className="flex-1">{children}</span>
-            </h2>
-          )
-        }
+        const qa = isQA
         return (
-          <h2 
-            id={slugify(text)}
-            className="font-serif font-bold text-text dark:text-dark-text flex items-center gap-3 pb-2 border-b border-primary/20 dark:border-primary/30"
-          >
-            <span className="w-1 h-8 bg-primary dark:bg-primary-light rounded-full" />
-            {children}
+          <h2 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
+            {qa ? (
+              <>
+                <span className="qa-question-mark">Q</span>
+                <span className="flex-1">{children}</span>
+              </>
+            ) : (
+              children
+            )}
           </h2>
         )
       },
       h3: ({ children }: any) => {
         const text = typeof children === 'string' ? children : ''
-        if (isQA) {
-          return (
-            <h3
-              id={slugify(text)}
-              className="font-serif font-bold text-text dark:text-dark-text flex items-start gap-3 pb-2 border-b border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-4 py-3 rounded-lg"
-            >
-              <span className="text-primary dark:text-primary-light text-lg shrink-0 mt-1">Q</span>
-              <span className="flex-1">{children}</span>
-            </h3>
-          )
-        }
+        const qa = isQA
         return (
-          <h3 
-            id={slugify(text)}
-            className="text-xl font-semibold text-text dark:text-dark-text mt-8 mb-4 flex items-center gap-2"
-          >
-            <span className="w-2 h-2 bg-primary/60 dark:bg-primary-light/60 rounded-full" />
-            {children}
+          <h3 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
+            {qa ? (
+              <>
+                <span className="qa-question-mark qa-question-mark--sm">Q</span>
+                <span className="flex-1">{children}</span>
+              </>
+            ) : (
+              children
+            )}
           </h3>
         )
       },
+      h4: ({ children }: any) => <h4>{children}</h4>,
+      h5: ({ children }: any) => <h5>{children}</h5>,
+      h6: ({ children }: any) => <h6>{children}</h6>,
       p: ({ children }: any) => {
         const text = Array.isArray(children)
           ? children.map((child) => (typeof child === 'string' ? child : '')).join('')
-          : typeof children === 'string' ? children : ''
-        
+          : typeof children === 'string'
+          ? children
+          : ''
+
         if (isQA) {
           if (/^(股东|股东提问|提问|问题|问|Q)[：:]/i.test(text)) {
             return (
-              <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary pl-4 py-3 rounded-r-lg mb-4">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <span className="font-semibold text-primary dark:text-primary-light">股东：</span>
+              <div className="qa qa--question">
+                <p className="is-question">
+                  <span className="qa__speaker qa__speaker--question">股东：</span>
                   {text.replace(/^(股东|股东提问|提问|问题|问|Q)[：:]/i, '')}
                 </p>
               </div>
             )
           }
-          
+
           if (/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i.test(text)) {
-            const speaker = text.match(/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i)?.[1] || '回答'
+            const speaker =
+              text.match(/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i)?.[1] || '回答'
             const speakerLabel = speaker.toUpperCase() === 'A' ? '回答' : speaker
             return (
-              <div className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-3 rounded-r-lg mb-4">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {speakerLabel}：
-                  </span>
+              <div className="qa qa--answer">
+                <p className="is-answer">
+                  <span className="qa__speaker qa__speaker--answer">{speakerLabel}：</span>
                   {text.replace(/^(巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i, '')}
                 </p>
               </div>
             )
           }
 
-          const hasBoldQuestion = Array.isArray(children) && children.some((child: any) => child?.type === 'strong')
+          const hasBoldQuestion =
+            Array.isArray(children) &&
+            children.some((child: any) => child?.type === 'strong')
           if (hasBoldQuestion || /^\d{1,3}[,，、.．]/.test(text)) {
             return (
-              <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary pl-4 py-3 rounded-r-lg mb-4">
-                <p className="text-gray-800 dark:text-gray-200 leading-relaxed font-semibold">
-                  {children}
-                </p>
+              <div className="qa qa--question">
+                <p className="is-question">{children}</p>
               </div>
             )
           }
         }
-        
-        return (
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            {children}
-          </p>
-        )
+
+        return <p>{children}</p>
       },
-      ul: ({ children }: any) => (
-        <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>
-      ),
-      ol: ({ children }: any) => (
-        <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>
-      ),
-      li: ({ children }: any) => (
-        <li className="text-gray-700 dark:text-gray-300">{children}</li>
-      ),
-      blockquote: ({ children }: any) => (
-        <blockquote className="border-l-4 border-primary pl-4 italic text-gray-600 dark:text-gray-400 my-6 bg-primary/5 dark:bg-primary/10 py-3 pr-4 rounded-r-lg">
-          {children}
-        </blockquote>
-      ),
-      strong: ({ children }: any) => (
-        <strong className="font-semibold text-text dark:text-dark-text">
-          {children}
-        </strong>
-      ),
-      em: ({ children }: any) => <em className="italic">{children}</em>,
+      ul: ({ children }: any) => <ul>{children}</ul>,
+      ol: ({ children }: any) => <ol>{children}</ol>,
+      li: ({ children }: any) => <li>{children}</li>,
+      blockquote: ({ children }: any) => <blockquote>{children}</blockquote>,
+      strong: ({ children }: any) => <strong>{children}</strong>,
+      em: ({ children }: any) => <em>{children}</em>,
       code: ({ className: codeClassName, children }: any) => {
-        // 代码块（围栏代码）由 <pre> 包裹，globals.css 中 .prose pre code 已重置样式；
-        // 这里仅对「行内代码」套用高亮背景，避免代码块内出现嵌套底色块。
-        const isBlock = (typeof codeClassName === 'string' && /language-/.test(codeClassName)) ||
+        const isBlock =
+          (typeof codeClassName === 'string' && /language-/.test(codeClassName)) ||
           String(children).includes('\n')
         if (isBlock) {
           return <code className={codeClassName}>{children}</code>
         }
-        return (
-          <code className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded text-sm font-mono">
-            {children}
-          </code>
-        )
+        return <code>{children}</code>
       },
-      pre: ({ children }: any) => (
-        <pre className="bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-          {children}
-        </pre>
-      ),
+      pre: ({ children }: any) => <pre>{children}</pre>,
       table: ({ children }: any) => (
-        <div className="overflow-x-auto my-6 rounded-lg shadow-card border border-gray-200 dark:border-dark-border">
-          <table className="w-full border-collapse text-sm">{children}</table>
-        </div>
+        <table>
+          {/* 不再套 wrapper，prose table 已经用 display:block + overflow 自己处理横滚 */}
+          {children}
+        </table>
       ),
       thead: ({ children }: any) => <thead>{children}</thead>,
       tbody: ({ children }: any) => <tbody>{children}</tbody>,
       tr: ({ children }: any) => <tr>{children}</tr>,
-      th: ({ children }: any) => (
-        <th className="text-center border border-gray-200 dark:border-dark-border bg-bg-card dark:bg-dark-card font-semibold text-text dark:text-dark-text sm:px-3 sm:py-2.5 px-2 py-1.5 font-serif text-xs sm:text-sm">
-          {children}
-        </th>
+      th: ({ children }: any) => <th>{children}</th>,
+      td: ({ children }: any) => <td>{children}</td>,
+      hr: () => <hr />,
+      a: ({ href, children }: any) => <a href={href}>{children}</a>,
+      img: ({ src, alt }: any) => (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={src} alt={alt || ''} />
       ),
-      td: ({ children }: any) => (
-        <td className="text-center border border-gray-200 dark:border-dark-border text-text dark:text-dark-text sm:px-3 sm:py-2 px-2 py-1.5 text-xs sm:text-sm">
-          {children}
-        </td>
-      ),
-      hr: () => <hr className="my-8 border-gray-200 dark:border-dark-border" />,
     }),
     [isQA]
   )
 
-  const widthClass = className.includes('max-w-') ? '' : 'max-w-3xl'
-
   return (
     <div
-      className={`prose ${widthClass} mx-auto overflow-x-hidden break-words dark:text-dark-text ${className}`}
+      className={`prose mx-auto overflow-x-hidden break-words ${isQA ? 'prose--is-qa' : ''} ${className}`}
     >
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
         {processedContent}

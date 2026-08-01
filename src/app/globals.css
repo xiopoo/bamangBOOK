@@ -659,24 +659,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .reader-font-control {
   display: grid;
-  grid-template-columns: 2.5rem 3.25rem 2.5rem;
-  align-items: center;
+  grid-template-columns: 44px 56px 44px;  /* 每格 ≥ 44×44 触控合规 */
+  height: 44px;
+  align-items: stretch;
   color: var(--archive-ink-faint);
   border: 1px solid var(--archive-rule);
+  border-radius: 10px;
+  overflow: hidden;
   background: var(--archive-paper);
   font-family: var(--archive-sans);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
 .reader-font-control button {
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+  width: 100%;
+  height: 100%;
+  min-height: 44px;
   color: var(--archive-ink-soft);
   background: transparent;
   border: 0;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .reader-font-control button:hover:not(:disabled) {
@@ -686,7 +693,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .reader-font-control button:focus-visible {
   outline: 2px solid var(--archive-oxblood);
-  outline-offset: -2px;
+  outline-offset: -3px;
 }
 
 .reader-font-control button:disabled {
@@ -695,12 +702,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reader-font-control output {
-  min-height: 2.5rem;
+  min-height: 44px;
   display: grid;
   place-items: center;
   border-inline: 1px solid var(--archive-rule);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--archive-ink);
+  letter-spacing: 0.01em;
+}
+
+/* 移动端字号控件：更紧凑，高度保持 44，但列宽稍减 */
+@media (max-width: 640px) {
+  .reader-font-control {
+    grid-template-columns: 44px 52px 44px;
+    height: 44px;
+  }
 }
 
 .archive-home {

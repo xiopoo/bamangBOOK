@@ -8,6 +8,14 @@
     "person": "buffett"
   },
   {
+    "title": "芒格：哈佛中学演讲 1986",
+    "year": 1986,
+    "wordCount": 3925,
+    "contentLength": 4388,
+    "fileName": "芒格：哈佛中学演讲_1986.md",
+    "person": "munger"
+  },
+  {
     "title": "巴菲特：斯坦福法学院演讲 1990",
     "year": 1990,
     "wordCount": 8853,
@@ -32,12 +40,36 @@
     "person": "schloss"
   },
   {
+    "title": "芒格：南加大商学院演讲 1994",
+    "year": 1994,
+    "wordCount": 21944,
+    "contentLength": 25315,
+    "fileName": "芒格：南加大商学院演讲_1994.md",
+    "person": "munger"
+  },
+  {
     "title": "巴菲特：内布拉斯加大学演讲 1994",
     "year": 1994,
     "wordCount": 23981,
     "contentLength": 28777,
     "fileName": "巴菲特：内布拉斯加大学演讲_1994.md",
     "person": "buffett"
+  },
+  {
+    "title": "芒格：斯坦福法学院演讲 1996",
+    "year": 1996,
+    "wordCount": 24937,
+    "contentLength": 28591,
+    "fileName": "芒格：斯坦福法学院演讲_1996.md",
+    "person": "munger"
+  },
+  {
+    "title": "芒格：哈佛法学院演讲 1998",
+    "year": 1998,
+    "wordCount": 6392,
+    "contentLength": 7415,
+    "fileName": "芒格：哈佛法学院演讲_1998.md",
+    "person": "munger"
   },
   {
     "title": "巴菲特：华盛顿大学谈话 1998",
@@ -120,11 +152,25 @@
     "person": "munger"
   },
   {
+    "title": "芒格：论学院派经济学 2003",
+    "year": 2003,
+    "wordCount": 25392,
+    "contentLength": 29636,
+    "fileName": "芒格：论学院派经济学_2003.md",
+    "person": "munger"
+  },
+  {
     "title": "芒格：DJ 年会 2013",
     "year": 2013,
     "wordCount": 22423,
     "contentLength": 26671,
     "fileName": "芒格：DJ_年会_2013.md",
+    "person": "munger"
+  },
+  {
+    "title": "芒格：南加大法学院演讲 2007",
+    "fileName": "芒格：南加大法学院演讲_2007.md",
+    "year": 2007,
     "person": "munger"
   }
 ]

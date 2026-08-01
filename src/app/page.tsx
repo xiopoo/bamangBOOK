@@ -44,13 +44,6 @@ const contentEntrances = [
   },
   {
     number: '04',
-    href: '/bloggers',
-    title: '博主文章',
-    eyebrow: '四位写作者的持续观察',
-    description: '唐僧的碎碎念、在苍茫中传灯、方伟看十年与梁孝永康的长期文章。',
-  },
-  {
-    number: '05',
     href: '/search',
     title: '全站搜索',
     eyebrow: '按人物、公司、年份检索',
@@ -66,7 +59,6 @@ const contentMap = [
   ['05', '公司研究', '商业模式'],
   ['06', '投资方法', '概念与判断'],
   ['07', '商业史文章', '长期视角'],
-  ['08', '博主文章', '四位写作者'],
 ]
 
 export default function HomePage() {

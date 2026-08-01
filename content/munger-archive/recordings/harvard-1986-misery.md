@@ -25,8 +25,6 @@ source: "https://mungerarchive.com/zh/recordings/harvard-1986-misery/"
 
 [inversion](https://mungerarchive.com/zh/recordings/?topic=inversion) [misery](https://mungerarchive.com/zh/recordings/?topic=misery) [life advice](https://mungerarchive.com/zh/recordings/?topic=life%20advice) [reliability](https://mungerarchive.com/zh/recordings/?topic=reliability)
 
-本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E5%93%88%E4%BD%9B%E4%B8%AD%E5%AD%A6%E6%BC%94%E8%AE%B2_1986.md)可读。
-
 他的原话——出自本场谈话
 
 以下语录均出自本场谈话。

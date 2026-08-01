@@ -30,7 +30,6 @@ const sections = [
       { href: '/munger/wesco', icon: '❓', label: 'Wesco 股东大会', count: '14' },
       { href: '/poor-charlies-almanack', icon: '📕', label: '穷查理宝典' },
       { href: '/munger/archive', icon: '🎧', label: '演讲与访谈', count: '35' },
-      { href: '/munger/originals', icon: '📜', label: 'Wesco 股东信', count: '13' },
       { href: '/model', icon: '🧠', label: '思维模型', count: '232' },
     ],
   },

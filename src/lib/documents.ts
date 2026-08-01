@@ -8,8 +8,6 @@ export interface DocumentItem {
   contentLength: number
   fileName: string
   person: string | string[]
-  /** 索引迁移前的主题目录路径（如 01-投资理念/…），用于主题分类展示 */
-  origFileName?: string
 }
 
 export interface DocumentData {
@@ -56,14 +54,14 @@ export function getDocuments(category: DocumentCategory, personId?: string): Doc
   }
   try {
     const documents: DocumentItem[] = JSON.parse(readFileSync(indexPath, 'utf-8'))
-    
+
     if (personId) {
       return documents.filter(doc => {
         const persons = Array.isArray(doc.person) ? doc.person : [doc.person]
         return persons.includes(personId)
       })
     }
-    
+
     return documents
   } catch {
     return []
@@ -78,15 +76,15 @@ export function getDocumentByFileName(category: DocumentCategory, fileName: stri
   const dir = path.join(process.cwd(), categories[category].dir)
   const normalizedFileName = fileName.endsWith('.md') ? fileName : `${fileName}.md`
   const filePath = path.join(dir, normalizedFileName)
-  
+
   if (!existsSync(filePath)) {
     return null
   }
-  
+
   const content = readFileSync(filePath, 'utf-8')
   const documents = getDocuments(category)
   const doc = documents.find(d => d.fileName === normalizedFileName || d.fileName === fileName)
-  
+
   return {
     title: doc?.title || normalizedFileName.replace('.md', ''),
     content,

@@ -103,82 +103,57 @@ export default function LetterReader({
   }, [topConcepts, relatedPeople, relatedCompanies])
 
   const markdownComponents = useMemo(() => ({
-    // 隐藏 h1：页面 header 已显示标题，内容中的 h1 冗余且字号过大
+    // 隐藏 h1：页面 header 已显示标题，内容中的 h1 冗余且字号过大。
     h1: () => null,
-    a: ({ href, children }: any) => (
-      <a href={href} className="text-primary hover:text-primary-light underline underline-offset-4 decoration-1">
-        {children}
-      </a>
-    ),
+    // 其余元素样式不再硬编码 Tailwind utility，统一走 reading.css 的
+    // .prose (CN Reading Typography) 全局排版规范。
     h2: ({ children }: any) => {
       const text = typeof children === 'string' ? children : ''
-      return (
-        <h2 
-          id={slugify(text)}
-          className="text-2xl md:text-2.5xl font-serif font-bold text-text dark:text-dark-text mt-10 mb-5 flex items-center gap-3 pb-2 border-b border-primary/20 dark:border-primary/30"
-        >
-          <span className="w-1 h-8 bg-primary dark:bg-primary-light rounded-full" />
-          {children}
-        </h2>
-      )
+      return <h2 id={slugify(text)}>{children}</h2>
     },
     h3: ({ children }: any) => {
       const text = typeof children === 'string' ? children : ''
-      return (
-        <h3 
-          id={slugify(text)}
-          className="text-xl font-semibold text-text dark:text-dark-text mt-8 mb-4 flex items-center gap-2"
-        >
-          <span className="w-2 h-2 bg-primary/60 dark:bg-primary-light/60 rounded-full" />
-          {children}
-        </h3>
-      )
+      return <h3 id={slugify(text)}>{children}</h3>
     },
-    p: ({ children }: any) => (
-      <p className="text-text/80 dark:text-dark-text leading-[1.8] text-justify [text-indent:2em] mb-6">{children}</p>
+    h4: ({ children }: any) => <h4>{children}</h4>,
+    h5: ({ children }: any) => <h5>{children}</h5>,
+    h6: ({ children }: any) => <h6>{children}</h6>,
+    p: ({ children }: any) => <p>{children}</p>,
+    ul: ({ children }: any) => <ul>{children}</ul>,
+    ol: ({ children }: any) => <ol>{children}</ol>,
+    li: ({ children }: any) => <li>{children}</li>,
+    blockquote: ({ children }: any) => <blockquote>{children}</blockquote>,
+    strong: ({ children }: any) => <strong>{children}</strong>,
+    em: ({ children }: any) => <em>{children}</em>,
+    code: ({ className: codeClassName, children }: any) => {
+      const isBlock =
+        (typeof codeClassName === 'string' && /language-/.test(codeClassName)) ||
+        String(children).includes('\n')
+      if (isBlock) return <code className={codeClassName}>{children}</code>
+      return <code>{children}</code>
+    },
+    pre: ({ children }: any) => <pre>{children}</pre>,
+    table: ({ children }: any) => <table>{children}</table>,
+    thead: ({ children }: any) => <thead>{children}</thead>,
+    tbody: ({ children }: any) => <tbody>{children}</tbody>,
+    tr: ({ children }: any) => <tr>{children}</tr>,
+    th: ({ children }: any) => <th>{children}</th>,
+    td: ({ children }: any) => <td>{children}</td>,
+    hr: () => <hr />,
+    a: ({ href, children }: any) => <a href={href}>{children}</a>,
+    img: ({ src, alt }: any) => (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={src} alt={alt || ''} />
     ),
-    ul: ({ children }: any) => (
-      <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>
-    ),
-    ol: ({ children }: any) => (
-      <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>
-    ),
-    li: ({ children }: any) => (
-      <li className="text-text/80 dark:text-dark-text">{children}</li>
-    ),
-    blockquote: ({ children }: any) => (
-      <blockquote className="border-l-4 border-primary pl-4 italic text-text-muted dark:text-dark-muted my-6 bg-bg-card dark:bg-dark-card py-3 pr-4 rounded-r-lg">
-        {children}
-      </blockquote>
-    ),
-    strong: ({ children }: any) => (
-      <strong className="font-semibold text-text dark:text-dark-text">{children}</strong>
-    ),
-    em: ({ children }: any) => <em className="italic">{children}</em>,
-    code: ({ children }: any) => (
-      <code className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>
-    ),
-    pre: ({ children }: any) => (
-      <pre className="bg-gray-900 dark:bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">{children}</pre>
-    ),
-    table: ({ children }: any) => (
-      <div className="max-w-full overflow-x-auto my-6 rounded-lg border border-gray-200 dark:border-dark-border">
-        <table className="w-full min-w-max border-collapse text-sm">{children}</table>
-      </div>
-    ),
-    th: ({ children }: any) => (
-      <th className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2.5 bg-gray-50 dark:bg-gray-800 font-semibold text-right first:text-left dark:text-dark-text">{children}</th>
-    ),
-    td: ({ children }: any) => (
-      <td className="whitespace-nowrap border border-gray-200 dark:border-dark-border px-3 py-2 text-right first:text-left dark:text-dark-text">{children}</td>
-    ),
-    hr: () => <hr className="my-8 border-gray-200 dark:border-dark-border" />,
   }), [])
 
   const renderContent = (content: string, index?: number) => {
     const processed = processContent(normalizeLetterMarkdown(content))
     return (
-      <div key={index ?? 0} className="prose prose-gray min-w-0 max-w-none break-words dark:text-dark-text">
+      <div
+        key={index ?? 0}
+        className="prose mx-auto overflow-x-hidden break-words"
+      >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processed}
         </ReactMarkdown>

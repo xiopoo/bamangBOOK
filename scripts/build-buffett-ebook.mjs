@@ -104,11 +104,10 @@ function renderNode(node) {
     case "listItem":
       return `<li>${node.children.map(renderNode).join("\n")}</li>`;
     case "link": {
-      const href = /^https?:\/\//i.test(node.url) ? node.url : "#";
-      return `<a href="${esc(href)}">${renderInlineChildren(node)}</a>`;
+      return `<span class="internal-link">${renderInlineChildren(node)}</span>`;
     }
     case "image":
-      return `<span class="image-note">〔图：${esc(node.alt || "原文插图")}〕</span>`;
+      return "";
     case "break":
       return "<br />";
     case "thematicBreak":
@@ -120,7 +119,7 @@ function renderNode(node) {
     case "tableCell":
       return `<td>${renderInlineChildren(node)}</td>`;
     case "html":
-      return `<p class="raw-note">${esc(node.value)}</p>`;
+      return "";
     case "footnoteDefinition":
       return `<aside class="footnote" id="fn-${esc(node.identifier)}">${node.children.map(renderNode).join("")}</aside>`;
     case "footnoteReference":
@@ -145,51 +144,141 @@ function stripDuplicateTitle(markdown, title) {
   return lines.join("\n").replace(/\[\[([^\]]+)\]\]/g, "$1");
 }
 
+function sanitizeBookMarkdown(markdown) {
+  const cleaned = markdown
+    .split(/\r?\n/)
+    .filter((line) => {
+      const text = line.trim();
+      if (/^(?:https?:\/\/|www\.)\S+$/i.test(text)) return false;
+      if (/^(?:来源|原文链接|参考链接|参考资料|图片来源|视频来源|网址|链接|source)\s*[:：].*(?:https?:\/\/|www\.)/i.test(text)) return false;
+      if (/^(?:点击查看|点击阅读|扫码|关注公众号|相关阅读)\b/i.test(text)) return false;
+      return true;
+    })
+    .join("\n")
+    .replace(/\[(?:https?:\/\/|www\.)[^\]]+\]\([^)]*\)/gi, "")
+    .replace(/https?:\/\/[^\s)>\]]+/gi, "")
+    .replace(/www\.[a-z0-9.-]+\.(?:com|org|net|gov|edu|info|biz|cn|co)(?:\/[a-z0-9._~:/?#[\]@!$&'()*+,;=%-]*)?/gi, "");
+  return cleaned;
+}
+
 const mdFiles = (dir) => walk(path.join(ROOT, dir), (file) => file.endsWith(".md"));
 const byYearThenName = (a, b) => extractYear(a) - extractYear(b) || a.localeCompare(b, "zh-CN");
+const namedFiles = (dir, names) => names.map((name) => path.join(ROOT, dir, name));
+
+function partnershipOrder(file) {
+  const name = path.basename(file);
+  const year = extractYear(file);
+  let sequence = 12.5;
+  if (/interim/.test(name)) sequence = 6;
+  const month = name.match(/-(\d{1,2})月(?:(\d{1,2})日)?-/);
+  if (month) sequence = Number(month[1]) + Number(month[2] || 0) / 100;
+  if (/annual/.test(name)) sequence = 12.9;
+  if (/liquidation/.test(name)) sequence = 13;
+  if (/bond/.test(name)) sequence = 1;
+  return [year, sequence, name];
+}
+
+const sortPartnershipChronologically = (a, b) => {
+  const keyA = partnershipOrder(a);
+  const keyB = partnershipOrder(b);
+  return keyA[0] - keyB[0] || keyA[1] - keyB[1] || keyA[2].localeCompare(keyB[2], "zh-CN");
+};
+
+const introArticleNames = new Set([
+  "巴菲特青春时代.md",
+  "巴菲特：500_亿美元的决定.md",
+  "伯克希尔_50_周年：过去、现在和未来.md",
+]);
+const earlyArticleNames = new Set([
+  "我最看好的股票：GEICO_保险_1951.md",
+  "我最看好的股票：西部保险_1953.md",
+  "我最看好的股票：人寿保险_1957.md",
+  "我最看好的股票：油气资产管理公司_1957.md",
+]);
+const duplicateCompilationNames = new Set([
+  "巴菲特合伙契约_1956.md",
+  "巴菲特合伙公司时代.md",
+  "巴菲特估值逻辑.md",
+  "巴菲特推荐过的书籍.md",
+]);
+const allBuffettArticles = mdFiles("content/articles/buffett");
+const partnershipAgreement = path.join(ROOT, "content", "partnership", "partnership_1956-有限合伙协议.md");
+const partnershipLetters = mdFiles("content/partnership")
+  .filter((file) => file !== partnershipAgreement)
+  .sort(sortPartnershipChronologically);
+const supplementalArticles = allBuffettArticles
+  .filter((file) => !introArticleNames.has(path.basename(file)))
+  .filter((file) => !earlyArticleNames.has(path.basename(file)))
+  .filter((file) => !duplicateCompilationNames.has(path.basename(file)))
+  .sort((a, b) => {
+    const yearA = extractYear(a) || 9999;
+    const yearB = extractYear(b) || 9999;
+    return yearA - yearB || a.localeCompare(b, "zh-CN");
+  });
 
 const volumes = [
   {
-    title: "卷一　人物、方法与商业判断",
-    short: "人物与方法",
-    description: "从生平、投资框架、企业分析与资本配置切入，建立理解巴菲特的基础坐标。",
+    title: "卷01　理解巴菲特：人生、选择与伯克希尔",
+    short: "理解巴菲特",
+    description: "先认识这个人，再理解他的关键选择：从青年时代、职业转折到伯克希尔五十年的自我复盘。",
     files: [
       path.join(ROOT, "content", "people", "沃伦·巴菲特.md"),
-      ...mdFiles("content/articles/buffett").sort(byYearThenName),
+      ...namedFiles("content/articles/buffett", [
+        "巴菲特青春时代.md",
+        "巴菲特：500_亿美元的决定.md",
+        "伯克希尔_50_周年：过去、现在和未来.md",
+      ]),
     ],
   },
   {
-    title: "卷二　合伙人时代",
-    short: "合伙人信",
-    description: "1956 至 1970 年的合伙协议与致合伙人信，记录早期策略、业绩尺度与受托责任。",
-    files: mdFiles("content/partnership").sort(byYearThenName),
+    title: "卷02　起点与方法：早期文章及合伙人信",
+    short: "早期实践",
+    description: "从 1951 年的个股研究开始，依次阅读 1956 年合伙协议及至 1970 年的合伙人信，观察方法如何在实践中成形。",
+    files: [
+      ...namedFiles("content/articles/buffett", [
+        "我最看好的股票：GEICO_保险_1951.md",
+        "我最看好的股票：西部保险_1953.md",
+      ]),
+      partnershipAgreement,
+      ...namedFiles("content/articles/buffett", [
+        "我最看好的股票：人寿保险_1957.md",
+        "我最看好的股票：油气资产管理公司_1957.md",
+      ]),
+      ...partnershipLetters,
+    ],
   },
   {
-    title: "卷三　伯克希尔股东信",
+    title: "卷03　资本配置主线：伯克希尔股东信",
     short: "股东信",
-    description: "1965 至 2025 年的伯克希尔文本，呈现企业经营、保险浮存金、资本配置与长期主义。",
+    description: "按年份连续阅读 1965 至 2025 年股东信，跟踪保险浮存金、企业收购、资本配置与长期主义的演进。",
     files: mdFiles("content/letters").sort(byYearThenName),
   },
   {
-    title: "卷四　股东大会问答",
+    title: "卷04　原则的现场检验：伯克希尔股东大会",
     short: "股东大会",
-    description: "收录伯克希尔股东大会问答、实录与巴菲特专题问答；排除 Wesco 专场。",
+    description: "按年份阅读 1985 至 2025 年问答与实录，看巴菲特如何用同一套原则回应不断变化的现实问题。",
     files: mdFiles("content/qa")
       .filter((file) => !/Wesco|发布会/.test(path.basename(file)))
       .sort(byYearThenName),
   },
   {
-    title: "卷五　公开演讲",
-    short: "演讲",
-    description: "面向大学、商学院与公共论坛的演讲，聚焦投资、职业选择、诚信与人生。",
+    title: "卷05　专题写作：商业、市场与管理备忘录",
+    short: "专题写作",
+    description: "把散见于报刊、备忘录和专题文件中的完整文章放在主信件之后，按时间阅读，不再打断股东信主线。",
+    files: supplementalArticles,
+  },
+  {
+    title: "卷06　公开演讲：投资、职业与人生",
+    short: "公开演讲",
+    description: "按时间整理大学、商学院与公共论坛演讲，聚焦价值投资、职业选择、诚信与人生判断。",
     files: mdFiles("content/talks")
       .filter((file) => /巴菲特/.test(path.basename(file)))
       .sort(byYearThenName),
   },
   {
-    title: "卷六　访谈与对话",
-    short: "访谈",
-    description: "巴菲特接受媒体、商学院与公共机构访谈的记录；不收录以其他人物为主体的专访。",
+    title: "卷07　访谈与课堂：在具体问题中思考",
+    short: "访谈与课堂",
+    description: "按时间整理媒体专访、危机访谈与学生问答，用于观察巴菲特如何在具体情境中解释同一套原则。",
     files: mdFiles("content/interviews")
       .filter((file) => /巴菲特/.test(path.basename(file)) && !/苏珊/.test(path.basename(file)))
       .sort(byYearThenName),
@@ -204,11 +293,12 @@ for (const volume of volumes) {
     if (!fs.existsSync(file)) continue;
     const raw = fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "");
     const parsed = matter(raw);
-    const normalized = parsed.content.replace(/\s+/g, " ").trim();
+    const bookContent = sanitizeBookMarkdown(parsed.content);
+    const normalized = bookContent.replace(/\s+/g, " ").trim();
     const hash = crypto.createHash("sha256").update(normalized).digest("hex");
     if (!normalized || seenHashes.has(hash)) continue;
     seenHashes.add(hash);
-    const title = titleFromMarkdown(file, parsed.content, parsed.data);
+    const title = titleFromMarkdown(file, bookContent, parsed.data);
     chapterIndex += 1;
     volume.chapters.push({
       id: `chapter-${String(chapterIndex).padStart(3, "0")}`,
@@ -216,7 +306,7 @@ for (const volume of volumes) {
       title,
       source: path.relative(ROOT, file),
       year: extractYear(file),
-      markdown: stripDuplicateTitle(parsed.content, title),
+      markdown: stripDuplicateTitle(bookContent, title),
       chars: normalized.length,
     });
   }
@@ -303,12 +393,12 @@ const coverSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2
 <text x="220" y="460" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="92" font-weight="700" fill="#111111">巴菲特文集</text>
 <text x="224" y="585" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="38" fill="${ACCENT}" letter-spacing="8">THE WARREN BUFFETT READER</text>
 <line x1="224" y1="690" x2="1260" y2="690" stroke="#111111" stroke-width="3"/>
-<text x="224" y="830" font-family="Noto Serif CJK SC, Songti SC, serif" font-size="48" fill="#111111">合伙人信 · 股东信 · 股东大会</text>
-<text x="224" y="905" font-family="Noto Serif CJK SC, Songti SC, serif" font-size="48" fill="#111111">演讲 · 访谈 · 专题文章</text>
+<text x="224" y="830" font-family="Noto Serif CJK SC, Songti SC, serif" font-size="48" fill="#111111">人物 · 合伙 · 股东信</text>
+<text x="224" y="905" font-family="Noto Serif CJK SC, Songti SC, serif" font-size="48" fill="#111111">年会 · 写作 · 演讲 · 访谈</text>
 <text x="224" y="1130" font-family="Georgia, serif" font-size="210" font-weight="700" fill="#111111">1956</text>
 <text x="224" y="1320" font-family="Georgia, serif" font-size="90" fill="${ACCENT}">— 2025</text>
 <rect x="224" y="1500" width="860" height="12" fill="#111111"/>
-<text x="224" y="2200" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="38" fill="#111111">巴芒书院资料库 · 整理版</text>
+<text x="224" y="2200" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="38" fill="#111111">巴芒书院资料库 · 精读编排版</text>
 <circle cx="1350" cy="2200" r="78" fill="${ACCENT}"/>
 <text x="1350" y="2224" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#FFFFFF">B</text>
 </svg>`;
@@ -320,7 +410,7 @@ const titlePage = wrapXhtml(
     <div class="red-rule"></div>
     <h1>巴菲特文集</h1>
     <p>1956—2025</p>
-    <p>合伙人信 · 股东信 · 股东大会 · 演讲 · 访谈 · 专题文章</p>
+    <p>人物 · 合伙 · 股东信 · 年会 · 写作 · 演讲 · 访谈</p>
     <p class="chapter-source">依据本地“巴芒书院”资料库整理<br />配色：${ACCENT} / 黑 / 白</p>
   </section>`,
   "frontmatter",
@@ -330,9 +420,9 @@ const editorialNote = wrapXhtml(
   "编者说明",
   `<div class="eyebrow">编者说明</div>
   <h1>如何阅读这部文集</h1>
-  <p>这不是一本替读摘要，而是一部按阅读路径重新编排的巴菲特资料集。全书以原始文稿为主体，把散落在资料库中的合伙人信、伯克希尔股东信、股东大会记录、演讲、访谈与专题文章统一到一套目录中。</p>
-  <div class="note"><strong>三条推荐路径</strong><p>初读者可从“人物与方法”进入；研究投资框架可依次阅读“合伙人时代”与“伯克希尔股东信”；查找现场观点可直接进入“股东大会”“演讲”或“访谈”。</p></div>
-  <p>整理时排除了以芒格、Wesco、施洛斯等其他人物为主体的专篇，以及网站生成的 HTML/TXT 重复文件。正文只做结构与版式标准化，不改写原文观点。个别原稿中的内部链接、图像占位与网页语法，在电子书中转为可读文本提示。</p>
+  <p>这不是一本替读摘要，而是一部为连续阅读和长期备存重新编排的巴菲特资料集。全书沿着“人物与选择—早期实践—股东信—股东大会—专题写作—演讲访谈”的逻辑展开，使思想形成、资本配置实践与现场解释彼此衔接。</p>
+  <div class="note"><strong>三条推荐路径</strong><p>初读者先读卷一、卷二，建立人物与方法背景；系统研究投资和资本配置，顺序阅读卷三、卷四；围绕具体议题查考，可进入卷五至卷七。</p></div>
+  <p>整理时删除了四篇会重复收录原始材料的派生汇编，并排除了以芒格、Wesco、施洛斯等其他人物为主体的专篇及网站构建副本。正文中的外部链接、来源尾注、推广语、图像占位和网页语法均已清除；链接所承载的有效文字予以保留。正文只做结构、清理与版式标准化，不改写原文观点。</p>
   <p>年份依据文件名和资料库编目；不同来源的译名、标点与事实表述可能存在差异，引用或用于研究时仍应回查原始出处。</p>`,
   "frontmatter",
 );
@@ -373,11 +463,11 @@ const opf = `<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="zh-CN">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
   <dc:identifier id="bookid">${identifier}</dc:identifier>
-  <dc:title>巴菲特文集：1956—2025</dc:title>
+  <dc:title>巴菲特文集：精读编排版（1956—2025）</dc:title>
   <dc:language>zh-CN</dc:language>
   <dc:creator>沃伦·巴菲特等</dc:creator>
   <dc:publisher>巴芒书院资料库</dc:publisher>
-  <dc:description>合伙人信、伯克希尔股东信、股东大会、演讲、访谈与专题文章整理版。</dc:description>
+  <dc:description>按人物、早期实践、股东信、股东大会、专题写作、演讲与访谈统一编排的中文精读资料集。</dc:description>
   <meta property="dcterms:modified">${modified}</meta>
   <meta name="cover" content="cover-image"/>
 </metadata>
@@ -426,8 +516,7 @@ for (const [volumeIndex, volume] of volumes.entries()) {
   for (const chapter of volume.chapters) {
     const body = `<div class="chapter-kicker">${esc(volume.short)}${chapter.year ? ` · ${chapter.year}` : ""}</div>
       <h1>${esc(chapter.title)}</h1>
-      ${markdownToXhtml(chapter.markdown)}
-      <p class="chapter-source">资料库来源：${esc(chapter.source)}</p>`;
+      ${markdownToXhtml(chapter.markdown)}`;
     zip.file(`OEBPS/${chapter.href}`, wrapXhtml(chapter.title, body, "chapter"));
   }
 }
@@ -442,7 +531,7 @@ fs.writeFileSync(EPUB_PATH, epubBuffer);
 const reportRows = volumes
   .map((volume) => `| ${volume.title} | ${volume.chapters.length} | ${volume.chapters.reduce((sum, c) => sum + c.chars, 0).toLocaleString("zh-CN")} |`)
   .join("\n");
-const report = `# 《巴菲特文集：1956—2025》编目报告
+const report = `# 《巴菲特文集：精读编排版》编目报告
 
 ## 成书概况
 
@@ -450,8 +539,10 @@ const report = `# 《巴菲特文集：1956—2025》编目报告
 - 主配色：\`${ACCENT}\`、黑、白
 - 总篇数：${allChapters.length}
 - 正文字符数（约）：${totalChars.toLocaleString("zh-CN")}
-- 重复处理：按正文 SHA-256 精确去重
+- 重复处理：按正文 SHA-256 精确去重，并人工排除重复转录原始材料的派生汇编
 - 内容边界：以巴菲特为主体；排除 Wesco、芒格、施洛斯等其他人物专篇和网站构建副本
+- 正文清理：删除外部链接地址、来源尾注、推广语、图像占位和网页语法；保留链接中的有效文字
+- 人工排除的派生汇编：《巴菲特合伙契约（1956）》《巴菲特合伙公司时代》《巴菲特估值逻辑》《巴菲特推荐过的书籍》
 
 | 分卷 | 篇数 | 字符数 |
 |---|---:|---:|
@@ -459,12 +550,13 @@ ${reportRows}
 
 ## 编辑结构
 
-1. 人物、方法与商业判断
-2. 合伙人时代
-3. 伯克希尔股东信
-4. 股东大会问答
-5. 公开演讲
-6. 访谈与对话
+1. 理解巴菲特：人生、选择与伯克希尔
+2. 起点与方法：早期文章及合伙人信
+3. 资本配置主线：伯克希尔股东信
+4. 原则的现场检验：伯克希尔股东大会
+5. 专题写作：商业、市场与管理备忘录
+6. 公开演讲：投资、职业与人生
+7. 访谈与课堂：在具体问题中思考
 
 ## 版式系统
 
@@ -517,7 +609,7 @@ main { max-width: none; margin: 0; padding: 0; }
 const printToc = volumes
   .map(
     (volume, index) => `<section><h2>${esc(volume.title)}</h2><ol>${volume.chapters
-      .map((chapter) => `<li><a href="#${chapter.id}">${esc(chapter.title)}</a></li>`)
+      .map((chapter) => `<li><span>${esc(chapter.title)}</span></li>`)
       .join("")}</ol></section>`,
   )
   .join("");
@@ -534,7 +626,6 @@ const printContent = volumes
         (chapter) => `<article class="print-chapter" id="${chapter.id}">
           <div class="chapter-kicker">${esc(volume.short)}${chapter.year ? ` · ${chapter.year}` : ""}</div>
           <h1>${esc(chapter.title)}</h1>
-          <p class="chapter-source">资料库来源：${esc(chapter.source)}</p>
           ${markdownToXhtml(chapter.markdown)}
         </article>`,
       )
@@ -549,15 +640,15 @@ svg{display:block;width:210mm;height:336mm;transform:scaleY(.884);transform-orig
 fs.writeFileSync(PRINT_COVER_PATH, printCover);
 
 const printBody = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>${printCss}</style>
-<title>巴菲特文集：1956—2025</title></head><body><main>
+<title>巴菲特文集：精读编排版（1956—2025）</title></head><body><main>
 <section class="print-title"><div class="eyebrow">THE WARREN BUFFETT READER</div><div class="red-rule"></div>
-<h1>巴菲特文集</h1><p>1956—2025</p><p>合伙人信 · 股东信 · 股东大会 · 演讲 · 访谈 · 专题文章</p>
+<h1>巴菲特文集</h1><p>1956—2025</p><p>人物 · 合伙 · 股东信 · 年会 · 写作 · 演讲 · 访谈</p>
 <p class="chapter-source">依据本地“巴芒书院”资料库整理<br />配色：${ACCENT} / 黑 / 白</p></section>
 <section class="print-toc"><div class="eyebrow">CONTENTS</div><h1>目录</h1>${printToc}</section>
 <section class="print-chapter"><div class="eyebrow">编者说明</div><h1>如何阅读这部文集</h1>
-<p>这不是一本替读摘要，而是一部按阅读路径重新编排的巴菲特资料集。全书以原始文稿为主体，把散落在资料库中的合伙人信、伯克希尔股东信、股东大会记录、演讲、访谈与专题文章统一到一套目录中。</p>
-<div class="note"><strong>三条推荐路径</strong><p>初读者可从“人物与方法”进入；研究投资框架可依次阅读“合伙人时代”与“伯克希尔股东信”；查找现场观点可直接进入“股东大会”“演讲”或“访谈”。</p></div>
-<p>整理时排除了以芒格、Wesco、施洛斯等其他人物为主体的专篇，以及网站生成的 HTML/TXT 重复文件。正文只做结构与版式标准化，不改写原文观点。</p></section>
+<p>这不是一本替读摘要，而是一部为连续阅读和长期备存重新编排的巴菲特资料集。全书沿着“人物与选择—早期实践—股东信—股东大会—专题写作—演讲访谈”的逻辑展开，使思想形成、资本配置实践与现场解释彼此衔接。</p>
+<div class="note"><strong>三条推荐路径</strong><p>初读者先读卷一、卷二，建立人物与方法背景；系统研究投资和资本配置，顺序阅读卷三、卷四；围绕具体议题查考，可进入卷五至卷七。</p></div>
+<p>整理时删除了四篇会重复收录原始材料的派生汇编，并排除了以芒格、Wesco、施洛斯等其他人物为主体的专篇及网站构建副本。正文中的外部链接、来源尾注、推广语、图像占位和网页语法均已清除；链接所承载的有效文字予以保留。正文只做结构、清理与版式标准化，不改写原文观点。</p></section>
 ${printContent}</main></body></html>`;
 fs.writeFileSync(PRINT_BODY_PATH, printBody);
 

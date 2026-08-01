@@ -7,8 +7,10 @@ interface FontSizeControlFixedProps {
 }
 
 const STORAGE_KEY = 'reader-font-size'
-const MIN_SIZE = 16
-const MAX_SIZE = 24
+// 与 reading.css:root 中 --reading-base-min / --reading-base-default / --reading-base-max 对齐
+const MIN_SIZE = 17
+const DEFAULT_SIZE = 19
+const MAX_SIZE = 26
 const STEP = 2
 
 function clampSize(value: number) {
@@ -16,16 +18,23 @@ function clampSize(value: number) {
 }
 
 function applySize(value: number) {
-  document.documentElement.style.setProperty('--text-size-base', `${value}px`)
-  document.documentElement.dataset.readerFontSize = String(value)
+  const root = document.documentElement
+  root.style.setProperty('--text-size-base', `${value}px`)
+  root.dataset.readerFontSize = String(value)
+  // FOUC 配套：保证 html.reading-no-fouc class 在应用尺寸时依然生效
+  root.classList.add('reading-no-fouc')
 }
 
-export default function FontSizeControlFixed({ defaultSize = 18 }: FontSizeControlFixedProps) {
+export default function FontSizeControlFixed({
+  defaultSize = DEFAULT_SIZE,
+}: FontSizeControlFixedProps) {
   const [fontSize, setFontSize] = useState(defaultSize)
 
   useEffect(() => {
     const stored = Number(window.localStorage.getItem(STORAGE_KEY))
-    const initial = clampSize(Number.isFinite(stored) && stored > 0 ? stored : defaultSize)
+    const initial = clampSize(
+      Number.isFinite(stored) && stored > 0 ? stored : defaultSize
+    )
     setFontSize(initial)
     applySize(initial)
   }, [defaultSize])
@@ -56,7 +65,7 @@ export default function FontSizeControlFixed({ defaultSize = 18 }: FontSizeContr
         aria-label="缩小正文文字"
         title="缩小字体"
       >
-        A-
+        A−
       </button>
       <output aria-live="polite" aria-label="当前正文字号">
         {fontSize}px

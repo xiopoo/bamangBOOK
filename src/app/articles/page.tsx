@@ -6,14 +6,14 @@ import PageFooter from '@/components/PageFooter'
 import { getDocuments } from '@/lib/documents'
 
 const CATEGORIES = [
-  { dir: '01-投资理念', label: '投资理念与方法', desc: '估值方法、能力圈、市场先生、所有者收益等', icon: '🎯', count: 14 },
+  { dir: '01-投资理念', label: '投资理念与方法', desc: '估值方法、能力圈、市场先生、所有者收益等', icon: '🎯', count: 15 },
   { dir: '02-股市宏观', label: '股市与宏观判断', desc: '1974-2008 年的关键市场判断、通胀、美元', icon: '📊', count: 15 },
   { dir: '03-公司分析', label: '公司/行业分析', desc: 'GEICO、喜诗糖果、BNSF与早期投资案例', icon: '🏢', count: 12 },
   { dir: '04-人物传记', label: '人物传记与纪念', desc: '格雷厄姆、芒格、巴菲特青春、卢米斯', icon: '👤', count: 11 },
   { dir: '05-政策社会', label: '政策与社会评论', desc: '股票期权、股息税、慈善、收入分配', icon: '⚖️', count: 5 },
   { dir: '06-备忘录', label: '致股东信/备忘录', desc: '致经理人备忘录、所罗门股东信、股东手册', icon: '📋', count: 6 },
-  { dir: '07-伯克希尔史', label: '伯克希尔历史', desc: '合伙时代、伯克希尔 50 年、投资历史', icon: '🏛️', count: 6 },
-  { dir: '08-芒格专题', label: '芒格专题', desc: '芒格相关专题文章', icon: '🧩', count: 1 },
+  { dir: '07-伯克希尔史', label: '伯克希尔历史', desc: '合伙时代、伯克希尔 50 年、投资历史', icon: '🏛️', count: 7 },
+  { dir: '08-芒格专题', label: '芒格专题', desc: '实践思维演讲、学院派经济学、DJ 年会', icon: '🧩', count: 5 },
   { dir: '09-其他', label: '其他', desc: '杰米·戴蒙致股东信、财富杂志·恐龙', icon: '📎', count: 2 },
 ]
 
@@ -23,10 +23,9 @@ export default function ArticlesPage() {
   const totalWords = documents.reduce((sum, d) => sum + d.wordCount, 0)
 
   // Group documents by their subdirectory prefix
-  // 索引 fileName 现按人物组织（buffett/other/munger），分类仍沿用主题目录（origFileName）
   const docsByCategory = CATEGORIES.map(cat => ({
     ...cat,
-    docs: documents.filter(d => (d.origFileName || d.fileName).startsWith(cat.dir + '/'))
+    docs: documents.filter(d => d.fileName.startsWith(cat.dir + '/'))
   }))
 
   return (

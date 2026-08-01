@@ -57,7 +57,7 @@ export default function ThinkerArchivePage({
 
       <section className={styles.ideas}>
         <header>
-          <p>THE IDEAS</p>
+          <p>核心思想</p>
           <h2>思想不是清单，而是一组彼此制约的判断</h2>
         </header>
         <div>
@@ -73,7 +73,7 @@ export default function ThinkerArchivePage({
 
       <section className={styles.chapters}>
         <header>
-          <p>THE LIFE</p>
+          <p>人生经历</p>
           <h2>思想怎样被经历改写</h2>
         </header>
         <ol>
@@ -90,7 +90,7 @@ export default function ThinkerArchivePage({
       <section className={styles.cases}>
         <header>
           <div>
-            <p>IN PRACTICE</p>
+            <p>实践案例</p>
             <h2>在公司里检验这些判断</h2>
           </div>
           <Link href="/companies">全部公司 →</Link>

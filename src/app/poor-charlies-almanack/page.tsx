@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { BookOpen, ChevronRight, ExternalLink, Library, Route } from 'lucide-react'
+import { BookOpen, ChevronRight, Library, Route } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import PageFooter from '@/components/PageFooter'
@@ -46,7 +46,7 @@ export default function PoorCharliesAlmanackPage() {
     <PageContainer maxWidth="6xl">
       <PageHeader
         title="《穷查理宝典》"
-        subtitle="The Essential Wit and Wisdom of Charles T. Munger"
+        subtitle="统一阅读入口"
         backHref="/munger"
         backLabel="返回芒格"
       />
@@ -55,7 +55,6 @@ export default function PoorCharliesAlmanackPage() {
         <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full border border-primary/10" />
         <div className="absolute -right-3 top-12 h-28 w-28 rounded-full border border-primary/10" />
         <div className="relative max-w-3xl">
-          <p className="mb-3 text-xs font-semibold tracking-[0.24em] text-primary">POOR CHARLIE’S ALMANACK</p>
           <h2 className="font-serif text-3xl font-bold leading-tight text-text dark:text-dark-text md:text-5xl">
             从生平到十一讲，
             <br className="hidden sm:block" />
@@ -63,7 +62,7 @@ export default function PoorCharliesAlmanackPage() {
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-gray-700 dark:text-gray-300">
             本专题把站内已有的十场中文演讲重新归入《穷查理宝典》的阅读次序，
-            卷首、前三章和第十一讲已根据文件夹中的英文稿译成中文，并与站内既有译名统一。
+            卷首、前三章和第十一讲已根据文件夹中的译稿整理，并与站内既有译名统一。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -73,15 +72,6 @@ export default function PoorCharliesAlmanackPage() {
               从序言开始
               <ChevronRight size={17} />
             </Link>
-            <a
-              href="https://www.stripe.press/poor-charlies-almanack"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-white/70 px-5 py-3 text-sm font-semibold text-primary transition hover:bg-white dark:bg-dark-card/70 dark:hover:bg-dark-card"
-            >
-              Stripe Press 英文原版
-              <ExternalLink size={16} />
-            </a>
           </div>
         </div>
       </section>
@@ -119,7 +109,7 @@ export default function PoorCharliesAlmanackPage() {
                 <p className="mt-1 text-sm text-text-muted dark:text-dark-muted">{group.description}</p>
               </div>
               <span className="hidden text-xs tracking-widest text-primary sm:block">
-                {String(group.sections.length).padStart(2, '0')} READINGS
+                {String(group.sections.length).padStart(2, '0')} 篇资料
               </span>
             </div>
 

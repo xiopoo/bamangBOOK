@@ -259,10 +259,6 @@ export default function MungerContent({
             <span>多元思维模型</span>
             <strong>{modelStats?.total ?? 0} 个 →</strong>
           </Link>
-          <Link href="/munger/originals">
-            <span>Wesco 股东信</span>
-            <strong>官方英文原文 →</strong>
-          </Link>
           <Link href="/munger/wesco">
             <span>Wesco 股东大会</span>
             <strong>中文问答 →</strong>
@@ -433,14 +429,6 @@ export default function MungerContent({
           >
             <div className="text-sm font-medium text-text dark:text-dark-text">芒格资料</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{archiveStats.total}篇</div>
-          </Link>
-          <Link
-            href="/munger/originals"
-            className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
-          >
-            <div className="text-2xl mb-2">📜</div>
-            <div className="text-sm font-medium text-text dark:text-dark-text">第一手资料</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">13篇</div>
           </Link>
           <Link
             href="/model"

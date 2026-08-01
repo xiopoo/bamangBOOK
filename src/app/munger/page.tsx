@@ -3,7 +3,6 @@ import PageFooter from '@/components/PageFooter'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
 import { getModels } from '@/lib/models'
 import { getMungerLocalArchiveStats } from '@/lib/munger-archive'
-import { getMungerOriginals } from '@/lib/munger-originals'
 import { getWescoMeetings } from '@/lib/wesco-meetings'
 import { mungerArchive } from '@/lib/thinker-archives'
 
@@ -19,7 +18,7 @@ export default function MungerPage() {
             { value: stats.total, label: '篇相关内容' },
             { value: getWescoMeetings().length, label: '场 Wesco 问答' },
             { value: getModels().length, label: '个思维模型' },
-            { value: getMungerOriginals().length, label: '封 Wesco 股东信' },
+            { value: stats.recordings, label: '篇演讲与访谈' },
           ]}
         />
       </PageContainer>

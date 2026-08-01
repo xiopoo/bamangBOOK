@@ -25,8 +25,6 @@ source: "https://mungerarchive.com/zh/recordings/ucsb-2003-academic-economics/"
 
 [economics](https://mungerarchive.com/zh/recordings/?topic=economics) [efficient-market critique](https://mungerarchive.com/zh/recordings/?topic=efficient-market%20critique) [interdisciplinary](https://mungerarchive.com/zh/recordings/?topic=interdisciplinary) [psychology](https://mungerarchive.com/zh/recordings/?topic=psychology)
 
-本站另有[中文全文](/talks/%E8%8A%92%E6%A0%BC%EF%BC%9A%E8%AE%BA%E5%AD%A6%E9%99%A2%E6%B4%BE%E7%BB%8F%E6%B5%8E%E5%AD%A6_2003.md)可读。
-
 他的原话——出自本场谈话
 
 以下语录均出自本场谈话。

@@ -12,6 +12,7 @@ const navGroups = [
     label: '内容',
     description: '信件、问答、演讲与文章',
     activePrefixes: [
+      '/reading',
       '/partnership',
       '/letters',
       '/qa',
@@ -21,18 +22,15 @@ const navGroups = [
       '/columns',
       '/books',
       '/poor-charlies-almanack',
-      '/bloggers',
-      '/munger/archive',
     ],
     links: [
+      { href: '/reading', label: '全部内容', meta: '按人物和类型浏览' },
       { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
       { href: '/letters', label: '伯克希尔股东信', meta: '1965—至今' },
-      { href: '/qa', label: '股东大会与问答', meta: '伯克希尔' },
-      { href: '/talks', label: '演讲', meta: '文字稿' },
-      { href: '/interviews', label: '访谈', meta: '文字稿' },
-      { href: '/munger/archive', label: '芒格演讲与访谈', meta: '影音 · 1986—2023' },
+      { href: '/qa', label: '股东大会与问答', meta: '现场记录' },
+      { href: '/talks', label: '演讲', meta: '公开表达' },
+      { href: '/interviews', label: '访谈', meta: '对话记录' },
       { href: '/articles', label: '文章与文集', meta: '长期写作' },
-      { href: '/bloggers', label: '博主文章', meta: '四位写作者' },
       { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '芒格演讲与文章' },
     ],
   },
@@ -40,10 +38,10 @@ const navGroups = [
     label: '人物',
     description: '巴菲特与芒格的第一手资料',
     activePrefixes: ['/buffett', '/munger'],
-    excludePrefixes: ['/munger/archive'],
     links: [
       { href: '/buffett', label: '巴菲特', meta: '人物主页' },
       { href: '/munger', label: '芒格', meta: '人物主页' },
+      { href: '/munger/archive', label: '芒格演讲与访谈', meta: '1986—2023' },
     ],
   },
   {
@@ -91,13 +89,8 @@ export default function SiteHeader() {
     return () => document.removeEventListener('mousedown', close)
   }, [])
 
-  const isGroupActive = (group: { activePrefixes: string[]; excludePrefixes?: string[] }) => {
-    const { activePrefixes, excludePrefixes = [] } = group
-    return activePrefixes.some(prefix => {
-      if (pathname !== prefix && !pathname.startsWith(`${prefix}/`)) return false
-      return !excludePrefixes.some(ex => pathname === ex || pathname.startsWith(`${ex}/`))
-    })
-  }
+  const isGroupActive = (prefixes: string[]) =>
+    prefixes.some(prefix => pathname === prefix || pathname.startsWith(`${prefix}/`))
 
   if (pathname.startsWith('/checkout') || pathname.startsWith('/payment') || pathname.startsWith('/login')) {
     return null
@@ -119,7 +112,7 @@ export default function SiteHeader() {
               >
                 <button
                   type="button"
-                  className={`archive-nav__trigger ${isGroupActive(group) ? 'is-active' : ''}`}
+                  className={`archive-nav__trigger ${isGroupActive(group.activePrefixes) ? 'is-active' : ''}`}
                   aria-expanded={isOpen}
                   onClick={() => setOpenGroup(isOpen ? null : group.label)}
                 >
