@@ -2,9 +2,11 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
+import MungerRecordingBrowser from '@/components/MungerRecordingBrowser'
 import {
   getMungerLocalArchiveGroups,
   getMungerLocalArchiveStats,
+  getMungerArchiveRecordings,
 } from '@/lib/munger-archive'
 
 export const metadata: Metadata = {
@@ -14,7 +16,9 @@ export const metadata: Metadata = {
 
 export default function MungerArchivePage() {
   const groups = getMungerLocalArchiveGroups()
+  const supportingGroups = groups.filter(group => group.section !== 'recordings')
   const stats = getMungerLocalArchiveStats()
+  const recordings = getMungerArchiveRecordings()
   const readableTotal = groups.reduce((sum, group) => sum + group.items.length, 0)
 
   return (
@@ -32,6 +36,14 @@ export default function MungerArchivePage() {
         <div><strong>{stats.quotes}</strong><span>组主题语录</span></div>
         <div><strong>232</strong><span>个思维模型</span></div>
       </div>
+
+      <section className="archive-catalog__intro">
+        <p>WATCH · LISTEN · READ</p>
+        <h2>先看见他说话的语境，<br />再进入文字。</h2>
+        <span>仿照 Munger Archive 的影音档案方式：先浏览、筛选和播放，再沿着中文整理稿继续阅读。首批接入公开来源播放器，之后可直接替换为复利书房的 B 站视频。</span>
+      </section>
+
+      <MungerRecordingBrowser recordings={recordings} />
 
       <nav className="archive-catalog__primary" aria-label="芒格主要资料入口">
         <Link href="/munger/wesco">
@@ -52,8 +64,8 @@ export default function MungerArchivePage() {
         </Link>
       </nav>
 
-      <div className="archive-catalog__groups">
-        {groups.map((group, groupIndex) => (
+      <div className="archive-catalog__groups archive-catalog__groups--supporting">
+        {supportingGroups.map((group, groupIndex) => (
           <section key={group.section} id={group.section}>
             <header>
               <span>{String(groupIndex + 1).padStart(2, '0')}</span>

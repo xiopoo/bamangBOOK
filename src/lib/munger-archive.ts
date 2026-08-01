@@ -21,6 +21,43 @@ export interface MungerArchiveRecording {
   localStatus: MungerArchiveLocalStatus
   localUrl?: string
   archiveUrl: string
+  transcriptUrl?: string
+  embedUrl?: string
+  sourceUrl?: string
+  sourceLabel?: string
+}
+
+const RECORDING_LOCAL_SLUGS: Record<string, string> = {
+  'final-cnbc-interview-2023': 'cnbc-final-interview-2023',
+  'invest-like-the-best-john-collison-2023': 'invest-like-the-best-2023',
+  'berkshire-2023': 'berkshire-2023-annual-meeting',
+  'todd-combs-2022': 'singleton-prize-2022',
+  'cnbc-investing-2019': 'cnbc-2019',
+  'yahoo-china-elon-musk-2019': 'yahoo-2019-china',
+  'life-choices-build-wealth-2019': 'yahoo-2019-wealth',
+  'munger-unplugged-wsj-2019': 'wsj-unplugged-2019',
+  'daily-journal-fireside-2017': 'daily-journal-2017-fireside',
+  'bbc-boom-bust-2009': 'bbc-boom-and-bust-2009',
+  'stanford-crisis-2009': 'stanford-grundfest-2009',
+  'caltech-dubridge-2008': 'caltech-2008',
+  'academic-economics-2003': 'ucsb-2003-academic-economics',
+  'harvard-law-1998': 'harvard-law-1998-multidisciplinary',
+  'psychology-human-misjudgment-1995': 'psychology-of-human-misjudgment-1995',
+  'harvard-school-1986': 'harvard-1986-misery',
+}
+
+// 播放器来源独立配置：以后迁移到 B 站时，只需要替换这里的地址。
+const RECORDING_MEDIA: Record<string, Pick<MungerArchiveRecording, 'embedUrl' | 'sourceUrl' | 'sourceLabel'>> = {
+  'daily-journal-2023': {
+    embedUrl: 'https://www.youtube-nocookie.com/embed/9VVPO3KWj3A?rel=0',
+    sourceUrl: 'https://www.youtube.com/watch?v=9VVPO3KWj3A',
+    sourceLabel: 'Daily Journal / CNBC',
+  },
+  'final-cnbc-interview-2023': {
+    embedUrl: 'https://www.youtube-nocookie.com/embed/H5Oom5Rjp_Y?rel=0',
+    sourceUrl: 'https://www.youtube.com/watch?v=H5Oom5Rjp_Y',
+    sourceLabel: 'CNBC',
+  },
 }
 
 export type MungerCatalogStatus = 'local' | 'partial-local' | 'missing-fulltext' | 'metadata-only' | 'book-reference'
@@ -144,10 +181,22 @@ export const MUNGER_ARCHIVE_DRAWERS = [
 ]
 
 export function getMungerArchiveRecordings(): MungerArchiveRecording[] {
-  return [...(recordings as MungerArchiveRecording[])].sort((a, b) => {
+  return [...(recordings as MungerArchiveRecording[])].map(recording => {
+    const localSlug = RECORDING_LOCAL_SLUGS[recording.id] ?? recording.id
+    const transcriptPath = path.join(LOCAL_ARCHIVE_DIR, 'recordings', `${localSlug}.md`)
+    return {
+      ...recording,
+      ...(existsSync(transcriptPath) ? { transcriptUrl: `/munger/archive/recordings/${localSlug}` } : {}),
+      ...RECORDING_MEDIA[recording.id],
+    }
+  }).sort((a, b) => {
     if (b.year !== a.year) return b.year - a.year
     return b.date.localeCompare(a.date)
   })
+}
+
+export function getMungerArchiveRecordingBySlug(slug: string): MungerArchiveRecording | null {
+  return getMungerArchiveRecordings().find(recording => recording.transcriptUrl?.endsWith(`/recordings/${slug}`)) ?? null
 }
 
 export function getMungerArchiveStats() {

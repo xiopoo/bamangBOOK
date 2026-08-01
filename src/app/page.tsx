@@ -9,220 +9,148 @@ import { getBusinessHistories } from '@/lib/business-history'
 import { getModels } from '@/lib/models'
 import { getSpaceHref } from '@/lib/site-spaces'
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/' },
-}
+export const metadata: Metadata = { alternates: { canonical: '/' } }
 
 const trustSignals = [
-  '原文、翻译、编辑整理分别标注',
-  '保留年份、出处与上下文',
-  '发现错误，持续修订',
-]
-
-const contentEntrances = [
-  {
-    number: '01',
-    href: '/reading',
-    title: '信件与演讲',
-    eyebrow: '原文与谈话',
-    description: '在完整上下文中理解他们真正表达了什么。',
-  },
-  {
-    number: '02',
-    href: '/business-history',
-    title: '公司研究',
-    eyebrow: '经营与资本',
-    description: '研究一家公司如何赚钱、扩张、犯错，以及资本最终流向哪里。',
-  },
-  {
-    number: '03',
-    href: '/concepts',
-    title: '投资方法',
-    eyebrow: '概念与模型',
-    description: '围绕安全边际、企业质量和资本配置连接分散材料。',
-  },
-  {
-    number: '04',
-    href: '/search',
-    title: '全站搜索',
-    eyebrow: '按人物、公司、年份检索',
-    description: '通过人物、公司、年份和概念找到可以核验的资料。',
-  },
-]
-
-const contentMap = [
-  ['01', '巴菲特合伙人信', '1956—1970'],
-  ['02', '伯克希尔股东信', '1965—至今'],
-  ['03', '股东大会问答', '现场记录'],
-  ['04', '芒格演讲与问答', '公开表达'],
-  ['05', '公司研究', '商业模式'],
-  ['06', '投资方法', '概念与判断'],
-  ['07', '商业史文章', '长期视角'],
+  '原文、翻译与编辑整理分别标注',
+  '尽量保留年份、出处与完整上下文',
+  '发现错误后持续修订',
 ]
 
 export default function HomePage() {
   const partnershipCount = getPartnershipCount()
   const shareholderLetters = getShareholderLetters()
   const qaCount = getDocuments('qa').length
+  const talkCount = getDocuments('talks').length + getDocuments('interviews').length
   const companyStudies = getBusinessHistories()
   const modelCount = getModels().length
-  const latestYear = shareholderLetters.at(-1)?.year
   const letterCount = partnershipCount + shareholderLetters.length
   const featuredCompany = companyStudies[0]
+
+  const drawers = [
+    { href: '/letters', number: letterCount, label: '巴菲特信件', meta: '合伙人信与伯克希尔股东信', description: '按年份连续阅读，观察一种投资方法怎样在真实决策中形成。' },
+    { href: '/qa', number: qaCount, label: '股东大会问答', meta: '现场提问与完整回答', description: '把观点放回问题、追问和当时的商业环境中理解。' },
+    { href: '/munger/archive', number: talkCount, label: '演讲与访谈', meta: '巴菲特与芒格公开表达', description: '按人物和时间查找演讲、访谈、播客与会议记录。' },
+    { href: '/business-history', number: companyStudies.length, label: '公司研究', meta: '经营史与资本配置', description: '研究企业如何赚钱、扩张、犯错，以及资本最终流向哪里。' },
+    { href: '/model', number: modelCount, label: '思维模型', meta: '多学科判断工具', description: '从概率、激励、心理学和逆向思考建立一张可用的格栅。' },
+    { href: '/bloggers', number: '长期', label: '博主文章', meta: '四位中文写作者', description: '把原典、企业案例和中国投资者的长期实践放在一起阅读。' },
+  ]
+
   return (
     <>
       <SubdomainRootRouter />
-      <PageContainer maxWidth="7xl" className="study-home">
-        <section className="study-hero">
+      <PageContainer maxWidth="7xl" className="study-home study-home--refined">
+        <section className="study-hero study-hero--refined">
           <div className="study-hero__copy">
-            <p className="study-label">一个长期更新的投资研究网站</p>
-            <h1>巴菲特、芒格与<br />长期投资研究</h1>
+            <p className="study-label">LETTERS · TALKS · BUSINESS HISTORY</p>
+            <h1>读巴菲特和芒格，<br />先回到原文。</h1>
             <p className="study-hero__lede">
-              这里整理巴菲特、芒格的信件、演讲和股东大会记录，也持续发布公司研究与投资方法文章。重要内容尽量保留出处、年份和上下文。
+              复利书房整理巴菲特、芒格散落多年的信件、演讲与问答，也持续收录公司研究和投资方法文章。这里的目标不是替你下结论，而是把可以核验的材料放到一起。
             </p>
             <div className="study-actions">
               <Link href="/partnership/1" className="archive-button archive-button--solid">
-                从巴菲特合伙人信开始 <ArrowRight size={17} aria-hidden="true" />
+                从第一封合伙人信开始 <ArrowRight size={17} aria-hidden="true" />
               </Link>
-              <Link href="/reading" className="archive-button">
-                查看全部内容
-              </Link>
+              <Link href="/search" className="archive-button"><Search size={16} />搜索整个书房</Link>
             </div>
+            <nav className="study-hero__quicklinks" aria-label="推荐起点">
+              <Link href="/letters">巴菲特股东信</Link>
+              <Link href="/munger/archive">芒格演讲与问答</Link>
+              <Link href="/business-history">公司研究</Link>
+              <Link href="/bound-edition">两卷电子书</Link>
+            </nav>
           </div>
-          <aside className="study-archive-map" aria-label="网站主要内容">
-            <header><strong>网站内容</strong></header>
-            <ol>
-              {contentMap.map(([number, title, meta]) => (
-                <li key={number}><span>{number}</span><strong>{title}</strong><small>{meta}</small></li>
-              ))}
-            </ol>
-            <footer><span>复利书房</span><span>公开内容 / 付费合订本</span></footer>
-          </aside>
         </section>
 
-        <section className="study-proof" aria-labelledby="collection-proof-title">
-          <div className="study-proof__numbers">
-            <p id="collection-proof-title" className="study-label">内容与编辑说明</p>
-            <div>
-              <strong>1956—{latestYear || '至今'}</strong>
-              <span>{letterCount} 封信件</span>
-              <span>{qaCount} 篇问答</span>
-              <span>{modelCount} 个思维模型</span>
-              <span>{companyStudies.length} 份公司研究</span>
-            </div>
-          </div>
+        <section className="study-proof study-proof--refined" aria-label="内容规模与编辑标准">
+          <dl className="study-proof__metrics">
+            <div><dt>{letterCount}</dt><dd>封巴菲特信件</dd></div>
+            <div><dt>{qaCount}</dt><dd>篇股东大会问答</dd></div>
+            <div><dt>{modelCount}</dt><dd>个思维模型</dd></div>
+            <div><dt>{companyStudies.length}</dt><dd>份公司研究</dd></div>
+          </dl>
           <div className="study-proof__trust">
-            {trustSignals.map(signal => (
-              <span key={signal}><Check size={15} aria-hidden="true" />{signal}</span>
-            ))}
+            {trustSignals.map(signal => <span key={signal}><Check size={14} />{signal}</span>)}
           </div>
-          <p className="study-proof__statement">
-            你不需要先相信我的观点。这里提供出处和核验线索，让你自己作出判断。
-          </p>
         </section>
 
-        <section className="study-section study-desk">
-          <header className="study-section__header">
-            <div>
-              <p className="study-label">每周推荐</p>
-              <h2>本周推荐</h2>
-            </div>
-            <p>不是最新的三篇，而是本周值得花时间的三篇。</p>
+        <section className="study-section study-feature">
+          <header className="study-section__header study-section__header--compact">
+            <div><p className="study-label">START HERE · 今日一读</p><h2>一封信，是最好的入口</h2></div>
+            <Link href="/reading">浏览全部内容 →</Link>
           </header>
-          <div className="study-desk__list">
-            <article>
-              <span>原始信件 · 约 8 分钟</span>
-              <h3><Link href="/partnership/1">1956年巴菲特致合伙人信</Link></h3>
-              <p>从第一封记录开始，看一种投资方法如何向合伙人解释风险与结果。</p>
-              <Link href="/partnership/1">打开原文 <ArrowRight size={15} /></Link>
+          <div className="study-feature__grid">
+            <article className="study-feature__primary">
+              <span>1956 · PARTNERSHIP LETTER</span>
+              <h3>1956年巴菲特致合伙人信</h3>
+              <p>从第一封记录开始，看巴菲特怎样向合伙人解释业绩、风险与评价投资结果的方法。许多后来写进伯克希尔股东信的原则，在这里已经出现。</p>
+              <blockquote>判断一年做得好不好，不能只看赚了多少钱，还要看当时承担了什么风险、市场整体处在什么位置。</blockquote>
+              <Link href="/partnership/1" className="archive-button archive-button--solid">打开原文 <ArrowRight size={16} /></Link>
             </article>
-            <article>
-              <span>公司研究 · {featuredCompany?.readMinutes || 18} 分钟</span>
-              <h3>
-                <Link href={featuredCompany ? `/business-history/${featuredCompany.slug}` : '/business-history'}>
-                  {featuredCompany?.title || '企业如何把优势变成长期结构'}
-                </Link>
-              </h3>
-              <p>{featuredCompany?.summary || '把公司放回经营历史里，观察优势、约束和资本流向。'}</p>
+            <aside className="study-feature__more" aria-label="继续阅读">
+              <p>接着读</p>
               <Link href={featuredCompany ? `/business-history/${featuredCompany.slug}` : '/business-history'}>
-                打开研究 <ArrowRight size={15} />
+                <small>公司研究 · {featuredCompany?.readMinutes || 18} 分钟</small>
+                <strong>{featuredCompany?.title || '企业如何把优势变成长期结构'}</strong>
+                <span>{featuredCompany?.summary || '把公司放回经营历史里，观察优势、约束和资本流向。'}</span>
               </Link>
-            </article>
-            <article>
-              <span>继续思考 · 投资方法</span>
-              <h3><Link href="/concepts/资本配置">管理层怎样分配资本？</Link></h3>
-              <p>利润留下来以后怎样使用，往往比某一年的利润本身更重要。</p>
-              <Link href="/concepts/资本配置">沿问题阅读 <ArrowRight size={15} /></Link>
-            </article>
+              <Link href="/concepts/资本配置">
+                <small>投资方法 · 沿问题阅读</small>
+                <strong>管理层怎样分配资本？</strong>
+                <span>利润留下来以后怎样使用，往往比某一年的利润本身更重要。</span>
+              </Link>
+            </aside>
+          </div>
+        </section>
+
+        <section className="study-section study-drawers">
+          <header className="study-section__header study-section__header--compact">
+            <div><p className="study-label">THE LIBRARY · 按资料类型浏览</p><h2>书房的六个抽屉</h2></div>
+            <p>不必从首页顺序读完。选一个问题、一位人物或一种资料，直接进去。</p>
+          </header>
+          <div className="study-drawers__grid">
+            {drawers.map(drawer => (
+              <Link key={drawer.href} href={drawer.href}>
+                <div><h3>{drawer.label}</h3><strong>{drawer.number}</strong></div>
+                <small>{drawer.meta}</small>
+                <p>{drawer.description}</p>
+                <span>打开抽屉 <ArrowRight size={15} /></span>
+              </Link>
+            ))}
           </div>
         </section>
 
         <section className="study-section study-thinkers">
-          <header className="study-section__header">
-            <div>
-              <p className="study-label">人物专题</p>
-              <h2>巴菲特与芒格</h2>
-            </div>
+          <header className="study-section__header study-section__header--compact">
+            <div><p className="study-label">TWO THINKERS · 人物专题</p><h2>两条彼此交叉的学习路径</h2></div>
           </header>
           <div className="study-thinkers__grid">
             <article>
-              <p>沃伦·巴菲特</p>
+              <p>WARREN BUFFETT</p>
               <h3>从价格出发，<br />最后走向企业。</h3>
-              <span>阅读合伙人信、伯克希尔股东信与六十余年的资本配置记录。</span>
-              <Link href={getSpaceHref('buffett')}>进入巴菲特 <ArrowRight size={16} /></Link>
+              <span>合伙人信、伯克希尔股东信、股东大会问答与六十余年的资本配置记录。</span>
+              <Link href={getSpaceHref('buffett')}>进入巴菲特专题 <ArrowRight size={16} /></Link>
             </article>
             <article>
-              <p>查理·芒格</p>
+              <p>CHARLIE MUNGER</p>
               <h3>从投资出发，<br />最后走向判断。</h3>
-              <span>阅读 Wesco 问答、公开演讲与多元思维模型。</span>
-              <Link href={getSpaceHref('munger')}>进入芒格 <ArrowRight size={16} /></Link>
+              <span>Wesco 问答、Daily Journal、公开演讲、多元思维模型与误判心理学。</span>
+              <Link href={getSpaceHref('munger')}>进入芒格专题 <ArrowRight size={16} /></Link>
             </article>
           </div>
         </section>
 
-        <section className="study-section study-entrances">
-          <header className="study-section__header">
-            <div>
-              <p className="study-label">主要内容</p>
-              <h2>主要内容</h2>
-            </div>
-            <Link href="/search" className="study-search-link"><Search size={17} /> 搜索人物、公司、年份或概念</Link>
-          </header>
-          <div className="study-entrances__grid">
-            {contentEntrances.map(item => (
-              <Link key={item.number} href={item.href}>
-                <span>{item.number}</span>
-                <small>{item.eyebrow}</small>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <ArrowRight size={17} aria-hidden="true" />
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="study-section study-editions">
+        <section className="study-section study-editions study-editions--refined">
           <div className="study-editions__intro">
-            <p className="study-label">电子合订本</p>
-            <h2>把分散多年的文字，<br />放进一条完整脉络</h2>
-            <p>网站适合搜索和查阅，合订本适合从头到尾连续阅读。两本分别出售，可以只选择现在真正想系统阅读的一位。</p>
-            <Link href="/bound-edition" className="archive-button archive-button--solid">
-              查看两本合订本 <ArrowRight size={17} />
-            </Link>
+            <p className="study-label">BOUND EDITION · 电子合订本</p>
+            <h2>网站适合查，<br />电子书适合从头读。</h2>
+            <p>《所有者的眼光》与《理性的格栅》分别整理巴菲特和芒格的完整思想脉络。每卷 99 元，添加微信后人工发送 PDF。</p>
+            <Link href="/bound-edition" className="archive-button archive-button--solid">查看目录与实际页面 <ArrowRight size={17} /></Link>
           </div>
-          <div className="study-editions__books">
-            <article>
-              <span>01 · BUFFETT</span>
-              <h3>《所有者的眼光》</h3>
-              <strong>99<small>元</small></strong>
-              <p>巴菲特论企业、资本与长期复利。五篇 15 章，把股东信与长期实践编成一条完整脉络。</p>
-            </article>
-            <article>
-              <span>02 · MUNGER</span>
-              <h3>《理性的格栅》</h3>
-              <strong>99<small>元</small></strong>
-              <p>芒格论思维模型、商业判断与人生智慧。16 章正文，附 232 个思维模型对照与心理倾向速查。</p>
-            </article>
+          <div className="study-editions__summary">
+            <article><span>01 · BUFFETT</span><h3>《所有者的眼光》</h3><p>企业、资本与长期复利</p></article>
+            <article><span>02 · MUNGER</span><h3>《理性的格栅》</h3><p>思维模型、商业判断与人生智慧</p></article>
+            <strong>99<small>元 / 卷</small></strong>
           </div>
         </section>
       </PageContainer>

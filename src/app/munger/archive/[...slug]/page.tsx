@@ -8,6 +8,7 @@ import {
   getMungerLocalArchiveBySlug,
   getMungerLocalArchiveItems,
   getMungerLocalArchiveNavigation,
+  getMungerArchiveRecordingBySlug,
 } from '@/lib/munger-archive'
 import { getCanonicalModelSlugForArchiveSlug, getModelBySlug } from '@/lib/models'
 
@@ -51,6 +52,9 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
   const doc = getMungerLocalArchiveBySlug(params.slug)
   if (!doc) notFound()
   const navigation = getMungerLocalArchiveNavigation(doc.slug)
+  const recording = params.slug[0] === 'recordings' && params.slug[1]
+    ? getMungerArchiveRecordingBySlug(params.slug[1])
+    : null
 
   return (
     <PageContainer maxWidth="4xl">
@@ -76,6 +80,19 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
       />
 
       <article className="archive-document">
+        {recording?.embedUrl && (
+          <div className="archive-document__media">
+            <iframe
+              src={recording.embedUrl}
+              title={recording.titleZh}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+            <p>视频嵌入自 <a href={recording.sourceUrl} target="_blank" rel="noreferrer">{recording.sourceLabel} 原始公开页面</a>，本站不存储视频文件。</p>
+          </div>
+        )}
         <MarkdownContent content={doc.content} />
       </article>
 
