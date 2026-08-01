@@ -77,6 +77,7 @@ const craftItems = [
 ]
 
 const faqs = [
+  ['怎么买？付款后怎么收到 PDF？', '点击页面中的“微信购买”，扫码添加微信 igrape，并发送“巴菲特卷”或“芒格卷”。确认书名和付款后，完整 PDF 会直接通过微信文件发送。'],
   ['网站已经可以免费阅读，为什么还要买合订本？', '网站适合搜索和随时查阅，合订本是把材料组织成一套可以从头读到尾的书。如果你只想偶尔查一两篇，免费使用网站就够了。'],
   ['这套书和网站上的原始材料是什么关系？', '原始材料确实公开存在，但分散在不同年份、网页和版本中。这套书的价值是把它们整理、校订、组织成连续文本，并补上目录、术语表、索引与插图——不是把公开资料包装成独家内容。'],
   ['99元买一本，值不值？', '如果你准备系统读巴菲特或芒格，99元购买的是资料整理、文本校订、章节组织与连续阅读所节省的时间。如果你只有一般兴趣，建议先读网站上的免费内容再决定。'],
@@ -133,8 +134,8 @@ export default function BoundEditionPage() {
             </ul>
             <p className="edition-product-desc">{buffett.description}</p>
             <strong>{buffett.price}<small>元</small></strong>
-            <Link href={`/checkout/${buffett.slug}`} className="archive-button archive-button--solid">
-              购买巴菲特卷 · {buffett.price}元
+            <Link href="#purchase-contact" className="archive-button archive-button--solid">
+              微信购买巴菲特卷 · {buffett.price}元
             </Link>
           </article>
 
@@ -155,13 +156,13 @@ export default function BoundEditionPage() {
             </ul>
             <p className="edition-product-desc">{munger.description}</p>
             <strong>{munger.price}<small>元</small></strong>
-            <Link href={`/checkout/${munger.slug}`} className="archive-button archive-button--solid">
-              购买芒格卷 · {munger.price}元
+            <Link href="#purchase-contact" className="archive-button archive-button--solid">
+              微信购买芒格卷 · {munger.price}元
             </Link>
           </article>
 
           <p id="purchase-status" className="edition-purchase-status">
-            交付内容为对应卷目的完整 PDF 电子书。两卷分别出售、分别发放权益，可按自己的阅读需要选择。
+            当前采用微信人工交付：添加微信、确认付款后，通过微信直接发送对应卷目的完整 PDF。两卷分别出售，可按自己的阅读需要选择。
           </p>
         </section>
 
@@ -319,20 +320,27 @@ export default function BoundEditionPage() {
 
         {/* 购买流程 + 收束 */}
         <section id="purchase-contact" className="edition-final">
-          <p className="study-label">购买流程 · 三步</p>
-          <h2>三分钟读完流程，<br />再决定要不要开始</h2>
-          <p>在线收银台启用前，通过客服确认购买与交付，不提交任何银行卡信息。</p>
+          <p className="study-label">微信购买 · 人工交付</p>
+          <h2>扫码添加微信，<br />确认付款后直接发送 PDF</h2>
+          <p>请发送“巴菲特卷”或“芒格卷”。确认书名、价格与付款后，完整 PDF 将通过微信文件发送。</p>
+          <div className="edition-wechat-purchase">
+            <a href="/wechat-purchase-qr.jpg" target="_blank" rel="noopener noreferrer" aria-label="打开购买微信二维码原图">
+              <Image src="/wechat-purchase-qr.jpg" alt="复利书房购买微信二维码" width={109} height={110} />
+            </a>
+            <div>
+              <strong>购买微信：igrape</strong>
+              <p>微信扫码或长按识别二维码添加好友</p>
+              <small>添加时请备注“复利书房”，并发送想购买的书名：巴菲特卷 / 芒格卷。</small>
+              <a href="/wechat-purchase-qr.jpg" target="_blank" rel="noopener noreferrer">打开二维码原图</a>
+            </div>
+          </div>
           <div className="edition-steps">
             <div><span>01</span><strong>选择一卷</strong><small>巴菲特卷或芒格卷，每卷 99 元，分别交付</small></div>
-            <div><span>02</span><strong>扫码联系客服</strong><small>关注公众号「金家岭小胖」，发送「合订本 + 巴菲特卷 / 芒格卷」</small></div>
-            <div><span>03</span><strong>确认后交付</strong><small>客服确认价格、版本与 PDF 交付方式，付款后发放权益</small></div>
-          </div>
-          <div className="edition-final__actions">
-            <Link href="/checkout/buffett-collection" className="archive-button archive-button--solid">购买巴菲特卷 · 99元</Link>
-            <Link href="/checkout/munger-collection" className="archive-button archive-button--solid">购买芒格卷 · 99元</Link>
+            <div><span>02</span><strong>添加购买微信</strong><small>扫码添加 igrape，备注“复利书房”，发送想购买的书名</small></div>
+            <div><span>03</span><strong>付款并接收 PDF</strong><small>确认付款后，通过微信文件直接发送完整 PDF</small></div>
           </div>
           <small>
-            每卷 99 元，分别出售、分别发放产品权益；交付内容为对应卷目的完整 PDF。本书为档案材料的整理与再编辑，非商业出版物，亦非官方授权的巴菲特/芒格著作；不提供荐股或收益承诺，请按自己的阅读需要选择。
+            每卷 99 元，分别出售；交付内容为对应卷目的完整 PDF。通常在确认付款后 24 小时内通过微信完成交付。本书为档案材料的整理与再编辑，非商业出版物，亦非官方授权的巴菲特/芒格著作；不提供荐股或收益承诺，请按自己的阅读需要选择。
           </small>
         </section>
       </PageContainer>

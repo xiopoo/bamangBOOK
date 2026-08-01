@@ -3414,6 +3414,53 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75;
 }
 
+.edition-final > .edition-wechat-purchase {
+  max-width: 42rem;
+  margin: 2.2rem auto 0;
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+  align-items: center;
+  gap: 1.6rem;
+  border: 1px solid var(--archive-rule);
+  background: var(--archive-paper-deep);
+  text-align: left;
+}
+.edition-wechat-purchase > a:first-child {
+  display: block;
+  padding: 0.55rem;
+  background: #fff;
+  border: 1px solid var(--archive-rule);
+}
+.edition-wechat-purchase img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.edition-wechat-purchase strong {
+  display: block;
+  font-size: 1.3rem;
+}
+.edition-wechat-purchase p,
+.edition-wechat-purchase small {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  line-height: 1.75;
+}
+.edition-wechat-purchase small {
+  font-size: 0.82rem;
+}
+.edition-wechat-purchase div > a {
+  display: inline-block;
+  margin-top: 0.85rem;
+  color: var(--archive-red);
+  font-family: var(--archive-sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
 @media (max-width: 720px) {
   .edition-hero h1,
   .about-study h1 {
@@ -3448,6 +3495,14 @@ h1, h2, h3, h4, h5, h6 {
   }
   .edition-steps {
     grid-template-columns: 1fr;
+  }
+  .edition-final > .edition-wechat-purchase {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .edition-wechat-purchase > a:first-child {
+    width: min(15rem, 100%);
+    margin: 0 auto;
   }
   .edition-steps > div + div {
     border-left: 0;
