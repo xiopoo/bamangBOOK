@@ -161,6 +161,93 @@ function buildTitleMap(): Map<string, string> {
   return map
 }
 
+/** 构建 per-blogger title→path，用于参考阅读段落优先在同博主下匹配 */
+function buildPerBloggerTitleMap(): Map<string, Map<string, string>> {
+  const data = loadIndex()
+  const outer = new Map<string, Map<string, string>>()
+  for (const blogger of data) {
+    const inner = new Map<string, string>()
+    for (const article of blogger.articles) {
+      const k = article.title.replace(/["""''\s]+/g, '').toLowerCase()
+      inner.set(k, `/bloggers/${encodeURIComponent(blogger.name)}/${encodeURIComponent(article.fileName)}`)
+    }
+    outer.set(blogger.name, inner)
+  }
+  return outer
+}
+
+const _titleKey = (s: string) => s.replace(/["""''\s]+/g, '').toLowerCase()
+
+/**
+ * 处理正文里的「参考阅读」段落：
+ * - 逐行扫描每一个以「参考阅读：」开头的段落
+ * - 后续非空行视作候选文章标题，优先在同博主、再在全局文章索引中精确匹配标题
+ * - 能匹配：把候选标题替换为站内内链（作为有序列表渲染）
+ * - 不能匹配：丢弃该行纯文本（避免无链接的占位文字）
+ * - 若该段全部匹配失败：删除整个「参考阅读」段落
+ */
+export function processReferenceReading(content: string, bloggerName: string): string {
+  const lines = content.split('\n')
+  const result: string[] = []
+  const sameBloggerMap = buildPerBloggerTitleMap().get(bloggerName) ?? new Map<string, string>()
+  const globalMap = buildTitleMap()
+
+  let i = 0
+  while (i < lines.length) {
+    const line = lines[i]
+    if (line.trim() !== '参考阅读：') {
+      result.push(line)
+      i++
+      continue
+    }
+
+    // 收集该段内的候选标题，直到遇到下一个 heading 或连续 3 个空行或 EOF
+    const candidates: { raw: string; trimmed: string }[] = []
+    let empties = 0
+    let j = i + 1
+    while (j < lines.length) {
+      const l = lines[j]
+      const trimmed = l.trim()
+      if (/^#{1,6}\s/.test(trimmed)) break
+      if (trimmed === '') {
+        empties++
+        if (empties > 2) break
+        j++
+        continue
+      }
+      empties = 0
+      candidates.push({ raw: l, trimmed: trimmed.replace(/[\s\u3000]+$/g, '') })
+      j++
+    }
+
+    // 生成链接列表
+    const linked: { title: string; href: string }[] = []
+    for (const c of candidates) {
+      if (!c.trimmed) continue
+      const k = _titleKey(c.trimmed)
+      const href = sameBloggerMap.get(k) ?? globalMap.get(k)
+      if (href) linked.push({ title: c.trimmed, href })
+    }
+
+    if (linked.length > 0) {
+      // 保留 section title（换成更合理的层级），然后输出 markdown 内链列表
+      result.push('### 参考阅读')
+      result.push('')
+      for (const item of linked) {
+        // 标题中可能包含 []() 符号，做安全转义避免破坏 markdown
+        const safeTitle = item.title.replace(/([[\]])/g, '\\$1')
+        result.push(`- [${safeTitle}](${item.href})`)
+      }
+      result.push('')
+    }
+    // else：整个段删除，result 不写任何内容
+
+    i = j
+  }
+
+  return result.join('\n')
+}
+
 /** 替换正文中的微信外链为站内链接 */
 function replaceWeChatLinks(content: string): string {
   const urlMap = buildUrlMap()
@@ -235,10 +322,11 @@ export function getBloggerArticle(bloggerName: string, fileName: string): {
   const articles = getBloggerArticles(bloggerName)
   const article = articles.find(a => a.fileName === fileName)
   
-  // 清理正文：去 frontmatter、去 WeChat 元数据、替换外链
+  // 清理正文：去 frontmatter、去 WeChat 元数据、替换外链、处理参考阅读内链
   const body = stripFrontmatter(rawContent)
   const cleanedBody = cleanBodyContent(body)
-  const finalContent = replaceWeChatLinks(cleanedBody)
+  const replacedLinks = replaceWeChatLinks(cleanedBody)
+  const finalContent = processReferenceReading(replacedLinks, bloggerName)
   
   if (!article) {
     return {
