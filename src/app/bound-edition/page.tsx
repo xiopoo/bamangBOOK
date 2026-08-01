@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import ProductCover from '@/components/ProductCover'
@@ -53,6 +54,18 @@ const mungerPoints = [
   '误判心理学：25 种心理倾向如何系统性地扭曲判断',
   '逆向与检查清单：先问怎样会失败，再用程序对抗犯错',
   '理性与避错：为什么理性近乎一种道德义务',
+]
+
+/* 实际页面预览：从终稿 PDF 抽取的代表页 */
+const buffettPreviews = [
+  { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '品牌红与深棕双色装帧，系列开卷之作，书名与副题同页呈现。' },
+  { img: '/ebook-previews/buffett-p03.png', title: '目录', desc: '五篇 15 章两级目录，点线引导页码，附录与典藏索引并列入口。' },
+  { img: '/ebook-previews/buffett-p13.png', title: '第一章开头', desc: '篇目信息、核心问题与原创插图同页呈现，引文来源逐条标注。' },
+]
+const mungerPreviews = [
+  { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特卷同系列同版式，两卷并排观感统一，适合成套收藏。' },
+  { img: '/ebook-previews/munger-p03.png', title: '目录', desc: '16 章加附录与典藏索引，232 个模型对照、25 种心理倾向速查在内。' },
+  { img: '/ebook-previews/munger-p04.png', title: '第一章开头', desc: '开卷即 1994 年南加大演讲，配图解《单一锤子与多模型视野》。' },
 ]
 
 const craftItems = [
@@ -203,6 +216,39 @@ export default function BoundEditionPage() {
                 </p>
               </div>
             </details>
+          </div>
+        </section>
+
+        {/* 实际页面预览 */}
+        <section className="edition-section edition-preview" aria-label="终稿 PDF 实际页面预览">
+          <div className="edition-section__heading">
+            <p className="study-label">PREVIEW · 实际页面预览</p>
+            <h2>终稿 PDF 里，<br />实际长什么样</h2>
+            <p>下面是从两卷终稿 PDF 中抽取的代表页面。先看实际排版与阅读效果，再决定要不要买。</p>
+          </div>
+          <div className="edition-preview__books">
+            <div className="edition-preview__book">
+              <h3>《所有者的眼光》<span>巴菲特卷 · 终稿 PDF</span></h3>
+              <div className="edition-preview__grid">
+                {buffettPreviews.map(item => (
+                  <figure key={item.img} className="edition-preview__item">
+                    <Image src={item.img} alt={`《所有者的眼光》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
+                    <figcaption><strong>{item.title}</strong><small>{item.desc}</small></figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+            <div className="edition-preview__book">
+              <h3>《理性的格栅》<span>芒格卷 · 终稿 PDF</span></h3>
+              <div className="edition-preview__grid">
+                {mungerPreviews.map(item => (
+                  <figure key={item.img} className="edition-preview__item">
+                    <Image src={item.img} alt={`《理性的格栅》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
+                    <figcaption><strong>{item.title}</strong><small>{item.desc}</small></figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
