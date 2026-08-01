@@ -8,7 +8,7 @@ import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
 
 const primaryLinks = [
-  { href: '/letters', label: '股东信', activePrefixes: ['/letters', '/partnership', '/qa'] },
+  { href: '/buffett', label: '巴菲特', activePrefixes: ['/buffett', '/letters', '/partnership', '/qa'] },
   { href: '/munger', label: '芒格', activePrefixes: ['/munger', '/poor-charlies-almanack', '/model'] },
   { href: '/business-history', label: '公司研究', activePrefixes: ['/business-history', '/companies'] },
   { href: '/concepts', label: '投资方法', activePrefixes: ['/concepts'] },
