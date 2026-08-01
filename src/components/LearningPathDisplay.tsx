@@ -55,7 +55,6 @@ function getItemHref(item: PathItem): string {
   const fileName = cleanFileName(item.file, item.category)
   const encoded = encodeURIComponent(fileName)
   switch (item.category) {
-    case 'articles': return `/articles/${encoded}`
     case 'concepts': return `/concepts/${encoded}`
     case 'companies': return `/companies/${encoded}`
     case 'people': return `/people/${encoded}`

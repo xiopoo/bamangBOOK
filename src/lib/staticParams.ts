@@ -65,12 +65,6 @@ export function interviewParams() {
   }))
 }
 
-export function articleParams() {
-  return getDocuments('articles').map((doc) => ({
-    id: doc.fileName,
-  }))
-}
-
 export function letterYearParams() {
   const dir = path.join(CONTENT_DIR, 'letters')
   if (!existsSync(dir)) return []

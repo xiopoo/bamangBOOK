@@ -4,7 +4,6 @@ import PageContainer from '@/components/PageContainer'
 import PageFooter from '@/components/PageFooter'
 import PageHeader from '@/components/PageHeader'
 import { LearningPathBeginner, LearningPathIntermediate, LearningPathTopics } from '@/components/LearningPathDisplay'
-import { getDocuments } from '@/lib/documents'
 import { getAllPartnershipLetters } from '@/lib/partnership'
 
 interface PathItem {
@@ -47,11 +46,6 @@ interface TopicsPath {
 }
 
 function resolveItemHref(item: PathItem): string {
-  if (item.category === 'articles') {
-    const docs = getDocuments('articles') as Array<ReturnType<typeof getDocuments>[number] & { origFileName?: string }>
-    const matched = docs.find((doc) => doc.origFileName === item.file || doc.fileName === item.file)
-    return matched ? `/articles/${encodeURIComponent(matched.fileName)}` : '/articles'
-  }
   if (item.category === 'letters') {
     const year = item.file.match(/(?:19|20)\d{2}/)?.[0]
     return year ? `/letters/${year}` : '/letters'

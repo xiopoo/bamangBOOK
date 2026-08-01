@@ -36,12 +36,6 @@ const categories = {
     indexFile: 'content/qa-index.json',
     title: '股东大会问答',
     icon: '❓'
-  },
-  articles: {
-    dir: 'content/articles',
-    indexFile: 'content/articles-index.json',
-    title: '专题文章',
-    icon: '📖'
   }
 }
 

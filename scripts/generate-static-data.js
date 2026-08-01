@@ -184,7 +184,6 @@ function generateSearchIndex(index) {
   addEntityItems(items, 'people', 'person', 'people', index.people)
   addLetterItems(items)
   addPartnershipItems(items)
-  addDocumentItems(items, 'articles', 'article', 'articles')
   addDocumentItems(items, 'qa', 'qa', 'qa')
   addDocumentItems(items, 'talks', 'talk', 'talks')
   addDocumentItems(items, 'interviews', 'interview', 'interviews')

@@ -115,7 +115,7 @@ function addEntityItems(
 
 function addDocumentItems(
   items: SearchItem[],
-  directory: 'articles' | 'qa' | 'talks' | 'interviews',
+  directory: 'qa' | 'talks' | 'interviews',
   type: 'article' | 'qa' | 'talk' | 'interview',
   route: string
 ) {
@@ -254,7 +254,6 @@ export function getSearchItems(): SearchItem[] {
   addEntityItems(items, 'people', 'person', 'people', index.people)
   addLetterItems(items)
   addPartnershipItems(items)
-  addDocumentItems(items, 'articles', 'article', 'articles')
   addDocumentItems(items, 'qa', 'qa', 'qa')
   addDocumentItems(items, 'talks', 'talk', 'talks')
   addDocumentItems(items, 'interviews', 'interview', 'interviews')

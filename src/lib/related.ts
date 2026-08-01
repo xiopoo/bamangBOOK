@@ -31,7 +31,6 @@ function resolveHref(id: string): string | null {
   const source = idx === -1 ? id : id.slice(0, idx)
   const fileName = idx === -1 ? '' : id.slice(idx + 1)
   switch (source) {
-    case 'articles':
     case 'talks':
     case 'interviews':
     case 'qa':

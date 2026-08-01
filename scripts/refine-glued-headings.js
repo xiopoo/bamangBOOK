@@ -6,7 +6,7 @@ const path = require('node:path')
 const ROOT = path.resolve(__dirname, '..')
 const CONTENT_DIR = path.join(ROOT, 'content')
 const WRITE = process.argv.includes('--write')
-const TARGET_SECTIONS = new Set(['articles', 'interviews', 'qa', 'talks'])
+const TARGET_SECTIONS = new Set(['interviews', 'qa', 'talks'])
 const SPEAKER_PATTERN = /(?:股东问|股东|听众|学生|提问者|提问|主持人|观众|记者|巴菲特|芒格|李录|Becky|BECKY|Carol\s*Loomis)[：:]/u
 const CONCATENATED_SPEAKER_PATTERN = /(?:Becky|BECKY|Carol\s*Loomis|Jonathan\s*Brandt)(?=[\p{L}“"：:])/u
 

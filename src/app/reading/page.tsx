@@ -11,7 +11,6 @@ const CATEGORY_HREF: Record<string, string> = {
   '演讲': '/talks',
   '访谈': '/interviews',
   '股东大会': '/qa',
-  '文章': '/articles',
   '公司分析': '/companies',
 }
 

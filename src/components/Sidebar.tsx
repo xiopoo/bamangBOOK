@@ -16,7 +16,6 @@ const sections = [
       { href: '/letters', icon: '✉️', label: '股东信', count: '60' },
       { href: '/qa', icon: '❓', label: '股东大会实录', count: '52' },
       { href: '/talks?person=buffett', icon: '🎤', label: '演讲' },
-      { href: '/articles', icon: '📝', label: '研究文章' },
       { href: '/interviews', icon: '🎙️', label: '访谈' },
       { href: '/columns', icon: '✍️', label: '投资专栏' },
       { href: '/books', icon: '📖', label: '深度拆书' },

@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
     '', '/about', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
-    '/concepts', '/companies', '/people', '/articles', '/qa', '/talks', '/interviews', '/bloggers',
+    '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers',
     '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
   ]
@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   namesIn('companies').forEach(name => urls.add(`${baseUrl}/companies/${encodeURIComponent(name)}`))
   namesIn('people').forEach(name => urls.add(`${baseUrl}/people/${encodeURIComponent(name)}`))
 
-  getDocuments('articles').forEach(doc => urls.add(`${baseUrl}/articles/${encodeURIComponent(doc.fileName)}`))
   getDocuments('qa')
     .filter(doc => !doc.fileName.startsWith('Wesco_股东大会_'))
     .forEach(doc => urls.add(`${baseUrl}/qa/${encodeURIComponent(doc.fileName)}`))

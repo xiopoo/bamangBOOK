@@ -67,7 +67,6 @@ export default function HomePage() {
   const qaCount = getDocuments('qa').length
   const companyStudies = getBusinessHistories()
   const modelCount = getModels().length
-  const longArticleCount = getDocuments('articles').length
   const latestYear = shareholderLetters.at(-1)?.year
   const letterCount = partnershipCount + shareholderLetters.length
   const featuredCompany = companyStudies[0]
@@ -111,7 +110,6 @@ export default function HomePage() {
               <span>{qaCount} 篇问答</span>
               <span>{modelCount} 个思维模型</span>
               <span>{companyStudies.length} 份公司研究</span>
-              <span>{longArticleCount} 篇长期文章</span>
             </div>
           </div>
           <div className="study-proof__trust">

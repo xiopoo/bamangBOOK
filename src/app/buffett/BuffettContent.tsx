@@ -263,14 +263,6 @@ export default function BuffettContent({
             <div className="text-sm font-medium text-text dark:text-dark-text">股东大会问答</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">40场</div>
           </Link>
-          <Link
-            href="/articles"
-            className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
-          >
-            <div className="text-2xl mb-2">📝</div>
-            <div className="text-sm font-medium text-text dark:text-dark-text">专题文章</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">95篇</div>
-          </Link>
         </div>
       </section>
 

@@ -38,7 +38,6 @@ function addFromIndex(indexFile, source, personField) {
 addFromIndex('partnership-index.json', 'partnership')
 addFromIndex('letters-index.json', 'letters')
 addFromIndex('qa-index.json', 'qa')
-addFromIndex('articles-index.json', 'articles', 'person')
 addFromIndex('talks-index.json', 'talks', 'person')
 addFromIndex('interviews-index.json', 'interviews', 'person')
 addFromIndex('models-index.json', 'models')
@@ -75,10 +74,6 @@ function classify(it) {
   if (s === 'models') return { column: '芒格专栏', sub: '思维模型' }
   if (s === 'talks') {
     if (it.person.includes('munger')) return { column: '芒格专栏', sub: '演讲' }
-    return { column: '巴菲特专栏', sub: '演讲/文章' }
-  }
-  if (s === 'articles') {
-    if (it.person.includes('munger')) return { column: '芒格专栏', sub: '文章' }
     return { column: '巴菲特专栏', sub: '演讲/文章' }
   }
   if (s === 'interviews') {
@@ -198,9 +193,9 @@ for (const sub of ['合伙人信', '股东信', '股东大会实录', '演讲/�
 }
 L.push('## 三、芒格专栏（完整目录）')
 L.push('')
-for (const sub of ['演讲', '文章', '思维模型']) {
+for (const sub of ['演讲', '思维模型']) {
   const arr = (columns['芒格专栏'] && columns['芒格专栏'][sub]) || []
-  L.push(`### 3.${['演讲', '文章', '思维模型'].indexOf(sub) + 1} ${sub}（${arr.length}）`)
+  L.push(`### 3.${['演讲', '思维模型'].indexOf(sub) + 1} ${sub}（${arr.length}）`)
   L.push('')
   for (const it of arr) L.push(`- ${it.title}${it.year ? ` （${it.year}）` : ''}`)
   L.push('')
@@ -243,7 +238,7 @@ L.push('> 完整逐篇内链映射见 `reports/site-classification.json` 的 `li
 L.push('')
 L.push('## 六、归类说明')
 L.push('')
-L.push('全部文章已完成归类，无待决策项。施洛斯演讲(1)、未归属文章(18)、访谈(40) 均已按决策归入「巴菲特专栏 / 演讲·文章」。')
+L.push('全部文章已完成归类，无待决策项。施洛斯演讲(1)、访谈(40) 均已按决策归入「巴菲特专栏 / 演讲·文章」。')
 fs.writeFileSync(path.join(REPORTS, '网站文章分类与内链映射.md'), L.join('\n'), 'utf8')
 
 console.log('完成: 文章', items.length, ' 内链', out.meta.totalLinks, ' 跨栏目', cross, ' 待决策', unclassifiable.length)
