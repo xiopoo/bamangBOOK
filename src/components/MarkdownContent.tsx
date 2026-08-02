@@ -35,6 +35,17 @@ function formatQAContent(content: string): string {
     .replace(/([^\n])(?=#{2,6}\s*\d{1,3}[,，、.．]\s*)/g, '$1\n\n')
     .replace(/([^\n])(?=\d{1,3}[,，、.．]\s*(?:股东|问题|关于|为什么|如何|能否|是否|[A-Za-z]))/g, '$1\n\n')
 
+  // 历史稿常把“问题标题”和“股东：提问正文”粘成同一行。
+  // 例如：## 5，关于等待投资机会股东：现在的市场状况……
+  // 统一拆成标题 + 提问段，避免标题徽章 Q 后留空或正文挤到下一行。
+  result = result.replace(
+    /^(\s*#{2,6}\s*)?(\d{1,3}[,，、.．]\s*)(.+?)(股东(?:提问)?|提问)[：:](.*)$/gm,
+    (_match, heading: string | undefined, number: string, title: string, speaker: string, question: string) => {
+      if (!title.trim()) return _match
+      return `${heading || ''}${number}${title.trim()}\n\n${speaker}：${question.trim()}`
+    }
+  )
+
   result = result
     .split('\n')
     .map((line) => {
@@ -43,7 +54,8 @@ function formatQAContent(content: string): string {
 
       const headingQuestion = line.match(/^(\s*#{2,6}\s*)(\d{1,3}[,，、.．]\s*.+)$/)
       if (headingQuestion) {
-        return `${headingQuestion[1]}**${headingQuestion[2].trim()}**`
+        // 标题本身已经有语义和字重，不再额外包 strong，避免 Q 与标题形成两个块。
+        return `${headingQuestion[1]}${headingQuestion[2].trim()}`
       }
 
       const numberedQuestion = line.match(/^(\s*)(\d{1,3}[,，、.．]\s*.+)$/)
@@ -106,8 +118,8 @@ export default function MarkdownContent({
           <h2 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
             {qa ? (
               <>
-                <span className="qa-question-mark">Q</span>
-                <span className="flex-1">{children}</span>
+                <span className="qa-question-mark" aria-hidden="true">Q</span>
+                {children}
               </>
             ) : (
               children
@@ -122,8 +134,8 @@ export default function MarkdownContent({
           <h3 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
             {qa ? (
               <>
-                <span className="qa-question-mark qa-question-mark--sm">Q</span>
-                <span className="flex-1">{children}</span>
+                <span className="qa-question-mark qa-question-mark--sm" aria-hidden="true">Q</span>
+                {children}
               </>
             ) : (
               children

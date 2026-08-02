@@ -510,9 +510,7 @@
 
 /* H2/H3 作为问题标题时的 Q 徽章样式 */
 .qa-question-heading {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  display: block;
   padding: 0.8em 1em 0.75em !important;
   border-radius: 10px;
   background: var(--reading-accent-soft) !important;
@@ -535,7 +533,8 @@
   font-weight: 700;
   font-size: 0.78em;
   flex-shrink: 0;
-  margin-top: 0.12em;
+  margin: 0 0.75rem 0 0;
+  vertical-align: 0.12em;
 }
 .qa-question-mark--sm {
   font-size: 0.72em;
