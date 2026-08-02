@@ -29,7 +29,7 @@ const navGroups = [
       { href: '/munger', label: '芒格主页', meta: '人物与资料总览' },
       { href: '/munger/archive', label: '芒格资料', meta: '影音与文字档案' },
       { href: '/munger/archive/daily-journal', label: '每日期刊问答', meta: '2014—2023' },
-      { href: '/munger/wesco', label: 'Wesco 问答', meta: '1996—2011' },
+      { href: '/munger/wesco', label: 'Wesco 问答', meta: '1987—2011' },
       { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '按原书阅读' },
       { href: '/model', label: '多元思维模型', meta: '跨学科工具' },
     ],
@@ -79,7 +79,7 @@ const mobileSections = [
     links: [
       { href: '/munger/archive', label: '演讲与访谈', meta: '影音与文字稿' },
       { href: '/munger/archive/daily-journal', label: '每日期刊问答', meta: '2014—2023' },
-      { href: '/munger/wesco', label: 'Wesco 问答', meta: '1996—2011' },
+      { href: '/munger/wesco', label: 'Wesco 问答', meta: '1987—2011' },
       { href: '/model', label: '思维模型', meta: '跨学科工具' },
     ],
   },
