@@ -2,18 +2,74 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, Moon, Search, Sun, X } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { ChevronDown, Menu, Moon, Search, Sun, X } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
 
-const primaryLinks = [
-  { href: '/buffett', label: '巴菲特', activePrefixes: ['/buffett', '/letters', '/partnership', '/qa'] },
-  { href: '/munger', label: '芒格', activePrefixes: ['/munger', '/poor-charlies-almanack', '/model'] },
-  { href: '/business-history', label: '公司研究', activePrefixes: ['/business-history', '/companies'] },
-  { href: '/concepts', label: '投资方法', activePrefixes: ['/concepts'] },
-  { href: '/bloggers', label: '博主文章', activePrefixes: ['/bloggers'] },
-  { href: '/bound-edition', label: '合订本', activePrefixes: ['/bound-edition'] },
+const navGroups = [
+  {
+    label: '巴菲特',
+    description: '从合伙人时期到伯克希尔年代，按资料类型直接进入。',
+    activePrefixes: ['/buffett', '/letters', '/partnership', '/qa', '/talks', '/interviews'],
+    links: [
+      { href: '/buffett', label: '巴菲特主页', meta: '人物与资料总览' },
+      { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
+      { href: '/letters', label: '伯克希尔股东信', meta: '1965—至今' },
+      { href: '/qa', label: '股东大会问答', meta: '历年现场记录' },
+      { href: '/talks', label: '公开演讲', meta: '演讲文字稿' },
+      { href: '/interviews', label: '访谈实录', meta: '对话与采访' },
+    ],
+  },
+  {
+    label: '芒格',
+    description: '演讲、访谈、Wesco 问答与多元思维模型。',
+    activePrefixes: ['/munger', '/poor-charlies-almanack', '/model'],
+    links: [
+      { href: '/munger', label: '芒格主页', meta: '人物与资料总览' },
+      { href: '/munger/archive', label: '芒格资料', meta: '影音与文字档案' },
+      { href: '/munger/wesco', label: 'Wesco 问答', meta: '1996—2011' },
+      { href: '/poor-charlies-almanack', label: '《穷查理宝典》', meta: '按原书阅读' },
+      { href: '/model', label: '多元思维模型', meta: '跨学科工具' },
+    ],
+  },
+  {
+    label: '公司研究',
+    description: '从商业史专题进入，也可以按公司和人物索引查找。',
+    activePrefixes: ['/business-history', '/companies', '/people'],
+    links: [
+      { href: '/business-history', label: '公司深度研究', meta: '经营与资本配置' },
+      { href: '/companies', label: '公司索引', meta: '按公司查找' },
+      { href: '/people', label: '人物索引', meta: '管理者与投资人' },
+    ],
+  },
+  {
+    label: '投资方法',
+    description: '从概念、模型和书籍三个入口建立投资框架。',
+    activePrefixes: ['/concepts', '/model', '/books', '/learn'],
+    links: [
+      { href: '/concepts', label: '投资概念', meta: '按主题查找' },
+      { href: '/model', label: '思维模型', meta: '判断与决策工具' },
+      { href: '/books', label: '经典书籍', meta: '核心要点' },
+      { href: '/learn/path', label: '阅读路径', meta: '循序渐进阅读' },
+    ],
+  },
+  {
+    label: '博主文章',
+    description: '进入博主总览，或直接选择长期关注的写作者。',
+    activePrefixes: ['/bloggers'],
+    links: [
+      { href: '/bloggers', label: '全部博主文章', meta: '按作者与时间浏览' },
+      { href: '/bloggers/唐僧的碎碎念', label: '唐僧的碎碎念', meta: '投资与商业观察' },
+      { href: '/bloggers/在苍茫中传灯', label: '在苍茫中传灯', meta: '价值投资札记' },
+      { href: '/bloggers/方伟看十年', label: '方伟看十年', meta: '产品与长期主义' },
+      { href: '/bloggers/梁孝永康', label: '梁孝永康', meta: '投资思考' },
+    ],
+  },
+]
+
+const directLinks = [
+  { href: '/bound-edition', label: '合订本' },
 ]
 
 const mobileSections = [
@@ -54,21 +110,81 @@ const mobileSections = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const { theme, toggleTheme } = useTheme()
+  const [openGroup, setOpenGroup] = useState<string | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
 
-  useEffect(() => setMobileOpen(false), [pathname])
+  useEffect(() => {
+    setOpenGroup(null)
+    setMobileOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setOpenGroup(null)
+      }
+    }
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpenGroup(null)
+    }
+
+    document.addEventListener('mousedown', closeOnOutsideClick)
+    document.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.removeEventListener('mousedown', closeOnOutsideClick)
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [])
 
   const isActive = (prefixes: string[]) => prefixes.some(prefix => pathname === prefix || pathname.startsWith(`${prefix}/`))
 
   if (pathname.startsWith('/checkout') || pathname.startsWith('/payment') || pathname.startsWith('/login')) return null
 
   return (
-    <header className="archive-masthead">
+    <header ref={headerRef} className="archive-masthead">
       <div className="archive-masthead__inner">
         <Logo />
         <nav className="archive-nav" aria-label="主要栏目">
-          {primaryLinks.map(link => (
-            <Link key={link.href} href={link.href} className={isActive(link.activePrefixes) ? 'is-active' : ''}>
+          {navGroups.map(group => {
+            const isOpen = openGroup === group.label
+            return (
+              <div
+                key={group.label}
+                className="archive-nav__group"
+                onMouseEnter={() => setOpenGroup(group.label)}
+                onMouseLeave={() => setOpenGroup(null)}
+              >
+                <button
+                  type="button"
+                  className={`archive-nav__trigger ${isActive(group.activePrefixes) ? 'is-active' : ''}`}
+                  aria-expanded={isOpen}
+                  aria-haspopup="true"
+                  aria-controls={`nav-dropdown-${group.label}`}
+                  onClick={() => setOpenGroup(isOpen ? null : group.label)}
+                >
+                  {group.label}<ChevronDown size={14} aria-hidden="true" />
+                </button>
+                {isOpen && (
+                  <div id={`nav-dropdown-${group.label}`} className="archive-dropdown">
+                    <div className="archive-dropdown__intro">
+                      <span>{group.label}</span>
+                      <p>{group.description}</p>
+                    </div>
+                    <div className="archive-dropdown__links">
+                      {group.links.map(link => (
+                        <Link key={`${group.label}-${link.href}`} href={link.href}>
+                          <span>{link.label}</span><small>{link.meta}</small>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )
+          })}
+          {directLinks.map(link => (
+            <Link key={link.href} href={link.href} className={pathname.startsWith(link.href) ? 'is-active' : ''}>
               {link.label}
             </Link>
           ))}
