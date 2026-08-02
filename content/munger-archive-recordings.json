@@ -276,6 +276,18 @@
     "archiveUrl": "https://mungerarchive.com/daily-journal/"
   },
   {
+    "id": "daily-journal-2014",
+    "title": "Daily Journal Annual Meeting 2014",
+    "titleZh": "每日期刊 2014 年年会",
+    "year": 2014,
+    "date": "2014",
+    "type": "Daily Journal",
+    "medium": "Text",
+    "duration": "text only",
+    "localStatus": "local",
+    "archiveUrl": "https://mungerarchive.com/zh/recordings/daily-journal-2014/"
+  },
+  {
     "id": "michigan-2011",
     "title": "A Conversation with Charlie Munger (University of Michigan, 2011)",
     "titleZh": "与查理·芒格的对话（密歇根大学，2011）",

@@ -34,22 +34,14 @@ const navGroups = [
     ],
   },
   {
-    label: '公司研究',
-    description: '从商业史专题进入，也可以按公司和人物索引查找。',
-    activePrefixes: ['/business-history', '/companies', '/people'],
+    label: '研究与索引',
+    description: '从商业史、投资概念和经典书籍多入口查找。',
+    activePrefixes: ['/business-history', '/companies', '/people', '/concepts', '/books', '/learn'],
     links: [
       { href: '/business-history', label: '公司深度研究', meta: '经营与资本配置' },
       { href: '/companies', label: '公司索引', meta: '按公司查找' },
       { href: '/people', label: '人物索引', meta: '管理者与投资人' },
-    ],
-  },
-  {
-    label: '投资方法',
-    description: '从概念、模型和书籍三个入口建立投资框架。',
-    activePrefixes: ['/concepts', '/model', '/books', '/learn'],
-    links: [
       { href: '/concepts', label: '投资概念', meta: '按主题查找' },
-      { href: '/model', label: '思维模型', meta: '判断与决策工具' },
       { href: '/books', label: '经典书籍', meta: '核心要点' },
       { href: '/learn/path', label: '阅读路径', meta: '循序渐进阅读' },
     ],
@@ -94,6 +86,7 @@ const mobileSections = [
     links: [
       { href: '/business-history', label: '公司研究', meta: '经营与资本配置' },
       { href: '/concepts', label: '投资概念', meta: '按主题查找' },
+      { href: '/books', label: '经典书籍', meta: '核心要点' },
       { href: '/bloggers', label: '博主文章', meta: '长期写作者' },
     ],
   },

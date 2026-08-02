@@ -27,6 +27,8 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2018/"
 
 对照阅读
 
+[完整中文文字记录 · 芒格书院《芒格之道》](https://mungerarchive.com/zh/recordings/daily-journal-2018/)
+
 [完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2018-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks.pdf)
 
 他的原话——出自本场谈话

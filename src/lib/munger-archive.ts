@@ -138,14 +138,14 @@ function toLocalArchiveItem(filePath: string): MungerLocalArchiveItem {
 export const MUNGER_ARCHIVE_DRAWERS = [
   {
     label: '影音',
-    count: '35',
+    count: '36',
     href: '/munger/archive',
     externalHref: 'https://mungerarchive.com/zh/recordings/',
     description: '演讲、年会、访谈与播客的可核实索引',
   },
   {
     label: '每日期刊',
-    count: '10',
+    count: '11',
     href: '/munger/archive?type=Daily%20Journal',
     externalHref: 'https://mungerarchive.com/daily-journal/',
     description: '2014-2023 年 Daily Journal 个人问答专场',

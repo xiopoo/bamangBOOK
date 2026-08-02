@@ -27,6 +27,8 @@ source: "https://mungerarchive.com/zh/recordings/daily-journal-2022/"
 
 对照阅读
 
+[完整中文文字记录 · 芒格书院《芒格之道》](https://mungerarchive.com/zh/recordings/daily-journal-2022/)
+
 [完整文字记录 · Worldly Partners ↗](https://worldlypartners.com/wp-content/uploads/2024/01/2022-daily-journal-corp-annual-meeting-transcript-of-charlie-mungers-remarks.pdf)
 
 由YouTube字幕自动生成并经轻度校订——标点和专有名词可能有误。我们不拥有此内容;所有权利归每日期刊 / 雅虎财经所有。 [来源 ↗](https://www.youtube.com/watch?v=8RxLj9OVqLo)
