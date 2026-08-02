@@ -1,8 +1,9 @@
 'use client'
 
-import { useMemo } from 'react'
+import { isValidElement, useMemo, type ReactNode } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkCjkEmphasis from '@/lib/remark-cjk-emphasis'
 
 function slugify(text: string): string {
   return text
@@ -23,53 +24,92 @@ function escapeAllAngleBrackets(content: string): string {
   return content.replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-function formatQAContent(content: string): string {
-  let result = content || ''
+function getNodeText(node: ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node)
+  if (Array.isArray(node)) return node.map(getNodeText).join('')
+  if (isValidElement<{ children?: ReactNode }>(node)) return getNodeText(node.props.children)
+  return ''
+}
 
-  // 详情页头部已展示标题，移除正文开头的 H1 行，避免重复 H1。
-  result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
+function normalizeMarkdownStructure(content: string): string {
+  let removedFirstH1 = false
+  let inFence = false
 
-  // 部分实录原文把下一个问题直接接在上一段末尾，先切回独立段落。
-  result = result
-    .replace(/([。！？；）)])(?=(?:#{2,6}\s*)?\d{1,3}[,，、.．]\s*)/g, '$1\n\n')
-    .replace(/([^\n])(?=#{2,6}\s*\d{1,3}[,，、.．]\s*)/g, '$1\n\n')
-    .replace(/([^\n])(?=\d{1,3}[,，、.．]\s*(?:股东|问题|关于|为什么|如何|能否|是否|[A-Za-z]))/g, '$1\n\n')
-
-  // 历史稿常把“问题标题”和“股东：提问正文”粘成同一行。
-  // 例如：## 5，关于等待投资机会股东：现在的市场状况……
-  // 统一拆成标题 + 提问段，避免标题徽章 Q 后留空或正文挤到下一行。
-  result = result.replace(
-    /^(\s*#{2,6}\s*)?(\d{1,3}[,，、.．]\s*)(.+?)(股东(?:提问)?|提问)[：:](.*)$/gm,
-    (_match, heading: string | undefined, number: string, title: string, speaker: string, question: string) => {
-      if (!title.trim()) return _match
-      return `${heading || ''}${number}${title.trim()}\n\n${speaker}：${question.trim()}`
-    }
-  )
-
-  result = result
+  const normalized = (content || '')
+    .replace(/\r\n?/g, '\n')
     .split('\n')
     .map((line) => {
-      const trimmed = line.trim()
-      if (!trimmed) return line
-
-      const headingQuestion = line.match(/^(\s*#{2,6}\s*)(\d{1,3}[,，、.．]\s*.+)$/)
-      if (headingQuestion) {
-        // 标题本身已经有语义和字重，不再额外包 strong，避免 Q 与标题形成两个块。
-        return `${headingQuestion[1]}${headingQuestion[2].trim()}`
+      if (/^\s*(```|~~~)/.test(line)) {
+        inFence = !inFence
+        return line
       }
+      if (inFence) return line
 
-      const numberedQuestion = line.match(/^(\s*)(\d{1,3}[,，、.．]\s*.+)$/)
-      if (numberedQuestion && !trimmed.startsWith('**')) {
-        return `${numberedQuestion[1]}**${numberedQuestion[2].trim()}**`
+      let normalized = line.replace(/^(\s*)(#{1,6})(?=[^\s#])/, '$1$2 ')
+      normalized = normalized.replace(/^(\s*\*{2,3})#(?=关于付费星球)/, '$1')
+      if (/\*{4,}/.test(normalized)) {
+        normalized = normalized.replace(/\*/g, '')
       }
-
-      const explicitQuestion = line.match(/^(\s*)((?:股东|提问|问题|问|Q)[：:].+)$/i)
-      if (explicitQuestion && !trimmed.startsWith('**')) {
-        return `${explicitQuestion[1]}**${explicitQuestion[2].trim()}**`
+      if (/^\s*#{1,6}\s*$/.test(normalized)) return ''
+      if (!removedFirstH1 && /^\s*#\s+\S/.test(normalized)) {
+        removedFirstH1 = true
+        return ''
       }
-
-      return line
+      return normalized
     })
+    .join('\n')
+
+  // 少量演讲/采访稿把“下一题”直接粘在上一段句末；这里仅处理明确的“编号＋关于”结构。
+  return normalized.replace(
+    /([。！？；）)])(?=\d{1,3}[,，、.．]\s*关于)/g,
+    '$1\n\n'
+  )
+}
+
+const speakerPattern = /(股东(?:提问)?|提问|问题|问|记者|听众|主持人|巴菲特|芒格|沃伦|查理|BUFFETT|MUNGER|A)[：:]/i
+
+function formatNumberedQALine(line: string): string {
+  const match = line.match(/^(\s*)(#{2,6}\s+)?(\d{1,3}[,，、.．]\s*)(.+)$/)
+  if (!match) return line
+
+  const [, indent, heading, number, body] = match
+  const speaker = speakerPattern.exec(body)
+
+  if (speaker) {
+    const title = body.slice(0, speaker.index).trim()
+    const speech = body.slice(speaker.index + speaker[0].length).trim()
+    const isQuestionSpeaker = /^(股东|股东提问|提问|问题|问|记者|听众|主持人)$/i.test(speaker[1])
+    const fallbackTitle = isQuestionSpeaker ? '问题' : `${speaker[1]}的回答`
+    const questionHeading = `${heading || '### '}${number}${title || fallbackTitle}`
+    return speech ? `${indent}${questionHeading}\n\n${speaker[1]}：${speech}` : `${indent}${questionHeading}`
+  }
+
+  // 损坏的史料偶尔把整段回答塞进标题。保留内容，但降为问答段落，避免巨型标题。
+  if (body.length > 120) return `${indent}${number}${body.trim()}`
+
+  // 问答史料中的裸编号行统一提升为问题标题，避免同一页有的条目有 Q、有的没有。
+  if (!heading) return `${indent}### ${number}${body.trim()}`
+  return `${indent}${heading}${number}${body.trim()}`
+}
+
+function formatQAContent(content: string): string {
+  const result = normalizeMarkdownStructure(content)
+    .split('\n')
+    .flatMap((line) =>
+      // 按行处理，因此永远不会在 Markdown 的 ### 标题标记内部切开。
+      line
+        .replace(/([。！？；）)])(?=\d{1,3}[,，、.．]\s*(?:股东|问题|关于|为什么|如何|能否|是否|[A-Za-z\u4e00-\u9fa5]))/g, '$1\n\n')
+        .split('\n')
+    )
+    .map((line) =>
+      line
+        .replace(/\*{2}([：:])\*{2}/g, '$1')
+        .replace(
+          /^(\s*#{2,6}\s+)\*{1,3}(\d{1,3}[,，、.．]\s*.+?)\*{1,3}\s*$/,
+          '$1$2'
+        )
+    )
+    .map(formatNumberedQALine)
     .join('\n')
 
   return escapeAllAngleBrackets(result)
@@ -93,15 +133,13 @@ export default function MarkdownContent({
       return formatQAContent(content)
     }
 
-    let result = content || ''
+    let result = normalizeMarkdownStructure(content)
     if (result.includes('[[')) {
       result = result.replace(/\[\[([^\]]+)\]\]/g, (match, entity: string) => {
         const resolved = linkResolver?.(entity)
         return resolved ? `[${entity}](${resolved})` : entity
       })
     }
-    // 详情页头部已展示标题，移除正文开头的 H1 行，避免页面内出现重复 H1（语义与视觉问题）
-    result = result.replace(/^\s*#\s+[^\n]+\n?/, '')
     return escapeTextAngleBrackets(result)
   }, [content, linkResolver, isQA])
 
@@ -111,9 +149,10 @@ export default function MarkdownContent({
       //    统一切换到 reading.css 中的 .prose (CN Reading Typography) 规范。
       //    —— 仅对 QA 模式保留结构包装（is-question / is-answer class），
       //    样式也通过 CSS 变量走全局规范。
+      h1: ({ children }: any) => <h2>{children}</h2>,
       h2: ({ children }: any) => {
-        const text = typeof children === 'string' ? children : ''
-        const qa = isQA
+        const text = getNodeText(children)
+        const qa = isQA && /^\d{1,3}[,，、.．]/.test(text.trim())
         return (
           <h2 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
             {qa ? (
@@ -128,8 +167,8 @@ export default function MarkdownContent({
         )
       },
       h3: ({ children }: any) => {
-        const text = typeof children === 'string' ? children : ''
-        const qa = isQA
+        const text = getNodeText(children)
+        const qa = isQA && /^\d{1,3}[,，、.．]/.test(text.trim())
         return (
           <h3 id={slugify(text)} className={qa ? 'qa-question-heading' : ''}>
             {qa ? (
@@ -147,19 +186,17 @@ export default function MarkdownContent({
       h5: ({ children }: any) => <h5>{children}</h5>,
       h6: ({ children }: any) => <h6>{children}</h6>,
       p: ({ children }: any) => {
-        const text = Array.isArray(children)
-          ? children.map((child) => (typeof child === 'string' ? child : '')).join('')
-          : typeof children === 'string'
-          ? children
-          : ''
+        const text = getNodeText(children)
 
         if (isQA) {
-          if (/^(股东|股东提问|提问|问题|问|Q)[：:]/i.test(text)) {
+          if (/^(股东|股东提问|提问|问题|问|记者|听众|主持人|Q)[：:]/i.test(text)) {
+            const speaker = text.match(/^(股东|股东提问|提问|问题|问|记者|听众|主持人|Q)[：:]/i)?.[1] || '股东'
+            const speakerLabel = /^(提问|问题|问|Q)$/i.test(speaker) ? '股东' : speaker
             return (
               <div className="qa qa--question">
                 <p className="is-question">
-                  <span className="qa__speaker qa__speaker--question">股东：</span>
-                  {text.replace(/^(股东|股东提问|提问|问题|问|Q)[：:]/i, '')}
+                  <span className="qa__speaker qa__speaker--question">{speakerLabel}：</span>
+                  {text.replace(/^(股东|股东提问|提问|问题|问|记者|听众|主持人|Q)[：:]/i, '')}
                 </p>
               </div>
             )
@@ -234,7 +271,7 @@ export default function MarkdownContent({
     <div
       className={`prose mx-auto overflow-x-hidden break-words ${isQA ? 'prose--is-qa' : ''} ${className}`}
     >
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkCjkEmphasis]} components={markdownComponents}>
         {processedContent}
       </ReactMarkdown>
     </div>

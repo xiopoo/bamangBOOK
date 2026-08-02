@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkNumberedList from '@/lib/remark-numbered-list'
+import remarkCjkEmphasis from '@/lib/remark-cjk-emphasis'
 import rehypeNumberedList from '@/lib/rehype-numbered-list'
 import rehypeSectionHeadings from '@/lib/rehype-section-headings'
 import { normalizeImportedMarkdown } from '@/lib/normalize-letter-markdown'
@@ -42,7 +43,7 @@ export default function ArticleContent({ content }: ArticleContentProps) {
   return (
     <article className="prose mx-auto overflow-x-hidden break-words">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkNumberedList]}
+        remarkPlugins={[remarkGfm, remarkCjkEmphasis, remarkNumberedList]}
         rehypePlugins={[rehypeNumberedList, rehypeSectionHeadings]}
         components={components}
       >

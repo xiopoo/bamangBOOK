@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkCjkEmphasis from '@/lib/remark-cjk-emphasis'
 import Link from 'next/link'
 import { ArrowLeft, BookOpen, FileText, Tag, ChevronRight } from 'lucide-react'
 import { readFileSync, existsSync, readdirSync } from 'fs'
@@ -134,7 +135,7 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
         {conceptContent && (
           <section className="mb-12">
             <article className="prose prose-lg max-w-none">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown remarkPlugins={[remarkGfm, remarkCjkEmphasis]}>
                 {conceptContent}
               </ReactMarkdown>
             </article>

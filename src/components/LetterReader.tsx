@@ -3,6 +3,7 @@
 import { useMemo, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkCjkEmphasis from '@/lib/remark-cjk-emphasis'
 import { useReadingProgress } from '@/hooks/useReadingProgress'
 import ReadingProgressBar from '@/components/ReadingProgress'
 import type { LetterData, LetterItem } from '@/lib/letters'
@@ -154,7 +155,7 @@ export default function LetterReader({
         key={index ?? 0}
         className="prose mx-auto overflow-x-hidden break-words"
       >
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkCjkEmphasis]} components={markdownComponents}>
           {processed}
         </ReactMarkdown>
       </div>
