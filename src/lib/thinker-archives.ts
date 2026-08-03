@@ -110,6 +110,12 @@ export const mungerArchive: ThinkerArchive = {
       description: '没有伯克希尔的双人配合，芒格独自回答投资、公司治理、金融与社会问题。',
     },
     {
+      href: '/munger/archive/daily-journal',
+      label: '每日期刊股东会',
+      meta: '2014—2023',
+      description: '芒格独自主持、无讲稿的股东问答专场，从投资、银行业到人生判断，是晚年最完整、最不修饰的一批公开回答。',
+    },
+    {
       href: '/munger/archive',
       label: '演讲与访谈',
       meta: '1986—2023',
