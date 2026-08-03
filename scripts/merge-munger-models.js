@@ -106,7 +106,7 @@ ${content}
 
 ## 资料来源
 
-本文整理自 [Munger Archive](${sourceUrl})，并已纳入小胖书房统一的多元思维模型索引。
+本文整理自 [Munger Archive](${sourceUrl})，并已纳入复利书房统一的多元思维模型索引。
 
 ${marker}
 `

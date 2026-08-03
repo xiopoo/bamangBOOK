@@ -70,7 +70,7 @@ export default function ModelDetailPage({ params }: PageProps) {
       </header>
 
       <div className="model-detail__shell">
-        <div className="model-detail__grid">
+        <div className="model-detail__grid flex-col lg:flex-row">
           <main className="flex-1 min-w-0">
             {model.scenarios.length > 0 && (
               <div className="model-detail__scenarios">

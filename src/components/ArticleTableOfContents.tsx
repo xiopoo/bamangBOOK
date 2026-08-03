@@ -83,7 +83,7 @@ export default function ArticleTableOfContents() {
   }
 
   return (
-    <aside className="article-toc" aria-label="章节目录">
+    <aside className="article-toc order-first lg:order-none" aria-label="章节目录">
       {/* 移动端折叠头 */}
       <button
         type="button"

@@ -68,7 +68,7 @@ export default function ColumnDetailPage({ params }: PageProps) {
           source="站主原创投资随笔"
           method="本文为个人投资思考，仅供交流学习，不构成任何投资建议。"
         />
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <main className="flex-1 min-w-0">
             <article className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
               <MarkdownContent content={column.content} />

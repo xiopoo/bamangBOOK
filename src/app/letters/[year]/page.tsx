@@ -169,7 +169,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
           </div>
         )}
 
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <main className="min-w-0 flex-1">
             <LetterReader
               letterData={letterData}

@@ -48,7 +48,7 @@ export default function InterviewDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <main className="flex-1">
             <article className="bg-bg-card dark:bg-dark-card p-6 md:p-10 shadow-card rounded-card">
               <MarkdownContent content={doc.content} />

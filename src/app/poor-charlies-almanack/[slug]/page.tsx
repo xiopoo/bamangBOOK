@@ -88,7 +88,7 @@ export default function AlmanackSectionPage({ params }: PageProps) {
       </header>
 
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 md:px-8 md:py-10">
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <main className="min-w-0 flex-1">
             <aside className="mb-6 rounded-2xl border border-primary/15 bg-primary/[0.04] p-4 text-sm leading-6 text-gray-700 dark:bg-primary/10 dark:text-gray-300">
               <div className="flex items-start gap-3">

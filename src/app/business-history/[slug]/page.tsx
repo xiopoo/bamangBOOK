@@ -71,7 +71,7 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
           method="本文为中文研究整理稿，侧重事实脉络、商业模式、护城河、风险与价值判断；具体数据与原始披露请以原 PDF 和公司公告为准，不构成投资建议。"
         />
 
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <main className="min-w-0 flex-1">
             <article className="rounded-card bg-bg-card p-4 shadow-card dark:bg-dark-card sm:p-6 md:p-10">
               <MarkdownContent content={item.content} />

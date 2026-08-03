@@ -140,6 +140,7 @@ export default function Sidebar() {
 
               <div className="border-t border-gray-100 pt-3 dark:border-gray-700">
                 <NavLink href="/search" icon="🔎" label="全站搜索" />
+                <NavLink href="/author" icon="👤" label="作者" />
                 <NavLink href="/about" icon="ⓘ" label="关于" />
               </div>
             </div>

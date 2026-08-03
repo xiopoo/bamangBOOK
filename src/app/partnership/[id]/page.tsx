@@ -73,7 +73,7 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
       </header>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="min-w-0 flex-1">
             <ArticleContent content={content} />
           </div>

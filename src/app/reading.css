@@ -573,6 +573,11 @@
   .article-toc {
     max-width: none;
     margin-bottom: 1.5rem;
+    /* 覆盖 globals.css 的桌面吸顶侧栏样式：移动端不悬浮，随正文滚动 */
+    position: static;
+    top: auto;
+    max-height: none;
+    overflow: visible;
   }
 }
 .article-toc__toggle {

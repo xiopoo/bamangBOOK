@@ -12,14 +12,14 @@ digest: "（玩一玩公众号移动端的小绿书）"
 
 （玩一玩公众号移动端的小绿书）
 
-![](./assets/69d1d242a4dada5561f6b766a2cdee57.jpg)
+[图片]
 
 【图1】
 
-![](./assets/300d4809bbcfd459aee8fd3c6b438167.jpg)
+[图片]
 
 【图2】
 
-![](./assets/aecf382b641696a4a87cb5af1d16b1d6.jpg)
+[图片]
 
 【图3】
