@@ -23,7 +23,7 @@ function namesIn(directory: string): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
-    '', '/about', '/author', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
+    '', '/about', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers',
     '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',

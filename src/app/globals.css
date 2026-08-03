@@ -3800,6 +3800,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .author-profile__stats {
+  margin-top: 2.4rem;
   padding: 0 !important;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -3835,6 +3836,12 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.06em;
 }
 
+.author-profile__sub {
+  margin-top: 3.2rem;
+  font-size: 1.3rem;
+  color: var(--archive-ink);
+}
+
 .author-profile__principle-grid {
   margin-top: 2.4rem;
   display: grid;
@@ -3866,7 +3873,7 @@ h1, h2, h3, h4, h5, h6 {
 .author-profile__platform-grid {
   margin-top: 2.4rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 2px solid var(--archive-ink);
 }
 

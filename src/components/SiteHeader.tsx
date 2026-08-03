@@ -63,6 +63,7 @@ const navGroups = [
 
 const directLinks = [
   { href: '/bound-edition', label: '合订本' },
+  { href: '/about', label: '关于' },
 ]
 
 const mobileSections = [
@@ -97,8 +98,7 @@ const mobileSections = [
     links: [
       { href: '/reading', label: '全部内容', meta: '按人物与类型浏览' },
       { href: '/bound-edition', label: '电子合订本', meta: '微信购买 PDF' },
-      { href: '/author', label: '关于作者', meta: '金融街小胖' },
-      { href: '/about', label: '关于本站', meta: '编辑与来源说明' },
+      { href: '/about', label: '关于', meta: '站点与作者' },
     ],
   },
 ]
