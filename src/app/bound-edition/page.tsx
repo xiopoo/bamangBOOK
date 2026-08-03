@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import ProductCover from '@/components/ProductCover'
+import EditionTocTabs, { type EditionTocBook } from '@/components/EditionTocTabs'
 import { products } from '@/lib/commerce'
 
 /* 巴菲特卷：五篇十五章 */
@@ -34,6 +35,26 @@ const mungerOutline = [
   '第十六章 理性近乎一种道德义务',
 ]
 
+/* 两卷目录：标签页切换展示 */
+const tocBooks: EditionTocBook[] = [
+  {
+    id: 'buffett',
+    index: '01',
+    title: '《所有者的眼光》',
+    sub: '五篇十五章：从买什么，到如何长期持有',
+    parts: buffettOutline,
+    appendix: '附录：术语表与案例索引 · 读者与复核检查清单 · 模型身份对照　｜　典藏：人物索引 · 企业索引 · 思想与制度年表 · 概念·问题·案例总索引',
+  },
+  {
+    id: 'munger',
+    index: '02',
+    title: '《理性的格栅》',
+    sub: '十六章：从一把锤子，到理性与避错',
+    chapters: mungerOutline,
+    appendix: '附录：模型身份与思想源流对照表（232 个模型）· 双轨判断检查清单 5 组 · 25 种心理倾向速查表　｜　典藏：芒格年表 1924—2023 · 关键人物与关键企业索引 · 概念·问题·案例索引',
+  },
+]
+
 const heroStats = [
   ['31', '章'],
   ['约 60', '万字'],
@@ -58,12 +79,12 @@ const mungerPoints = [
 
 /* 实际页面预览：从终稿 PDF 抽取的代表页 */
 const buffettPreviews = [
-  { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '品牌红与深棕双色装帧，系列开卷之作，书名与副题同页呈现。' },
+  { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '米白纸底配品牌玫红，中部复利曲线原创主图，系列名、书名与副题同页呈现。' },
   { img: '/ebook-previews/buffett-p03.png', title: '目录', desc: '五篇 15 章两级目录，点线引导页码，附录与典藏索引并列入口。' },
   { img: '/ebook-previews/buffett-p13.png', title: '第一章开头', desc: '篇目信息、核心问题与原创插图同页呈现，引文来源逐条标注。' },
 ]
 const mungerPreviews = [
-  { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特卷同系列同版式，两卷并排观感统一，适合成套收藏。' },
+  { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特卷同系列同版式，中部思维格栅原创主图，两卷并排观感统一。' },
   { img: '/ebook-previews/munger-p03.png', title: '目录', desc: '16 章加附录与典藏索引，232 个模型对照、25 种心理倾向速查在内。' },
   { img: '/ebook-previews/munger-p04.png', title: '第一章开头', desc: '开卷即 1994 年南加大演讲，配图解《单一锤子与多模型视野》。' },
 ]
@@ -175,48 +196,7 @@ export default function BoundEditionPage() {
           </div>
 
           <div className="edition-toc__books">
-            <details className="edition-toc__book" open>
-              <summary>
-                <span>01</span>
-                <div>
-                  <h3>《所有者的眼光》</h3>
-                  <small>五篇十五章：从买什么，到如何长期持有</small>
-                </div>
-                <ArrowRight size={16} aria-hidden="true" />
-              </summary>
-              <div className="edition-toc__chapters">
-                {buffettOutline.map(([part, chapters]) => (
-                  <div key={part} className="edition-toc__part">
-                    <h4>{part}</h4>
-                    <ol>
-                      {chapters.map(title => <li key={title}>{title}</li>)}
-                    </ol>
-                  </div>
-                ))}
-                <p className="edition-toc__appendix">
-                  附录：术语表与案例索引 · 读者与复核检查清单 · 模型身份对照　｜　典藏：人物索引 · 企业索引 · 思想与制度年表 · 概念·问题·案例总索引
-                </p>
-              </div>
-            </details>
-
-            <details className="edition-toc__book">
-              <summary>
-                <span>02</span>
-                <div>
-                  <h3>《理性的格栅》</h3>
-                  <small>十六章：从一把锤子，到理性与避错</small>
-                </div>
-                <ArrowRight size={16} aria-hidden="true" />
-              </summary>
-              <div className="edition-toc__chapters">
-                <ol className="edition-toc__flat">
-                  {mungerOutline.map(title => <li key={title}>{title}</li>)}
-                </ol>
-                <p className="edition-toc__appendix">
-                  附录：模型身份与思想源流对照表（232 个模型）· 双轨判断检查清单 5 组 · 25 种心理倾向速查表　｜　典藏：芒格年表 1924—2023 · 关键人物与关键企业索引 · 概念·问题·案例索引
-                </p>
-              </div>
-            </details>
+            <EditionTocTabs books={tocBooks} />
           </div>
         </section>
 
@@ -262,7 +242,7 @@ export default function BoundEditionPage() {
           </div>
           <div className="edition-craft__list">
             {craftItems.map(([num, title, desc]) => (
-              <p key={num}><span>{num}</span><div><strong>{title}</strong><small>{desc}</small></div></p>
+              <div key={num}><span>{num}</span><div><strong>{title}</strong><small>{desc}</small></div></div>
             ))}
           </div>
         </section>

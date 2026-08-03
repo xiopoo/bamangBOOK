@@ -1,8 +1,16 @@
+import Image from 'next/image'
+
 type ProductCoverProps = {
   variant: 'buffett' | 'munger'
   title: string
   yearRange: string
   compact?: boolean
+}
+
+/* 与终稿 PDF 第一页（正面封面）逐页渲染一致的封面图 */
+const coverImages: Record<ProductCoverProps['variant'], string> = {
+  buffett: '/ebook-covers/buffett-cover.png',
+  munger: '/ebook-covers/munger-cover.png',
 }
 
 export default function ProductCover({ variant, title, yearRange, compact = false }: ProductCoverProps) {
@@ -14,22 +22,14 @@ export default function ProductCover({ variant, title, yearRange, compact = fals
       role="img"
       aria-label={`${title}，${yearRange}，复利书房合订本封面`}
     >
-      <div className="product-cover__topline">
-        <span>复利书房</span>
-        <span>BOUND EDITION</span>
-      </div>
-      <div className="product-cover__index" aria-hidden="true">
-        <span>01</span><i />
-        <span>02</span><i />
-        <span>03</span><i />
-      </div>
-      <div className="product-cover__title">
-        <small>{person}</small>
-        <strong>{title.replace(/[《》]/g, '')}</strong>
-        <span>{yearRange}</span>
-      </div>
-      <div className="product-cover__seal" aria-hidden="true">藏</div>
-      <p>阅读原典，形成自己的判断</p>
+      <Image
+        src={coverImages[variant]}
+        alt={`${title.replace(/[《》]/g, '')}封面 · ${person}`}
+        width={1241}
+        height={1755}
+        priority={!compact}
+        className="product-cover__img"
+      />
     </div>
   )
 }
