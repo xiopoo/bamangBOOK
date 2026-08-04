@@ -177,6 +177,15 @@ function addFlatItems(items, directory, type, route) {
   }
 }
 
+// 搜索只需关键词命中，无需保留全文。截断到固定长度，
+// 既保留基本全文命中能力，又避免索引体积膨胀（全文会撑到 20MB+）。
+const SEARCH_CONTENT_LIMIT = 400
+function truncateForSearch(text) {
+  if (!text) return ''
+  const clean = String(text).slice(0, SEARCH_CONTENT_LIMIT)
+  return clean.length < String(text).length ? `${clean}…` : clean
+}
+
 function generateSearchIndex(index) {
   const items = []
   addEntityItems(items, 'concepts', 'concept', 'concepts', index.concepts)
@@ -192,12 +201,15 @@ function generateSearchIndex(index) {
   addFlatItems(items, 'columns', 'column', 'columns')
   addFlatItems(items, 'models', 'model', 'model')
 
+  // 写入前统一截断 content，控制索引体积
+  const slimItems = items.map(item => ({ ...item, content: truncateForSearch(item.content) }))
+
   fs.writeFileSync(
     path.join(PUBLIC_DIR, 'search-index.json'),
-    JSON.stringify({ generatedAt: new Date().toISOString(), items }, null, 2),
+    JSON.stringify({ generatedAt: new Date().toISOString(), items: slimItems }, null, 2),
     'utf-8'
   )
-  console.log(`🔎 静态搜索索引: ${items.length} 条`)
+  console.log(`🔎 静态搜索索引: ${items.length} 条 (content 已截断至 ${SEARCH_CONTENT_LIMIT} 字)`)
 }
 
 function readEntityDescription(directory, id) {

@@ -1,0 +1,21 @@
+{
+  "name": "复利书房",
+  "short_name": "复利书房",
+  "description": "巴菲特、芒格与公司研究的中文知识库",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

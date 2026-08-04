@@ -67,6 +67,14 @@ export const metadata: Metadata = {
   robots: siteConfig.hasProductionUrl
     ? { index: true, follow: true }
     : { index: false, follow: false },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png', sizes: '64x64' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({

@@ -1,40 +1,48 @@
-# 复利书房 (Compound Interest Study Room)
+# 复利书房 (fuliLAB)
 
-> 复利书房整理巴菲特、芒格散落多年的信件、演讲与问答，也持续收录公司研究和投资方法文章。内容按「原文、翻译、编辑整理」三种状态分别标注，保留作者、年份、出处与完整上下文，提供可核验的材料，不替代读者下结论。
-> 本站由「金融街小胖」个人维护，是学习研究型资料库，不是巴菲特、芒格或其公司的官方网站，也不提供投资建议。
+巴菲特与芒格投资思想、公司研究、商业史与股东信的中文知识库。本站以「能力圈、护城河、复利、安全边际」为核心，整理巴菲特、芒格相关的问答、访谈、演讲、股东信与商业案例。
 
-## 内容分类与入口
+## 导航
 
-- [首页](https://fulilab.com/)：书房总览与推荐起点
-- [巴菲特专题](https://fulilab.com/buffett)：巴菲特生平、方法与资料
-- [芒格专题](https://fulilab.com/munger)：芒格生平、方法与资料
+- 首页：https://fulilab.com/
+- 关于：https://fulilab.com/about
+- 站内全文搜索：https://fulilab.com/search
+- 阅读：https://fulilab.com/reading
+- 学习路径：https://fulilab.com/learn/path
 
-### 第一手资料（原文为主）
+## 人物
 
-- [巴菲特股东信](https://fulilab.com/letters)：伯克希尔·哈撒韦历年股东信，按年份阅读
-- [巴菲特合伙人信](https://fulilab.com/partnership)：1956–1970 年致合伙人信
-- [股东大会问答](https://fulilab.com/qa)：巴菲特股东大会现场问答记录
-- [芒格 Wesco 问答](https://fulilab.com/munger/wesco)：1987–2005 年 Wesco 年会问答
-- [演讲与访谈](https://fulilab.com/talks)：巴菲特、芒格公开演讲
-- [访谈实录](https://fulilab.com/interviews)：人物专访与访谈记录
+- 巴菲特：https://fulilab.com/buffett
+- 芒格：https://fulilab.com/munger
 
-### 研究类内容（编辑整理）
+## 核心栏目
 
-- [思维模型](https://fulilab.com/model)：芒格多学科思维模型（含 232 个模型的对照表）
-- [公司研究](https://fulilab.com/business-history)：企业商业模式、经营史与资本配置研究
-- [概念库](https://fulilab.com/concepts)：投资核心概念知识卡片（如安全边际、护城河、内在价值）
-- [公司词条](https://fulilab.com/companies)：巴菲特与芒格投资/关注过的公司
-- [人物词条](https://fulilab.com/people)：巴菲特、芒格及其身边的人
-- [经典书目](https://fulilab.com/books)：投资经典的核心要点整理
-- [专栏文章](https://fulilab.com/columns)：投资方法与研究专栏
+- 概念（能力圈、护城河、复利、安全边际等）：https://fulilab.com/concepts
+- 公司研究：https://fulilab.com/companies
+- 人物：https://fulilab.com/people
+- 问答（QA）：https://fulilab.com/qa
+- 演讲（Talks）：https://fulilab.com/talks
+- 访谈（Interviews）：https://fulilab.com/interviews
+- 博主文章：https://fulilab.com/bloggers
+- 思维模型：https://fulilab.com/model
+- 书架（Books）：https://fulilab.com/books
+- 专栏（Columns）：https://fulilab.com/columns
 
-### 使用方式
+## 原始资料
 
-- 本站提供站内全文搜索：https://fulilab.com/search
-- 网站内容与两卷电子书《所有者的眼光》（巴菲特卷）、《理性的格栅》（芒格卷）见 [电子合订本](https://fulilab.com/bound-edition)
-- 关于站主、整理方法与核验标准见 [关于](https://fulilab.com/about)
+- 伯克希尔股东信：https://fulilab.com/letters
+- 巴菲特合伙信（1957–1969）：https://fulilab.com/partnership
+- 商业史：https://fulilab.com/business-history
+- 穷查理宝典：https://fulilab.com/poor-charlies-almanack
+- Wesco 股东大会：https://fulilab.com/munger/wesco
+- 芒格本地存档：https://fulilab.com/munger/archive
+- 对谈：https://fulilab.com/talk
+- 关系图谱：https://fulilab.com/graph
 
-## 引用说明
+## 出版物
 
-- 引用本站内容时请注明来源「复利书房」（https://fulilab.com）。
-- 站内引用的巴菲特信件、芒格演讲等内容版权归原作者/版权所有方；中文翻译与整理由本站完成。
+- 精装版：https://fulilab.com/bound-edition
+
+## 说明
+
+本站为静态站点，正文以 Markdown 形式组织，页面均可在浏览器中直接阅读。如需抓取全文，请优先使用上述栏目入口逐页访问。
