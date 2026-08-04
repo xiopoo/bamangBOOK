@@ -117,9 +117,12 @@ function parseQuotePair(
 
   const parsed = parseSourceLine(sourceBlock)
   const year = parsed.year
-  const href = speaker === 'buffett'
-    ? (year ? `/letters/${year}` : '/letters')
-    : `/munger/archive/quotes/${fileSlug}`
+  const href = (() => {
+    if (speaker === 'munger') return `/munger/archive/quotes/${fileSlug}`
+    // 合伙人信（1956-1970）站内路由为 /partnership/{id}，id 不直接对应年份，降级到列表页
+    if (parsed.source.toLowerCase().includes('partnership letter')) return '/partnership'
+    return year ? `/letters/${year}` : '/letters'
+  })()
 
   return {
     id: `${speaker}-${fileSlug}-${index}`,
@@ -161,12 +164,19 @@ function readQuoteFiles(dir: string, speaker: DailyQuoteSpeaker): DailyQuote[] {
     })
 }
 
-/** 全部每日一读语录：芒格主题库 + 巴菲特精选库 */
+/** 全部每日一读语录：巴菲特与芒格永远一人一条，各自独立轮替 */
 export function getAllDailyQuotes(): DailyQuote[] {
-  return [
-    ...readQuoteFiles(MUNGER_QUOTES_DIR, 'munger'),
-    ...readQuoteFiles(BUFFETT_QUOTES_DIR, 'buffett'),
-  ]
+  const buffett = readQuoteFiles(BUFFETT_QUOTES_DIR, 'buffett')
+  const munger = readQuoteFiles(MUNGER_QUOTES_DIR, 'munger')
+  if (buffett.length === 0) return munger
+  if (munger.length === 0) return buffett
+  const interleaved: DailyQuote[] = []
+  const maxLen = Math.max(buffett.length, munger.length)
+  for (let i = 0; i < maxLen; i++) {
+    interleaved.push(buffett[i % buffett.length])
+    interleaved.push(munger[i % munger.length])
+  }
+  return interleaved
 }
 
 /** 以日期为 seed 的确定性索引：每天固定一条，次日顺移一位 */
