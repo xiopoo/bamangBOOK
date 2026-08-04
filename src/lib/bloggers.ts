@@ -315,7 +315,7 @@ export function getBloggerArticle(bloggerName: string, fileName: string): {
   tags: string[]
   wordCount: number
 } | null {
-  const filePath = path.join(BLOGGERS_DIR, bloggerName, fileName)
+  const filePath = path.join(BLOGGERS_DIR, bloggerName, fileName.endsWith('.md') ? fileName : `${fileName}.md`)
   if (!existsSync(filePath)) return null
   
   const rawContent = readFileSync(filePath, 'utf-8')

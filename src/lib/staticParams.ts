@@ -48,7 +48,7 @@ export function personParams() {
 }
 
 export function qaParams() {
-  return listIds(path.join(CONTENT_DIR, 'qa'), { keepExtension: true }).map((id) => ({
+  return listIds(path.join(CONTENT_DIR, 'qa')).map((id) => ({
     id,
   }))
 }

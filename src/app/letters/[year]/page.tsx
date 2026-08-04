@@ -9,6 +9,7 @@ import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
 import BerkshireSourceLink from '@/components/BerkshireSourceLink'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { letterYearParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -93,6 +94,11 @@ export default async function LetterDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '巴菲特股东信全集', href: '/letters' },
+        { name: letterTitle },
+      ])} />
       <ReadingProgress />
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
@@ -112,41 +118,38 @@ export default async function LetterDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-5 md:py-8">
         <ContentTrustPanel
           source="伯克希尔·哈撒韦年度股东信中文整理稿"
           method="本站提供阅读与知识索引；翻译、段落和引语存在整理差异时，应以伯克希尔发布的英文原文为准。"
         />
         {showKnowledgePanel && (
-          <div className="furnish-border bg-bg-card dark:bg-dark-card p-6 mb-8 shadow-card hover:shadow-card-hover transition-shadow">
-            <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4 flex items-center gap-2">
-              <span className="text-xl">💡</span>
-              知识图谱
-            </h2>
+          <div className="knowledge-panel">
+            <h2 className="knowledge-panel__title">知识图谱</h2>
             {topConcepts.length > 0 && (
-              <div className="mb-6">
-                <h3 className="text-sm font-medium text-gray-700 dark:text-gray-400 mb-3">核心概念</h3>
+              <div className="mb-5">
+                <h3 className="knowledge-panel__label">核心概念</h3>
                 <div className="flex flex-wrap gap-2">
                   {topConcepts.map((concept) => (
                     <Link
                       key={concept.id}
                       href={`/concepts/${encodeURIComponent(concept.name)}`}
-                      className="px-3 py-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all hover:shadow-sm"
+                      className="knowledge-panel__tag"
                     >
                       {concept.name}
-                      <span className="text-xs opacity-70 ml-1">({concept.count})</span>
+                      <span className="opacity-70 ml-1">({concept.count})</span>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-5">
               {relatedPeople.length > 0 && (
                 <div>
-                  <h3 className="text-sm font-medium text-gray-700 dark:text-gray-400 mb-3 flex items-center gap-1"><span>👤</span> 人物</h3>
+                  <h3 className="knowledge-panel__label">人物</h3>
                   <div className="flex flex-wrap gap-2">
                     {relatedPeople.slice(0, 5).map((person: any) => (
-                      <Link key={person.id} href={`/people/${encodeURIComponent(person.name)}`} className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-sm hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-all">
+                      <Link key={person.id} href={`/people/${encodeURIComponent(person.name)}`} className="knowledge-panel__tag">
                         {person.name}
                       </Link>
                     ))}
@@ -155,10 +158,10 @@ export default async function LetterDetailPage({ params }: PageProps) {
               )}
               {relatedCompanies.length > 0 && (
                 <div>
-                  <h3 className="text-sm font-medium text-gray-700 dark:text-gray-400 mb-3 flex items-center gap-1"><span>🏢</span> 公司</h3>
+                  <h3 className="knowledge-panel__label">公司</h3>
                   <div className="flex flex-wrap gap-2">
                     {relatedCompanies.slice(0, 5).map((company: any) => (
-                      <Link key={company.id} href={`/companies/${encodeURIComponent(company.name)}`} className="px-3 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm hover:bg-green-100 dark:hover:bg-green-900/50 transition-all">
+                      <Link key={company.id} href={`/companies/${encodeURIComponent(company.name)}`} className="knowledge-panel__tag">
                         {company.name}
                       </Link>
                     ))}

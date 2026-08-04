@@ -3,11 +3,13 @@ import type { Metadata } from 'next'
 import { ArrowRight, Check, Search } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import SubdomainRootRouter from '@/components/SubdomainRootRouter'
+import DailyQuotePanel from '@/components/DailyQuotePanel'
 import { getDocuments } from '@/lib/documents'
 import { getPartnershipCount, getShareholderLetters } from '@/lib/partnership'
 import { getBusinessHistories } from '@/lib/business-history'
 import { getModels } from '@/lib/models'
 import { getSpaceHref } from '@/lib/site-spaces'
+import { getAllDailyQuotes } from '@/lib/daily-quote'
 
 export const metadata: Metadata = { alternates: { canonical: '/' } }
 
@@ -27,6 +29,9 @@ export default function HomePage() {
   const letterCount = partnershipCount + shareholderLetters.length
   const featuredCompany = companyStudies[0]
 
+  const dailyQuotes = getAllDailyQuotes()
+  const dailyDateISO = new Date().toISOString().slice(0, 10)
+
   const drawers = [
     { href: '/letters', number: letterCount, label: '巴菲特信件', meta: '合伙人信与伯克希尔股东信', description: '按年份连续阅读，观察一种投资方法怎样在真实决策中形成。' },
     { href: '/qa', number: qaCount, label: '股东大会问答', meta: '现场提问与完整回答', description: '把观点放回问题、追问和当时的商业环境中理解。' },
@@ -40,9 +45,10 @@ export default function HomePage() {
     <>
       <SubdomainRootRouter />
       <PageContainer maxWidth="7xl" className="study-home study-home--refined">
-        <section className="study-hero study-hero--refined">
+        <section className="study-hero study-hero--refined study-hero--daily">
+          <p className="study-label study-label--daily">DAILY QUOTE · 每日一读</p>
+          <DailyQuotePanel quotes={dailyQuotes} initialDateISO={dailyDateISO} />
           <div className="study-hero__copy">
-            <p className="study-label">LETTERS · TALKS · BUSINESS HISTORY</p>
             <h1>读巴菲特和芒格，<br />先回到原文。</h1>
             <p className="study-hero__lede">
               复利书房整理巴菲特、芒格散落多年的信件、演讲与问答，也持续收录公司研究和投资方法文章。这里的目标不是替你下结论，而是把可以核验的材料放到一起。

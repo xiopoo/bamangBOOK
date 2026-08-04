@@ -132,7 +132,7 @@ function addDocumentItems(
       description: extractDescription(content),
       count: 1,
       years: year ? [Number(year)] : [],
-      url: `/${route}/${encodeURIComponent(relativePath)}`,
+      url: `/${route}/${encodeURIComponent(id)}`,
       content,
     })
   }

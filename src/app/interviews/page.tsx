@@ -4,6 +4,18 @@ import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { getDocuments, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
 import { people } from '@/lib/people'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '访谈实录',
+  description: '巴菲特、芒格及伯克希尔相关人物的专访与访谈实录，按人物与年份查找。',
+  alternates: { canonical: '/interviews' },
+  openGraph: {
+    title: '访谈实录｜复利书房',
+    description: '巴菲特、芒格及相关人物的专访与访谈实录。',
+    images: ['/og-v2.png'],
+  },
+}
 
 const DECADES: { label: string; range: [number, number] }[] = [
   { label: '00年代', range: [2000, 2009] },

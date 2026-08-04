@@ -8,6 +8,7 @@ import { RecommendationList } from '@/components/RecommendationList'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { conceptParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -66,6 +67,11 @@ export default function ConceptDetailPage({ params }: PageProps) {
 
   return (
     <PageContainer maxWidth="4xl">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '投资概念库', href: '/concepts' },
+        { name: conceptName },
+      ])} />
       <PageHeader
         title={conceptName}
         subtitle="投资核心概念知识卡片"

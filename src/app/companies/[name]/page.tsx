@@ -7,6 +7,7 @@ import MarkdownContent from '@/components/MarkdownContent'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import ContentTrustPanel from '@/components/ContentTrustPanel'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -65,6 +66,11 @@ export default async function CompanyDetailPage({ params }: PageProps) {
 
   return (
     <PageContainer maxWidth="5xl">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '公司研究索引', href: '/companies' },
+        { name: title },
+      ])} />
       <PageHeader
         title={title}
         subtitle="巴菲特与芒格相关公司资料"

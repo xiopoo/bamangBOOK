@@ -2,6 +2,18 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getBloggers } from '@/lib/bloggers'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '博主文章',
+  description: '四位中文写作者的长期投资文章：把原典、企业案例和中国投资者的长期实践放在一起阅读。',
+  alternates: { canonical: '/bloggers' },
+  openGraph: {
+    title: '博主文章｜复利书房',
+    description: '四位中文写作者的长期投资文章索引。',
+    images: ['/og-v2.png'],
+  },
+}
 
 const BLOGGER_DESCRIPTIONS: Record<string, string> = {
   '在苍茫中传灯': '姚斌的投资随笔，涵盖价值投资、复杂科学、商业思维等多元领域，以跨界视角解读投资本质。',

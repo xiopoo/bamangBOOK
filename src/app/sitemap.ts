@@ -11,6 +11,7 @@ import { getModels } from '@/lib/models'
 import { getBooks } from '@/lib/books'
 import { getColumns } from '@/lib/columns'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
+import { getBloggers, getAllBloggerArticles } from '@/lib/bloggers'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -49,6 +50,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getMungerLocalArchiveItems()
     .filter(item => item.section !== 'mental-models')
     .forEach(item => urls.add(`${baseUrl}/munger/archive/${item.slug.split('/').map(encodeURIComponent).join('/')}`))
+
+  getBloggers().forEach(blogger => urls.add(`${baseUrl}/bloggers/${encodeURIComponent(blogger.name)}`))
+  getAllBloggerArticles().forEach(article =>
+    urls.add(`${baseUrl}/bloggers/${encodeURIComponent(article.blogger)}/${encodeURIComponent(article.fileName)}`)
+  )
 
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]

@@ -4,6 +4,18 @@ import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { getDocuments, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
 import { people } from '@/lib/people'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '股东大会问答',
+  description: '巴菲特股东大会现场问答记录：把观点放回问题、追问和当时的商业环境中理解。',
+  alternates: { canonical: '/qa' },
+  openGraph: {
+    title: '股东大会问答｜复利书房',
+    description: '巴菲特股东大会现场问答记录，按年份阅读。',
+    images: ['/og-v2.png'],
+  },
+}
 
 const DECADES: { label: string; range: [number, number] }[] = [
   { label: '80年代', range: [1980, 1989] },

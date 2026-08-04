@@ -13,9 +13,27 @@ import {
   type PartnershipLetter,
 } from '@/lib/partnership'
 import RelatedArticles from '@/components/RelatedArticles'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
+import type { Metadata } from 'next'
 
 interface PageProps {
   params: { id: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const id = parseInt(params.id, 10)
+  const letterData = Number.isFinite(id) ? getPartnershipLetterById(id) : null
+  if (!letterData?.letter) {
+    return { title: '巴菲特致合伙人信' }
+  }
+  const { letter } = letterData
+  const title = `${letter.year}年${formatPartnershipLabel(letter)}`
+  return {
+    title,
+    description: `阅读${letter.year}年巴菲特致合伙人的信：${formatPartnershipSubtitle(letter.subtitle)}。`,
+    alternates: { canonical: `/partnership/${id}` },
+    openGraph: { title, type: 'article' },
+  }
 }
 
 function formatLetterTitle(letter: PartnershipLetter): string {
@@ -48,6 +66,12 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '沃伦·巴菲特', href: '/buffett' },
+        { name: '合伙人信', href: '/partnership' },
+        { name: letterTitle },
+      ])} />
       <ReadingProgress />
       
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">

@@ -22,7 +22,7 @@ function addFromIndex(indexFile, source, personField) {
   for (const d of arr) {
     const fileName = d.fileName || d.slug || d.origFileName
     const person = personField ? (d[personField] || []) : []
-    const fpath = path.join(CONTENT, source, fileName)
+    const fpath = path.join(CONTENT, source, fileName.endsWith('.md') ? fileName : `${fileName}.md`)
     const text = readFileSafe(fpath)
     items.push({
       id: `${source}/${fileName}`,
@@ -51,11 +51,12 @@ if (fs.existsSync(bloggersDir)) {
       if (!f.endsWith('.md')) continue
       const text = readFileSafe(path.join(adir, f))
       const m = text.match(/title:\s*"([^"]+)"/)
+      const cleanF = f.replace(/\.md$/, '')
       items.push({
-        id: `bloggers/${acct}/${f}`,
+        id: `bloggers/${acct}/${cleanF}`,
         title: m ? m[1] : f,
         source: 'bloggers',
-        fileName: `${acct}/${f}`,
+        fileName: `${acct}/${cleanF}`,
         person: ['blogger'],
         year: null,
         text,

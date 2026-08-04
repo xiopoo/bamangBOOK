@@ -6,6 +6,8 @@ import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
+import type { Metadata } from 'next'
 import { qaParams } from '@/lib/staticParams'
 
 export function generateStaticParams() {
@@ -18,9 +20,30 @@ interface PageProps {
   params: { id: string }
 }
 
+export function generateMetadata({ params }: PageProps): Metadata {
+  const fileName = decodeURIComponent(params.id).replace(/\.md$/, '')
+  const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})$/)
+  if (wescoMatch) {
+    return {
+      title: `${wescoMatch[1]}年 Wesco 股东大会问答`,
+      description: `${wescoMatch[1]}年 Wesco 股东大会问答记录，查理·芒格现场回答股东提问。`,
+      alternates: { canonical: `/munger/wesco/${wescoMatch[1]}` },
+    }
+  }
+  const doc = getDocumentByFileName('qa', fileName)
+  if (!doc) {
+    return { title: '股东大会问答' }
+  }
+  return {
+    title: doc.title,
+    description: `${doc.title}：${doc.year ? `${doc.year}年` : ''}巴菲特股东大会现场问答记录。`,
+    alternates: { canonical: `/qa/${encodeURIComponent(fileName)}` },
+  }
+}
+
 export default function QADetailPage({ params }: PageProps) {
-  const fileName = decodeURIComponent(params.id)
-  const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})\.md$/)
+  const fileName = decodeURIComponent(params.id).replace(/\.md$/, '')
+  const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})$/)
   if (wescoMatch) {
     redirect(`/munger/wesco/${wescoMatch[1]}`)
   }
@@ -32,6 +55,11 @@ export default function QADetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '股东大会问答', href: '/qa' },
+        { name: doc.title },
+      ])} />
       <ReadingProgress />
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">

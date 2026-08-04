@@ -4,6 +4,18 @@ import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '投资概念库',
+  description: '投资核心概念知识卡片：安全边际、护城河、内在价值、能力圈、复利等，每条附相关年份与原文线索。',
+  alternates: { canonical: '/concepts' },
+  openGraph: {
+    title: '投资概念库｜复利书房',
+    description: '投资核心概念知识卡片，附相关年份与原文线索。',
+    images: ['/og-v2.png'],
+  },
+}
 
 interface Concept {
   id: string

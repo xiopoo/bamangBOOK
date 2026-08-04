@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import ProductCover from '@/components/ProductCover'
 import EditionTocTabs, { type EditionTocBook } from '@/components/EditionTocTabs'
+import JsonLd from '@/components/JsonLd'
 import { products } from '@/lib/commerce'
 
 /* 巴菲特卷：五篇十五章 */
@@ -113,12 +114,23 @@ export const metadata = {
   alternates: { canonical: '/bound-edition' },
 }
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+}
+
 export default function BoundEditionPage() {
   const buffett = products['buffett-collection']
   const munger = products['munger-collection']
 
   return (
     <>
+      <JsonLd data={faqJsonLd} />
       <PageContainer maxWidth="6xl" className="edition-page">
         <section className="edition-hero">
           <p className="study-label">电子合订本 · 复利书房「巴芒经典」系列</p>

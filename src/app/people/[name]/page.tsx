@@ -5,6 +5,8 @@ import MarkdownContent from '@/components/MarkdownContent'
 import { resolveEntityLink, resolvePersonContentFile } from '@/lib/entity-resolver'
 import { personParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
+import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
+import type { Metadata } from 'next'
 
 export function generateStaticParams() {
   return personParams()
@@ -14,6 +16,15 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { name: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const name = decodeURIComponent(params.name)
+  return {
+    title: `${name}：人物资料与原文线索`,
+    description: `${name}在巴菲特与芒格公开资料中的角色、相关年份与引用线索。`,
+    alternates: { canonical: `/people/${encodeURIComponent(name)}` },
+  }
 }
 
 function processPersonLinks(content: string): string {
@@ -105,6 +116,11 @@ export default function PersonDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg px-4 md:px-8 lg:px-12 py-8 md:py-12">
+      <JsonLd data={breadcrumbJsonLd([
+        { name: '首页', href: '/' },
+        { name: '人物索引', href: '/people' },
+        { name: info.title },
+      ])} />
       <div className="max-w-4xl mx-auto mb-6">
         <Link
           href="/people"

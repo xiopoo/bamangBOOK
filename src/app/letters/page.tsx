@@ -3,6 +3,18 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { getShareholderLetters, getShareholderCount } from '@/lib/partnership'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '巴菲特股东信全集',
+  description: '伯克希尔·哈撒韦历年股东信，按年份连续阅读，观察一种投资方法怎样在真实决策中形成。',
+  alternates: { canonical: '/letters' },
+  openGraph: {
+    title: '巴菲特股东信全集｜复利书房',
+    description: '伯克希尔历年股东信，按年份连续阅读。',
+    images: ['/og-v2.png'],
+  },
+}
 
 // 股东信按"年代"分组，便于纵览60+年脉络
 const DECADES: { label: string; range: [number, number] }[] = [

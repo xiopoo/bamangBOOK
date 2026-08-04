@@ -9,6 +9,18 @@ import {
   formatPartnershipLabel,
   type PartnershipLetter,
 } from '@/lib/partnership'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '巴菲特致合伙人信',
+  description: '1956–1970 年巴菲特致合伙人信全集：从第一封记录开始，看巴菲特怎样向合伙人解释业绩、风险与评价投资结果。',
+  alternates: { canonical: '/partnership' },
+  openGraph: {
+    title: '巴菲特致合伙人信｜复利书房',
+    description: '1956–1970 年致合伙人信全集，按年份连续阅读。',
+    images: ['/og-v2.png'],
+  },
+}
 
 const monthLabels = Array.from({ length: 12 }, (_, index) => `${index + 1}月`)
 

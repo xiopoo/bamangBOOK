@@ -5,6 +5,18 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { resolvePersonRouteId } from '@/lib/entity-resolver'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '人物索引',
+  description: '巴菲特、芒格及其身边的人物索引：从股东信与问答中整理每个人的角色、年份与关联线索。',
+  alternates: { canonical: '/people' },
+  openGraph: {
+    title: '人物索引｜复利书房',
+    description: '巴菲特、芒格及其身边的人物索引。',
+    images: ['/og-v2.png'],
+  },
+}
 
 interface Person {
   id: string

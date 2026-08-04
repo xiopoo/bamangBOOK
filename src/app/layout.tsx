@@ -4,9 +4,42 @@ import ThemeProvider from '@/components/ThemeProvider'
 import { ProgressProvider } from '@/hooks/useProgress'
 import BackToTop from '@/components/BackToTop'
 import PageFooter from '@/components/PageFooter'
+import JsonLd from '@/components/JsonLd'
 import './globals.css'
 import './reading.css'
 import { siteConfig } from '@/lib/site'
+
+const baseUrl = siteConfig.url.replace(/\/$/, '')
+const siteJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteConfig.name,
+    alternateName: 'bamangBOOK',
+    url: baseUrl,
+    inLanguage: 'zh-CN',
+    description: siteConfig.description,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteConfig.name,
+    url: baseUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/og-v2.png`,
+    },
+    description: siteConfig.description,
+  },
+]
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -44,6 +77,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
+        <JsonLd data={siteJsonLd} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script

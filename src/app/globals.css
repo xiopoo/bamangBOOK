@@ -29,10 +29,10 @@
 }
 
 .study-hero--refined {
-  min-height: 37rem;
+  min-height: 30rem;
   grid-template-columns: 1fr;
   align-items: end;
-  padding: clamp(5.5rem, 10vw, 9rem) 0 clamp(3.5rem, 6vw, 5.5rem);
+  padding: clamp(4rem, 7vw, 6rem) 0 clamp(2.75rem, 5vw, 4.25rem);
   border-bottom: 2px solid var(--archive-ink);
 }
 
@@ -42,26 +42,26 @@
 
 .study-hero--refined h1 {
   max-width: 10em;
-  margin-top: 1rem;
-  font-size: clamp(3.35rem, 2.1rem + 4.5vw, 6.6rem);
+  margin-top: 0.85rem;
+  font-size: clamp(2.85rem, 1.95rem + 3.1vw, 5.2rem);
   font-weight: 650;
-  line-height: 1.02;
+  line-height: 1.05;
   letter-spacing: -0.075em;
 }
 
 .study-hero--refined .study-hero__lede {
   max-width: 45rem;
-  margin-top: 1.8rem;
-  font-size: clamp(1.08rem, 1rem + 0.3vw, 1.3rem);
-  line-height: 1.82;
+  margin-top: 1.45rem;
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.25rem);
+  line-height: 1.8;
 }
 
 .study-hero--refined .study-actions {
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 
 .study-hero__quicklinks {
-  margin-top: 3.2rem;
+  margin-top: 2.4rem;
   padding-top: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -80,6 +80,150 @@
   color: var(--archive-oxblood);
 }
 
+/* ===== 每日一读（首页首屏） ===== */
+.study-label--daily {
+  margin-bottom: 1.1rem;
+}
+
+.daily-quote {
+  margin-bottom: 2.5rem;
+}
+
+.daily-quote__card {
+  padding: clamp(2rem, 4.5vw, 3.25rem) clamp(1.6rem, 4vw, 3rem);
+  border: 1px solid var(--archive-rule);
+  border-top: 3px solid var(--archive-ink);
+  background: var(--archive-paper-tint);
+}
+
+.daily-quote__date {
+  margin-bottom: 1.4rem;
+  font-family: var(--archive-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--archive-ink-faint);
+}
+
+.daily-quote__quote {
+  max-width: 48rem;
+  margin: 0;
+  font-family: var(--archive-serif);
+  font-size: clamp(1.55rem, 1.15rem + 1.6vw, 2.7rem);
+  line-height: 1.55;
+  letter-spacing: 0.015em;
+  color: var(--archive-ink);
+}
+
+.daily-quote__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+  margin-top: 1.8rem;
+  font-family: var(--archive-sans);
+}
+
+.daily-quote__speaker {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--archive-oxblood);
+}
+
+.daily-quote__source {
+  font-size: 0.85rem;
+  color: var(--archive-ink-soft);
+}
+
+.daily-quote__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--archive-rule-soft);
+}
+
+.daily-quote__topic {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--archive-ink);
+  font-family: var(--archive-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--archive-ink);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.daily-quote__topic:hover {
+  border-color: var(--archive-oxblood);
+  background: var(--archive-oxblood);
+  color: #fff;
+}
+
+.daily-quote__status {
+  font-family: var(--archive-sans);
+  font-size: 0.76rem;
+  font-style: italic;
+  color: var(--archive-ink-faint);
+}
+
+.daily-quote__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--archive-rule);
+}
+
+.daily-quote__nav button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--archive-rule);
+  background: transparent;
+  font-family: var(--archive-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--archive-ink-soft);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.daily-quote__nav button:hover {
+  border-color: var(--archive-oxblood);
+  color: var(--archive-oxblood);
+}
+
+.daily-quote__nav-hint {
+  font-family: var(--archive-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--archive-ink-faint);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .daily-quote__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .daily-quote__nav-hint {
+    order: -1;
+    width: 100%;
+  }
+}
+
 .study-proof--refined {
   padding: 0;
   grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 0.7fr);
@@ -92,8 +236,8 @@
 }
 
 .study-proof__metrics > div {
-  min-height: 8.5rem;
-  padding: 1.4rem 1.2rem;
+  min-height: 6.5rem;
+  padding: 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,15 +259,15 @@
 }
 
 .study-proof--refined .study-proof__trust {
-  padding: 1.4rem 0 1.4rem 2rem;
+  padding: 1.2rem 0 1.2rem 2rem;
 }
 
 .study-home--refined .study-section {
-  padding: clamp(4rem, 7vw, 6rem) 0;
+  padding: clamp(2.75rem, 4.5vw, 4rem) 0;
 }
 
 .study-section__header--compact {
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.4rem;
   align-items: end;
 }
 
@@ -147,7 +291,7 @@
 }
 
 .study-feature__primary {
-  min-height: 27rem;
+  min-height: 23rem;
   padding: clamp(1.5rem, 3.5vw, 3rem);
   display: flex;
   flex-direction: column;
@@ -228,8 +372,8 @@
 }
 
 .study-drawers__grid > a {
-  min-height: 15.5rem;
-  padding: 1.45rem;
+  min-height: 12.5rem;
+  padding: 1.3rem;
   display: flex;
   flex-direction: column;
   color: var(--archive-ink);
@@ -260,14 +404,14 @@
 }
 
 .study-drawers__grid small {
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
   color: var(--archive-oxblood);
   font-family: var(--archive-sans);
   font-size: 0.66rem;
 }
 
 .study-drawers__grid p {
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   color: var(--archive-ink-faint);
   font-size: 0.87rem;
   line-height: 1.7;
@@ -284,7 +428,7 @@
 }
 
 .study-home--refined .study-thinkers article {
-  min-height: 22rem;
+  min-height: 18rem;
 }
 
 .study-home--refined .study-thinkers h3 {
@@ -305,8 +449,8 @@
 }
 
 .study-editions__summary article {
-  min-height: 16rem;
-  padding: 1.5rem;
+  min-height: 14rem;
+  padding: 1.4rem;
   border-right: 1px solid var(--archive-rule);
   border-bottom: 1px solid var(--archive-rule);
 }
@@ -346,7 +490,7 @@
 }
 
 .archive-catalog__intro {
-  padding: clamp(3.5rem, 7vw, 6rem) 0 2rem;
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0 1.6rem;
   border-bottom: 2px solid var(--archive-ink);
 }
 
@@ -484,8 +628,8 @@
 }
 
 .recording-browser__bar {
-  margin-top: 3.5rem;
-  padding-bottom: 1rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.9rem;
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -553,8 +697,8 @@
 }
 
 .recording-browser__grid > button {
-  min-height: 16.5rem;
-  padding: 1.3rem;
+  min-height: 12.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -623,7 +767,7 @@
 }
 
 .archive-catalog__groups--supporting {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .archive-document__media {
@@ -663,11 +807,11 @@
 @media (max-width: 640px) {
   .study-hero--refined {
     min-height: auto;
-    padding: 4.5rem 0 3rem;
+    padding: 3.25rem 0 2.25rem;
   }
 
   .study-hero--refined h1 {
-    font-size: clamp(2.85rem, 14vw, 4.25rem);
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
   }
 
   .study-hero__quicklinks {
@@ -1007,6 +1151,44 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== 书房风格装饰元素 ===== */
 
+/* 阅读页知识图谱面板：纸面风 */
+.knowledge-panel {
+  margin-bottom: 1.5rem;
+  padding: 1.35rem 1.5rem 1.5rem;
+  border: 1px solid var(--archive-rule);
+  border-top: 3px solid var(--archive-ink);
+  background: var(--archive-paper-tint);
+}
+.knowledge-panel__title {
+  margin-bottom: 1rem;
+  color: var(--archive-ink);
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.knowledge-panel__label {
+  margin-bottom: 0.65rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.knowledge-panel__tag {
+  padding: 0.35rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--archive-ink-soft);
+  border: 1px solid var(--archive-rule);
+  font-family: var(--archive-sans);
+  font-size: 0.78rem;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.knowledge-panel__tag:hover {
+  color: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+}
+
 /* 装饰性双色边�?*/
 .furnish-border {
   border: 2px solid #AB1942;
@@ -1318,8 +1500,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .archive-page-header {
-  margin-bottom: 2rem;
-  padding: 0.25rem 0 1.6rem;
+  margin-bottom: 1.5rem;
+  padding: 0.25rem 0 1.25rem;
   color: var(--archive-ink);
   background: color-mix(in srgb, var(--archive-paper) 94%, transparent);
   border-bottom: 1px solid var(--archive-rule);
@@ -2279,12 +2461,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .study-section {
-  padding: clamp(5.5rem, 8vw, 7rem) 0;
+  padding: clamp(3rem, 5vw, 4rem) 0;
   border-bottom: 1px solid var(--archive-rule);
 }
 
 .study-section__header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   align-items: end;
@@ -2320,8 +2502,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .study-desk article {
-  min-height: 23rem;
-  padding: 1.6rem;
+  min-height: 18rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--archive-rule);
@@ -2674,7 +2856,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: auto;
   }
   .study-section {
-    padding-block: 3.75rem;
+    padding-block: 2.75rem;
   }
   .study-desk article,
   .study-entrances__grid > a {
@@ -2706,7 +2888,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .edition-hero,
 .about-study__hero {
-  padding: clamp(5rem, 10vw, 9rem) 0 clamp(4rem, 8vw, 7rem);
+  padding: clamp(3.5rem, 6vw, 5rem) 0 clamp(2.75rem, 5vw, 4rem);
   border-bottom: 2px solid var(--archive-ink);
 }
 
@@ -2720,25 +2902,25 @@ h1, h2, h3, h4, h5, h6 {
 .edition-hero > p:not(.study-label),
 .about-study__hero > p:not(.study-label) {
   max-width: 45rem;
-  margin-top: 1.7rem;
+  margin-top: 1.4rem;
   color: var(--archive-ink-soft);
-  font-size: clamp(1.18rem, 1.1rem + 0.25vw, 1.32rem);
+  font-size: clamp(1.15rem, 1.08rem + 0.22vw, 1.28rem);
   line-height: 1.85;
 }
 
 .edition-hero .archive-button {
-  margin-top: 2.2rem;
+  margin-top: 1.8rem;
 }
 
 .edition-products {
-  padding: clamp(4rem, 7vw, 6rem) 0;
+  padding: clamp(2.75rem, 5vw, 4rem) 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   border-bottom: 1px solid var(--archive-rule);
 }
 
 .edition-products > article {
-  min-height: 34rem;
+  min-height: 28rem;
   padding: clamp(1.6rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
@@ -2848,14 +3030,18 @@ h1, h2, h3, h4, h5, h6 {
 .edition-section,
 .edition-final,
 .about-study > section {
-  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  padding: clamp(2.75rem, 5vw, 4rem) 0;
   border-bottom: 1px solid var(--archive-rule);
 }
 
 .edition-section {
   display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.edition-section__heading {
+  max-width: 48rem;
 }
 
 .edition-section h2,
@@ -3558,24 +3744,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-study > section > p:not(.study-label) {
-  margin-top: 1.4rem;
+  margin-top: 1.15rem;
   color: var(--archive-ink-soft);
   font-size: 1.05rem;
-  line-height: 1.95;
+  line-height: 1.9;
 }
 
 .about-study blockquote {
-  margin-top: 2rem;
-  padding: 1.5rem 0 1.5rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1.2rem 0 1.2rem 1.8rem;
   color: var(--archive-ink);
   border-left: 2px solid var(--archive-oxblood);
-  font-size: 1.4rem;
+  font-size: 1.22rem;
   line-height: 1.7;
 }
 
 .about-study__principles,
 .about-study__platforms {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 2px solid var(--archive-ink);
@@ -3602,8 +3788,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-study__rules {
   display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.about-study__rules > div:first-child > p:not(.study-label) {
+  margin-top: 0.9rem;
+  color: var(--archive-ink-faint);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.about-study__rules > div:last-child {
+  max-width: 46rem;
 }
 
 .about-study__rules ul {
@@ -3633,7 +3830,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-study__boundary {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   padding-inline: clamp(1.5rem, 5vw, 4rem) !important;
   background: var(--archive-paper-tint);
   border-top: 2px solid var(--archive-ink);
@@ -3664,8 +3861,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .author-profile__stats > div {
-  min-height: 8rem;
-  padding: 1.6rem 1.2rem;
+  min-height: 6.5rem;
+  padding: 1.3rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3804,7 +4001,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero 关键数字 */
 .edition-hero__stats {
-  margin-top: 2.2rem;
+  margin-top: 1.7rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
@@ -3812,7 +4009,6 @@ h1, h2, h3, h4, h5, h6 {
 .edition-hero__stats span {
   padding: 0.6rem 1.05rem;
   border: 1px solid var(--archive-rule);
-  border-radius: 999px;
   color: var(--archive-ink-soft);
   font-family: var(--archive-sans);
   font-size: 0.82rem;
@@ -3842,7 +4038,6 @@ h1, h2, h3, h4, h5, h6 {
 .edition-product-stats span {
   padding: 0.32rem 0.8rem;
   border: 1px solid var(--archive-rule);
-  border-radius: 999px;
   color: var(--archive-ink-soft);
   font-family: var(--archive-sans);
   font-size: 0.74rem;
@@ -4551,7 +4746,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mental model library — dense archive index, not a dashboard. */
 .model-library {
-  padding-top: clamp(3.5rem, 7vw, 6.5rem);
+  padding-top: clamp(2.25rem, 4vw, 3.5rem);
 }
 
 .model-library__hero {
@@ -4629,8 +4824,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .model-library__feature {
-  margin-top: clamp(4rem, 8vw, 7rem);
-  padding: 2rem 0;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: 1.75rem 0;
   display: grid;
   grid-template-columns: minmax(14rem, 0.9fr) minmax(18rem, 1.25fr) auto;
   align-items: center;
@@ -4666,8 +4861,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .model-library__index {
-  margin-top: 4.5rem;
-  padding: 1.25rem 0;
+  margin-top: 3rem;
+  padding: 1.15rem 0;
   display: grid;
   grid-template-columns: 9rem 1fr;
   gap: 1.5rem;
@@ -4703,7 +4898,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .model-discipline {
-  padding: clamp(3rem, 6vw, 5.5rem) 0 0;
+  padding: clamp(2.25rem, 4.5vw, 3.5rem) 0 0;
   scroll-margin-top: 7rem;
 }
 
@@ -5147,7 +5342,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Munger archive — only readable, local material is presented. */
 .archive-catalog__ledger {
-  margin: 0 0 3.5rem;
+  margin: 0 0 2.5rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--archive-rule);
@@ -5810,10 +6005,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .study-hero.study-hero--refined {
-  min-height: 37rem;
+  min-height: 30rem;
   grid-template-columns: 1fr;
   align-items: end;
-  padding: clamp(5.5rem, 10vw, 9rem) 0 clamp(3.5rem, 6vw, 5.5rem);
+  padding: clamp(4rem, 7vw, 6rem) 0 clamp(2.75rem, 5vw, 4.25rem);
   border-bottom: 2px solid var(--archive-ink);
 }
 
@@ -5824,7 +6019,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .study-section__header.study-section__header--compact {
-  margin-bottom: 1.7rem;
+  margin-bottom: 1.4rem;
 }
 
 @media (max-width: 900px) {
@@ -5837,6 +6032,39 @@ h1, h2, h3, h4, h5, h6 {
   .study-hero.study-hero--refined {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding: 4.5rem 0 3rem;
+    padding: 3.25rem 0 2.25rem;
   }
+}
+
+/* 每日一读（首页首屏）：卡片为主体，覆盖 refined hero 的底部对齐与顶部留白 */
+.study-hero.study-hero--refined.study-hero--daily {
+  min-height: 0;
+  align-items: stretch;
+  padding-top: clamp(2.5rem, 4.5vw, 3.75rem);
+}
+
+@media (max-width: 640px) {
+  .study-hero.study-hero--refined.study-hero--daily {
+    padding-top: 2.5rem;
+  }
+}
+
+/* ===== Legacy 列表卡片皮肤统一（白卡 → 纸面风）===== */
+.rounded-card {
+  border-radius: 0;
+}
+.shadow-card {
+  box-shadow: none;
+}
+.hover\:shadow-card-hover:hover {
+  box-shadow: none;
+}
+.hover\:-translate-y-0\.5:hover {
+  transform: none;
+}
+.bg-white {
+  background-color: var(--archive-paper-tint);
+}
+.bg-white\/95 {
+  background-color: color-mix(in srgb, var(--archive-paper-tint) 95%, transparent);
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
+import JsonLd from '@/components/JsonLd'
 
 const stats = [
   ['10', '年资产管理从业'],
@@ -38,6 +39,15 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: '金融街小胖',
+        alternateName: ['金家岭小胖', '小胖'],
+        description: '十年资产管理行业从业者，复利书房站主，长期关注投资、商业、消费与时代变化，践行巴菲特与芒格的长期主义。',
+        knowsAbout: ['价值投资', '巴菲特', '查理·芒格', '不良资产', '公司研究', '长期主义'],
+        sameAs: [wechatHome, 'https://xhslink.com/m/6OPiGk9H7w7'],
+      }} />
       <PageContainer maxWidth="5xl" className="about-study author-profile">
         <header className="about-study__hero">
           <p className="study-label">关于</p>
@@ -74,6 +84,7 @@ export default function AboutPage() {
           <div>
             <p className="study-label">03 · 核验与修订</p>
             <h2>不隐藏不确定性</h2>
+            <p>这里默认的动作是核验：出处、状态、修订，都标在外面，不藏进正文里。</p>
           </div>
           <div>
             <p>做债务重组那几年，我见过一份文件里事实、观点和情绪混在一起的样子。所以在这，出处、年份、上下文尽量标全，没核实的明确标记，不包装成结论；发现错了就改，翻译错、标题错、关联错，都在持续修订。</p>
@@ -89,7 +100,7 @@ export default function AboutPage() {
 
         <section>
           <p className="study-label">04 · 投资理念与信条</p>
-          <h2>本分｜第一性｜守拙｜复利｜长寿</h2>
+          <h2>五条信条</h2>
           <div className="author-profile__principle-grid">
             {ideals.map(([title, text]) => (
               <article key={title}>

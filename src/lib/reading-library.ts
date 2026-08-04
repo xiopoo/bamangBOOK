@@ -104,7 +104,7 @@ function loadIndexedContent() {
         result[author].items.push({
           title: t.title,
           fileName: t.fileName,
-          filePath: `content/talks/${t.fileName}`,
+          filePath: `content/talks/${t.fileName}${t.fileName.endsWith('.md') ? '' : '.md'}`,
           year: t.year,
           sourceDir: 'talks',
           href: `/talks/${encodeURIComponent(t.fileName)}`,
@@ -127,7 +127,7 @@ function loadIndexedContent() {
         result[author].items.push({
           title: t.title,
           fileName: t.fileName,
-          filePath: `content/interviews/${t.fileName}`,
+          filePath: `content/interviews/${t.fileName}${t.fileName.endsWith('.md') ? '' : '.md'}`,
           year: t.year,
           sourceDir: 'interviews',
           href: `/interviews/${encodeURIComponent(t.fileName)}`,
@@ -148,7 +148,7 @@ function loadIndexedContent() {
         author.items.push({
           title: t.title,
           fileName: t.fileName,
-          filePath: `content/qa/${t.fileName}`,
+          filePath: `content/qa/${t.fileName}${t.fileName.endsWith('.md') ? '' : '.md'}`,
           year: t.year,
           sourceDir: 'qa',
           href: isWesco && t.year

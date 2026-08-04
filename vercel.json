@@ -3,6 +3,12 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "outputDirectory": ".next",
+  "redirects": [
+    { "source": "/bloggers/:account/:slug.md", "destination": "/bloggers/:account/:slug", "statusCode": 301 },
+    { "source": "/qa/:slug.md", "destination": "/qa/:slug", "statusCode": 301 },
+    { "source": "/talks/:slug.md", "destination": "/talks/:slug", "statusCode": 301 },
+    { "source": "/interviews/:slug.md", "destination": "/interviews/:slug", "statusCode": 301 }
+  ],
   "headers": [
     {
       "source": "/(.*)",

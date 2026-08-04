@@ -4,6 +4,18 @@ import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '公司研究索引',
+  description: '巴菲特与芒格投资、关注过的公司索引：研究企业如何赚钱、扩张、犯错，以及资本最终流向哪里。',
+  alternates: { canonical: '/companies' },
+  openGraph: {
+    title: '公司研究索引｜复利书房',
+    description: '巴菲特与芒格投资、关注过的公司索引。',
+    images: ['/og-v2.png'],
+  },
+}
 
 interface Company {
   id: string

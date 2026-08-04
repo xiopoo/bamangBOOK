@@ -3,6 +3,18 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getDocuments, getCategoryTitle } from '@/lib/documents'
 import { people } from '@/lib/people'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '演讲与访谈',
+  description: '巴菲特、芒格的公开演讲与访谈记录，按人物和时间查找原始表达。',
+  alternates: { canonical: '/talks' },
+  openGraph: {
+    title: '演讲与访谈｜复利书房',
+    description: '巴菲特、芒格的公开演讲与访谈记录。',
+    images: ['/og-v2.png'],
+  },
+}
 
 const DECADES: { label: string; range: [number, number] }[] = [
   { label: '80年代', range: [1980, 1989] },

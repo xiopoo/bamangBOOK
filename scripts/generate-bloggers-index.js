@@ -128,7 +128,7 @@ function processFiles(bloggerName, files) {
       title,
       date,
       year: date ? parseInt(date.slice(0, 4)) : null,
-      fileName: file,
+      fileName: file.replace(/\.md$/, ''),
       url,
       author,
       account,
@@ -186,12 +186,11 @@ function main() {
       if (oldBlogger) {
         const oldFileSet = new Set(oldBlogger.articles.map(a => a.fileName));
         const dir = path.join(BLOGGERS_DIR, blogger);
-        const currentFiles = new Set(
-          fs.readdirSync(dir).filter(f => f.endsWith('.md'))
-        );
+        const currentFiles = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
+        const currentStripped = new Set(currentFiles.map(f => f.replace(/\.md$/, '')));
         
-        if (oldFileSet.size === currentFiles.size && 
-            [...oldFileSet].every(f => currentFiles.has(f))) {
+        if (oldFileSet.size === currentStripped.size && 
+            [...oldFileSet].every(f => currentStripped.has(f))) {
           // 文件无变化，直接复用旧索引
           console.log(`  📂 ${blogger}: ${oldBlogger.articles.length} 篇 (无变化，跳过)`);
           result.push(oldBlogger);
@@ -200,7 +199,7 @@ function main() {
         }
         
         // 有变化：只处理新增的文件
-        const newFiles = [...currentFiles].filter(f => !oldFileSet.has(f));
+        const newFiles = currentFiles.filter(f => !oldFileSet.has(f.replace(/\.md$/, '')));
         if (newFiles.length > 0) {
           console.log(`  📂 ${blogger}: +${newFiles.length} 篇新增`);
           const newArticles = processFiles(blogger, newFiles);
