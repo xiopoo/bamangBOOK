@@ -1,9 +1,44 @@
+/* ============================================================================
+   复利书房 · 全站视觉规范（Single Source of Truth）
+   ----------------------------------------------------------------------------
+   本文件 --archive-* 变量 + tailwind.config.js 的颜色扩展，共同构成全站
+   唯一设计令牌。两者**必须同步**，禁止漂移。维护时改一处须同步另一处。
+
+   颜色映射（浅色 / 暗色）
+     archive 变量              浅色值         Tailwind 类            暗色值(Tailwind)
+     --archive-oxblood   #AB1942  ↔ primary        / primary.light  #C64B6B  (暗面)
+     --archive-gold      #9A7A37  ↔ accent         / accent.light   #B69751  (暗面)
+     --archive-paper     #F7F2E7  ↔ bg / bg.card   / dark.bg        #17140F  (暗面)
+     --archive-ink       #211D16  ↔ text           / dark.text      #F1EADA  (暗面)
+     --archive-rule      rgba()   ↔ rule           / dark.border
+     --archive-gild      rgba()   ↔ gild           / dark-gild
+
+   圆角：全站卡片统一为「方角/微圆」基调。
+     - .rounded-card 被本文件强制 border-radius:0（出版社硬朗风），优先级压过
+       tailwind.config 的 borderRadius.card(0.5rem)，全站一致为方角。
+     - .archive-page 内 .rounded-lg/md/xl 统一压为 2px。
+     规则：内容卡片用方角，禁止在卡片上混用大圆角。
+
+   字体：标题/引文用衬线(--archive-serif)，正文/UI 用无衬线(--archive-sans)。
+   ============================================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   全站设计令牌（单一真相来源）
+   本文件中的 --archive-* 变量是全站唯一的视觉令牌来源。
+   Tailwind 工具类（primary/accent/bg/text/dark/rule/gild 等）
+   在 tailwind.config.js 中引用了*完全相同*的色值，两套体系
+   须同步修改，禁止漂移。颜色映射：
+     oxblood #AB1942  ↔ primary
+     gold    #9A7A37  ↔ accent
+     paper   #F7F2E7  ↔ bg
+     ink     #211D16  ↔ text
+   圆角：--radius-card 须与 tailwind.config.js 的 borderRadius.card 一致。
+   ============================================================ */
 :root {
   --font-size-base: 16px;
   --text-size-base: 18px;
@@ -926,7 +961,10 @@ h1, h2, h3, h4, h5, h6 {
   --archive-ink-faint: #b9ae97;
   --archive-rule: rgba(241, 234, 218, 0.2);
   --archive-rule-soft: rgba(241, 234, 218, 0.11);
+  --archive-gold: #b69751;       /* 暗面金：= Tailwind accent.light，保证两套体系一致 */
   --archive-gild: rgba(201, 169, 88, 0.45);
+  --archive-oxblood: #c64b6b;    /* 暗面红：= Tailwind primary.light，深背景可读性 */
+  --archive-oxblood-deep: #a83856;
   background-image: none;
 }
 
@@ -1327,6 +1365,25 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-ink);
 }
 
+.archive-logo__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.archive-logo__mark {
+  flex: none;
+  color: var(--archive-oxblood);
+  display: block;
+}
+
+.archive-logo__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
 .archive-logo__title {
   font-family: var(--archive-serif);
   font-size: 1.48rem;
@@ -1342,6 +1399,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.65rem;
   line-height: 1;
   letter-spacing: 0.24em;
+}
+
+/* 暗色模式下金色描边仍清晰 */
+@media (prefers-color-scheme: dark) {
+  .archive-logo__mark {
+    color: var(--archive-ink);
+  }
 }
 
 .archive-nav {
@@ -1679,6 +1743,58 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff8ec;
   background: var(--archive-oxblood-deep);
 }
+
+/* ============================================================
+   可复用 archival 原子类（全站统一卡片/标签语言）
+   方角纸面 + 印章边框，与首页 study-* / 关于 about-study 同源。
+   任何页面想用"出版社卡片"都该用这些类，而非 ad-hoc Tailwind 边框。
+   ============================================================ */
+.archive-card {
+  background: var(--archive-paper);
+  border: 1px solid var(--archive-rule);
+  border-top: 2px solid var(--archive-oxblood);
+  border-radius: 0;
+  padding: 1.25rem 1.4rem;
+}
+.archive-card--accent { border-top-color: var(--archive-gold); }
+.archive-card--plain { border-top-width: 1px; border-top-color: var(--archive-rule); }
+
+.archive-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--archive-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--archive-rule);
+  border-radius: 0;
+  background: var(--archive-paper-tint);
+  color: var(--archive-ink-soft);
+}
+.archive-chip--oxblood { border-color: var(--archive-oxblood); color: var(--archive-oxblood); background: color-mix(in srgb, var(--archive-oxblood) 8%, transparent); }
+.archive-chip--gold { border-color: var(--archive-gold); color: var(--archive-gold); background: color-mix(in srgb, var(--archive-gold) 10%, transparent); }
+
+.archive-divider { height: 1px; background: var(--archive-rule); border: 0; margin: 0; }
+
+.archive-section-label {
+  font-family: var(--archive-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--archive-oxblood);
+  margin: 0 0 0.9rem;
+}
+
+/* 暗色下：archive 卡片自动切换为深色纸面 */
+.dark .archive-card { background: var(--archive-paper-deep); border-color: var(--archive-rule); }
+.dark .archive-card--plain { border-top-color: var(--archive-rule); }
+.dark .archive-chip { background: rgba(241,234,218,0.06); border-color: var(--archive-rule); color: var(--archive-ink-soft); }
+.dark .archive-chip--oxblood { color: var(--archive-oxblood); border-color: var(--archive-oxblood); background: color-mix(in srgb, var(--archive-oxblood) 16%, transparent); }
+.dark .archive-chip--gold { color: var(--archive-gold); border-color: var(--archive-gold); background: color-mix(in srgb, var(--archive-gold) 18%, transparent); }
+.dark .archive-divider { background: var(--archive-rule); }
 
 .archive-thinkers {
   margin-top: clamp(4.5rem, 8vw, 7.5rem);
@@ -2805,6 +2921,59 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.7rem;
 }
 
+/* 变现区块：研究者把资料做成书，自然带出合订本入口 */
+.archive-footer__byline {
+  font-family: var(--archive-sans);
+  color: var(--archive-oxblood);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.archive-footer__support {
+  max-width: 22rem;
+}
+
+.archive-footer__support > p:first-child {
+  margin-bottom: 0.6rem;
+  font-family: var(--archive-sans);
+  color: var(--archive-ink-faint);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.archive-footer__support-desc {
+  margin-bottom: 1rem;
+  color: var(--archive-ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.archive-footer__support-cta {
+  display: inline-block;
+  font-size: 0.82rem;
+  padding: 0.5rem 1.1rem;
+}
+
+.archive-footer__support-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+
+.archive-footer__support-links a {
+  color: var(--archive-ink-soft);
+  font-size: 0.78rem;
+  text-decoration: none;
+}
+
+.archive-footer__support-links a:hover {
+  color: var(--archive-oxblood);
+}
+
 @media (max-width: 1180px) {
   .archive-nav__trigger,
   .archive-nav > a {
@@ -3835,6 +4004,33 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 2px solid var(--archive-ink);
 }
 
+/* 关于页末尾的变现收束：研究者把资料做成书 */
+.about-study__edition {
+  margin-bottom: 2.5rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--archive-paper-tint);
+  border: 1px solid var(--archive-rule);
+}
+
+.about-study__edition p {
+  max-width: 42rem;
+  margin-bottom: 1.5rem;
+  color: var(--archive-ink-soft);
+  line-height: 1.75;
+}
+
+.about-study__edition-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.about-study__edition-actions span {
+  color: var(--archive-ink-faint);
+  font-size: 0.84rem;
+}
+
 /* === 作者个人主页 === */
 .author-profile > section {
   max-width: 58rem;
@@ -4493,6 +4689,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
+/* Pill chips (.rounded-full) flatten to the editorial square language so
+   tags/badges on list pages match the archive-card square corners. */
+.archive-page .rounded-full {
+  border-radius: 2px;
+}
+
 .archive-page .shadow,
 .archive-page .shadow-sm,
 .archive-page .shadow-md,
@@ -4502,9 +4704,67 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
+/* Cards sit one notch deeper than the paper so they read as a surface,
+   not as a floating panel. */
 .archive-page .bg-white,
-.archive-page .bg-bg-card {
-  background-color: color-mix(in srgb, var(--archive-paper) 90%, transparent);
+.archive-page .bg-bg-card,
+.archive-page .bg-gray-50,
+.archive-page .bg-gray-100,
+.archive-page .bg-gray-200 {
+  background-color: var(--archive-paper-deep);
+}
+
+/* Dark-mode gray surfaces are remapped to the editorial dark paper so the
+   site never flashes a neutral admin-panel gray in either theme. */
+.archive-page :is([class*="dark:bg-gray-"]) {
+  background-color: var(--archive-paper-deep);
+}
+
+/* Hover/focus gray surfaces (hover:bg-gray-N) are remapped too, otherwise
+   the neutral gray only appears on interaction and reads as a leftover. */
+.archive-page :is([class*="hover:bg-gray-"], [class*="dark:hover:bg-gray-"]) {
+  background-color: color-mix(in srgb, var(--archive-oxblood) 8%, var(--archive-paper-deep));
+}
+
+/* Legacy gray / blue utility classes are remapped to the editorial palette
+   so every content page shares one consistent voice. */
+.archive-page :is([class*="text-gray-"]):not([class*="text-gray-900"]):not([class*="text-gray-800"]) {
+  color: var(--archive-ink-soft);
+}
+
+.archive-page :is([class*="dark:text-gray-"]) {
+  color: var(--archive-ink-soft);
+}
+
+.archive-page :is([class*="text-gray-900"]):not([class*="dark:text-gray-900"]) {
+  color: var(--archive-ink);
+}
+
+.archive-page :is([class*="dark:text-gray-900"]),
+.archive-page :is([class*="dark:text-white"]) {
+  color: var(--archive-paper);
+}
+
+.archive-page :is([class*="border-gray-"]) {
+  border-color: var(--archive-rule);
+}
+
+.archive-page :is([class*="hover:border-blue"]),
+.archive-page :is([class*="dark:hover:border-blue"]) {
+  border-color: color-mix(in srgb, var(--archive-oxblood) 35%, transparent);
+}
+
+/* Disabled / muted functional states keep a calm neutral instead of blue. */
+.archive-page :is([class*="disabled:bg-gray-300"]) {
+  background-color: var(--archive-paper-deep);
+  color: var(--archive-ink-faint);
+}
+
+/* White surfaces with an opacity modifier (bg-white/95, bg-white/80 …) are not
+   matched by the plain .bg-white rule above, so they would flash pure white.
+   Remap every bg-white* variant to the editorial paper surface. */
+.archive-page :is([class*="bg-white"]) {
+  background-color: var(--archive-paper-deep);
 }
 
 @media (max-width: 1120px) {
@@ -4634,8 +4894,13 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .archive-footer__follow {
-    display: none;
+  .archive-footer__grid {
+    gap: 2.5rem;
+  }
+
+  .archive-footer__support {
+    grid-column: 1 / -1;
+    max-width: none;
   }
 }
 

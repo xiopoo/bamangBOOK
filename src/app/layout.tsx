@@ -35,7 +35,7 @@ const siteJsonLd = [
     url: baseUrl,
     logo: {
       '@type': 'ImageObject',
-      url: `${baseUrl}/og-v2.png`,
+      url: `${baseUrl}/logo.svg`,
     },
     description: siteConfig.description,
   },
