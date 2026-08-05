@@ -3,9 +3,17 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getReport, listReports, RADAR_SECTION_META, type RadarItem } from '@/lib/radar'
 
+// 静态导出模式下，构建期无法保证存在雷达数据库，
+// 允许无参数时导出空页面（运行时数据由本地生成后填充）。
+export const dynamicParams = false
+
 export function generateStaticParams() {
-  const data = listReports(120)
-  return Object.keys(data.by_date).map(date => ({ date }))
+  try {
+    const data = listReports(120)
+    return Object.keys(data.by_date).map(date => ({ date }))
+  } catch {
+    return []
+  }
 }
 
 export function generateMetadata({ params }: { params: { date: string } }) {
