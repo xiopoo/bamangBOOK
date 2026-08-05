@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">BF-06-03 喜诗与伯克希尔资本循环</title>
+  <desc id="desc">黑白结构草图，仅用于出版前信息关系确认。</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#777" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2; }
+    .dash { fill: none; stroke: #666; stroke-width: 1.5; stroke-dasharray: 7 6; }
+  </style>
+  <rect width="1000" height="750" fill="#fff"/>
+  
+      <text x="50" y="58" class="title">喜诗与伯克希尔的资本循环</text>
+      <text x="50" y="86" class="subtitle">经营自主不等于资本永久留在原业务</text>
+      <rect x="350" y="130" width="300" height="90" rx="10" class="box"/>
+      <text x="500" y="170" text-anchor="middle" class="label">喜诗：优质经营资产</text>
+      <text x="500" y="196" text-anchor="middle" class="tiny">客户信任｜定价权｜低增量资本</text>
+      <rect x="680" y="330" width="260" height="90" rx="10" class="soft"/>
+      <text x="810" y="370" text-anchor="middle" class="label">多余现金释放</text>
+      <text x="810" y="396" text-anchor="middle" class="tiny">不强迫低回报扩张</text>
+      <rect x="350" y="535" width="300" height="100" rx="10" class="box"/>
+      <text x="500" y="575" text-anchor="middle" class="label">伯克希尔资本配置</text>
+      <text x="500" y="602" text-anchor="middle" class="tiny">收购｜证券｜回购｜现金储备</text>
+      <rect x="60" y="330" width="260" height="90" rx="10" class="soft"/>
+      <text x="190" y="370" text-anchor="middle" class="label">新的优质资产</text>
+      <text x="190" y="396" text-anchor="middle" class="tiny">产生下一轮可分配现金</text>
+      <path d="M650 180 C820 190 860 250 820 322" class="line" marker-end="url(#arrow)"/>
+      <path d="M800 425 C770 545 700 580 660 580" class="line" marker-end="url(#arrow)"/>
+      <path d="M340 585 C185 575 140 500 175 428" class="line" marker-end="url(#arrow)"/>
+      <path d="M200 322 C225 210 295 175 340 175" class="line" marker-end="url(#arrow)"/>
+      <text x="735" y="215" class="small">可分配现金</text>
+      <text x="725" y="520" class="small">比较机会成本</text>
+      <text x="185" y="530" class="small">重新投入</text>
+      <text x="210" y="220" class="small">利润回流</text>
+      <rect x="340" y="300" width="320" height="120" rx="60" class="soft"/>
+      <text x="500" y="348" text-anchor="middle" class="label">复利不只发生在企业内部</text>
+      <text x="500" y="378" text-anchor="middle" class="small">还发生在企业之间</text>
+    
+  <text x="976" y="732" text-anchor="end" class="tiny">结构草图｜非正式插图</text>
+</svg>

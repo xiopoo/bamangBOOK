@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-06-01 永久持有≠永不复核</title><desc id="desc">持有期限与复核边界</desc>
+  <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#fff;stroke:#111;stroke-width:2;}
+    .brand{fill:#fff;stroke:#AB1942;stroke-width:3;}
+    .brand-fill{fill:#AB1942;fill-opacity:0.12;stroke:#AB1942;stroke-width:2;}
+    .brand-solid{fill:#AB1942;stroke:#AB1942;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-text{fill:#AB1942;font-weight:700;}
+    .brand-line{fill:none;stroke:#AB1942;stroke-width:3;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+
+  <text x="60" y="60" class="title">持有期限：偏好永远，但并非永远持有一切</text>
+  <text x="60" y="88" class="subtitle">先问"愿不愿一直持有"；再用定期复核，及时发现四个卖掉信号——"永远持有"是好企业+好价格长期的结果，不是口号</text>
+
+  <!-- 时间轴 -->
+  <line x1="120" y1="230" x2="1080" y2="230" class="brand-line" style="stroke-width:3;"/>
+  <circle cx="120" cy="230" r="10" class="brand-solid"/>
+  <circle cx="370" cy="230" r="8" class="brand-fill" style="stroke-width:2;"/>
+  <circle cx="620" cy="230" r="8" class="brand-fill" style="stroke-width:2;"/>
+  <circle cx="870" cy="230" r="8" class="brand-fill" style="stroke-width:2;"/>
+  <circle cx="1080" cy="230" r="10" class="brand-solid"/>
+  <text x="120" y="268" text-anchor="middle" class="brand-text label">买 入 日</text>
+  <text x="370" y="268" text-anchor="middle" class="small">年度复核</text>
+  <text x="620" y="268" text-anchor="middle" class="small">年度复核</text>
+  <text x="870" y="268" text-anchor="middle" class="small">年度复核</text>
+  <text x="1080" y="268" text-anchor="middle" class="brand-text label">很 久 很 久</text>
+  <text x="600" y="196" text-anchor="middle" class="brand-text label" style="font-size:22px;">↑ 永久持有偏好（非承诺）↑</text>
+
+  <!-- 左边：持有条件 -->
+  <rect x="120" y="310" width="440" height="260" rx="10" class="brand-fill"/>
+  <text x="340" y="350" text-anchor="middle" class="label brand-text" style="font-size:20px;">继 续 持 有 的 条 件</text>
+  <line x1="180" y1="372" x2="500" y2="372" class="brand-line" style="stroke-width:1.5;"/>
+  <rect x="160" y="392" width="360" height="40" rx="4" class="box"/>
+  <text x="340" y="418" text-anchor="middle" class="small">① 护城河仍然存在且未被破坏</text>
+  <rect x="160" y="442" width="360" height="40" rx="4" class="box"/>
+  <text x="340" y="468" text-anchor="middle" class="small">② 管理层仍然正直、能干且全心投入</text>
+  <rect x="160" y="492" width="360" height="40" rx="4" class="box"/>
+  <text x="340" y="518" text-anchor="middle" class="small">③ 价格仍未显著高于保守估值</text>
+  <rect x="160" y="542" width="360" height="26" rx="4" class="soft"/>
+  <text x="340" y="562" text-anchor="middle" class="tiny">④ 没有更优的跨企业/跨工具机会</text>
+
+  <!-- 右边：四个卖出信号 -->
+  <rect x="640" y="310" width="440" height="260" rx="10" style="fill:#fff;stroke:#AB1942;stroke-width:3;"/>
+  <text x="860" y="350" text-anchor="middle" class="label brand-text" style="font-size:20px;">考 虑 减 仓 / 卖 出 的 四 个 信 号</text>
+  <line x1="700" y1="372" x2="1020" y2="372" class="brand-line" style="stroke-width:1.5;"/>
+  <rect x="680" y="392" width="360" height="40" rx="4" class="brand-solid" style="stroke-width:1;"/>
+  <text x="860" y="418" text-anchor="middle" style="fill:#fff;font-size:15px;">① 原来的判断被证伪（买入理由错了）</text>
+  <rect x="680" y="442" width="360" height="40" rx="4" class="brand-fill"/>
+  <text x="860" y="468" text-anchor="middle" class="small">② 护城河出现结构性破坏，不是周期性</text>
+  <rect x="680" y="492" width="360" height="40" rx="4" class="brand-fill"/>
+  <text x="860" y="518" text-anchor="middle" class="small">③ 价格远高于保守内在价值的高位区间</text>
+  <rect x="680" y="542" width="360" height="26" rx="4" class="brand-fill"/>
+  <text x="860" y="562" text-anchor="middle" class="small">④ 有明显更优、确定性更高的替代机会</text>
+
+  <rect x="60" y="620" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="646" text-anchor="middle" class="brand-text small">持有不是信仰：对的企业+对的价格+持续复核→结果自然是"久"，不是口号说"不卖"</text>
+
+  <!-- 芒格引用 -->
+  <rect x="120" y="690" width="960" height="60" rx="10" class="soft"/>
+  <text x="600" y="720" text-anchor="middle" class="small" style="font-style:italic;">"巴菲特和我都不是'买了什么都不卖'的人——我们只是不频繁交易而已。"</text>
+  <text x="600" y="744" text-anchor="middle" class="tiny">（芒格多次公开澄清，永久持有是"倾向"，不是"契约"）</text>
+
+  <text x="60" y="788" class="tiny">BA-033 / BA-034：持有期限偏好 + 四个卖出信号｜品牌色版本</text>
+</svg>

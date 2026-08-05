@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-10-01 资本配置决策树</title><desc id="desc">五分支资本配置决策</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+  <rect x="0" y="0" width="12" height="800" fill="#111"/>
+
+  <text x="60" y="60" class="title">经理人的第二项工作：把钱放到哪里？</text>
+  <text x="60" y="88" class="subtitle">留存一美元的价值检验：投入后的每 1 美元，长期能不能创造超过 1 美元的每股价值——超过就留，不超过就还给股东</text>
+
+  <!-- 起点 -->
+  <rect x="500" y="130" width="200" height="72" rx="12" class="brand-solid"/>
+  <text x="600" y="168" text-anchor="middle" style="fill:#111;font-weight:700;font-size:22px;">经营收益</text>
+  <text x="600" y="192" text-anchor="middle" style="fill:#f0f0f0;font-size:13px;">留存一美元价值检验</text>
+
+  <!-- 5条分支 -->
+  <!-- 分支1 再投资 -->
+  <line x1="520" y1="202" x2="190" y2="300" class="brand-line" marker-end="url(#arrow)"/>
+  <rect x="100" y="300" width="180" height="130" rx="10" class="brand-fill"/>
+  <text x="190" y="344" text-anchor="middle" class="label brand-text" style="font-size:16px;">① 再投资现有业务</text>
+  <line x1="120" y1="368" x2="260" y2="368" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="190" y="394" text-anchor="middle" class="small">增量 1 美元</text>
+  <text x="190" y="418" text-anchor="middle" class="small">≥ 资本成本</text>
+  <rect x="110" y="442" width="160" height="56" rx="6" class="brand"/>
+  <text x="190" y="478" text-anchor="middle" class="brand-text small">✓ 留 存</text>
+
+  <!-- 分支2 收购 -->
+  <line x1="540" y1="202" x2="380" y2="300" class="brand-line" marker-end="url(#arrow)"/>
+  <rect x="290" y="300" width="180" height="130" rx="10" class="brand-fill"/>
+  <text x="380" y="344" text-anchor="middle" class="label brand-text" style="font-size:16px;">② 收 购 新 企 业</text>
+  <line x1="310" y1="368" x2="450" y2="368" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="380" y="394" text-anchor="middle" class="small">符合 6 项标准，</text>
+  <text x="380" y="418" text-anchor="middle" class="small">价格产生合理回报</text>
+  <rect x="300" y="442" width="160" height="56" rx="6" class="brand"/>
+  <text x="380" y="478" text-anchor="middle" class="brand-text small">✓ 留 存</text>
+
+  <!-- 分支3 回购 -->
+  <line x1="600" y1="202" x2="600" y2="300" class="brand-line" marker-end="url(#arrow)"/>
+  <rect x="510" y="300" width="180" height="130" rx="10" class="brand-fill"/>
+  <text x="600" y="344" text-anchor="middle" class="label brand-text" style="font-size:16px;">③ 回 购 自 家 股 票</text>
+  <line x1="530" y1="368" x2="670" y2="368" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="600" y="394" text-anchor="middle" class="small">价格 ＜ 保守</text>
+  <text x="600" y="418" text-anchor="middle" class="small">内在价值</text>
+  <rect x="520" y="442" width="160" height="56" rx="6" class="brand"/>
+  <text x="600" y="478" text-anchor="middle" class="brand-text small">→ 返 还 股 东</text>
+
+  <!-- 分支4 分红 -->
+  <line x1="660" y1="202" x2="820" y2="300" class="brand-line" marker-end="url(#arrow)"/>
+  <rect x="730" y="300" width="180" height="130" rx="10" class="brand-fill"/>
+  <text x="820" y="344" text-anchor="middle" class="label brand-text" style="font-size:16px;">④ 分 红 给 股 东</text>
+  <line x1="750" y1="368" x2="890" y2="368" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="820" y="394" text-anchor="middle" class="small">股东能取得更</text>
+  <text x="820" y="418" text-anchor="middle" class="small">高其他回报</text>
+  <rect x="740" y="442" width="160" height="56" rx="6" class="brand"/>
+  <text x="820" y="478" text-anchor="middle" class="brand-text small">→ 返 还 股 东</text>
+
+  <!-- 分支5 现金 -->
+  <line x1="680" y1="202" x2="1010" y2="300" class="brand-line" marker-end="url(#arrow)"/>
+  <rect x="920" y="300" width="180" height="130" rx="10" class="brand-fill"/>
+  <text x="1010" y="344" text-anchor="middle" class="label brand-text" style="font-size:16px;">⑤ 保 留 现 金</text>
+  <line x1="940" y1="368" x2="1080" y2="368" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="1010" y="394" text-anchor="middle" class="small">等待恐慌/灾难</text>
+  <text x="1010" y="418" text-anchor="middle" class="small">/更好的机会</text>
+  <rect x="930" y="442" width="160" height="56" rx="6" class="box"/>
+  <text x="1010" y="478" text-anchor="middle" class="small">等 待 时 机</text>
+
+  <!-- 判断标尺 -->
+  <rect x="60" y="540" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="566" text-anchor="middle" class="brand-text">判断尺：把钱投在任何一条路上，能不能长期提升每股内在价值？</text>
+
+  <!-- 喜诗案例 -->
+  <rect x="180" y="610" width="840" height="120" rx="12" class="soft"/>
+  <text x="600" y="650" text-anchor="middle" class="label brand-text">经典案例：喜诗释放的现金 → 整个伯克希尔的跨企业配置</text>
+  <text x="600" y="680" text-anchor="middle" class="small">低再投资需求 → 自由现金 → 投向比喜诗更大的机会集 → 整个系统持续复利</text>
+  <text x="600" y="710" text-anchor="middle" class="tiny">（对应 BA-013 / BA-014：第二项工作 + 留存检验与股东返还判断）</text>
+
+  <text x="60" y="788" class="tiny">黑白结构草图</text>
+</svg>

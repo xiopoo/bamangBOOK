@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-07-01 护城河动态剖面</title><desc id="desc">巴菲特卷插图黑白结构精绘版</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+  <rect x="0" y="0" width="12" height="800" fill="#111"/>
+
+  <text x="60" y="60" class="title">护城河必须经得住时间</text>
+  <text x="60" y="88" class="subtitle">四种典型护城河保护着高回报资本；上方是侵蚀信号，竞争会日复一日地试图填埋它——必须动态复核</text>
+
+  <!-- 外部竞争侵蚀箭头 -->
+  <text x="600" y="120" text-anchor="middle" style="font-size:14px;font-weight:600;">↑ 外部竞争日复一日试图填埋护城河 ↑</text>
+  <line x1="300" y1="110" x2="430" y2="135" class="brand-line" marker-end="url(#arrow)"/>
+  <line x1="600" y1="108" x2="600" y2="135" class="brand-line" marker-end="url(#arrow)"/>
+  <line x1="900" y1="110" x2="770" y2="135" class="brand-line" marker-end="url(#arrow)"/>
+
+  <!-- 上方：品牌与定价权 -->
+  <rect x="470" y="140" width="260" height="70" rx="8" class="brand"/>
+  <text x="600" y="178" text-anchor="middle" class="label brand-text">① 品牌与定价权</text>
+  <text x="600" y="200" text-anchor="middle" class="tiny">可口可乐、喜诗</text>
+  <line x1="600" y1="210" x2="600" y2="295" class="brand-line" marker-end="url(#arrow)"/>
+
+  <!-- 左：低成本 -->
+  <rect x="130" y="360" width="230" height="70" rx="8" class="brand"/>
+  <text x="245" y="398" text-anchor="middle" class="label brand-text">② 低成本结构</text>
+  <text x="245" y="420" text-anchor="middle" class="tiny">GEICO、好市多</text>
+  <line x1="360" y1="395" x2="475" y2="395" class="brand-line" marker-end="url(#arrow)"/>
+
+  <!-- 右：网络效应 -->
+  <rect x="840" y="360" width="230" height="70" rx="8" class="brand"/>
+  <text x="955" y="398" text-anchor="middle" class="label brand-text">③ 网络效应 / 规模</text>
+  <text x="955" y="420" text-anchor="middle" class="tiny">支付、平台、分销</text>
+  <line x1="840" y1="395" x2="725" y2="395" class="brand-line" marker-end="url(#arrow)"/>
+
+  <!-- 下：转换成本 -->
+  <rect x="470" y="590" width="260" height="70" rx="8" class="brand"/>
+  <text x="600" y="628" text-anchor="middle" class="label brand-text">④ 客户转换成本</text>
+  <text x="600" y="650" text-anchor="middle" class="tiny">软件、IT、服务习惯</text>
+  <line x1="600" y1="590" x2="600" y2="505" class="brand-line" marker-end="url(#arrow)"/>
+
+  <!-- 中心：持久高回报 -->
+  <rect x="480" y="300" width="240" height="200" rx="12" class="brand-solid"/>
+  <text x="600" y="380" text-anchor="middle" style="fill:#111;font-weight:700;font-size:26px;">持 久 的</text>
+  <text x="600" y="418" text-anchor="middle" style="fill:#111;font-weight:700;font-size:26px;">高 资 本 回 报</text>
+  <text x="600" y="460" text-anchor="middle" style="fill:#f0f0f0;font-size:13px;">竞争长期侵蚀不掉的 ROIC</text>
+
+  <!-- 底部复核提醒 -->
+  <rect x="60" y="710" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="736" text-anchor="middle" class="brand-text">复核三条：护城河仍然存在吗？经理人有没有在破坏它？增长增量部分资本回报足够高吗？</text>
+
+  <text x="60" y="788" class="tiny">BA-008 / BA-014：护城河持久表述 + 增长何时创造价值｜黑白结构草图</text>
+</svg>

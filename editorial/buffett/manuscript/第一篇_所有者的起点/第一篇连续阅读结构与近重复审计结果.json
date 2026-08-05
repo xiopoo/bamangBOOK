@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "characters": {
+    "chapter1": 10200,
+    "chapter2": 12046,
+    "chapter3": 8874,
+    "total": 32004,
+    "allowed": [
+      32000,
+      38000
+    ]
+  },
+  "structural": [
+    {
+      "chapter": 1,
+      "headings": [
+        "从报价器退后一步",
+        "股票为什么容易被误认为一张纸",
+        "思想形成：从独立判断到所有者合伙",
+        "五年不开市的思想实验",
+        "先估值，再看价格",
+        "从个人纪律到股东制度",
+        "所有权带来的责任",
+        "反例：期权为何不自动创造所有者文化",
+        "常见误解",
+        "适用边界",
+        "本章小结",
+        "注释",
+        "来源与引文映射",
+        "编辑说明"
+      ],
+      "summaryPosition": 8493,
+      "editorPosition": 9990
+    },
+    {
+      "chapter": 2,
+      "headings": [
+        "早期案例：1957年如何把资产、盈利与价格放在一起",
+        "账面价值只是线索",
+        "现金流折现的共同语言",
+        "方法演变：从三类投资到统一价值尺度",
+        "1958年联邦信托：价值、催化与出售纪律",
+        "市价为什么既重要又不能主导",
+        "完整案例：华盛顿邮报的价格、价值与时间",
+        "同一企业、不同市场：价格不能自动代表价值",
+        "贝尔里奇案例教会什么",
+        "贝尔里奇不能怎样使用",
+        "估值区间，而非精确答案",
+        "思想演变：从替代指标到经济尺度",
+        "常见误解与边界",
+        "本章小结",
+        "注释与来源映射",
+        "编辑说明"
+      ],
+      "summaryPosition": 11188,
+      "editorPosition": 11930
+    },
+    {
+      "chapter": 3,
+      "headings": [
+        "同一家企业，两种利润",
+        "所有者收益：从报表起点走向经济判断",
+        "最难的变量是维护性资本",
+        "行业边界：同一个(c)不能套用",
+        "反例：没有现金流出，也可能有真实成本",
+        "从报告收益到透视收益",
+        "会计不能反过来指挥资本配置",
+        "与现代自由现金流口径的关系",
+        "常见误解",
+        "适用边界",
+        "本章小结",
+        "注释与来源映射",
+        "编辑说明"
+      ],
+      "summaryPosition": 7826,
+      "editorPosition": 8752
+    }
+  ],
+  "bodyNearDuplicatePairs": [],
+  "quoteNearDuplicatePairs": [],
+  "onBridge": {
+    "editedTablesInMain": 1,
+    "historicalContextLabeled": true,
+    "appendixLinked": true,
+    "appendixCharacters": 5388
+  },
+  "internalLinks": {
+    "total": 10,
+    "missing": 0
+  },
+  "externalLinks": 0,
+  "mappedMaterialsReviewed": 26,
+  "errors": []
+}

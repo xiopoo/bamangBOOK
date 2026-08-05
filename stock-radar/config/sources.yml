@@ -1,0 +1,136 @@
+# 数据源配置（基本面聚焦版）
+#
+# 本配置仅保留与「企业基本面」直接相关的来源：
+#   公告 / 财报 / 研报 / 个股经营资讯（业绩、订单、产能、产品、回购分红、并购等）。
+# 已停用：股吧讨论、雪球讨论、盘中电报、宏观行情流等非基本面/情绪化来源。
+#
+# 每个数据源由 type 决定用哪个采集适配器（见 radar/collectors/）：
+#   cninfo       - 巨潮资讯 A股公告
+#   hkex         - 港交所披露易公告
+#   sec_edgar    - 美股 SEC EDGAR 申报
+#   eastmoney    - 东方财富个股新闻/研报
+#   ths          - 同花顺个股快讯
+#
+# enabled: false 即可停用某个源，无需删除配置。
+# category: announcement(公告) / news(新闻) / report(财报研报)
+# lang: zh / en，en 会触发 AI 翻译
+
+sources:
+  # ---------- 公告（基本面核心来源）----------
+  - id: cninfo_announcement
+    name: 巨潮资讯-A股公告
+    type: cninfo
+    category: announcement
+    market: cn
+    lang: zh
+    enabled: true
+    weight: 10
+    params: {}
+
+  - id: hkex_announcement
+    name: 港交所披露易-公告
+    type: hkex
+    category: announcement
+    market: hk
+    lang: zh
+    enabled: true
+    weight: 10
+    params: {}
+
+  - id: sec_edgar
+    name: SEC EDGAR-美股申报
+    type: sec_edgar
+    category: announcement
+    market: us
+    lang: en
+    enabled: true
+    weight: 10
+    params:
+      form_types: ["8-K", "10-Q", "10-K", "6-K", "SC 13D"]
+
+  # ---------- 财报 / 研报 ----------
+  - id: eastmoney_report
+    name: 东方财富-个股研报
+    type: eastmoney
+    category: report
+    market: cn
+    lang: zh
+    enabled: true
+    weight: 9
+    params:
+      channel: report
+
+  # ---------- 个股经营资讯（含业绩/订单/产能等基本面）----------
+  - id: eastmoney_news
+    name: 东方财富-个股资讯
+    type: eastmoney
+    category: news
+    market: all
+    lang: zh
+    enabled: true
+    weight: 7
+    params: {}
+
+  - id: ths_news
+    name: 同花顺-个股快讯
+    type: ths
+    category: news
+    market: cn
+    lang: zh
+    enabled: true
+    weight: 6
+    params: {}
+
+  # ---------- 已停用：非基本面 / 情绪化 / 盘中噪音来源 ----------
+  - id: cls_telegraph
+    name: 财联社-电报
+    type: rss
+    category: news
+    market: cn
+    lang: zh
+    enabled: false
+    weight: 6
+    params:
+      url: https://rsshub.app/cls/telegraph
+
+  - id: reuters_business
+    name: Reuters-Business
+    type: rss
+    category: news
+    market: us
+    lang: en
+    enabled: false
+    weight: 5
+    params:
+      url: https://feeds.reuters.com/reuters/businessNews
+
+  - id: seekingalpha_market
+    name: SeekingAlpha-Market News
+    type: rss
+    category: news
+    market: us
+    lang: en
+    enabled: false
+    weight: 5
+    params:
+      url: https://seekingalpha.com/market_currents.xml
+
+  - id: xueqiu_discussion
+    name: 雪球-个股讨论
+    type: xueqiu
+    category: discussion
+    market: all
+    lang: zh
+    enabled: false
+    weight: 4
+    params: {}
+
+  - id: eastmoney_guba
+    name: 东方财富-股吧热帖
+    type: eastmoney_gb
+    category: discussion
+    market: cn
+    lang: zh
+    enabled: false
+    weight: 3
+    params: {}

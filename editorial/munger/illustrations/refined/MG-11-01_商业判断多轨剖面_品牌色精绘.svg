@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-11-01 商业判断多轨剖面</title>
+  <desc id="desc">同一家企业穿过会计、竞争、规模与激励四轨，汇成商业判断。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #AB1942; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+  <text x="55" y="58" class="title">商业判断多轨剖面</text>
+  <text x="55" y="86" class="subtitle">同一家企业，穿过会计、竞争、规模与激励四条轨道</text>
+
+  <!-- 企业 -->
+  <circle cx="640" cy="150" r="52" class="soft"/>
+  <circle cx="640" cy="150" r="52" fill="none" stroke="#AB1942" stroke-width="2"/>
+  <text x="640" y="154" text-anchor="middle" class="small">一家</text>
+  <text x="640" y="174" text-anchor="middle" class="small">企业</text>
+
+  <!-- 四轨 -->
+  <line x1="640" y1="202" x2="640" y2="290" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="270" y="300" width="740" height="60" rx="8" class="box"/>
+  <text x="300" y="335" class="small" fill="#AB1942">① 会计语言</text>
+  <text x="520" y="335" class="tiny">数字是起点：利润怎么来、现金在哪里</text>
+
+  <rect x="270" y="390" width="740" height="60" rx="8" class="box"/>
+  <text x="300" y="425" class="small" fill="#AB1942">② 竞争与护城河</text>
+  <text x="520" y="425" class="tiny">为什么别人抢不走这门生意</text>
+
+  <rect x="270" y="480" width="740" height="60" rx="8" class="box"/>
+  <text x="300" y="515" class="small" fill="#AB1942">③ 规模与资本需求</text>
+  <text x="520" y="515" class="tiny">做大是优势还是负担：再投资要花多少钱</text>
+
+  <rect x="270" y="570" width="740" height="60" rx="8" class="box"/>
+  <text x="300" y="605" class="small" fill="#AB1942">④ 激励结构</text>
+  <text x="520" y="605" class="tiny">管理层的回报与股东利益是否一致</text>
+
+  <!-- 汇成判断 -->
+  <line x1="640" y1="630" x2="640" y2="650" class="line" marker-end="url(#arrow)"/>
+  <rect x="480" y="652" width="320" height="46" rx="10" fill="#AB1942"/>
+  <text x="640" y="681" text-anchor="middle" class="small" fill="#fff">商业判断</text>
+
+  <text x="1256" y="712" text-anchor="end" class="tiny">MG-11-01｜品牌色版本</text>
+</svg>

@@ -19,7 +19,7 @@
   --reading-accent:        #AB1942;   /* 链接 / 强调  赭红 */
   --reading-accent-soft:   rgba(171, 25, 66, 0.12);
   --reading-paper:         var(--archive-paper);
-  --reading-card:          #ffffff;
+  --reading-card:          var(--archive-paper-tint);
 
   /* —— 行长与间距 —— */
   --reading-measure:       39em;       /* 中文 39±3 字 / 行（约 68–70ch 拉丁字符） */

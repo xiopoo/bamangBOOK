@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-14-01 应得信任结构</title>
+  <desc id="desc">品格、激励一致、能力互补与复核四要素支撑应得信任。</desc>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2; }
+    .note { font-size: 15px; fill: #AB1942; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+  <text x="55" y="58" class="title">应得信任结构</text>
+  <text x="55" y="86" class="subtitle">信任必须是应得且可验证的，不是一厢情愿</text>
+
+  <!-- 中心 -->
+  <circle cx="640" cy="390" r="78" class="soft"/>
+  <circle cx="640" cy="390" r="78" fill="none" stroke="#AB1942" stroke-width="2.5"/>
+  <text x="640" y="382" text-anchor="middle" class="small" fill="#AB1942">应得</text>
+  <text x="640" y="402" text-anchor="middle" class="small" fill="#AB1942">信任</text>
+
+  <!-- 四角 -->
+  <rect x="180" y="150" width="300" height="120" rx="12" class="box"/>
+  <rect x="800" y="150" width="300" height="120" rx="12" class="box"/>
+  <rect x="180" y="480" width="300" height="120" rx="12" class="box"/>
+  <rect x="800" y="480" width="300" height="120" rx="12" class="box"/>
+  <text x="330" y="195" text-anchor="middle" class="small">品格</text>
+  <text x="330" y="222" text-anchor="middle" class="tiny">可靠、诚实、说到做到</text>
+  <text x="950" y="195" text-anchor="middle" class="small">激励一致</text>
+  <text x="950" y="222" text-anchor="middle" class="tiny">利益与对方站在同一边</text>
+  <text x="330" y="525" text-anchor="middle" class="small">能力互补</text>
+  <text x="330" y="552" text-anchor="middle" class="tiny">各在自己的领域可信</text>
+  <text x="950" y="525" text-anchor="middle" class="small">复核</text>
+  <text x="950" y="552" text-anchor="middle" class="tiny">信任不能替代控制与验证</text>
+
+  <!-- 连接线 -->
+  <g class="line">
+    <line x1="330" y1="270" x2="565" y2="340"/>
+    <line x1="950" y1="270" x2="715" y2="340"/>
+    <line x1="330" y1="480" x2="565" y2="430"/>
+    <line x1="950" y1="480" x2="715" y2="430"/>
+  </g>
+
+  <text x="640" y="672" text-anchor="middle" class="note">四者缺一，信任就从"应得"滑向"赌运气"。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-14-01｜品牌色版本</text>
+</svg>

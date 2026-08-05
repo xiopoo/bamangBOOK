@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">BF-06-02 通胀资本需求</title>
+  <desc id="desc">黑白结构草图，仅用于出版前信息关系确认。</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#777" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2; }
+    .dash { fill: none; stroke: #666; stroke-width: 1.5; stroke-dasharray: 7 6; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+      <text x="60" y="58" class="title">相同利润，不同的通胀资本需求</text>
+      <text x="60" y="86" class="subtitle">情境：物价水平与名义利润翻倍｜数字采用1983年股东信的简化示例</text>
+      <line x1="110" y1="610" x2="1170" y2="610" class="line"/>
+      <g>
+        <text x="340" y="135" text-anchor="middle" class="label">喜诗式企业</text>
+        <rect x="235" y="480" width="210" height="130" fill="url(#hatch)" stroke="#111" stroke-width="2"/>
+        <text x="340" y="545" text-anchor="middle" class="label">800万美元</text>
+        <text x="340" y="635" text-anchor="middle" class="small">需新增的维持性资本</text>
+        <rect x="485" y="250" width="150" height="150" rx="75" class="box"/>
+        <text x="560" y="315" text-anchor="middle" class="label">利润</text>
+        <text x="560" y="345" text-anchor="middle" class="small">400万美元</text>
+        <line x1="475" y1="470" x2="520" y2="405" class="line" marker-end="url(#arrow)"/>
+        <text x="560" y="220" text-anchor="middle" class="tiny">翻倍后的年利润（两家相同）</text>
+      </g>
+      <line x1="900" y1="130" x2="900" y2="660" class="dash"/>
+      <g>
+        <text x="1040" y="135" text-anchor="middle" class="label">重资产企业</text>
+        <rect x="945" y="320" width="190" height="290" fill="url(#hatch)" stroke="#111" stroke-width="2"/>
+        <text x="1040" y="465" text-anchor="middle" class="label">1800万美元</text>
+        <text x="1040" y="635" text-anchor="middle" class="small">需新增的维持性资本</text>
+        <text x="1040" y="220" text-anchor="middle" class="small">翻倍后的年利润</text>
+        <text x="1040" y="248" text-anchor="middle" class="label">400万美元</text>
+        <line x1="1040" y1="265" x2="1040" y2="310" class="line" marker-end="url(#arrow)"/>
+        <text x="1040" y="690" text-anchor="middle" class="tiny">原文比较累计新增资本，不给出单期可分配现金额</text>
+      </g>
+    
+  <text x="1256" y="702" text-anchor="end" class="tiny">样章精绘｜品牌色版本</text>
+</svg>

@@ -27,3 +27,11 @@ output/ebook/
 # 构建产物与临时备份
 output/
 *.fillbak_*
+
+# 股市雷达运行产物（本地生成，不入库）
+stock-radar/.venv/
+stock-radar/data/
+*.db
+stock-radar/data/*.log
+launchd.*.log
+

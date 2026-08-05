@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-15-01 人生避错清单与红线地图</title>
+  <desc id="desc">一条红线把常见失败方式挡在安全区之外。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">人生避错清单与红线地图</text>
+  <text x="55" y="86" class="subtitle">先画红线，再谈进取——避开惯常的失败方式</text>
+
+  <!-- 安全区 -->
+  <rect x="160" y="130" width="960" height="180" rx="12" class="soft"/>
+  <text x="200" y="165" class="label">安全区：值得坚持的纪律</text>
+  <text x="200" y="205" class="small">可靠——让别人愿意给你应得的信任</text>
+  <text x="200" y="235" class="small">持续学习——每晚比早上更聪明一点</text>
+  <text x="200" y="265" class="small">诚实认错——反证出现时更新判断</text>
+
+  <!-- 红线 -->
+  <line x1="160" y1="340" x2="1120" y2="340" stroke="#111" stroke-width="4"/>
+  <text x="640" y="330" text-anchor="middle" class="small" fill="#111">红　线</text>
+  <text x="640" y="362" text-anchor="middle" class="tiny" fill="#111">跨过去之前，先问这是不是惯常的失败方式</text>
+
+  <!-- 危险区 -->
+  <rect x="160" y="400" width="960" height="200" rx="12" class="box"/>
+  <text x="200" y="435" class="label" fill="#111">危险区：惯常的失败方式</text>
+  <text x="200" y="475" class="small">嫉妒、怨恨、报复与自怜——灾难性的思维方式</text>
+  <text x="200" y="505" class="small">极端意识形态——用立场代替思考</text>
+  <text x="200" y="535" class="small">反复无常——让承诺与一致性失效</text>
+  <text x="200" y="565" class="small">遭遇挫折一蹶不振——失去复盘的资格</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">避错不是保守：它把人生从"试错"变成"有边界的进取"。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-15-01｜结构草图</text>
+</svg>

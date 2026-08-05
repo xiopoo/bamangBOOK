@@ -92,7 +92,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
 
   return (
     <section id="beginner" className="mb-14 scroll-mt-24">
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 rounded-2xl border border-green-200 dark:border-green-800 p-6 md:p-8">
+      <div className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-2xl border border-primary/20 p-6 md:p-8">
         {/* Header */}
         <div className="flex items-center justify-between gap-3 mb-2">
           <div className="flex items-center gap-3">
@@ -103,16 +103,16 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
             </div>
           </div>
           <div className="text-right flex-shrink-0">
-            <div className="text-2xl font-bold text-green-600 dark:text-green-400">{percent}%</div>
+            <div className="text-2xl font-bold text-primary dark:text-primary-light">{percent}%</div>
             <div className="text-xs text-gray-500 dark:text-gray-400">{completedCount}/{totalItems}</div>
           </div>
         </div>
 
         {/* Progress bar */}
         <div className="ml-0 mb-5">
-          <div className="w-full h-2 bg-green-100 dark:bg-green-900/30 rounded-full overflow-hidden">
+          <div className="w-full h-2 bg-primary/10 dark:bg-primary/15 rounded-full overflow-hidden">
             <div
-              className="h-full bg-green-500 dark:bg-green-400 rounded-full transition-all duration-500"
+              className="h-full bg-primary dark:bg-primary-light rounded-full transition-all duration-500"
               style={{ width: `${percent}%` }}
             />
           </div>
@@ -122,9 +122,9 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
         {/* Steps */}
         <div className="space-y-5">
           {path.steps.map(step => (
-            <div key={step.order} className="bg-white/80 dark:bg-gray-800/80 rounded-xl p-5 border border-green-100 dark:border-green-900/30">
+            <div key={step.order} className="bg-bg-card dark:bg-dark-card rounded-xl p-5 border border-primary/15">
               <div className="flex items-center gap-2 mb-1">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
                   {step.order}
                 </span>
                 <h3 className="font-semibold text-gray-800 dark:text-gray-200">{step.title}</h3>
@@ -141,8 +141,8 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
                         onClick={() => toggleItem(path.id, key)}
                         className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
                           done
-                            ? 'bg-green-500 border-green-500 text-white'
-                            : 'border-gray-300 dark:border-gray-600 hover:border-green-400'
+                            ? 'bg-primary border-primary text-white'
+                            : 'border-gray-300 dark:border-gray-600 hover:border-primary'
                         }`}
                         aria-label={done ? '标记为未读' : '标记为已读'}
                       >
@@ -154,7 +154,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
                         className={`flex items-center gap-2 flex-1 py-1.5 px-2 rounded-lg transition-colors ${
                           done
                             ? 'text-gray-400 dark:text-gray-500 line-through'
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-green-900/10 hover:text-primary'
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-primary/5 dark:hover:bg-primary/10 hover:text-primary'
                         }`}
                       >
                         <span className="text-xs text-gray-400 dark:text-gray-600">
@@ -192,7 +192,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
 
   return (
     <section id="intermediate" className="mb-14 scroll-mt-24">
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-2xl border border-blue-200 dark:border-blue-800 p-6 md:p-8">
+      <div className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-2xl border border-primary/20 p-6 md:p-8">
         <div className="flex items-center justify-between gap-3 mb-2">
           <div className="flex items-center gap-3">
             <span className="text-3xl">{path.icon}</span>
@@ -202,15 +202,15 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
             </div>
           </div>
           <div className="text-right flex-shrink-0">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{percent}%</div>
+            <div className="text-2xl font-bold text-primary dark:text-primary-light">{percent}%</div>
             <div className="text-xs text-gray-500 dark:text-gray-400">{completedCount}/{totalItems}</div>
           </div>
         </div>
 
         <div className="ml-0 mb-5">
-          <div className="w-full h-2 bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
+          <div className="w-full h-2 bg-primary/10 dark:bg-primary/15 rounded-full overflow-hidden">
             <div
-              className="h-full bg-blue-500 dark:bg-blue-400 rounded-full transition-all duration-500"
+              className="h-full bg-primary dark:bg-primary-light rounded-full transition-all duration-500"
               style={{ width: `${percent}%` }}
             />
           </div>
@@ -219,9 +219,9 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
 
         <div className="space-y-5">
           {path.steps.map(step => (
-            <div key={step.order} className="bg-white/80 dark:bg-gray-800/80 rounded-xl p-5 border border-blue-100 dark:border-blue-900/30">
+            <div key={step.order} className="bg-bg-card dark:bg-dark-card rounded-xl p-5 border border-primary/15">
               <div className="flex items-center gap-2 mb-1">
-                <span className="w-7 h-7 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
                   {step.order}
                 </span>
                 <h3 className="font-semibold text-gray-800 dark:text-gray-200">{step.title}</h3>
@@ -237,8 +237,8 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
                         onClick={() => toggleItem(path.id, key)}
                         className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
                           done
-                            ? 'bg-blue-500 border-blue-500 text-white'
-                            : 'border-gray-300 dark:border-gray-600 hover:border-blue-400'
+                            ? 'bg-primary border-primary text-white'
+                            : 'border-gray-300 dark:border-gray-600 hover:border-primary'
                         }`}
                         aria-label={done ? '标记为未读' : '标记为已读'}
                       >
@@ -249,7 +249,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
                         className={`flex items-center gap-2 flex-1 py-1.5 px-2 rounded-lg transition-colors ${
                           done
                             ? 'text-gray-400 dark:text-gray-500 line-through'
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/10 hover:text-primary'
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-primary/5 dark:hover:bg-primary/10 hover:text-primary'
                         }`}
                       >
                         <span className="text-xs text-gray-400 dark:text-gray-600">

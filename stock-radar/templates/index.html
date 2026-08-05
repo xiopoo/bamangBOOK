@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% macro item_card(item) %}
+{% set cls = {'opportunity':'sc-opp','risk':'sc-risk'}.get(item.kind,'sc-neu') %}
+<div class="item" data-item='{{ item|tojson }}'>
+  <div class="item-score {{ cls }}">
+    {{ item.score }}<small>{{ item.kind|kindlabel }}</small>
+  </div>
+  <div class="item-main">
+    <div class="item-top">
+      {% if item.company_name %}
+      <span class="chip chip-company">{{ item.company_name }}
+        {%- if item.company_code %} {{ item.company_code }}{% endif %}</span>
+      {% endif %}
+      <span class="chip chip-cat">{{ item.source_name }}</span>
+    </div>
+    <div class="item-title">
+      {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+      {% else %}{{ item.title }}{% endif %}
+    </div>
+    {% if item.summary_cn and item.summary_cn != item.title %}
+    <div class="item-summary">{{ item.summary_cn }}</div>
+    {% endif %}
+    {% if item.reason %}<div class="item-reason">{{ item.reason }}</div>{% endif %}
+    <div class="item-foot">
+      {% if item.published_at %}<span>{{ item.published_at }}</span>{% endif %}
+      <div class="item-acts">
+        <button class="ico-btn btn-copy">复制</button>
+        <button class="ico-btn btn-fav {{ 'fav-on' if item.favorited }}"
+                data-key="{{ item.item_key }}">{{ '已收藏' if item.favorited else '收藏' }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro section(title, items, empty_text) %}
+<div class="card">
+  <div class="card-head">
+    <div class="card-title">{{ title }}</div>
+    <span class="sig-count">{{ items|length }} 条</span>
+  </div>
+  {% if items %}{% for it in items %}{{ item_card(it) }}{% endfor %}
+  {% else %}<div class="empty">{{ empty_text }}</div>{% endif %}
+</div>
+{% endmacro %}
+
+{% block content %}
+<div class="cols">
+
+  <aside class="side">
+    <div class="card">
+      <div class="card-head"><div class="card-title">日报时间线</div></div>
+      <div class="card-body">
+        {% if timeline %}
+          {% for date, entries in timeline.items() %}
+          <div class="tl-date">
+            <a href="/?date={{ date }}" class="{{ 'on' if date == current_date and not current_session }}">{{ date }}</a>
+            {% if entries|length > 1 or entries[0].session != 'manual' %}
+            <div class="tl-sess">
+              {% for e in entries %}
+              <a href="/?date={{ date }}&session={{ e.session }}">
+                {{ {'morning':'盘前','evening':'盘后','manual':'手动'}.get(e.session, e.session) }}
+              </a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="empty">暂无日报<br>点击右上角「立即采集」</div>
+        {% endif %}
+      </div>
+    </div>
+  </aside>
+
+  <div>
+    {% if not llm_enabled %}
+    <div class="notice notice-warn">
+      当前未配置 AI Key，正在使用<b>规则引擎</b>筛选。配置 <code>.env</code> 中的
+      <code>RADAR_LLM_API_KEY</code> 后可启用 AI 精选、翻译与摘要。
+    </div>
+    {% endif %}
+
+    {% if report %}
+    <div class="card overview-card">
+      <div class="card-head">
+        <div>
+          <div class="ov-date">{{ current_date }}
+            <span style="font-size:14px;color:var(--ink-3)">{{ payload.session_label or '' }}</span>
+          </div>
+          <div class="ov-meta">
+            引擎 {{ payload.engine }} · 生成于 {{ report.generated_at }}
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-sm" id="btn-copy-all">复制全文</button>
+          <a class="btn btn-sm" href="/export/report.md?date={{ current_date }}{{ '&session=' ~ current_session if current_session }}">下载 MD</a>
+          <a class="btn btn-sm btn-primary" target="_blank"
+             href="/export/report.html?date={{ current_date }}{{ '&session=' ~ current_session if current_session }}#print">导出 PDF</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="ov-text">{{ payload.overview }}</div>
+        <div class="stats">
+          <div class="stat"><b>{{ payload.stats.total or 0 }}</b><span>原始信号</span></div>
+          <div class="stat"><b>{{ payload.stats.kept or 0 }}</b><span>精选保留</span></div>
+          <div class="stat opp"><b>{{ payload.opportunities|length }}</b><span>机会信号</span></div>
+          <div class="stat risk"><b>{{ payload.risks|length }}</b><span>风险提示</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <form class="filter" method="get" action="/">
+          <input type="hidden" name="date" value="{{ current_date }}">
+          {% if current_session %}<input type="hidden" name="session" value="{{ current_session }}">{% endif %}
+          <select name="company">
+            <option value="">全部公司</option>
+            {% for c in companies %}
+            <option value="{{ c.name }}" {{ 'selected' if filter_company == c.name }}>
+              {{ c.name }} ({{ c.code }})</option>
+            {% endfor %}
+          </select>
+          <input type="text" name="q" placeholder="关键词筛选…" value="{{ filter_keyword }}">
+          <button class="btn btn-sm" type="submit">筛选</button>
+          {% if filter_company or filter_keyword %}
+          <a class="btn btn-sm" href="/?date={{ current_date }}">清除</a>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+
+    {% if fundamentals %}
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">基本面快照</div>
+        <span class="sig-count">{{ fundamentals|length }} 家公司</span>
+      </div>
+      <div class="card-body">
+        <div class="fund-grid">
+          {% for f in fundamentals %}
+          <div class="fund-card">
+            <div class="fund-top">
+              <span class="chip chip-company">{{ f.company_name or '—' }}{% if f.company_code %} {{ f.company_code }}{% endif %}</span>
+              {% if f.market %}<span class="chip chip-cat">{{ {'cn':'A股','hk':'港股','us':'美股'}.get(f.market, f.market) }}</span>{% endif %}
+            </div>
+            {% if f.snapshot %}
+            <div class="fund-snap">
+              {% for k, v in f.snapshot.items() %}
+              <div class="fund-kv"><span>{{ k }}</span><b>{{ v }}</b></div>
+              {% endfor %}
+            </div>
+            {% elif f.content %}
+            <div class="fund-snap"><div class="fund-kv"><span>概览</span><b>{{ f.content }}</b></div></div>
+            {% else %}
+            <div class="empty">暂无数据</div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {{ section('重点关注', sections.highlights, '今日无高分强信号') }}
+    {{ section('机会信号', sections.opportunities, '今日无机会信号') }}
+    {{ section('风险提示', sections.risks, '今日无风险提示') }}
+    {% if sections.others %}{{ section('其他动态', sections.others, '') }}{% endif %}
+
+    {% else %}
+    <div class="card">
+      <div class="empty" style="padding:56px 20px">
+        <p style="font-size:15px;margin-bottom:8px">还没有 {{ current_date }} 的日报</p>
+        <p>点击右上角「立即采集」抓取数据并生成日报</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('btn-copy-all')?.addEventListener('click', async function () {
+  const url = '/export/report.txt?date={{ current_date }}{{ "&session=" ~ current_session if current_session }}';
+  try {
+    const text = await (await fetch(url)).text();
+    await navigator.clipboard.writeText(text);
+    toast('已复制全文，可直接丢给 AI 分析');
+  } catch (e) { toast('复制失败：' + e.message); }
+});
+</script>
+{% endblock %}

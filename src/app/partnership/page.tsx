@@ -5,7 +5,7 @@ import StatBadge from '@/components/StatBadge'
 import {
   getPartnershipYearGroups,
   getPartnershipCount,
-  getPartnershipTimelineSlot,
+  formatPartnershipSubtitle,
   formatPartnershipLabel,
   type PartnershipLetter,
 } from '@/lib/partnership'
@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     images: ['/og-v2.png'],
   },
 }
-
-const monthLabels = Array.from({ length: 12 }, (_, index) => `${index + 1}月`)
 
 export default function PartnershipPage() {
   const yearGroups = getPartnershipYearGroups()
@@ -67,7 +65,7 @@ export default function PartnershipPage() {
       </div>
 
       {/* 时期说明 */}
-      <div className="mb-8 p-5 rounded-card bg-bg-card dark:bg-dark-card border border-primary/10">
+      <div className="archive-card mb-8">
         <p className="text-sm text-text-muted dark:text-dark-muted leading-relaxed">
           <span className="font-medium text-primary dark:text-primary-light">合伙基金时期</span>
           （1956-1970）是巴菲特投资生涯的起点。26岁的巴菲特带着家人和朋友的支持回到奥马哈创立合伙基金，
@@ -75,88 +73,72 @@ export default function PartnershipPage() {
           <span className="text-text dark:text-dark-text">「市场先生」「能力圈」「安全边际」</span>
           等核心思想，都最早在这里成形。
         </p>
+        <p className="mt-2 text-xs text-text-light dark:text-dark-muted">
+          巴菲特写信多集中在<strong className="font-medium text-primary dark:text-primary-light">年中</strong>与<strong className="font-medium text-primary dark:text-primary-light">年末</strong>，
+          下方按时间顺序列出每一封信，方便连续阅读。
+        </p>
       </div>
 
-      {/* 年份月份表 */}
-      <div className="overflow-x-auto rounded-card border border-primary/10 bg-bg-card dark:bg-dark-card shadow-card">
-        <div className="min-w-[980px]">
-          <div className="grid grid-cols-[88px_repeat(12,minmax(68px,1fr))] border-b border-primary/10 bg-primary/5 dark:bg-primary/10">
-            <div className="px-4 py-3 text-sm font-semibold text-primary dark:text-primary-light">
-              年份
+      {/* 按年份分组的时间轴列表：仅列出有信件的月份，完全响应式 */}
+      <div className="space-y-8">
+        {yearGroups.map((group) => (
+          <section key={group.year} className="archive-card archive-card--plain overflow-hidden">
+            <div className="flex items-center gap-3 px-5 py-3 bg-primary/5 dark:bg-primary/10 border-b border-primary/10">
+              <span className="text-xl font-bold text-primary dark:text-primary-light font-serif">
+                {group.year}年
+              </span>
+              <span className="archive-chip archive-chip--oxblood">
+                {group.letters.length}封
+              </span>
+              <div className="flex-1 h-px bg-primary/10" />
             </div>
-            {monthLabels.map((month) => (
-              <div
-                key={month}
-                className="px-2 py-3 text-center text-xs font-medium text-text-muted dark:text-dark-muted"
-              >
-                {month}
-              </div>
-            ))}
-          </div>
 
-          <div className="divide-y divide-primary/10">
-            {yearGroups.map((group) => {
-              const lettersByMonth = group.letters.reduce<Record<number, PartnershipLetter[]>>(
-                (slots, letter) => {
-                  const month = getPartnershipTimelineSlot(letter.subtitle)
-                  if (!slots[month]) slots[month] = []
-                  slots[month].push(letter)
-                  return slots
-                },
-                {}
-              )
-
-              return (
-                <div
-                  key={group.year}
-                  className="grid grid-cols-[88px_repeat(12,minmax(68px,1fr))] min-h-[72px] hover:bg-primary/[0.03] dark:hover:bg-primary/5 transition-colors"
-                >
-                  <div className="flex items-center px-4 py-3 border-r border-primary/10">
-                    <span className="text-xl font-bold text-primary dark:text-primary-light font-serif">
-                      {group.year}
-                    </span>
-                  </div>
-
-                  {monthLabels.map((_, index) => {
-                    const month = index + 1
-                    const letters = lettersByMonth[month] || []
-
-                    return (
-                      <div
-                        key={month}
-                        className="flex min-h-[72px] flex-col items-center justify-center gap-1 border-r border-primary/5 px-1.5 py-2 last:border-r-0"
-                      >
-                        {letters.map((letter) => (
-                          <LetterChip key={letter.filename} letter={letter} />
-                        ))}
-                      </div>
-                    )
-                  })}
-                </div>
-              )
-            })}
-          </div>
-        </div>
+            <ul className="divide-y divide-primary/5">
+              {group.letters.map((letter) => (
+                <LetterRow key={letter.filename} letter={letter} />
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
 
     </PageContainer>
   )
 }
 
-/** 单封信件的可点击标签 */
-function LetterChip({
+/** 单封信件的可点击行：年份 + 日期标签 + 类型 */
+function LetterRow({
   letter,
 }: {
   letter: PartnershipLetter
 }) {
   const label = formatPartnershipLabel(letter)
+  const date = formatPartnershipSubtitle(letter.subtitle)
   const href = `/partnership/${letter.id}`
+  const isAgreement = letter.filename.includes('有限合伙协议')
+
   return (
-    <Link
-      href={href}
-      className="inline-flex min-h-8 w-full items-center justify-center rounded-card border border-primary/15 bg-bg dark:bg-dark-bg px-2 py-1 text-center text-xs font-medium leading-snug text-text dark:text-dark-text hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary-light transition-all"
-    >
-      {label}
-    </Link>
+    <li>
+      <Link
+        href={href}
+        className="group flex items-center gap-4 px-5 py-3 transition-colors hover:bg-primary/[0.03] dark:hover:bg-primary/5"
+      >
+        <span
+          className={`shrink-0 inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium border rounded-none ${
+            isAgreement
+              ? 'archive-chip archive-chip--gold'
+              : 'archive-chip group-hover:border-primary group-hover:text-primary dark:group-hover:border-primary-light dark:group-hover:text-primary-light'
+          }`}
+        >
+          {date}
+        </span>
+        <span className="min-w-0 flex-1 truncate text-sm text-text dark:text-dark-text">
+          {label}
+        </span>
+        <span className="shrink-0 text-primary/50 dark:text-primary-light/50 text-lg leading-none transition-transform group-hover:translate-x-0.5">
+          ›
+        </span>
+      </Link>
+    </li>
   )
 }

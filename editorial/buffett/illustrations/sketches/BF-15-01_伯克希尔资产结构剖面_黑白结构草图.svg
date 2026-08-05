@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-15-01 伯克希尔资产结构剖面</title><desc id="desc">保险资金-业务持有-组合-长期现金流</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+  <rect x="0" y="0" width="12" height="800" fill="#111"/>
+
+  <text x="60" y="60" class="title">伯克希尔的资产结构剖面图</text>
+  <text x="60" y="88" class="subtitle">三层结构：保险浮存金 → 整家收购的经营企业 → 公开市场组合 + 现金储备；三者持续再投入，形成永久复利的"巨大而稳定的现金流机器"</text>
+
+  <!-- 左:三层结构剖面图 -->
+  <g id="layers">
+    <!-- 第三层：保险/浮存金 -->
+    <polygon points="100,150 1100,150 1020,230 180,230" class="brand-solid"/>
+    <text x="600" y="192" text-anchor="middle" style="fill:#111;font-weight:700;font-size:22px;">第 三 层 ：保 险 资 金 · 长 期 低 成 本 浮 存 金</text>
+    <text x="600" y="218" text-anchor="middle" style="fill:#f0f0f0;font-size:13px;">GEICO · 国民赔偿 · 阿勒格尼 等　→　低成本甚至负成本的稳定资金池</text>
+
+    <!-- 第二层：整家收购经营 -->
+    <polygon points="180,250 1020,250 960,370 240,370" class="brand-fill"/>
+    <text x="600" y="300" text-anchor="middle" class="label brand-text" style="font-size:22px;">第 二 层 ：整 家 收 购 的 经 营 企 业</text>
+    <text x="600" y="330" text-anchor="middle" class="small">铁路 BNSF · 能源 BHE · 消费品/制造/服务/零售集群</text>
+    <text x="600" y="356" text-anchor="middle" class="small">持续释放可分配自由现金，回流总部统一再配置</text>
+
+    <!-- 第一层：组合 -->
+    <polygon points="240,390 960,390 900,560 300,560" class="box" style="stroke:#111;stroke-width:3;"/>
+    <text x="600" y="450" text-anchor="middle" class="label brand-text" style="font-size:22px;">第 一 层 ：公 开 市 场 股 权 组 合</text>
+    <rect x="360" y="470" width="480" height="66" rx="8" class="soft"/>
+    <text x="600" y="504" text-anchor="middle" class="small">苹果 / 可口可乐 / 美国运通 / 美银 / 穆迪 / 卡夫亨氏 …</text>
+    <text x="600" y="530" text-anchor="middle" class="small">长期持有为主 · 不追热点 · 只在能力圈内 · 回购增厚每股权益</text>
+
+    <!-- 基础层：现金+承压 -->
+    <polygon points="300,580 900,580 840,670 360,670" class="soft"/>
+    <text x="600" y="628" text-anchor="middle" class="label">基 础 层 ：现 金 储 备 · 承 压 · 等 待 极 端 机 会</text>
+    <text x="600" y="654" text-anchor="middle" class="small">国债 / 回购协议 / 短期债券　→　巨灾可应付，恐慌可重仓买入</text>
+  </g>
+
+  <!-- 现金流循环箭头 -->
+  <path d="M 1030,670 Q 1120,600 1120,300 Q 1120,180 900,170" class="brand-line" marker-end="url(#arrow)" style="stroke-width:3;fill:none;"/>
+  <text x="1100" y="440" text-anchor="middle" class="brand-text tiny" style="writing-mode: vertical-rl;transform: rotate(180deg);transform-origin: center;">
+    自 由 现 金 回 流
+  </text>
+  <text x="1000" y="440" class="brand-text tiny">自由现金</text>
+  <text x="1000" y="460" class="brand-text tiny">回流总部</text>
+
+  <!-- 右下角结论 -->
+  <rect x="60" y="710" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="736" text-anchor="middle" class="brand-text small">最终系统：三层持续互相补位；"一家把钱放在正确地方、只做少数正确决策、并坚持几十年的大复利机器"</text>
+
+  <text x="60" y="788" class="tiny">BA-030 / BA-031 / BA-032：三层结构 + 现金回流 + 最终系统｜黑白结构草图</text>
+</svg>

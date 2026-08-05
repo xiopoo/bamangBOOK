@@ -1,0 +1,166 @@
+{
+  "file": "/Users/lucas/Documents/bamangB/bamangBOOK/editorial/buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+  "totalCharacters": 268799,
+  "chapterCount": 15,
+  "chapters": [
+    {
+      "anchor": "buffett-ch-01",
+      "lines": "31-424",
+      "characters": 19562,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-02",
+      "lines": "425-817",
+      "characters": 21457,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-03",
+      "lines": "818-1270",
+      "characters": 21978,
+      "summary": 1,
+      "notes": 1,
+      "closing": 1
+    },
+    {
+      "anchor": "buffett-ch-04",
+      "lines": "1271-1570",
+      "characters": 20516,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-05",
+      "lines": "1571-1849",
+      "characters": 20362,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-06",
+      "lines": "1850-2181",
+      "characters": 23567,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-07",
+      "lines": "2182-2397",
+      "characters": 15009,
+      "summary": 1,
+      "notes": 1,
+      "closing": 1
+    },
+    {
+      "anchor": "buffett-ch-08",
+      "lines": "2398-2569",
+      "characters": 10797,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-09",
+      "lines": "2570-2835",
+      "characters": 16569,
+      "summary": 1,
+      "notes": 1,
+      "closing": 1
+    },
+    {
+      "anchor": "buffett-ch-10",
+      "lines": "2836-3031",
+      "characters": 14709,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-11",
+      "lines": "3032-3246",
+      "characters": 14943,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-12",
+      "lines": "3247-3503",
+      "characters": 18142,
+      "summary": 1,
+      "notes": 1,
+      "closing": 1
+    },
+    {
+      "anchor": "buffett-ch-13",
+      "lines": "3504-3767",
+      "characters": 19551,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-14",
+      "lines": "3768-3957",
+      "characters": 13101,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    },
+    {
+      "anchor": "buffett-ch-15",
+      "lines": "3958-4236",
+      "characters": 18235,
+      "summary": 1,
+      "notes": 1,
+      "closing": 0
+    }
+  ],
+  "chaptersBelow10000": [],
+  "partOpenerCount": 5,
+  "partClosingCount": 4,
+  "bookClosingCount": 1,
+  "duplicateParagraphs": [],
+  "footnote": {
+    "refCount": 775,
+    "definedCount": 203,
+    "usedNotDefined": [],
+    "definedNotUsed": []
+  },
+  "links": {
+    "internalCount": 16,
+    "externalCount": 0,
+    "missingTargets": []
+  },
+  "notButPattern": {
+    "regex": "不是[^。！？；]{0,20}而是",
+    "perChapter": {
+      "buffett-ch-01": 6,
+      "buffett-ch-02": 9,
+      "buffett-ch-03": 13,
+      "buffett-ch-04": 35,
+      "buffett-ch-05": 18,
+      "buffett-ch-06": 22,
+      "buffett-ch-07": 28,
+      "buffett-ch-08": 14,
+      "buffett-ch-09": 28,
+      "buffett-ch-10": 19,
+      "buffett-ch-11": 17,
+      "buffett-ch-12": 16,
+      "buffett-ch-13": 31,
+      "buffett-ch-14": 20,
+      "buffett-ch-15": 20
+    },
+    "total": 296
+  },
+  "errors": [],
+  "ok": true
+}

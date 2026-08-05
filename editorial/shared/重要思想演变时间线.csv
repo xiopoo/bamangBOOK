@@ -1,0 +1,15 @@
+节点编号,人物,时期,主题,形成/发展/修正,代表来源,阶段
+BE-01,巴菲特,1951—1956,证券分析起点,从低估个股和清算价值寻找安全边际。,content/articles/buffett/我最看好的股票：GEICO_保险_1951.md,早期方法
+BE-02,巴菲特,1956—1969,合伙公司纪律,形成安全边际、集中、绝对收益和合伙人责任。,content/partnership/partnership_1965-11月-巴菲特致合伙人信.md,形成
+BE-03,巴菲特,1972—1988,从便宜资产到伟大企业,喜诗等案例推动对品牌、轻资本和管理层质量的重视。,content/articles/buffett/巴菲特谈喜诗糖果_1972.md；content/letters/berkshire_1988-巴菲特致股东信.md,发展
+BE-04,巴菲特,1983—1992,企业原则成形,内在价值、所有者收益、资本配置和永久持有形成稳定体系。,content/letters/berkshire_1983-巴菲特致股东信.md；content/letters/berkshire_1992-巴菲特致股东信.md,成熟
+BE-05,巴菲特,1991—2002,制度与风险,所罗门事件、衍生品和股东沟通强化声誉与风险边界。,content/articles/buffett/巴菲特致所罗门股东信_1991.md；content/letters/berkshire_2002-巴菲特致股东信.md,修正
+BE-06,巴菲特,2007—2011,护城河、危机与购买力,明确伟大企业、浮存金、逆周期行动和风险定义。,content/letters/berkshire_2007-巴菲特致股东信.md；content/letters/berkshire_2011-巴菲特致股东信.md,成熟
+BE-07,巴菲特,2014—2024,伯克希尔制度与传承,回顾纺织错误、更新业绩尺度、强化信任与接班。,content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md；content/letters/berkshire_2024-巴菲特致股东信.md,晚年总结
+ME-01,芒格,1986,逆向与可靠,用“如何确保悲惨”反向展示避错和品格。,poor-charlies-almanack/poor-charlies-almanack-talk-one.md,形成
+ME-02,芒格,1994,世俗智慧与知识格栅,系统提出多元思维模型、铁锤人和基础概率。,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,体系奠基
+ME-03,芒格,1995及修订版,人类误判心理学,把心理倾向从零散经验组织为清单，并加入多因素叠加。,poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md,体系扩展
+ME-04,芒格,1996—1998,跨学科教育与制度,把格栅扩展到法律、教育、激励和社会系统。,poor-charlies-almanack/poor-charlies-almanack-talk-three.md；poor-charlies-almanack/poor-charlies-almanack-talk-five.md,发展
+ME-05,芒格,2000—2007,商业、经济学与人生,把模型用于规模、会计、金融丑闻、职业和可靠品格。,poor-charlies-almanack/poor-charlies-almanack-talk-eight.md；poor-charlies-almanack/poor-charlies-almanack-talk-nine.md；poor-charlies-almanack/poor-charlies-almanack-talk-ten.md,成熟
+ME-06,芒格,1996—2011,Wesco现场应用,在企业、投资、管理与市场问题中反复应用机会成本和能力圈。,content/qa/Wesco_股东大会_2005.md,实践
+ME-07,芒格,2013—2023,每日期刊与晚年总结,将避错、激励、文明、学习和长期合作收束为人生方法。,content/munger-archive/recordings/daily-journal-2020.md；content/munger-archive/recordings/cnbc-final-interview-2023.md,晚年总结

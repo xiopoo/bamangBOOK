@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-02-01 从孤立知识到知识格栅</title>
+  <desc id="desc">黑白结构草图，仅用于出版前信息关系确认。</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#777" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2; }
+    .dash { fill: none; stroke: #666; stroke-width: 1.5; stroke-dasharray: 7 6; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+      <text x="55" y="58" class="title">从孤立知识到可更新的知识格栅</text>
+      <text x="55" y="86" class="subtitle">多元不是堆积；连接必须说明因果、反馈、约束与反证</text>
+      <g>
+        <text x="205" y="145" text-anchor="middle" class="label">① 孤立事实</text>
+        <circle cx="115" cy="245" r="38" class="soft"/><circle cx="260" cy="220" r="38" class="soft"/>
+        <circle cx="180" cy="360" r="38" class="soft"/><circle cx="310" cy="355" r="38" class="soft"/>
+        <text x="115" y="251" text-anchor="middle" class="small">数学</text>
+        <text x="260" y="226" text-anchor="middle" class="small">会计</text>
+        <text x="180" y="366" text-anchor="middle" class="small">心理</text>
+        <text x="310" y="361" text-anchor="middle" class="small">经济</text>
+        <text x="205" y="480" text-anchor="middle" class="tiny">记住名称，但无法迁移</text>
+      </g>
+      <line x1="385" y1="320" x2="465" y2="320" class="line" marker-end="url(#arrow)"/>
+      <g>
+        <text x="640" y="145" text-anchor="middle" class="label">② 建立连接</text>
+        <circle cx="545" cy="240" r="38" class="box"/><circle cx="720" cy="220" r="38" class="box"/>
+        <circle cx="535" cy="400" r="38" class="box"/><circle cx="735" cy="405" r="38" class="box"/>
+        <circle cx="640" cy="320" r="45" class="soft"/>
+        <text x="545" y="246" text-anchor="middle" class="small">数量</text>
+        <text x="720" y="226" text-anchor="middle" class="small">会计</text>
+        <text x="535" y="406" text-anchor="middle" class="small">工程</text>
+        <text x="735" y="411" text-anchor="middle" class="small">心理</text>
+        <text x="640" y="326" text-anchor="middle" class="small">问题</text>
+        <path d="M579 259 L602 290 M685 246 L677 284 M570 385 L605 350 M700 384 L676 355 M575 247 L684 227 M570 395 L698 402" class="line"/>
+        <text x="640" y="480" text-anchor="middle" class="tiny">因果｜反馈｜约束｜反证</text>
+      </g>
+      <line x1="810" y1="320" x2="890" y2="320" class="line" marker-end="url(#arrow)"/>
+      <g>
+        <text x="1060" y="145" text-anchor="middle" class="label">③ 判断与更新</text>
+        <rect x="940" y="205" width="240" height="70" rx="8" class="box"/>
+        <rect x="940" y="325" width="240" height="70" rx="8" class="soft"/>
+        <rect x="940" y="445" width="240" height="70" rx="8" class="box"/>
+        <text x="1060" y="247" text-anchor="middle" class="small">形成可检验判断</text>
+        <text x="1060" y="367" text-anchor="middle" class="small">观察结果与反例</text>
+        <text x="1060" y="487" text-anchor="middle" class="small">修正连接或暂缓</text>
+        <line x1="1060" y1="278" x2="1060" y2="317" class="line" marker-end="url(#arrow)"/>
+        <line x1="1060" y1="398" x2="1060" y2="437" class="line" marker-end="url(#arrow)"/>
+      </g>
+    
+  <text x="1256" y="702" text-anchor="end" class="tiny">样章精绘｜品牌色版本</text>
+</svg>

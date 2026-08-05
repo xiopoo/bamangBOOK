@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">MG-02-02 同一企业问题的五学科检查</title>
+  <desc id="desc">黑白结构草图，仅用于出版前信息关系确认。</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#777" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2; }
+    .dash { fill: none; stroke: #666; stroke-width: 1.5; stroke-dasharray: 7 6; }
+  </style>
+  <rect width="900" height="900" fill="#fff"/>
+
+      <text x="45" y="58" class="title">同一企业问题的五学科检查</text>
+      <text x="45" y="86" class="subtitle">模型多为通用知识；芒格的贡献在组织、连接与反复应用</text>
+      <circle cx="450" cy="450" r="105" class="soft"/>
+      <text x="450" y="436" text-anchor="middle" class="label">这是一家</text>
+      <text x="450" y="470" text-anchor="middle" class="label">好企业吗？</text>
+      <g>
+        <rect x="345" y="135" width="210" height="90" rx="10" class="box"/>
+        <text x="450" y="170" text-anchor="middle" class="label">数量</text>
+        <text x="450" y="198" text-anchor="middle" class="tiny">概率与基准率如何？</text>
+        <rect x="635" y="310" width="210" height="90" rx="10" class="box"/>
+        <text x="740" y="345" text-anchor="middle" class="label">会计</text>
+        <text x="740" y="373" text-anchor="middle" class="tiny">数字等于经济现实吗？</text>
+        <rect x="555" y="650" width="240" height="90" rx="10" class="box"/>
+        <text x="675" y="685" text-anchor="middle" class="label">微观经济学</text>
+        <text x="675" y="713" text-anchor="middle" class="tiny">优势为何难以复制？</text>
+        <rect x="105" y="650" width="210" height="90" rx="10" class="box"/>
+        <text x="210" y="685" text-anchor="middle" class="label">心理学</text>
+        <text x="210" y="713" text-anchor="middle" class="tiny">谁被激励或偏误推动？</text>
+        <rect x="55" y="310" width="210" height="90" rx="10" class="box"/>
+        <text x="160" y="345" text-anchor="middle" class="label">工程</text>
+        <text x="160" y="373" text-anchor="middle" class="tiny">断裂点与冗余在哪？</text>
+      </g>
+      <line x1="450" y1="235" x2="450" y2="335" class="line" marker-end="url(#arrow)"/>
+      <line x1="625" y1="375" x2="550" y2="415" class="line" marker-end="url(#arrow)"/>
+      <line x1="575" y1="650" x2="505" y2="548" class="line" marker-end="url(#arrow)"/>
+      <line x1="325" y1="650" x2="395" y2="548" class="line" marker-end="url(#arrow)"/>
+      <line x1="275" y1="375" x2="350" y2="415" class="line" marker-end="url(#arrow)"/>
+      <circle cx="450" cy="450" r="170" class="dash"/>
+    
+  <text x="876" y="882" text-anchor="end" class="tiny">样章精绘｜品牌色版本</text>
+</svg>

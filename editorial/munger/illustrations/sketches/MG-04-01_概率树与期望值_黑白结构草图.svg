@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-04-01 概率树与期望值</title>
+  <desc id="desc">决策分支拆成结果与概率，期望值 = 结果 × 概率之和。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">概率树与期望值</text>
+  <text x="55" y="86" class="subtitle">把好故事拆成可以比较的结果、概率与代价</text>
+
+  <!-- 决策起点 -->
+  <circle cx="150" cy="400" r="46" class="box"/>
+  <text x="150" y="396" text-anchor="middle" class="small">决策</text>
+  <text x="150" y="416" text-anchor="middle" class="tiny">不只一个选择</text>
+
+  <!-- 分支线 -->
+  <line x1="193" y1="370" x2="415" y2="205" class="line" marker-end="url(#arrow)"/>
+  <line x1="193" y1="430" x2="415" y2="595" class="line" marker-end="url(#arrow)"/>
+  <text x="310" y="255" text-anchor="middle" class="small">概率 0.6</text>
+  <text x="310" y="465" text-anchor="middle" class="small">概率 0.4</text>
+
+  <!-- 分支结果 -->
+  <rect x="425" y="165" width="260" height="80" rx="10" class="box"/>
+  <rect x="425" y="555" width="260" height="80" rx="10" class="box"/>
+  <text x="555" y="203" text-anchor="middle" class="small">结果：赚 100 万</text>
+  <text x="555" y="225" text-anchor="middle" class="tiny">成功分支</text>
+  <text x="555" y="593" text-anchor="middle" class="small">结果：亏 50 万</text>
+  <text x="555" y="615" text-anchor="middle" class="tiny">失败分支</text>
+
+  <!-- 期望值计算区 -->
+  <rect x="740" y="210" width="470" height="300" rx="12" fill="none" stroke="#111" stroke-width="2.5"/>
+  <text x="975" y="255" text-anchor="middle" class="label" fill="#111">期望值</text>
+  <text x="975" y="300" text-anchor="middle" class="small">0.6 × 100 万</text>
+  <text x="975" y="330" text-anchor="middle" class="small">+ 0.4 ×（−50 万）</text>
+  <text x="975" y="375" text-anchor="middle" class="note">= 40 万</text>
+  <line x1="800" y1="398" x2="1150" y2="398" stroke="#111" stroke-width="1.5"/>
+  <text x="975" y="430" text-anchor="middle" class="tiny">结果 × 概率 之和</text>
+  <text x="975" y="456" text-anchor="middle" class="tiny">概率是估计，不是精确数字</text>
+  <text x="975" y="482" text-anchor="middle" class="tiny">先与最佳替代方案比</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">好故事不如好算术：先算期望值，再设极端下行上限。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-04-01｜结构草图</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-07-30T14:13:03.252Z",
+  "files": 700,
+  "totalChars": 8887885,
+  "classificationCounts": {
+    "A": {
+      "files": 88,
+      "chars": 996484
+    },
+    "B": {
+      "files": 286,
+      "chars": 3322094
+    },
+    "C": {
+      "files": 218,
+      "chars": 3781399
+    },
+    "D": {
+      "files": 108,
+      "chars": 787908
+    },
+    "E": {
+      "files": 0,
+      "chars": 0
+    }
+  },
+  "modelLayerCounts": {
+    "1": 50,
+    "2": 32,
+    "3": 72,
+    "4": 78
+  },
+  "personCounts": {
+    "巴菲特": 204,
+    "芒格": 420,
+    "巴菲特相关": 22,
+    "其他/背景人物": 12,
+    "巴菲特与芒格": 42
+  },
+  "factCheck": {
+    "yes": 334,
+    "sample": 120,
+    "no": 246
+  },
+  "attributionRisk": {
+    "高": 150,
+    "中": 294,
+    "低": 256
+  },
+  "versionGroups": 28
+}

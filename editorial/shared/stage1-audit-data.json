@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-07-30T13:30:25.414Z",
+  "candidateRoots": [
+    "content/articles/buffett",
+    "content/articles/munger",
+    "content/articles/other",
+    "content/letters",
+    "content/partnership",
+    "content/qa",
+    "content/talks",
+    "content/interviews",
+    "content/munger-archive",
+    "content/munger-originals",
+    "content/models",
+    "content/people",
+    "content/books",
+    "content/poor-charlies-almanack",
+    "poor-charlies-almanack"
+  ],
+  "totals": {
+    "files": 700,
+    "chars": 8887885,
+    "bytes": 22770035,
+    "externalUrls": 2906,
+    "filesWithExternalUrls": 409,
+    "images": 56,
+    "tables": 5678,
+    "footnoteDefs": 34,
+    "footnoteRefs": 35,
+    "empty": 0,
+    "veryShort": 26,
+    "veryLong": 0,
+    "noFrontmatter": 341,
+    "noSourceFields": 341,
+    "sourceRisk": 190,
+    "replacementChars": 0,
+    "externalModelSourceFiles": 230
+  },
+  "roots": {
+    "content/articles/buffett": {
+      "files": 52,
+      "chars": 297238,
+      "externalUrls": 1,
+      "images": 0
+    },
+    "content/articles/munger": {
+      "files": 2,
+      "chars": 10486,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "content/articles/other": {
+      "files": 18,
+      "chars": 474881,
+      "externalUrls": 196,
+      "images": 0
+    },
+    "content/letters": {
+      "files": 61,
+      "chars": 1222341,
+      "externalUrls": 7,
+      "images": 0
+    },
+    "content/partnership": {
+      "files": 37,
+      "chars": 184770,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "content/qa": {
+      "files": 58,
+      "chars": 3010749,
+      "externalUrls": 1152,
+      "images": 1
+    },
+    "content/talks": {
+      "files": 22,
+      "chars": 362491,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "content/interviews": {
+      "files": 40,
+      "chars": 615550,
+      "externalUrls": 1,
+      "images": 0
+    },
+    "content/munger-archive": {
+      "files": 110,
+      "chars": 243657,
+      "externalUrls": 1198,
+      "images": 49
+    },
+    "content/munger-originals": {
+      "files": 13,
+      "chars": 313985,
+      "externalUrls": 37,
+      "images": 0
+    },
+    "content/models": {
+      "files": 232,
+      "chars": 1667757,
+      "externalUrls": 288,
+      "images": 6
+    },
+    "content/people": {
+      "files": 13,
+      "chars": 22160,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "content/books": {
+      "files": 4,
+      "chars": 2501,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "content/poor-charlies-almanack": {
+      "files": 6,
+      "chars": 9311,
+      "externalUrls": 0,
+      "images": 0
+    },
+    "poor-charlies-almanack": {
+      "files": 32,
+      "chars": 450008,
+      "externalUrls": 26,
+      "images": 0
+    }
+  },
+  "actualBuild": {
+    "buffett": {
+      "files": 240,
+      "chars": 5241326,
+      "skipped": 0
+    },
+    "munger": {
+      "files": 328,
+      "chars": 2185357,
+      "skipped": 0
+    },
+    "overlapFiles": []
+  },
+  "duplicateSummary": {
+    "exactGroups": 10,
+    "exactFiles": 20,
+    "canonicalGroups": 10,
+    "canonicalFiles": 20,
+    "duplicateTitleGroups": 17,
+    "duplicateTitleFiles": 34
+  },
+  "epub": {
+    "buffett": {
+      "exists": true,
+      "path": "output/ebook/巴菲特文集_1956-2025.epub",
+      "bytes": 6217399,
+      "entries": 257,
+      "xhtmlDocs": 251,
+      "chapterDocs": 240,
+      "externalLinks": 0,
+      "internalLinks": 499,
+      "emptyLinks": 0,
+      "remoteImages": 0,
+      "duplicateIds": 0,
+      "unresolvedInternalLinks": 0
+    },
+    "munger": {
+      "exists": true,
+      "path": "output/ebook/芒格文集_1924-2023.epub",
+      "bytes": 2795165,
+      "entries": 351,
+      "xhtmlDocs": 345,
+      "chapterDocs": 328,
+      "externalLinks": 723,
+      "internalLinks": 687,
+      "emptyLinks": 0,
+      "remoteImages": 0,
+      "duplicateIds": 0,
+      "unresolvedInternalLinks": 0
+    }
+  }
+}

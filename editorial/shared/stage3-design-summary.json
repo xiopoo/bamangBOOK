@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-07-30T16:16:29.708Z",
+  "buffettChapters": 15,
+  "buffettParts": 5,
+  "buffettMainTextChars": 323000,
+  "mungerChapters": 16,
+  "mungerParts": 5,
+  "mungerMainTextChars": 289000,
+  "coverageRows": 700,
+  "destinations": {
+    "案例、侧栏或补充解释": 286,
+    "完整资料典藏层": 700,
+    "主书核心正文": 88,
+    "由主版本承接": 14,
+    "暂缓使用并记录明确原因": 94,
+    "年表、术语表、索引或附录": 218
+  },
+  "gradeDWithArchive": 108,
+  "carriedByMainVersion": 14
+}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <radialGradient id="s3-l" cx="50%" cy="40%" r="62%">
+      <stop offset="0%" stop-color="#F2D8A0" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#EBC38A" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FAF8F4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="s3-r" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="s3-crown" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#7A1030" stop-opacity="0.96"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#FAF8F4"/>
+  <!-- 左侧：橡树（巴菲特卷） -->
+  <rect x="40" y="40" width="540" height="520" fill="url(#s3-l)"/>
+  <g fill="url(#s3-crown)">
+    <circle cx="220" cy="220" r="95" opacity="0.92"/>
+    <circle cx="360" cy="220" r="95" opacity="0.92"/>
+    <circle cx="290" cy="160" r="110" opacity="0.96"/>
+    <circle cx="190" cy="290" r="70" opacity="0.9"/>
+    <circle cx="390" cy="290" r="70" opacity="0.9"/>
+    <circle cx="290" cy="250" r="88" opacity="0.95"/>
+  </g>
+  <g fill="#AB1942" opacity="0.35">
+    <circle cx="260" cy="200" r="52"/>
+    <circle cx="330" cy="200" r="46"/>
+  </g>
+  <path d="M 268 300 L 312 300 L 322 480 L 258 480 Z" fill="#7A1030"/>
+  <path d="M 282 300 L 296 300 L 302 480 L 286 480 Z" fill="#AB1942" opacity="0.45"/>
+  <line x1="150" y1="480" x2="470" y2="480" stroke="#454545" stroke-width="1.5" opacity="0.5"/>
+  <!-- 右侧：棱镜（芒格卷） -->
+  <rect x="620" y="40" width="540" height="520" fill="url(#s3-r)"/>
+  <circle cx="890" cy="190" r="24" fill="#AB1942"/>
+  <circle cx="890" cy="190" r="38" fill="#AB1942" opacity="0.2"/>
+  <line x1="890" y1="190" x2="820" y2="320" stroke="#AB1942" stroke-width="3" opacity="0.7"/>
+  <polygon points="820,320 960,320 890,440" fill="none" stroke="#AB1942" stroke-width="5"/>
+  <polygon points="840,320 940,320 890,420" fill="#AB1942" fill-opacity="0.08"/>
+  <g stroke="#AB1942" stroke-width="3" stroke-linecap="round">
+    <line x1="890" y1="440" x2="1040" y2="360" opacity="0.9"/>
+    <line x1="890" y1="440" x2="1050" y2="400" opacity="0.75"/>
+    <line x1="890" y1="440" x2="1050" y2="440" opacity="0.6"/>
+  </g>
+  <g fill="#AB1942">
+    <circle cx="1040" cy="360" r="5" opacity="0.9"/>
+    <circle cx="1050" cy="400" r="4.5" opacity="0.75"/>
+    <circle cx="1050" cy="440" r="4" opacity="0.6"/>
+  </g>
+  <!-- 中央分隔线 -->
+  <line x1="600" y1="70" x2="600" y2="530" stroke="#AB1942" stroke-width="3" opacity="0.55"/>
+</svg>

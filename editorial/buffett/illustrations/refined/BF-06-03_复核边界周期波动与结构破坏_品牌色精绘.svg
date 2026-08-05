@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-06-03 复核边界：周期波动≠破坏</title><desc id="desc">区分周期波动与结构性破坏</desc>
+  <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#fff;stroke:#111;stroke-width:2;}
+    .brand{fill:#fff;stroke:#AB1942;stroke-width:3;}
+    .brand-fill{fill:#AB1942;fill-opacity:0.12;stroke:#AB1942;stroke-width:2;}
+    .brand-solid{fill:#AB1942;stroke:#AB1942;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-line{fill:none;stroke:#AB1942;stroke-width:3;}
+    .brand-text{fill:#AB1942;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+
+  <text x="60" y="60" class="title">复核的关键边界：周期性波动 ≠ 结构性破坏</text>
+  <text x="60" y="88" class="subtitle">短期利润/现金流/行业景气的波动，绝大多数是"天气"；只有竞争对手结构、定价权、客户粘性、转换成本被长期改变，才叫"气候变了"</text>
+
+  <rect x="70" y="130" width="480" height="520" rx="12" class="soft"/>
+  <text x="310" y="170" text-anchor="middle" class="label brand-text" style="font-size:22px;">左：周 期 性 波 动（天 气）</text>
+  <text x="310" y="194" text-anchor="middle" class="small" style="font-weight:600;">→ 继续持有，甚至逆势加仓</text>
+  <line x1="120" y1="218" x2="500" y2="218" class="brand-line" style="stroke-width:1.5;"/>
+
+  <rect x="120" y="240" width="380" height="200" rx="6" class="box" style="fill:#fff;"/>
+  <line x1="140" y1="420" x2="480" y2="420" style="stroke:#bbb;stroke-width:1;"/>
+  <line x1="140" y1="260" x2="140" y2="420" style="stroke:#bbb;stroke-width:1;"/>
+  <path d="M 140 360 Q 200 330 240 370 T 320 340 T 400 300 T 480 280" class="brand-line" stroke-width="3" fill="none"/>
+  <line x1="140" y1="370" x2="480" y2="290" style="stroke:#666;stroke-width:2;stroke-dasharray:6 5;"/>
+  <text x="310" y="272" text-anchor="middle" class="tiny">↑ 长期内在价值趋势线</text>
+  <text x="310" y="440" text-anchor="middle" class="small brand-text">波动是噪声，长期内在价值抬升是事实</text>
+
+  <g id="weather">
+    <rect x="120" y="464" width="380" height="42" rx="4" class="box"/>
+    <text x="310" y="492" text-anchor="middle" class="small">宏观 / 行业景气周期、价格短期波动</text>
+    <rect x="120" y="514" width="380" height="42" rx="4" class="box"/>
+    <text x="310" y="542" text-anchor="middle" class="small">单一季度或 1~2 年利润下滑</text>
+    <rect x="120" y="564" width="380" height="42" rx="4" class="box"/>
+    <text x="310" y="592" text-anchor="middle" class="small">定价权 / 客户粘性 / 护城河仍在，只是量少卖一点</text>
+    <rect x="120" y="614" width="380" height="26" rx="4" class="brand-fill"/>
+    <text x="310" y="634" text-anchor="middle" class="brand-text small" style="font-weight:600;">→ 行 动：持 有，甚 至 加 仓</text>
+  </g>
+
+  <rect x="650" y="130" width="480" height="520" rx="12" style="fill:#fff;stroke:#AB1942;stroke-width:3;"/>
+  <text x="890" y="170" text-anchor="middle" class="label brand-text" style="font-size:22px;">右：结 构 性 破 坏（气 候 变 了）</text>
+  <text x="890" y="194" text-anchor="middle" class="small" style="font-weight:600;">→ 深入复核，准备减仓或退出</text>
+  <line x1="700" y1="218" x2="1080" y2="218" class="brand-line" style="stroke-width:1.5;"/>
+
+  <rect x="700" y="240" width="380" height="200" rx="6" class="box" style="fill:#fff;"/>
+  <line x1="720" y1="420" x2="1060" y2="420" style="stroke:#bbb;stroke-width:1;"/>
+  <line x1="720" y1="260" x2="720" y2="420" style="stroke:#bbb;stroke-width:1;"/>
+  <path d="M 720 370 Q 790 320 860 330" class="brand-line" stroke-width="3" fill="none"/>
+  <circle cx="860" cy="330" r="8" class="brand-solid"/>
+  <text x="860" y="310" text-anchor="middle" class="tiny brand-text" style="font-weight:700;">破坏拐点</text>
+  <path d="M 860 330 Q 920 360 980 395 T 1060 416" style="stroke:#AB1942;stroke-width:3;fill:none;stroke-dasharray:9 6;"/>
+  <text x="890" y="440" text-anchor="middle" class="small brand-text">护城河被替代 / 被新技术彻底绕开</text>
+
+  <g id="climate">
+    <rect x="700" y="464" width="380" height="42" rx="4" class="brand-fill"/>
+    <text x="890" y="492" text-anchor="middle" class="brand-text small">替代品真正夺走客户（不是传闻）</text>
+    <rect x="700" y="514" width="380" height="42" rx="4" class="brand-fill"/>
+    <text x="890" y="542" text-anchor="middle" class="brand-text small">定价权、毛利率持续多年下降</text>
+    <rect x="700" y="564" width="380" height="42" rx="4" class="brand-fill"/>
+    <text x="890" y="592" text-anchor="middle" class="brand-text small">客户转换成本消失、品牌失去意义</text>
+    <rect x="700" y="614" width="380" height="26" rx="4" class="brand-solid" style="stroke-width:1;"/>
+    <text x="890" y="634" text-anchor="middle" style="fill:#fff;font-weight:600;">→ 行 动：深 入 复 核，减 仓 或 退 出</text>
+  </g>
+
+  <rect x="60" y="720" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="746" text-anchor="middle" class="brand-text small">最容易犯错的两类：① 把"天气波动"当"气候变了"卖掉好企业；② 把"气候真的变了"当"天气波动"一直持有下跌的旧护城河</text>
+
+  <text x="60" y="788" class="tiny">BA-037 / BA-038：周期波动与结构破坏边界 + 两类常见误判｜品牌色版本</text>
+</svg>

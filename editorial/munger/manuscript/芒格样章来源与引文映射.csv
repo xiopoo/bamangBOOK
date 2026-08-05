@@ -1,0 +1,9 @@
+映射编号,章节锚点,样章位置,引文或事实,来源路径,时间与场合,内容身份,建议使用方式,可信度,待核事项
+MQ-01,munger-ch-02,开篇,演讲日期场合与祖母的规矩,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格演讲中文翻译,历史场景,高,无
+MQ-02,munger-ch-02,格栅起点,孤立事物必须进入理论框架,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格演讲中文翻译,主引文,高,保留前后语义
+MQ-03,munger-ch-02,多元要求,必须拥有多元思维模型,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格演讲中文翻译,主引文,高,无
+MQ-04,munger-ch-02,单一模型风险,铁锤与钉子,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格引用的通用谚语,身份说明与补充引文,高,不得标为芒格原创
+MQ-05,munger-ch-02,数学模型,巴菲特自动使用决策树和排列组合,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格演讲中文翻译,代表案例,高,说明模型为通用知识
+MQ-06,munger-ch-02,会计与工程,会计局限与卡尔·布劳恩5W案例,poor-charlies-almanack/poor-charlies-almanack-talk-two.md,1994年南加州大学马歇尔商学院演讲,芒格演讲中文翻译及人物故事,模型连接案例,高,编辑解释不用引号
+MQ-07,munger-ch-02,思想演变,1994演讲的奠基位置与后续线索,content/munger-archive/recordings/usc-1994-worldly-wisdom.md,演讲档案页时间综合,编辑档案摘要,定位与补充语境,中,不得作为关键命题唯一证据
+MQ-08,munger-ch-02,心理学延伸,人类误判心理学体系,poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md,1995年演讲及修订版,芒格演讲中文翻译,后续章节证据,高,比较初版与修订版差异

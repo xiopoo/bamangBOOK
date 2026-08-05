@@ -116,7 +116,7 @@ export default function Breadcrumbs() {
   const breadcrumbs = getBreadcrumbs()
 
   return (
-    <nav className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
+    <nav className="flex items-center gap-2 text-sm text-text-muted dark:text-dark-muted mb-6">
       {breadcrumbs.map((crumb, index) => {
         const isLast = index === breadcrumbs.length - 1
         return (
@@ -130,12 +130,12 @@ export default function Breadcrumbs() {
               </Link>
             )}
             {isLast && (
-              <span className="text-gray-900 dark:text-gray-100 font-medium">
+              <span className="text-text dark:text-dark-text font-medium">
                 {crumb.label}
               </span>
             )}
             {!isLast && (
-              <span className="text-gray-400">/</span>
+              <span className="text-primary/30 dark:text-dark-border">/</span>
             )}
           </div>
         )

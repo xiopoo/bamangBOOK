@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-05-01_纺织资本投入与机会成本_黑白结构精绘</title><desc id="desc">低价资产吞噬回报 vs 同笔钱投喜诗的机会成本</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+<rect x="0" y="0" width="12" height="800" fill="#111"/>
+  <text x="60" y="60" class="title">便宜为何仍然昂贵：伯克希尔纺织</text>
+  <text x="60" y="88" class="subtitle">价格折扣并不能补偿恶劣经济特征和持续资本需求——同一块钱的两条路，天差地别</text>
+
+  <!-- 左路：纺织 -->
+  <text x="260" y="150" text-anchor="middle" class="label">路径 A：捡烟蒂（伯克希尔纺织）</text>
+  <!-- 步骤框 -->
+  <rect x="80" y="180" width="360" height="80" rx="8" class="soft"/>
+  <text x="260" y="220" text-anchor="middle" class="small">低估值 + 价格低于净营运资金</text>
+  <text x="260" y="245" text-anchor="middle" class="tiny">看起来"绝对便宜"</text>
+  <line x1="260" y1="260" x2="260" y2="298" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="298" width="360" height="80" rx="8" class="soft"/>
+  <text x="260" y="338" text-anchor="middle" class="small">持续投入：设备更新、纱锭、成本竞争</text>
+  <text x="260" y="363" text-anchor="middle" class="tiny">利润不断被要求再投回去</text>
+  <line x1="260" y1="378" x2="260" y2="416" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="416" width="360" height="80" rx="8" class="soft"/>
+  <text x="260" y="456" text-anchor="middle" class="small">行业回报长期低于资本成本</text>
+  <text x="260" y="481" text-anchor="middle" class="tiny">便宜最终耗散在挣扎里</text>
+  <line x1="260" y1="496" x2="260" y2="544" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="544" width="360" height="100" rx="12" class="box" style="stroke:#111;stroke-width:3;"/>
+  <text x="260" y="595" text-anchor="middle" class="label brand-text">长期股东回报微薄</text>
+  <text x="260" y="622" text-anchor="middle" class="small">一个错误改变了方法论：</text>
+  <text x="260" y="644" text-anchor="middle" class="small">从便宜货→企业质量</text>
+
+  <!-- 中间：VS -->
+  <text x="600" y="430" text-anchor="middle" class="brand-text" style="font-size:64px;font-weight:800;">VS</text>
+  <text x="600" y="470" text-anchor="middle" class="tiny">同一块初始资本的机会成本</text>
+
+  <!-- 右路：喜诗 -->
+  <text x="940" y="150" text-anchor="middle" class="label">路径 B：买质量（喜诗糖果）</text>
+  <rect x="760" y="180" width="360" height="80" rx="8" class="brand-fill"/>
+  <text x="940" y="220" text-anchor="middle" class="small">付出溢价（约三倍有形资产）</text>
+  <text x="940" y="245" text-anchor="middle" class="tiny">账面看起来"贵"</text>
+  <line x1="940" y1="260" x2="940" y2="298" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="298" width="360" height="80" rx="8" class="brand-fill"/>
+  <text x="940" y="338" text-anchor="middle" class="small">少量增量资本即可维持定价权</text>
+  <text x="940" y="363" text-anchor="middle" class="tiny">绝大多数利润可以释放</text>
+  <line x1="940" y1="378" x2="940" y2="416" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="416" width="360" height="80" rx="8" class="brand-fill"/>
+  <text x="940" y="456" text-anchor="middle" class="small">释放的现金→投向更好的机会</text>
+  <text x="940" y="481" text-anchor="middle" class="tiny">扩大整个资本系统的机会集</text>
+  <line x1="940" y1="496" x2="940" y2="544" class="brand-line" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="544" width="360" height="100" rx="12" class="brand-solid"/>
+  <text x="940" y="595" text-anchor="middle" style="fill:#111;font-weight:700;font-size:20px;">整个伯克希尔的复利拐点</text>
+  <text x="940" y="622" text-anchor="middle" style="fill:#111;font-size:14px;">合理价格买伟大企业</text>
+  <text x="940" y="644" text-anchor="middle" style="fill:#111;font-size:14px;">胜过便宜价格买平庸企业</text>
+
+  <text x="60" y="760" class="tiny">BA-025 / BA-026：烟蒂的代价、58 年资本配置中"马马虎虎"的公开复盘｜黑白结构草图</text>
+</svg>

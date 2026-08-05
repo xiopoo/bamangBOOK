@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-12-01 优质企业—少行动—复利链条</title>
+  <desc id="desc">优质企业的竞争优势带来高资本回报，少行动让复利有足够时间。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">优质企业 — 少行动 — 复利</text>
+  <text x="55" y="86" class="subtitle">竞争优势带来高资本回报；少行动让复利有足够时间</text>
+
+  <!-- 五节点 -->
+  <circle cx="150" cy="300" r="58" class="box"/>
+  <circle cx="367" cy="300" r="58" class="box"/>
+  <circle cx="584" cy="300" r="58" class="box"/>
+  <circle cx="801" cy="300" r="58" class="box"/>
+  <circle cx="1018" cy="300" r="58" class="soft"/>
+  <circle cx="1018" cy="300" r="58" fill="none" stroke="#111" stroke-width="2.5"/>
+  <text x="150" y="304" text-anchor="middle" class="small">优质</text>
+  <text x="150" y="324" text-anchor="middle" class="small">企业</text>
+  <text x="367" y="304" text-anchor="middle" class="small">竞争</text>
+  <text x="367" y="324" text-anchor="middle" class="small">优势</text>
+  <text x="584" y="304" text-anchor="middle" class="small">高资本</text>
+  <text x="584" y="324" text-anchor="middle" class="small">回报</text>
+  <text x="801" y="304" text-anchor="middle" class="small">少行动</text>
+  <text x="1018" y="304" text-anchor="middle" class="small" fill="#111">复利</text>
+
+  <!-- 节点下注 -->
+  <text x="150" y="392" text-anchor="middle" class="tiny">别人抢不走的生意</text>
+  <text x="367" y="392" text-anchor="middle" class="tiny">定价权与品牌</text>
+  <text x="584" y="392" text-anchor="middle" class="tiny">再投资效率高</text>
+  <text x="801" y="392" text-anchor="middle" class="tiny">有把握地不动</text>
+  <text x="1018" y="392" text-anchor="middle" class="tiny">时间在帮忙</text>
+
+  <!-- 箭头 -->
+  <g class="line">
+    <line x1="208" y1="300" x2="309" y2="300" marker-end="url(#arrow)"/>
+    <line x1="425" y1="300" x2="526" y2="300" marker-end="url(#arrow)"/>
+    <line x1="642" y1="300" x2="743" y2="300" marker-end="url(#arrow)"/>
+    <line x1="859" y1="300" x2="960" y2="300" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 坐等条件 -->
+  <rect x="390" y="500" width="500" height="64" rx="10" class="soft"/>
+  <text x="640" y="530" text-anchor="middle" class="small">坐等的前提不是惰性</text>
+  <text x="640" y="552" text-anchor="middle" class="tiny">竞争优势、治理与价格持续成立，才值得继续持有</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">大钱靠熬过波动、稳坐不动；少行动是结果，不是方法。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-12-01｜结构草图</text>
+</svg>

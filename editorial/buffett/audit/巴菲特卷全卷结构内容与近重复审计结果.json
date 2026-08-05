@@ -1,0 +1,259 @@
+{
+  "ok": true,
+  "mainTextCharacters": 178303,
+  "chapterCharacters": {
+    "10": 23624,
+    "11": 23054,
+    "12": 23236,
+    "13": 16916,
+    "14": 17226,
+    "15": 15725,
+    "01": 10150,
+    "02": 12031,
+    "03": 8858,
+    "04": 9038,
+    "05": 11337,
+    "06": 28403,
+    "07": 22851,
+    "08": 20154,
+    "09": 18727
+  },
+  "chaptersBelowReference10000": [
+    "03",
+    "04"
+  ],
+  "chaptersAboveReference15000": [
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+  ],
+  "structure": [
+    {
+      "chapter": "01",
+      "characters": 10150,
+      "headings": 14,
+      "afterSummary": [
+        "注释",
+        "来源与引文映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "02",
+      "characters": 12031,
+      "headings": 16,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "03",
+      "characters": 8858,
+      "headings": 13,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "04",
+      "characters": 9038,
+      "headings": 18,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "05",
+      "characters": 11337,
+      "headings": 21,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "06",
+      "characters": 28403,
+      "headings": 16,
+      "afterSummary": [
+        "注释",
+        "来源与引文映射",
+        "内部交叉链接",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "07",
+      "characters": 22851,
+      "headings": 15,
+      "afterSummary": [
+        "注释",
+        "来源与引文映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "08",
+      "characters": 20154,
+      "headings": 19,
+      "afterSummary": [
+        "注释",
+        "来源与引文映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "09",
+      "characters": 18727,
+      "headings": 15,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "10",
+      "characters": 23624,
+      "headings": 17,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "11",
+      "characters": 23054,
+      "headings": 21,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "12",
+      "characters": 23236,
+      "headings": 17,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "13",
+      "characters": 16916,
+      "headings": 14,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "14",
+      "characters": 17226,
+      "headings": 15,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    },
+    {
+      "chapter": "15",
+      "characters": 15725,
+      "headings": 18,
+      "afterSummary": [
+        "注释与来源映射",
+        "编辑说明"
+      ]
+    }
+  ],
+  "atomCoverage": {
+    "10": [
+      "BA-013",
+      "BA-014"
+    ],
+    "11": [
+      "BA-015",
+      "BA-016",
+      "BA-017"
+    ],
+    "12": [
+      "BA-021",
+      "BA-022"
+    ],
+    "13": [
+      "BA-018",
+      "BA-005"
+    ],
+    "14": [
+      "BA-019",
+      "BA-020"
+    ],
+    "15": [
+      "BA-024",
+      "BA-025",
+      "BA-028"
+    ],
+    "01": [
+      "BA-001",
+      "BA-024"
+    ],
+    "02": [
+      "BA-003",
+      "BA-004"
+    ],
+    "03": [
+      "BA-002",
+      "BA-027"
+    ],
+    "04": [
+      "BA-005",
+      "BA-006"
+    ],
+    "05": [
+      "BA-026",
+      "BA-025"
+    ],
+    "06": [
+      "BA-007",
+      "BA-008",
+      "BA-013"
+    ],
+    "07": [
+      "BA-008",
+      "BA-014",
+      "BA-017"
+    ],
+    "08": [
+      "BA-009",
+      "BA-010"
+    ],
+    "09": [
+      "BA-011",
+      "BA-012",
+      "BA-023"
+    ]
+  },
+  "nearDuplicateParagraphs": [],
+  "nearDuplicateQuotes": [],
+  "internalLinks": {
+    "total": 17,
+    "missing": 0
+  },
+  "externalLinks": 0,
+  "sourceMappings": 47,
+  "coverageRows": 700,
+  "mappedRowsReviewed": 250,
+  "actualUseLedgerEntries": 47,
+  "warnings": [],
+  "errors": []
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="v3-bf-sky" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#F2D8A0" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#EBC38A" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FAF8F4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="v3-bf-crown" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#7A1030" stop-opacity="0.95"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="#FAF8F4"/>
+  <rect width="1200" height="1200" fill="url(#v3-bf-sky)"/>
+  <!-- 橡树树冠：层叠圆形，品牌红渐变 -->
+  <g fill="url(#v3-bf-crown)">
+    <circle cx="470" cy="380" r="160" opacity="0.92"/>
+    <circle cx="730" cy="380" r="160" opacity="0.92"/>
+    <circle cx="600" cy="280" r="185" opacity="0.96"/>
+    <circle cx="420" cy="500" r="120" opacity="0.9"/>
+    <circle cx="780" cy="500" r="120" opacity="0.9"/>
+    <circle cx="600" cy="420" r="150" opacity="0.95"/>
+  </g>
+  <!-- 树冠高光 -->
+  <g fill="#AB1942" opacity="0.35">
+    <circle cx="545" cy="330" r="90"/>
+    <circle cx="665" cy="330" r="80"/>
+  </g>
+  <!-- 树干 -->
+  <path d="M 560 540 L 640 540 L 655 880 L 545 880 Z" fill="#7A1030"/>
+  <path d="M 576 540 L 600 540 L 608 880 L 584 880 Z" fill="#AB1942" opacity="0.45"/>
+  <!-- 地平线 -->
+  <line x1="140" y1="880" x2="1060" y2="880" stroke="#454545" stroke-width="2" opacity="0.55"/>
+  <!-- 底部装饰线 -->
+  <line x1="440" y1="880" x2="760" y2="880" stroke="#454545" stroke-width="2" opacity="0.6"/>
+</svg>

@@ -122,7 +122,7 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
             <span className="inline-flex items-center px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full text-sm font-medium">
               出现 {concept.count} 次
             </span>
-            <span className="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-light rounded-full text-sm font-medium">
               跨越 {concept.years?.length || 0} 年
             </span>
           </div>

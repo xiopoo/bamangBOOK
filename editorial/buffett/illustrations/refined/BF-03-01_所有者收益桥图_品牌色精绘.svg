@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-03-01_所有者收益桥图_品牌色精绘</title><desc id="desc">会计利润调整为所有者收益</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/></marker>
+    <marker id="arrow-black" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#111"/></marker>
+  </defs>
+  <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#fff;stroke:#111;stroke-width:2;}
+    .brand{fill:#fff;stroke:#AB1942;stroke-width:3;}
+    .brand-fill{fill:#AB1942;fill-opacity:0.12;stroke:#AB1942;stroke-width:2;}
+    .brand-solid{fill:#AB1942;stroke:#AB1942;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#AB1942;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#AB1942;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+
+  <text x="60" y="60" class="title">会计利润中有多少真正属于所有者？</text>
+  <text x="60" y="88" class="subtitle">从 (a) 报告收益出发，加上非现金费用，减去为维持长期竞争地位所需的平均资本支出</text>
+
+  <!-- 起始：报告收益 -->
+  <rect x="60" y="160" width="260" height="110" rx="10" class="brand"/>
+  <text x="190" y="208" text-anchor="middle" class="label">(a) 报告收益</text>
+  <text x="190" y="238" text-anchor="middle" class="small">按 GAAP 披露的税后净利润</text>
+  <text x="190" y="260" text-anchor="middle" class="tiny">起点：数字看得见，但不代表全部</text>
+
+  <!-- 加号 1：+ 非现金 -->
+  <text x="360" y="220" class="brand-text" style="font-size:48px;font-weight:800;">＋</text>
+  <rect x="410" y="130" width="360" height="78" rx="8" class="brand-fill"/>
+  <text x="590" y="170" text-anchor="middle" class="label">(b) 折旧、折耗、摊销及其他非现金费用</text>
+  <text x="590" y="198" text-anchor="middle" class="tiny">记了账，但没有真的流出现金；把扣除的费用加回来</text>
+
+  <!-- 减号 1：− 维护资本支出 -->
+  <text x="360" y="280" class="brand-text" style="font-size:56px;font-weight:800;">−</text>
+  <rect x="410" y="228" width="360" height="78" rx="8" class="brand-fill"/>
+  <text x="590" y="268" text-anchor="middle" class="label">(c) 维持性资本支出（难点）</text>
+  <text x="590" y="296" text-anchor="middle" class="tiny">为长期竞争地位与产销规模，每年平均必须再投的那部分现金——非扩张性</text>
+
+  <!-- 等号与结果 -->
+  <text x="810" y="220" class="brand-text" style="font-size:48px;font-weight:800;">＝</text>
+  <rect x="870" y="140" width="270" height="150" rx="10" class="brand-solid"/>
+  <text x="1005" y="195" text-anchor="middle" style="fill:#fff;font-size:22px;font-weight:700;">所有者收益</text>
+  <text x="1005" y="228" text-anchor="middle" style="fill:#fff;font-size:14px;">更接近可支配的</text>
+  <text x="1005" y="250" text-anchor="middle" style="fill:#fff;font-size:14px;">真实经济收益</text>
+  <text x="1005" y="278" text-anchor="middle" style="fill:#ffdce4;font-size:13px;">a + b − c</text>
+
+  <!-- 底部两个框：注意事项 -->
+  <rect x="120" y="450" width="450" height="260" rx="10" class="soft"/>
+  <text x="345" y="498" text-anchor="middle" class="label brand-text">常见误解</text>
+  <line x1="180" y1="518" x2="510" y2="518" class="line"/>
+  <text x="140" y="558" class="small">✗ 把公式机械化就能消除判断</text>
+  <text x="140" y="598" class="small">✗ 维护性资本支出等于 GAAP 折旧</text>
+  <text x="140" y="638" class="small">✗ 用所有者收益制造虚假精确</text>
+  <text x="140" y="678" class="small">✗ 忽略营运资金长期占用</text>
+
+  <rect x="630" y="450" width="450" height="260" rx="10" class="soft"/>
+  <text x="855" y="498" text-anchor="middle" class="label brand-text">适用边界</text>
+  <line x1="690" y1="518" x2="1020" y2="518" class="line"/>
+  <text x="650" y="558" class="small">✓ 维护性 vs 扩张性资本需要商业判断</text>
+  <text x="650" y="598" class="small">✓ 区间估计优于虚假精确数字</text>
+  <text x="650" y="638" class="small">✓ 与透视收益、经营收益并列使用</text>
+  <text x="650" y="678" class="small">✓ 重资本 vs 轻资本行业差距巨大</text>
+
+  <text x="60" y="760" class="tiny">对应 BA-002：所有者收益定义，来自 1986 年股东信｜品牌色版本</text>
+</svg>

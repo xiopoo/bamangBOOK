@@ -1,0 +1,46 @@
+# 关注公司清单
+# market: cn(A股) / hk(港股) / us(美股)
+# code:   交易所代码，用于精确匹配公告与行情
+# aliases: 用于在新闻/讨论文本中做关键词匹配的别名（越全命中率越高）
+companies:
+  - name: 贵州茅台
+    code: "600519"
+    market: cn
+    aliases: ["茅台", "贵州茅台", "600519", "Kweichow Moutai"]
+    tags: ["消费", "白酒"]
+
+  - name: 宁德时代
+    code: "300750"
+    market: cn
+    aliases: ["宁德时代", "宁王", "300750", "CATL"]
+    tags: ["新能源", "电池"]
+
+  - name: 比亚迪
+    code: "002594"
+    market: cn
+    aliases: ["比亚迪", "002594", "1211.HK", "BYD"]
+    tags: ["新能源车"]
+
+  - name: 腾讯控股
+    code: "00700"
+    market: hk
+    aliases: ["腾讯", "腾讯控股", "00700", "0700.HK", "Tencent"]
+    tags: ["互联网", "游戏"]
+
+  - name: 阿里巴巴
+    code: "09988"
+    market: hk
+    aliases: ["阿里巴巴", "阿里", "09988", "BABA", "Alibaba"]
+    tags: ["互联网", "电商"]
+
+  - name: Apple
+    code: "AAPL"
+    market: us
+    aliases: ["Apple", "苹果", "AAPL", "苹果公司"]
+    tags: ["硬件", "消费电子"]
+
+  - name: NVIDIA
+    code: "NVDA"
+    market: us
+    aliases: ["NVIDIA", "英伟达", "NVDA"]
+    tags: ["半导体", "AI"]

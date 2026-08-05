@@ -1,0 +1,1179 @@
+{
+  "generatedAt": "2026-08-02T04:47:16.536Z",
+  "ok": true,
+  "canonicalFiles": [
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "bytes": 730796,
+      "characters": 268449,
+      "lines": 4242,
+      "sha256": "4ca19464908f8d8ec1bcd81020e0eaebaeb8a9f3434242b71a0060e2efcc03f1"
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "bytes": 705056,
+      "characters": 256723,
+      "lines": 4308,
+      "sha256": "0465d9c3d12d802d090388271b210d12741f8d10a63f73023efe5a23bd5ff01a"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "sourceReferences": 188,
+    "missingSourceReferences": 0,
+    "uniqueMissingSourcePaths": 0,
+    "mechanicalEditCorruptions": 0,
+    "placeholders": 0,
+    "missingExplicitAnchors": 0,
+    "duplicateAnchors": 0
+  },
+  "sourceReferences": [
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 375,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 381,
+      "sourcePath": "content/articles/buffett/巴菲特谈指数期货_1982.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 383,
+      "sourcePath": "content/people/本杰明·格雷厄姆.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 385,
+      "sourcePath": "content/partnership/partnership_1959-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 389,
+      "sourcePath": "content/partnership/partnership_1962-11月-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 391,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 393,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 395,
+      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 397,
+      "sourcePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 401,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 403,
+      "sourcePath": "content/articles/buffett/巴菲特：股票期权与常识_2002.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 405,
+      "sourcePath": "content/letters/berkshire_1977-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 409,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 411,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 415,
+      "sourcePath": "content/partnership/partnership_1964-annual-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 419,
+      "sourcePath": "content/partnership/partnership_1961-annual-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 421,
+      "sourcePath": "content/articles/buffett/巴菲特：回忆进入证券行业_2005.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 794,
+      "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 798,
+      "sourcePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 806,
+      "sourcePath": "content/letters/berkshire_1996-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 810,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1988.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 812,
+      "sourcePath": "content/articles/buffett/巴菲特谈股市_1974.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 814,
+      "sourcePath": "content/articles/buffett/巴菲特：怀念恩师格雷厄姆_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1223,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1231,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1233,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1235,
+      "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1237,
+      "sourcePath": "content/articles/buffett/巴菲特：谁是真正的账房先生.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1239,
+      "sourcePath": "content/partnership/partnership_1964-annual-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1241,
+      "sourcePath": "content/letters/berkshire_1998-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1243,
+      "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1529,
+      "sourcePath": "content/partnership/partnership_1965-11月-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1531,
+      "sourcePath": "content/talks/巴菲特：哥大商学院演讲_1984.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1533,
+      "sourcePath": "content/articles/buffett/巴菲特谈施洛斯的信_1994.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1535,
+      "sourcePath": "content/articles/buffett/巴菲特：500_亿美元的决定.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1537,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1988.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1539,
+      "sourcePath": "content/interviews/巴菲特：对话堪萨斯大学学生_2005.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1541,
+      "sourcePath": "content/interviews/巴菲特：对话范德比尔特大学学生_2005.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1543,
+      "sourcePath": "content/articles/buffett/巴菲特青春时代.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1545,
+      "sourcePath": "content/partnership/partnership_1967-10月-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1547,
+      "sourcePath": "content/articles/buffett/企业收藏家_1977.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1549,
+      "sourcePath": "content/articles/buffett/巴菲特谈股市_1974.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1551,
+      "sourcePath": "content/articles/buffett/巴菲特：怀念恩师格雷厄姆_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1553,
+      "sourcePath": "content/articles/other/如何建立能力圈.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1818,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1820,
+      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1822,
+      "sourcePath": "content/letters/berkshire_1965-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1824,
+      "sourcePath": "content/letters/berkshire_1966-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1826,
+      "sourcePath": "content/letters/berkshire_1968-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1828,
+      "sourcePath": "content/letters/berkshire_1971-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1830,
+      "sourcePath": "content/articles/other/伯克希尔哈撒韦时代.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1832,
+      "sourcePath": "content/articles/buffett/巴菲特谈施洛斯的信_1994.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 1832,
+      "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2118,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2120,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2124,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2126,
+      "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2128,
+      "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2130,
+      "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2132,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2134,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2136,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2138,
+      "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2140,
+      "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2142,
+      "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2144,
+      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2144,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2144,
+      "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2144,
+      "sourcePath": "content/letters/berkshire_1989-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2144,
+      "sourcePath": "content/letters/berkshire_1990-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2146,
+      "sourcePath": "content/articles/buffett/巴菲特_你应该了解珠宝生意.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2148,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2150,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2152,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2154,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2156,
+      "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2158,
+      "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2160,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2162,
+      "sourcePath": "content/interviews/巴菲特：追忆唐基奥_2015.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2164,
+      "sourcePath": "content/interviews/巴菲特：谈可口可乐薪酬方案_2014.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2331,
+      "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2333,
+      "sourcePath": "content/letters/berkshire_1978-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2335,
+      "sourcePath": "content/letters/berkshire_1988-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2337,
+      "sourcePath": "content/letters/berkshire_1993-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2339,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2341,
+      "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2343,
+      "sourcePath": "content/articles/buffett/巴菲特谈_GEICO1976.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2345,
+      "sourcePath": "content/articles/buffett/巴菲特谈微软的信_1997.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2347,
+      "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2349,
+      "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2351,
+      "sourcePath": "content/letters/berkshire_1993-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2353,
+      "sourcePath": "content/interviews/巴菲特：追忆唐基奥_2015.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2355,
+      "sourcePath": "content/qa/伯克希尔股东大会实录_2015.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2357,
+      "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2359,
+      "sourcePath": "content/letters/berkshire_2013-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2359,
+      "sourcePath": "content/letters/berkshire_2016-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2534,
+      "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2536,
+      "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2538,
+      "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2540,
+      "sourcePath": "content/articles/buffett/巴菲特：谁是真正的账房先生.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2542,
+      "sourcePath": "content/people/汤姆·墨菲.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2544,
+      "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2010.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2544,
+      "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2014.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2546,
+      "sourcePath": "content/articles/buffett/巴菲特谈股市_1979.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2548,
+      "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2001.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2550,
+      "sourcePath": "content/interviews/巴菲特：家族三代谈慈善_2013.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2552,
+      "sourcePath": "content/interviews/专访苏珊·巴菲特_2004.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2783,
+      "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2787,
+      "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2006.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2789,
+      "sourcePath": "content/articles/buffett/伯克希尔股东手册_1996.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2791,
+      "sourcePath": "content/talks/巴菲特：斯坦福法学院演讲_1990.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2795,
+      "sourcePath": "content/people/凯瑟琳·格雷厄姆.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2797,
+      "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2010.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2799,
+      "sourcePath": "content/articles/buffett/巴菲特：美元效应_2009.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2801,
+      "sourcePath": "content/articles/buffett/巴菲特致所罗门股东信_1991.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2803,
+      "sourcePath": "content/articles/other/卢米斯：我在财富杂志的_51_年.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2805,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2982,
+      "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2984,
+      "sourcePath": "content/letters/berkshire_1978-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2986,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2990,
+      "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2992,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2996,
+      "sourcePath": "content/articles/buffett/巴菲特：收购_BNSF_铁路.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 2998,
+      "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3000,
+      "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3002,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3004,
+      "sourcePath": "content/articles/buffett/巴菲特：股息巫术_2003.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3006,
+      "sourcePath": "content/articles/buffett/巴菲特：关于游牧者基金_2014.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3008,
+      "sourcePath": "content/articles/other/伯克希尔投资历史.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3010,
+      "sourcePath": "content/articles/buffett/巴菲特接见_Dardashti_2007.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3012,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3014,
+      "sourcePath": "content/articles/buffett/巴菲特收购_LTMC_要约_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3016,
+      "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3022,
+      "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3215,
+      "sourcePath": "content/letters/berkshire_2015-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3217,
+      "sourcePath": "content/letters/berkshire_2005-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3219,
+      "sourcePath": "content/letters/berkshire_1988-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3221,
+      "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3223,
+      "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3225,
+      "sourcePath": "content/letters/berkshire_2021-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3227,
+      "sourcePath": "content/letters/berkshire_2012-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3229,
+      "sourcePath": "content/articles/buffett/巴菲特收购_LTMC_要约_1998.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3231,
+      "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3233,
+      "sourcePath": "content/articles/buffett/巴菲特：股息巫术_2003.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3235,
+      "sourcePath": "content/letters/berkshire_2012-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3237,
+      "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3461,
+      "sourcePath": "content/letters/berkshire_2019-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3463,
+      "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3465,
+      "sourcePath": "content/letters/berkshire_1997-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3467,
+      "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3469,
+      "sourcePath": "content/qa/伯克希尔股东大会实录_2000.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3471,
+      "sourcePath": "content/people/阿吉特·贾恩.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3473,
+      "sourcePath": "content/articles/buffett/沃伦在担心什么_2003.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3475,
+      "sourcePath": "content/letters/berkshire_1989-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3477,
+      "sourcePath": "content/articles/buffett/巴菲特：保险业的_FDIC_2001.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3479,
+      "sourcePath": "content/qa/伯克希尔股东大会实录_1996.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3481,
+      "sourcePath": "content/articles/other/伯克希尔：集团企业的终极折让.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3748,
+      "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3750,
+      "sourcePath": "content/partnership/partnership_1965-11月-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3752,
+      "sourcePath": "content/letters/berkshire_2002-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3754,
+      "sourcePath": "content/articles/buffett/巴菲特谈股市_1999.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3756,
+      "sourcePath": "content/articles/buffett/巴菲特：我为什么不看好美元_2003.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3758,
+      "sourcePath": "content/talks/巴菲特：佐治亚大学演讲_2001.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3760,
+      "sourcePath": "content/articles/buffett/巴菲特：美国的未来_2017.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3762,
+      "sourcePath": "content/interviews/巴菲特：如何教孩子理财_2013.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3764,
+      "sourcePath": "content/letters/berkshire_2025-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3766,
+      "sourcePath": "content/qa/伯克希尔股东大会实录_2013.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3936,
+      "sourcePath": "content/letters/berkshire_2008-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3938,
+      "sourcePath": "content/letters/berkshire_2024-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3940,
+      "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3942,
+      "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3944,
+      "sourcePath": "content/articles/buffett/财富杂志：沃伦之思_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3946,
+      "sourcePath": "content/interviews/巴菲特：金融危机调查委员会专访_2010.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3948,
+      "sourcePath": "content/interviews/巴菲特：CNBC_专访_2009.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3950,
+      "sourcePath": "content/letters/berkshire_2009-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3952,
+      "sourcePath": "content/qa/伯克希尔股东大会实录_2009.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3954,
+      "sourcePath": "content/letters/berkshire_2021-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 3956,
+      "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4214,
+      "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4218,
+      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4220,
+      "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4222,
+      "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4224,
+      "sourcePath": "content/letters/berkshire_1996-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4226,
+      "sourcePath": "content/articles/buffett/伯克希尔股东手册_1996.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4228,
+      "sourcePath": "content/articles/other/卢米斯：我在财富杂志的_51_年.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4228,
+      "sourcePath": "content/articles/other/卢米斯：回顾职业生涯_2005.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4230,
+      "sourcePath": "content/talks/施洛斯：哥大商学院演讲_1993.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 4232,
+      "sourcePath": "content/interviews/巴菲特：家族三代谈慈善_2013.md",
+      "exists": true
+    }
+  ],
+  "footnoteChecks": [
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "references": 572,
+      "definitions": 203,
+      "missingDefinitions": [],
+      "duplicateDefinitions": []
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "references": 497,
+      "definitions": 267,
+      "missingDefinitions": [],
+      "duplicateDefinitions": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

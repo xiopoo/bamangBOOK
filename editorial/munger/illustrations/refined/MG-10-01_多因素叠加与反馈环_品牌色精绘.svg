@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-10-01 多因素叠加与反馈环</title>
+  <desc id="desc">多个普通因素同向叠加并自我强化，产生极端结果。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #AB1942; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+  <text x="55" y="58" class="title">多因素叠加与反馈环</text>
+  <text x="55" y="86" class="subtitle">普通因素同向叠加、自我强化——整体效应远超单项之和</text>
+
+  <!-- 左侧因素 -->
+  <rect x="120" y="165" width="200" height="64" rx="10" class="box"/>
+  <rect x="120" y="255" width="200" height="64" rx="10" class="box"/>
+  <rect x="120" y="345" width="200" height="64" rx="10" class="box"/>
+  <rect x="120" y="435" width="200" height="64" rx="10" class="box"/>
+  <text x="140" y="197" class="small">嫉妒 <tspan fill="#AB1942">+1</tspan></text>
+  <text x="140" y="287" class="small">社会认同 <tspan fill="#AB1942">+1</tspan></text>
+  <text x="140" y="377" class="small">权威压力 <tspan fill="#AB1942">+1</tspan></text>
+  <text x="140" y="467" class="small">被剥夺感 <tspan fill="#AB1942">+1</tspan></text>
+
+  <!-- 叠加箭头 -->
+  <line x1="340" y1="350" x2="470" y2="350" class="line" marker-end="url(#arrow)"/>
+  <text x="405" y="330" text-anchor="middle" class="tiny" fill="#AB1942">同向叠加</text>
+
+  <!-- 反馈环 -->
+  <circle cx="760" cy="350" r="95" fill="none" stroke="#AB1942" stroke-width="2.5"/>
+  <path d="M760 255 A 95 95 0 0 1 855 350" fill="none" stroke="#AB1942" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M855 350 A 95 95 0 0 1 760 445 A 95 95 0 0 1 665 350" fill="none" stroke="#AB1942" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="760" y="355" text-anchor="middle" class="small" fill="#AB1942">自我</text>
+  <text x="760" y="375" text-anchor="middle" class="small" fill="#AB1942">强化</text>
+  <text x="850" y="250" text-anchor="start" class="tiny">反馈放大</text>
+
+  <!-- 极端结果 -->
+  <rect x="540" y="540" width="440" height="70" rx="10" fill="#AB1942"/>
+  <text x="760" y="580" text-anchor="middle" class="small" fill="#fff">极端结果：拍卖失控、市场狂热、群体过程</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">说明因素方向、先后与反馈机制，别用一个标签代替因果。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-10-01｜品牌色版本</text>
+</svg>

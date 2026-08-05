@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-12-01 浮存金时序图</title><desc id="desc">保费-浮存-赔付时间线</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/></marker>
+  </defs>
+  <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#fff;stroke:#111;stroke-width:2;}
+    .brand{fill:#fff;stroke:#AB1942;stroke-width:3;}
+    .brand-fill{fill:#AB1942;fill-opacity:0.12;stroke:#AB1942;stroke-width:2;}
+    .brand-solid{fill:#AB1942;stroke:#AB1942;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-line{fill:none;stroke:#AB1942;stroke-width:3;}
+    .brand-text{fill:#AB1942;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+
+  <text x="60" y="60" class="title">浮存金：资本优势不是免费午餐</text>
+  <text x="60" y="88" class="subtitle">保险先收保费、后赔付——中间沉淀的资金可供投资；但价值完全取决于承保纪律和巨灾承压能力，并非"零成本白嫖"</text>
+
+  <!-- 时间轴 -->
+  <line x1="140" y1="370" x2="1060" y2="370" class="brand-line" style="stroke-width:3;"/>
+  <!-- 5个时点 -->
+  <g id="points">
+    <circle cx="140" cy="370" r="11" class="brand-solid"/>
+    <text x="140" y="348" text-anchor="middle" class="label brand-text" style="font-size:16px;">T₀ 签保单</text>
+    <text x="140" y="420" text-anchor="middle" class="small">承保：接受风险</text>
+
+    <circle cx="360" cy="370" r="11" class="brand-solid"/>
+    <text x="360" y="348" text-anchor="middle" class="label brand-text" style="font-size:16px;">T₁ 收到保费</text>
+    <text x="360" y="420" text-anchor="middle" class="small">现金入账（负债）</text>
+
+    <circle cx="580" cy="370" r="11" class="brand-solid"/>
+    <text x="580" y="348" text-anchor="middle" class="label brand-text" style="font-size:16px;">T₂ 浮存期（长）</text>
+    <text x="580" y="420" text-anchor="middle" class="small">长期持有投资</text>
+
+    <circle cx="800" cy="370" r="11" class="brand-solid"/>
+    <text x="800" y="348" text-anchor="middle" class="label brand-text" style="font-size:16px;">T₃ 出险赔付</text>
+    <text x="800" y="420" text-anchor="middle" class="small">巨灾压力测试</text>
+
+    <circle cx="1060" cy="370" r="11" class="brand-solid"/>
+    <text x="1060" y="348" text-anchor="middle" class="label brand-text" style="font-size:16px;">T₄ 结算后</text>
+    <text x="1060" y="420" text-anchor="middle" class="small">净利 / 净损</text>
+  </g>
+
+  <!-- T0-1签保单 -->
+  <rect x="160" y="170" width="180" height="96" rx="8" class="soft"/>
+  <text x="250" y="208" text-anchor="middle" class="label">签 保 单</text>
+  <text x="250" y="234" text-anchor="middle" class="small">风险定价能力</text>
+  <text x="250" y="256" text-anchor="middle" class="tiny">GEICO/国民赔偿/阿勒格尼</text>
+
+  <!-- T1-2收到保费 -->
+  <rect x="380" y="170" width="180" height="96" rx="8" class="brand"/>
+  <text x="470" y="208" text-anchor="middle" class="label brand-text">收 到 保 费</text>
+  <text x="470" y="234" text-anchor="middle" class="small">先收后付的负债</text>
+  <text x="470" y="256" text-anchor="middle" class="tiny">负债端沉淀出现金</text>
+
+  <!-- T2长浮存金 -->
+  <rect x="580" y="130" width="220" height="190" rx="12" class="brand-fill"/>
+  <text x="690" y="170" text-anchor="middle" class="label brand-text" style="font-size:20px;">浮 存 金（长 期 持 有）</text>
+  <line x1="610" y1="188" x2="770" y2="188" class="brand-line" style="stroke-width:1.5;"/>
+  <text x="690" y="220" text-anchor="middle" class="small">投资优质企业股权</text>
+  <text x="690" y="248" text-anchor="middle" class="small">与收购 / 回购 / 现金储备</text>
+  <text x="690" y="280" text-anchor="middle" class="tiny" style="font-weight:600;">真实成本 = 承保结果</text>
+  <text x="690" y="302" text-anchor="middle" class="tiny">承保盈利→成本≈0或负；承保亏损→成本高于借贷</text>
+
+  <!-- T3-4赔付 -->
+  <rect x="820" y="170" width="180" height="96" rx="8" class="soft"/>
+  <text x="910" y="208" text-anchor="middle" class="label">出 险 赔 付</text>
+  <text x="910" y="234" text-anchor="middle" class="small">巨灾压力测试</text>
+  <text x="910" y="256" text-anchor="middle" class="tiny">准备金够不够？</text>
+
+  <!-- 两种结局 -->
+  <rect x="300" y="460" width="260" height="120" rx="10" class="box" style="stroke:#AB1942;stroke-width:3;"/>
+  <text x="430" y="500" text-anchor="middle" class="label brand-text">✓ 优 秀 结 局</text>
+  <text x="430" y="530" text-anchor="middle" class="small">承保纪律严格 + 长期</text>
+  <text x="430" y="556" text-anchor="middle" class="small">浮存金成本 ≈ 0 甚至为负</text>
+
+  <rect x="640" y="460" width="260" height="120" rx="10" class="soft"/>
+  <text x="770" y="500" text-anchor="middle" class="label">✗ 常 见 陷 阱</text>
+  <text x="770" y="530" text-anchor="middle" class="small">追求规模放松定价 +</text>
+  <text x="770" y="556" text-anchor="middle" class="small">巨灾年份一次性失血严重</text>
+
+  <rect x="60" y="640" width="1080" height="40" rx="6" class="brand"/>
+  <text x="600" y="666" text-anchor="middle" class="brand-text small">核心：浮存金成本不是零；是承保利润减去承保亏损的净值，不能用规模替代质量</text>
+
+  <text x="60" y="788" class="tiny">BA-021 / BA-022：先收后付模式 + 低成本的条件｜品牌色版本</text>
+</svg>

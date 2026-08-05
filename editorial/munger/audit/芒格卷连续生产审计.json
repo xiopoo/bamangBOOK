@@ -1,0 +1,286 @@
+{
+  "generatedAt": "2026-08-02T03:58:58.648Z",
+  "errors": [],
+  "warnings": [],
+  "totalCharacters": 247919,
+  "anchors": 26,
+  "fullBuildCharacters": 256723,
+  "fullBuildAnchors": 32,
+  "fullBuildInternalLinks": 58,
+  "chapters": [
+    {
+      "id": "01",
+      "title": "第一章 一把锤子为什么不够",
+      "characters": 16543,
+      "target": 17000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -457,
+      "atoms": [
+        "MA-002",
+        "MA-001"
+      ],
+      "sourcePaths": 11,
+      "footnotes": 21,
+      "contrastPatterns": 6,
+      "sha256": "a2d98fc63fc60c46aa5be49988d2359e41ca86af03a85cd3ccd1ce4f9d36e8dd"
+    },
+    {
+      "id": "02",
+      "title": "第二章 多元思维模型怎样连成知识格栅",
+      "characters": 15973,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2027,
+      "atoms": [
+        "MA-001",
+        "MA-003"
+      ],
+      "sourcePaths": 11,
+      "footnotes": 25,
+      "contrastPatterns": 7,
+      "sha256": "e48163f90ad9b482b06f07d2bdddab742bf502882752c03934faa7909b69f236"
+    },
+    {
+      "id": "03",
+      "title": "第三章 终身学习：让模型保持活性",
+      "characters": 15036,
+      "target": 17000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -1964,
+      "atoms": [
+        "MA-009",
+        "MA-022"
+      ],
+      "sourcePaths": 15,
+      "footnotes": 24,
+      "contrastPatterns": 6,
+      "sha256": "64a0bc3337f673a888676a5c358c192a25063c68b67be88f5d43f2ff52055294"
+    },
+    {
+      "id": "04",
+      "title": "第四章 概率：把故事变成可以检验的判断",
+      "characters": 15962,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2038,
+      "atoms": [
+        "MA-003",
+        "MA-019"
+      ],
+      "sourcePaths": 11,
+      "footnotes": 23,
+      "contrastPatterns": 6,
+      "sha256": "a364bc81940d8a3c1fd634f1f584d380e9d162e33b36b3ae03becdd8ce15bc98"
+    },
+    {
+      "id": "05",
+      "title": "第五章 逆向：先问怎样会失败",
+      "characters": 16003,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -1997,
+      "atoms": [
+        "MA-004",
+        "MA-005"
+      ],
+      "sourcePaths": 9,
+      "footnotes": 20,
+      "contrastPatterns": 8,
+      "sha256": "73b6a373f9ad20946fe4008907b0e9dd6ca923fde87b6b8bf758c14721ec4566"
+    },
+    {
+      "id": "06",
+      "title": "第六章 反证、检查清单与第二次思考",
+      "characters": 14572,
+      "target": 17000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2428,
+      "atoms": [
+        "MA-006",
+        "MA-010"
+      ],
+      "sourcePaths": 11,
+      "footnotes": 10,
+      "contrastPatterns": 6,
+      "sha256": "963bb3987bada996416fad967476b1c65667a147126e75e4d9854273944a2ee2"
+    },
+    {
+      "id": "07",
+      "title": "第七章 误判不是偶然：心理倾向的系统",
+      "characters": 16709,
+      "target": 19000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2291,
+      "atoms": [
+        "MA-011",
+        "MA-010"
+      ],
+      "sourcePaths": 9,
+      "footnotes": 12,
+      "contrastPatterns": 5,
+      "sha256": "6b38d4f6e8cd339183365218d7c7e78a6ba7dfb0a5ec36ab859331fe33aa9606"
+    },
+    {
+      "id": "08",
+      "title": "第八章 激励：制度比劝诫更诚实",
+      "characters": 17596,
+      "target": 20000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2404,
+      "atoms": [
+        "MA-012",
+        "MA-018"
+      ],
+      "sourcePaths": 8,
+      "footnotes": 12,
+      "contrastPatterns": 7,
+      "sha256": "2227bedb607758265b9c912634fe0d824bc20be82da54e1034fefe77d13b0b1d"
+    },
+    {
+      "id": "09",
+      "title": "第九章 群体、权威与被剥夺感",
+      "characters": 16804,
+      "target": 19000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2196,
+      "atoms": [
+        "MA-014",
+        "MA-015",
+        "MA-016"
+      ],
+      "sourcePaths": 8,
+      "footnotes": 11,
+      "contrastPatterns": 4,
+      "sha256": "e0a58bf07ef2c2790d60434ad345ff0482530c28d298cce53659b3a8d9bbe6cd"
+    },
+    {
+      "id": "10",
+      "title": "第十章 当偏误彼此增强",
+      "characters": 15496,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2504,
+      "atoms": [
+        "MA-013",
+        "MA-017"
+      ],
+      "sourcePaths": 9,
+      "footnotes": 12,
+      "contrastPatterns": 7,
+      "sha256": "6e9816e3e257870772449d3509a309544f2478a7ddc7b48f015ccca2ef9f173b"
+    },
+    {
+      "id": "11",
+      "title": "第十一章 穿过会计看商业现实",
+      "characters": 15354,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2646,
+      "atoms": [
+        "MA-021",
+        "MA-026"
+      ],
+      "sourcePaths": 6,
+      "footnotes": 20,
+      "contrastPatterns": 4,
+      "sha256": "dbd4e0ef11f82547cdf70eb64c43b2622ea00fc727e358692204a0b9eb81e6fc"
+    },
+    {
+      "id": "12",
+      "title": "第十二章 好企业让少行动成为优势",
+      "characters": 16578,
+      "target": 19000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2422,
+      "atoms": [
+        "MA-020",
+        "MA-027"
+      ],
+      "sourcePaths": 9,
+      "footnotes": 23,
+      "contrastPatterns": 6,
+      "sha256": "16b5e405320918292296d4a97b06e772af7d85c3a38f7b48e8f7d6d6cb609b5b"
+    },
+    {
+      "id": "13",
+      "title": "第十三章 少数机会、集中下注与资本配置",
+      "characters": 14217,
+      "target": 17000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2783,
+      "atoms": [
+        "MA-007",
+        "MA-025"
+      ],
+      "sourcePaths": 11,
+      "footnotes": 16,
+      "contrastPatterns": 6,
+      "sha256": "c7c3711970482885bd305e55ac08c55f6757ac4cdf4bd063e49fc243a3cfcc25"
+    },
+    {
+      "id": "14",
+      "title": "第十四章 应得信任：合作如何降低摩擦",
+      "characters": 11558,
+      "target": 14000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2442,
+      "atoms": [
+        "MA-023",
+        "MA-028"
+      ],
+      "sourcePaths": 8,
+      "footnotes": 8,
+      "contrastPatterns": 5,
+      "sha256": "2500f4d173c474bb7872b01fdd6816cc54ddc218d7ccbf9af91445502df7afc4"
+    },
+    {
+      "id": "15",
+      "title": "第十五章 避免惯常的失败方式",
+      "characters": 14531,
+      "target": 17000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -2469,
+      "atoms": [
+        "MA-005",
+        "MA-024"
+      ],
+      "sourcePaths": 9,
+      "footnotes": 18,
+      "contrastPatterns": 8,
+      "sha256": "a85edbe93c1aba2b92fa452f189440d2514fba8b1299a54259b774761c26aebc"
+    },
+    {
+      "id": "16",
+      "title": "第十六章 理性近乎一种道德义务",
+      "characters": 14987,
+      "target": 18000,
+      "lowerBound": 10000,
+      "upperBound": null,
+      "delta": -3013,
+      "atoms": [
+        "MA-029",
+        "MA-022",
+        "MA-030"
+      ],
+      "sourcePaths": 7,
+      "footnotes": 12,
+      "contrastPatterns": 6,
+      "sha256": "ffeb2a91cfc0b15a8bfb2ad875ea28d151b0e5688b3d6db7d69a66782f6b6f9d"
+    }
+  ]
+}

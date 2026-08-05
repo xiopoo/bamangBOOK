@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-14-01 组合仓位与集中程度</title><desc id="desc">能力圈-信心-仓位的对应</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+  <rect x="0" y="0" width="12" height="800" fill="#111"/>
+
+  <text x="60" y="60" class="title">仓位与信心正相关，而不是"分散"</text>
+  <text x="60" y="88" class="subtitle">理解越深 → 估值越低 → 回报越不对称 → 仓位越大；不懂、没把握的，哪怕 1% 都不应该买——分散不能保护无知</text>
+
+  <!-- 左:能力圈/信心/仓位对应 -->
+  <rect x="80" y="140" width="480" height="560" rx="12" class="soft"/>
+  <text x="320" y="185" text-anchor="middle" class="label brand-text">能 力 圈 · 信 心 · 仓 位 对 应 图</text>
+
+  <g id="levels">
+    <!-- Level 1 极大信心 -->
+    <rect x="110" y="220" width="420" height="88" rx="8" class="brand-solid"/>
+    <text x="320" y="260" text-anchor="middle" style="fill:#111;font-weight:700;font-size:18px;">① 极大信心（能力圈核心）</text>
+    <text x="320" y="286" text-anchor="middle" style="fill:#111;font-size:14px;">估值低于保守内在价值的 2/3，经营长期稳定</text>
+    <rect x="360" y="230" width="150" height="36" rx="6" style="fill:#111;"/>
+    <text x="435" y="254" text-anchor="middle" class="brand-text label">25% – 40%</text>
+
+    <!-- Level 2 强信心 -->
+    <rect x="110" y="332" width="420" height="88" rx="8" class="brand"/>
+    <text x="320" y="372" text-anchor="middle" class="label brand-text">② 强信心（护城河稳固）</text>
+    <text x="320" y="398" text-anchor="middle" class="small">估值低于内在价值 80%，可接受但不算"便宜至极"</text>
+    <rect x="360" y="342" width="150" height="36" rx="6" class="brand-fill"/>
+    <text x="435" y="366" text-anchor="middle" class="brand-text label">10% – 20%</text>
+
+    <!-- Level 3 研究中 -->
+    <rect x="110" y="444" width="420" height="88" rx="8" class="box"/>
+    <text x="320" y="484" text-anchor="middle" class="label">③ 研究 / 观察池（小仓位试错）</text>
+    <text x="320" y="510" text-anchor="middle" class="small">在能力圈边界 / 需继续验证护城河 / 管理层 / 估值</text>
+    <rect x="360" y="454" width="150" height="36" rx="6" class="soft"/>
+    <text x="435" y="478" text-anchor="middle" class="label">1% – 5%</text>
+
+    <!-- Level 4 圈外 -->
+    <rect x="110" y="556" width="420" height="72" rx="8" style="fill:#f7f7f7;stroke:#bbb;stroke-dasharray:8 6;stroke-width:2;"/>
+    <text x="320" y="598" text-anchor="middle" class="small" style="fill:#555;">④ 能 力 圈 之 外 　→　 仓 位 = 0%，连 1% 也 不 碰</text>
+  </g>
+
+  <!-- 右:组合结构饼 -->
+  <rect x="640" y="140" width="480" height="560" rx="12" class="soft"/>
+  <text x="880" y="185" text-anchor="middle" class="label brand-text">典 型 组 合 粗 略 结 构（示 意）</text>
+
+  <!-- 简单的四块条形 -->
+  <g id="bars">
+    <rect x="700" y="230" width="360" height="80" rx="6" class="brand-solid"/>
+    <text x="880" y="276" text-anchor="middle" style="fill:#111;font-weight:700;font-size:18px;">核心重仓（3–5 只）</text>
+    <text x="880" y="300" text-anchor="middle" style="fill:#f0f0f0;font-size:13px;">合计 50% – 70%</text>
+
+    <rect x="700" y="336" width="360" height="72" rx="6" class="brand"/>
+    <text x="880" y="378" text-anchor="middle" class="brand-text label">次要持仓（5–10 只）</text>
+    <text x="880" y="400" text-anchor="middle" class="small">合计 20% – 40%</text>
+
+    <rect x="700" y="432" width="360" height="64" rx="6" class="box"/>
+    <text x="880" y="472" text-anchor="middle" class="label">观察 / 试错</text>
+    <text x="880" y="492" text-anchor="middle" class="small">合计 5% – 15%</text>
+
+    <rect x="700" y="520" width="360" height="64" rx="6" style="fill:#111;stroke:#111;stroke-width:2;stroke-dasharray:8 6;"/>
+    <text x="880" y="560" text-anchor="middle" class="label">现金 / 等价物</text>
+    <text x="880" y="580" text-anchor="middle" class="small">0% – 30%（等待更好的机会）</text>
+  </g>
+
+  <!-- 底部提醒 -->
+  <rect x="60" y="720" width="1080" height="40" rx="6" class="brand-fill"/>
+  <text x="600" y="746" text-anchor="middle" class="brand-text small">不是机械的规则：仓位=你对"理解深度+价格保守程度+非对称回报"三者合一的判断；只有你真懂的才叫分散，不然只是赌博</text>
+
+  <text x="60" y="788" class="tiny">BA-027 / BA-028 / BA-029：能力圈-仓位对应 + 重仓标准 + 现金储备｜黑白结构草图</text>
+</svg>

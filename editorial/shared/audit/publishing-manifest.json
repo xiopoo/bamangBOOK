@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-08-01T13:41:58.562Z",
+  "books": {
+    "buffett": {
+      "source": "editorial/buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷锁定工作稿.md",
+      "sourceSha256": "111086af8c7408b5f1dbb145c307c6d9af63329ceb914e809841b98a48a2f696",
+      "output": "editorial/buffett/manuscript/全卷/所有者的眼光_巴菲特卷出版正文.md",
+      "outputSha256": "ccd5881f54569226e771b39b1351ad026af3914305a2d024ae1311dd2226a72d",
+      "characters": 325122,
+      "chapters": [
+        {
+          "id": "01",
+          "title": "第一章 股票背后是一家企业",
+          "file": "editorial/buffett/manuscript/出版分章/01_第一章 股票背后是一家企业.md",
+          "sha256": "deaeb34eef3da59ed65c39c06f984f0ab4e5738fe11b8668c5960469e125fc98"
+        },
+        {
+          "id": "02",
+          "title": "第二章 价值不在报价屏上",
+          "file": "editorial/buffett/manuscript/出版分章/02_第二章 价值不在报价屏上.md",
+          "sha256": "f82280b522864d28c57b51ba591e08ddae546b1e99c3f208a3d535b667f42b11"
+        },
+        {
+          "id": "03",
+          "title": "第三章 穿过会计看所有者收益",
+          "file": "editorial/buffett/manuscript/出版分章/03_第三章 穿过会计看所有者收益.md",
+          "sha256": "aafa75f05452c34e10c8cd0245d33d8d58907294839f95ba5c9124e7cc4bbbe6"
+        },
+        {
+          "id": "04",
+          "title": "第四章 安全边际与能力圈",
+          "file": "editorial/buffett/manuscript/出版分章/04_第四章 安全边际与能力圈.md",
+          "sha256": "1bd87579de0ab60c7e56be6a7a99bb8168ecea62f27468776a8e182f37fe2d1a"
+        },
+        {
+          "id": "05",
+          "title": "第五章 伯克希尔纺织：便宜为何仍会昂贵",
+          "file": "editorial/buffett/manuscript/出版分章/05_第五章 伯克希尔纺织：便宜为何仍会昂贵.md",
+          "sha256": "47c1200b39d8ed7859d9ac5165de4cb055412fe23a1021f4d769ca2ec9b4e78a"
+        },
+        {
+          "id": "06",
+          "title": "第六章 喜诗糖果：企业质量改变资本配置",
+          "file": "editorial/buffett/manuscript/出版分章/06_第六章 喜诗糖果：企业质量改变资本配置.md",
+          "sha256": "28d43d5ea944c049007c96b596d4fffd19da3e17920303dd1decd66b984f2e4f"
+        },
+        {
+          "id": "07",
+          "title": "第七章 护城河必须经得住时间",
+          "file": "editorial/buffett/manuscript/出版分章/07_第七章 护城河必须经得住时间.md",
+          "sha256": "755d418395c02c8540dc2262cefe1809a8e8063fa4733d55c1baaf67f0fa498b"
+        },
+        {
+          "id": "08",
+          "title": "第八章 选择经理人：能力、精力与正直",
+          "file": "editorial/buffett/manuscript/出版分章/08_第八章 选择经理人：能力、精力与正直.md",
+          "sha256": "9541909c306a388f3ddcf655c62ab067d107b078a7ab529635cf2614ca87451b"
+        },
+        {
+          "id": "09",
+          "title": "第九章 信任、声誉与去中心化",
+          "file": "editorial/buffett/manuscript/出版分章/09_第九章 信任、声誉与去中心化.md",
+          "sha256": "cdef44507cfc866603e3f763531280dc81ae3f6397670a0302f113bf916f287a"
+        },
+        {
+          "id": "10",
+          "title": "第十章 经理人的第二项工作",
+          "file": "editorial/buffett/manuscript/出版分章/10_第十章 经理人的第二项工作.md",
+          "sha256": "cd78798b50e15342d4ed10d36e6877667e7990d9251881d3947aa24f920c46eb"
+        },
+        {
+          "id": "11",
+          "title": "第十一章 回购、收购与价格纪律",
+          "file": "editorial/buffett/manuscript/出版分章/11_第十一章 回购、收购与价格纪律.md",
+          "sha256": "69e1be8945ad20fa4a180d0cc7a763818a7b6d8d0526715748b86e9a8462ac25"
+        },
+        {
+          "id": "12",
+          "title": "第十二章 浮存金：资本优势不是免费午餐",
+          "file": "editorial/buffett/manuscript/出版分章/12_第十二章 浮存金：资本优势不是免费午餐.md",
+          "sha256": "f96f71472e4a1fda40177f3ee128b5105143c0d3dabab63e71e07c086e58d8cb"
+        },
+        {
+          "id": "13",
+          "title": "第十三章 风险不是一条波动曲线",
+          "file": "editorial/buffett/manuscript/出版分章/13_第十三章 风险不是一条波动曲线.md",
+          "sha256": "c91f3f30eeb7d17e758d59534d3c3d1a313e8a0ab3dd6f50f3b333c0e3c4c93f"
+        },
+        {
+          "id": "14",
+          "title": "第十四章 现金与恐慌中的选择权",
+          "file": "editorial/buffett/manuscript/出版分章/14_第十四章 现金与恐慌中的选择权.md",
+          "sha256": "cc6f1fa2ff7423708e5f97efb1e8b79f5f1a7f6a08561c0d95794d1f8dba52a6"
+        },
+        {
+          "id": "15",
+          "title": "第十五章 把个人判断变成可传承的复利制度",
+          "file": "editorial/buffett/manuscript/出版分章/15_第十五章 把个人判断变成可传承的复利制度.md",
+          "sha256": "5275e6d1b5fc41b1536615fe778643d2dd7319cd67faa2aac10de171de6591cb"
+        }
+      ]
+    },
+    "munger": {
+      "source": "editorial/munger/manuscript/全卷/理性的格栅_芒格卷全卷锁定工作稿.md",
+      "sourceSha256": "a782098df65ab4ec2331aa479a17872113fe889467a979d886067d2aa5372aac",
+      "output": "editorial/munger/manuscript/全卷/理性的格栅_芒格卷连续正文.md",
+      "outputSha256": "6ba7223c7b4690e71948c01d390cb830a56ad1a6d1f1b9528ab33a96ce786bea",
+      "characters": 182504,
+      "chapters": [
+        {
+          "id": "01",
+          "title": "第一章 一把锤子为什么不够",
+          "file": "editorial/munger/manuscript/出版分章/01_第一章 一把锤子为什么不够.md",
+          "sha256": "b866a80db13bd7e78d3c94b9c258115baa06aceea391696f241c295f53f6bec9"
+        },
+        {
+          "id": "02",
+          "title": "第二章 多元思维模型怎样连成知识格栅",
+          "file": "editorial/munger/manuscript/出版分章/02_第二章 多元思维模型怎样连成知识格栅.md",
+          "sha256": "d5feeba16d01ca0b6ed6c4591cb4d72e640af0ea9f3f01138ff6c17480462943"
+        },
+        {
+          "id": "03",
+          "title": "第三章 终身学习：让模型保持活性",
+          "file": "editorial/munger/manuscript/出版分章/03_第三章 终身学习：让模型保持活性.md",
+          "sha256": "ef2b72fc6f93731d6de5ebed51410c25890edf2a3e358cc06e9b6d5c9365a221"
+        },
+        {
+          "id": "04",
+          "title": "第四章 概率：把故事变成可以检验的判断",
+          "file": "editorial/munger/manuscript/出版分章/04_第四章 概率：把故事变成可以检验的判断.md",
+          "sha256": "afc13a19f3696e24659b97c1fbdf88cfb31a2cbb74a85bfb2d66ba5c81c9b458"
+        },
+        {
+          "id": "05",
+          "title": "第五章 逆向：先问怎样会失败",
+          "file": "editorial/munger/manuscript/出版分章/05_第五章 逆向：先问怎样会失败.md",
+          "sha256": "7c451957eee127c5d82c48a1b042d07cf73b4ef1c6443b06cf4a573442c24d11"
+        },
+        {
+          "id": "06",
+          "title": "第六章 反证、检查清单与第二次思考",
+          "file": "editorial/munger/manuscript/出版分章/06_第六章 反证、检查清单与第二次思考.md",
+          "sha256": "6c417481c91fc4f37c132ee06ef0a2c960dd61fcaedb72c7bb4a53871ef32d10"
+        },
+        {
+          "id": "07",
+          "title": "第七章 误判不是偶然：心理倾向的系统",
+          "file": "editorial/munger/manuscript/出版分章/07_第七章 误判不是偶然：心理倾向的系统.md",
+          "sha256": "ad9fcac52869629ce05f74b7c621b9f0b642e148a85455c1790099e77469cb57"
+        },
+        {
+          "id": "08",
+          "title": "第八章 激励：制度比劝诫更诚实",
+          "file": "editorial/munger/manuscript/出版分章/08_第八章 激励：制度比劝诫更诚实.md",
+          "sha256": "2c59630237b63ae18f4854041d5586fa6e41b09633d9adfddddad51c1857b94f"
+        },
+        {
+          "id": "09",
+          "title": "第九章 群体、权威与被剥夺感",
+          "file": "editorial/munger/manuscript/出版分章/09_第九章 群体、权威与被剥夺感.md",
+          "sha256": "5a6e464fa8b152dd80d8595923cb976c7bf085f50867907c466d1cc8f1b2d751"
+        },
+        {
+          "id": "10",
+          "title": "第十章 当偏误彼此增强",
+          "file": "editorial/munger/manuscript/出版分章/10_第十章 当偏误彼此增强.md",
+          "sha256": "508764050031b5d769641487550e704f8dca63a82e212e6115b3c997a2348baa"
+        },
+        {
+          "id": "11",
+          "title": "第十一章 穿过会计看商业现实",
+          "file": "editorial/munger/manuscript/出版分章/11_第十一章 穿过会计看商业现实.md",
+          "sha256": "24a84ce2b6dc87fb0e6a6cedb6464e2ba0e86a7b4196b7f31e6cfec3e49164c2"
+        },
+        {
+          "id": "12",
+          "title": "第十二章 好企业让少行动成为优势",
+          "file": "editorial/munger/manuscript/出版分章/12_第十二章 好企业让少行动成为优势.md",
+          "sha256": "57d43afd8d51d0ca762773c608c97a038a76f90b073af47c85a740914ceda4c2"
+        },
+        {
+          "id": "13",
+          "title": "第十三章 少数机会、集中下注与资本配置",
+          "file": "editorial/munger/manuscript/出版分章/13_第十三章 少数机会、集中下注与资本配置.md",
+          "sha256": "10b25cf1209bd888d2bad7ffee38932ceef9a594be4cc22920282a203dd6c5e3"
+        },
+        {
+          "id": "14",
+          "title": "第十四章 应得信任：合作如何降低摩擦",
+          "file": "editorial/munger/manuscript/出版分章/14_第十四章 应得信任：合作如何降低摩擦.md",
+          "sha256": "d8a6332fd977277d16ce7c0b2decbbe5cd5dca9c49aa945f2671bb141e5c17cf"
+        },
+        {
+          "id": "15",
+          "title": "第十五章 避免惯常的失败方式",
+          "file": "editorial/munger/manuscript/出版分章/15_第十五章 避免惯常的失败方式.md",
+          "sha256": "6dbc3445e8dc9dece9efee3f2f6e87b3e77e0a8bbf458732b56cae0a6cc7033f"
+        },
+        {
+          "id": "16",
+          "title": "第十六章 理性近乎一种道德义务",
+          "file": "editorial/munger/manuscript/出版分章/16_第十六章 理性近乎一种道德义务.md",
+          "sha256": "e502f0a932bd34ce883de4093228a5310880512930307af75e3849edc6598ccd"
+        }
+      ]
+    }
+  }
+}

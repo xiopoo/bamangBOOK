@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-08-01 激励反馈回路与指标异化</title>
+  <desc id="desc">激励驱动行为与结果，指标反馈回激励；指标异化时，指标替代目标。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#AB1942"/>
+    </marker>
+    <marker id="arrow_gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#777"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #AB1942; stroke-width: 2.5; }
+    .grayline { fill: none; stroke: #777; stroke-width: 2; stroke-dasharray: 8 6; }
+    .note { font-size: 15px; fill: #AB1942; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+
+  <text x="55" y="58" class="title">激励反馈回路与指标异化</text>
+  <text x="55" y="86" class="subtitle">先看什么在被奖励；指标可能悄悄替代目标</text>
+
+  <!-- 四节点回路 -->
+  <circle cx="270" cy="170" r="48" class="box"/>
+  <circle cx="730" cy="170" r="48" class="box"/>
+  <circle cx="730" cy="420" r="48" class="box"/>
+  <circle cx="270" cy="420" r="48" class="box"/>
+  <text x="270" y="174" text-anchor="middle" class="small">激励</text>
+  <text x="730" y="174" text-anchor="middle" class="small">行为</text>
+  <text x="730" y="424" text-anchor="middle" class="small">结果</text>
+  <text x="270" y="424" text-anchor="middle" class="small">指标</text>
+  <g class="line">
+    <line x1="318" y1="165" x2="682" y2="165" marker-end="url(#arrow)"/>
+    <line x1="730" y1="218" x2="730" y2="372" marker-end="url(#arrow)"/>
+    <line x1="682" y1="425" x2="318" y2="425" marker-end="url(#arrow)"/>
+    <line x1="270" y1="372" x2="270" y2="218" marker-end="url(#arrow)"/>
+  </g>
+  <text x="500" y="300" text-anchor="middle" class="tiny">回路会自我强化</text>
+  <text x="500" y="320" text-anchor="middle" class="tiny">先看清激励指向</text>
+
+  <!-- 指标异化 -->
+  <rect x="180" y="530" width="300" height="80" rx="10" class="box"/>
+  <rect x="800" y="530" width="300" height="80" rx="10" class="box"/>
+  <text x="330" y="568" text-anchor="middle" class="small">目标：真正想要的</text>
+  <text x="330" y="590" text-anchor="middle" class="tiny">比如长期客户信任</text>
+  <text x="950" y="568" text-anchor="middle" class="small">指标：用来衡量的</text>
+  <text x="950" y="590" text-anchor="middle" class="tiny">比如季度销售额</text>
+  <line x1="480" y1="555" x2="795" y2="580" class="grayline" marker-end="url(#arrow_gray)"/>
+  <text x="640" y="536" text-anchor="middle" class="tiny" fill="#777">指标异化：</text>
+  <text x="640" y="610" text-anchor="middle" class="tiny" fill="#777">当指标成为目标，它就不再是好指标</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">设计不易作弊的系统：让正确行为与回报尽量一致。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-08-01｜品牌色版本</text>
+</svg>

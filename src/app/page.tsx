@@ -46,7 +46,7 @@ export default function HomePage() {
       <SubdomainRootRouter />
       <PageContainer maxWidth="7xl" className="study-home study-home--refined">
         <section className="study-hero study-hero--refined study-hero--daily">
-          <p className="study-label study-label--daily">DAILY QUOTE · 每日一读</p>
+          <p className="study-label study-label--daily">每日一句 · 来自原文</p>
           <DailyQuotePanel quotes={dailyQuotes} initialDateISO={dailyDateISO} />
           <div className="study-hero__copy">
             <h1>读巴菲特和芒格，<br />先回到原文。</h1>
@@ -82,7 +82,7 @@ export default function HomePage() {
 
         <section className="study-section study-feature">
           <header className="study-section__header study-section__header--compact">
-            <div><p className="study-label">START HERE · 今日一读</p><h2>一封信，是最好的入口</h2></div>
+            <div><p className="study-label">从这里开始</p><h2>一封信，是最好的入口</h2></div>
             <Link href="/reading">浏览全部内容 →</Link>
           </header>
           <div className="study-feature__grid">
@@ -111,7 +111,7 @@ export default function HomePage() {
 
         <section className="study-section study-drawers">
           <header className="study-section__header study-section__header--compact">
-            <div><p className="study-label">THE LIBRARY · 按资料类型浏览</p><h2>书房的六个抽屉</h2></div>
+            <div><p className="study-label">按资料类型浏览</p><h2>六个类别，任选入口</h2></div>
             <p>不必从首页顺序读完。选一个问题、一位人物或一种资料，直接进去。</p>
           </header>
           <div className="study-drawers__grid">
@@ -128,7 +128,7 @@ export default function HomePage() {
 
         <section className="study-section study-thinkers">
           <header className="study-section__header study-section__header--compact">
-            <div><p className="study-label">TWO THINKERS · 人物专题</p><h2>两条彼此交叉的学习路径</h2></div>
+            <div><p className="study-label">人物专题</p><h2>两条彼此交叉的学习路径</h2></div>
           </header>
           <div className="study-thinkers__grid">
             <article>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">MG-02-03 格栅的更新循环</title>
+  <desc id="desc">黑白结构草图，仅用于出版前信息关系确认。</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#777" stroke-width="2"/>
+    </pattern>
+  </defs>
+  
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 12px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2; }
+    .dash { fill: none; stroke: #666; stroke-width: 1.5; stroke-dasharray: 7 6; }
+  </style>
+  <rect width="1000" height="750" fill="#fff"/>
+  
+      <text x="50" y="58" class="title">格栅的更新循环</text>
+      <text x="50" y="86" class="subtitle">学习不是收藏模型，而是让连接接受结果与反证</text>
+      <g>
+        <rect x="405" y="115" width="190" height="70" rx="35" class="box"/>
+        <rect x="690" y="235" width="190" height="70" rx="35" class="soft"/>
+        <rect x="690" y="455" width="190" height="70" rx="35" class="box"/>
+        <rect x="405" y="575" width="190" height="70" rx="35" class="soft"/>
+        <rect x="120" y="455" width="190" height="70" rx="35" class="box"/>
+        <rect x="120" y="235" width="190" height="70" rx="35" class="soft"/>
+        <text x="500" y="158" text-anchor="middle" class="label">学习</text>
+        <text x="785" y="278" text-anchor="middle" class="label">连接</text>
+        <text x="785" y="488" text-anchor="middle" class="label">应用</text>
+        <text x="785" y="510" text-anchor="middle" class="tiny">形成判断</text>
+        <text x="500" y="618" text-anchor="middle" class="label">观察结果</text>
+        <text x="215" y="498" text-anchor="middle" class="label">反证</text>
+        <text x="215" y="278" text-anchor="middle" class="label">更新</text>
+        <path d="M600 150 C690 160 745 185 775 225" class="line" marker-end="url(#arrow)"/>
+        <path d="M835 310 C870 355 870 410 835 445" class="line" marker-end="url(#arrow)"/>
+        <path d="M690 505 C635 570 605 590 600 590" class="line" marker-end="url(#arrow)"/>
+        <path d="M400 610 C320 595 260 565 230 535" class="line" marker-end="url(#arrow)"/>
+        <path d="M165 450 C130 405 130 355 165 315" class="line" marker-end="url(#arrow)"/>
+        <path d="M310 245 C355 195 390 165 400 160" class="line" marker-end="url(#arrow)"/>
+      </g>
+      <rect x="385" y="330" width="230" height="105" rx="12" class="box"/>
+      <text x="500" y="366" text-anchor="middle" class="label">证据不足</text>
+      <text x="500" y="395" text-anchor="middle" class="small">暂缓判断／“太难”</text>
+      <text x="500" y="420" text-anchor="middle" class="tiny">补充证据后重新进入循环</text>
+      <path d="M685 485 C640 465 615 430 610 410" class="dash" marker-end="url(#arrow)"/>
+      <path d="M430 330 C400 275 410 220 455 190" class="dash" marker-end="url(#arrow)"/>
+    
+  <text x="976" y="732" text-anchor="end" class="tiny">结构草图｜非正式插图</text>
+</svg>

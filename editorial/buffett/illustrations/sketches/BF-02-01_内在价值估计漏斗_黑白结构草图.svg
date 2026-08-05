@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-02-01_内在价值估计漏斗_黑白结构精绘</title><desc id="desc">经营假设—现金流—折现—估值区间</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+<rect x="0" y="0" width="12" height="800" fill="#111"/>
+  <text x="60" y="60" class="title">内在价值不是一个数，是一个区间</text>
+  <text x="60" y="88" class="subtitle">账面价值只是线索；真正的价值来自未来现金流的折现，越往下越收敛，最终形成有边界的区间</text>
+
+  <!-- 漏斗四层，由宽到窄 -->
+  <!-- L1 假设层 -->
+  <path d="M160,140 L1040,140 L920,240 L280,240 Z" class="brand-fill"/>
+  <text x="600" y="192" text-anchor="middle" class="label">① 经营假设（范围，而非单点）</text>
+  <text x="300" y="225" class="small">乐观</text>
+  <text x="900" y="225" text-anchor="end" class="small">保守</text>
+  <text x="600" y="230" text-anchor="middle" class="tiny">需求、定价、资本需求、竞争强度</text>
+  <!-- 向下箭头 -->
+  <line x1="600" y1="240" x2="600" y2="290" class="brand-line" marker-end="url(#arrow)"/>
+  <!-- L2 现金流 -->
+  <path d="M280,290 L920,290 L820,390 L380,390 Z" class="brand-fill"/>
+  <text x="600" y="342" text-anchor="middle" class="label">② 预期现金流入 − 流出</text>
+  <text x="600" y="380" text-anchor="middle" class="tiny">剩余存续期间内，每年净现金（红利/回购/清算价值）</text>
+  <line x1="600" y1="390" x2="600" y2="440" class="brand-line" marker-end="url(#arrow)"/>
+  <!-- L3 折现 -->
+  <path d="M380,440 L820,440 L740,540 L460,540 Z" class="brand-fill"/>
+  <text x="600" y="492" text-anchor="middle" class="label">③ 以适当利率折现</text>
+  <text x="600" y="530" text-anchor="middle" class="tiny">无风险利率 + 风险补偿（不使用市场波动指标 β）</text>
+  <line x1="600" y1="540" x2="600" y2="590" class="brand-line" marker-end="url(#arrow)"/>
+  <!-- L4 区间 -->
+  <path d="M460,590 L740,590 L700,680 L500,680 Z" class="brand-solid"/>
+  <text x="600" y="630" text-anchor="middle" style="fill:#111;font-size:20px;font-weight:700;">④ 估值区间</text>
+  <text x="600" y="665" text-anchor="middle" style="fill:#111;font-size:14px;">下限保守估值　上限乐观估值</text>
+
+  <!-- 两侧提醒 -->
+  <rect x="120" y="580" width="200" height="120" rx="6" class="soft"/>
+  <text x="220" y="620" text-anchor="middle" class="label">常见误解</text>
+  <text x="220" y="650" text-anchor="middle" class="small">DCF 公式能自动</text>
+  <text x="220" y="675" text-anchor="middle" class="small">产生正确价值 ✗</text>
+
+  <rect x="880" y="580" width="200" height="120" rx="6" class="soft"/>
+  <text x="980" y="620" text-anchor="middle" class="label">适用</text>
+  <text x="980" y="650" text-anchor="middle" class="small">假设、折现率与</text>
+  <text x="980" y="675" text-anchor="middle" class="small">区间边界一起校验 ✓</text>
+
+  <text x="60" y="760" class="tiny">核心：价值是估计出的区间，不是精确数字｜黑白结构草图</text>
+</svg>

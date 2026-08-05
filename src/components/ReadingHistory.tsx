@@ -14,10 +14,10 @@ const TYPE_LABELS: Record<string, string> = {
 
 const TYPE_COLORS: Record<string, string> = {
   letter: 'bg-primary/10 text-primary',
-  partnership: 'bg-purple-50 text-purple-600',
-  concept: 'bg-blue-50 text-blue-600',
-  company: 'bg-green-50 text-green-600',
-  people: 'bg-pink-50 text-pink-600',
+  partnership: 'bg-primary/10 text-primary',
+  concept: 'bg-primary/10 text-primary',
+  company: 'bg-primary/10 text-primary',
+  people: 'bg-primary/10 text-primary',
 }
 
 function formatTime(isoString: string): string {

@@ -50,7 +50,7 @@ export default function PoorCharliesAlmanackPage() {
         backLabel="返回芒格"
       />
 
-      <section className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-white to-amber-50 p-6 shadow-card dark:from-primary/20 dark:via-dark-card dark:to-amber-950/20 md:p-10">
+      <section className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-white to-accent/10 p-6 shadow-card dark:from-primary/20 dark:via-dark-card dark:to-accent/10 md:p-10">
         <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full border border-primary/10" />
         <div className="absolute -right-3 top-12 h-28 w-28 rounded-full border border-primary/10" />
         <div className="relative max-w-3xl">
@@ -93,7 +93,7 @@ export default function PoorCharliesAlmanackPage() {
         </div>
       </section>
 
-      <aside className="mb-10 rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-950 dark:border-amber-900/60 dark:bg-amber-950/20 dark:text-amber-100">
+      <aside className="mb-10 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-4 text-sm leading-7 text-accent dark:border-accent/50 dark:bg-accent/10 dark:text-accent-light">
         <strong>版本与版权说明：</strong>
         本专题以 Stripe Press 2023 年英文删节版的结构为对照。十场演讲采用站内既有中文译稿；
         卷首、前三章、第十一讲和推荐书目依据用户提供的英文文件翻译。涉及专名或疑难表述时，建议同时核对官方英文原文。

@@ -47,7 +47,7 @@ export default function HistoryPage() {
         rightSlot={totalDocs > 0 ? (
           <button
             onClick={() => setShowConfirm(true)}
-            className="px-3 py-1.5 text-sm text-red-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            className="px-3 py-1.5 text-sm text-primary hover:text-primary-light hover:bg-primary/10 rounded-lg transition-colors"
           >
             清除记录
           </button>
@@ -71,7 +71,7 @@ export default function HistoryPage() {
               </button>
               <button
                 onClick={handleClearAll}
-                className="px-4 py-2 text-sm text-white bg-red-500 hover:bg-red-600 rounded-lg transition-colors"
+                className="px-4 py-2 text-sm text-white bg-primary hover:bg-primary-light rounded-lg transition-colors"
               >
                 确认清除
               </button>

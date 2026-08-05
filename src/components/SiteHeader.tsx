@@ -62,6 +62,7 @@ const navGroups = [
 ]
 
 const directLinks = [
+  { href: '/radar', label: '信息日报' },
   { href: '/bound-edition', label: '合订本' },
   { href: '/about', label: '关于' },
 ]
@@ -97,6 +98,7 @@ const mobileSections = [
     label: '阅读与购买',
     links: [
       { href: '/reading', label: '全部内容', meta: '按人物与类型浏览' },
+      { href: '/radar', label: '信息日报', meta: '股市雷达每日信号' },
       { href: '/bound-edition', label: '电子合订本', meta: '微信购买 PDF' },
       { href: '/about', label: '关于', meta: '站点与作者' },
     ],

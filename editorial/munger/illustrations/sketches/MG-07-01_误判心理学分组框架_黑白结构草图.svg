@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-07-01 误判心理学分组框架</title>
+  <desc id="desc">25种心理倾向按来源分四组：社会、情绪、认知、激励与制度。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">误判心理学分组框架</text>
+  <text x="55" y="86" class="subtitle">25种倾向，按来源分四组——倾向×情境才产生行为</text>
+
+  <!-- 组1 社会性 -->
+  <rect x="180" y="140" width="440" height="220" rx="12" class="box"/>
+  <text x="205" y="175" class="label">① 社会性倾向</text>
+  <text x="205" y="210" class="small">社会认同——跟随多数人</text>
+  <text x="205" y="238" class="small">权威——服从层级</text>
+  <text x="205" y="266" class="small">羡慕与妒忌——比较带来的痛苦</text>
+  <text x="205" y="294" class="small">好奇——信息饥渴</text>
+
+  <!-- 组2 情绪性 -->
+  <rect x="660" y="140" width="440" height="220" rx="12" class="box"/>
+  <text x="685" y="175" class="label">② 情绪性倾向</text>
+  <text x="685" y="210" class="small">损失厌恶——失去比得到更痛</text>
+  <text x="685" y="238" class="small">被剥夺感——擦肩而过尤其难受</text>
+  <text x="685" y="266" class="small">自怜与怨恨——腐蚀判断</text>
+  <text x="685" y="294" class="small">嫉妒——毫无收益的受苦</text>
+
+  <!-- 组3 认知性 -->
+  <rect x="180" y="400" width="440" height="200" rx="12" class="box"/>
+  <text x="205" y="435" class="label">③ 认知性倾向</text>
+  <text x="205" y="470" class="small">过度自我评价——高估自己</text>
+  <text x="205" y="498" class="small">确认偏差——偏爱支持自己的证据</text>
+  <text x="205" y="526" class="small">锚定与易得性——被先入数字和近事带偏</text>
+
+  <!-- 组4 激励与制度 -->
+  <rect x="660" y="400" width="440" height="200" rx="12" class="box"/>
+  <text x="685" y="435" class="label">④ 激励与制度性倾向</text>
+  <text x="685" y="470" class="small">激励反应——被奖励的行为被强化</text>
+  <text x="685" y="498" class="small">奖励惩罚——过度反应于奖惩</text>
+  <text x="685" y="526" class="small">低估间接后果——制度设计的盲区</text>
+
+  <text x="640" y="636" text-anchor="middle" class="tiny">分组为编辑部整理，便于阅读；倾向不是标签，须结合情境、激励与证据看。</text>
+  <text x="640" y="672" text-anchor="middle" class="note">先看情境和激励，再判断是哪种倾向在起作用。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-07-01｜结构草图</text>
+</svg>

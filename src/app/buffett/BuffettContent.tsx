@@ -211,7 +211,7 @@ export default function BuffettContent({
             className="group bg-white dark:bg-dark-card rounded-xl border border-gray-100 dark:border-dark-border p-8 hover:shadow-lg dark:hover:shadow-black/20 transition-all"
           >
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
                 📬
               </div>
               <div className="flex-1">
@@ -223,7 +223,7 @@ export default function BuffettContent({
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="text-sm">
-                    <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">{shareholderCount}</span>
+                    <span className="text-2xl font-bold text-primary dark:text-primary-light">{shareholderCount}</span>
                     <span className="text-gray-500 dark:text-gray-400 ml-1">封信件</span>
                   </div>
                   <div className="text-sm text-gray-400">
@@ -231,7 +231,7 @@ export default function BuffettContent({
                   </div>
                 </div>
               </div>
-              <div className="text-gray-300 dark:text-gray-600 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+              <div className="text-gray-300 dark:text-gray-600 group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
                 →
               </div>
             </div>

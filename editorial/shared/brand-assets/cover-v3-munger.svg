@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="v3-mg-halo" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="v3-mg-ray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="#FAF8F4"/>
+  <rect width="1200" height="1200" fill="url(#v3-mg-halo)"/>
+  <!-- 光源 -->
+  <circle cx="600" cy="330" r="34" fill="#AB1942"/>
+  <circle cx="600" cy="330" r="54" fill="#AB1942" opacity="0.2"/>
+  <circle cx="600" cy="330" r="80" fill="#AB1942" opacity="0.08"/>
+  <!-- 入射光（向左下进入棱镜） -->
+  <line x1="600" y1="330" x2="480" y2="600" stroke="#AB1942" stroke-width="4" opacity="0.7"/>
+  <!-- 棱镜 -->
+  <polygon points="480,600 720,600 600,820" fill="none" stroke="#AB1942" stroke-width="6"/>
+  <polygon points="516,600 684,600 600,772" fill="#AB1942" fill-opacity="0.08"/>
+  <!-- 折射光谱：从棱镜出射向右上散开 -->
+  <g stroke-width="4" stroke-linecap="round">
+    <line x1="600" y1="820" x2="860" y2="640" stroke="#AB1942" opacity="0.9"/>
+    <line x1="600" y1="820" x2="880" y2="700" stroke="#AB1942" opacity="0.75"/>
+    <line x1="600" y1="820" x2="880" y2="760" stroke="#AB1942" opacity="0.6"/>
+    <line x1="600" y1="820" x2="860" y2="820" stroke="#AB1942" opacity="0.5"/>
+  </g>
+  <!-- 出射光谱端点 -->
+  <g fill="#AB1942">
+    <circle cx="860" cy="640" r="7" opacity="0.9"/>
+    <circle cx="880" cy="700" r="6" opacity="0.75"/>
+    <circle cx="880" cy="760" r="5" opacity="0.6"/>
+    <circle cx="860" cy="820" r="4" opacity="0.5"/>
+  </g>
+  <!-- 底部装饰线 -->
+  <line x1="440" y1="880" x2="760" y2="880" stroke="#454545" stroke-width="2" opacity="0.6"/>
+</svg>

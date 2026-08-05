@@ -134,6 +134,16 @@ export default function AboutPage() {
           <h2>学习、研究与资料检索</h2>
           <p>本站不提供个股推荐、收益承诺、实时估值或个性化投资建议。公开资料不会被描述为独家拥有；合订本购买的是整理、校订与连续阅读所节省的时间，而不是秘密信息。两本书的目录与试读，见<Link href="/bound-edition">电子合订本</Link>。</p>
         </section>
+
+        <section className="about-study__edition">
+          <p className="study-label">07 · 把研究做成书</p>
+          <h2>如果你也想系统读一遍</h2>
+          <p>网站适合随时查、随手读；但如果你打算把巴菲特或芒格从头到尾读一遍，我把这些公开材料整理、校订成了两卷书——每一章都标了出处，附插图、术语表与索引。不是秘密信息，是帮我（也帮你）省下组织材料的时间。</p>
+          <div className="about-study__edition-actions">
+            <Link href="/bound-edition" className="archive-button archive-button--solid">查看电子合订本</Link>
+            <span>每卷 99 元 · 微信确认后发送完整 PDF</span>
+          </div>
+        </section>
       </PageContainer>
     </>
   )

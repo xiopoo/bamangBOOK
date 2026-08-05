@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-09-01 分权结构与声誉红线</title><desc id="desc">小总部去中心化与声誉红线</desc>
+  <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#fff;stroke:#111;stroke-width:2;}
+    .brand{fill:#fff;stroke:#AB1942;stroke-width:3;}
+    .brand-fill{fill:#AB1942;fill-opacity:0.12;stroke:#AB1942;stroke-width:2;}
+    .brand-solid{fill:#AB1942;stroke:#AB1942;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#AB1942;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+
+  <text x="60" y="60" class="title">小总部 + 去中心化 + 一条共同边界</text>
+  <text x="60" y="88" class="subtitle">伯克希尔日常经营决策权放给子公司；总部只保留资本配置、CEO 选择和声誉红线——用信任和分权降低摩擦</text>
+
+  <rect x="520" y="160" width="160" height="130" rx="12" class="brand-solid"/>
+  <text x="600" y="210" text-anchor="middle" style="fill:#fff;font-weight:700;font-size:22px;">伯克希尔总部</text>
+  <text x="600" y="240" text-anchor="middle" style="fill:#fff;font-size:14px;">少到二十几人的</text>
+  <text x="600" y="262" text-anchor="middle" style="fill:#fff;font-size:14px;">"极小"总部</text>
+
+  <text x="600" y="315" text-anchor="middle" class="small" style="font-weight:600;">总部只保留三件事</text>
+  <rect x="260" y="330" width="200" height="48" rx="6" class="brand"/>
+  <text x="360" y="360" text-anchor="middle" class="brand-text small">① 资本配置</text>
+  <rect x="500" y="330" width="200" height="48" rx="6" class="brand"/>
+  <text x="600" y="360" text-anchor="middle" class="brand-text small">② 选任子公司 CEO</text>
+  <rect x="740" y="330" width="200" height="48" rx="6" class="brand"/>
+  <text x="840" y="360" text-anchor="middle" class="brand-text small">③ 共同边界/声誉</text>
+
+  <text x="600" y="418" text-anchor="middle" class="subtitle" style="font-weight:600;">⬇ 日常经营决策全部下放给子公司</text>
+
+  <!-- 10个子公司 -->
+  <!-- 子公司 & 虚线 -->
+  <g id="subs">
+    <!-- 第一行 5 个 -->
+    <rect x="100" y="440" width="180" height="60" rx="6" class="soft"/>
+    <text x="190" y="478" text-anchor="middle" class="small" style="font-weight:600;">保险业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="190" y2="440" class="dash"/>
+
+    <rect x="305" y="440" width="180" height="60" rx="6" class="soft"/>
+    <text x="395" y="478" text-anchor="middle" class="small" style="font-weight:600;">铁路业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="395" y2="440" class="dash"/>
+
+    <rect x="510" y="440" width="180" height="60" rx="6" class="soft"/>
+    <text x="600" y="478" text-anchor="middle" class="small" style="font-weight:600;">能源业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="600" y2="440" class="dash"/>
+
+    <rect x="715" y="440" width="180" height="60" rx="6" class="soft"/>
+    <text x="805" y="478" text-anchor="middle" class="small" style="font-weight:600;">消费品 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="805" y2="440" class="dash"/>
+
+    <rect x="920" y="440" width="180" height="60" rx="6" class="soft"/>
+    <text x="1010" y="478" text-anchor="middle" class="small" style="font-weight:600;">制造业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="1010" y2="440" class="dash"/>
+
+    <!-- 第二行 5 个 -->
+    <rect x="100" y="528" width="180" height="60" rx="6" class="soft"/>
+    <text x="190" y="566" text-anchor="middle" class="small" style="font-weight:600;">零售业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="190" y2="528" class="dash"/>
+
+    <rect x="305" y="528" width="180" height="60" rx="6" class="soft"/>
+    <text x="395" y="566" text-anchor="middle" class="small" style="font-weight:600;">金融业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="395" y2="528" class="dash"/>
+
+    <rect x="510" y="528" width="180" height="60" rx="6" class="soft"/>
+    <text x="600" y="566" text-anchor="middle" class="small" style="font-weight:600;">服务业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="600" y2="528" class="dash"/>
+
+    <rect x="715" y="528" width="180" height="60" rx="6" class="soft"/>
+    <text x="805" y="566" text-anchor="middle" class="small" style="font-weight:600;">媒体业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="805" y2="528" class="dash"/>
+
+    <rect x="920" y="528" width="180" height="60" rx="6" class="soft"/>
+    <text x="1010" y="566" text-anchor="middle" class="small" style="font-weight:600;">其他业务 CEO 自主决策</text>
+    <line x1="600" y1="290" x2="1010" y2="528" class="dash"/>
+  </g>
+
+  <!-- 红线 -->
+  <line x1="70" y1="648" x2="1130" y2="648" style="stroke:#AB1942;stroke-width:5;"/>
+  <rect x="70" y="656" width="1060" height="60" rx="8" class="brand-fill"/>
+  <text x="600" y="688" text-anchor="middle" class="label brand-text">共 同 红 线：商 业 失 误 可 容 忍　　品 行 问 题 容 忍 度 为 零</text>
+  <text x="600" y="710" text-anchor="middle" class="tiny">"伯克希尔的声誉掌握在你们手中"（2006 给全体经理人备忘录）· 所罗门事件教训</text>
+
+  <text x="60" y="788" class="tiny">BA-011 / BA-012 / BA-023：失误容忍、声誉红线、子公司资本配置权归属｜品牌色版本</text>
+</svg>

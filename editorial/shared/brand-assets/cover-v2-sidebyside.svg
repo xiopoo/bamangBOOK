@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="s2-l" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="s2-r" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#FFFFFF"/>
+  <!-- 左侧：复利曲线（巴菲特卷） -->
+  <rect x="40" y="40" width="540" height="520" fill="url(#s2-l)"/>
+  <g stroke="#AB1942" stroke-width="1" opacity="0.10">
+    <line x1="90" y1="120" x2="90" y2="500"/>
+    <line x1="90" y1="500" x2="540" y2="500"/>
+  </g>
+  <path d="M 90 500 L 140 460 C 240 380, 320 320, 400 250 C 460 200, 500 150, 540 110 L 540 500 Z"
+        fill="#AB1942" fill-opacity="0.08"/>
+  <path d="M 90 500 C 180 420, 300 330, 400 250 C 480 185, 520 130, 540 110"
+        stroke="#AB1942" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="90" cy="500" r="5" fill="#AB1942" opacity="0.7"/>
+  <circle cx="540" cy="110" r="8" fill="#AB1942"/>
+  <!-- 右侧：节点网络（芒格卷） -->
+  <rect x="620" y="40" width="540" height="520" fill="url(#s2-r)"/>
+  <g stroke="#AB1942" stroke-width="2" opacity="0.3">
+    <line x1="720" y1="200" x2="880" y2="180"/>
+    <line x1="880" y1="180" x2="1000" y2="300"/>
+    <line x1="720" y1="200" x2="780" y2="360"/>
+    <line x1="880" y1="180" x2="900" y2="420"/>
+    <line x1="780" y1="360" x2="900" y2="420"/>
+    <line x1="1000" y1="300" x2="900" y2="420"/>
+    <line x1="780" y1="360" x2="1060" y2="440"/>
+    <line x1="720" y1="200" x2="680" y2="320"/>
+    <line x1="680" y1="320" x2="780" y2="360"/>
+    <line x1="1000" y1="300" x2="1060" y2="440"/>
+  </g>
+  <g fill="#AB1942">
+    <circle cx="720" cy="200" r="12"/>
+    <circle cx="880" cy="180" r="14"/>
+    <circle cx="1000" cy="300" r="10"/>
+    <circle cx="780" cy="360" r="9"/>
+    <circle cx="900" cy="420" r="12"/>
+    <circle cx="680" cy="320" r="7" opacity="0.6"/>
+    <circle cx="1060" cy="440" r="8" opacity="0.7"/>
+  </g>
+  <!-- 中央分隔线 -->
+  <line x1="600" y1="70" x2="600" y2="530" stroke="#AB1942" stroke-width="3" opacity="0.55"/>
+</svg>

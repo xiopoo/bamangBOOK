@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+// 设计令牌：颜色须与 src/app/globals.css 的 --archive-* 变量保持同值。
+// 浅色 primary/accent/bg/text 对应 --archive-oxblood/gold/paper/ink；
+// 暗色 primary.light/accent.light 对应 .dark body 下的 --archive-oxblood/gold。
+// 两处任一处修改必须同步另一处（见 globals.css 顶部规范注释）。
 module.exports = {
   darkMode: 'class',
   content: [

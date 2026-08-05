@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "characters": {
+    "chapter1": 10279,
+    "chapter2": 12013,
+    "chapter3": 12857,
+    "intro": 422,
+    "closing": 438,
+    "total": 36033,
+    "target": {
+      "ch1": [
+        10000,
+        12000
+      ],
+      "ch2": [
+        12000,
+        15000
+      ],
+      "ch3": [
+        12000,
+        15000
+      ],
+      "total": [
+        36000,
+        42000
+      ]
+    }
+  },
+  "atoms": {
+    "ch1": [
+      "BA-001",
+      "BA-024"
+    ],
+    "ch2": [
+      "BA-003",
+      "BA-004"
+    ],
+    "ch3": [
+      "BA-002",
+      "BA-027"
+    ]
+  },
+  "sourceQuoteChecks": 8,
+  "contentIdentityChecks": 4,
+  "quoteRatios": {
+    "ch1": 0.208,
+    "ch2": 0.445,
+    "ch3": 0.532
+  },
+  "duplicateLongParagraphs": 0,
+  "internalLinks": {
+    "total": 7,
+    "missingTargets": 0
+  },
+  "externalLinks": 0,
+  "coverageRows": 700,
+  "mappedMaterialsReviewed": 26,
+  "actuallyUsedMaterialsBackfilled": 20,
+  "errors": []
+}

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="v2-bf-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#AB1942" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="v2-bf-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#AB1942" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#AB1942" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="#FFFFFF"/>
+  <!-- 极简坐标网格 -->
+  <g stroke="#AB1942" stroke-width="1" opacity="0.10">
+    <line x1="180" y1="180" x2="180" y2="880"/>
+    <line x1="180" y1="880" x2="1020" y2="880"/>
+    <line x1="180" y1="640" x2="1020" y2="640"/>
+    <line x1="180" y1="400" x2="1020" y2="400"/>
+  </g>
+  <g stroke="#AB1942" stroke-width="1" opacity="0.08">
+    <line x1="460" y1="880" x2="460" y2="180"/>
+    <line x1="740" y1="880" x2="740" y2="180"/>
+  </g>
+  <!-- 曲线下方渐变填充 -->
+  <path d="M 180 880 L 240 830 C 380 720, 520 620, 650 520 C 780 420, 900 300, 1020 180 L 1020 880 Z"
+        fill="url(#v2-bf-fill)"/>
+  <!-- 复利曲线主路径 -->
+  <path d="M 180 880 C 280 800, 420 700, 560 590 C 700 480, 830 360, 1020 200"
+        stroke="url(#v2-bf-line)" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- 起终点点缀 -->
+  <circle cx="180" cy="880" r="6" fill="#AB1942" opacity="0.7"/>
+  <circle cx="1020" cy="200" r="9" fill="#AB1942"/>
+  <!-- 底部装饰线 -->
+  <line x1="440" y1="880" x2="760" y2="880" stroke="#454545" stroke-width="2" opacity="0.6"/>
+</svg>

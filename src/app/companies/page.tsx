@@ -61,7 +61,7 @@ export default function CompaniesPage() {
           <Link
             key={company.id}
             href={`/companies/${encodeURIComponent(company.id)}`}
-            className="bg-white dark:bg-dark-card p-4 rounded-card border border-gray-100 dark:border-dark-border hover:border-blue-200 dark:hover:border-blue-600 hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all"
+            className="bg-white dark:bg-dark-card p-4 rounded-card border border-gray-100 dark:border-dark-border hover:border-primary dark:hover:border-primary-light hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all"
           >
             <div className="font-medium text-text dark:text-dark-text mb-1">{company.id}</div>
             {company.count != null && company.count > 0 && (

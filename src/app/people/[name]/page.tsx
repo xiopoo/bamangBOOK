@@ -124,7 +124,7 @@ export default function PersonDetailPage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto mb-6">
         <Link
           href="/people"
-          className="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors mb-4"
+          className="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors mb-4"
         >
           ← 返回人物列表
         </Link>
@@ -134,18 +134,18 @@ export default function PersonDetailPage({ params }: PageProps) {
         <p className="text-gray-600 dark:text-gray-400">{info.description}</p>
       </div>
 
-      <div className="max-w-4xl mx-auto bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-900/10 rounded-lg p-6 mb-8 border border-purple-200 dark:border-purple-900/50 shadow-sm hover:shadow-md transition-shadow">
+      <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
         <div className="flex items-center gap-4">
           <div className="text-2xl">👤</div>
           <div className="flex-1">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
-                <div className="text-xl font-bold text-purple-600 dark:text-purple-400">{stats.count}次</div>
+                <div className="text-xl font-bold text-primary dark:text-primary-light">{stats.count}次</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">提及次数</div>
               </div>
               {stats.years.length > 0 && (
                 <div>
-                  <div className="text-xl font-bold text-purple-600 dark:text-purple-400">{stats.years.length}年</div>
+                  <div className="text-xl font-bold text-primary dark:text-primary-light">{stats.years.length}年</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">跨年份提及</div>
                 </div>
               )}
@@ -178,7 +178,7 @@ export default function PersonDetailPage({ params }: PageProps) {
               <Link
                 key={year}
                 href={getLetterArchiveHref(year)}
-                className="px-3 py-1 bg-white dark:bg-[#16213e] border border-gray-200 dark:border-[#2a2a4a] rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:border-purple-200 dark:hover:border-purple-600 transition-colors"
+                className="px-3 py-1 bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:border-primary dark:hover:border-primary-light transition-colors"
               >
                 {year}
               </Link>

@@ -171,7 +171,7 @@ export default function MungerContent({
 
         <Link
           href="/poor-charlies-almanack"
-          className="group mt-6 flex flex-col justify-between gap-5 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-white to-amber-50 p-6 transition hover:border-primary/40 hover:shadow-card-hover dark:from-primary/20 dark:via-dark-card dark:to-amber-950/20 sm:flex-row sm:items-center"
+          className="group mt-6 flex flex-col justify-between gap-5 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/10 via-white to-accent/10 p-6 transition hover:border-primary/40 hover:shadow-card-hover dark:from-primary/20 dark:via-dark-card dark:to-accent/10 sm:flex-row sm:items-center"
         >
           <div>
             <p className="text-xs font-semibold tracking-[0.2em] text-primary">FEATURED READING</p>

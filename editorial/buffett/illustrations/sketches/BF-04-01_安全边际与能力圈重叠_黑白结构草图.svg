@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-04-01_安全边际与能力圈重叠_黑白结构精绘</title><desc id="desc">三维重叠判断：理解-估值-价格</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+<rect x="0" y="0" width="12" height="800" fill="#111"/>
+  <text x="60" y="60" class="title">三维重叠：只有同时成立才能集中</text>
+  <text x="60" y="88" class="subtitle">可理解（能力圈）× 可估值（内在价值区间）× 价格低于保守估值（安全边际）——三者交集才是可行动区</text>
+
+  <!-- 三个椭圆：最左 - 能力圈 -->
+  <ellipse cx="430" cy="440" rx="280" ry="210" class="box" style="stroke:#111;fill:none;stroke-width:2.5;"/>
+  <text x="430" y="250" text-anchor="middle" class="label">能力圈</text>
+  <text x="430" y="275" text-anchor="middle" class="tiny">经济特征可理解</text>
+  <text x="280" y="400" class="small">能看清未来 5—10 年</text>
+  <text x="280" y="426" class="small">的竞争态势、</text>
+  <text x="280" y="452" class="small">资本需求和经理人</text>
+
+  <!-- 中间 - 可估值 -->
+  <ellipse cx="640" cy="440" rx="260" ry="210" class="box" style="stroke:#111;fill:none;stroke-width:2.5;"/>
+  <text x="640" y="250" text-anchor="middle" class="label">可估值</text>
+  <text x="640" y="275" text-anchor="middle" class="tiny">能给出合理估值区间</text>
+  <text x="560" y="595" class="small">价值区间有边界，</text>
+  <text x="560" y="620" class="small">不是精确到小数点</text>
+
+  <!-- 右下 - 价格安全边际 -->
+  <ellipse cx="820" cy="500" rx="240" ry="180" class="box" style="stroke:#111;fill:none;stroke-width:2.5;"/>
+  <text x="820" y="340" text-anchor="middle" class="label">价格安全边际</text>
+  <text x="820" y="365" text-anchor="middle" class="tiny">买入价格 ≤ 保守估值 × 折扣</text>
+
+  <!-- 三重交集高亮 -->
+  <circle cx="640" cy="470" r="110" class="brand-solid" opacity="0.85"/>
+  <text x="640" y="455" text-anchor="middle" style="fill:#111;font-size:22px;font-weight:700;">可 行 动 区</text>
+  <text x="640" y="488" text-anchor="middle" style="fill:#111;font-size:14px;">理解 + 可估值</text>
+  <text x="640" y="515" text-anchor="middle" style="fill:#111;font-size:14px;">+ 价格大幅低于价值</text>
+  <text x="640" y="548" text-anchor="middle" style="fill:#111;font-size:13px;">最多 40% 净资产的高确信投资</text>
+
+  <!-- 外围：不可行动区 -->
+  <rect x="70" y="690" width="1060" height="55" rx="8" class="brand"/>
+  <text x="600" y="725" text-anchor="middle" class="brand-text">交集之外：放一边，放在"太难"篮子——知道什么不该做，比会做什么更重要</text>
+
+  <text x="60" y="788" class="tiny">对应 BA-005 / BA-006：安全边际定义与集中上限｜黑白结构草图</text>
+</svg>

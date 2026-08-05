@@ -1,0 +1,74 @@
+[
+  {
+    "file": "buffett/illustrations/sketches/BF-06-01_两种观察方式_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "buffett/illustrations/refined/BF-06-01_两种观察方式_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  },
+  {
+    "file": "buffett/illustrations/sketches/BF-06-02_通胀资本需求_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "buffett/illustrations/refined/BF-06-02_通胀资本需求_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  },
+  {
+    "file": "buffett/illustrations/sketches/BF-06-03_资本循环_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "buffett/illustrations/refined/BF-06-03_资本循环_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  },
+  {
+    "file": "munger/illustrations/sketches/MG-02-01_从孤立知识到格栅_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "munger/illustrations/refined/MG-02-01_从孤立知识到格栅_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  },
+  {
+    "file": "munger/illustrations/sketches/MG-02-02_五学科检查_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "munger/illustrations/refined/MG-02-02_五学科检查_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  },
+  {
+    "file": "munger/illustrations/sketches/MG-02-03_格栅更新循环_黑白结构草图.svg",
+    "format": "SVG",
+    "palette": "black-white-gray",
+    "status": "按确认意见修订并通过复核"
+  },
+  {
+    "file": "munger/illustrations/refined/MG-02-03_格栅更新循环_品牌色精绘.svg",
+    "format": "SVG",
+    "palette": "#AB1942-black-white-gray",
+    "status": "样章品牌色精绘版本"
+  }
+]

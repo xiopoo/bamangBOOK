@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "characters": {
+    "chapter1": 6651,
+    "chapter2": 3633,
+    "chapter3": 3871,
+    "intro": 422,
+    "closing": 438,
+    "total": 15039,
+    "structuralBudget": 61000,
+    "budgetUsagePercent": 24.7
+  },
+  "atoms": {
+    "ch1": [
+      "BA-001",
+      "BA-024"
+    ],
+    "ch2": [
+      "BA-003",
+      "BA-004"
+    ],
+    "ch3": [
+      "BA-002",
+      "BA-027"
+    ]
+  },
+  "sourceQuoteChecks": 6,
+  "contentIdentity": {
+    "interviewTranscriptLabeled": true,
+    "shareholderLetterTranslationsLabeled": true,
+    "WilliamsSourceLabeled": true,
+    "KeynesSourceLabeled": true,
+    "editorialFrameworksLabeled": true
+  },
+  "duplicateLongParagraphs": 0,
+  "internalLinks": {
+    "total": 7,
+    "missingTargets": 0
+  },
+  "externalLinks": 0,
+  "coverageRows": 700,
+  "actuallyUsedMaterialsBackfilled": 6,
+  "errors": []
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-16-01 理性责任闭环</title>
+  <desc id="desc">事实、修正、行动、后果、文明五节点闭环，中心是理性近乎道德义务。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">理性责任闭环</text>
+  <text x="55" y="86" class="subtitle">事实—修正—行动—后果—文明，闭环回到持续学习</text>
+
+  <!-- 五节点（五边形布局） -->
+  <circle cx="640" cy="160" r="52" class="box"/>
+  <circle cx="958" cy="305" r="52" class="box"/>
+  <circle cx="795" cy="600" r="52" class="box"/>
+  <circle cx="485" cy="600" r="52" class="box"/>
+  <circle cx="322" cy="305" r="52" class="box"/>
+  <text x="640" y="164" text-anchor="middle" class="small">事实</text>
+  <text x="958" y="309" text-anchor="middle" class="small">行动</text>
+  <text x="795" y="604" text-anchor="middle" class="small">后果</text>
+  <text x="485" y="604" text-anchor="middle" class="small">文明</text>
+  <text x="322" y="309" text-anchor="middle" class="small">修正</text>
+
+  <!-- 节点注 -->
+  <text x="640" y="92" text-anchor="middle" class="tiny">如实接受证据</text>
+  <text x="1080" y="300" text-anchor="middle" class="tiny">做出判断并承担</text>
+  <text x="200" y="300" text-anchor="middle" class="tiny">认错并更新模型</text>
+  <text x="920" y="625" text-anchor="middle" class="tiny">结果会回头检验判断</text>
+  <text x="350" y="625" text-anchor="middle" class="tiny">文明进步是目的与尺度</text>
+
+  <!-- 环（端点精确落在节点圆周上） -->
+  <g class="line">
+    <line x1="687" y1="182" x2="911" y2="283" marker-end="url(#arrow)"/>
+    <line x1="933" y1="351" x2="820" y2="555" marker-end="url(#arrow)"/>
+    <line x1="743" y1="600" x2="537" y2="600" marker-end="url(#arrow)"/>
+    <line x1="460" y1="555" x2="347" y2="351" marker-end="url(#arrow)"/>
+    <line x1="369" y1="283" x2="593" y2="182" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 中心 -->
+  <circle cx="640" cy="415" r="86" class="soft"/>
+  <circle cx="640" cy="415" r="86" fill="none" stroke="#111" stroke-width="2.5"/>
+  <text x="640" y="405" text-anchor="middle" class="small" fill="#111">理性近乎</text>
+  <text x="640" y="427" text-anchor="middle" class="small" fill="#111">一种道德义务</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">闭环没有终点：每一次后果都回到事实与修正，继续下一圈。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-16-01｜结构草图</text>
+</svg>

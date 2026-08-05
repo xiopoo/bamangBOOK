@@ -19,16 +19,14 @@ export default function StatBadge({
   variant = 'default',
 }: StatBadgeProps) {
   const baseClass =
-    variant === 'highlight'
-      ? 'bg-primary/5 dark:bg-primary/10 border-primary/30 dark:border-primary/40'
-      : 'bg-bg-card dark:bg-dark-card border-primary/20 dark:border-primary/30'
+    variant === 'highlight' ? 'archive-card archive-card--accent' : 'archive-card archive-card--plain'
 
   const content = (
-    <div className={`rounded-xl border p-4 transition-all hover:shadow-card-hover ${baseClass}`}>
+    <div className={baseClass}>
       <div className="flex items-center gap-3">
         <div className="text-2xl shrink-0">{icon}</div>
         <div className="min-w-0">
-          <div className="text-xl font-bold text-primary dark:text-primary-light">
+          <div className="text-xl font-bold text-primary dark:text-primary-light font-serif">
             {count}
           </div>
           <div className="text-sm text-text-muted dark:text-dark-muted truncate">

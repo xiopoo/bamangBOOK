@@ -1,0 +1,57 @@
+name: 每日股市雷达（基本面）
+
+on:
+  schedule:
+    # UTC 13:00 ≈ 北京时间 21:00 盘后汇总。修改时区用 cron 表达式。
+    - cron: '0 13 * * *'
+  workflow_dispatch: {}   # 允许在 Actions 页面手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装 stock-radar 依赖
+        run: pip install -r stock-radar/requirements.txt
+
+      - name: 运行每日基本面采集
+        env:
+          # 可选：填入 LLM API Key 以启用 AI 精选；缺省则降级为规则引擎
+          OPENAI_API_KEY: ${{ secrets.RADAR_LLM_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.RADAR_LLM_BASE_URL }}
+          RADAR_LLM_MODEL: ${{ secrets.RADAR_LLM_MODEL }}
+        run: python3 scripts/run_radar_daily.py --session evening
+
+      - name: 提交更新后的数据库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain stock-radar/data/radar.db)" ]; then
+            git add stock-radar/data/radar.db
+            git commit -m "chore(radar): 每日基本面日报 $(date -u +%Y-%m-%d)"
+            git push
+            echo "已提交并推送 radar.db，Vercel 将自动重新部署。"
+          else
+            echo "无新增日报数据，跳过提交。"
+          fi
+
+      # 可选兜底：若你的 Vercel 未绑定本仓库自动部署，可创建一个 Deploy Hook，
+      # 将其 URL 存入仓库 Secret「VERCEL_DEPLOY_HOOK」，取消下面注释即可触发部署。
+      # - name: 触发 Vercel 部署（兜底）
+      #   if: ${{ env.VERCEL_DEPLOY_HOOK != '' }}
+      #   env:
+      #     VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+      #   run: curl -X POST "$VERCEL_DEPLOY_HOOK"

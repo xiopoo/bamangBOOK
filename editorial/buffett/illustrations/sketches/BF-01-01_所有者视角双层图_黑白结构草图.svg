@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">BF-01-01_所有者视角双层图_黑白结构精绘</title><desc id="desc">股票凭证——企业现金流与股东权利</desc>
+    <style>
+    text{font-family:"PingFang SC","Noto Sans CJK SC",sans-serif;fill:#111;}
+    .title{font-size:28px;font-weight:700;}
+    .subtitle{font-size:15px;fill:#555;}
+    .label{font-size:18px;font-weight:600;}
+    .small{font-size:15px;}
+    .tiny{font-size:12px;fill:#555;}
+    .box{fill:#111;stroke:#111;stroke-width:2;}
+    .brand{fill:#111;stroke:#111;stroke-width:3;}
+    .brand-fill{fill:#111;fill:#f2f2f2;stroke:#111;stroke-width:2;}
+    .brand-solid{fill:#e6e6e6;stroke:#111;stroke-width:2;}
+    .soft{fill:#f2f2f2;stroke:#111;stroke-width:1.5;}
+    .line{fill:none;stroke:#111;stroke-width:2;}
+    .brand-line{fill:none;stroke:#111;stroke-width:3;}
+    .dash{fill:none;stroke:#666;stroke-width:1.5;stroke-dasharray:7 6;}
+    .brand-text{fill:#111;font-weight:700;}
+  </style>
+  <rect width="1200" height="800" fill="#fff"/>
+<rect x="0" y="0" width="12" height="800" fill="#111"/>
+  <text x="60" y="60" class="title">买入股票，真正买到的是什么？</text>
+  <text x="60" y="88" class="subtitle">从报价器退后一步：上层是可交易凭证，下层是企业的经济实质与所有者权利</text>
+  <!-- 上层：股票凭证 -->
+  <rect x="360" y="140" width="480" height="190" rx="14" class="brand"/>
+  <text x="600" y="195" text-anchor="middle" class="label brand-text">交 易 屏 上 的 股 票 凭 证</text>
+  <line x1="400" y1="230" x2="800" y2="230" class="brand-line"/>
+  <text x="600" y="260" text-anchor="middle" class="small">价格 · 涨跌 · 代码 · 市值</text>
+  <text x="600" y="290" text-anchor="middle" class="tiny">市场只提供交易条件，不回答价值</text>
+  <!-- 下降箭头 -->
+  <line x1="600" y1="330" x2="600" y2="410" class="brand-line" marker-end="url(#arrow)"/>
+  <text x="620" y="380" class="brand-text" style="font-size:14px;">穿透凭证</text>
+  <!-- 下层：左右两栏 -->
+  <rect x="120" y="430" width="460" height="290" rx="10" class="brand-fill"/>
+  <text x="350" y="475" text-anchor="middle" class="label">企 业 的 现 金 流 实 质</text>
+  <rect x="160" y="500" width="380" height="52" rx="5" class="box"/>
+  <text x="350" y="532" text-anchor="middle" class="small">经营利润 − 维护性资本支出</text>
+  <rect x="160" y="568" width="380" height="52" rx="5" class="box"/>
+  <text x="350" y="600" text-anchor="middle" class="small">留存收益 − 再投资回报 ≥ 资本成本</text>
+  <rect x="160" y="636" width="380" height="52" rx="5" class="box"/>
+  <text x="350" y="668" text-anchor="middle" class="small">最终释放出来可供分配的现金</text>
+
+  <rect x="620" y="430" width="460" height="290" rx="10" class="brand-fill"/>
+  <text x="850" y="475" text-anchor="middle" class="label">作 为 所 有 者 的 权 利</text>
+  <rect x="660" y="500" width="380" height="52" rx="5" class="box"/>
+  <text x="850" y="532" text-anchor="middle" class="small">① 现金流的剩余索取权</text>
+  <rect x="660" y="568" width="380" height="52" rx="5" class="box"/>
+  <text x="850" y="600" text-anchor="middle" class="small">② 选举董事与重大事项投票</text>
+  <rect x="660" y="636" width="380" height="52" rx="5" class="box"/>
+  <text x="850" y="668" text-anchor="middle" class="small">③ 五年不开市，价值仍然存在</text>
+
+  <text x="60" y="760" class="tiny">核心：证券分析从企业部分所有权出发——交易价格只是入场与离场的条件｜黑白结构草图</text>
+</svg>

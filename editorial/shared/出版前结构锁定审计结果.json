@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-07-30T23:11:20.027Z",
+  "ok": true,
+  "structure": {
+    "buffettParts": 5,
+    "buffettChapters": 15,
+    "mungerParts": 5,
+    "mungerChapters": 16,
+    "buffettBudget": 323000,
+    "mungerBudget": 289000
+  },
+  "coverage": {
+    "rows": 700,
+    "archiveRows": 700,
+    "withoutDestination": 0,
+    "originalGradeD": 108,
+    "manuallyReviewedNonDuplicateD": 94,
+    "reviewGrades": {
+      "B": 41,
+      "C": 43,
+      "D": 10
+    }
+  },
+  "samples": {
+    "buffettCharacters": 9063,
+    "mungerCharacters": 8585,
+    "checkedPrimaryQuotes": 4
+  },
+  "links": {
+    "externalLinks": 0,
+    "emptyLinks": 0,
+    "registeredTargets": 94,
+    "definedTargets": 74,
+    "reservedTargets": 20,
+    "unregisteredTargets": 0
+  },
+  "sketches": {
+    "svg": 6,
+    "png": 6,
+    "clickableExternalLinks": 0,
+    "brandRedUses": 0
+  },
+  "errors": [],
+  "warnings": []
+}

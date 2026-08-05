@@ -11,7 +11,7 @@
 .ledger > div:last-child { border-right: 0; }
 .ledger strong { color: var(--archive-oxblood); font-size: 1.45rem; font-weight: 600; }
 .ledger span, .indexes small { color: var(--archive-ink-faint); font-family: var(--archive-sans); font-size: .67rem; }
-.indexes { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 3px double var(--archive-rule); }
+.indexes { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 3px double var(--archive-hairline); }
 .indexes > a { min-height: 5.5rem; padding: 1.2rem 0; display: grid; grid-template-columns: 2.5rem 1fr auto; align-items: center; gap: 1rem; color: var(--archive-ink); border-bottom: 1px solid var(--archive-rule-soft); }
 .indexes > a:nth-child(odd) { padding-right: 1.5rem; border-right: 1px solid var(--archive-rule-soft); }
 .indexes > a:nth-child(even) { padding-left: 1.5rem; }

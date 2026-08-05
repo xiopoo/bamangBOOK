@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">MG-06-01 双轨检查清单</title>
+  <desc id="desc">事实轨与心理轨并行，最后过一道反证门。；黑白结构草图版，仅用于信息关系确认。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif; fill: #111; }
+    .title { font-size: 28px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #555; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 14px; }
+    .tiny { font-size: 13px; fill: #555; }
+    .box { fill: #fff; stroke: #111; stroke-width: 2; }
+    .soft { fill: #f2f2f2; stroke: #111; stroke-width: 1.5; }
+    .line { fill: none; stroke: #111; stroke-width: 2.5; }
+    .note { font-size: 15px; fill: #111; font-weight: 600; }
+  </style>
+  <rect width="1280" height="720" fill="#fff"/>
+  <text x="55" y="58" class="title">双轨检查清单</text>
+  <text x="55" y="86" class="subtitle">事实与心理两条轨道并行，最后过一道反证门</text>
+
+  <!-- 事实轨 -->
+  <text x="330" y="150" text-anchor="middle" class="label">① 事实轨</text>
+  <rect x="220" y="175" width="220" height="80" rx="10" class="box"/>
+  <rect x="220" y="295" width="220" height="80" rx="10" class="box"/>
+  <rect x="220" y="415" width="220" height="80" rx="10" class="box"/>
+  <text x="330" y="213" text-anchor="middle" class="small">证据是否齐全</text>
+  <text x="330" y="235" text-anchor="middle" class="tiny">有没有遗漏的事实</text>
+  <text x="330" y="333" text-anchor="middle" class="small">基础率是多少</text>
+  <text x="330" y="355" text-anchor="middle" class="tiny">同类事情通常怎么走</text>
+  <text x="330" y="453" text-anchor="middle" class="small">反面证据在哪</text>
+  <text x="330" y="475" text-anchor="middle" class="tiny">主动找反例</text>
+
+  <!-- 心理轨 -->
+  <text x="950" y="150" text-anchor="middle" class="label">② 心理轨</text>
+  <rect x="840" y="175" width="220" height="80" rx="10" class="box"/>
+  <rect x="840" y="295" width="220" height="80" rx="10" class="box"/>
+  <rect x="840" y="415" width="220" height="80" rx="10" class="box"/>
+  <text x="950" y="213" text-anchor="middle" class="small">哪种偏误在起作用</text>
+  <text x="950" y="235" text-anchor="middle" class="tiny">确认偏差、锚定、损失厌恶…</text>
+  <text x="950" y="333" text-anchor="middle" class="small">激励指向哪里</text>
+  <text x="950" y="355" text-anchor="middle" class="tiny">什么在被奖励</text>
+  <text x="950" y="453" text-anchor="middle" class="small">情绪是否过热</text>
+  <text x="950" y="475" text-anchor="middle" class="tiny">嫉妒、贪婪、恐惧</text>
+
+  <!-- 汇合 -->
+  <line x1="330" y1="500" x2="560" y2="568" class="line"/>
+  <line x1="950" y1="500" x2="720" y2="568" class="line"/>
+  <rect x="470" y="555" width="340" height="70" rx="10" fill="#111"/>
+  <text x="640" y="593" text-anchor="middle" class="small" fill="#fff">反证门：两条轨道都过</text>
+  <text x="640" y="613" text-anchor="middle" class="tiny" fill="#f2e6e9">放行前先问：哪一条证据会推翻我</text>
+
+  <text x="640" y="672" text-anchor="middle" class="note">聪明人评估任何重要的事，都同时沿两条轨道进行。</text>
+  <text x="1256" y="702" text-anchor="end" class="tiny">MG-06-01｜结构草图</text>
+</svg>

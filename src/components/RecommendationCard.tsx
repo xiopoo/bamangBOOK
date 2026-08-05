@@ -39,11 +39,8 @@ export function RecommendationCard({ item }: RecommendationCardProps) {
   const getTypeColor = () => {
     switch (item.type) {
       case 'concept':
-        return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
       case 'company':
-        return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
       case 'person':
-        return 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
       case 'letter':
         return 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light'
       default:
