@@ -3,11 +3,14 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getReport, listReports, RADAR_SECTION_META, type RadarItem } from '@/lib/radar'
 
-// 静态导出模式下，构建期无法保证存在雷达数据库，
-// 允许无参数时导出空页面（运行时数据由本地生成后填充）。
+// 静态导出（output: export）模式下，动态段必须有 generateStaticParams。
+// 构建环境（Vercel/CI）不保证存在雷达数据库，也不保证 python3 可用，
+// 此时返回空列表避免外部进程调用失败导致 Next 判定其为缺失而中断构建。
+// 本地构建/预览时读取真实数据生成对应日期的静态页。
 export const dynamicParams = false
 
 export function generateStaticParams() {
+  if (process.env.VERCEL || process.env.CI) return []
   try {
     const data = listReports(120)
     return Object.keys(data.by_date).map(date => ({ date }))
