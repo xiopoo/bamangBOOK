@@ -30,7 +30,6 @@ export default function HomePage() {
   const featuredCompany = companyStudies[0]
 
   const dailyQuotes = getAllDailyQuotes()
-  const dailyDateISO = new Date().toISOString().slice(0, 10)
 
   const drawers = [
     { href: '/letters', number: letterCount, label: '巴菲特信件', meta: '合伙人信与伯克希尔股东信', description: '按年份连续阅读，观察一种投资方法怎样在真实决策中形成。' },
@@ -47,7 +46,7 @@ export default function HomePage() {
       <PageContainer maxWidth="7xl" className="study-home study-home--refined">
         <section className="study-hero study-hero--refined study-hero--daily">
           <p className="study-label study-label--daily">每日一句 · 来自原文</p>
-          <DailyQuotePanel quotes={dailyQuotes} initialDateISO={dailyDateISO} />
+          <DailyQuotePanel quotes={dailyQuotes} />
           <div className="study-hero__copy">
             <h1>读巴菲特和芒格，<br />先回到原文。</h1>
             <p className="study-hero__lede">

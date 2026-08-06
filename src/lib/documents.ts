@@ -95,3 +95,31 @@ export function getCategoryTitle(category: DocumentCategory): string {
 export function getCategoryIcon(category: DocumentCategory): string {
   return categories[category].icon
 }
+
+export interface AdjacentDocument {
+  prev: DocumentItem | null
+  next: DocumentItem | null
+}
+
+/**
+ * 按年份排序（无年份的排末尾），返回与给定 fileName 相邻的上一篇/下一篇。
+ * 用于详情页底部的“上一封 / 下一封”导航。
+ */
+export function getAdjacentDocuments(category: DocumentCategory, fileName: string): AdjacentDocument {
+  const sorted = getDocuments(category)
+    .slice()
+    .sort((a, b) => {
+      const ya = a.year ?? Number.POSITIVE_INFINITY
+      const yb = b.year ?? Number.POSITIVE_INFINITY
+      if (ya !== yb) return ya - yb
+      return a.fileName.localeCompare(b.fileName)
+    })
+
+  const idx = sorted.findIndex(d => d.fileName === fileName || d.fileName.replace(/\.md$/, '') === fileName)
+  if (idx === -1) return { prev: null, next: null }
+
+  return {
+    prev: idx > 0 ? sorted[idx - 1] : null,
+    next: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+  }
+}

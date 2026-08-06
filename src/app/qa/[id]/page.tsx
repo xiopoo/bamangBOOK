@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { getDocumentByFileName, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
+import { getDocumentByFileName, getCategoryTitle, getCategoryIcon, getAdjacentDocuments } from '@/lib/documents'
 import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
@@ -53,6 +53,10 @@ export default function QADetailPage({ params }: PageProps) {
     notFound()
   }
 
+  const { prev, next } = getAdjacentDocuments('qa', fileName)
+  const prevHref = prev ? `/qa/${encodeURIComponent(prev.fileName.replace(/\.md$/, ''))}` : null
+  const nextHref = next ? `/qa/${encodeURIComponent(next.fileName.replace(/\.md$/, ''))}` : null
+
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
       <JsonLd data={breadcrumbJsonLd([
@@ -89,6 +93,36 @@ export default function QADetailPage({ params }: PageProps) {
           <ArticleTableOfContents />
         </div>
       </div>
+
+      {/* —— 上下篇（相邻问答）导航：复用股东信阅读规范样式 —— */}
+      <nav className="reading-nav-pair reading-adjacent" aria-label="相邻股东大会问答导航">
+        {prev ? (
+          <Link href={prevHref!} className="nav-prev" rel="prev">
+            <span className="reading-adjacent__label">‹ 上一封</span>
+            <span className="reading-adjacent__title">
+              {prev.year ? `${prev.year}年 · ` : ''}{prev.title}
+            </span>
+          </Link>
+        ) : (
+          <span className="nav-pair-btn nav-prev" aria-disabled>
+            <span className="reading-adjacent__label">已是最早一封</span>
+            <span className="reading-adjacent__title">更早的问答</span>
+          </span>
+        )}
+        {next ? (
+          <Link href={nextHref!} className="nav-next" rel="next">
+            <span className="reading-adjacent__label">下一封 ›</span>
+            <span className="reading-adjacent__title">
+              {next.year ? `${next.year}年 · ` : ''}{next.title}
+            </span>
+          </Link>
+        ) : (
+          <span className="nav-pair-btn nav-next" aria-disabled>
+            <span className="reading-adjacent__label">已是最新一封</span>
+            <span className="reading-adjacent__title">后续年度会持续整理</span>
+          </span>
+        )}
+      </nav>
 
       <RelatedArticles source="qa" fileName={fileName} />
 
