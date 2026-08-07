@@ -6,7 +6,7 @@ const footerLinks = [
   { href: '/business-history', label: '公司研究' },
   { href: '/concepts', label: '投资方法' },
   { href: '/reading', label: '全部内容' },
-  { href: '/bound-edition', label: '电子合订本' },
+  { href: '/bound-edition', label: '巴芒文集' },
   { href: '/search', label: '全站搜索' },
 ]
 
@@ -44,7 +44,7 @@ export default function PageFooter() {
               我把网站材料整理、校订成一套可以从头读到尾的书——每卷 99 元，微信确认后发送完整 PDF。
             </p>
             <Link href="/bound-edition" className="archive-button archive-button--solid archive-footer__support-cta">
-              查看电子合订本
+              查看巴芒文集
             </Link>
             <div className="archive-footer__support-links">
               {aboutLinks.map(link => (

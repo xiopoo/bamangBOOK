@@ -5,7 +5,7 @@ import PageContainer from '@/components/PageContainer'
 
 export const metadata = {
   title: '已购内容',
-  description: '查看已购合订本、版本与阅读入口。',
+  description: '查看已购巴芒文集、版本与阅读入口。',
   alternates: { canonical: '/my-study' },
   robots: { index: false, follow: false },
 }
@@ -19,14 +19,14 @@ export default function MyStudyPage() {
           <header>
             <p className="study-label">我的内容</p>
             <h1>已购内容</h1>
-            <p>已购合订本、当前版本与阅读入口会集中保存在这里。</p>
+            <p>已购巴芒文集、当前版本与阅读入口会集中保存在这里。</p>
           </header>
           <section className="account-empty">
             <div className="account-empty__mark"><BookOpen size={26} /></div>
-            <h2>这里还没有合订本</h2>
+            <h2>这里还没有巴芒文集</h2>
             <p>不购买也可以继续阅读网站上的全部免费内容。购买后，只会获得对应产品的独立访问权益。</p>
             <div>
-              <Link href="/bound-edition" className="archive-button archive-button--solid">查看合订本 <ArrowRight size={16} /></Link>
+              <Link href="/bound-edition" className="archive-button archive-button--solid">查看巴芒文集 <ArrowRight size={16} /></Link>
               <Link href="/reading" className="archive-button">继续浏览免费内容</Link>
             </div>
           </section>

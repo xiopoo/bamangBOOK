@@ -9,7 +9,7 @@ export type Product = {
   price: number
   currency: 'CNY'
   version: string
-  deliveryType: 'PDF'
+  deliveryType: 'EPUB' | 'PDF'
   pages: number
   coverVariant: 'buffett' | 'munger'
   yearRange: string
@@ -20,32 +20,32 @@ export const products: Record<ProductSlug, Product> = {
   'buffett-collection': {
     id: 'prod_buffett_collection',
     slug: 'buffett-collection',
-    title: '《所有者的眼光》',
-    subtitle: '巴菲特论企业、资本与长期复利',
-    shortTitle: '巴菲特卷',
+    title: '《巴菲特文集》',
+    subtitle: '人物 · 合伙 · 股东信 · 年会 · 写作 · 演讲 · 访谈',
+    shortTitle: '巴菲特文集',
     price: 99,
     currency: 'CNY',
-    version: '2026年8月终稿版',
-    deliveryType: 'PDF',
-    pages: 400,
+    version: '精读编排版',
+    deliveryType: 'EPUB',
+    pages: 760,
     coverVariant: 'buffett',
     yearRange: '1956—2025',
-    description: '沿着巴菲特六十年的公开记录，按「所有者起点—企业质量—人与制度—资本配置—风险与复利」五篇十五章，讲清他的投资方法如何形成与变化。',
+    description: '按七卷编排巴菲特六十年的公开记录：人生与事业、早期文章及合伙人信、伯克希尔股东信、股东大会问答、专题写作、公开演讲、访谈与课堂——每一篇标注原始出处、时间与背景。',
   },
   'munger-collection': {
     id: 'prod_munger_collection',
     slug: 'munger-collection',
-    title: '《理性的格栅》',
-    subtitle: '芒格论思维模型、商业判断与人生智慧',
-    shortTitle: '芒格卷',
+    title: '《芒格文集》',
+    subtitle: '人物 · 经典 · 实践 · 模型 · 品格 · 复习',
+    shortTitle: '芒格文集',
     price: 99,
     currency: 'CNY',
-    version: '2026年8月终稿版',
-    deliveryType: 'PDF',
-    pages: 360,
+    version: '精读编排版',
+    deliveryType: 'EPUB',
+    pages: 820,
     coverVariant: 'munger',
     yearRange: '1924—2023',
-    description: '从「一把锤子」的比喻出发，用十六章把芒格的多元思维模型、误判心理学与避错方法组织成一套可以实际使用的判断框架。',
+    description: '按十三卷编排芒格的思维与判断体系：人生与事业、《穷查理宝典》核心、Wesco与每日期刊实践、对话访谈、思维方法论、心理模型、商业判断、品格修炼，附232个模型身份溯源与主题索引。',
   },
 }
 

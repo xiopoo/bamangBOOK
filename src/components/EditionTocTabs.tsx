@@ -7,9 +7,9 @@ export type EditionTocBook = {
   index: string
   title: string
   sub: string
-  /* 巴菲特卷：五篇十五章 */
+  /* 巴菲特文集：七卷 */
   parts?: [string, string[]][]
-  /* 芒格卷：十六章平铺 */
+  /* 芒格文集：十三卷 */
   chapters?: string[]
   appendix: string
 }
@@ -48,17 +48,24 @@ export default function EditionTocTabs({ books }: { books: EditionTocBook[] }) {
         className="edition-toc__panel"
       >
         {book.parts ? (
-          book.parts.map(([part, chapters]) => (
-            <div key={part} className="edition-toc__part">
-              <h4>{part}</h4>
-              <ol>
-                {chapters.map(title => <li key={title}>{title}</li>)}
-              </ol>
-            </div>
-          ))
+          <div className="edition-toc__parts">
+            {book.parts.map(([part, chapters]) => (
+              <div key={part} className="edition-toc__part">
+                <h4>{part}</h4>
+                <ol>
+                  {chapters.map(title => <li key={title}>{title}</li>)}
+                </ol>
+              </div>
+            ))}
+          </div>
         ) : (
           <ol className="edition-toc__flat">
-            {book.chapters?.map(title => <li key={title}>{title}</li>)}
+            {book.chapters?.map((title, i) => (
+              <li key={title}>
+                <span className="edition-toc__n">{String(i + 1).padStart(2, '0')}</span>
+                {title}
+              </li>
+            ))}
           </ol>
         )}
         <p className="edition-toc__appendix">{book.appendix}</p>

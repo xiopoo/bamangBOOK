@@ -20,7 +20,7 @@ export default function ProductCover({ variant, title, yearRange, compact = fals
     <div
       className={`product-cover product-cover--${variant}${compact ? ' product-cover--compact' : ''}`}
       role="img"
-      aria-label={`${title}，${yearRange}，复利书房合订本封面`}
+      aria-label={`${title}，${yearRange}，复利书房巴芒文集封面`}
     >
       <Image
         src={coverImages[variant]}

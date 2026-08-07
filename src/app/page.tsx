@@ -147,15 +147,15 @@ export default function HomePage() {
 
         <section className="study-section study-editions study-editions--refined">
           <div className="study-editions__intro">
-            <p className="study-label">BOUND EDITION · 电子合订本</p>
+            <p className="study-label">BOUND EDITION · 巴芒文集</p>
             <h2>网站适合查，<br />电子书适合从头读。</h2>
-            <p>《所有者的眼光》与《理性的格栅》分别整理巴菲特和芒格的完整思想脉络。每卷 99 元，添加微信后人工发送 PDF。</p>
+            <p>《巴菲特文集》与《芒格文集》分别收录巴菲特和芒格的完整原始记录。每本 99 元，添加微信后人工发送 EPUB。</p>
             <Link href="/bound-edition" className="archive-button archive-button--solid">查看目录与实际页面 <ArrowRight size={17} /></Link>
           </div>
           <div className="study-editions__summary">
-            <article><span>01 · BUFFETT</span><h3>《所有者的眼光》</h3><p>企业、资本与长期复利</p></article>
-            <article><span>02 · MUNGER</span><h3>《理性的格栅》</h3><p>思维模型、商业判断与人生智慧</p></article>
-            <strong>99<small>元 / 卷</small></strong>
+            <article><span>01 · BUFFETT</span><h3>《巴菲特文集》</h3><p>人物 · 合伙 · 股东信 · 年会 · 写作 · 演讲 · 访谈</p></article>
+            <article><span>02 · MUNGER</span><h3>《芒格文集》</h3><p>人物 · 经典 · 实践 · 模型 · 品格 · 复习</p></article>
+            <strong>99<small>元 / 本</small></strong>
           </div>
         </section>
       </PageContainer>

@@ -24,6 +24,8 @@ export default function Page({ params }: { params: { slug: string } }) {
   const doc = getDYDoc('qa', params.slug)
   if (!doc) notFound()
 
+  const isPdfSource = doc.source && /\.pdf(\?|$)/i.test(doc.source)
+
   return (
     <PageContainer maxWidth="7xl">
       <ReadingProgress />
@@ -48,12 +50,35 @@ export default function Page({ params }: { params: { slug: string } }) {
               rel="noopener noreferrer"
               className="text-xs text-text-muted dark:text-dark-muted hover:text-primary"
             >
-              雪球原文 ↗
+              {isPdfSource ? '📄 查看 PDF 原文' : '雪球原文 ↗'}
             </a>
           )}
         </header>
 
-        <MarkdownContent content={doc.content} />
+        {isPdfSource && (
+          <div className="mb-8 rounded-lg border border-border dark:border-dark-border overflow-hidden bg-canvas-subtle dark:bg-dark-subtle">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-border dark:border-dark-border">
+              <span className="text-sm font-medium text-text dark:text-dark-text">PDF 在线阅读</span>
+              <a
+                href={doc.source!}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-primary dark:text-primary-light hover:underline"
+              >
+                全屏查看 ↗
+              </a>
+            </div>
+            <iframe
+              src={doc.source}
+              className="w-full border-0"
+              style={{ height: '80vh', minHeight: '600px' }}
+              title={doc.title}
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        <MarkdownContent content={doc.content} isQA />
       </article>
     </PageContainer>
   )

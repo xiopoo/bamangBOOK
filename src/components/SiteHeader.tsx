@@ -74,7 +74,7 @@ const navGroups = [
 ]
 
 const directLinks = [
-  { href: '/bound-edition', label: '合订本' },
+  { href: '/bound-edition', label: '巴芒文集' },
   { href: '/about', label: '关于' },
 ]
 
@@ -118,7 +118,7 @@ const mobileSections = [
     label: '阅读与购买',
     links: [
       { href: '/reading', label: '全部内容', meta: '按人物与类型浏览' },
-      { href: '/bound-edition', label: '电子合订本', meta: '微信购买 PDF' },
+      { href: '/bound-edition', label: '巴芒文集', meta: '微信购买 PDF' },
       { href: '/about', label: '关于', meta: '站点与作者' },
     ],
   },

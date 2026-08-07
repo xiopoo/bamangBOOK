@@ -49,14 +49,20 @@ export function getDocuments(category: DocumentCategory, personId?: string): Doc
   try {
     const documents: DocumentItem[] = JSON.parse(readFileSync(indexPath, 'utf-8'))
 
-    if (personId) {
-      return documents.filter(doc => {
-        const persons = Array.isArray(doc.person) ? doc.person : [doc.person]
-        return persons.includes(personId)
-      })
-    }
+    const filtered = personId
+      ? documents.filter(doc => {
+          const persons = Array.isArray(doc.person) ? doc.person : [doc.person]
+          return persons.includes(personId)
+        })
+      : documents
 
-    return documents
+    // 按年份倒序排列（最新在前），无年份的排末尾
+    return filtered.slice().sort((a, b) => {
+      const ya = a.year ?? Number.NEGATIVE_INFINITY
+      const yb = b.year ?? Number.NEGATIVE_INFINITY
+      if (ya !== yb) return yb - ya
+      return a.fileName.localeCompare(b.fileName)
+    })
   } catch {
     return []
   }

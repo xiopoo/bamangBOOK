@@ -2955,7 +2955,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.7rem;
 }
 
-/* 变现区块：研究者把资料做成书，自然带出合订本入口 */
+/* 变现区块：研究者把资料做成书，自然带出巴芒文集入口 */
 .archive-footer__byline {
   font-family: var(--archive-sans);
   color: var(--archive-oxblood);
@@ -4226,7 +4226,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* === 合订本销售页：新板块 === */
+/* === 巴芒文集销售页：新板块 === */
 
 /* Hero 关键数字 */
 .edition-hero__stats {
@@ -4357,8 +4357,17 @@ h1, h2, h3, h4, h5, h6 {
 .edition-toc__panel {
   padding: 1.5rem 0 0.4rem;
 }
+.edition-toc__parts {
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 1px solid var(--archive-rule);
+}
+.edition-toc__part {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+}
 .edition-toc__part + .edition-toc__part {
-  margin-top: 1.2rem;
+  margin-top: 0;
 }
 .edition-toc__part h4 {
   margin-bottom: 0.45rem;
@@ -4373,12 +4382,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 .edition-toc__flat {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.4rem 2rem;
+  gap: 0.6rem 2rem;
 }
-.edition-toc__part li,
-.edition-toc__flat li {
+.edition-toc__part li {
   color: var(--archive-ink);
   line-height: 1.7;
+}
+.edition-toc__flat li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--archive-paper-tint);
+  border-left: 3px solid var(--archive-gold);
+  border-radius: 0 4px 4px 0;
+  color: var(--archive-ink);
+  line-height: 1.65;
+  font-size: 0.88rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.edition-toc__flat li:hover {
+  border-left-color: var(--archive-oxblood);
+  background: #fdf7f0;
+}
+.edition-toc__n {
+  flex-shrink: 0;
+  color: var(--archive-gold);
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-top: 0.05rem;
 }
 .edition-toc__appendix {
   margin-top: 1.4rem;
@@ -4389,6 +4423,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--archive-sans);
   font-size: 0.8rem;
   line-height: 1.9;
+}
+
+/* 目录：移动端单栏回退 */
+@media (max-width: 640px) {
+  .edition-toc__parts {
+    column-count: 1;
+    column-rule: none;
+  }
+  .edition-toc__flat {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 实际页面预览 */

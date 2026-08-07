@@ -129,7 +129,7 @@ export function getPartnershipYearGroups(): YearGroup[] {
       year,
       letters: sortPartnershipLetters(groupLetters),
     }))
-    .sort((a, b) => a.year - b.year)
+    .sort((a, b) => b.year - a.year)
 }
 
 export function getPartnershipCount(): number {
@@ -156,7 +156,7 @@ export function getShareholderLetters(startYear = 1965): ShareholderLetter[] {
     .filter((f) => f.endsWith('.md'))
     .map((file) => ({ year: parseShareholderYear(file), filename: file }))
     .filter((l) => l.year >= startYear)
-    .sort((a, b) => a.year - b.year)
+    .sort((a, b) => b.year - a.year)
 }
 
 export function getShareholderCount(startYear = 1965): number {

@@ -20,7 +20,7 @@ export default function OrdersPage() {
             <div className="account-empty__mark"><ReceiptText size={26} /></div>
             <h2>暂无订单</h2>
             <p>支付功能开放后，已创建、待支付、已付款与已退款订单都会保留在这里。</p>
-            <Link href="/bound-edition" className="archive-button">查看合订本 <ArrowRight size={16} /></Link>
+            <Link href="/bound-edition" className="archive-button">查看巴芒文集 <ArrowRight size={16} /></Link>
           </section>
         </main>
       </PageContainer>

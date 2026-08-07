@@ -23,7 +23,7 @@ export interface MungerOriginalDetail extends MungerOriginalItem {
 }
 
 export function getMungerOriginals(): MungerOriginalItem[] {
-  return [...(originalsIndex as MungerOriginalItem[])].sort((a, b) => a.year - b.year)
+  return [...(originalsIndex as MungerOriginalItem[])].sort((a, b) => b.year - a.year)
 }
 
 export function getMungerOriginalById(id: string): MungerOriginalDetail | null {

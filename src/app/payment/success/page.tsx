@@ -12,7 +12,7 @@ export default function PaymentSuccessPage() {
         <div className="payment-result__icon"><Clock3 size={30} /></div>
         <p className="study-label">PAYMENT STATUS · 支付状态</p>
         <h1>支付正在确认，请不要重复付款</h1>
-        <p>系统只会在服务端验证支付结果后发放对应产品权益。确认完成后，合订本会自动出现在“已购内容”。</p>
+        <p>系统只会在服务端验证支付结果后发放对应产品权益。确认完成后，巴芒文集会自动出现在“已购内容”。</p>
         <dl>
           <div><dt>订单编号</dt><dd>确认后显示</dd></div>
           <div><dt>支付金额</dt><dd>以订单为准</dd></div>

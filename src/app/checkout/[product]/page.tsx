@@ -22,7 +22,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
     <div className="checkout-shell">
       <header className="checkout-header"><Logo /><span><LockKeyhole size={15} />独立安全结账</span></header>
       <main className="checkout-card">
-        <Link href="/bound-edition" className="checkout-back"><ArrowLeft size={15} />返回合订本</Link>
+        <Link href="/bound-edition" className="checkout-back"><ArrowLeft size={15} />返回巴芒文集</Link>
         <div className="checkout-title"><p className="study-label">CHECKOUT · 结账</p><h1>购买{product.title}</h1></div>
 
         <section className="checkout-summary">
@@ -55,10 +55,10 @@ export default function CheckoutPage({ params }: { params: { product: string } }
         <section className="checkout-block checkout-manual">
           <div className="checkout-block__heading"><span>03</span><div><h2>当前购买方式</h2><p>在线收银台启用前，可通过客服确认产品与交付。</p></div></div>
           <div className="checkout-manual__content">
-            <Image src="/qrcode.jpeg" alt="微信公众号“金家岭小胖”二维码" width={132} height={132} />
+            <Image src="/qrcode.jpeg" alt="微信公众号"金家岭小胖"二维码" width={132} height={132} />
             <div>
-              <strong>扫码联系“复利书房主理人”</strong>
-              <p>关注微信公众号“金家岭小胖”，发送“合订本 + {product.shortTitle}”。客服会在付款前再次确认价格、版本、PDF 交付方式、更新范围与退款条件。</p>
+              <strong>扫码联系"复利书房主理人"</strong>
+              <p>关注微信公众号"金家岭小胖"，发送"巴芒文集 + {product.shortTitle}"。客服会在付款前再次确认价格、版本、EPUB 交付方式、更新范围与退款条件。</p>
               <small>请勿向非官方页面提交付款信息；当前页面不会收集银行卡资料。</small>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
         <section className="checkout-delivery">
           <h2><ShieldCheck size={18} />交付与服务</h2>
           <ul>
-            <li>客服购买按付款前书面确认的方式交付 PDF；在线收银台启用后，已购产品才会自动进入“已购内容”。</li>
+            <li>客服购买按付款前书面确认的方式交付 {product.deliveryType}；在线收银台启用后，已购产品才会自动进入"已购内容"。</li>
             <li>交付形式：{product.deliveryType} 文件；当前版本：{product.version}。</li>
             <li>是否包含后续版本更新，将以购买时订单摘要为准。</li>
           </ul>
@@ -76,7 +76,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
             <Link href="/terms">服务条款</Link>
             <Link href="/privacy">隐私政策</Link>
           </div>
-          <p><MessageCircle size={16} />客服：微信公众号“金家岭小胖”</p>
+          <p><MessageCircle size={16} />客服：微信公众号"金家岭小胖"</p>
         </section>
       </main>
     </div>

@@ -7,33 +7,32 @@ import EditionTocTabs, { type EditionTocBook } from '@/components/EditionTocTabs
 import JsonLd from '@/components/JsonLd'
 import { products } from '@/lib/commerce'
 
-/* 巴菲特卷：五篇十五章 */
+/* 巴菲特文集：七卷 */
 const buffettOutline: [string, string[]][] = [
-  ['第一篇　所有者的起点', ['第一章 股票背后是一家企业', '第二章 价值不在报价屏上', '第三章 穿过会计看所有者收益']],
-  ['第二篇　好企业如何创造价值', ['第四章 安全边际与能力圈', '第五章 伯克希尔纺织：便宜为何仍会昂贵', '第六章 喜诗糖果：企业质量改变资本配置', '第七章 护城河必须经得住时间']],
-  ['第三篇　人与制度', ['第八章 选择经理人：能力、精力与正直', '第九章 信任、声誉与去中心化']],
-  ['第四篇　资本配置', ['第十章 经理人的第二项工作', '第十一章 回购、收购与价格纪律', '第十二章 浮存金：资本优势不是免费午餐']],
-  ['第五篇　风险、时间与复利', ['第十三章 风险不是一条波动曲线', '第十四章 现金与恐慌中的选择权', '第十五章 把个人判断变成可传承的复利制度']],
+  ['第一卷　理解巴菲特：人生、选择与伯克希尔', ['沃伦·巴菲特人物生平', '本杰明·格雷厄姆与菲利普·费雪', '查理·芒格：事业合伙人', '伯克希尔·哈撒韦的演变']],
+  ['第二卷　起点与方法：早期文章及合伙人信', ['早期文章与投资备忘录', '巴菲特合伙人信（1957—1970）']],
+  ['第三卷　资本配置主线：伯克希尔股东信', ['股东信全文（1965—2025）', '按主题分类的股东信节选']],
+  ['第四卷　原则的现场检验：伯克希尔股东大会', ['股东大会问答文字记录（1994—2025）']],
+  ['第五卷　专题写作：商业、市场与管理备忘录', ['商业与管理', '市场与价格', '公司治理与信托责任']],
+  ['第六卷　公开演讲：投资、职业与人生', ['大学演讲与课堂', '年会与专业论坛', '公开访谈与对话']],
+  ['第七卷　访谈与课堂：在具体问题中思考', ['财经媒体深度访谈', '商学院与学生问答', '纪录片与专题采访']],
 ]
 
-/* 芒格卷：十六章 */
+/* 芒格文集：十三卷 */
 const mungerOutline = [
-  '第一章 一把锤子为什么不够',
-  '第二章 多元思维模型怎样连成知识格栅',
-  '第三章 终身学习：让模型保持活性',
-  '第四章 概率：把故事变成可以检验的判断',
-  '第五章 逆向：先问怎样会失败',
-  '第六章 反证、检查清单与第二次思考',
-  '第七章 误判不是偶然：心理倾向的系统',
-  '第八章 激励：制度比劝诫更诚实',
-  '第九章 群体、权威与被剥夺感',
-  '第十章 当偏误彼此增强',
-  '第十一章 穿过会计看商业现实',
-  '第十二章 好企业让少行动成为优势',
-  '第十三章 少数机会、集中下注与资本配置',
-  '第十四章 应得信任：合作如何降低摩擦',
-  '第十五章 避免惯常的失败方式',
-  '第十六章 理性近乎一种道德义务',
+  '第一卷　理解芒格：人生、事业与精神坐标',
+  '第二卷　核心经典：《穷查理宝典》',
+  '第三卷　实践现场：Wesco 股东大会',
+  '第四卷　晚年智慧：每日期刊年会',
+  '第五卷　对话与访谈：在具体问题中思考',
+  '第六卷　方法论：学习、思考与避免愚蠢',
+  '第七卷　数量思维：数学、概率与不确定性',
+  '第八卷　人类误判：心理倾向与叠加效应',
+  '第九卷　商业世界：经济学、竞争优势与管理',
+  '第十卷　投资判断：会计、金融与资本配置',
+  '第十一卷　系统世界：科学、工程与复杂性',
+  '第十二卷　长期品格：历史、法律、哲学与自我修炼',
+  '第十三卷　主题索引：语录与复习入口',
 ]
 
 /* 两卷目录：标签页切换展示 */
@@ -41,76 +40,76 @@ const tocBooks: EditionTocBook[] = [
   {
     id: 'buffett',
     index: '01',
-    title: '《所有者的眼光》',
-    sub: '五篇十五章：从买什么，到如何长期持有',
+    title: '《巴菲特文集》',
+    sub: '七卷：人物 · 合伙信 · 股东信 · 年会 · 写作 · 演讲 · 访谈',
     parts: buffettOutline,
-    appendix: '附录：术语表与案例索引 · 读者与复核检查清单 · 模型身份对照　｜　典藏：人物索引 · 企业索引 · 思想与制度年表 · 概念·问题·案例总索引',
+    appendix: '附录：人物索引 · 企业索引 · 编年大事记 · 主题交叉索引',
   },
   {
     id: 'munger',
     index: '02',
-    title: '《理性的格栅》',
-    sub: '十六章：从一把锤子，到理性与避错',
+    title: '《芒格文集》',
+    sub: '十三卷：人物 · 经典 · 实践 · 模型 · 品格 · 复习',
     chapters: mungerOutline,
-    appendix: '附录：模型身份与思想源流对照表（232 个模型）· 双轨判断检查清单 5 组 · 25 种心理倾向速查表　｜　典藏：芒格年表 1924—2023 · 关键人物与关键企业索引 · 概念·问题·案例索引',
+    appendix: '附录：232个模型身份溯源 · 关键人物索引 · 芒格年表 · 主题交叉索引',
   },
 ]
 
 const heroStats = [
-  ['31', '章'],
-  ['约 60', '万字'],
-  ['38', '张原创插图'],
-  ['6', '份附录'],
-  ['7', '份典藏索引'],
+  ['20', '卷'],
+  ['约 110', '万字'],
+  ['1580', '页'],
+  ['232', '个模型溯源'],
+  ['2', '部电子书'],
 ]
 
 const buffettPoints = [
-  '所有者视角：买入的是企业的一部分，不是报价符号',
-  '企业质量：护城河、经济商誉与资本需要如何经得住时间',
-  '资本配置：经理人的第二项工作——回购、收购与浮存金',
-  '风险与复利：把个人判断变成可以传承的制度',
+  '七卷系统编排：从人物生平到底层记录，按主题而非时间线组织',
+  '原始资料汇编：合伙人信、股东信、股东大会、演讲、访谈全文收录',
+  '标注来源与年份：每篇文章标明原作者、出处与时间，可交叉检索',
+  '精读编排：去除重复与冗余，保留原文语境，适合从头读到尾',
 ]
 
 const mungerPoints = [
-  '多元思维模型：不同学科怎样连成一张可以用的知识格栅',
-  '误判心理学：25 种心理倾向如何系统性地扭曲判断',
-  '逆向与检查清单：先问怎样会失败，再用程序对抗犯错',
-  '理性与避错：为什么理性近乎一种道德义务',
+  '十三卷完整体系：人物、经典、实践、模型、品格五大板块',
+  '多元思维模型全收录：232个模型逐一身份溯源与来源标注',
+  '实践现场：Wesco与每日期刊股东大会全文，补充《穷查理宝典》之后的新材料',
+  '主题索引：按概念、人物、企业、模型多维度交叉检索',
 ]
 
-/* 实际页面预览：从终稿 PDF 抽取的代表页 */
+/* 实际页面预览：从电子书抽取的代表页 */
 const buffettPreviews = [
-  { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '米白纸底配品牌玫红，中部复利曲线原创主图，系列名、书名与副题同页呈现。' },
-  { img: '/ebook-previews/buffett-p03.png', title: '目录', desc: '五篇 15 章两级目录，点线引导页码，附录与典藏索引并列入口。' },
-  { img: '/ebook-previews/buffett-p13.png', title: '第一章开头', desc: '篇目信息、核心问题与原创插图同页呈现，引文来源逐条标注。' },
+  { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '米白纸底配品牌玫红，七卷结构一目了然，书名列于封面正下方。' },
+  { img: '/ebook-previews/buffett-p03.png', title: '目录', desc: '七卷两级目录，标注各卷所含文章篇目与来源年份。' },
+  { img: '/ebook-previews/buffett-p13.png', title: '股东信正文', desc: '全文收录伯克希尔股东信，原文语境保留，来源逐条标注。' },
 ]
 const mungerPreviews = [
-  { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特卷同系列同版式，中部思维格栅原创主图，两卷并排观感统一。' },
-  { img: '/ebook-previews/munger-p03.png', title: '目录', desc: '16 章加附录与典藏索引，232 个模型对照、25 种心理倾向速查在内。' },
-  { img: '/ebook-previews/munger-p04.png', title: '第一章开头', desc: '开卷即 1994 年南加大演讲，配图解《单一锤子与多模型视野》。' },
+  { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特文集同系列版式，十三卷结构列于封面下方。' },
+  { img: '/ebook-previews/munger-p03.png', title: '目录', desc: '十三卷目录，含232个模型身份溯源表与主题索引入口。' },
+  { img: '/ebook-previews/munger-p04.png', title: '穷查理宝典', desc: '直接收录《穷查理宝典》核心章节，保留原始版本语境。' },
 ]
 
 const craftItems = [
-  ['01', '引文逐条标注来源与年份', '区分原文、翻译与编辑整理，不把归纳表述当作原话。'],
-  ['02', '全卷术语统一', '浮存金、护城河、安全边际、所有者收益等关键概念，全书口径一致，可交叉检索。'],
-  ['03', '观点覆盖可核验', '巴菲特观点原子库 100% 覆盖，芒格 96.7%；概念条目 67/67，232 个思维模型逐一身份溯源。'],
-  ['04', '双版本交付', '连续阅读版剔除证据展开层；证据段版保留出版可选扩展层，供有研究需要的读者使用。'],
-  ['05', '持续修订', '发现错误持续更正，不隐藏尚未核验的不确定性。'],
+  ['01', '全文收录原始记录', '合伙人信、股东信、股东大会问答、演讲、访谈等全文收录，不删减原文内容。'],
+  ['02', '逐篇标注来源与年份', '每篇文章标注原作者、出处、年份与背景，区分原文与编者注释。'],
+  ['03', '按主题而非时间线编排', '巴菲特按七卷主题编排，芒格按十三卷体系编排，适合系统阅读而非零散检索。'],
+  ['04', '附交叉索引与检索入口', '人物索引、企业索引、编年大事记、模型身份溯源表，可按多个维度定位内容。'],
+  ['05', '持续更新', '新发现的公开资料持续收录，已购读者可免费获取更新版本。'],
 ]
 
 const faqs = [
-  ['怎么买？付款后怎么收到 PDF？', '点击页面中的“微信购买”，扫码添加微信 igrape，并发送“巴菲特卷”或“芒格卷”。确认书名和付款后，完整 PDF 会直接通过微信文件发送。'],
-  ['网站已经可以免费阅读，为什么还要买合订本？', '网站适合搜索和随时查阅，合订本是把材料组织成一套可以从头读到尾的书。如果你只想偶尔查一两篇，免费使用网站就够了。'],
-  ['这套书和网站上的原始材料是什么关系？', '原始材料确实公开存在，但分散在不同年份、网页和版本中。这套书的价值是把它们整理、校订、组织成连续文本，并补上目录、术语表、索引与插图——不是把公开资料包装成独家内容。'],
-  ['99元买一本，值不值？', '如果你准备系统读巴菲特或芒格，99元购买的是资料整理、文本校订、章节组织与连续阅读所节省的时间。如果你只有一般兴趣，建议先读网站上的免费内容再决定。'],
-  ['两卷都要买吗？', '两卷分别出售、分别交付。巴菲特卷讲企业、资本与长期复利；芒格卷讲思维模型、商业判断与人生智慧。可以先买现在真正想系统读的一卷。'],
-  ['翻译和整理可靠吗？', '全部引文标注原始出处；关键术语全书统一；观点覆盖经自动化核查。不能保证永远没有错误，但发现问题后会持续修订并提供更正。'],
-  ['读完能帮助我获得更高的投资收益吗？', '不能保证。这套书帮助你理解巴菲特和芒格如何思考企业、价格与判断，但不会提供荐股、收益承诺或替你作出投资决定。'],
+  ['怎么买？付款后怎么收到 EPUB？', '点击页面中的"微信购买"，扫码添加微信 igrape，并发送"巴菲特文集"或"芒格文集"。确认书名和付款后，EPUB 电子书会直接通过微信文件发送。'],
+  ['网站已经可以免费阅读，为什么还要买巴芒文集？', '网站适合搜索和随时查阅，巴芒文集是把分散的原始资料按主题组织成两本可以从头读到尾的电子书。如果你只想偶尔查一两篇，免费使用网站就够了。'],
+  ['这套电子书和网站上的原始材料是什么关系？', '原始材料确实公开存在，但分散在不同年份、网页和版本中。这套电子书的价值是把它们整理、校订、按主题编排成连续阅读的 EPUB 格式——不是把公开资料包装成独家内容。'],
+  ['99元买一本电子书，值不值？', '如果你准备系统阅读巴菲特或芒格的原始记录，99元购买的是资料整理、主题编排与连续阅读所节省的大量时间。如果你只有一般兴趣，建议先读网站上的免费内容再决定。'],
+  ['两本都要买吗？', '两本分别出售、分别交付。《巴菲特文集》七卷覆盖巴菲特六十年的全部公开记录；《芒格文集》十三卷覆盖芒格的完整思想体系。可以先买你现在真正想系统读的一本。'],
+  ['翻译和整理可靠吗？', '全部文章标注原始出处与年份；关键术语统一翻译；232个芒格思维模型逐一身份溯源。不能保证永远没有错误，但发现问题后会持续修订并免费更新。'],
+  ['读完能帮助我获得更高的投资收益吗？', '不能保证。这套电子书帮助你系统阅读巴菲特和芒格的原话与思考过程，但不会提供荐股、收益承诺或替你作出投资决定。'],
 ]
 
 export const metadata = {
-  title: '合订本',
-  description: '《所有者的眼光》与《理性的格栅》：两卷本系统讲述巴菲特与芒格的投资方法与判断智慧，每卷 99 元。',
+  title: '巴芒文集',
+  description: '《巴菲特文集》与《芒格文集》：两本EPUB电子书，系统收录巴菲特与芒格六十余年的公开原始记录，按主题编排，每本 99 元。',
   alternates: { canonical: '/bound-edition' },
 }
 
@@ -133,13 +132,13 @@ export default function BoundEditionPage() {
       <JsonLd data={faqJsonLd} />
       <PageContainer maxWidth="6xl" className="edition-page">
         <section className="edition-hero">
-          <p className="study-label">电子合订本 · 复利书房「巴芒经典」系列</p>
-          <h1>两卷本，把巴菲特与芒格<br />从头讲清楚</h1>
+          <p className="study-label">巴芒文集</p>
+          <h1>巴菲特文集 · 芒格文集<br />两本电子书，完整收录原始记录</h1>
           <p>
-            基于两人六十余年的公开档案与记录整理成书：巴菲特一卷讲企业、资本与长期复利；芒格一卷讲思维模型、商业判断与人生智慧。
-            每卷约三十万字，附原创插图、附录与典藏索引，是一套从头到尾读得下去的书。
+            基于两人六十余年的公开档案精读编排：巴菲特文集七卷，完整收录合伙人信、股东信、股东大会、演讲与访谈；芒格文集十三卷，覆盖《穷查理宝典》、Wesco与每日期刊实践、思维模型全体系。
+            每篇标注来源与年份，附交叉索引，是一套可以系统通读的电子书。
           </p>
-          <div className="edition-hero__stats" aria-label="两卷合订本内容规模">
+          <div className="edition-hero__stats" aria-label="巴芒文集内容规模">
             {heroStats.map(([num, label]) => (
               <span key={label}><strong>{num}</strong> {label}</span>
             ))}
@@ -149,18 +148,18 @@ export default function BoundEditionPage() {
         </section>
 
         {/* 两本书 */}
-        <section id="books" className="edition-products" aria-label="两卷合订本">
+        <section id="books" className="edition-products" aria-label="巴芒文集">
           <article>
             <div><span>01</span><small>BUFFETT EDITION</small></div>
             <ProductCover variant={buffett.coverVariant} title={buffett.title} yearRange={buffett.yearRange} />
             <h2>{buffett.title.replace(/[《》]/g, '')}</h2>
             <p className="edition-product-sub">{buffett.subtitle}</p>
             <div className="edition-product-stats">
-              <span>15 章 · 5 篇</span>
-              <span>约 32 万字</span>
-              <span>20 张插图</span>
-              <span>3 份附录</span>
-              <span>4 份典藏索引</span>
+              <span>7 卷</span>
+              <span>约 55 万字</span>
+              <span>760 页</span>
+              <span>4 份附录</span>
+              <span>4 份索引</span>
             </div>
             <ul className="edition-product-points">
               {buffettPoints.map(point => <li key={point}>{point}</li>)}
@@ -168,7 +167,7 @@ export default function BoundEditionPage() {
             <p className="edition-product-desc">{buffett.description}</p>
             <strong>{buffett.price}<small>元</small></strong>
             <Link href="#purchase-contact" className="archive-button archive-button--solid">
-              微信购买巴菲特卷 · {buffett.price}元
+              微信购买巴菲特文集 · {buffett.price}元
             </Link>
           </article>
 
@@ -178,11 +177,11 @@ export default function BoundEditionPage() {
             <h2>{munger.title.replace(/[《》]/g, '')}</h2>
             <p className="edition-product-sub">{munger.subtitle}</p>
             <div className="edition-product-stats">
-              <span>16 章</span>
-              <span>约 28 万字</span>
-              <span>18 张插图</span>
-              <span>3 份附录</span>
-              <span>3 份典藏索引</span>
+              <span>13 卷</span>
+              <span>约 55 万字</span>
+              <span>820 页</span>
+              <span>4 份附录</span>
+              <span>4 份索引</span>
             </div>
             <ul className="edition-product-points">
               {mungerPoints.map(point => <li key={point}>{point}</li>)}
@@ -190,12 +189,12 @@ export default function BoundEditionPage() {
             <p className="edition-product-desc">{munger.description}</p>
             <strong>{munger.price}<small>元</small></strong>
             <Link href="#purchase-contact" className="archive-button archive-button--solid">
-              微信购买芒格卷 · {munger.price}元
+              微信购买芒格文集 · {munger.price}元
             </Link>
           </article>
 
           <p id="purchase-status" className="edition-purchase-status">
-            当前采用微信人工交付：添加微信、确认付款后，通过微信直接发送对应卷目的完整 PDF。两卷分别出售，可按自己的阅读需要选择。
+            当前采用微信人工交付：添加微信、确认付款后，通过微信直接发送对应文集的完整 EPUB 电子书。两本分别出售，可按自己的阅读需要选择。
           </p>
         </section>
 
@@ -216,27 +215,27 @@ export default function BoundEditionPage() {
         <section className="edition-section edition-preview" aria-label="终稿 PDF 实际页面预览">
           <div className="edition-section__heading">
             <p className="study-label">PREVIEW · 实际页面预览</p>
-            <h2>终稿 PDF 里，<br />实际长什么样</h2>
-            <p>下面是从两卷终稿 PDF 中抽取的代表页面。先看实际排版与阅读效果，再决定要不要买。</p>
+            <h2>电子书里，<br />实际长什么样</h2>
+            <p>下面是从两本 EPUB 电子书中抽取的代表页面。先看实际排版与阅读效果，再决定要不要买。</p>
           </div>
           <div className="edition-preview__books">
             <div className="edition-preview__book">
-              <h3>《所有者的眼光》<span>巴菲特卷 · 终稿 PDF</span></h3>
+              <h3>《巴菲特文集》<span>巴菲特文集 · EPUB 电子书</span></h3>
               <div className="edition-preview__grid">
                 {buffettPreviews.map(item => (
                   <figure key={item.img} className="edition-preview__item">
-                    <Image src={item.img} alt={`《所有者的眼光》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
+                    <Image src={item.img} alt={`《巴菲特文集》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
                     <figcaption><strong>{item.title}</strong><small>{item.desc}</small></figcaption>
                   </figure>
                 ))}
               </div>
             </div>
             <div className="edition-preview__book">
-              <h3>《理性的格栅》<span>芒格卷 · 终稿 PDF</span></h3>
+              <h3>《芒格文集》<span>芒格文集 · EPUB 电子书</span></h3>
               <div className="edition-preview__grid">
                 {mungerPreviews.map(item => (
                   <figure key={item.img} className="edition-preview__item">
-                    <Image src={item.img} alt={`《理性的格栅》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
+                    <Image src={item.img} alt={`《芒格文集》${item.title}页`} width={1100} height={1556} priority={item.title === '封面'} />
                     <figcaption><strong>{item.title}</strong><small>{item.desc}</small></figcaption>
                   </figure>
                 ))}
@@ -248,9 +247,9 @@ export default function BoundEditionPage() {
         {/* 这一版是怎么做的 */}
         <section id="craft" className="edition-section edition-craft">
           <div className="edition-section__heading">
-            <p className="study-label">HOW IT&apos;S MADE · 编辑标准</p>
-            <h2>不是把公开资料打包，<br />是整理成一套能核验的文本</h2>
-            <p>五轮内容完善、终稿自动化核查、全卷去 AI 味——每一项都写进这本书的制作记录。</p>
+            <p className="study-label">HOW IT&apos;S MADE · 编排标准</p>
+            <h2>不是把公开资料打包，<br />是编排成一套可以通读的文本</h2>
+            <p>全文收录原始记录、逐篇标注来源、按主题编排而非时间线堆叠——每一项都写进这两本电子书的制作记录。</p>
           </div>
           <div className="edition-craft__list">
             {craftItems.map(([num, title, desc]) => (
@@ -264,7 +263,7 @@ export default function BoundEditionPage() {
           <div className="edition-section__heading">
             <p className="study-label">SAMPLE · 免费试读</p>
             <h2>先读原文，再决定是否购买</h2>
-            <p>两卷书基于网站公开材料整理。先读几篇原始记录，感受整理前后的差别。</p>
+            <p>两本电子书基于网站公开材料编排。先读几篇原始记录，感受系统阅读与零散查询的差别。</p>
           </div>
           <div>
             <Link href="/partnership/1"><span>01</span><div><strong>巴菲特合伙人信</strong><small>从第一封原始记录开始</small></div><ArrowRight size={16} /></Link>
@@ -279,7 +278,7 @@ export default function BoundEditionPage() {
           <div className="edition-section__heading">
             <p className="study-label">READER FEEDBACK · 读者反馈</p>
             <h2>第一批读者读完，<br />这里会出现真实反馈</h2>
-            <p>这套书 2026 年 8 月完成终稿，正在交付首批购买者。评价只放真实的，不筛选、不代写。</p>
+            <p>这两本电子书正在持续更新。评价只放真实的，不筛选、不代写。</p>
           </div>
           <div className="edition-feedback__body">
             <div className="edition-feedback__empty" role="note">
@@ -313,8 +312,8 @@ export default function BoundEditionPage() {
         {/* 购买流程 + 收束 */}
         <section id="purchase-contact" className="edition-final">
           <p className="study-label">微信购买 · 人工交付</p>
-          <h2>扫码添加微信，<br />确认付款后直接发送 PDF</h2>
-          <p>请发送“巴菲特卷”或“芒格卷”。确认书名、价格与付款后，完整 PDF 将通过微信文件发送。</p>
+          <h2>扫码添加微信，<br />确认付款后直接发送 EPUB 电子书</h2>
+          <p>请发送"巴菲特文集"或"芒格文集"。确认书名、价格与付款后，完整 EPUB 将通过微信文件发送。</p>
           <div className="edition-wechat-purchase">
             <a href="/wechat-purchase-qr.jpg" target="_blank" rel="noopener noreferrer" aria-label="打开购买微信二维码原图">
               <Image src="/wechat-purchase-qr.jpg" alt="复利书房购买微信二维码" width={109} height={110} />
@@ -322,17 +321,17 @@ export default function BoundEditionPage() {
             <div>
               <strong>购买微信：igrape</strong>
               <p>微信扫码或长按识别二维码添加好友</p>
-              <small>添加时请备注“复利书房”，并发送想购买的书名：巴菲特卷 / 芒格卷。</small>
+              <small>添加时请备注"复利书房"，并发送想购买的电子书：巴菲特文集 / 芒格文集。</small>
               <a href="/wechat-purchase-qr.jpg" target="_blank" rel="noopener noreferrer">打开二维码原图</a>
             </div>
           </div>
           <div className="edition-steps">
-            <div><span>01</span><strong>选择一卷</strong><small>巴菲特卷或芒格卷，每卷 99 元，分别交付</small></div>
-            <div><span>02</span><strong>添加购买微信</strong><small>扫码添加 igrape，备注“复利书房”，发送想购买的书名</small></div>
-            <div><span>03</span><strong>付款并接收 PDF</strong><small>确认付款后，通过微信文件直接发送完整 PDF</small></div>
+            <div><span>01</span><strong>选择一本</strong><small>巴菲特文集或芒格文集，每本 99 元，分别交付</small></div>
+            <div><span>02</span><strong>添加购买微信</strong><small>扫码添加 igrape，备注"复利书房"，发送想购买的书名</small></div>
+            <div><span>03</span><strong>付款并接收 EPUB</strong><small>确认付款后，通过微信文件直接发送完整 EPUB 电子书</small></div>
           </div>
           <small>
-            每卷 99 元，分别出售；交付内容为对应卷目的完整 PDF。通常在确认付款后 24 小时内通过微信完成交付。本书为档案材料的整理与再编辑，非商业出版物，亦非官方授权的巴菲特/芒格著作；不提供荐股或收益承诺，请按自己的阅读需要选择。
+            每本 99 元，分别出售；交付内容为对应文集的完整 EPUB 电子书。通常在确认付款后 24 小时内通过微信完成交付。本书为公开资料的搜集、整理与编排，非商业出版物，亦非官方授权的巴菲特/芒格著作；不提供荐股或收益承诺，请按自己的阅读需要选择。
           </small>
         </section>
       </PageContainer>

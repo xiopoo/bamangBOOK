@@ -3,7 +3,7 @@ import Logo from '@/components/Logo'
 
 export const metadata = {
   title: '登录复利书房',
-  description: '登录后查看已购合订本、订单与阅读进度。',
+  description: '登录后查看已购巴芒文集、订单与阅读进度。',
   alternates: { canonical: '/login' },
   robots: { index: false, follow: false },
 }
@@ -16,7 +16,7 @@ export default function LoginPage() {
         <div className="auth-panel__heading">
           <p className="study-label">ACCOUNT · 账户</p>
           <h1>登录复利书房</h1>
-          <p>登录后查看已购合订本、订单与阅读进度。</p>
+          <p>登录后查看已购巴芒文集、订单与阅读进度。</p>
         </div>
         <form className="auth-form">
           <label htmlFor="email">邮箱</label>

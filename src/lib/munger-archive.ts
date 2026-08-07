@@ -214,7 +214,7 @@ export function getMungerArchiveStats() {
 export function getMungerPublicCatalog(): MungerPublicCatalogItem[] {
   return [...(publicCatalog as MungerPublicCatalogItem[])].sort((a, b) => {
     if (a.section !== b.section) return a.section.localeCompare(b.section)
-    if (a.year !== b.year) return a.year - b.year
+    if (a.year !== b.year) return b.year - a.year
     return a.title.localeCompare(b.title)
   })
 }
