@@ -35,6 +35,18 @@ const navGroups = [
     ],
   },
   {
+    label: '段永平',
+    description: '网易博客、雪球问答、演讲采访与公司里程碑，按栏目与年份阅读第一手资料。',
+    activePrefixes: ['/duanyongping'],
+    links: [
+      { href: '/duanyongping', label: '段永平主页', meta: '人物与资料总览' },
+      { href: '/duanyongping/blog', label: '网易博客', meta: '2006—2020 · 597 篇' },
+      { href: '/duanyongping/qa', label: '雪球问答录', meta: '2011—2025 · 2212 条' },
+      { href: '/duanyongping/talks', label: '演讲与采访', meta: '1999—2025' },
+      { href: '/duanyongping/milestones', label: '公司与里程碑', meta: '步步高 / OPPO / vivo' },
+    ],
+  },
+  {
     label: '研究与索引',
     description: '从商业史、投资概念和经典书籍多入口查找。',
     activePrefixes: ['/business-history', '/companies', '/people', '/concepts', '/books', '/learn'],
@@ -62,7 +74,6 @@ const navGroups = [
 ]
 
 const directLinks = [
-  { href: '/radar', label: '信息日报' },
   { href: '/bound-edition', label: '合订本' },
   { href: '/about', label: '关于' },
 ]
@@ -86,6 +97,15 @@ const mobileSections = [
     ],
   },
   {
+    label: '段永平',
+    links: [
+      { href: '/duanyongping', label: '段永平主页', meta: '人物与资料总览' },
+      { href: '/duanyongping/blog', label: '网易博客', meta: '2006—2020' },
+      { href: '/duanyongping/qa', label: '雪球问答录', meta: '2011—2025' },
+      { href: '/duanyongping/talks', label: '演讲与采访', meta: '1999—2025' },
+    ],
+  },
+  {
     label: '研究与索引',
     links: [
       { href: '/business-history', label: '公司研究', meta: '经营与资本配置' },
@@ -98,7 +118,6 @@ const mobileSections = [
     label: '阅读与购买',
     links: [
       { href: '/reading', label: '全部内容', meta: '按人物与类型浏览' },
-      { href: '/radar', label: '信息日报', meta: '股市雷达每日信号' },
       { href: '/bound-edition', label: '电子合订本', meta: '微信购买 PDF' },
       { href: '/about', label: '关于', meta: '站点与作者' },
     ],

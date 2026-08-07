@@ -3,6 +3,7 @@ import Link from 'next/link'
 const COLUMNS = [
   { href: '/buffett', title: '巴菲特专栏', desc: '合伙人信 · 股东信 · 大会实录 · 演讲文章' },
   { href: '/munger', title: '芒格专栏', desc: '演讲 · 文章 · 思维模型' },
+  { href: '/duanyongping', title: '段永平专栏', desc: '网易博客 · 雪球问答 · 演讲采访 · 公司里程碑' },
   { href: '/bloggers', title: '博主专栏', desc: '博主原创学习笔记' },
 ]
 
