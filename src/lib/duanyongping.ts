@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import crypto from 'crypto'
 import matter from 'gray-matter'
 
 const ROOT = path.join(process.cwd(), 'content', 'duanyongping')
@@ -27,6 +28,36 @@ function sectionDir(section: DYSection): string {
   return path.join(ROOT, section)
 }
 
+/**
+ * 用文件名的稳定短哈希作为 URL slug。
+ * 段永平内容含大量中文标题，在 output:'export' 下：
+ *  - 原始中文 slug 无法被 generateStaticParams 正确匹配（请求路径被编码）；
+ *  - encodeURIComponent 后又会超过文件系统单段 255 字节上限（长标题）。
+ * 因此统一用 ASCII 短哈希，保证可匹配、不超长、且文件名不变则 slug 稳定。
+ */
+function slugFromFileName(fileName: string): string {
+  return crypto.createHash('md5').update(fileName).digest('hex').slice(0, 16)
+}
+
+/** 收集某栏目下所有 .md 文件的绝对路径（含年份子目录，跳过 attachments / 按年份）。 */
+function collectFiles(section: DYSection): string[] {
+  const dir = sectionDir(section)
+  const out: string[] = []
+  if (!fs.existsSync(dir)) return out
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (entry.name === 'attachments' || entry.name === '按年份') continue
+      const sub = path.join(dir, entry.name)
+      for (const f of fs.readdirSync(sub)) {
+        if (f.endsWith('.md')) out.push(path.join(sub, f))
+      }
+    } else if (entry.name.endsWith('.md')) {
+      out.push(path.join(dir, entry.name))
+    }
+  }
+  return out
+}
+
 function readDoc(section: DYSection, filePath: string): DYDoc {
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
@@ -45,7 +76,7 @@ function readDoc(section: DYSection, filePath: string): DYDoc {
     commentCount: data.comment_count,
     duanCommentCount: data.duan_comment_count,
     category,
-    slug: fileName.replace(/\.md$/, ''),
+    slug: slugFromFileName(fileName),
     content,
   }
 }
@@ -76,17 +107,16 @@ export function getDYDocs(section: DYSection): DYDoc[] {
 }
 
 export function getDYDoc(section: DYSection, slug: string): DYDoc | null {
-  const dir = sectionDir(section)
-  // 直接文件
-  const direct = path.join(dir, `${slug}.md`)
-  if (fs.existsSync(direct)) return readDoc(section, direct)
-  // 年份子目录
-  if (fs.existsSync(dir)) {
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      if (entry.isDirectory() && entry.name !== 'attachments' && entry.name !== '按年份') {
-        const cand = path.join(dir, entry.name, `${slug}.md`)
-        if (fs.existsSync(cand)) return readDoc(section, cand)
-      }
+  // URL 中的 slug 可能经过 encodeURIComponent，先解码（已是 ASCII 哈希则不变）。
+  let s = slug
+  try {
+    s = decodeURIComponent(slug)
+  } catch {
+    s = slug
+  }
+  for (const fp of collectFiles(section)) {
+    if (slugFromFileName(path.basename(fp)) === s) {
+      return readDoc(section, fp)
     }
   }
   return null

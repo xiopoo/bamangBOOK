@@ -7,7 +7,7 @@ import { getDYDoc, getDYSlugs } from '@/lib/duanyongping'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
-  return getDYSlugs('qa').map((slug) => ({ slug }))
+  return getDYSlugs('qa').map((slug) => ({ slug: encodeURIComponent(slug) }))
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
