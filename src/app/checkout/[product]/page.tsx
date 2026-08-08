@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { product: string } }) {
 }
 
 export default function CheckoutPage({ params }: { params: { product: string } }) {
-  if (!isProductSlug(params.product)) return null
+  if (!isProductSlug(params.product)) return <></>
   const product = products[params.product]
 
   return (
