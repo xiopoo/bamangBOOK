@@ -21,7 +21,7 @@ export const products: Record<ProductSlug, Product> = {
     id: 'prod_buffett_collection',
     slug: 'buffett-collection',
     title: '《巴菲特文集》',
-    subtitle: '人物 · 合伙 · 股东信 · 年会 · 写作 · 演讲 · 访谈',
+    subtitle: '所有者起点 · 好企业 · 人与制度 · 资本配置 · 风险与复利',
     shortTitle: '巴菲特文集',
     price: 99,
     currency: 'CNY',
@@ -30,13 +30,13 @@ export const products: Record<ProductSlug, Product> = {
     pages: 760,
     coverVariant: 'buffett',
     yearRange: '1956—2025',
-    description: '按七卷编排巴菲特六十年的公开记录：人生与事业、早期文章及合伙人信、伯克希尔股东信、股东大会问答、专题写作、公开演讲、访谈与课堂——每一篇标注原始出处、时间与背景。',
+    description: '按五篇十五章编排巴菲特六十年的思考：所有者的起点、好企业如何创造价值、人与制度、资本配置、风险与复利——每一篇/章标注原始出处、时间与背景。',
   },
   'munger-collection': {
     id: 'prod_munger_collection',
     slug: 'munger-collection',
     title: '《芒格文集》',
-    subtitle: '人物 · 经典 · 实践 · 模型 · 品格 · 复习',
+    subtitle: '知识格栅 · 概率与逆向 · 误判心理 · 商业资本 · 品格人生',
     shortTitle: '芒格文集',
     price: 99,
     currency: 'CNY',
@@ -45,7 +45,7 @@ export const products: Record<ProductSlug, Product> = {
     pages: 820,
     coverVariant: 'munger',
     yearRange: '1924—2023',
-    description: '按十三卷编排芒格的思维与判断体系：人生与事业、《穷查理宝典》核心、Wesco与每日期刊实践、对话访谈、思维方法论、心理模型、商业判断、品格修炼，附232个模型身份溯源与主题索引。',
+    description: '按五篇十六章编排芒格的思维与判断体系：从一元思维到多元格栅、概率与逆向、误判心理学、商业判断与资本配置、合作品格与人生，附232个模型身份溯源与三种检查工具。',
   },
 }
 

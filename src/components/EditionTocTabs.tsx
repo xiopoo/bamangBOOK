@@ -7,9 +7,9 @@ export type EditionTocBook = {
   index: string
   title: string
   sub: string
-  /* 巴菲特文集：七卷 */
+  /* 巴菲特文集：五篇 · 十五章 */
   parts?: [string, string[]][]
-  /* 芒格文集：十三卷 */
+  /* 芒格文集：五篇 · 十六章 */
   chapters?: string[]
   appendix: string
 }

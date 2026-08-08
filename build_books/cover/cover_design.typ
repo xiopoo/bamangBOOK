@@ -108,8 +108,8 @@
 
 // ===== 第 1 页：芒格卷 =====
 #design_page(
-  vol_label: "理性的格栅",
-  title: "理性的格栅",
+  vol_label: "芒格文集",
+  title: "芒格文集",
   subtitle: "芒格论思维模型、商业判断与人生智慧",
   tagline: "手里只有一把锤子的人，看什么都像钉子。",
   img: "munger_lattice.svg",
@@ -123,8 +123,8 @@
 
 // ===== 第 2 页：巴菲特卷 =====
 #design_page(
-  vol_label: "所有者的眼光",
-  title: "所有者的眼光",
+  vol_label: "巴菲特文集",
+  title: "巴菲特文集",
   subtitle: "巴菲特论企业、资本与长期复利",
   tagline: "以所有者的眼光看企业，以长期的尺度算价值。",
   img: "buffett_curve.svg",
