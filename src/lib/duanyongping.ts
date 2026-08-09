@@ -26,6 +26,8 @@ export type DYDoc = {
 
 export type DYSection = 'blog' | 'qa' | 'talks' | 'milestones'
 
+const docsCache = new Map<DYSection, { metadata?: DYDoc[]; withContent?: DYDoc[] }>()
+
 function sectionDir(section: DYSection): string {
   return path.join(ROOT, section)
 }
@@ -60,7 +62,7 @@ function collectFiles(section: DYSection): string[] {
   return out
 }
 
-function readDoc(section: DYSection, filePath: string): DYDoc {
+function readDoc(section: DYSection, filePath: string, includeContent = true): DYDoc {
   const raw = fs.readFileSync(filePath, 'utf-8')
   const { data, content } = matter(raw)
   const fileName = path.basename(filePath)
@@ -82,7 +84,7 @@ function readDoc(section: DYSection, filePath: string): DYDoc {
     duanCommentCount: data.duan_comment_count,
     category,
     slug: slugFromFileName(fileName),
-    content,
+    content: includeContent ? content : '',
   }
 }
 
@@ -96,7 +98,10 @@ function resolveDate(data: Record<string, unknown>): string | undefined {
 }
 
 /** 列出某栏目的全部文档，blog/qa 按年份分目录。返回按时间正序，适合连续阅读。 */
-export function getDYDocs(section: DYSection): DYDoc[] {
+export function getDYDocs(section: DYSection, includeContent = true): DYDoc[] {
+  const cached = docsCache.get(section)?.[includeContent ? 'withContent' : 'metadata']
+  if (cached) return [...cached]
+
   const dir = sectionDir(section)
   if (!fs.existsSync(dir)) return []
   const out: DYDoc[] = []
@@ -105,10 +110,10 @@ export function getDYDocs(section: DYSection): DYDoc[] {
       if (entry.name === 'attachments' || entry.name === '按年份') continue
       const sub = path.join(dir, entry.name)
       for (const f of fs.readdirSync(sub)) {
-        if (f.endsWith('.md')) out.push(readDoc(section, path.join(sub, f)))
+        if (f.endsWith('.md')) out.push(readDoc(section, path.join(sub, f), includeContent))
       }
     } else if (entry.name.endsWith('.md')) {
-      out.push(readDoc(section, path.join(dir, entry.name)))
+      out.push(readDoc(section, path.join(dir, entry.name), includeContent))
     }
   }
   out.sort((a, b) => {
@@ -117,7 +122,10 @@ export function getDYDocs(section: DYSection): DYDoc[] {
     if (ka !== kb) return ka.localeCompare(kb)
     return a.slug.localeCompare(b.slug)
   })
-  return out
+  const entry = docsCache.get(section) || {}
+  entry[includeContent ? 'withContent' : 'metadata'] = out
+  docsCache.set(section, entry)
+  return [...out]
 }
 
 export function getDYDoc(section: DYSection, slug: string): DYDoc | null {
@@ -137,12 +145,12 @@ export function getDYDoc(section: DYSection, slug: string): DYDoc | null {
 }
 
 export function getDYSlugs(section: DYSection): string[] {
-  return getDYDocs(section).map((d) => d.slug)
+  return getDYDocs(section, false).map((d) => d.slug)
 }
 
 /** 按列表的阅读顺序返回同栏目相邻内容：上一条更早，下一条更晚。 */
 export function getDYNeighbors(section: DYSection, slug: string): { previous: DYDoc | null; next: DYDoc | null } {
-  const docs = getDYDocs(section)
+  const docs = getDYDocs(section, false)
   const index = docs.findIndex((doc) => doc.slug === slug)
   if (index < 0) return { previous: null, next: null }
   return {
@@ -151,11 +159,35 @@ export function getDYNeighbors(section: DYSection, slug: string): { previous: DY
   }
 }
 
+export function getDYYearKey(doc: DYDoc): string {
+  return (doc.date || doc.year || '未知').slice(0, 4)
+}
+
+export const DY_QA_PAGE_SIZE = 50
+
+export function getDYQAYearPage(year: string, page: number): {
+  docs: DYDoc[]
+  page: number
+  totalPages: number
+  total: number
+} {
+  const allDocs = getDYDocs('qa').filter((doc) => getDYYearKey(doc) === year)
+  const totalPages = Math.max(1, Math.ceil(allDocs.length / DY_QA_PAGE_SIZE))
+  const safePage = Math.min(Math.max(page, 1), totalPages)
+  const start = (safePage - 1) * DY_QA_PAGE_SIZE
+  return {
+    docs: allDocs.slice(start, start + DY_QA_PAGE_SIZE),
+    page: safePage,
+    totalPages,
+    total: allDocs.length,
+  }
+}
+
 /** 按年份聚合（用于列表页分组）。 */
 export function groupByYear(docs: DYDoc[]): { year: string; docs: DYDoc[] }[] {
   const map = new Map<string, DYDoc[]>()
   for (const d of docs) {
-    const y = (d.date || d.year || '未知').slice(0, 4)
+    const y = getDYYearKey(d)
     if (!map.has(y)) map.set(y, [])
     map.get(y)!.push(d)
   }

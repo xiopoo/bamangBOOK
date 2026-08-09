@@ -21,6 +21,10 @@ function namesIn(directory: string): string[] {
     .map(file => file.replace(/\.md$/, ''))
 }
 
+export function generateStaticParams() {
+  return [{ __metadata_id__: [] }]
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [

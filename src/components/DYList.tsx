@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
+import MarkdownContent from '@/components/MarkdownContent'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { DYDoc, groupByYear } from '@/lib/duanyongping'
@@ -12,6 +14,12 @@ interface DYListProps {
   metaField?: 'platform' | 'source' | 'year'
   /** 是否按年份分组（blog/qa 适用） */
   groupByYearEnabled?: boolean
+  /** 只显示年份目录，不把全部条目输出到同一页。 */
+  indexOnly?: boolean
+  /** indexOnly 模式下的年份页路径。 */
+  yearPath?: string
+  footer?: ReactNode
+  inlineContent?: boolean
 }
 
 export default function DYList({
@@ -21,6 +29,10 @@ export default function DYList({
   subtitle,
   metaField = 'platform',
   groupByYearEnabled = true,
+  indexOnly = false,
+  yearPath,
+  footer,
+  inlineContent = false,
 }: DYListProps) {
   const groups = groupByYearEnabled ? groupByYear(docs) : [{ year: '', docs }]
   const totalWords = docs.reduce((s, d) => s + Math.round((d.content.length || 0) / 2), 0)
@@ -31,7 +43,9 @@ export default function DYList({
 
       <div className="talks-ledger">
         <div><strong>{docs.length}</strong><span>篇</span></div>
-        <div><strong>{totalWords / 10000 > 1 ? (totalWords / 10000).toFixed(1) + '万' : totalWords}</strong><span>正文字数（估）</span></div>
+        {!indexOnly && (
+          <div><strong>{totalWords / 10000 > 1 ? (totalWords / 10000).toFixed(1) + '万' : totalWords}</strong><span>正文字数（估）</span></div>
+        )}
         {groupByYearEnabled && docs.length > 0 && (
           <div><strong>{groups.length}</strong><span>个年份</span></div>
         )}
@@ -50,12 +64,48 @@ export default function DYList({
                 <span className="text-xs text-text-muted dark:text-dark-muted">展开 / 收起</span>
               </summary>
             )}
-            <div className="space-y-3">
+            {indexOnly && g.year && yearPath ? (
+              <Link
+                href={`${yearPath}/${encodeURIComponent(g.year === '未知' ? 'unknown' : g.year)}`}
+                className="block rounded-card border border-gray-100 bg-white p-5 transition-all hover:border-primary/40 hover:shadow-card-hover dark:border-dark-border dark:bg-dark-card dark:hover:shadow-lg dark:hover:shadow-black/20"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-text dark:text-dark-text">进入 {g.year} 年问答</h3>
+                    <p className="mt-1 text-sm text-text-muted dark:text-dark-muted">按时间顺序阅读本年份的 {g.docs.length} 条问答</p>
+                  </div>
+                  <span className="text-xl text-primary" aria-hidden="true">→</span>
+                </div>
+              </Link>
+            ) : <div className="space-y-3">
               {g.docs.map((doc) => {
                 const candidateMeta = doc[metaField] || (metaField === 'year' ? '' : doc.date || '')
                 const meta = candidateMeta === doc.date || candidateMeta === doc.date?.slice(0, 4)
                   ? ''
                   : candidateMeta
+                if (inlineContent) {
+                  return (
+                    <details key={doc.slug} className="group rounded-card border border-gray-100 bg-white dark:border-dark-border dark:bg-dark-card">
+                      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-4 [&::-webkit-details-marker]:hidden">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-2">
+                            {doc.date && <span className="text-sm font-medium text-primary dark:text-primary-light">{doc.date.slice(0, 10)}</span>}
+                            <h3 className="text-base font-medium text-text dark:text-dark-text">{doc.title}</h3>
+                          </div>
+                          {meta && <p className="mt-1 text-xs text-text-muted dark:text-dark-muted">{meta}</p>}
+                        </div>
+                        <span className="shrink-0 text-xs text-text-muted transition-transform group-open:rotate-180 dark:text-dark-muted" aria-hidden="true">⌄</span>
+                      </summary>
+                      <div className="border-t border-gray-100 px-4 pb-5 pt-4 dark:border-dark-border">
+                        <MarkdownContent content={doc.content} isQA />
+                        <Link href={`${basePath}/${encodeURIComponent(doc.slug)}`} className="mt-4 inline-flex text-xs text-primary hover:underline dark:text-primary-light">
+                          打开独立阅读页 ↗
+                        </Link>
+                      </div>
+                    </details>
+                  )
+                }
+
                 return (
                   <Link
                     key={doc.slug}
@@ -88,10 +138,11 @@ export default function DYList({
                   </Link>
                 )
               })}
-            </div>
+            </div>}
           </details>
         ))}
       </div>
+      {footer}
     </PageContainer>
   )
 }

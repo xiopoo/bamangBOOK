@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  const docs = getDYDocs('qa')
+  const docs = getDYDocs('qa', false)
   return (
     <DYList
       docs={docs}
@@ -17,6 +17,8 @@ export default function Page() {
       title="段永平 · 雪球问答录"
       subtitle="2011—2025 年雪球问答，共 2212 条（仅首轮对话）。按年份分卷，几乎句句可落地。"
       metaField="year"
+      indexOnly
+      yearPath="/duanyongping/qa/year"
     />
   )
 }
