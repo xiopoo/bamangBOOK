@@ -111,7 +111,7 @@ export const duanYongpingArchive: ThinkerArchive = {
     },
     {
       href: '/duanyongping/talks',
-      label: '演讲与采访',
+      label: '演讲、采访与文章',
       meta: '1999—2025',
       description: '万科财富人生、秦朔/网易/波士堂专访、浙大分享、斯坦福交流、方三文与王石对话等。',
     },

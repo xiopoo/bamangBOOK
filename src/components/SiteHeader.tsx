@@ -42,7 +42,7 @@ const navGroups = [
       { href: '/duanyongping', label: '段永平主页', meta: '人物与资料总览' },
       { href: '/duanyongping/blog', label: '网易博客', meta: '2006—2020 · 597 篇' },
       { href: '/duanyongping/qa', label: '雪球问答录', meta: '2011—2025 · 2212 条' },
-      { href: '/duanyongping/talks', label: '演讲与采访', meta: '1999—2025' },
+      { href: '/duanyongping/talks', label: '演讲、采访与文章', meta: '1999—2025' },
       { href: '/duanyongping/milestones', label: '公司与里程碑', meta: '步步高 / OPPO / vivo' },
     ],
   },
@@ -102,7 +102,7 @@ const mobileSections = [
       { href: '/duanyongping', label: '段永平主页', meta: '人物与资料总览' },
       { href: '/duanyongping/blog', label: '网易博客', meta: '2006—2020' },
       { href: '/duanyongping/qa', label: '雪球问答录', meta: '2011—2025' },
-      { href: '/duanyongping/talks', label: '演讲与采访', meta: '1999—2025' },
+      { href: '/duanyongping/talks', label: '演讲、采访与文章', meta: '1999—2025' },
     ],
   },
   {

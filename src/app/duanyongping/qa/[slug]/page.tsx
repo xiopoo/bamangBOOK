@@ -3,7 +3,7 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
-import { getDYDoc, getDYSlugs } from '@/lib/duanyongping'
+import { getDYDoc, getDYSlugs, getDYNeighbors } from '@/lib/duanyongping'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -25,6 +25,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   if (!doc) notFound()
 
   const isPdfSource = doc.source && /\.pdf(\?|$)/i.test(doc.source)
+  const { previous, next } = getDYNeighbors('qa', doc.slug)
 
   return (
     <PageContainer maxWidth="7xl">
@@ -79,6 +80,21 @@ export default function Page({ params }: { params: { slug: string } }) {
         )}
 
         <MarkdownContent content={doc.content} isQA />
+
+        <nav className="reading-nav-pair reading-adjacent" aria-label="相邻雪球问答导航">
+          {previous ? (
+            <Link href={`/duanyongping/qa/${previous.slug}`} className="nav-prev" rel="prev">
+              <span className="reading-adjacent__label">‹ 上一条 · 更早</span>
+              <span className="reading-adjacent__title">{previous.date?.slice(0, 10)} · {previous.title}</span>
+            </Link>
+          ) : <span className="nav-pair-btn nav-prev" aria-disabled><span className="reading-adjacent__label">已是最早一条</span></span>}
+          {next ? (
+            <Link href={`/duanyongping/qa/${next.slug}`} className="nav-next" rel="next">
+              <span className="reading-adjacent__label">下一条 · 更晚 ›</span>
+              <span className="reading-adjacent__title">{next.date?.slice(0, 10)} · {next.title}</span>
+            </Link>
+          ) : <span className="nav-pair-btn nav-next" aria-disabled><span className="reading-adjacent__label">已是最后一条</span></span>}
+        </nav>
       </article>
     </PageContainer>
   )

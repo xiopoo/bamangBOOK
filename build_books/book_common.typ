@@ -68,7 +68,7 @@
     margin: (top: 2.6cm, bottom: 2.8cm, left: 2.9cm, right: 2.9cm),
   )
   set text(
-    font: ("Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "PingFang SC"),
+    font: ("Songti SC", "STSong", "PingFang SC"),
     size: 13pt,
     lang: "zh",
     tracking: 0.02em,
@@ -211,7 +211,7 @@
   //   段首空两格 · 段间距 1.5em（≈19.5pt 段间距，段落一眼能看出两段）
   set text(
     size: 13pt,
-    font: ("Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "PingFang SC"),
+    font: ("Songti SC", "STSong", "PingFang SC"),
     fill: ink,
   )
   set par(

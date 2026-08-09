@@ -27,7 +27,9 @@ const DECADES: { label: string; range: [number, number] }[] = [
 
 export default function QAPage() {
   const personId: string | undefined = undefined
-  const documents = getDocuments('qa', personId).filter((doc) => !doc.fileName.startsWith('Wesco_股东大会_'))
+  const documents = getDocuments('qa', personId)
+    .filter((doc) => !doc.fileName.startsWith('Wesco_股东大会_'))
+    .sort((a, b) => (a.year ?? Number.POSITIVE_INFINITY) - (b.year ?? Number.POSITIVE_INFINITY) || a.fileName.localeCompare(b.fileName))
   const totalCount = documents.length
   const years = documents.map((d) => d.year).filter(y => y) as number[]
   const firstYear = years.length > 0 ? Math.min(...years) : null
@@ -98,8 +100,8 @@ export default function QAPage() {
           if (decadeDocs.length === 0) return null
 
           return (
-            <section key={decade.label}>
-              <div className="flex items-center gap-3 mb-4">
+            <details key={decade.label} open={decade.label === '20年代'}>
+              <summary className="flex cursor-pointer list-none items-center gap-3 mb-4 [&::-webkit-details-marker]:hidden">
                 <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">
                   {decade.label}
                 </h2>
@@ -107,7 +109,8 @@ export default function QAPage() {
                   {decadeDocs.length}篇
                 </span>
                 <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-              </div>
+                <span className="text-xs text-text-muted dark:text-dark-muted">展开 / 收起</span>
+              </summary>
 
               <div className="space-y-3">
                 {decadeDocs.map((doc) => (
@@ -137,7 +140,7 @@ export default function QAPage() {
                   </Link>
                 ))}
               </div>
-            </section>
+            </details>
           )
         })}
       </div>

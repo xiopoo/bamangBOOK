@@ -16,6 +16,20 @@ const { execSync } = require('child_process');
 const BLOGGERS_DIR = path.join(__dirname, '..', 'content', 'bloggers');
 const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
 const INDEX_FILE = 'bloggers-index.json';
+const DY_ATTACHMENTS_SOURCE = path.join(__dirname, '..', 'content', 'duanyongping', 'talks', 'attachments');
+const DY_ATTACHMENTS_PUBLIC = path.join(__dirname, '..', 'public', 'duanyongping', 'talks', 'attachments');
+
+function syncDuanyongpingAttachments() {
+  fs.rmSync(DY_ATTACHMENTS_PUBLIC, { recursive: true, force: true });
+  if (!fs.existsSync(DY_ATTACHMENTS_SOURCE)) return;
+  fs.mkdirSync(path.dirname(DY_ATTACHMENTS_PUBLIC), { recursive: true });
+  fs.cpSync(DY_ATTACHMENTS_SOURCE, DY_ATTACHMENTS_PUBLIC, { recursive: true });
+  console.log('🖼️  段永平附件已同步到静态目录');
+}
+
+function cleanDuanyongpingAttachments() {
+  fs.rmSync(DY_ATTACHMENTS_PUBLIC, { recursive: true, force: true });
+}
 
 /**
  * 清理文章内容：移除所有无法正常显示的图片、视频、微信外链，
@@ -146,6 +160,7 @@ function main() {
   const restore = args.includes('--restore');
   
   if (restore) {
+    cleanDuanyongpingAttachments();
     // 恢复原始文件
     if (fs.existsSync(ORIGINAL_DIR)) {
       console.log('🔄 恢复原始文件...');
@@ -157,6 +172,8 @@ function main() {
     }
     return;
   }
+
+  syncDuanyongpingAttachments();
   
   // 清理上一次失败构建残留的 bloggers_original
   if (fs.existsSync(ORIGINAL_DIR)) {

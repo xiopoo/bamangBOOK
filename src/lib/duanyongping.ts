@@ -9,10 +9,12 @@ export type DYDoc = {
   fileName: string
   title: string
   author: string
+  contentType?: string
   date?: string
   year?: string
   platform?: string
   source?: string
+  sourceUrl?: string
   mirror?: string
   articleId?: string
   commentCount?: string
@@ -63,14 +65,17 @@ function readDoc(section: DYSection, filePath: string): DYDoc {
   const { data, content } = matter(raw)
   const fileName = path.basename(filePath)
   const category = section
+  const date = resolveDate(data)
   return {
     fileName,
     title: data.title || fileName,
     author: data.author || '段永平',
-    date: data.date,
-    year: data.year,
+    contentType: data.content_type,
+    date,
+    year: data.year || date?.slice(0, 4),
     platform: data.platform,
     source: data.source,
+    sourceUrl: data.source_url,
     mirror: data.mirror,
     articleId: data.article_id,
     commentCount: data.comment_count,
@@ -81,7 +86,16 @@ function readDoc(section: DYSection, filePath: string): DYDoc {
   }
 }
 
-/** 列出某栏目的全部文档，blog/qa 按年份分目录。返回按日期/序号降序。 */
+/** 优先用 date，缺失时回退 published_at（talks 等栏目多用 published_at）。
+ *  YAML 裸日期会被解析为 Date 对象，统一转为 ISO 字符串。 */
+function resolveDate(data: Record<string, unknown>): string | undefined {
+  const d = data.date ?? data.published_at
+  if (typeof d === 'string') return d
+  if (d instanceof Date) return d.toISOString()
+  return undefined
+}
+
+/** 列出某栏目的全部文档，blog/qa 按年份分目录。返回按时间正序，适合连续阅读。 */
 export function getDYDocs(section: DYSection): DYDoc[] {
   const dir = sectionDir(section)
   if (!fs.existsSync(dir)) return []
@@ -100,7 +114,7 @@ export function getDYDocs(section: DYSection): DYDoc[] {
   out.sort((a, b) => {
     const ka = a.date || a.year || ''
     const kb = b.date || b.year || ''
-    if (ka !== kb) return kb.localeCompare(ka)
+    if (ka !== kb) return ka.localeCompare(kb)
     return a.slug.localeCompare(b.slug)
   })
   return out
@@ -126,6 +140,17 @@ export function getDYSlugs(section: DYSection): string[] {
   return getDYDocs(section).map((d) => d.slug)
 }
 
+/** 按列表的阅读顺序返回同栏目相邻内容：上一条更早，下一条更晚。 */
+export function getDYNeighbors(section: DYSection, slug: string): { previous: DYDoc | null; next: DYDoc | null } {
+  const docs = getDYDocs(section)
+  const index = docs.findIndex((doc) => doc.slug === slug)
+  if (index < 0) return { previous: null, next: null }
+  return {
+    previous: index > 0 ? docs[index - 1] : null,
+    next: index < docs.length - 1 ? docs[index + 1] : null,
+  }
+}
+
 /** 按年份聚合（用于列表页分组）。 */
 export function groupByYear(docs: DYDoc[]): { year: string; docs: DYDoc[] }[] {
   const map = new Map<string, DYDoc[]>()
@@ -136,5 +161,5 @@ export function groupByYear(docs: DYDoc[]): { year: string; docs: DYDoc[] }[] {
   }
   return Array.from(map.entries())
     .map(([year, ds]) => ({ year, docs: ds }))
-    .sort((a, b) => b.year.localeCompare(a.year))
+    .sort((a, b) => a.year.localeCompare(b.year))
 }

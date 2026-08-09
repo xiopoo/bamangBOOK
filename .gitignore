@@ -23,6 +23,7 @@ output/ebook/
 .cache/
 .codebuddy/
 .trae/
+.playwright-cli/
 
 # 构建产物与临时备份
 output/
@@ -34,4 +35,3 @@ stock-radar/data/
 *.db
 stock-radar/data/*.log
 launchd.*.log
-

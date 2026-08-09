@@ -39,19 +39,23 @@ export default function DYList({
 
       <div className="space-y-8">
         {groups.map((g) => (
-          <section key={g.year || 'all'}>
+            <details key={g.year || 'all'} open={!g.year || g.year === groups.at(-1)?.year}>
             {g.year && (
-              <div className="flex items-center gap-3 mb-4">
+              <summary className="flex cursor-pointer list-none items-center gap-3 mb-4 [&::-webkit-details-marker]:hidden">
                 <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">{g.year}</h2>
                 <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
                   {g.docs.length}篇
                 </span>
                 <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-              </div>
+                <span className="text-xs text-text-muted dark:text-dark-muted">展开 / 收起</span>
+              </summary>
             )}
             <div className="space-y-3">
               {g.docs.map((doc) => {
-                const meta = doc[metaField] || doc.date || ''
+                const candidateMeta = doc[metaField] || (metaField === 'year' ? '' : doc.date || '')
+                const meta = candidateMeta === doc.date || candidateMeta === doc.date?.slice(0, 4)
+                  ? ''
+                  : candidateMeta
                 return (
                   <Link
                     key={doc.slug}
@@ -71,6 +75,9 @@ export default function DYList({
                         {meta && (
                           <p className="text-xs text-text-muted dark:text-dark-muted mt-1">{meta}</p>
                         )}
+                        {doc.author !== '段永平' && (
+                          <p className="text-xs text-text-muted dark:text-dark-muted mt-1">作者：{doc.author}</p>
+                        )}
                         {doc.duanCommentCount && (
                           <p className="text-xs text-text-muted dark:text-dark-muted mt-0.5">
                             段永平本人回复 {doc.duanCommentCount} 条
@@ -82,7 +89,7 @@ export default function DYList({
                 )
               })}
             </div>
-          </section>
+          </details>
         ))}
       </div>
     </PageContainer>

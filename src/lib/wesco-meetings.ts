@@ -47,7 +47,7 @@ export function getWescoMeetings(): WescoMeetingItem[] {
           : undefined,
       }
     })
-    .sort((a, b) => b.year - a.year)
+    .sort((a, b) => a.year - b.year)
 }
 
 export function getWescoMeetingByYear(year: number): WescoMeetingDetail | null {
