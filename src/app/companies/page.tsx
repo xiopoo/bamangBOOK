@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '公司研究索引｜复利书房',
     description: '巴菲特与芒格投资、关注过的公司索引。',
-    images: ['/og-v2.png'],
   },
 }
 

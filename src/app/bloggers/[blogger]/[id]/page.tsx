@@ -6,6 +6,7 @@ import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import { bloggerArticleParams } from '@/lib/staticParams'
+import type { Metadata } from 'next'
 
 export function generateStaticParams() {
   return bloggerArticleParams()
@@ -15,6 +16,22 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string; id: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const bloggerName = decodeURIComponent(params.blogger)
+  const fileName = decodeURIComponent(params.id)
+  const doc = getBloggerArticle(bloggerName, fileName)
+  if (!doc) return { title: '文章未找到', robots: { index: false, follow: false } }
+  const description = doc.content.replace(/[#>*_`\[\]]/g, '').replace(/\s+/g, ' ').trim().slice(0, 150)
+  const canonical = `/bloggers/${encodeURIComponent(bloggerName)}/${encodeURIComponent(fileName)}`
+  const archiveDate = doc.date?.slice(0, 10) || fileName.match(/^\d{8}/)?.[0] || fileName.slice(0, 12)
+  return {
+    title: `${doc.title} · ${archiveDate} · ${bloggerName}`,
+    description: description || `${bloggerName}的投资文章存档。`,
+    alternates: { canonical },
+    openGraph: { title: doc.title, description, type: 'article', url: canonical },
+  }
 }
 
 export default function BloggerArticleDetailPage({ params }: PageProps) {

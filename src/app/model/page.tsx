@@ -7,6 +7,7 @@ import { getModelsByDiscipline, getModelStats } from '@/lib/models'
 export const metadata: Metadata = {
   title: '多元思维模型库',
   description: '综合整理查理·芒格的多元思维模型、人类误判心理学与跨学科决策工具。',
+  alternates: { canonical: '/model' },
 }
 
 export default function ModelPage() {

@@ -3,11 +3,9 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getBusinessHistories, getBusinessHistoryBySlug } from '@/lib/business-history'
 import { businessHistoryParams } from '@/lib/staticParams'
-import ReadingProgress from '@/components/ReadingProgress'
-import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
-import FontSizeControlFixed from '@/components/FontSizeControlFixed'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
+import { businessHistoryHref } from '@/lib/content-routes'
+import ReadingArticleShell from '@/components/ReadingArticleShell'
 
 export function generateStaticParams() {
   return businessHistoryParams()
@@ -24,7 +22,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     title: `${item.title} · 公司深度研究`,
     description: item.summary
       || item.content.replace(/[#>*_`\[\]]/g, '').replace(/\s+/g, ' ').trim().slice(0, 150),
-    alternates: { canonical: `/business-history/${encodeURIComponent(item.slug)}` },
+    alternates: { canonical: businessHistoryHref(item.slug) },
     openGraph: { title: item.title, type: 'article' },
   }
 }
@@ -37,69 +35,28 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
     notFound()
   }
 
-  const related = getBusinessHistories()
+  const histories = getBusinessHistories()
+  const related = histories
     .filter(candidate => candidate.slug !== slug)
     .slice(0, 6)
+  const index = histories.findIndex(candidate => candidate.slug === slug)
+  const previous = index > 0 ? histories[index - 1] : null
+  const next = index >= 0 && index < histories.length - 1 ? histories[index + 1] : null
+  const sourceLabel = item.sourcePdf ? `${item.company} 公司研究资料（${item.sourcePdf}）` : '公司公开资料与研究档案'
 
   return (
-    <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <ReadingProgress />
-      <header className="border-b border-primary/10 bg-bg-card dark:bg-dark-card">
-        <div className="mx-auto max-w-5xl px-4 py-3 sm:px-6 md:py-4">
-          <div className="flex items-center justify-between gap-2">
-            <div className="min-w-0 flex-1">
-              <Link href="/business-history" className="mb-1 inline-flex items-center gap-1 text-sm text-primary transition-colors hover:text-primary-light">
-                ← 返回公司深度研究
-              </Link>
-              <h1 className="font-serif text-xl font-bold text-primary dark:text-primary-light sm:text-2xl md:text-3xl">{item.title}</h1>
-              <p className="flex flex-wrap items-center gap-2 text-sm text-text-muted dark:text-dark-muted">
-                <span>{item.company}</span>
-                <span>· 约 {item.readMinutes} 分钟</span>
-                {item.sourcePdf && <span>· 来源：{item.sourcePdf}</span>}
-              </p>
-            </div>
-            <FontSizeControlFixed />
-          </div>
-        </div>
-      </header>
-
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 md:px-8 md:py-10 lg:px-10">
-        <ContentTrustPanel
-          source={item.sourcePdf ? `本地 PDF：content/companies-studies/${item.sourcePdf}` : 'Worldly Partners 公司研究 PDF'}
-          method="本文为中文研究整理稿，侧重事实脉络、商业模式、护城河、风险与价值判断；具体数据与原始披露请以原 PDF 和公司公告为准，不构成投资建议。"
-        />
-
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="min-w-0 flex-1">
-            <article className="rounded-card bg-bg-card p-4 shadow-card dark:bg-dark-card sm:p-6 md:p-10">
-              <MarkdownContent content={item.content} />
-            </article>
-
-            {related.length > 0 && (
-              <div className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-700">
-                <h3 className="mb-4 font-serif text-lg font-bold text-gray-800 dark:text-gray-200">
-                  继续阅读
-                </h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {related.map(candidate => (
-                    <Link
-                      key={candidate.slug}
-                      href={`/business-history/${encodeURIComponent(candidate.slug)}`}
-                      className="rounded-lg border border-gray-100 p-3 transition-all hover:border-primary/30 hover:bg-primary/[0.02] dark:border-gray-700"
-                    >
-                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">{candidate.title}</div>
-                      {candidate.summary && (
-                        <div className="mt-1 truncate text-xs text-text-muted dark:text-dark-muted">{candidate.summary}</div>
-                      )}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </main>
-          <ArticleTableOfContents />
-        </div>
-      </div>
-    </div>
+    <ReadingArticleShell
+      title={item.title}
+      subtitle={item.summary}
+      backHref="/business-history"
+      backLabel="返回公司深度研究"
+      metadata={{ person: item.company, contentType: '公司研究', sourceLabel, status: '编辑整理', completeness: '完整', readMinutes: item.readMinutes }}
+      trust={{ source: sourceLabel, method: '本文为中文研究整理稿，侧重事实脉络、商业模式、护城河、风险与价值判断；具体数据与原始披露请以原始资料和公司公告为准。' }}
+      sourceNote={{ source: sourceLabel, method: '基于公司公开资料和研究档案进行中文编辑整理。', completeness: '完整' }}
+      previous={previous ? { href: businessHistoryHref(previous.slug), title: previous.title, meta: previous.company } : null}
+      next={next ? { href: businessHistoryHref(next.slug), title: next.title, meta: next.company } : null}
+      navigationLabel="按公司研究目录顺序的相邻内容"
+      related={related.length > 0 ? <section className="mt-10 border-t border-[var(--archive-rule)] pt-6"><h2 className="mb-4 font-serif text-lg font-bold">延伸研究</h2><ul className="grid gap-3 sm:grid-cols-2">{related.map(candidate => <li key={candidate.slug}><Link href={businessHistoryHref(candidate.slug)} className="block border border-[var(--archive-rule)] p-3 text-sm hover:text-primary">{candidate.title}</Link></li>)}</ul></section> : null}
+    ><MarkdownContent content={item.content} /></ReadingArticleShell>
   )
 }

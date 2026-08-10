@@ -8,6 +8,7 @@ import { getWescoMeetings } from '@/lib/wesco-meetings'
 export const metadata: Metadata = {
   title: 'Wesco 股东大会 · 中文问答',
   description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，按年份连续阅读。',
+  alternates: { canonical: '/munger/wesco' },
   openGraph: {
     title: 'Wesco 股东大会',
     description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',

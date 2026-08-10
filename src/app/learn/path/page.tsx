@@ -4,6 +4,13 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { LearningPathBeginner, LearningPathIntermediate, LearningPathTopics } from '@/components/LearningPathDisplay'
 import { getAllPartnershipLetters } from '@/lib/partnership'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '系统阅读路径',
+  description: '按入门、进阶与主题组织的长期投资系统阅读顺序。',
+  alternates: { canonical: '/learn/path' },
+}
 
 interface PathItem {
   type: string

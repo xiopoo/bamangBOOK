@@ -21,7 +21,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!model) return { title: '模型未找到' }
   return {
     title: `${model.title} · 思维模型`,
-    description: model.description,
+    description: model.description
+      || model.content.replace(/[#>*_`\[\]]/g, '').replace(/\s+/g, ' ').trim().slice(0, 150)
+      || `${model.title}的定义、适用场景与投资决策应用。`,
     alternates: { canonical: `/model/${model.slug}` },
     openGraph: { title: model.title, type: 'article' },
   }

@@ -12,6 +12,7 @@ import { getBooks } from '@/lib/books'
 import { getColumns } from '@/lib/columns'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
 import { getBloggers, getAllBloggerArticles } from '@/lib/bloggers'
+import { getDYDocs, type DYSection } from '@/lib/duanyongping'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -30,7 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '', '/about', '/search', '/reading', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers',
-    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
+    '/business-history', '/business-history/themes', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
+    '/duanyongping', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks', '/duanyongping/milestones',
+    '/about/editorial', '/about/revisions',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
@@ -59,6 +62,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getAllBloggerArticles().forEach(article =>
     urls.add(`${baseUrl}/bloggers/${encodeURIComponent(article.blogger)}/${encodeURIComponent(article.fileName)}`)
   )
+
+  const duanSections: DYSection[] = ['blog', 'qa', 'talks', 'milestones']
+  duanSections.forEach(section => {
+    getDYDocs(section, false).forEach(doc => urls.add(`${baseUrl}/duanyongping/${section}/${doc.slug}`))
+  })
 
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]

@@ -1,7 +1,26 @@
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
+import { documentHref } from './content-routes'
+import type { ReadingCompleteness, ReadingContentStatus, ReadingContentType } from './reading-content'
 
 export interface DocumentItem {
+  id: string
+  slug: string
+  href: string
+  title: string
+  year: number | null
+  wordCount: number
+  contentLength: number
+  fileName: string
+  person?: string | string[]
+  contentType: ReadingContentType
+  sourceLabel: string
+  status: ReadingContentStatus
+  completeness: ReadingCompleteness
+  readMinutes: number
+}
+
+interface RawDocumentItem {
   title: string
   year: number | null
   wordCount: number
@@ -16,6 +35,12 @@ export interface DocumentData {
   year: number | null
   wordCount: number
   person: string | string[]
+  fileName: string
+  contentType: ReadingContentType
+  sourceLabel: string
+  status: ReadingContentStatus
+  completeness: ReadingCompleteness
+  readMinutes: number
 }
 
 const categories = {
@@ -47,7 +72,24 @@ export function getDocuments(category: DocumentCategory, personId?: string): Doc
     return []
   }
   try {
-    const documents: DocumentItem[] = JSON.parse(readFileSync(indexPath, 'utf-8'))
+    const rawDocuments: RawDocumentItem[] = JSON.parse(readFileSync(indexPath, 'utf-8'))
+    const typeByCategory: Record<DocumentCategory, ReadingContentType> = {
+      talks: '演讲',
+      interviews: '访谈',
+      qa: '股东大会',
+    }
+    const documents: DocumentItem[] = rawDocuments.map(doc => ({
+      ...doc,
+      person: doc.person || (category === 'qa' ? (doc.fileName.startsWith('Wesco_') ? 'munger' : 'buffett') : []),
+      id: `${category}:${doc.fileName}`,
+      slug: doc.fileName,
+      href: documentHref(category, doc),
+      contentType: typeByCategory[category],
+      sourceLabel: category === 'qa' ? '股东大会公开记录' : '公开演讲与访谈资料',
+      status: '编辑整理',
+      completeness: '未知',
+      readMinutes: Math.max(1, Math.round((doc.wordCount || doc.contentLength || 0) / 400)),
+    }))
 
     const filtered = personId
       ? documents.filter(doc => {
@@ -90,7 +132,13 @@ export function getDocumentByFileName(category: DocumentCategory, fileName: stri
     content,
     year: doc?.year || null,
     wordCount: doc?.wordCount || 0,
-    person: doc?.person || []
+    person: doc?.person || [],
+    fileName: doc?.fileName || normalizedFileName.replace(/\.md$/, ''),
+    contentType: doc?.contentType || (category === 'interviews' ? '访谈' : category === 'qa' ? '股东大会' : '演讲'),
+    sourceLabel: doc?.sourceLabel || '公开资料',
+    status: doc?.status || '编辑整理',
+    completeness: doc?.completeness || '未知',
+    readMinutes: doc?.readMinutes || Math.max(1, Math.round(content.length / 900)),
   }
 }
 

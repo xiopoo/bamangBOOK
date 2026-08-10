@@ -4,6 +4,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getBloggers, getBloggerArticles, getBloggerStats } from '@/lib/bloggers'
 import { bloggerParams } from '@/lib/staticParams'
+import type { Metadata } from 'next'
 
 export function generateStaticParams() {
   return bloggerParams()
@@ -13,6 +14,20 @@ export const dynamicParams = false
 
 interface PageProps {
   params: { blogger: string }
+}
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const bloggerName = decodeURIComponent(params.blogger)
+  const stats = getBloggerStats(bloggerName)
+  if (!stats) return { title: '博主档案未找到', robots: { index: false, follow: false } }
+  const description = `${bloggerName}投资文章档案，共 ${stats.total} 篇，时间范围 ${stats.dateRange}。`
+  const canonical = `/bloggers/${encodeURIComponent(bloggerName)}`
+  return {
+    title: `${bloggerName}文章档案`,
+    description,
+    alternates: { canonical },
+    openGraph: { title: `${bloggerName}文章档案`, description, url: canonical },
+  }
 }
 
 export default function BloggerArticlesPage({ params }: PageProps) {

@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '段永平专题｜复利书房',
     description: '段永平网易博客、雪球问答、演讲采访与公司里程碑索引。',
-    images: ['/og-v2.png'],
   },
 }
 

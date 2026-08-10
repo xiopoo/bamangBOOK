@@ -5,10 +5,12 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import CatalogStats from '@/components/CatalogStats'
 import { getBusinessHistories, getBusinessHistoryStats } from '@/lib/business-history'
+import { businessHistoryHref } from '@/lib/content-routes'
 
 export const metadata: Metadata = {
   title: '公司深度研究',
   description: '16 家代表性公司的中文深度研究：商业模式、护城河、资本配置、风险与长期价值。',
+  alternates: { canonical: '/business-history' },
 }
 
 export default function BusinessHistoryPage() {
@@ -40,7 +42,7 @@ export default function BusinessHistoryPage() {
           {histories.map((item) => (
             <Link
               key={item.slug}
-              href={`/business-history/${encodeURIComponent(item.slug)}`}
+              href={businessHistoryHref(item.slug)}
               className="archive-list__item group"
             >
               <div className="flex items-start justify-between gap-4">

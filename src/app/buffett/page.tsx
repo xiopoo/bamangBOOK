@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '沃伦·巴菲特专题｜复利书房',
     description: '巴菲特合伙人信、股东信、股东大会问答与公司研究索引。',
-    images: ['/og-v2.png'],
   },
 }
 

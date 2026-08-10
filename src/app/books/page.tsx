@@ -8,6 +8,7 @@ import { getBooksByCategory, getBookStats } from '@/lib/books'
 export const metadata: Metadata = {
   title: '深度拆书',
   description: '价值投资经典书籍的结构化拆解：核心观点、金句摘录与知识关联。',
+  alternates: { canonical: '/books' },
 }
 
 export default function BooksPage() {

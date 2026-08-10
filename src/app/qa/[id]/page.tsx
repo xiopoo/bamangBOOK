@@ -1,131 +1,60 @@
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { getDocumentByFileName, getCategoryTitle, getCategoryIcon, getAdjacentDocuments } from '@/lib/documents'
-import ReadingProgress from '@/components/ReadingProgress'
-import ArticleTableOfContents from '@/components/ArticleTableOfContents'
+import type { Metadata } from 'next'
+import { getAdjacentDocuments, getDocumentByFileName } from '@/lib/documents'
+import { qaParams } from '@/lib/staticParams'
+import { documentHref } from '@/lib/content-routes'
+import ReadingArticleShell from '@/components/ReadingArticleShell'
 import MarkdownContent from '@/components/MarkdownContent'
-import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import RelatedArticles from '@/components/RelatedArticles'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
-import type { Metadata } from 'next'
-import { qaParams } from '@/lib/staticParams'
 
-export function generateStaticParams() {
-  return qaParams()
-}
-
+export function generateStaticParams() { return qaParams() }
 export const dynamicParams = false
+interface PageProps { params: { id: string } }
 
-interface PageProps {
-  params: { id: string }
+function normalizedFileName(value: string) {
+  return decodeURIComponent(value).replace(/\.md$/, '')
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
-  const fileName = decodeURIComponent(params.id).replace(/\.md$/, '')
+  const fileName = normalizedFileName(params.id)
   const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})$/)
-  if (wescoMatch) {
-    return {
-      title: `${wescoMatch[1]}年 Wesco 股东大会问答`,
-      description: `${wescoMatch[1]}年 Wesco 股东大会问答记录，查理·芒格现场回答股东提问。`,
-      alternates: { canonical: `/munger/wesco/${wescoMatch[1]}` },
-    }
+  if (wescoMatch) return {
+    title: `${wescoMatch[1]}年 Wesco 股东大会问答`,
+    description: `${wescoMatch[1]}年 Wesco 股东大会问答记录，查理·芒格现场回答股东提问。`,
+    alternates: { canonical: `/munger/wesco/${wescoMatch[1]}` },
   }
   const doc = getDocumentByFileName('qa', fileName)
-  if (!doc) {
-    return { title: '股东大会问答' }
-  }
+  if (!doc) return { title: '股东大会问答' }
   return {
-    title: doc.title,
-    description: `${doc.title}：${doc.year ? `${doc.year}年` : ''}巴菲特股东大会现场问答记录。`,
-    alternates: { canonical: `/qa/${encodeURIComponent(fileName)}` },
+    title: `${doc.year ? `${doc.year}年 · ` : ''}股东大会问答 · ${doc.title}`,
+    description: `${doc.title}，股东大会现场问答中文整理。`,
+    alternates: { canonical: documentHref('qa', { fileName }) },
   }
 }
 
 export default function QADetailPage({ params }: PageProps) {
-  const fileName = decodeURIComponent(params.id).replace(/\.md$/, '')
+  const fileName = normalizedFileName(params.id)
   const wescoMatch = fileName.match(/^Wesco_股东大会_(\d{4})$/)
-  if (wescoMatch) {
-    redirect(`/munger/wesco/${wescoMatch[1]}`)
-  }
+  if (wescoMatch) redirect(`/munger/wesco/${wescoMatch[1]}`)
   const doc = getDocumentByFileName('qa', fileName)
-
-  if (!doc) {
-    notFound()
-  }
-
+  if (!doc) notFound()
   const { prev, next } = getAdjacentDocuments('qa', fileName)
-  const prevHref = prev ? `/qa/${encodeURIComponent(prev.fileName.replace(/\.md$/, ''))}` : null
-  const nextHref = next ? `/qa/${encodeURIComponent(next.fileName.replace(/\.md$/, ''))}` : null
 
-  return (
-    <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <JsonLd data={breadcrumbJsonLd([
-        { name: '首页', href: '/' },
-        { name: '股东大会问答', href: '/qa' },
-        { name: doc.title },
-      ])} />
-      <ReadingProgress />
-      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <Link href="/qa" className="text-sm text-primary hover:text-primary-light transition-colors mb-2 inline-flex items-center gap-1">
-                ← 返回{getCategoryTitle('qa')}列表
-              </Link>
-              <h1 className="text-2xl sm:text-3xl font-serif font-bold text-primary dark:text-primary-light">{doc.title}</h1>
-              <p className="text-sm text-text-muted dark:text-dark-muted">
-                {getCategoryIcon('qa')} {getCategoryTitle('qa')}
-                {doc.year && ` · ${doc.year}年`}
-              </p>
-            </div>
-            <FontSizeControlFixed />
-          </div>
-        </div>
-      </header>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="flex-1">
-            <article className="bg-bg-card dark:bg-dark-card p-6 md:p-10 shadow-card rounded-card">
-              <MarkdownContent content={doc.content} isQA={true} className="max-w-none" />
-            </article>
-          </main>
-          <ArticleTableOfContents />
-        </div>
-      </div>
-
-      {/* —— 上下篇（相邻问答）导航：复用股东信阅读规范样式 —— */}
-      <nav className="reading-nav-pair reading-adjacent" aria-label="相邻股东大会问答导航">
-        {prev ? (
-          <Link href={prevHref!} className="nav-prev" rel="prev">
-            <span className="reading-adjacent__label">‹ 上一封</span>
-            <span className="reading-adjacent__title">
-              {prev.year ? `${prev.year}年 · ` : ''}{prev.title}
-            </span>
-          </Link>
-        ) : (
-          <span className="nav-pair-btn nav-prev" aria-disabled>
-            <span className="reading-adjacent__label">已是最早一封</span>
-            <span className="reading-adjacent__title">更早的问答</span>
-          </span>
-        )}
-        {next ? (
-          <Link href={nextHref!} className="nav-next" rel="next">
-            <span className="reading-adjacent__label">下一封 ›</span>
-            <span className="reading-adjacent__title">
-              {next.year ? `${next.year}年 · ` : ''}{next.title}
-            </span>
-          </Link>
-        ) : (
-          <span className="nav-pair-btn nav-next" aria-disabled>
-            <span className="reading-adjacent__label">已是最新一封</span>
-            <span className="reading-adjacent__title">后续年度会持续整理</span>
-          </span>
-        )}
-      </nav>
-
-      <RelatedArticles source="qa" fileName={fileName} />
-
-    </div>
-  )
+  return <>
+    <JsonLd data={breadcrumbJsonLd([{ name: '首页', href: '/' }, { name: '股东大会问答', href: '/qa' }, { name: doc.title }])} />
+    <ReadingArticleShell
+      title={doc.title}
+      subtitle="股东大会现场问答中文整理"
+      backHref="/qa"
+      backLabel="返回股东大会问答目录"
+      metadata={{ person: '沃伦·巴菲特', year: doc.year || undefined, contentType: '股东大会', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
+      trust={{ source: doc.sourceLabel, method: '依据股东大会公开文字记录整理；问答分段与措辞可能因记录版本不同而有差异。' }}
+      sourceNote={{ source: doc.sourceLabel, method: '中文问答整理，保留会议年份与问答上下文。', completeness: doc.completeness }}
+      previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
+      next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
+      navigationLabel="按时间从早到晚的相邻股东大会问答"
+      related={<RelatedArticles source="qa" fileName={fileName} />}
+    ><MarkdownContent content={doc.content} isQA /></ReadingArticleShell>
+  </>
 }

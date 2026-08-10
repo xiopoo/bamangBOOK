@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '投资概念库｜复利书房',
     description: '投资核心概念知识卡片，附相关年份与原文线索。',
-    images: ['/og-v2.png'],
   },
 }
 

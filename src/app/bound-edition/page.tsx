@@ -124,10 +124,9 @@ export default function BoundEditionPage() {
       <PageContainer maxWidth="6xl" className="edition-page">
         <section className="edition-hero">
           <p className="study-label">巴芒文集</p>
-          <h1>巴菲特文集 · 芒格文集<br />两本电子书，完整收录原始记录</h1>
+          <h1><span>巴菲特文集 · 芒格文集</span><span>两本电子书，完整收录原始记录</span></h1>
           <p>
             基于两人六十余年的公开档案精读编排：巴菲特文集五篇十五章，从所有者思维推进到制度复利；芒格文集五篇十六章，从知识格栅推进到品格人生。每篇标注来源与年份，附交叉索引，是一套可以系统通读的电子书。
-            每篇标注来源与年份，附交叉索引，是一套可以系统通读的电子书。
           </p>
           <div className="edition-hero__stats" aria-label="巴芒文集内容规模">
             {heroStats.map(([num, label]) => (
@@ -136,6 +135,16 @@ export default function BoundEditionPage() {
           </div>
           <Link href="#books" className="archive-button archive-button--solid">查看两卷书 <ArrowRight size={17} /></Link>
           <Link href="#sample" className="archive-button">先读原文再决定</Link>
+        </section>
+
+        <section className="edition-section edition-compare" aria-labelledby="edition-audience-title">
+          <div className="edition-section__heading">
+            <p className="study-label">WHO IT IS FOR · 适合谁</p>
+            <h2 id="edition-audience-title">适合准备系统读一遍的人，<br />不适合寻找投资捷径的人</h2>
+          </div>
+          <article><span>适合</span><h3>希望连续阅读原始资料</h3><p>已经不满足于金句和二手摘要，希望沿一条主线读完巴菲特或芒格的重要公开记录。</p></article>
+          <article><span>适合</span><h3>重视来源、索引和修订</h3><p>愿意核对年份与出处，也需要人物、企业、概念和模型索引帮助反复查找。</p></article>
+          <article><span>不适合</span><h3>期待荐股、收益承诺或秘密信息</h3><p>文集提供的是公开资料的整理、校订和连续阅读，不提供即时交易答案，也不替任何人作投资决定。</p></article>
         </section>
 
         {/* 两本书 */}
@@ -203,7 +212,7 @@ export default function BoundEditionPage() {
         </section>
 
         {/* 实际页面预览 */}
-        <section className="edition-section edition-preview" aria-label="终稿 PDF 实际页面预览">
+        <section className="edition-section edition-preview" aria-label="EPUB 电子书实际页面预览">
           <div className="edition-section__heading">
             <p className="study-label">PREVIEW · 实际页面预览</p>
             <h2>电子书里，<br />实际长什么样</h2>
@@ -279,7 +288,7 @@ export default function BoundEditionPage() {
             <div className="edition-feedback__alternatives">
               <Link href="#sample"><ShieldCheck size={16} /><div><strong>先读原文</strong><small>用免费材料检验这套书的来源</small></div><ArrowRight size={15} /></Link>
               <Link href="#craft"><ShieldCheck size={16} /><div><strong>看编辑记录</strong><small>字数、核查、修订，全部可查</small></div><ArrowRight size={15} /></Link>
-              <Link href="/digital-product-policy"><ShieldCheck size={16} /><div><strong>交付与售后</strong><small>PDF 交付、更新范围与退款说明</small></div><ArrowRight size={15} /></Link>
+              <Link href="/digital-product-policy"><ShieldCheck size={16} /><div><strong>交付与售后</strong><small>EPUB 交付、更新范围与退款说明</small></div><ArrowRight size={15} /></Link>
             </div>
           </div>
         </section>

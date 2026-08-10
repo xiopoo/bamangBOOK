@@ -6,7 +6,6 @@ import { getBloggers } from '@/lib/bloggers'
 import { getBusinessHistoryStats } from '@/lib/business-history'
 import { getBookStats } from '@/lib/books'
 import { getColumnStats } from '@/lib/columns'
-import { getDYDocs } from '@/lib/duanyongping'
 import { getModelStats } from '@/lib/models'
 import type { Metadata } from 'next'
 import styles from './reading.module.css'
@@ -23,11 +22,13 @@ const CATEGORY_HREF: Record<string, string> = {
   '演讲': '/talks',
   '访谈': '/interviews',
   '股东大会': '/qa',
+  '问答': '/duanyongping/qa',
+  '文章': '/duanyongping/blog',
+  '公司里程碑': '/duanyongping/milestones',
   '公司分析': '/companies',
 }
 
 const READING_HUBS = [
-  { href: '/duanyongping', label: '段永平', description: '博客、雪球问答、演讲与公司里程碑', key: 'duan' },
   { href: '/business-history', label: '公司研究', description: '从商业模式、护城河到资本配置', key: 'business' },
   { href: '/model', label: '思维模型', description: '跨学科工具与长期决策框架', key: 'models' },
   { href: '/bloggers', label: '博主文章', description: '按作者和时间继续阅读长期文章', key: 'bloggers' },
@@ -38,7 +39,6 @@ const READING_HUBS = [
 export default function ReadingPage() {
   const stats = getReadingStats()
   const hubCounts: Record<string, number> = {
-    duan: getDYDocs('blog', false).length + getDYDocs('qa', false).length + getDYDocs('talks', false).length + getDYDocs('milestones', false).length,
     business: getBusinessHistoryStats().total,
     models: getModelStats().total,
     bloggers: getBloggers().reduce((sum, blogger) => sum + blogger.count, 0),
@@ -59,9 +59,10 @@ export default function ReadingPage() {
 
         <dl className={styles.stats}>
           <div><dt>{stats.totalItems}</dt><dd>核心资料</dd></div>
-          <div><dt>{stats.authorCount}</dt><dd>位原典人物</dd></div>
+          <div><dt>{stats.authorCount}</dt><dd>位核心人物</dd></div>
           <div><dt>{stats.authorCounts['巴菲特'] || 0}</dt><dd>篇巴菲特相关</dd></div>
           <div><dt>{stats.authorCounts['芒格'] || 0}</dt><dd>篇芒格相关</dd></div>
+          <div><dt>{stats.authorCounts['段永平'] || 0}</dt><dd>篇段永平相关</dd></div>
         </dl>
 
         <div className={styles.authors}>

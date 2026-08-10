@@ -26,6 +26,8 @@ export function columnParams() {
 }
 
 export function businessHistoryParams() {
+  // Next.js owns URL encoding for generated params. Pre-encoding here causes
+  // a second encoding pass and silently exports a not-found shell.
   return getBusinessHistories().map(({ slug }) => ({ slug }))
 }
 

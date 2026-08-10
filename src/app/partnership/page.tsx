@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '巴菲特致合伙人信｜复利书房',
     description: '1956–1970 年致合伙人信全集，按年份连续阅读。',
-    images: ['/og-v2.png'],
   },
 }
 

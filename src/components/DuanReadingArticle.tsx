@@ -1,0 +1,52 @@
+import type { ReactNode } from 'react'
+import ReadingArticleShell from './ReadingArticleShell'
+import MarkdownContent from './MarkdownContent'
+import { getDYNeighbors, stripTalkSourceNote, type DYDoc, type DYSection } from '@/lib/duanyongping'
+import type { ReadingContentType } from '@/lib/reading-content'
+
+interface DuanReadingArticleProps {
+  doc: DYDoc
+  section: DYSection
+  backLabel: string
+  contentType: ReadingContentType
+  intro?: string
+  beforeBody?: ReactNode
+  isQA?: boolean
+}
+
+const SECTION_LABEL: Record<DYSection, string> = {
+  blog: '网易博客',
+  qa: '雪球问答',
+  talks: '演讲与访谈',
+  milestones: '公司与里程碑',
+}
+
+function isUrl(value?: string): boolean {
+  return Boolean(value && /^https?:\/\//i.test(value))
+}
+
+export default function DuanReadingArticle({ doc, section, backLabel, contentType, intro, beforeBody, isQA }: DuanReadingArticleProps) {
+  const { previous, next } = getDYNeighbors(section, doc.slug)
+  const sourceCandidate = doc.sourceUrl || doc.source
+  const sourceUrl = isUrl(sourceCandidate) ? sourceCandidate : undefined
+  const sourceLabel = doc.platform || (!isUrl(doc.source) && doc.source) || SECTION_LABEL[section]
+  const body = section === 'talks' ? stripTalkSourceNote(doc.content) : doc.content
+  const year = doc.year ? Number(doc.year) : doc.date?.slice(0, 4)
+  const hrefFor = (slug: string) => `/duanyongping/${section}/${slug}`
+
+  return <ReadingArticleShell
+    title={doc.title}
+    subtitle={intro || `段永平${SECTION_LABEL[section]}资料`}
+    backHref={`/duanyongping/${section}`}
+    backLabel={backLabel}
+    metadata={{ person: '段永平', year, contentType, sourceLabel, status: '编辑整理', completeness: '未知', readMinutes: Math.max(1, Math.round(body.length / 900)) }}
+    trust={{ source: sourceLabel, method: '依据公开资料进行中文归档整理；时间、平台和来源信息按现有原始记录保留。' }}
+    sourceNote={{ source: sourceLabel, sourceUrl, method: '公开资料归档与格式整理，未改变原始观点。', completeness: '未知' }}
+    previous={previous ? { href: hrefFor(previous.slug), title: previous.title, meta: previous.date?.slice(0, 10) || previous.year } : null}
+    next={next ? { href: hrefFor(next.slug), title: next.title, meta: next.date?.slice(0, 10) || next.year } : null}
+    navigationLabel={`按时间从早到晚的相邻${SECTION_LABEL[section]}`}
+  >
+    {beforeBody}
+    <MarkdownContent content={body} isQA={isQA} />
+  </ReadingArticleShell>
+}

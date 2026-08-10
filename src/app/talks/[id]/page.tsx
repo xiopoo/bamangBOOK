@@ -1,84 +1,48 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getDocumentByFileName, getCategoryTitle, getCategoryIcon } from '@/lib/documents'
+import type { Metadata } from 'next'
+import { getAdjacentDocuments, getDocumentByFileName } from '@/lib/documents'
 import { people } from '@/lib/people'
-import ReadingProgress from '@/components/ReadingProgress'
-import ArticleTableOfContents from '@/components/ArticleTableOfContents'
-import MarkdownContent from '@/components/MarkdownContent'
-import FontSizeControlFixed from '@/components/FontSizeControlFixed'
-import RelatedArticles from '@/components/RelatedArticles'
 import { talkParams } from '@/lib/staticParams'
+import { documentHref } from '@/lib/content-routes'
+import ReadingArticleShell from '@/components/ReadingArticleShell'
+import MarkdownContent from '@/components/MarkdownContent'
+import RelatedArticles from '@/components/RelatedArticles'
 
-export function generateStaticParams() {
-  return talkParams()
-}
-
+export function generateStaticParams() { return talkParams() }
 export const dynamicParams = false
 
-interface PageProps {
-  params: { id: string }
+interface PageProps { params: { id: string } }
+
+export function generateMetadata({ params }: PageProps): Metadata {
+  const fileName = decodeURIComponent(params.id)
+  const doc = getDocumentByFileName('talks', fileName)
+  if (!doc) return { title: '演讲资料未找到' }
+  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).map(id => people[id]?.name).filter(Boolean).join('、')
+  return {
+    title: `${personName ? `${personName} · ` : ''}${doc.year ? `${doc.year}年 · ` : ''}演讲 · ${doc.title}`,
+    description: `${doc.title}，${doc.year ? `${doc.year}年` : ''}演讲资料中文整理。`,
+    alternates: { canonical: documentHref('talks', { fileName }) },
+  }
 }
 
 export default function TalkDetailPage({ params }: PageProps) {
   const fileName = decodeURIComponent(params.id)
   const doc = getDocumentByFileName('talks', fileName)
+  if (!doc) notFound()
+  const { prev, next } = getAdjacentDocuments('talks', fileName)
+  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).map(id => people[id]?.name).filter(Boolean).join('、') || '相关人物待核对'
 
-  if (!doc) {
-    notFound()
-  }
-
-  return (
-    <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <ReadingProgress />
-      <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <Link href="/talks" className="text-sm text-primary hover:text-primary-light transition-colors mb-2 inline-flex items-center gap-1">
-                ← 返回{getCategoryTitle('talks')}列表
-              </Link>
-              <h1 className="text-2xl sm:text-3xl font-serif font-bold text-primary dark:text-primary-light">{doc.title}</h1>
-              <p className="text-sm text-text-muted dark:text-dark-muted">
-                {getCategoryIcon('talks')} {getCategoryTitle('talks')}
-                {doc.year && ` · ${doc.year}年`}
-              </p>
-              {doc.person && (
-                <div className="flex items-center gap-2 mt-2">
-                  <span className="text-xs text-text-muted dark:text-dark-muted">相关人物：</span>
-                  {(Array.isArray(doc.person) ? doc.person : [doc.person]).map((personId) => {
-                    const person = people[personId]
-                    if (!person) return null
-                    return (
-                      <Link
-                        key={personId}
-                        href={`/${personId}`}
-                        className="inline-flex items-center gap-1 text-xs bg-primary/10 text-primary dark:text-primary-light px-2 py-1 rounded-full hover:bg-primary/20 transition-colors"
-                      >
-                        {person.name}
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
-            <FontSizeControlFixed />
-          </div>
-        </div>
-      </header>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="flex-1">
-            <article className="bg-bg-card dark:bg-dark-card p-6 md:p-10 shadow-card rounded-card">
-              <MarkdownContent content={doc.content} />
-            </article>
-          </main>
-          <ArticleTableOfContents />
-        </div>
-      </div>
-
-      <RelatedArticles source="talks" fileName={fileName} />
-
-    </div>
-  )
+  return <ReadingArticleShell
+    title={doc.title}
+    subtitle="演讲原典中文阅读整理"
+    backHref="/talks"
+    backLabel="返回演讲目录"
+    metadata={{ person: personName, year: doc.year || undefined, contentType: '演讲', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
+    trust={{ source: doc.sourceLabel, method: '依据公开演讲资料进行中文阅读整理；涉及关键引语时应回到原始录音、视频或文字记录核对。' }}
+    sourceNote={{ source: doc.sourceLabel, method: '中文阅读整理，保留原始年份与演讲语境。', completeness: doc.completeness }}
+    previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
+    next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
+    navigationLabel="按时间从早到晚的相邻演讲"
+    related={<RelatedArticles source="talks" fileName={fileName} />}
+  ><MarkdownContent content={doc.content} /></ReadingArticleShell>
 }
