@@ -11,6 +11,7 @@ export type DYDoc = {
   author: string
   contentType?: string
   date?: string
+  publishedAt?: string
   year?: string
   platform?: string
   source?: string
@@ -28,8 +29,57 @@ export type DYSection = 'blog' | 'qa' | 'talks' | 'milestones'
 
 const docsCache = new Map<DYSection, { metadata?: DYDoc[]; withContent?: DYDoc[] }>()
 
+const PUBLIC_TALKS_ATTACHMENTS = '/duanyongping/talks/attachments/'
+
+function inferSourceYear(data: Record<string, unknown>, fileName: string, title: string, date?: string): string | undefined {
+  const explicit = data.year
+  if (typeof explicit === 'string' && /^\d{4}$/.test(explicit)) return explicit
+  if (typeof explicit === 'number' && /^\d{4}$/.test(String(explicit))) return String(explicit)
+
+  const sourceText = `${title} ${fileName}`
+  const match = sourceText.match(/(?:^|[^\d])(19\d{2}|20\d{2})(?=[^\d]|$)/)
+  return match?.[1] || date?.slice(0, 4)
+}
+
+/**
+ * 将段永平访谈 Markdown 中相对于源文件的附件路径，映射到 public 中的公开路径。
+ *
+ * 只处理明确以 attachments/ 开头的相对路径；外部 URL、根路径、锚点和 data URL
+ * 原样保留，避免把正文中的其他链接误改成站内资源。
+ */
+function resolveTalkAttachmentPaths(content: string): string {
+  let inFence = false
+
+  return content
+    .split('\n')
+    .map((line) => {
+      if (/^\s*(```|~~~)/.test(line)) {
+        inFence = !inFence
+        return line
+      }
+      if (inFence) return line
+
+      return line.replace(
+        /(!\[[^\]]*\]\(\s*(?:<)?)(attachments\/[^)\n>]+)(>?\s*(?:["'][^)]*)?\))/g,
+        (_match, prefix: string, relativePath: string, suffix: string) => {
+          const segments = relativePath.split('/')
+          if (segments.some((segment) => !segment || segment === '.' || segment === '..')) {
+            return `${prefix}${relativePath}${suffix}`
+          }
+          const publicPath = segments.slice(1).map((segment) => encodeURIComponent(segment)).join('/')
+          return `${prefix}${PUBLIC_TALKS_ATTACHMENTS}${publicPath}${suffix}`
+        },
+      )
+    })
+    .join('\n')
+}
+
 function sectionDir(section: DYSection): string {
   return path.join(ROOT, section)
+}
+
+function shouldIncludeFile(section: DYSection, fileName: string): boolean {
+  return fileName.endsWith('.md') && !(section === 'talks' && fileName.includes('目录'))
 }
 
 /**
@@ -53,9 +103,9 @@ function collectFiles(section: DYSection): string[] {
       if (entry.name === 'attachments' || entry.name === '按年份') continue
       const sub = path.join(dir, entry.name)
       for (const f of fs.readdirSync(sub)) {
-        if (f.endsWith('.md')) out.push(path.join(sub, f))
+        if (shouldIncludeFile(section, f)) out.push(path.join(sub, f))
       }
-    } else if (entry.name.endsWith('.md')) {
+    } else if (shouldIncludeFile(section, entry.name)) {
       out.push(path.join(dir, entry.name))
     }
   }
@@ -68,13 +118,15 @@ function readDoc(section: DYSection, filePath: string, includeContent = true): D
   const fileName = path.basename(filePath)
   const category = section
   const date = resolveDate(data)
+  const title = data.title || fileName
   return {
     fileName,
-    title: data.title || fileName,
+    title: typeof title === 'string' ? title.replace(/记念/g, '纪念') : fileName,
     author: data.author || '段永平',
     contentType: data.content_type,
     date,
-    year: data.year || date?.slice(0, 4),
+    publishedAt: typeof data.published_at === 'string' ? data.published_at : undefined,
+    year: inferSourceYear(data, fileName, String(title), date),
     platform: data.platform,
     source: data.source,
     sourceUrl: data.source_url,
@@ -84,7 +136,7 @@ function readDoc(section: DYSection, filePath: string, includeContent = true): D
     duanCommentCount: data.duan_comment_count,
     category,
     slug: slugFromFileName(fileName),
-    content: includeContent ? content : '',
+    content: includeContent ? (section === 'talks' ? resolveTalkAttachmentPaths(content) : content) : '',
   }
 }
 
@@ -110,15 +162,15 @@ export function getDYDocs(section: DYSection, includeContent = true): DYDoc[] {
       if (entry.name === 'attachments' || entry.name === '按年份') continue
       const sub = path.join(dir, entry.name)
       for (const f of fs.readdirSync(sub)) {
-        if (f.endsWith('.md')) out.push(readDoc(section, path.join(sub, f), includeContent))
+        if (shouldIncludeFile(section, f)) out.push(readDoc(section, path.join(sub, f), includeContent))
       }
-    } else if (entry.name.endsWith('.md')) {
+    } else if (shouldIncludeFile(section, entry.name)) {
       out.push(readDoc(section, path.join(dir, entry.name), includeContent))
     }
   }
   out.sort((a, b) => {
-    const ka = a.date || a.year || ''
-    const kb = b.date || b.year || ''
+    const ka = section === 'talks' ? `${a.year || '9999'}\u0000${a.title}` : a.date || a.year || ''
+    const kb = section === 'talks' ? `${b.year || '9999'}\u0000${b.title}` : b.date || b.year || ''
     if (ka !== kb) return ka.localeCompare(kb)
     return a.slug.localeCompare(b.slug)
   })
@@ -126,6 +178,23 @@ export function getDYDocs(section: DYSection, includeContent = true): DYDoc[] {
   entry[includeContent ? 'withContent' : 'metadata'] = out
   docsCache.set(section, entry)
   return [...out]
+}
+
+/** 去掉详情页里已经由元数据显示的转载来源块，避免长 URL 在移动端撑出难看的多行文本。 */
+export function stripTalkSourceNote(content: string): string {
+  const lines = content.replace(/\r\n?/g, '\n').split('\n')
+  let start = 0
+  while (start < lines.length && !lines[start].trim()) start += 1
+  if (!/^>\s*(本文转载自|原文链接)/.test(lines[start] || '')) return content
+
+  let end = start
+  let hasSourceMarker = false
+  while (end < lines.length && (lines[end].trim() === '' || lines[end].startsWith('>'))) {
+    if (/本文转载自|原文链接/.test(lines[end])) hasSourceMarker = true
+    end += 1
+  }
+  if (!hasSourceMarker) return content
+  return lines.slice(0, start).concat(lines.slice(end)).join('\n').replace(/^\n+/, '')
 }
 
 export function getDYDoc(section: DYSection, slug: string): DYDoc | null {
@@ -160,7 +229,7 @@ export function getDYNeighbors(section: DYSection, slug: string): { previous: DY
 }
 
 export function getDYYearKey(doc: DYDoc): string {
-  return (doc.date || doc.year || '未知').slice(0, 4)
+  return (doc.year || doc.date || '未知').slice(0, 4)
 }
 
 export const DY_QA_PAGE_SIZE = 50

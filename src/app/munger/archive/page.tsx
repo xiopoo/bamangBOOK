@@ -66,12 +66,13 @@ export default function MungerArchivePage() {
 
       <div className="archive-catalog__groups archive-catalog__groups--supporting">
         {supportingGroups.map((group, groupIndex) => (
-          <section key={group.section} id={group.section}>
-            <header>
+          <details key={group.section} id={group.section} open={groupIndex === 0}>
+            <summary>
               <span>{String(groupIndex + 1).padStart(2, '0')}</span>
               <h2>{group.label}</h2>
               <p>{group.items.length} 篇</p>
-            </header>
+              <b aria-hidden="true">⌄</b>
+            </summary>
             <div>
               {group.items.map(item => (
                 <Link key={item.slug} href={`/munger/archive/${item.slug}`}>
@@ -80,7 +81,7 @@ export default function MungerArchivePage() {
                 </Link>
               ))}
             </div>
-          </section>
+          </details>
         ))}
       </div>
 

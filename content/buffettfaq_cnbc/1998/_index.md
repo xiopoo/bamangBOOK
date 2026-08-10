@@ -1,0 +1,56 @@
+# Berkshire Hathaway 年会 1998
+
+(May 4, 1998) Warren Buffett and Charlie Munger criticize American corporations for giving extraordinary compensation packages to average CEOs.  They also reveal the secret to success in business, remind investors there's no "degree of difficulty" bonus, and dismiss "due diligence" in deals as a waste of money.
+
+---
+
+### 完整会议（24/24 已抓取）
+- [1998 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/1998/05/04/1998-berkshire-hathaway-annual-meeting-highlights.html)
+- [Morning Session - 1998 Meeting](https://buffett.cnbc.com/video/1998/05/04/morning-session---1998-berkshire-hathaway-annual-meeting.html)
+- [Afternoon Session - 1998 Meeting](https://buffett.cnbc.com/video/1998/05/04/afternoon-session---1998-berkshire-hathaway-annual-meeting.html)
+- [Berkshire has people "leagues ahead of Charlie and me"](https://buffett.cnbc.com/video/1998/05/04/buffett-berkshire-has-people-leagues-ahead-of-charlie-and-me.html)
+- ["Buy a stock that you don't ever want to sell"](https://buffett.cnbc.com/video/1998/05/04/buffett-buy-a-stock-that-you-dont-ever-want-to-sell.html)
+- ["We don't have any strategic plan"](https://buffett.cnbc.com/video/1998/05/04/buffett-we-dont-have-any-strategic-plan.html)
+- [Y2K problem won't have a huge impact on Berkshire](https://buffett.cnbc.com/video/1998/05/04/buffett-y2k-problem-wont-have-a-huge-impact-on-berkshire.html)
+- [Buffett on what is important and what is knowable](https://buffett.cnbc.com/video/1998/05/04/buffett-on-what-is-important-and-what-is-knowable-.html)
+- ["Get it corrected and get back to sleep"](https://buffett.cnbc.com/video/1998/05/04/buffett-get-it-corrected-and-get-back-to-sleep.html)
+- [What Buffett looks for in an annual report](https://buffett.cnbc.com/video/1998/05/04/what-buffett-looks-for-in-an-annual-report.html)
+- ["That is a seven or eight foot bar that I can't clear"](https://buffett.cnbc.com/video/1998/05/04/buffett-that-is-a-seven-or-eight-foot-bar-that-i-cant-clear.html)
+- [There's no "degree of difficulty" factor in investing](https://buffett.cnbc.com/video/1998/05/04/buffett-theres-no-degree-of-difficulty-factor-in-investing.html)
+- ["The secret of life is weak competition"](https://buffett.cnbc.com/video/1998/05/04/buffett-the-secret-of-life-is-weak-competition.html)
+- [Believe markets are efficient? Go right ahead](https://buffett.cnbc.com/video/1998/05/04/believe-markets-are-efficient-go-right-ahead.html)
+- ["What bothers me is when companies pay a lot of money for mediocrity"](https://buffett.cnbc.com/video/1998/05/04/buffett-what-bothers-me-is-when-companies-pay-a-lot-of-money-for-mediocrity.html)
+- ["The B has worked out as well as possible"](https://buffett.cnbc.com/video/1998/05/04/buffett-the-b-has-worked-out-as-well-as-possible.html)
+- [How Buffett assesses a company's value](https://buffett.cnbc.com/video/1998/05/04/how-buffett-assesses-a-companys-value.html)
+- [What's the difference between the A and B shares?](https://buffett.cnbc.com/video/1998/05/04/whats-the-difference-between-the-a-and-b-shares.html)
+- [Buffett and Munger on inheritance](https://buffett.cnbc.com/video/1998/05/04/buffett-and-munger-on-inheritance-.html)
+- [Phil Fisher's "scuttlebutt" method](https://buffett.cnbc.com/video/1998/05/04/phil-fishers-scuttlebutt-method.html)
+- [Public education "needs fixing"](https://buffett.cnbc.com/video/1998/05/04/munger-public-education-needs-fixing.html)
+- [Operating from a "Norman Rockwell frame of mind"](https://buffett.cnbc.com/video/1998/05/04/operating-from-a-norman-rockwell-frame-of-mind.html)
+- [Will the internet help Berkshire's businesses?](https://buffett.cnbc.com/video/1998/05/04/will-the-internet-help-berkshires-businesses.html)
+- [Why there's no "due diligence" in Berkshire deals](https://buffett.cnbc.com/video/1998/05/04/warren-buffett-says-having-lawyers-look-over-all-the-details-of-a-company-hes-going-to-purchase-is-a-waste-of-time-and-money.html)
+
+### 精选片段（22/22 已抓取）
+
+- [1998 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/1998/05/04/1998-berkshire-hathaway-annual-meeting-highlights.html)
+- [Berkshire has people "leagues ahead of Charlie and me"](https://buffett.cnbc.com/video/1998/05/04/buffett-berkshire-has-people-leagues-ahead-of-charlie-and-me.html)
+- ["Buy a stock that you don't ever want to sell"](https://buffett.cnbc.com/video/1998/05/04/buffett-buy-a-stock-that-you-dont-ever-want-to-sell.html)
+- ["We don't have any strategic plan"](https://buffett.cnbc.com/video/1998/05/04/buffett-we-dont-have-any-strategic-plan.html)
+- [Y2K problem won't have a huge impact on Berkshire](https://buffett.cnbc.com/video/1998/05/04/buffett-y2k-problem-wont-have-a-huge-impact-on-berkshire.html)
+- [Buffett on what is important and what is knowable](https://buffett.cnbc.com/video/1998/05/04/buffett-on-what-is-important-and-what-is-knowable-.html)
+- ["Get it corrected and get back to sleep"](https://buffett.cnbc.com/video/1998/05/04/buffett-get-it-corrected-and-get-back-to-sleep.html)
+- [What Buffett looks for in an annual report](https://buffett.cnbc.com/video/1998/05/04/what-buffett-looks-for-in-an-annual-report.html)
+- ["That is a seven or eight foot bar that I can't clear"](https://buffett.cnbc.com/video/1998/05/04/buffett-that-is-a-seven-or-eight-foot-bar-that-i-cant-clear.html)
+- [There's no "degree of difficulty" factor in investing](https://buffett.cnbc.com/video/1998/05/04/buffett-theres-no-degree-of-difficulty-factor-in-investing.html)
+- ["The secret of life is weak competition"](https://buffett.cnbc.com/video/1998/05/04/buffett-the-secret-of-life-is-weak-competition.html)
+- [Believe markets are efficient? Go right ahead](https://buffett.cnbc.com/video/1998/05/04/believe-markets-are-efficient-go-right-ahead.html)
+- ["What bothers me is when companies pay a lot of money for mediocrity"](https://buffett.cnbc.com/video/1998/05/04/buffett-what-bothers-me-is-when-companies-pay-a-lot-of-money-for-mediocrity.html)
+- ["The B has worked out as well as possible"](https://buffett.cnbc.com/video/1998/05/04/buffett-the-b-has-worked-out-as-well-as-possible.html)
+- [How Buffett assesses a company's value](https://buffett.cnbc.com/video/1998/05/04/how-buffett-assesses-a-companys-value.html)
+- [What's the difference between the A and B shares?](https://buffett.cnbc.com/video/1998/05/04/whats-the-difference-between-the-a-and-b-shares.html)
+- [Buffett and Munger on inheritance](https://buffett.cnbc.com/video/1998/05/04/buffett-and-munger-on-inheritance-.html)
+- [Phil Fisher's "scuttlebutt" method](https://buffett.cnbc.com/video/1998/05/04/phil-fishers-scuttlebutt-method.html)
+- [Public education "needs fixing"](https://buffett.cnbc.com/video/1998/05/04/munger-public-education-needs-fixing.html)
+- [Operating from a "Norman Rockwell frame of mind"](https://buffett.cnbc.com/video/1998/05/04/operating-from-a-norman-rockwell-frame-of-mind.html)
+- [Will the internet help Berkshire's businesses?](https://buffett.cnbc.com/video/1998/05/04/will-the-internet-help-berkshires-businesses.html)
+- [Why there's no "due diligence" in Berkshire deals](https://buffett.cnbc.com/video/1998/05/04/warren-buffett-says-having-lawyers-look-over-all-the-details-of-a-company-hes-going-to-purchase-is-a-waste-of-time-and-money.html)

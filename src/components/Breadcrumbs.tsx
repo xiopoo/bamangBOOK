@@ -78,15 +78,55 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '首页', href: '/' },
     { label: '阅读库', href: '/reading' },
   ],
+  '/business-history': [
+    { label: '首页', href: '/' },
+    { label: '研究', href: '/business-history' },
+    { label: '公司深度研究', href: '/business-history' },
+  ],
+  '/bloggers': [
+    { label: '首页', href: '/' },
+    { label: '文章', href: '/bloggers' },
+    { label: '博主文章', href: '/bloggers' },
+  ],
+  '/columns': [
+    { label: '首页', href: '/' },
+    { label: '文章', href: '/columns' },
+    { label: '专栏', href: '/columns' },
+  ],
+  '/duanyongping': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '段永平', href: '/duanyongping' },
+  ],
+  '/munger/archive': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '芒格资料', href: '/munger/archive' },
+  ],
+  '/books': [
+    { label: '首页', href: '/' },
+    { label: '研究', href: '/books' },
+    { label: '经典书籍', href: '/books' },
+  ],
 }
 
-export default function Breadcrumbs() {
+interface BreadcrumbsProps {
+  fallbackParent?: BreadcrumbItem
+}
+
+export default function Breadcrumbs({ fallbackParent }: BreadcrumbsProps) {
   const pathname = usePathname()
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
-    const basePath = Object.keys(pathMap).find(key => pathname.startsWith(key))
+    const basePath = Object.keys(pathMap)
+      .sort((a, b) => b.length - a.length)
+      .find(key => pathname === key || pathname.startsWith(`${key}/`))
     if (!basePath) {
-      return [{ label: '首页', href: '/' }, { label: pathname.split('/').pop() || '未知页面' }]
+      return [
+        { label: '首页', href: '/' },
+        ...(fallbackParent ? [fallbackParent] : []),
+        { label: pathname.split('/').pop() || '未知页面' },
+      ]
     }
 
     const baseCrumbs = pathMap[basePath]

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import type { ThinkerArchive } from '@/lib/thinker-archives'
+import Breadcrumbs from './Breadcrumbs'
 import styles from './ThinkerArchivePage.module.css'
 
 type Stat = {
@@ -16,7 +17,9 @@ export default function ThinkerArchivePage({
   stats: Stat[]
 }) {
   return (
-    <div className={styles.archive}>
+    <>
+      <Breadcrumbs />
+      <div className={styles.archive}>
       <header className={styles.hero}>
         <p>{archive.eyebrow}</p>
         <h1>{archive.name}</h1>
@@ -106,6 +109,7 @@ export default function ThinkerArchivePage({
           ))}
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

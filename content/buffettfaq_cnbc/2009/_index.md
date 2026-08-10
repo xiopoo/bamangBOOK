@@ -1,0 +1,56 @@
+# Berkshire Hathaway 年会 2009
+
+(May 2, 2009) As the country continued to stagger just months after the credit crisis exploded, Buffett endorses the government's response to "a situation that was as close to a total meltdown throughout the financial system as I think you can imagine." He details how GEICO benefited from the crisis, and predicts a full housing recovery will take some time.
+
+---
+
+### 完整会议（24/24 已抓取）
+- [2009 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2009/05/02/2009-berkshire-hathaway-annual-meeting-highlights.html)
+- [Morning Session - 2009  Meeting](https://buffett.cnbc.com/video/2009/05/02/morning-session---2009--berkshire-hathaway-annual-meeting.html)
+- [Afternoon Session - 2009 Meeting](https://buffett.cnbc.com/video/2009/05/02/afternoon-session---2009-berkshire-hathaway-annual-meeting.html)
+- [Buffett and Munger on nationalized health care](https://buffett.cnbc.com/video/2009/05/02/buffett-and-munger-on-nationalized-health-care-.html)
+- [Why hasn't Buffett brought in his successor?](https://buffett.cnbc.com/video/2009/05/02/why-hasnt-buffett-brought-in-his-successor.html)
+- ["I'd only have two courses"](https://buffett.cnbc.com/video/2009/05/02/buffetts-investing-basics.html)
+- [Derivatives are "a danger to the system"](https://buffett.cnbc.com/video/2009/05/02/buffett-derivatives-are-a-danger-to-the-system.html)
+- [Will Berkshire be competitive in the long term?](https://buffett.cnbc.com/video/2009/05/02/will-berkshire-be-competitive-in-the-long-term.html)
+- [When does Berkshire sell its stocks?](https://buffett.cnbc.com/video/2009/05/02/when-does-berkshire-sell-its-stocks.html)
+- [Why GEICO spends big on advertising](https://buffett.cnbc.com/video/2009/05/02/why-geico-spends-big-on-advertising.html)
+- [How Americans' stupidity benefits Berkshire](https://buffett.cnbc.com/video/2009/05/02/how-americans-stupidity-benefits-berkshire.html)
+- [Moody's wasn't alone in making mistakes](https://buffett.cnbc.com/video/2009/05/02/buffett-moodys-wasnt-alone-in-making-mistakes.html)
+- [Buffett's three choices for balancing the housing market](https://buffett.cnbc.com/video/2009/05/02/buffetts-three-choices-for-balancing-the-housing-market.html)
+- ["The best protection against inflation is your own earning power"](https://buffett.cnbc.com/video/2009/05/02/buffett-the-best-protection-against-inflation-is-your-own-earning-power.html)
+- [Buffett and Munger commend DC's credit crisis response](https://buffett.cnbc.com/video/2009/05/02/buffett-and-munger-commend-dcs-credit-crisis-response.html)
+- [Berkshire's long-term derivatives will be profitable](https://buffett.cnbc.com/video/2009/05/02/buffett-berkshires-long-term-derivatives-will-be-profitable.html)
+- ["We will not be spinning off companies"](https://buffett.cnbc.com/video/2009/05/02/buffett-we-will-not-be-spinning-off-companies.html)
+- ["Capitalism is creative destruction"](https://buffett.cnbc.com/video/2009/05/02/buffett-capitalism-is-creative-destruction.html)
+- [America has "a system that works"](https://buffett.cnbc.com/video/2009/05/02/buffett-america-has-a-system-that-works.html)
+- [Munger: China's BYD is a "damn miracle"](https://buffett.cnbc.com/video/2009/05/02/munger-chinas-byd-is-a-damn-miracle.html)
+- ["We are not big believers in contracts"](https://buffett.cnbc.com/video/2009/05/02/buffett-we-are-not-big-believers-in-contracts.html)
+- [Big investors should "embarrass" overpaid CEOs](https://buffett.cnbc.com/video/2009/05/02/buffett-big-investors-should-embarrass-overpaid-ceos.html)
+- ["I do know when you're starting to get a lot for your money"](https://buffett.cnbc.com/video/2009/05/02/buffett-i-do-know-when-youre-starting-to-get-a-lot-for-your-money.html)
+- ["I was dead wrong" on Gen Re](https://buffett.cnbc.com/video/2009/05/02/buffett-i-was-dead-wrong-on-gen-re.html)
+
+### 精选片段（22/22 已抓取）
+
+- [2009 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2009/05/02/2009-berkshire-hathaway-annual-meeting-highlights.html)
+- [Buffett and Munger on nationalized health care](https://buffett.cnbc.com/video/2009/05/02/buffett-and-munger-on-nationalized-health-care-.html)
+- [Why hasn't Buffett brought in his successor?](https://buffett.cnbc.com/video/2009/05/02/why-hasnt-buffett-brought-in-his-successor.html)
+- ["I'd only have two courses"](https://buffett.cnbc.com/video/2009/05/02/buffetts-investing-basics.html)
+- [Derivatives are "a danger to the system"](https://buffett.cnbc.com/video/2009/05/02/buffett-derivatives-are-a-danger-to-the-system.html)
+- [Will Berkshire be competitive in the long term?](https://buffett.cnbc.com/video/2009/05/02/will-berkshire-be-competitive-in-the-long-term.html)
+- [When does Berkshire sell its stocks?](https://buffett.cnbc.com/video/2009/05/02/when-does-berkshire-sell-its-stocks.html)
+- [Why GEICO spends big on advertising](https://buffett.cnbc.com/video/2009/05/02/why-geico-spends-big-on-advertising.html)
+- [How Americans' stupidity benefits Berkshire](https://buffett.cnbc.com/video/2009/05/02/how-americans-stupidity-benefits-berkshire.html)
+- [Moody's wasn't alone in making mistakes](https://buffett.cnbc.com/video/2009/05/02/buffett-moodys-wasnt-alone-in-making-mistakes.html)
+- [Buffett's three choices for balancing the housing market](https://buffett.cnbc.com/video/2009/05/02/buffetts-three-choices-for-balancing-the-housing-market.html)
+- ["The best protection against inflation is your own earning power"](https://buffett.cnbc.com/video/2009/05/02/buffett-the-best-protection-against-inflation-is-your-own-earning-power.html)
+- [Buffett and Munger commend DC's credit crisis response](https://buffett.cnbc.com/video/2009/05/02/buffett-and-munger-commend-dcs-credit-crisis-response.html)
+- [Berkshire's long-term derivatives will be profitable](https://buffett.cnbc.com/video/2009/05/02/buffett-berkshires-long-term-derivatives-will-be-profitable.html)
+- ["We will not be spinning off companies"](https://buffett.cnbc.com/video/2009/05/02/buffett-we-will-not-be-spinning-off-companies.html)
+- ["Capitalism is creative destruction"](https://buffett.cnbc.com/video/2009/05/02/buffett-capitalism-is-creative-destruction.html)
+- [America has "a system that works"](https://buffett.cnbc.com/video/2009/05/02/buffett-america-has-a-system-that-works.html)
+- [Munger: China's BYD is a "damn miracle"](https://buffett.cnbc.com/video/2009/05/02/munger-chinas-byd-is-a-damn-miracle.html)
+- ["We are not big believers in contracts"](https://buffett.cnbc.com/video/2009/05/02/buffett-we-are-not-big-believers-in-contracts.html)
+- [Big investors should "embarrass" overpaid CEOs](https://buffett.cnbc.com/video/2009/05/02/buffett-big-investors-should-embarrass-overpaid-ceos.html)
+- ["I do know when you're starting to get a lot for your money"](https://buffett.cnbc.com/video/2009/05/02/buffett-i-do-know-when-youre-starting-to-get-a-lot-for-your-money.html)
+- ["I was dead wrong" on Gen Re](https://buffett.cnbc.com/video/2009/05/02/buffett-i-was-dead-wrong-on-gen-re.html)

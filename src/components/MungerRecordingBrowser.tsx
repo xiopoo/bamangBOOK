@@ -62,6 +62,7 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
   const [selectedId, setSelectedId] = useState(firstPlayable.id)
   const [query, setQuery] = useState('')
   const [type, setType] = useState('全部')
+  const [visibleCount, setVisibleCount] = useState(12)
   const selected = recordings.find(recording => recording.id === selectedId) ?? firstPlayable
   const types = ['全部', ...Array.from(new Set(recordings.map(recording => recording.type)))]
   const filtered = useMemo(() => {
@@ -72,6 +73,8 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
       return matchesType && (!keyword || haystack.includes(keyword))
     })
   }, [query, recordings, type])
+
+  const visibleRecordings = filtered.slice(0, visibleCount)
 
   return (
     <section className="recording-browser" id="recordings">
@@ -94,7 +97,7 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
         ))}
       </div>
       <div className="recording-browser__grid">
-        {filtered.map(recording => (
+        {visibleRecordings.map(recording => (
           <button
             key={recording.id}
             type="button"
@@ -112,6 +115,11 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
           </button>
         ))}
       </div>
+      {visibleCount < filtered.length && (
+        <button type="button" className="archive-button recording-browser__more" onClick={() => setVisibleCount(value => value + 12)}>
+          加载更多（还剩 {filtered.length - visibleCount} 条）
+        </button>
+      )}
       {filtered.length === 0 && <p className="recording-browser__none">没有找到对应的录像。</p>}
     </section>
   )

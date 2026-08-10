@@ -13,8 +13,6 @@ export function generateStaticParams() {
   return businessHistoryParams()
 }
 
-export const dynamicParams = false
-
 interface PageProps {
   params: { slug: string }
 }

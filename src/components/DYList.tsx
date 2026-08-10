@@ -14,6 +14,8 @@ interface DYListProps {
   metaField?: 'platform' | 'source' | 'year'
   /** 是否按年份分组（blog/qa 适用） */
   groupByYearEnabled?: boolean
+  /** 列表项是否显示日期/年份徽标。 */
+  showItemDate?: boolean
   /** 只显示年份目录，不把全部条目输出到同一页。 */
   indexOnly?: boolean
   /** indexOnly 模式下的年份页路径。 */
@@ -29,6 +31,7 @@ export default function DYList({
   subtitle,
   metaField = 'platform',
   groupByYearEnabled = true,
+  showItemDate = true,
   indexOnly = false,
   yearPath,
   footer,
@@ -53,7 +56,8 @@ export default function DYList({
 
       <div className="space-y-8">
         {groups.map((g) => (
-            <details key={g.year || 'all'} open={!g.year || g.year === groups.at(-1)?.year}>
+          <details key={g.year || 'all'} open={!g.year || g.year === groups.at(-1)?.year}>
+            {!g.year && <summary className="sr-only">内容列表</summary>}
             {g.year && (
               <summary className="flex cursor-pointer list-none items-center gap-3 mb-4 [&::-webkit-details-marker]:hidden">
                 <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">{g.year}</h2>
@@ -80,7 +84,7 @@ export default function DYList({
             ) : <div className="space-y-3">
               {g.docs.map((doc) => {
                 const candidateMeta = doc[metaField] || (metaField === 'year' ? '' : doc.date || '')
-                const meta = candidateMeta === doc.date || candidateMeta === doc.date?.slice(0, 4)
+                const meta = candidateMeta === g.year || candidateMeta === doc.year || candidateMeta === doc.date || candidateMeta === doc.date?.slice(0, 4)
                   ? ''
                   : candidateMeta
                 if (inlineContent) {
@@ -89,7 +93,7 @@ export default function DYList({
                       <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-4 [&::-webkit-details-marker]:hidden">
                         <div className="min-w-0 flex-1">
                           <div className="flex flex-wrap items-center gap-2">
-                            {doc.date && <span className="text-sm font-medium text-primary dark:text-primary-light">{doc.date.slice(0, 10)}</span>}
+                            {showItemDate && (doc.year || doc.date) && <span className="text-sm font-medium text-primary dark:text-primary-light">{doc.year || doc.date?.slice(0, 10)}</span>}
                             <h3 className="text-base font-medium text-text dark:text-dark-text">{doc.title}</h3>
                           </div>
                           {meta && <p className="mt-1 text-xs text-text-muted dark:text-dark-muted">{meta}</p>}
@@ -115,9 +119,9 @@ export default function DYList({
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          {doc.date && (
+                          {showItemDate && (doc.year || doc.date) && (
                             <span className="text-sm font-medium text-primary dark:text-primary-light">
-                              {doc.date.slice(0, 10)}
+                              {doc.year || doc.date?.slice(0, 10)}
                             </span>
                           )}
                           <h3 className="text-base font-medium text-text dark:text-dark-text">{doc.title}</h3>

@@ -1,0 +1,56 @@
+# Berkshire Hathaway 年会 2015
+
+(May 2, 2015) A critical newspaper article has Buffett defending Berkshire subsidiary Clayton Homes from accusations it steers buyers into loans they can't pay back.  He also backs large job cuts at newly-acquired Kraft Heinz, explains why he doesn't "talk up" Berkshire's investments, reveals his most memorable failure, and advises aspirational businesspeople to stay away from business school.
+
+---
+
+### 完整会议（24/24 已抓取）
+- [2015 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2015/05/02/2015-berkshire-hathaway-annual-meeting-highlights.html)
+- [Morning Session - 2015 Meeting](https://buffett.cnbc.com/video/2015/05/02/morning-session---2015-berkshire-hathaway-annual-meeting.html)
+- [Afternoon Session - 2015 Meeting](https://buffett.cnbc.com/video/2015/05/02/afternoon-session---2015-berkshire-hathaway-annual-meeting.html)
+- [Buffett defends Clayton Homes](https://buffett.cnbc.com/video/2015/05/02/buffett-defends-clayton-homes-from-predatory-lending-accusations.html)
+- ["Three extraordinary pieces of luck" in insurance](https://buffett.cnbc.com/video/2015/05/02/buffetts-three-extraordinary-pieces-of-luck-in-insurance.html)
+- ["It is a grain of sand type thing"](https://buffett.cnbc.com/video/2015/05/02/buffett-it-is-a-grain-of-sand-type-thing.html)
+- [Munger: "Do the best you can playing the hand you've got"](https://buffett.cnbc.com/video/2015/05/02/munger-do-the-best-you-can-playing-the-hand-youve-got.html)
+- ["I don't see smiles on the faces of people at Whole Foods"](https://buffett.cnbc.com/video/2015/05/02/buffett-i-dont-see-smiles-on-the-faces-of-people-at-whole-foods.html)
+- [Why Buffett doesn't "talk his book"](https://buffett.cnbc.com/video/2015/05/02/why-buffett-doesnt-talk-his-book.html)
+- ["Efficiency is required over time in capitalism"](https://buffett.cnbc.com/video/2015/05/02/munger-efficiency-is-required-over-time-in-capitalism.html)
+- [Berkshire's culture is "self-reinforcing"](https://buffett.cnbc.com/video/2015/05/02/buffett-berkshires-culture-is-self-reinforcing.html)
+- [Buffett on his biggest failures](https://buffett.cnbc.com/video/2015/05/02/buffett-on-his-biggest-failures.html)
+- [Buffett and Munger criticize Dodd-Frank](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-criticize-dodd-frank.html)
+- [On "behaving well" as you go through life](https://buffett.cnbc.com/video/2015/05/02/on-behaving-well-as-you-go-through-life.html)
+- [Buffett would rather give up his plane than the internet](https://buffett.cnbc.com/video/2015/05/02/buffett-would-rather-give-up-his-plane-than-the-internet.html)
+- [What businesses do best in times of high inflation?](https://buffett.cnbc.com/video/2015/05/02/what-businesses-do-best-in-times-of-high-inflation.html)
+- [Is climate change a risk for Berkshire's insurance subsidiaries?](https://buffett.cnbc.com/video/2015/05/02/is-climate-change-a-risk-for-berkshires-insurance-subsidiaries.html)
+- [Buffett and Munger on Adam Smith's "The Wealth of Nations"](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-on-adam-smiths-the-wealth-of-nations.html)
+- [Reinsurance prospects "have turned for the worse"](https://buffett.cnbc.com/video/2015/05/02/buffett-reinsurance-prospects-have-turned-for-the-worse.html)
+- [Buffett and Munger on friendship](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-on-friendship.html)
+- ["Where will it do the most good?"](https://buffett.cnbc.com/video/2015/05/02/buffett-where-will-it-do-the-most-good.html)
+- [Will the trend of adult children living with parents reverse?](https://buffett.cnbc.com/video/2015/05/02/will-the-trend-of-adult-children-living-with-parents-reverse.html)
+- [Buffett and Munger agree on minimum wage debate](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-agree-on-minimum-wage-debate.html)
+- [Education prices in America are "a fraud"](https://buffett.cnbc.com/video/2015/05/02/buffett-education-prices-in-america-are-a-fraud.html)
+
+### 精选片段（22/22 已抓取）
+
+- [2015 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2015/05/02/2015-berkshire-hathaway-annual-meeting-highlights.html)
+- [Buffett defends Clayton Homes](https://buffett.cnbc.com/video/2015/05/02/buffett-defends-clayton-homes-from-predatory-lending-accusations.html)
+- ["Three extraordinary pieces of luck" in insurance](https://buffett.cnbc.com/video/2015/05/02/buffetts-three-extraordinary-pieces-of-luck-in-insurance.html)
+- ["It is a grain of sand type thing"](https://buffett.cnbc.com/video/2015/05/02/buffett-it-is-a-grain-of-sand-type-thing.html)
+- [Munger: "Do the best you can playing the hand you've got"](https://buffett.cnbc.com/video/2015/05/02/munger-do-the-best-you-can-playing-the-hand-youve-got.html)
+- ["I don't see smiles on the faces of people at Whole Foods"](https://buffett.cnbc.com/video/2015/05/02/buffett-i-dont-see-smiles-on-the-faces-of-people-at-whole-foods.html)
+- [Why Buffett doesn't "talk his book"](https://buffett.cnbc.com/video/2015/05/02/why-buffett-doesnt-talk-his-book.html)
+- ["Efficiency is required over time in capitalism"](https://buffett.cnbc.com/video/2015/05/02/munger-efficiency-is-required-over-time-in-capitalism.html)
+- [Berkshire's culture is "self-reinforcing"](https://buffett.cnbc.com/video/2015/05/02/buffett-berkshires-culture-is-self-reinforcing.html)
+- [Buffett on his biggest failures](https://buffett.cnbc.com/video/2015/05/02/buffett-on-his-biggest-failures.html)
+- [Buffett and Munger criticize Dodd-Frank](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-criticize-dodd-frank.html)
+- [On "behaving well" as you go through life](https://buffett.cnbc.com/video/2015/05/02/on-behaving-well-as-you-go-through-life.html)
+- [Buffett would rather give up his plane than the internet](https://buffett.cnbc.com/video/2015/05/02/buffett-would-rather-give-up-his-plane-than-the-internet.html)
+- [What businesses do best in times of high inflation?](https://buffett.cnbc.com/video/2015/05/02/what-businesses-do-best-in-times-of-high-inflation.html)
+- [Is climate change a risk for Berkshire's insurance subsidiaries?](https://buffett.cnbc.com/video/2015/05/02/is-climate-change-a-risk-for-berkshires-insurance-subsidiaries.html)
+- [Buffett and Munger on Adam Smith's "The Wealth of Nations"](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-on-adam-smiths-the-wealth-of-nations.html)
+- [Reinsurance prospects "have turned for the worse"](https://buffett.cnbc.com/video/2015/05/02/buffett-reinsurance-prospects-have-turned-for-the-worse.html)
+- [Buffett and Munger on friendship](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-on-friendship.html)
+- ["Where will it do the most good?"](https://buffett.cnbc.com/video/2015/05/02/buffett-where-will-it-do-the-most-good.html)
+- [Will the trend of adult children living with parents reverse?](https://buffett.cnbc.com/video/2015/05/02/will-the-trend-of-adult-children-living-with-parents-reverse.html)
+- [Buffett and Munger agree on minimum wage debate](https://buffett.cnbc.com/video/2015/05/02/buffett-and-munger-agree-on-minimum-wage-debate.html)
+- [Education prices in America are "a fraud"](https://buffett.cnbc.com/video/2015/05/02/buffett-education-prices-in-america-are-a-fraud.html)

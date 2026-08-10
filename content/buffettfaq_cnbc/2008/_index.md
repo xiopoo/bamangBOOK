@@ -1,0 +1,58 @@
+# Berkshire Hathaway 年会 2008
+
+(May 3, 2008) Warren Buffett sounds the alarm about "too big to fail" financial firms that have taken on too much risk to manage, and Munger call the housing bubble a "particularly foolish mess." They also urge investors to quickly take advantage of market dislocations because they don't last long, and Buffett worries about what he calls the "primary problem of mankind."
+
+---
+
+### 完整会议（25/25 已抓取）
+- [2008 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2008/05/03/2008-berkshire-hathaway-annual-meeting-highlights.html)
+- [Morning Session - 2008 Meeting](https://buffett.cnbc.com/video/2008/05/03/morning-session---2008-berkshire-hathaway-annual-meeting.html)
+- [Afternoon Session - 2008 Meeting](https://buffett.cnbc.com/video/2008/05/03/afternoon-session---2008-berkshire-hathaway-annual-meeting.html)
+- [Susan Lucci "takes over" Berkshire](https://buffett.cnbc.com/video/2008/05/03/susan-lucci-takes-over-berkshire.html)
+- [How to avoid being a lemming](https://buffett.cnbc.com/video/2008/05/03/buffett-how-to-avoid-being-a-lemming.html)
+- ["Forget about the word 'stock'"](https://buffett.cnbc.com/video/2008/05/03/buffett-forget-about-the-word-stock.html)
+- ["We're forced to do virtually nothing we don't want to"](https://buffett.cnbc.com/video/2008/05/03/buffett-were-forced-to-do-virtually-nothing-we-dont-want-to.html)
+- [How to take a small business to the next level](https://buffett.cnbc.com/video/2008/05/03/how-to-take-a-small-business-to-the-next-level.html)
+- ["Learn as much as you can about the world around you"](https://buffett.cnbc.com/video/2008/05/03/buffett-learn-as-much-as-you-can-about-the-world-around-you.html)
+- [Buffett on frugality](https://buffett.cnbc.com/video/2008/05/03/buffett-on-frugality.html)
+- ["We buy businesses with great managers in place"](https://buffett.cnbc.com/video/2008/05/03/buffett-we-buy-businesses-with-great-managers-in-place.html)
+- [Buffett gives shareholders life advice](https://buffett.cnbc.com/video/2008/05/03/buffett-gives-shareholders-life-advice.html)
+- [Buffett on Klamath Dam pollution](https://buffett.cnbc.com/video/2008/05/03/buffett-on-klamath-dam-pollution.html)
+- ['Diversification is for the know-nothing investor'](https://buffett.cnbc.com/video/2008/05/03/buffett-diversification-is-for-the-no-nothing-investor.html)
+- [Buffett on using stock options](https://buffett.cnbc.com/video/2008/05/03/buffett-on-using-stock-options.html)
+- ["What's the sense of talking to management?"](https://buffett.cnbc.com/video/2008/05/03/buffett-whats-the-sense-of-talking-to-management.html)
+- [Buffett on his religion](https://buffett.cnbc.com/video/2008/05/03/buffett-on-his-religion.html)
+- [Who influenced Buffett and Munger?](https://buffett.cnbc.com/video/2008/05/03/who-influenced-buffett-and-munger.html)
+- [Buffett and Munger's hopes for Berkshire's future](https://buffett.cnbc.com/video/2008/05/03/buffett-and-mungers-hopes-for-berkshires-future.html)
+- [Buffett on risk awareness in investment banking](https://buffett.cnbc.com/video/2008/05/03/buffett-on-risk-awareness-in-investment-banking.html)
+- [Buffett wants risk-averse portfolio managers](https://buffett.cnbc.com/video/2008/05/03/buffett-wants-risk-averse-portfolio-managers.html)
+- [How Buffett can make an investment decision "in five minutes"](https://buffett.cnbc.com/video/2008/05/03/how-buffett-can-make-an-investment-decision-in-five-minutes.html)
+- ["Your best asset is your own self"](https://buffett.cnbc.com/video/2008/05/03/buffett-your-best-asset-is-your-own-self.html)
+- ["It's the great problem of mankind"](https://buffett.cnbc.com/video/2008/05/03/buffett-its-the-great-problem-of-mankind.html)
+- ["Some stupid things were done that won't be done again"](https://buffett.cnbc.com/video/2008/05/03/buffett-some-stupid-things-were-done-that-wont-be-done-again.html)
+
+### 精选片段（23/23 已抓取）
+
+- [2008 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2008/05/03/2008-berkshire-hathaway-annual-meeting-highlights.html)
+- [Susan Lucci "takes over" Berkshire](https://buffett.cnbc.com/video/2008/05/03/susan-lucci-takes-over-berkshire.html)
+- [How to avoid being a lemming](https://buffett.cnbc.com/video/2008/05/03/buffett-how-to-avoid-being-a-lemming.html)
+- ["Forget about the word 'stock'"](https://buffett.cnbc.com/video/2008/05/03/buffett-forget-about-the-word-stock.html)
+- ["We're forced to do virtually nothing we don't want to"](https://buffett.cnbc.com/video/2008/05/03/buffett-were-forced-to-do-virtually-nothing-we-dont-want-to.html)
+- [How to take a small business to the next level](https://buffett.cnbc.com/video/2008/05/03/how-to-take-a-small-business-to-the-next-level.html)
+- ["Learn as much as you can about the world around you"](https://buffett.cnbc.com/video/2008/05/03/buffett-learn-as-much-as-you-can-about-the-world-around-you.html)
+- [Buffett on frugality](https://buffett.cnbc.com/video/2008/05/03/buffett-on-frugality.html)
+- ["We buy businesses with great managers in place"](https://buffett.cnbc.com/video/2008/05/03/buffett-we-buy-businesses-with-great-managers-in-place.html)
+- [Buffett gives shareholders life advice](https://buffett.cnbc.com/video/2008/05/03/buffett-gives-shareholders-life-advice.html)
+- [Buffett on Klamath Dam pollution](https://buffett.cnbc.com/video/2008/05/03/buffett-on-klamath-dam-pollution.html)
+- ['Diversification is for the know-nothing investor'](https://buffett.cnbc.com/video/2008/05/03/buffett-diversification-is-for-the-no-nothing-investor.html)
+- [Buffett on using stock options](https://buffett.cnbc.com/video/2008/05/03/buffett-on-using-stock-options.html)
+- ["What's the sense of talking to management?"](https://buffett.cnbc.com/video/2008/05/03/buffett-whats-the-sense-of-talking-to-management.html)
+- [Buffett on his religion](https://buffett.cnbc.com/video/2008/05/03/buffett-on-his-religion.html)
+- [Who influenced Buffett and Munger?](https://buffett.cnbc.com/video/2008/05/03/who-influenced-buffett-and-munger.html)
+- [Buffett and Munger's hopes for Berkshire's future](https://buffett.cnbc.com/video/2008/05/03/buffett-and-mungers-hopes-for-berkshires-future.html)
+- [Buffett on risk awareness in investment banking](https://buffett.cnbc.com/video/2008/05/03/buffett-on-risk-awareness-in-investment-banking.html)
+- [Buffett wants risk-averse portfolio managers](https://buffett.cnbc.com/video/2008/05/03/buffett-wants-risk-averse-portfolio-managers.html)
+- [How Buffett can make an investment decision "in five minutes"](https://buffett.cnbc.com/video/2008/05/03/how-buffett-can-make-an-investment-decision-in-five-minutes.html)
+- ["Your best asset is your own self"](https://buffett.cnbc.com/video/2008/05/03/buffett-your-best-asset-is-your-own-self.html)
+- ["It's the great problem of mankind"](https://buffett.cnbc.com/video/2008/05/03/buffett-its-the-great-problem-of-mankind.html)
+- ["Some stupid things were done that won't be done again"](https://buffett.cnbc.com/video/2008/05/03/buffett-some-stupid-things-were-done-that-wont-be-done-again.html)

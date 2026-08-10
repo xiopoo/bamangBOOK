@@ -15,8 +15,7 @@
     "derive:editorial": "node scripts/derive-editorial-books.mjs",
     "build:munger-continuous": "node scripts/build-munger-continuous.mjs",
     "audit:munger-continuous": "node scripts/audit-munger-continuous.mjs",
-    "build:editorial-pdf": "node scripts/build-editorial-pdfs.mjs",
-    "build:original-books": "node scripts/build-original-compendia.mjs && typst compile --root . build_books/buffett_book.typ build_books/buffett_book.pdf && typst compile --root . build_books/munger_book.typ build_books/munger_book.pdf"
+    "build:editorial-pdf": "node scripts/build-editorial-pdfs.mjs"
   },
   "dependencies": {
     "@antv/infographic": "^0.2.19",

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { ReactNode } from 'react'
 import FontSizeControlFixed from './FontSizeControlFixed'
+import Breadcrumbs from './Breadcrumbs'
 
 interface PageHeaderProps {
   title: string
@@ -21,16 +21,10 @@ export default function PageHeader({
   showFontSize = false,
 }: PageHeaderProps) {
   return (
-    <header className="archive-page-header">
+    <>
+      <Breadcrumbs fallbackParent={backHref ? { href: backHref, label: backLabel } : undefined} />
+      <header className="archive-page-header">
       <div>
-        {backHref && (
-          <Link
-            href={backHref}
-            className="archive-page-header__back"
-          >
-            ← {backLabel}
-          </Link>
-        )}
         <div className="flex items-start justify-between gap-4">
           <div>
             <h1>
@@ -48,6 +42,7 @@ export default function PageHeader({
           </div>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   )
 }

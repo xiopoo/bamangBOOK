@@ -14,12 +14,12 @@ import type { Metadata } from 'next'
 import { letterYearParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
 import { companyIds, conceptIds, resolvePersonRouteId } from '@/lib/entity-resolver'
+import ReadingMetadata from '@/components/ReadingMetadata'
+import SourceNote from '@/components/SourceNote'
 
 export function generateStaticParams() {
   return letterYearParams()
 }
-
-export const dynamicParams = false
 
 interface LetterGraphData {
   year: string
@@ -115,6 +115,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
             </div>
             <FontSizeControlFixed />
           </div>
+          <ReadingMetadata person="巴菲特" year={yearNum} contentType="信件" sourceLabel="伯克希尔·哈撒韦年度股东信" status="译文" reviewedAt="持续修订中" readMinutes={Math.max(8, Math.round((letterData.content?.length || letterData.letters?.reduce((sum, item) => sum + item.content.length, 0) || 0) / 900))} />
         </div>
       </header>
 
@@ -183,6 +184,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
               isMultiLetter={!!isMultiLetter}
             />
             <BerkshireSourceLink year={yearNum} />
+            <SourceNote source="Berkshire Hathaway annual shareholder letters" method="中文阅读整理，保留年份与原始语境；重要表述请与英文原文核对。" completeness="部分" />
           </main>
           <ArticleTableOfContents />
         </div>
