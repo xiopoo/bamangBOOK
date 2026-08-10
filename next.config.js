@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 开发环境保留动态路由，生产构建再输出静态站点。
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
+  // 使用 Vercel 原生 Next.js 输出。静态页面仍会在构建时 SSG，
+  // 但保留 .next/routes-manifest.json 供 Vercel 正确识别和托管路由。
   images: {
     unoptimized: true,
   },
