@@ -1,0 +1,58 @@
+# Berkshire Hathaway 年会 2014
+
+(May 3, 2014) Buffett explains why he, as a member of Coca-Cola's board, abstained on a vote approving an executive compensation plan he thought was "excessive." He also argues that CEO's salaries should be kept secret, criticizes some activist investors for their short-term goals, and rejects the view that corporate taxes are too high.
+
+---
+
+### 完整会议（25/25 已抓取）
+- [2014 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2014/05/03/2014-berkshire-hathaway-annual-meeting-highlights.html)
+- [Morning Session - 2014 Meeting](https://buffett.cnbc.com/video/2014/05/03/morning-session---2014-berkshire-hathaway-annual-meeting.html)
+- [Afternoon Session - 2014 Meeting](https://buffett.cnbc.com/video/2014/05/03/afternoon-session---2014-berkshire-hathaway-annual-meeting.html)
+- [Buffett's views on Coke's executive stock option program](https://buffett.cnbc.com/video/2014/05/03/buffetts-views-on-cokes-executive-stock-option-program.html)
+- ["We've kept our word to them"](https://buffett.cnbc.com/video/2014/05/03/buffett-weve-kept-our-word-to-them.html)
+- [Will Charlie Munger have a successor?](https://buffett.cnbc.com/video/2014/05/03/will-charlie-munger-have-a-successor.html)
+- [Buffett defends Obama's tax policies](https://buffett.cnbc.com/video/2014/05/03/buffett-defends-obamas-tax-policies.html)
+- [Why does Buffett recommend an index fund for his wife?](https://buffett.cnbc.com/video/2014/05/03/why-does-buffett-recommend-an-index-fund-for-his-wife.html)
+- [Should companies reveal their executives' salaries?](https://buffett.cnbc.com/video/2014/05/03/should-companies-reveal-their-executives-salaries.html)
+- ["Charlie and I have never had an argument"](https://buffett.cnbc.com/video/2014/05/03/buffett-charlie-and-i-have-never-had-an-argument.html)
+- [Will climate change affect Berkshire's businesses?](https://buffett.cnbc.com/video/2014/05/03/will-climate-change-affect-berkshires-businesses.html)
+- [Buffett's "second career" with Paul Anka](https://buffett.cnbc.com/video/2014/05/03/buffetts-second-career-with-paul-anka.html)
+- [Buffett admits he's "slow to make personnel changes"](https://buffett.cnbc.com/video/2014/05/03/buffett-admits-hes-slow-to-make-personnel-changes.html)
+- [Knowing your "circle of competence"](https://buffett.cnbc.com/video/2014/05/03/knowing-your-circle-of-competence.html)
+- ["It really has to turn you on"](https://buffett.cnbc.com/video/2014/05/03/buffett-it-really-has-to-turn-you-on.html)
+- [Has Buffett's frugality affected Berkshire?](https://buffett.cnbc.com/video/2014/05/03/has-buffetts-frugality-affected-berkshire.html)
+- [Buffett jokes about Munger's hearing](https://buffett.cnbc.com/video/2014/05/03/buffett-jokes-about-mungers-hearing.html)
+- ["Not everybody gets the right parents"](https://buffett.cnbc.com/video/2014/05/03/buffett-not-everybody-gets-the-right-parents.html)
+- [Why hasn't Berkshire made more acquisitions overseas?](https://buffett.cnbc.com/video/2014/05/03/why-hasnt-berkshire-made-more-acquisitions-overseas.html)
+- [Omaha hotel prices during Berkshire meetings](https://buffett.cnbc.com/video/2014/05/03/omaha-hotel-prices-during-berkshire-meetings.html)
+- ["We don't begrudge the taxes we pay"](https://buffett.cnbc.com/video/2014/05/03/buffett-we-dont-begrudge-the-taxes-we-pay.html)
+- [Buffett on calculating "intrinsic value"](https://buffett.cnbc.com/video/2014/05/03/buffett-on-calculating-intrinsic-value.html)
+- [You "get a lot of dumb deals"](https://buffett.cnbc.com/video/2014/05/03/buffett-you-get-a-lot-of-dumb-deals.html)
+- [Who should be punished for criminal activity on Wall Street?](https://buffett.cnbc.com/video/2014/05/03/who-should-be-punished-for-criminal-activity-on-wall-street.html)
+- ["The pursuit of the uneatable by the unspeakable"](https://buffett.cnbc.com/video/2014/05/03/munger-the-pursuit-of-the-uneatable-by-the-unspeakable.html)
+
+### 精选片段（23/23 已抓取）
+
+- [2014 Annual Meeting Highlight Reel](https://buffett.cnbc.com/video/2014/05/03/2014-berkshire-hathaway-annual-meeting-highlights.html)
+- [Buffett's views on Coke's executive stock option program](https://buffett.cnbc.com/video/2014/05/03/buffetts-views-on-cokes-executive-stock-option-program.html)
+- ["We've kept our word to them"](https://buffett.cnbc.com/video/2014/05/03/buffett-weve-kept-our-word-to-them.html)
+- [Will Charlie Munger have a successor?](https://buffett.cnbc.com/video/2014/05/03/will-charlie-munger-have-a-successor.html)
+- [Buffett defends Obama's tax policies](https://buffett.cnbc.com/video/2014/05/03/buffett-defends-obamas-tax-policies.html)
+- [Why does Buffett recommend an index fund for his wife?](https://buffett.cnbc.com/video/2014/05/03/why-does-buffett-recommend-an-index-fund-for-his-wife.html)
+- [Should companies reveal their executives' salaries?](https://buffett.cnbc.com/video/2014/05/03/should-companies-reveal-their-executives-salaries.html)
+- ["Charlie and I have never had an argument"](https://buffett.cnbc.com/video/2014/05/03/buffett-charlie-and-i-have-never-had-an-argument.html)
+- [Will climate change affect Berkshire's businesses?](https://buffett.cnbc.com/video/2014/05/03/will-climate-change-affect-berkshires-businesses.html)
+- [Buffett's "second career" with Paul Anka](https://buffett.cnbc.com/video/2014/05/03/buffetts-second-career-with-paul-anka.html)
+- [Buffett admits he's "slow to make personnel changes"](https://buffett.cnbc.com/video/2014/05/03/buffett-admits-hes-slow-to-make-personnel-changes.html)
+- [Knowing your "circle of competence"](https://buffett.cnbc.com/video/2014/05/03/knowing-your-circle-of-competence.html)
+- ["It really has to turn you on"](https://buffett.cnbc.com/video/2014/05/03/buffett-it-really-has-to-turn-you-on.html)
+- [Has Buffett's frugality affected Berkshire?](https://buffett.cnbc.com/video/2014/05/03/has-buffetts-frugality-affected-berkshire.html)
+- [Buffett jokes about Munger's hearing](https://buffett.cnbc.com/video/2014/05/03/buffett-jokes-about-mungers-hearing.html)
+- ["Not everybody gets the right parents"](https://buffett.cnbc.com/video/2014/05/03/buffett-not-everybody-gets-the-right-parents.html)
+- [Why hasn't Berkshire made more acquisitions overseas?](https://buffett.cnbc.com/video/2014/05/03/why-hasnt-berkshire-made-more-acquisitions-overseas.html)
+- [Omaha hotel prices during Berkshire meetings](https://buffett.cnbc.com/video/2014/05/03/omaha-hotel-prices-during-berkshire-meetings.html)
+- ["We don't begrudge the taxes we pay"](https://buffett.cnbc.com/video/2014/05/03/buffett-we-dont-begrudge-the-taxes-we-pay.html)
+- [Buffett on calculating "intrinsic value"](https://buffett.cnbc.com/video/2014/05/03/buffett-on-calculating-intrinsic-value.html)
+- [You "get a lot of dumb deals"](https://buffett.cnbc.com/video/2014/05/03/buffett-you-get-a-lot-of-dumb-deals.html)
+- [Who should be punished for criminal activity on Wall Street?](https://buffett.cnbc.com/video/2014/05/03/who-should-be-punished-for-criminal-activity-on-wall-street.html)
+- ["The pursuit of the uneatable by the unspeakable"](https://buffett.cnbc.com/video/2014/05/03/munger-the-pursuit-of-the-uneatable-by-the-unspeakable.html)

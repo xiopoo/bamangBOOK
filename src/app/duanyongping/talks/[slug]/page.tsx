@@ -3,7 +3,7 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
-import { getDYDoc, getDYSlugs } from '@/lib/duanyongping'
+import { getDYDoc, getDYSlugs, stripTalkSourceNote } from '@/lib/duanyongping'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -38,7 +38,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
         <header className="mb-6">
           <div className="flex items-center gap-2 text-sm text-primary dark:text-primary-light mb-2">
-            {doc.date ? <span>{doc.date.slice(0, 10)}</span> : doc.year && <span>{doc.year}</span>}
+            {doc.year && <span>{doc.year}</span>}
             <span>· {doc.contentType === 'article' ? '人物文章' : '演讲 / 采访'}</span>
           </div>
           <h1 className="text-3xl font-bold text-text dark:text-dark-text font-serif mb-3">{doc.title}</h1>
@@ -53,7 +53,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           </div>
         </header>
 
-        <MarkdownContent content={doc.content} />
+        <MarkdownContent content={stripTalkSourceNote(doc.content)} />
       </article>
     </PageContainer>
   )

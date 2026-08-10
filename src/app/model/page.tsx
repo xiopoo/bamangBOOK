@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import PageContainer from '@/components/PageContainer'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { getModelsByDiscipline, getModelStats } from '@/lib/models'
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function ModelPage() {
 
   return (
     <PageContainer maxWidth="6xl" className="model-library">
+      <Breadcrumbs />
       <header className="model-library__hero">
         <p className="model-library__kicker">LATTICEWORK OF MENTAL MODELS</p>
         <h1>多元思维模型库</h1>
@@ -59,12 +61,13 @@ export default function ModelPage() {
 
       <div className="model-library__groups">
         {groups.map((group, groupIndex) => (
-          <section key={group.id} id={`discipline-${group.id}`} className="model-discipline">
-            <header className="model-discipline__heading">
+          <details key={group.id} id={`discipline-${group.id}`} className="model-discipline" open={groupIndex === 0}>
+            <summary className="model-discipline__heading">
               <span>{String(groupIndex + 1).padStart(2, '0')}</span>
               <h2>{group.name}</h2>
               <p>{group.models.length} 个模型</p>
-            </header>
+              <b aria-hidden="true">⌄</b>
+            </summary>
             <div className="model-discipline__list">
               {group.models.map((model, modelIndex) => (
                 <Link key={model.slug} href={`/model/${model.slug}`} className="model-entry">
@@ -81,7 +84,7 @@ export default function ModelPage() {
                 </Link>
               ))}
             </div>
-          </section>
+          </details>
         ))}
       </div>
       <p className="model-library__source">

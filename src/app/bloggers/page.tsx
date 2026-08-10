@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
+import CatalogStats from '@/components/CatalogStats'
 import { getBloggers } from '@/lib/bloggers'
 import type { Metadata } from 'next'
 
@@ -36,44 +37,34 @@ export default function BloggersPage() {
         sticky
       />
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10">
-        <div className="bg-white dark:bg-dark-card border border-gray-100 dark:border-dark-border rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-primary">{bloggers.length}</div>
-          <div className="text-sm text-text-muted dark:text-dark-muted mt-1">位博主</div>
-        </div>
-        <div className="bg-white dark:bg-dark-card border border-gray-100 dark:border-dark-border rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-primary">{totalArticles}</div>
-          <div className="text-sm text-text-muted dark:text-dark-muted mt-1">篇文章</div>
-        </div>
-        <div className="bg-white dark:bg-dark-card border border-gray-100 dark:border-dark-border rounded-lg p-4 text-center">
-          <div className="text-3xl font-bold text-primary">12</div>
-          <div className="text-sm text-text-muted dark:text-dark-muted mt-1">个主题标签</div>
-        </div>
-      </div>
+      <CatalogStats items={[
+        { value: bloggers.length, label: '位博主' },
+        { value: totalArticles.toLocaleString(), label: '篇文章' },
+        { value: 12, label: '个主题标签' },
+      ]} />
 
       {/* Blogger cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="archive-card-grid">
         {bloggers.map(blogger => (
           <Link
             key={blogger.name}
             href={`/bloggers/${encodeURIComponent(blogger.name)}`}
-            className="group block bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-xl p-6 hover:shadow-card-hover hover:border-primary/30 transition-all duration-300"
+            className="archive-content-card group"
           >
             <div className="flex items-start justify-between mb-3">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
+              <h2 className="archive-content-card__title group-hover:text-primary transition-colors">
                 {blogger.name}
               </h2>
-              <span className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full font-medium whitespace-nowrap">
+              <span className="archive-content-card__badge">
                 {blogger.count}篇
               </span>
             </div>
             
-            <p className="text-sm text-text-muted dark:text-dark-muted mb-4 leading-relaxed">
+            <p className="archive-content-card__summary">
               {BLOGGER_DESCRIPTIONS[blogger.name] || `${blogger.name}的投资思考与商业分析`}
             </p>
 
-            <div className="flex items-center justify-between text-xs text-text-muted dark:text-dark-muted">
+            <div className="archive-content-card__meta">
               <span className="flex items-center gap-1">
                 <span>📅</span>
                 <span>{blogger.dateRange}</span>

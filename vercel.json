@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": ".next",
+  "outputDirectory": "out",
   "redirects": [
     { "source": "/bloggers/:account/:slug.md", "destination": "/bloggers/:account/:slug", "statusCode": 301 },
     { "source": "/qa/:slug.md", "destination": "/qa/:slug", "statusCode": 301 },

@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-02T04:47:16.536Z",
+  "generatedAt": "2026-08-09T05:37:26.918Z",
   "ok": true,
   "canonicalFiles": [
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "bytes": 730796,
-      "characters": 268449,
-      "lines": 4242,
-      "sha256": "4ca19464908f8d8ec1bcd81020e0eaebaeb8a9f3434242b71a0060e2efcc03f1"
+      "bytes": 885349,
+      "characters": 326889,
+      "lines": 5078,
+      "sha256": "3c1e23b7540067e3ac92efa077f5b82c7b3747f5da43053e17c53be81adbd83c"
     },
     {
       "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
-      "bytes": 705056,
-      "characters": 256723,
-      "lines": 4308,
-      "sha256": "0465d9c3d12d802d090388271b210d12741f8d10a63f73023efe5a23bd5ff01a"
+      "bytes": 517045,
+      "characters": 198775,
+      "lines": 2798,
+      "sha256": "de941aafe8cf9d197901f14ba4dae05d6396715a5823f31fc118130e35677674"
     }
   ],
   "summary": {
     "errors": 0,
     "warnings": 0,
-    "sourceReferences": 188,
+    "sourceReferences": 447,
     "missingSourceReferences": 0,
     "uniqueMissingSourcePaths": 0,
     "mechanicalEditCorruptions": 0,
@@ -31,32 +31,74 @@
   "sourceReferences": [
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 375,
+      "line": 374,
       "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 381,
+      "line": 377,
       "sourcePath": "content/articles/buffett/巴菲特谈指数期货_1982.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 383,
+      "line": 378,
       "sourcePath": "content/people/本杰明·格雷厄姆.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 385,
+      "line": 379,
       "sourcePath": "content/partnership/partnership_1959-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 389,
+      "line": 381,
       "sourcePath": "content/partnership/partnership_1962-11月-巴菲特致合伙人信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 382,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 383,
+      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 384,
+      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 385,
+      "sourcePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 387,
+      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 388,
+      "sourcePath": "content/articles/buffett/巴菲特：股票期权与常识_2002.md",
+      "exists": true
+    },
+    {
+      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+      "line": 389,
+      "sourcePath": "content/letters/berkshire_1977-巴菲特致股东信.md",
       "exists": true
     },
     {
@@ -67,169 +109,127 @@
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 393,
+      "line": 392,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 395,
-      "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 397,
-      "sourcePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 401,
-      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 403,
-      "sourcePath": "content/articles/buffett/巴菲特：股票期权与常识_2002.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 405,
-      "sourcePath": "content/letters/berkshire_1977-巴菲特致股东信.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 409,
-      "sourcePath": "content/articles/buffett/巴菲特谈投资_1985.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 411,
-      "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
-      "exists": true
-    },
-    {
-      "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 415,
+      "line": 394,
       "sourcePath": "content/partnership/partnership_1964-annual-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 419,
+      "line": 396,
       "sourcePath": "content/partnership/partnership_1961-annual-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 421,
+      "line": 397,
       "sourcePath": "content/articles/buffett/巴菲特：回忆进入证券行业_2005.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 794,
+      "line": 770,
       "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 798,
+      "line": 772,
       "sourcePath": "content/letters/berkshire_1992-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 806,
+      "line": 776,
       "sourcePath": "content/letters/berkshire_1996-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 810,
+      "line": 778,
       "sourcePath": "content/articles/buffett/巴菲特谈投资_1988.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 812,
+      "line": 779,
       "sourcePath": "content/articles/buffett/巴菲特谈股市_1974.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 814,
+      "line": 780,
       "sourcePath": "content/articles/buffett/巴菲特：怀念恩师格雷厄姆_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1223,
+      "line": 1190,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1231,
+      "line": 1194,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1233,
+      "line": 1195,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1235,
+      "line": 1196,
       "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1237,
+      "line": 1197,
       "sourcePath": "content/articles/buffett/巴菲特：谁是真正的账房先生.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1239,
+      "line": 1198,
       "sourcePath": "content/partnership/partnership_1964-annual-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1241,
+      "line": 1199,
       "sourcePath": "content/letters/berkshire_1998-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1243,
+      "line": 1200,
       "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1529,
+      "line": 1532,
       "sourcePath": "content/partnership/partnership_1965-11月-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1531,
+      "line": 1533,
       "sourcePath": "content/talks/巴菲特：哥大商学院演讲_1984.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1533,
+      "line": 1534,
       "sourcePath": "content/articles/buffett/巴菲特谈施洛斯的信_1994.md",
       "exists": true
     },
@@ -241,935 +241,2489 @@
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1537,
+      "line": 1536,
       "sourcePath": "content/articles/buffett/巴菲特谈投资_1988.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1539,
+      "line": 1537,
       "sourcePath": "content/interviews/巴菲特：对话堪萨斯大学学生_2005.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1541,
+      "line": 1538,
       "sourcePath": "content/interviews/巴菲特：对话范德比尔特大学学生_2005.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1543,
+      "line": 1539,
       "sourcePath": "content/articles/buffett/巴菲特青春时代.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1545,
+      "line": 1540,
       "sourcePath": "content/partnership/partnership_1967-10月-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1547,
+      "line": 1541,
       "sourcePath": "content/articles/buffett/企业收藏家_1977.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1549,
+      "line": 1542,
       "sourcePath": "content/articles/buffett/巴菲特谈股市_1974.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1551,
+      "line": 1543,
       "sourcePath": "content/articles/buffett/巴菲特：怀念恩师格雷厄姆_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1553,
+      "line": 1544,
       "sourcePath": "content/articles/other/如何建立能力圈.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1818,
+      "line": 1874,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1820,
+      "line": 1875,
       "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1822,
+      "line": 1876,
       "sourcePath": "content/letters/berkshire_1965-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1824,
+      "line": 1877,
       "sourcePath": "content/letters/berkshire_1966-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1826,
+      "line": 1878,
       "sourcePath": "content/letters/berkshire_1968-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1828,
+      "line": 1879,
       "sourcePath": "content/letters/berkshire_1971-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1830,
+      "line": 1880,
       "sourcePath": "content/articles/other/伯克希尔哈撒韦时代.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1832,
+      "line": 1881,
       "sourcePath": "content/articles/buffett/巴菲特谈施洛斯的信_1994.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 1832,
+      "line": 1881,
       "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2118,
+      "line": 2200,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2120,
+      "line": 2201,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2124,
+      "line": 2203,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2126,
+      "line": 2204,
       "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2128,
+      "line": 2205,
       "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2130,
+      "line": 2206,
       "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2132,
+      "line": 2207,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2134,
+      "line": 2208,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2136,
+      "line": 2209,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2138,
+      "line": 2210,
       "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2140,
+      "line": 2211,
       "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2142,
+      "line": 2212,
       "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2144,
+      "line": 2213,
       "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2144,
+      "line": 2213,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2144,
+      "line": 2213,
       "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2144,
+      "line": 2213,
       "sourcePath": "content/letters/berkshire_1989-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2144,
+      "line": 2213,
       "sourcePath": "content/letters/berkshire_1990-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2146,
+      "line": 2214,
       "sourcePath": "content/articles/buffett/巴菲特_你应该了解珠宝生意.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2148,
+      "line": 2215,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2150,
+      "line": 2216,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2152,
+      "line": 2217,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2154,
+      "line": 2218,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2156,
+      "line": 2219,
       "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2158,
+      "line": 2220,
       "sourcePath": "content/articles/buffett/巴菲特谈喜诗糖果_1972.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2160,
+      "line": 2221,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2162,
+      "line": 2222,
       "sourcePath": "content/interviews/巴菲特：追忆唐基奥_2015.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2164,
+      "line": 2223,
       "sourcePath": "content/interviews/巴菲特：谈可口可乐薪酬方案_2014.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2331,
+      "line": 2483,
       "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2333,
+      "line": 2484,
       "sourcePath": "content/letters/berkshire_1978-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2335,
+      "line": 2485,
       "sourcePath": "content/letters/berkshire_1988-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2337,
+      "line": 2486,
       "sourcePath": "content/letters/berkshire_1993-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2339,
+      "line": 2487,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2341,
+      "line": 2488,
       "sourcePath": "content/letters/berkshire_1991-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2343,
+      "line": 2489,
       "sourcePath": "content/articles/buffett/巴菲特谈_GEICO1976.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2345,
+      "line": 2490,
       "sourcePath": "content/articles/buffett/巴菲特谈微软的信_1997.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2347,
+      "line": 2491,
       "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2349,
+      "line": 2492,
       "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2351,
+      "line": 2493,
       "sourcePath": "content/letters/berkshire_1993-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2353,
+      "line": 2494,
       "sourcePath": "content/interviews/巴菲特：追忆唐基奥_2015.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2355,
+      "line": 2495,
       "sourcePath": "content/qa/伯克希尔股东大会实录_2015.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2357,
+      "line": 2496,
       "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2359,
+      "line": 2497,
       "sourcePath": "content/letters/berkshire_2013-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2359,
+      "line": 2497,
       "sourcePath": "content/letters/berkshire_2016-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2534,
+      "line": 2777,
       "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2536,
+      "line": 2778,
       "sourcePath": "content/letters/berkshire_2007-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2538,
+      "line": 2779,
       "sourcePath": "content/letters/berkshire_1987-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2540,
+      "line": 2780,
       "sourcePath": "content/articles/buffett/巴菲特：谁是真正的账房先生.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2542,
+      "line": 2781,
       "sourcePath": "content/people/汤姆·墨菲.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2544,
+      "line": 2782,
       "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2010.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2544,
+      "line": 2782,
       "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2014.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2546,
+      "line": 2783,
       "sourcePath": "content/articles/buffett/巴菲特谈股市_1979.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2548,
+      "line": 2784,
       "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2001.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2550,
+      "line": 2785,
       "sourcePath": "content/interviews/巴菲特：家族三代谈慈善_2013.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2552,
+      "line": 2786,
       "sourcePath": "content/interviews/专访苏珊·巴菲特_2004.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2783,
+      "line": 3093,
       "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2787,
+      "line": 3095,
       "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2006.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2789,
+      "line": 3096,
       "sourcePath": "content/articles/buffett/伯克希尔股东手册_1996.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2791,
+      "line": 3097,
       "sourcePath": "content/talks/巴菲特：斯坦福法学院演讲_1990.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2795,
+      "line": 3099,
       "sourcePath": "content/people/凯瑟琳·格雷厄姆.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2797,
+      "line": 3100,
       "sourcePath": "content/articles/buffett/巴菲特：给全体经理人备忘录_2010.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2799,
+      "line": 3101,
       "sourcePath": "content/articles/buffett/巴菲特：美元效应_2009.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2801,
+      "line": 3102,
       "sourcePath": "content/articles/buffett/巴菲特致所罗门股东信_1991.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2803,
+      "line": 3103,
       "sourcePath": "content/articles/other/卢米斯：我在财富杂志的_51_年.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2805,
+      "line": 3104,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2982,
+      "line": 3369,
       "sourcePath": "content/letters/berkshire_1986-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2984,
+      "line": 3370,
       "sourcePath": "content/letters/berkshire_1978-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2986,
+      "line": 3371,
       "sourcePath": "content/letters/berkshire_1983-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2990,
+      "line": 3373,
       "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2992,
+      "line": 3374,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2996,
+      "line": 3376,
       "sourcePath": "content/articles/buffett/巴菲特：收购_BNSF_铁路.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 2998,
+      "line": 3377,
       "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3000,
+      "line": 3378,
       "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3002,
+      "line": 3379,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3004,
+      "line": 3380,
       "sourcePath": "content/articles/buffett/巴菲特：股息巫术_2003.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3006,
+      "line": 3381,
       "sourcePath": "content/articles/buffett/巴菲特：关于游牧者基金_2014.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3008,
+      "line": 3382,
       "sourcePath": "content/articles/other/伯克希尔投资历史.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3010,
+      "line": 3383,
       "sourcePath": "content/articles/buffett/巴菲特接见_Dardashti_2007.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3012,
+      "line": 3384,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3014,
+      "line": 3385,
       "sourcePath": "content/articles/buffett/巴菲特收购_LTMC_要约_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3016,
+      "line": 3386,
       "sourcePath": "content/articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3022,
+      "line": 3389,
       "sourcePath": "content/talks/巴菲特：佛罗里达大学演讲_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3215,
+      "line": 3711,
       "sourcePath": "content/letters/berkshire_2015-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3217,
+      "line": 3712,
       "sourcePath": "content/letters/berkshire_2005-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3219,
+      "line": 3713,
       "sourcePath": "content/letters/berkshire_1988-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3221,
+      "line": 3714,
       "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3223,
+      "line": 3715,
       "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3225,
+      "line": 3716,
       "sourcePath": "content/letters/berkshire_2021-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3227,
+      "line": 3717,
       "sourcePath": "content/letters/berkshire_2012-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3229,
+      "line": 3718,
       "sourcePath": "content/articles/buffett/巴菲特收购_LTMC_要约_1998.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3231,
+      "line": 3719,
       "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3233,
+      "line": 3720,
       "sourcePath": "content/articles/buffett/巴菲特：股息巫术_2003.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3235,
+      "line": 3721,
       "sourcePath": "content/letters/berkshire_2012-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3237,
+      "line": 3722,
       "sourcePath": "content/letters/berkshire_1984-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3461,
+      "line": 4033,
       "sourcePath": "content/letters/berkshire_2019-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3463,
+      "line": 4034,
       "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3465,
+      "line": 4035,
       "sourcePath": "content/letters/berkshire_1997-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3467,
+      "line": 4036,
       "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3469,
+      "line": 4037,
       "sourcePath": "content/qa/伯克希尔股东大会实录_2000.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3471,
+      "line": 4038,
       "sourcePath": "content/people/阿吉特·贾恩.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3473,
+      "line": 4039,
       "sourcePath": "content/articles/buffett/沃伦在担心什么_2003.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3475,
+      "line": 4040,
       "sourcePath": "content/letters/berkshire_1989-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3477,
+      "line": 4041,
       "sourcePath": "content/articles/buffett/巴菲特：保险业的_FDIC_2001.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3479,
+      "line": 4042,
       "sourcePath": "content/qa/伯克希尔股东大会实录_1996.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3481,
+      "line": 4043,
       "sourcePath": "content/articles/other/伯克希尔：集团企业的终极折让.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3748,
+      "line": 4363,
       "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3750,
+      "line": 4364,
       "sourcePath": "content/partnership/partnership_1965-11月-巴菲特致合伙人信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3752,
+      "line": 4365,
       "sourcePath": "content/letters/berkshire_2002-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3754,
+      "line": 4366,
       "sourcePath": "content/articles/buffett/巴菲特谈股市_1999.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3756,
+      "line": 4367,
       "sourcePath": "content/articles/buffett/巴菲特：我为什么不看好美元_2003.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3758,
+      "line": 4368,
       "sourcePath": "content/talks/巴菲特：佐治亚大学演讲_2001.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3760,
+      "line": 4369,
       "sourcePath": "content/articles/buffett/巴菲特：美国的未来_2017.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3762,
+      "line": 4370,
       "sourcePath": "content/interviews/巴菲特：如何教孩子理财_2013.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3764,
+      "line": 4371,
       "sourcePath": "content/letters/berkshire_2025-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3766,
+      "line": 4372,
       "sourcePath": "content/qa/伯克希尔股东大会实录_2013.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3936,
+      "line": 4704,
       "sourcePath": "content/letters/berkshire_2008-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3938,
+      "line": 4705,
       "sourcePath": "content/letters/berkshire_2024-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3940,
+      "line": 4706,
       "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3942,
+      "line": 4707,
       "sourcePath": "content/articles/buffett/巴菲特：给保尔森的信_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3944,
+      "line": 4708,
       "sourcePath": "content/articles/buffett/财富杂志：沃伦之思_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3946,
+      "line": 4709,
       "sourcePath": "content/interviews/巴菲特：金融危机调查委员会专访_2010.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3948,
+      "line": 4710,
       "sourcePath": "content/interviews/巴菲特：CNBC_专访_2009.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3950,
+      "line": 4711,
       "sourcePath": "content/letters/berkshire_2009-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3952,
+      "line": 4712,
       "sourcePath": "content/qa/伯克希尔股东大会实录_2009.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3954,
+      "line": 4713,
       "sourcePath": "content/letters/berkshire_2021-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 3956,
+      "line": 4714,
       "sourcePath": "content/articles/buffett/巴菲特：买入美国正当时_2008.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4214,
+      "line": 5065,
       "sourcePath": "content/letters/berkshire_2022-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4218,
+      "line": 5067,
       "sourcePath": "content/letters/berkshire_1985-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4220,
+      "line": 5068,
       "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4222,
+      "line": 5069,
       "sourcePath": "content/letters/berkshire_2011-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4224,
+      "line": 5070,
       "sourcePath": "content/letters/berkshire_1996-巴菲特致股东信.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4226,
+      "line": 5071,
       "sourcePath": "content/articles/buffett/伯克希尔股东手册_1996.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4228,
+      "line": 5072,
       "sourcePath": "content/articles/other/卢米斯：我在财富杂志的_51_年.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4228,
+      "line": 5072,
       "sourcePath": "content/articles/other/卢米斯：回顾职业生涯_2005.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4230,
+      "line": 5073,
       "sourcePath": "content/talks/施洛斯：哥大商学院演讲_1993.md",
       "exists": true
     },
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "line": 4232,
+      "line": 5074,
       "sourcePath": "content/interviews/巴菲特：家族三代谈慈善_2013.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 227,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 230,
+      "sourcePath": "content/munger-archive/mental-models/man-with-a-hammer.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 232,
+      "sourcePath": "content/munger-archive/recordings/harvard-law-1998-multidisciplinary.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 233,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 234,
+      "sourcePath": "content/munger-archive/recordings/stanford-1996-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 235,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 235,
+      "sourcePath": "content/munger-archive/mental-models/latticework-of-mental-models.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 236,
+      "sourcePath": "content/munger-archive/mental-models/man-with-a-hammer.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 237,
+      "sourcePath": "content/munger-archive/life.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 239,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 240,
+      "sourcePath": "content/munger-archive/recordings/usc-1994-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 241,
+      "sourcePath": "content/munger-archive/recordings/stanford-1996-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 242,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 243,
+      "sourcePath": "content/munger-archive/recordings/caltech-2008.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 244,
+      "sourcePath": "content/munger-archive/recordings/stanford-1996-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 245,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 247,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 471,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 484,
+      "sourcePath": "content/munger-archive/recordings/stanford-1996-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 486,
+      "sourcePath": "content/munger-archive/life.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 487,
+      "sourcePath": "content/munger-archive/recordings/usc-1994-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 488,
+      "sourcePath": "content/munger-archive/recordings/harvard-law-1998-multidisciplinary.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 489,
+      "sourcePath": "content/munger-archive/recordings/ucsb-2003-academic-economics.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 490,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 491,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2018.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 492,
+      "sourcePath": "content/munger-archive/books.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 493,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 493,
+      "sourcePath": "content/munger-archive/mental-models/latticework-of-mental-models.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 495,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 666,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 668,
+      "sourcePath": "content/munger-archive/mental-models/use-it-or-lose-it.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 670,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 672,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 674,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 676,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 678,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 680,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2020.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 682,
+      "sourcePath": "content/munger-archive/mental-models/circle-of-competence.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 684,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 686,
+      "sourcePath": "content/munger-archive/life.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 686,
+      "sourcePath": "content/munger-archive/books.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 688,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 690,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 692,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 694,
+      "sourcePath": "content/munger-archive/life.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 696,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 698,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 698,
+      "sourcePath": "content/munger-archive/recordings/usc-1994-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 700,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2015.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 700,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 702,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 704,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 706,
+      "sourcePath": "content/munger-archive/books.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 706,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-forewords.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 708,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 710,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 712,
+      "sourcePath": "content/munger-archive/quotes/quotes-learning.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 868,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 869,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 870,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 871,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 872,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 873,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 874,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 875,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 876,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 877,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 878,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 879,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 880,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 880,
+      "sourcePath": "content/munger-archive/recordings/acquired-charlie-munger-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 881,
+      "sourcePath": "content/munger-archive/recordings/bbc-boom-and-bust-2009.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 882,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 883,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 884,
+      "sourcePath": "content/munger-archive/recordings/caltech-2008.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 885,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2016.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 886,
+      "sourcePath": "content/munger-archive/recordings/yahoo-2019-wealth.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 887,
+      "sourcePath": "content/munger-archive/recordings/cnbc-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 888,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 889,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2018.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 890,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1020,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1020,
+      "sourcePath": "content/munger-archive/recordings/harvard-1986-misery.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1021,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1022,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1023,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1024,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1025,
+      "sourcePath": "content/munger-archive/quotes/quotes-inversion.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1026,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1027,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1028,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1029,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1030,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1031,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1032,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1033,
+      "sourcePath": "content/munger-archive/recordings/caltech-2008.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1034,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1034,
+      "sourcePath": "content/munger-archive/recordings/harvard-1986-misery.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1035,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1036,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1037,
+      "sourcePath": "content/munger-archive/recordings/harvard-1986-misery.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1038,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1039,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1187,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1187,
+      "sourcePath": "content/munger-archive/quotes/quotes-inversion.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1188,
+      "sourcePath": "content/munger-archive/recordings/caltech-2008.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1189,
+      "sourcePath": "content/munger-archive/mental-models/two-track-analysis.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1190,
+      "sourcePath": "content/munger-archive/quotes.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1191,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2020.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1192,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1193,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1194,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1194,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2021.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1195,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1331,
+      "sourcePath": "content/munger-archive/recordings/psychology-of-human-misjudgment-1995.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1331,
+      "sourcePath": "content/munger-archive/mental-models/psychology-of-human-misjudgment.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1332,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1333,
+      "sourcePath": "content/munger-archive/recordings/psychology-of-human-misjudgment-1995.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1334,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1335,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1336,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1337,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1338,
+      "sourcePath": "content/munger-archive/recordings/ucsb-2003-academic-economics.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1339,
+      "sourcePath": "content/munger-archive/recordings/stanford-1996-worldly-wisdom.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1340,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2021.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1341,
+      "sourcePath": "content/munger-archive/mental-models/lollapalooza.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1342,
+      "sourcePath": "content/munger-archive/recordings/stanford-grundfest-2009.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1493,
+      "sourcePath": "content/munger-archive/mental-models/incentive-superresponse.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1494,
+      "sourcePath": "content/munger-archive/quotes/quotes-incentives.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1495,
+      "sourcePath": "content/munger-archive/quotes/quotes-incentives.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1496,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1497,
+      "sourcePath": "content/munger-archive/quotes/quotes-incentives.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1498,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1499,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1500,
+      "sourcePath": "content/munger-archive/books.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1501,
+      "sourcePath": "content/munger-archive/quotes/quotes-incentives.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1502,
+      "sourcePath": "content/munger-archive/recordings/ucsb-2003-academic-economics.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1503,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2017.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1504,
+      "sourcePath": "content/munger-archive/recordings/bbc-boom-and-bust-2009.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1505,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1506,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2021.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1507,
+      "sourcePath": "content/qa/Wesco_股东大会_2003.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1642,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1643,
+      "sourcePath": "content/munger-archive/mental-models/social-proof.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1644,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1645,
+      "sourcePath": "content/munger-archive/mental-models/authority-misinfluence.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1646,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1647,
+      "sourcePath": "content/munger-archive/mental-models/deprival-superreaction.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1648,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1649,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1650,
+      "sourcePath": "content/munger-archive/recordings/psychology-of-human-misjudgment-1995.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1651,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2021.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1652,
+      "sourcePath": "content/munger-archive/recordings/stanford-grundfest-2009.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1781,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1783,
+      "sourcePath": "content/munger-archive/mental-models/lollapalooza.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1784,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1785,
+      "sourcePath": "content/munger-archive/quotes/quotes-envy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1786,
+      "sourcePath": "content/munger-archive/mental-models/envy-jealousy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1787,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2022.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1788,
+      "sourcePath": "content/munger-archive/mental-models/psychology-of-human-misjudgment.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1790,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1791,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2016.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1792,
+      "sourcePath": "content/munger-archive/mental-models/psychology-of-human-misjudgment.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1792,
+      "sourcePath": "content/munger-archive/recordings/psychology-of-human-misjudgment-1995.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1962,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1963,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1964,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1965,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1966,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1967,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1967,
+      "sourcePath": "content/models/cash-flow-vs-earnings.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1968,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1969,
+      "sourcePath": "content/models/cash-flow-vs-earnings.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1970,
+      "sourcePath": "content/models/cash-flow-vs-earnings.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1971,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2016.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1972,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1973,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1974,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1975,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1976,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1977,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1978,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1979,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1980,
+      "sourcePath": "content/models/accounting-as-language-its-limits.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 1981,
+      "sourcePath": "content/munger-archive/recordings/stanford-grundfest-2009.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2130,
+      "sourcePath": "content/munger-archive/companies.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2130,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2131,
+      "sourcePath": "content/munger-archive/recordings/acquired-charlie-munger-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2132,
+      "sourcePath": "content/munger-archive/companies.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2133,
+      "sourcePath": "content/munger-archive/investing-philosophy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2134,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2135,
+      "sourcePath": "content/munger-archive/mental-models/sit-on-your-ass-investing.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2136,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2138,
+      "sourcePath": "content/munger-archive/mental-models/sit-on-your-ass-investing.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2139,
+      "sourcePath": "content/munger-archive/mental-models/moats-and-durable-advantage.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2141,
+      "sourcePath": "content/munger-archive/companies.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2141,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2142,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2143,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2144,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2146,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2017-fireside.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2147,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2148,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2149,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2150,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2151,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2152,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2278,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2016.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2279,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2280,
+      "sourcePath": "content/munger-archive/mental-models/opportunity-cost.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2281,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2282,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2283,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2021.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2284,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2018.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2285,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2286,
+      "sourcePath": "content/munger-archive/recordings/singleton-prize-2022.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2286,
+      "sourcePath": "content/munger-archive/books.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2287,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2288,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2289,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2290,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2291,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2292,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2017-fireside.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2293,
+      "sourcePath": "content/munger-archive/quotes/quotes-concentration.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2454,
+      "sourcePath": "content/munger-archive/life.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2454,
+      "sourcePath": "content/munger-archive/companies.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2455,
+      "sourcePath": "content/munger-archive/recordings/power-of-partnership-2016.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2456,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2457,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2458,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2459,
+      "sourcePath": "content/munger-archive/recordings/munger-li-lu-2018.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2460,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2022.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2461,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2613,
+      "sourcePath": "content/munger-archive/family.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2615,
+      "sourcePath": "content/munger-archive/quotes.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2617,
+      "sourcePath": "content/munger-archive/quotes.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2619,
+      "sourcePath": "content/munger-archive/quotes.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2621,
+      "sourcePath": "content/munger-archive/quotes.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2623,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2625,
+      "sourcePath": "content/munger-archive/mental-models/envy-jealousy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2627,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2629,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2631,
+      "sourcePath": "content/munger-archive/recordings/usc-law-2007.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2633,
+      "sourcePath": "content/munger-archive/architecture.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2635,
+      "sourcePath": "content/munger-archive/architecture.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2637,
+      "sourcePath": "content/munger-archive/recordings/michigan-ross-2017.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2641,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2019.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2645,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2647,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2767,
+      "sourcePath": "content/munger-archive/recordings/caltech-2020.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2771,
+      "sourcePath": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2775,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2020.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2777,
+      "sourcePath": "content/munger-archive/recordings/daily-journal-2020.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2779,
+      "sourcePath": "content/munger-archive/quotes/quotes-humility.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2781,
+      "sourcePath": "content/munger-archive/philanthropy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2783,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2785,
+      "sourcePath": "content/munger-archive/philanthropy.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2787,
+      "sourcePath": "content/munger-archive/architecture.md",
+      "exists": true
+    },
+    {
+      "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
+      "line": 2789,
+      "sourcePath": "content/munger-archive/recordings/cnbc-final-interview-2023.md",
       "exists": true
     }
   ],
   "footnoteChecks": [
     {
       "file": "buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
-      "references": 572,
+      "references": 576,
       "definitions": 203,
       "missingDefinitions": [],
       "duplicateDefinitions": []
     },
     {
       "file": "munger/manuscript/全卷/理性的格栅_芒格卷全卷连续生产稿.md",
-      "references": 497,
-      "definitions": 267,
+      "references": 510,
+      "definitions": 292,
       "missingDefinitions": [],
       "duplicateDefinitions": []
     }

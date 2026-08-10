@@ -19,7 +19,8 @@ export default function Page() {
       title="段永平 · 演讲、采访与文章"
       subtitle="1999—2025 年公开演讲、访谈与经标注的第三方人物文章。"
       metaField="year"
-      groupByYearEnabled={false}
+      groupByYearEnabled
+      showItemDate={false}
     />
   )
 }

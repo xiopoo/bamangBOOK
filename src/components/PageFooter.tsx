@@ -39,9 +39,9 @@ export default function PageFooter() {
           </nav>
 
           <div className="archive-footer__support">
-            <p>他的研究，做成两卷书</p>
+            <p>想从头读完，可以查看巴芒文集</p>
             <p className="archive-footer__support-desc">
-              我把网站材料整理、校订成一套可以从头读到尾的书——每卷 99 元，微信确认后发送完整 PDF。
+              网站适合查找和交叉阅读，文集适合按人物和年代连续阅读。
             </p>
             <Link href="/bound-edition" className="archive-button archive-button--solid archive-footer__support-cta">
               查看巴芒文集

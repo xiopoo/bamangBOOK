@@ -23,8 +23,8 @@
 
   /* —— 行长与间距 —— */
   --reading-measure:       39em;       /* 中文 39±3 字 / 行（约 68–70ch 拉丁字符） */
-  --reading-leading:       1.88;       /* 正文行高 1.85–1.9 之间，保证上下留呼吸（中文印刷 161% 最低，我们用 188% 更舒适） */
-  --reading-paragraph-gap: 1.6em;      /* 段距：正文 × 1.6 倍（约 30px/19px），比行高差一半左右形成"段落块" */
+  --reading-leading:       1.82;       /* 正文保持舒适，但避免段落彼此漂浮 */
+  --reading-paragraph-gap: 1.15em;     /* 正文段距收紧，靠标题与分隔建立节奏 */
   --reading-heading-gap-factor: 1.5;   /* 标题上边距 = 字号 × 该系数 */
 
   /* —— 列表与表格 —— */
@@ -435,8 +435,8 @@
    ========================================================= */
 @media (max-width: 640px) {
   :root {
-    --reading-leading:       1.92;   /* 手机屏窄行距更大，单指下滑不易串行 */
-    --reading-paragraph-gap: 1.55em;
+    --reading-leading:       1.88;   /* 手机屏窄行距略放大 */
+    --reading-paragraph-gap: 1.15em;
     --reading-measure:       100%;   /* 手机不限定 39em，充满宽度更自然 */
   }
   .prose,

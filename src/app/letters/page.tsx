@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import StatBadge from '@/components/StatBadge'
 import { getShareholderLetters, getShareholderCount } from '@/lib/partnership'
 import type { Metadata } from 'next'
 
@@ -44,13 +43,7 @@ export default function LettersPage() {
         sticky
       />
 
-      {/* 概览统计 */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
-        <StatBadge icon="📬" count={`${totalCount}封`} label="股东信" sub="年度信件" />
-        <StatBadge icon="📅" count={`${lastYear - firstYear + 1}年`} label="时间跨度" sub={`${firstYear}-${lastYear}`} />
-        <StatBadge icon="🏭" count="伯克希尔" label="时期" sub="哈撒韦" />
-        <StatBadge icon="🤝" count="前期" label="合伙人信" sub="1956-1970见此→" href="/partnership" />
-      </div>
+      <div className="archive-stats-line" aria-label="档案统计"><span>{totalCount} 封信件</span><span>{firstYear}—{lastYear}</span><span>按时间从早到晚</span><Link href="/partnership">先读合伙人信（1956—1970） →</Link></div>
 
       {/* 时期衔接说明：合伙人信 → 股东信 */}
       <div className="mb-10 p-5 rounded-card bg-gradient-to-r from-primary/5 to-transparent dark:from-primary/10 border border-primary/10">
@@ -66,41 +59,15 @@ export default function LettersPage() {
         </p>
       </div>
 
-      {/* 按年代分组的年份网格 */}
-      <div className="space-y-8">
+      {/* 连续档案列表：统一使用行式信息密度 */}
+      <div className="archive-list archive-list--catalog">
         {DECADES.map((decade) => {
           const decadeLetters = letters.filter(
             (l) => l.year >= decade.range[0] && l.year <= decade.range[1]
           )
           if (decadeLetters.length === 0) return null
 
-          return (
-            <section key={decade.label}>
-              <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 font-serif">
-                  {decade.label}
-                </h2>
-                <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
-                  {decadeLetters.length}封
-                </span>
-                <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-              </div>
-
-              <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-3">
-                {decadeLetters.map((letter) => (
-                  <Link
-                    key={letter.year}
-                    href={`/letters/${letter.year}`}
-                    className="rounded-card border border-gray-100 bg-white p-3 text-center shadow-card transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-card-hover dark:border-dark-border dark:bg-dark-card dark:hover:shadow-lg dark:hover:shadow-black/20"
-                  >
-                    <span className="text-base font-semibold text-[#2c2c2c] dark:text-[#e0e0e0]">
-                      {letter.year}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )
+          return <section key={decade.label} className="archive-catalog-section"><header><h2>{decade.label}</h2><span>{decadeLetters.length} 封</span></header>{decadeLetters.map(letter => <Link key={letter.year} href={`/letters/${letter.year}`} className="archive-catalog-row"><span className="archive-catalog-row__year">{letter.year}</span><span className="archive-catalog-row__title">{letter.year} 年巴菲特致伯克希尔股东的信</span><span className="archive-catalog-row__type">股东信 · 编辑整理</span><span className="archive-catalog-row__read">原典资料</span><span aria-hidden="true">→</span></Link>)}</section>
         })}
       </div>
 

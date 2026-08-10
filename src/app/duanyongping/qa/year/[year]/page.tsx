@@ -37,7 +37,7 @@ export default function Page({ params }: PageProps) {
       docs={result.docs}
       basePath="/duanyongping/qa"
       title={`${year === '未知' ? '未标注年份' : `${year} 年`} · 段永平雪球问答`}
-      subtitle={`共 ${result.total} 条问答，每页 100 条，按时间顺序阅读。`}
+      subtitle={`共 ${result.total} 条问答，每页 50 条，按时间顺序阅读。`}
       metaField="year"
       groupByYearEnabled={false}
       inlineContent

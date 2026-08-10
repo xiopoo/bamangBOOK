@@ -27,6 +27,67 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 复利书房成熟化重构：展示层与目录层的共用组件令牌 */
+.archive-home { max-width: 72rem; }
+.archive-kicker { margin: 0; color: var(--archive-oxblood); font: 700 .72rem/1.4 var(--archive-sans); letter-spacing: .14em; text-transform: uppercase; }
+.archive-home__hero { padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(3.5rem, 7vw, 5.5rem); border-bottom: 1px solid var(--archive-hairline); }
+.archive-home__hero h1 { max-width: 9em; margin: .9rem 0 1.4rem; font: 700 clamp(2.9rem, 2rem + 4.3vw, 5.7rem)/1.08 var(--archive-serif); letter-spacing: -.06em; }
+.archive-home__lede { max-width: 42rem; margin: 0 0 1.8rem; color: var(--archive-ink-soft); font-size: 1.08rem; line-height: 1.9; }
+.archive-entry-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--archive-hairline); }
+.archive-entry-grid a { display: flex; align-items: center; gap: .9rem; min-height: 6.5rem; padding: 1.3rem 1.1rem; border-right: 1px solid var(--archive-hairline); color: var(--archive-ink); transition: background .18s ease, color .18s ease; }
+.archive-entry-grid a:first-child { border-left: 1px solid var(--archive-hairline); }
+.archive-entry-grid a:hover { background: var(--archive-paper-tint); color: var(--archive-oxblood); }
+.archive-entry-grid span { display: grid; gap: .25rem; flex: 1; }
+.archive-entry-grid strong, .archive-entry-grid small { font-family: var(--archive-sans); }
+.archive-entry-grid strong { font-size: .98rem; }
+.archive-entry-grid small { color: var(--archive-ink-faint); font-size: .78rem; }
+.archive-home__section { padding: 3.5rem 0; border-bottom: 1px solid var(--archive-hairline); }
+.archive-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.3rem; }
+.archive-section-heading h2, .archive-home__editorial h2 { margin: .45rem 0 0; font: 700 clamp(1.55rem, 1.2rem + 1vw, 2.2rem)/1.25 var(--archive-serif); letter-spacing: -.03em; }
+.archive-section-heading > a, .archive-home__editorial > a { display: inline-flex; align-items: center; gap: .35rem; color: var(--archive-oxblood); font: 600 .82rem var(--archive-sans); }
+.archive-list { border-top: 2px solid var(--archive-ink); }
+.archive-list__row { display: flex; align-items: center; gap: 1rem; padding: 1rem .35rem; border-bottom: 1px solid var(--archive-hairline); color: var(--archive-ink); }
+.archive-list__row:hover { color: var(--archive-oxblood); background: var(--archive-paper-tint); }
+.archive-list__year { width: 3.5rem; color: var(--archive-ink-faint); font: 600 .78rem var(--archive-sans); }
+.archive-list__main { display: grid; gap: .25rem; flex: 1; }
+.archive-list__main strong { font: 600 1rem var(--archive-serif); }
+.archive-list__main small { color: var(--archive-ink-faint); font: .75rem var(--archive-sans); }
+.archive-path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--archive-hairline); border: 1px solid var(--archive-hairline); }
+.archive-path-grid a { display: grid; gap: .7rem; min-height: 11rem; padding: 1.35rem; background: var(--archive-paper); color: var(--archive-ink); }
+.archive-path-grid a:hover { background: var(--archive-paper-tint); }
+.archive-path-grid span { color: var(--archive-oxblood); font: 700 .75rem var(--archive-sans); }
+.archive-path-grid strong { font: 600 1.1rem var(--archive-serif); }
+.archive-path-grid small { color: var(--archive-ink-soft); line-height: 1.7; }
+.archive-home__editorial { display: grid; grid-template-columns: 1fr 1.15fr auto; align-items: end; gap: 2rem; padding: 3.5rem 0; border-bottom: 1px solid var(--archive-hairline); }
+.archive-home__editorial > p { max-width: 36rem; margin: 0; color: var(--archive-ink-soft); line-height: 1.85; }
+.archive-home__search { display: flex; align-items: center; gap: .65rem; padding: 1.25rem 0 0; color: var(--archive-ink-faint); font: .8rem var(--archive-sans); }
+.archive-home__search a { color: var(--archive-oxblood); font-weight: 700; }
+.archive-home__study-count { margin-left: auto; }
+@media (max-width: 700px) { .archive-entry-grid, .archive-path-grid { grid-template-columns: 1fr; } .archive-entry-grid a { border-left: 1px solid var(--archive-hairline); border-bottom: 1px solid var(--archive-hairline); } .archive-entry-grid a:last-child { border-bottom: 0; } .archive-home__editorial { grid-template-columns: 1fr; gap: 1.3rem; } .archive-home__study-count { margin-left: auto; } .archive-home__search { flex-wrap: wrap; } }
+
+.archive-stats-line { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem 1.3rem; margin: 1.5rem 0 2rem; padding: .85rem 0; border-block: 1px solid var(--archive-hairline); color: var(--archive-ink-faint); font: .78rem var(--archive-sans); }
+.archive-stats-line span + span { padding-left: 1.3rem; border-left: 1px solid var(--archive-hairline); }
+.archive-stats-line a { margin-left: auto; color: var(--archive-oxblood); font-weight: 700; }
+.archive-catalog-section { margin-bottom: 2rem; }
+.archive-catalog-section > header { display: flex; align-items: baseline; gap: .8rem; padding: .75rem 0; border-bottom: 2px solid var(--archive-ink); }
+.archive-catalog-section > header h2 { margin: 0; font: 700 1.15rem var(--archive-serif); }
+.archive-catalog-section > header span { color: var(--archive-ink-faint); font: .75rem var(--archive-sans); }
+.archive-catalog-row { display: grid; grid-template-columns: 4.5rem minmax(0, 1.6fr) 1fr 6rem 1rem; gap: 1rem; align-items: center; padding: .9rem .35rem; border-bottom: 1px solid var(--archive-hairline); color: var(--archive-ink); font-family: var(--archive-sans); }
+.archive-catalog-row:hover { background: var(--archive-paper-tint); color: var(--archive-oxblood); }
+.archive-catalog-row__year { color: var(--archive-ink-faint); font-size: .8rem; }
+.archive-catalog-row__title { font: 600 .98rem var(--archive-serif); }
+.archive-catalog-row__type, .archive-catalog-row__read { color: var(--archive-ink-faint); font-size: .76rem; }
+.reading-metadata { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--archive-hairline); font-family: var(--archive-sans); }
+.reading-metadata__primary, .reading-metadata__secondary { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+.reading-metadata__primary { color: var(--archive-ink-soft); font-size: .82rem; font-weight: 700; }
+.reading-metadata__primary span + span::before { content: '·'; margin-right: 1rem; color: var(--archive-gold); }
+.reading-metadata__secondary { margin-top: .5rem; color: var(--archive-ink-faint); font-size: .74rem; }
+.reading-status { color: var(--archive-oxblood); }
+.source-note { max-width: 44rem; margin: 2.5rem auto 0; padding: 1.15rem 1.25rem; border: 1px solid var(--archive-hairline); background: var(--archive-paper-tint); color: var(--archive-ink-soft); font: .8rem/1.75 var(--archive-sans); }
+.source-note p { margin: .25rem 0; }
+.source-note .archive-kicker { margin-bottom: .55rem; }
+@media (max-width: 700px) { .archive-stats-line a { width: 100%; margin-left: 0; } .archive-stats-line span + span { padding-left: .8rem; } .archive-catalog-row { grid-template-columns: 3.5rem minmax(0, 1fr) 1rem; gap: .5rem; } .archive-catalog-row__type, .archive-catalog-row__read { display: none; } }
+
 /* ============================================================
    全站设计令牌（单一真相来源）
    本文件中的 --archive-* 变量是全站唯一的视觉令牌来源。
@@ -60,9 +121,9 @@
   /* ===== 杂志/书籍克制风 · 节奏与层次令牌（2026-08 升级） =====
      目标：去工具感、增留白、建层次。组件统一引用这些变量，
      禁止在组件里硬编码间距/投影，保证全站一致。 */
-  --archive-gap: 2rem;                 /* 区块间距（原 1.5rem） */
-  --archive-gap-lg: 3.5rem;           /* 大区块间距 */
-  --archive-card-pad: 1.75rem 2rem;   /* 卡片内边距（更舒展） */
+  --archive-gap: 1.5rem;              /* 列表与区块的基础间距 */
+  --archive-gap-lg: 2.5rem;           /* 大区块间距 */
+  --archive-card-pad: 1.25rem 1.5rem; /* 资料卡片保持信息密度 */
   --archive-radius: 0.375rem;         /* 微圆角：克制但非硬方 */
   --archive-elevate: 0 1px 2px rgba(33,29,22,0.04), 0 8px 24px rgba(33,29,22,0.06);
   --archive-elevate-hover: 0 2px 4px rgba(33,29,22,0.05), 0 16px 40px rgba(33,29,22,0.10);
@@ -87,6 +148,11 @@
 .study-hero--refined .study-hero__copy {
   max-width: 66rem;
   animation: archive-rise 0.7s var(--archive-ease) both;
+}
+
+.study-hero__daily-reading {
+  max-width: 72rem;
+  margin-top: 3rem;
 }
 
 .study-hero--refined h1 {
@@ -1628,6 +1694,144 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
 }
 
+/* 目录页统一统计、列表和内容卡片。 */
+.archive-stats {
+  margin: 0 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid var(--archive-rule);
+}
+
+.archive-stats__item {
+  min-width: 0;
+  padding: 1.1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  border-right: 1px solid var(--archive-rule-soft);
+}
+
+.archive-stats__item:last-child {
+  border-right: 0;
+}
+
+.archive-stats__icon {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  filter: grayscale(.35);
+}
+
+.archive-stats dt {
+  color: var(--archive-oxblood);
+  font-family: var(--archive-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.archive-stats dd {
+  margin-top: .25rem;
+  color: var(--archive-ink-soft);
+  font-family: var(--archive-sans);
+  font-size: .78rem;
+}
+
+.archive-stats small {
+  display: block;
+  margin-top: .18rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: .68rem;
+}
+
+.archive-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.archive-content-card,
+.archive-list__item {
+  display: block;
+  color: var(--archive-ink);
+  border: 1px solid var(--archive-rule-soft);
+  background: var(--archive-paper-tint);
+  transition: border-color var(--archive-t-dur) var(--archive-ease), box-shadow var(--archive-t-dur) var(--archive-ease), transform var(--archive-t-dur) var(--archive-ease);
+}
+
+.archive-content-card {
+  min-height: 12rem;
+  padding: 1.35rem;
+}
+
+.archive-content-card:hover,
+.archive-list__item:hover {
+  border-color: var(--archive-gild);
+  box-shadow: var(--archive-elevate-hover);
+  transform: translateY(-2px);
+}
+
+.archive-content-card__title,
+.archive-list__title {
+  color: var(--archive-ink);
+  font-family: var(--archive-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.archive-content-card__badge {
+  display: inline-flex;
+  padding: .24rem .5rem;
+  color: var(--archive-oxblood);
+  background: rgba(171, 25, 66, .08);
+  font-family: var(--archive-sans);
+  font-size: .7rem;
+  white-space: nowrap;
+}
+
+.archive-content-card__summary,
+.archive-list__summary {
+  margin-top: .7rem;
+  color: var(--archive-ink-faint);
+  font-size: .86rem;
+  line-height: 1.75;
+}
+
+.archive-content-card__meta,
+.archive-list__meta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem 1rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: .7rem;
+}
+
+.archive-list {
+  display: grid;
+  gap: .75rem;
+}
+
+.archive-list__item {
+  padding: 1.25rem;
+}
+
+.archive-list__meta {
+  margin-top: 1.1rem;
+}
+
+.archive-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .22rem .5rem;
+  color: var(--archive-oxblood);
+  background: rgba(171, 25, 66, .08);
+}
+
 .reader-font-control {
   display: grid;
   grid-template-columns: 44px 56px 44px;  /* 每格 ≥ 44×44 触控合规 */
@@ -1689,6 +1893,32 @@ h1, h2, h3, h4, h5, h6 {
   .reader-font-control {
     grid-template-columns: 44px 52px 44px;
     height: 44px;
+  }
+}
+
+@media (max-width: 700px) {
+  .archive-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .archive-stats__item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .archive-stats__item:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--archive-rule-soft);
+  }
+
+  .archive-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-content-card {
+    min-height: 0;
+  }
+
+  .study-hero__daily-reading {
+    margin-top: 2.25rem;
   }
 }
 
@@ -5248,9 +5478,26 @@ h1, h2, h3, h4, h5, h6 {
 .model-discipline__heading {
   padding-bottom: 1rem;
   display: grid;
-  grid-template-columns: 3.5rem 1fr auto;
+  grid-template-columns: 3.5rem 1fr auto auto;
   align-items: end;
   border-bottom: 1px solid var(--archive-ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.model-discipline__heading::-webkit-details-marker {
+  display: none;
+}
+
+.model-discipline__heading b {
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: .8rem;
+  transition: transform 160ms ease;
+}
+
+.model-discipline[open] .model-discipline__heading b {
+  transform: rotate(180deg);
 }
 
 .model-discipline__heading > span {
@@ -5270,6 +5517,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-ink-faint);
   font-family: var(--archive-sans);
   font-size: 0.7rem;
+}
+
+.recording-browser__more {
+  margin: 1.25rem auto 0;
+  display: flex;
 }
 
 .model-discipline__list {
@@ -5830,6 +6082,87 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.7rem;
 }
 
+/* 长档案组默认折叠，避免资料页退化成一条无法定位的长列表。 */
+.archive-catalog__groups--supporting details {
+  margin-top: 3.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.archive-catalog__groups--supporting details > summary {
+  padding-bottom: 0.8rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr auto auto;
+  align-items: end;
+  gap: 0.75rem;
+  color: var(--archive-ink);
+  border-bottom: 1px solid var(--archive-ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.archive-catalog__groups--supporting details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-catalog__groups--supporting details > summary > span {
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.archive-catalog__groups--supporting details > summary h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.archive-catalog__groups--supporting details > summary p,
+.archive-catalog__groups--supporting details > summary b {
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.68rem;
+}
+
+.archive-catalog__groups--supporting details[open] > summary b {
+  transform: rotate(180deg);
+}
+
+.archive-catalog__groups--supporting details > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.archive-catalog__groups--supporting details > div > a {
+  min-height: 4.5rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--archive-ink);
+  border-bottom: 1px solid var(--archive-rule-soft);
+}
+
+.archive-catalog__groups--supporting details > div > a:nth-child(odd) {
+  padding-right: 1.25rem;
+  border-right: 1px solid var(--archive-rule-soft);
+}
+
+.archive-catalog__groups--supporting details > div > a:nth-child(even) {
+  padding-left: 1.25rem;
+}
+
+.archive-catalog__groups--supporting details h3 {
+  color: var(--archive-ink);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.archive-catalog__groups--supporting details > div > a > span {
+  color: var(--archive-ink-faint);
+  font-size: 0.7rem;
+}
+
 .archive-document {
   max-width: 47rem;
   margin: 0 auto;
@@ -6230,7 +6563,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .archive-catalog__primary,
-  .archive-catalog__groups section > div {
+  .archive-catalog__groups section > div,
+  .archive-catalog__groups--supporting details > div {
     grid-template-columns: 1fr;
   }
 
@@ -6240,6 +6574,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .archive-catalog__groups section > div > a:nth-child(odd),
   .archive-catalog__groups section > div > a:nth-child(even) {
+    min-height: 0;
+    padding: 1rem 0;
+    border-right: 0;
+  }
+
+  .archive-catalog__groups--supporting details > div > a:nth-child(odd),
+  .archive-catalog__groups--supporting details > div > a:nth-child(even) {
     min-height: 0;
     padding: 1rem 0;
     border-right: 0;
@@ -6273,7 +6614,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .model-discipline__heading {
-    grid-template-columns: 2.4rem 1fr;
+    grid-template-columns: 2.4rem 1fr auto;
   }
 
   .model-discipline__heading p {
@@ -6348,10 +6689,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .study-hero.study-hero--refined {
-  min-height: 30rem;
+  min-height: 22rem;
   grid-template-columns: 1fr;
   align-items: end;
-  padding: clamp(4rem, 7vw, 6rem) 0 clamp(2.75rem, 5vw, 4.25rem);
+  padding: clamp(3rem, 5vw, 4.5rem) 0 clamp(2rem, 3.5vw, 3rem);
   border-bottom: 2px solid var(--archive-ink);
 }
 
@@ -6383,13 +6724,36 @@ h1, h2, h3, h4, h5, h6 {
 .study-hero.study-hero--refined.study-hero--daily {
   min-height: 0;
   align-items: stretch;
-  padding-top: clamp(2.5rem, 4.5vw, 3.75rem);
+  padding-top: clamp(2rem, 3.5vw, 3rem);
 }
+
+/* 首页：每日一读是入口提示，不再占据第二个完整首屏。 */
+.study-hero__daily-reading { margin-top: 2rem; }
+.daily-quote { margin-bottom: 1.5rem; }
+.daily-quote__card { padding: clamp(1.35rem, 2.5vw, 2rem) clamp(1.25rem, 3vw, 2.25rem); }
+.study-hero__quicklinks { margin-top: 1.75rem; padding-top: 1rem; }
+.study-home--refined .study-section { padding: clamp(2rem, 3.5vw, 3rem) 0; }
+.study-feature__primary { min-height: 19rem; padding: clamp(1.25rem, 2.5vw, 2.25rem); }
+.study-drawers__grid > a { min-height: 10rem; padding: 1.1rem; }
+.study-home--refined .study-thinkers article { min-height: 14rem; }
+.study-editions__summary article { min-height: 11rem; padding: 1.2rem; }
+
+/* 资料目录：用连续目录行承载信息，避免空卡片。 */
+.archive-catalog__intro { margin-block: 2rem 2.25rem; }
+.archive-catalog__groups,
+.archive-catalog__groups--supporting details + details,
+.meetings,
+.originals,
+.groups { margin-top: 2rem; }
+.archive-catalog__groups section > div > a,
+.archive-catalog__groups--supporting details > div > a { min-height: 0; padding-block: .8rem; }
 
 @media (max-width: 640px) {
   .study-hero.study-hero--refined.study-hero--daily {
-    padding-top: 2.5rem;
+    padding-top: 2rem;
   }
+
+  .study-home--refined .study-section { padding-block: 2rem; }
 }
 
 /* ===== Legacy 列表卡片皮肤统一（白卡 → 纸面风）===== */
