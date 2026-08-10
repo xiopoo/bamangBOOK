@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { CheckCircle2, Clock3 } from 'lucide-react'
 import Logo from '@/components/Logo'
 
-export const metadata = { title: '支付结果', robots: { index: false, follow: false } }
+export const metadata = { title: '支付结果', alternates: { canonical: '/payment/success' }, robots: { index: false, follow: false } }
 
 export default function PaymentSuccessPage() {
   return (

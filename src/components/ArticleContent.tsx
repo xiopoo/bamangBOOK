@@ -41,7 +41,7 @@ export default function ArticleContent({ content }: ArticleContentProps) {
   }), [])
 
   return (
-    <article className="prose mx-auto overflow-x-hidden break-words">
+    <div className="prose mx-auto overflow-x-hidden break-words">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkCjkEmphasis, remarkNumberedList]}
         rehypePlugins={[rehypeNumberedList, rehypeSectionHeadings]}
@@ -49,6 +49,6 @@ export default function ArticleContent({ content }: ArticleContentProps) {
       >
         {cleanedContent}
       </ReactMarkdown>
-    </article>
+    </div>
   )
 }

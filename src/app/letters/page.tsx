@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '巴菲特股东信全集｜复利书房',
     description: '伯克希尔历年股东信，按年份连续阅读。',
-    images: ['/og-v2.png'],
   },
 }
 

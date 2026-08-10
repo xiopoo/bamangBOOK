@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { product: string } }) {
   if (!isProductSlug(params.product)) return { title: '结账' }
-  return { title: `购买${products[params.product].title}`, robots: { index: false, follow: false } }
+  return { title: `购买${products[params.product].title}`, alternates: { canonical: `/checkout/${params.product}` }, robots: { index: false, follow: false } }
 }
 
 export default function CheckoutPage({ params }: { params: { product: string } }) {

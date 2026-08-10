@@ -1,5 +1,6 @@
 import { readFileSync, existsSync, readdirSync } from 'fs'
 import path from 'path'
+import { getDYDocs, type DYSection } from './duanyongping'
 
 export interface ReadingItem {
   title: string
@@ -23,8 +24,8 @@ export interface ReadingAuthor {
   totalCount: number
 }
 
-export type AuthorId = 'buffett' | 'munger' | 'schloss' | 'other'
-export type CategoryId = 'partnership' | 'shareholder-letter' | 'talk' | 'interview' | 'qa' | 'article' | 'company-analysis' | 'other'
+export type AuthorId = 'buffett' | 'munger' | 'duan' | 'schloss' | 'other'
+export type CategoryId = 'partnership' | 'shareholder-letter' | 'talk' | 'interview' | 'qa' | 'duan-qa' | 'article' | 'milestone' | 'company-analysis' | 'other'
 
 interface CategoryDef {
   id: CategoryId
@@ -38,9 +39,28 @@ const CATEGORIES: Record<CategoryId, CategoryDef> = {
   'talk': { id: 'talk', name: '演讲', icon: '🎤' },
   'interview': { id: 'interview', name: '访谈', icon: '🎙️' },
   'qa': { id: 'qa', name: '股东大会', icon: '❓' },
+  'duan-qa': { id: 'duan-qa', name: '问答', icon: '💬' },
   'article': { id: 'article', name: '文章', icon: '📖' },
+  'milestone': { id: 'milestone', name: '公司里程碑', icon: '◆' },
   'company-analysis': { id: 'company-analysis', name: '公司分析', icon: '🏢' },
   'other': { id: 'other', name: '其他', icon: '📄' },
+}
+
+function partnershipDisplayTitle(fileName: string): { title: string; year: number | null } {
+  const base = fileName.replace(/\.md$/, '')
+  const match = base.match(/^partnership_(\d{4})(?:-([^-]+))?-(.+)$/)
+  if (!match) return { title: '巴菲特合伙人信', year: null }
+
+  const [, year, qualifier, subject] = match
+  const qualifierLabel: Record<string, string> = {
+    annual: '年度信',
+    interim: '年中信',
+  }
+  const edition = qualifier ? qualifierLabel[qualifier] || qualifier : ''
+  return {
+    title: `${year} 年${edition ? ` ${edition}` : ''}${subject === '有限合伙协议' ? '有限合伙协议' : '巴菲特致合伙人信'}`,
+    year: Number(year),
+  }
 }
 
 /**
@@ -51,6 +71,7 @@ function loadIndexedContent() {
   const result: Record<AuthorId, { items: ReadingItem[]; dirs: Set<string> }> = {
     buffett: { items: [], dirs: new Set() },
     munger: { items: [], dirs: new Set() },
+    duan: { items: [], dirs: new Set() },
     schloss: { items: [], dirs: new Set() },
     other: { items: [], dirs: new Set() },
   }
@@ -60,11 +81,12 @@ function loadIndexedContent() {
   if (existsSync(partnershipDir)) {
     const files = readdirSync(partnershipDir).filter(f => f.endsWith('.md'))
     files.forEach(f => {
-      const title = f.replace(/\.md$/, '')
+      const { title, year } = partnershipDisplayTitle(f)
       result.buffett.items.push({
         title,
         fileName: f,
         filePath: `content/partnership/${f}`,
+        year,
         sourceDir: 'partnership',
         href: `/partnership`,
       })
@@ -165,7 +187,7 @@ function loadIndexedContent() {
     const files = readdirSync(companiesDir).filter(f => f.endsWith('.md'))
     files.forEach(f => {
       const title = f.replace(/\.md$/, '')
-      result.buffett.items.push({
+      result.other.items.push({
         title,
         fileName: f,
         filePath: `content/companies/${f}`,
@@ -173,6 +195,26 @@ function loadIndexedContent() {
         href: `/companies/${encodeURIComponent(title)}`,
       })
     })
+  }
+
+  // 7. 段永平原典资料。只读取元数据，目录页不加载正文。
+  const duanSections: Array<{ section: DYSection; sourceDir: string }> = [
+    { section: 'blog', sourceDir: 'duan-blog' },
+    { section: 'qa', sourceDir: 'duan-qa' },
+    { section: 'talks', sourceDir: 'duan-talks' },
+    { section: 'milestones', sourceDir: 'duan-milestones' },
+  ]
+  for (const { section, sourceDir } of duanSections) {
+    for (const doc of getDYDocs(section, false)) {
+      result.duan.items.push({
+        title: doc.title,
+        fileName: doc.fileName,
+        filePath: `content/duanyongping/${section}/${doc.fileName}`,
+        year: doc.year ? Number(doc.year) : null,
+        sourceDir,
+        href: `/duanyongping/${section}/${doc.slug}`,
+      })
+    }
   }
 
   return result
@@ -187,8 +229,7 @@ export function getReadingLibrary(): ReadingAuthor[] {
   const authors: { id: AuthorId; name: string; items: ReadingItem[] }[] = [
     { id: 'buffett', name: '巴菲特', items: [...indexed.buffett.items] },
     { id: 'munger', name: '芒格', items: [...indexed.munger.items] },
-    { id: 'schloss', name: '施洛斯', items: [...indexed.schloss.items] },
-    { id: 'other', name: '其他', items: [...indexed.other.items] },
+    { id: 'duan', name: '段永平', items: [...indexed.duan.items] },
   ]
 
   return authors.map(author => {
@@ -212,6 +253,18 @@ export function getReadingLibrary(): ReadingAuthor[] {
           break
         case 'qa':
           catId = 'qa'
+          break
+        case 'duan-qa':
+          catId = 'duan-qa'
+          break
+        case 'duan-talks':
+          catId = 'talk'
+          break
+        case 'duan-milestones':
+          catId = 'milestone'
+          break
+        case 'duan-blog':
+          catId = 'article'
           break
         case 'companies':
           catId = 'company-analysis'
@@ -241,7 +294,7 @@ export function getReadingLibrary(): ReadingAuthor[] {
     }
 
     // 按分类排序
-    const categoryOrder: CategoryId[] = ['partnership', 'shareholder-letter', 'talk', 'interview', 'qa', 'article', 'company-analysis', 'other']
+    const categoryOrder: CategoryId[] = ['partnership', 'shareholder-letter', 'talk', 'interview', 'qa', 'duan-qa', 'article', 'milestone', 'company-analysis', 'other']
     categories.sort((a, b) => {
       const aIdx = categoryOrder.indexOf(Object.entries(CATEGORIES).find(([, v]) => v.name === a.name)?.[0] as CategoryId || 'other')
       const bIdx = categoryOrder.indexOf(Object.entries(CATEGORIES).find(([, v]) => v.name === b.name)?.[0] as CategoryId || 'other')

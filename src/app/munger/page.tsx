@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '查理·芒格专题｜复利书房',
     description: '芒格 Wesco 问答、演讲、思维模型与误判心理学索引。',
-    images: ['/og-v2.png'],
   },
 }
 

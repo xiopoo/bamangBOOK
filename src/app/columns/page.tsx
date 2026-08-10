@@ -8,6 +8,7 @@ import { getColumnsBySeries, getColumnStats } from '@/lib/columns'
 export const metadata: Metadata = {
   title: '投资策略与思考',
   description: '价值投资的原则、策略与独立思考——按系列组织的长期专栏。',
+  alternates: { canonical: '/columns' },
 }
 
 export default function ColumnsPage() {

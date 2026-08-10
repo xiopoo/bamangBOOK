@@ -56,13 +56,11 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     url: '/',
-    images: [{ url: '/og-v2.png', width: 1730, height: 909, alt: '复利书房：巴菲特、芒格与公司研究' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ['/og-v2.png'],
   },
   robots: siteConfig.hasProductionUrl
     ? { index: true, follow: true }

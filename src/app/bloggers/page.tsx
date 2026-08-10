@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '博主文章｜复利书房',
     description: '四位中文写作者的长期投资文章索引。',
-    images: ['/og-v2.png'],
   },
 }
 

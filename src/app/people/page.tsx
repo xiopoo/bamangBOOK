@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: '人物索引｜复利书房',
     description: '巴菲特、芒格及其身边的人物索引。',
-    images: ['/og-v2.png'],
   },
 }
 

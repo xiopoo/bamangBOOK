@@ -12,6 +12,7 @@ import {
 export const metadata: Metadata = {
   title: '芒格资料',
   description: '查理·芒格的生平、事业、演讲访谈与主题语录。',
+  alternates: { canonical: '/munger/archive' },
 }
 
 export default function MungerArchivePage() {

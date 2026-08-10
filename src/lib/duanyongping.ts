@@ -12,6 +12,7 @@ export type DYDoc = {
   contentType?: string
   date?: string
   publishedAt?: string
+  updatedAt?: string
   year?: string
   platform?: string
   source?: string
@@ -126,6 +127,7 @@ function readDoc(section: DYSection, filePath: string, includeContent = true): D
     contentType: data.content_type,
     date,
     publishedAt: typeof data.published_at === 'string' ? data.published_at : undefined,
+    updatedAt: resolveOptionalDate(data.updated_at),
     year: inferSourceYear(data, fileName, String(title), date),
     platform: data.platform,
     source: data.source,
@@ -138,6 +140,12 @@ function readDoc(section: DYSection, filePath: string, includeContent = true): D
     slug: slugFromFileName(fileName),
     content: includeContent ? (section === 'talks' ? resolveTalkAttachmentPaths(content) : content) : '',
   }
+}
+
+function resolveOptionalDate(value: unknown): string | undefined {
+  if (typeof value === 'string') return value
+  if (value instanceof Date) return value.toISOString()
+  return undefined
 }
 
 /** 优先用 date，缺失时回退 published_at（talks 等栏目多用 published_at）。

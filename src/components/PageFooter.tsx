@@ -12,6 +12,8 @@ const footerLinks = [
 
 const aboutLinks = [
   { href: '/about', label: '关于复利书房' },
+  { href: '/about/editorial', label: '来源与编辑原则' },
+  { href: '/about/revisions', label: '修订记录' },
   { href: '/terms', label: '服务条款' },
   { href: '/privacy', label: '隐私政策' },
   { href: 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA5NTk0MDU2NQ==&scene=124#wechat_redirect', label: '微信公众号 · 金家岭小胖', external: true },

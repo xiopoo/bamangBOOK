@@ -6,6 +6,13 @@ import { getModels } from '@/lib/models'
 import { getMungerLocalArchiveItems, getMungerLocalArchiveStats } from '@/lib/munger-archive'
 import { getAllPartnershipLetters, getShareholderLetters } from '@/lib/partnership'
 import styles from './learn.module.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '阅读路径',
+  description: '从具体问题、原典和公司案例进入长期投资阅读，并按推荐顺序继续。',
+  alternates: { canonical: '/learn' },
+}
 
 const questions = [
   { query: '护城河', title: '什么样的生意值得长期拥有？', note: '从护城河、定价权与资本回报开始' },

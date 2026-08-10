@@ -6,6 +6,7 @@ import { ArrowLeft, BookOpen, FileText, Tag, ChevronRight } from 'lucide-react'
 import { readFileSync, existsSync, readdirSync } from 'fs'
 import path from 'path'
 import { getLetterArchiveHref } from '@/lib/letter-links'
+import type { Metadata } from 'next'
 
 interface ConceptPageProps {
   params: {
@@ -23,6 +24,15 @@ export function generateStaticParams() {
       .map((file) => ({ name: file.replace(/\.md$/, '') }))
   } catch {
     return []
+  }
+}
+
+export function generateMetadata({ params }: ConceptPageProps): Metadata {
+  const name = decodeURIComponent(params.name)
+  return {
+    title: `${name} · 芒格概念档案`,
+    description: `${name}的定义、相关原典年份与关联概念。`,
+    alternates: { canonical: `/concepts/${encodeURIComponent(name)}` },
   }
 }
 

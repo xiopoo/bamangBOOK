@@ -1,6 +1,6 @@
 /* =========================================================
    全站中文阅读排版规范 (CN Reading Typography) v2
-   加载顺序：在 globals.css 之后引入，覆盖历史遗留的 prose 样式。
+   加载顺序：在 globals.css 之后引入，作为正文排版的唯一视觉来源。
    适用范围：LetterReader（股东信）/ ArticleContent（合伙人信）/
              MarkdownContent（Wesco问答、演讲、访谈、思维模型等）
    ========================================================= */
@@ -48,12 +48,12 @@
 .prose-gray,
 .prose-lg,
 .prose-invert {
-  font-size: var(--text-size-base) !important;
-  line-height: var(--reading-leading) !important;
-  color: var(--reading-text) !important;
-  max-width: var(--reading-measure) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  font-size: var(--text-size-base);
+  line-height: var(--reading-leading);
+  color: var(--reading-text);
+  max-width: var(--reading-measure);
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--archive-serif);
   letter-spacing: 0.005em;
   word-break: break-word;
@@ -61,7 +61,7 @@
 }
 
 .prose-invert {
-  color: var(--reading-text) !important;
+  color: var(--reading-text);
 }
 
 /* =========================================================
@@ -71,9 +71,9 @@
 .prose-gray p,
 .prose-lg p {
   font-size: 1em;
-  line-height: var(--reading-leading) !important;
-  margin-top: 0 !important;
-  margin-bottom: var(--reading-paragraph-gap) !important;
+  line-height: var(--reading-leading);
+  margin-top: 0;
+  margin-bottom: var(--reading-paragraph-gap);
   color: var(--reading-text);
   text-align: justify;            /* 两端对齐：中文长文段落边缘整洁度 +35% */
   text-indent: 2em;               /* 首行缩进 2 字：传统中文排版 + 替代段距区分新段落 */
@@ -121,11 +121,11 @@
 
 .prose h1 {
   font-size: 1.9em;
-  margin: 0 0 0.8em !important;
+  margin: 0 0 0.8em;
 }
 .prose h2 {
   font-size: 1.45em;
-  margin: 2.3em 0 0.75em !important;
+  margin: 2.3em 0 0.75em;
   padding-bottom: 0.35em;
   border-bottom: 1px solid rgba(171, 25, 66, 0.18);
   position: relative;
@@ -143,7 +143,7 @@
 }
 .prose h3 {
   font-size: 1.22em;
-  margin: 1.85em 0 0.6em !important;
+  margin: 1.85em 0 0.6em;
   padding-left: 0.8em;
   position: relative;
 }
@@ -160,18 +160,18 @@
 }
 .prose h4 {
   font-size: 1.08em;
-  margin: 1.5em 0 0.5em !important;
+  margin: 1.5em 0 0.5em;
   font-weight: 600;
   color: var(--reading-heading);
 }
 .prose h5 {
   font-size: 1em;
-  margin: 1.3em 0 0.4em !important;
+  margin: 1.3em 0 0.4em;
   font-weight: 600;
 }
 .prose h6 {
   font-size: 0.94em;
-  margin: 1.1em 0 0.3em !important;
+  margin: 1.1em 0 0.3em;
   font-weight: 600;
   color: var(--reading-text-muted);
 }
@@ -196,7 +196,7 @@
    ========================================================= */
 .prose a {
   color: var(--reading-accent);
-  text-decoration: none !important;
+  text-decoration: none;
   border-bottom: 1px solid color-mix(in srgb, var(--reading-accent) 28%, transparent);
   transition: all 0.15s ease-out;
   padding: 0 1px;
@@ -213,15 +213,15 @@
    6. 列表 UL/OL/LI —— 行距与正文一致，项间留白
    ========================================================= */
 .prose ul, .prose ol {
-  padding-left: 1.85em !important;
+  padding-left: 1.85em;
   margin-top: 0.4em;
-  margin-bottom: 1.4em !important;
+  margin-bottom: 1.4em;
 }
 .prose ul { list-style: disc; }
 .prose ol { list-style: decimal; }
 
 .prose li {
-  line-height: var(--reading-list-leading) !important;
+  line-height: var(--reading-list-leading);
   margin-top: var(--reading-list-gap);
   margin-bottom: var(--reading-list-gap);
   color: var(--reading-text);
@@ -235,21 +235,21 @@
 /* 嵌套列表稍紧一点 */
 .prose li > ul,
 .prose li > ol {
-  margin-top: 0.3em !important;
-  margin-bottom: 0.3em !important;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 .prose li p {
   text-indent: 0;
-  margin-bottom: 0.3em !important;
+  margin-bottom: 0.3em;
 }
 
 /* =========================================================
    7. 引用块 blockquote —— 赭红左线 + 柔和底色 + 不斜体（中文斜体可读性差）
    ========================================================= */
 .prose blockquote {
-  margin: 1.8em 0 !important;
-  padding: 1em 1.1em 1em 1.2em !important;
-  border-left: 4px solid var(--reading-accent) !important;
+  margin: 1.8em 0;
+  padding: 1em 1.1em 1em 1.2em;
+  border-left: 4px solid var(--reading-accent);
   background: linear-gradient(90deg, var(--reading-accent-soft) 0%, transparent 90%);
   color: var(--reading-text);
   border-radius: 0 8px 8px 0;
@@ -258,12 +258,12 @@
   line-height: 1.85;
 }
 .prose blockquote > *:last-child {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 .prose blockquote p {
   color: inherit;
-  line-height: 1.85 !important;
-  margin-bottom: 0.7em !important;
+  line-height: 1.85;
+  margin-bottom: 0.7em;
   text-indent: 0;
 }
 .prose blockquote cite,
@@ -294,8 +294,8 @@
   color: #f0c36d;
 }
 .prose pre {
-  margin: 1.7em 0 !important;
-  padding: 1.05em 1.25em !important;
+  margin: 1.7em 0;
+  padding: 1.05em 1.25em;
   background: #1c1917;
   color: #f5efe0;
   border-radius: 10px;
@@ -321,7 +321,7 @@
   display: block;                 /* 让表格整体横滚，内部 th/td 不受 max-width 限制 */
   width: 100%;
   max-width: 100%;
-  margin: 1.8em 0 !important;
+  margin: 1.8em 0;
   border-collapse: collapse;
   border: 1px solid rgba(171, 25, 66, 0.14);
   border-radius: 10px;
@@ -335,8 +335,8 @@
   background: var(--reading-accent-soft);
 }
 .prose th, .prose td {
-  padding: 0.7em 0.95em !important;
-  border: 1px solid rgba(171, 25, 66, 0.12) !important;
+  padding: 0.7em 0.95em;
+  border: 1px solid rgba(171, 25, 66, 0.12);
   font-size: inherit;
   text-indent: 0;
   vertical-align: top;
@@ -353,7 +353,7 @@
 .dark .prose table,
 .dark .prose th,
 .dark .prose td {
-  border-color: rgba(216, 82, 115, 0.22) !important;
+  border-color: rgba(216, 82, 115, 0.22);
 }
 /* 斑马纹（隔行淡色）提升长表可读性 */
 .prose tbody tr:nth-child(even) {
@@ -367,12 +367,12 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 1.8em auto !important;
+  margin: 1.8em auto;
   display: block;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 .prose hr {
-  margin: 2.2em auto !important;
+  margin: 2.2em auto;
   border: 0;
   border-top: 1px solid color-mix(in srgb, var(--reading-accent) 22%, transparent);
   max-width: 40%;
@@ -428,7 +428,6 @@
   transform: translateY(-1px);
 }
 .reading-nav-pair a.nav-prev { justify-content: flex-start; }
-.reading-nav-pair a.nav-next { justify-content: flex-end; }
 
 /* =========================================================
    12. 移动端 (≤ 640px) 适配 —— 最大提升部分
@@ -442,7 +441,7 @@
   .prose,
   .prose-gray,
   .prose-lg {
-    max-width: 100% !important;      /* 取消 39em，手机上充满 */
+    max-width: 100%;      /* 取消 39em，手机上充满 */
     padding: 0 0.05rem;              /* 让正文贴着父容器 padding，父容器已统一 p-5 */
   }
   .prose > p:first-of-type {
@@ -452,15 +451,14 @@
   .prose h3 { font-size: 1.12em; }
   .prose h4 { font-size: 1.02em; }
   .prose blockquote {
-    padding: 0.9em 1em !important;
-    margin: 1.5em 0 !important;
+    padding: 0.9em 1em;
+    margin: 1.5em 0;
   }
   .prose table { font-size: 0.88em; } /* 表格继续缩小，避免卡死横滚 */
-  .prose th, .prose td { padding: 0.55em 0.65em !important; }
-  .reading-nav-pair { flex-direction: column; } /* 上下篇改成上下叠放 */
-  .reading-nav-pair a.nav-prev,
-  .reading-nav-pair a.nav-next {
-    justify-content: center;
+  .prose th, .prose td { padding: 0.55em 0.65em; }
+  .reading-nav-pair {
+    flex-direction: column;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 }
 
@@ -473,7 +471,7 @@
 
 /* 问题块 —— 赭红底色 + 赭红左边线 */
 .qa {
-  margin: 1.6em 0 !important;
+  margin: 1.6em 0;
   padding: 0.9em 1.05em 0.85em 1.15em;
   border-radius: 0 10px 10px 0;
   border-left: 4px solid var(--reading-accent);
@@ -488,7 +486,7 @@
 }
 .qa p.is-question,
 .qa p.is-answer {
-  margin: 0 !important;
+  margin: 0;
   line-height: 1.82;
   color: var(--reading-text);
   text-align: left;
@@ -511,15 +509,15 @@
 /* H2/H3 作为问题标题时的 Q 徽章样式 */
 .qa-question-heading {
   display: block;
-  padding: 0.8em 1em 0.75em !important;
+  padding: 0.8em 1em 0.75em;
   border-radius: 10px;
-  background: var(--reading-accent-soft) !important;
-  border-left: 4px solid var(--reading-accent) !important;
-  border-bottom: 0 !important;
-  padding-left: 1em !important;
-  margin-bottom: 0.6em !important;
+  background: var(--reading-accent-soft);
+  border-left: 4px solid var(--reading-accent);
+  border-bottom: 0;
+  padding-left: 1em;
+  margin-bottom: 0.6em;
 }
-.qa-question-heading::before { display: none !important; }  /* 覆盖 H2 的赭红装饰条，避免和 QA 块左边线重复 */
+.qa-question-heading::before { display: none; }  /* 覆盖 H2 的赭红装饰条，避免和 QA 块左边线重复 */
 .qa-question-mark {
   display: inline-flex;
   align-items: center;
@@ -553,11 +551,11 @@
 
 @media (max-width: 640px) {
   .qa {
-    margin: 1.3em 0 !important;
+    margin: 1.3em 0;
     padding: 0.75em 0.9em 0.7em 0.95em;
   }
   .qa-question-heading {
-    padding: 0.7em 0.85em 0.65em !important;
+    padding: 0.7em 0.85em 0.65em;
   }
 }
 
@@ -666,8 +664,8 @@
   font-size: 0.94em;
   line-height: 1.45;
   color: var(--reading-text-muted);
-  text-decoration: none !important;
-  border-bottom: 0 !important;
+  text-decoration: none;
+  border-bottom: 0;
   text-align: left;
   transition: all 0.16s ease;
   font-weight: 500;
@@ -726,26 +724,23 @@
   .model-detail__article,
   .partnership-detail article,
   .reading-page article {
-    padding: 1.25rem !important;       /* ≥ 20px 安全边距 */
+    padding: 1.25rem;       /* ≥ 20px 安全边距 */
   }
   /* 股东信详情页 header 内部 padding */
   body > div > header > div,
   .bg-bg-card > header > div {
-    padding: 1rem 1.25rem !important;
+    padding: 1rem 1.25rem;
   }
   /* 主容器 padding 兜底（合伙人信 / 股东信主容器） */
   .max-w-5xl, .max-w-7xl {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   /* 知识图谱卡片 */
   .furnish-border {
-    padding: 1.1rem !important;
+    padding: 1.1rem;
   }
-  /* 防止 TOC / 导航按钮底部被安全区遮挡 (iPhone Home Indicator) */
-  .reading-nav-pair {
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
+  /* 防止固定按钮被 iPhone Home Indicator 遮挡 */
   .back-to-top {
     right: calc(clamp(12px, 2vw, 24px) + env(safe-area-inset-right, 0px));
     bottom: calc(clamp(18px, 3.5vh, 36px) + env(safe-area-inset-bottom, 0px));
@@ -830,18 +825,19 @@ html.reading-no-fouc .prose-lg {
 }
 .reading-nav-pair a.nav-prev,
 .reading-nav-pair a.nav-next {
-  text-decoration: none !important;
-  border-bottom: 0 !important;
+  text-decoration: none;
+  border-bottom: 0;
   flex-direction: column;
-  align-items: flex-start !important;
+  align-items: flex-start;
   text-align: left;
-  gap: 0.3rem !important;
+  gap: 0.3rem;
 }
-.reading-nav-pair a.nav-next { align-items: flex-end !important; text-align: right; }
+.reading-nav-pair a.nav-next { justify-content: flex-end; align-items: flex-end; text-align: right; }
 @media (max-width: 640px) {
   .reading-nav-pair a.nav-prev,
   .reading-nav-pair a.nav-next {
-    align-items: center !important;
-    text-align: center !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

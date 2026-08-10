@@ -31,6 +31,15 @@ function getNodeText(node: ReactNode): string {
   return ''
 }
 
+function getImageAlt(src: unknown, alt: unknown): string {
+  if (typeof alt === 'string' && alt.trim()) return alt.trim()
+  const rawName = typeof src === 'string' ? src.split('/').pop()?.split('?')[0] || '' : ''
+  let name = rawName
+  try { name = decodeURIComponent(rawName) } catch {}
+  name = name.replace(/\.[a-z0-9]{2,5}$/i, '').replace(/[-_]+/g, ' ').trim()
+  return name && !/^[a-f0-9]{12,}$/i.test(name) ? `原始资料附图：${name}` : '原始资料附图'
+}
+
 function normalizeMarkdownStructure(content: string): string {
   let removedFirstH1 = false
   let inFence = false
@@ -261,7 +270,7 @@ export default function MarkdownContent({
       a: ({ href, children }: any) => <a href={href}>{children}</a>,
       img: ({ src, alt }: any) => (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt={alt || ''} />
+        <img src={src} alt={getImageAlt(src, alt)} />
       ),
     }),
     [isQA]

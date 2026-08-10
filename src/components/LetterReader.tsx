@@ -144,7 +144,7 @@ export default function LetterReader({
     a: ({ href, children }: any) => <a href={href}>{children}</a>,
     img: ({ src, alt }: any) => (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt={alt || ''} />
+      <img src={src} alt={typeof alt === 'string' && alt.trim() ? alt.trim() : '股东信原始资料附图'} />
     ),
   }), [])
 

@@ -190,6 +190,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
         </div>
 
         {/* —— 上下篇（年份）导航：统一使用 CN Reading 阅读规范样式 —— */}
+        <p className="archive-sort-note">按时间从早到晚 · 上一封为前一年，下一封为后一年</p>
         <nav className="reading-nav-pair reading-adjacent" aria-label="相邻股东信导航">
           {yearNum > 1956 ? (
             <Link
