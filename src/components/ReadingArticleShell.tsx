@@ -4,8 +4,6 @@ import ReadingProgress from './ReadingProgress'
 import ArticleTableOfContents from './ArticleTableOfContents'
 import FontSizeControlFixed from './FontSizeControlFixed'
 import ReadingMetadata, { type ReadingMetadataProps } from './ReadingMetadata'
-import ContentTrustPanel from './ContentTrustPanel'
-import SourceNote from './SourceNote'
 import ReadingNavigation, { type ReadingNavigationItem } from './ReadingNavigation'
 import styles from './ReadingArticleShell.module.css'
 
@@ -15,8 +13,6 @@ interface ReadingArticleShellProps {
   backHref: string
   backLabel: string
   metadata: ReadingMetadataProps
-  trust: { source: string; method?: string; note?: string }
-  sourceNote: { source: string; sourceUrl?: string; method: string; completeness?: '完整' | '部分' | '未知'; reviewedAt?: string }
   previous?: ReadingNavigationItem | null
   next?: ReadingNavigationItem | null
   navigationLabel?: string
@@ -30,8 +26,6 @@ export default function ReadingArticleShell({
   backHref,
   backLabel,
   metadata,
-  trust,
-  sourceNote,
   previous,
   next,
   navigationLabel,
@@ -55,9 +49,7 @@ export default function ReadingArticleShell({
 
       <div className={styles.layout}>
         <main className={styles.main}>
-          <ContentTrustPanel {...trust} />
           <article className={styles.article}>{children}</article>
-          <SourceNote {...sourceNote} />
           <ReadingNavigation previous={previous} next={next} ariaLabel={navigationLabel} />
           {related}
         </main>

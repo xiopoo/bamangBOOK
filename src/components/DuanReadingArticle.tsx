@@ -39,9 +39,7 @@ export default function DuanReadingArticle({ doc, section, backLabel, contentTyp
     subtitle={intro || `段永平${SECTION_LABEL[section]}资料`}
     backHref={`/duanyongping/${section}`}
     backLabel={backLabel}
-    metadata={{ person: '段永平', year, contentType, sourceLabel, status: '编辑整理', completeness: '未知', readMinutes: Math.max(1, Math.round(body.length / 900)) }}
-    trust={{ source: sourceLabel, method: '依据公开资料进行中文归档整理；时间、平台和来源信息按现有原始记录保留。' }}
-    sourceNote={{ source: sourceLabel, sourceUrl, method: '公开资料归档与格式整理，未改变原始观点。', completeness: '未知' }}
+    metadata={{ person: '段永平', year, contentType, sourceLabel, sourceUrl, status: '编辑整理', readMinutes: Math.max(1, Math.round(body.length / 900)) }}
     previous={previous ? { href: hrefFor(previous.slug), title: previous.title, meta: previous.date?.slice(0, 10) || previous.year } : null}
     next={next ? { href: hrefFor(next.slug), title: next.title, meta: next.date?.slice(0, 10) || next.year } : null}
     navigationLabel={`按时间从早到晚的相邻${SECTION_LABEL[section]}`}

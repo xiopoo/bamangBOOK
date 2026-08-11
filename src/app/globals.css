@@ -67,9 +67,8 @@
   }
   .reading-metadata__secondary span { overflow-wrap: anywhere; }
 }
-.source-note { max-width: 44rem; margin: 2.5rem auto 0; padding: 1.15rem 1.25rem; border: 1px solid var(--archive-hairline); background: var(--archive-paper-tint); color: var(--archive-ink-soft); font: .8rem/1.75 var(--archive-sans); }
-.source-note p { margin: .25rem 0; }
-.source-note .archive-kicker { margin-bottom: .55rem; }
+.reading-metadata__secondary a { color: inherit; border-bottom: 1px solid var(--archive-rule); }
+.reading-metadata__secondary a:hover { color: var(--archive-oxblood); border-bottom-color: var(--archive-oxblood); }
 .archive-filters { margin-top: 1.5rem; padding: 1rem 0; display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; border-block: 1px solid var(--archive-rule); }
 .archive-filters label { display: grid; gap: .35rem; color: var(--archive-ink-faint); font: .7rem var(--archive-sans); }
 .archive-filters select { min-width: 8rem; min-height: 44px; padding: .55rem 2rem .55rem .65rem; color: var(--archive-ink); background: var(--archive-paper); border: 1px solid var(--archive-rule); font: .78rem var(--archive-sans); }
@@ -4651,6 +4650,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-gold);
 }
 
+.model-detail__meta a {
+  color: var(--archive-oxblood);
+  border-bottom: 1px solid var(--archive-rule);
+}
+
 .model-detail__shell {
   padding: clamp(2.5rem, 5vw, 4.5rem) 0 1rem;
 }
@@ -4686,33 +4690,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-ink-soft);
   font-size: 0.8rem;
   line-height: 1.6;
-}
-
-.model-detail__source {
-  margin-top: 1rem;
-  border-bottom: 1px solid var(--archive-rule-soft);
-  font-family: var(--archive-sans);
-}
-
-.model-detail__source summary {
-  padding: 0.75rem 0;
-  color: var(--archive-ink-faint);
-  cursor: pointer;
-  font-size: 0.7rem;
-  list-style-position: inside;
-}
-
-.model-detail__source > div {
-  padding: 0 0 1rem 1.1rem;
-  color: var(--archive-ink-faint);
-  font-size: 0.72rem;
-  line-height: 1.7;
-}
-
-.model-detail__source a {
-  display: inline-block;
-  margin-top: 0.35rem;
-  color: var(--archive-oxblood);
 }
 
 .model-detail__article {

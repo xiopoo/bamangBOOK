@@ -33,8 +33,6 @@ export default function InterviewDetailPage({ params }: PageProps) {
     backHref="/interviews"
     backLabel="返回访谈目录"
     metadata={{ year: doc.year || undefined, contentType: '访谈', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
-    trust={{ source: doc.sourceLabel, method: '依据公开访谈资料进行中文阅读整理；重要表述以原始采访为准。' }}
-    sourceNote={{ source: doc.sourceLabel, method: '中文阅读整理，保留访谈年份与上下文。', completeness: doc.completeness }}
     previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
     next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
     navigationLabel="按时间从早到晚的相邻访谈"

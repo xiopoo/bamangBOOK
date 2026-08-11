@@ -1,6 +1,6 @@
-import { redirect } from 'next/navigation'
 import { getMungerOriginals } from '@/lib/munger-originals'
 import type { Metadata } from 'next'
+import ClientRedirect from '@/components/ClientRedirect'
 
 interface PageProps {
   params: { id: string }
@@ -19,6 +19,6 @@ export function generateStaticParams() {
   return getMungerOriginals().map(item => ({ id: item.id }))
 }
 
-export default function MungerOriginalPage({ params }: PageProps) {
-  redirect('/munger')
+export default function MungerOriginalPage() {
+  return <ClientRedirect href="/munger" />
 }

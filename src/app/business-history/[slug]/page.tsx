@@ -51,8 +51,6 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
       backHref="/business-history"
       backLabel="返回公司深度研究"
       metadata={{ person: item.company, contentType: '公司研究', sourceLabel, status: '编辑整理', completeness: '完整', readMinutes: item.readMinutes }}
-      trust={{ source: sourceLabel, method: '本文为中文研究整理稿，侧重事实脉络、商业模式、护城河、风险与价值判断；具体数据与原始披露请以原始资料和公司公告为准。' }}
-      sourceNote={{ source: sourceLabel, method: '基于公司公开资料和研究档案进行中文编辑整理。', completeness: '完整' }}
       previous={previous ? { href: businessHistoryHref(previous.slug), title: previous.title, meta: previous.company } : null}
       next={next ? { href: businessHistoryHref(next.slug), title: next.title, meta: next.company } : null}
       navigationLabel="按公司研究目录顺序的相邻内容"

@@ -6,7 +6,6 @@ import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
 import { bookParams } from '@/lib/staticParams'
 
 export function generateStaticParams() {
@@ -67,11 +66,6 @@ export default function BookDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <ContentTrustPanel
-          source="第三方出版书籍的读书笔记与要点整理"
-          method="本文为个人拆解与提炼，观点仅供学习参考，具体内容请以原著为准，不构成投资建议。"
-        />
-
         {/* 书籍信息卡 */}
         <div className="bg-white dark:bg-dark-card rounded-card shadow-card p-4 sm:p-6 mb-6 flex flex-wrap items-center gap-x-8 gap-y-3">
           <div className="flex items-center gap-2">
