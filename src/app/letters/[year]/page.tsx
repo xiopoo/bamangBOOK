@@ -167,8 +167,8 @@ export default async function LetterDetailPage({ params }: PageProps) {
           </div>
         )}
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="min-w-0 flex-1">
+        <div className="reading-content-layout">
+          <main className="reading-content-layout__main min-w-0">
             <LetterReader
               letterData={letterData}
               graphData={graphData}

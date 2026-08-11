@@ -63,9 +63,9 @@ export default function ColumnDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="flex-1 min-w-0">
-            <article className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
+        <div className="reading-content-layout">
+          <main className="reading-content-layout__main min-w-0">
+            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
               <MarkdownContent content={column.content} />
 
               {column.tags.length > 0 && (

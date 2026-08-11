@@ -49,7 +49,7 @@ export default function ReadingArticleShell({
 
       <div className={styles.layout}>
         <main className={styles.main}>
-          <article className={styles.article}>{children}</article>
+          <article className={styles.article} data-toc-content>{children}</article>
           <ReadingNavigation previous={previous} next={next} ariaLabel={navigationLabel} />
           {related}
         </main>
