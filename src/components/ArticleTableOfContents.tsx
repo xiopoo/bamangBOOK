@@ -15,17 +15,26 @@ export default function ArticleTableOfContents() {
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    const articleHeadings = document.querySelectorAll(
-      'article h2, article h3, article h4, .prose h2, .prose h3, .prose h4'
-    )
+    // 目录只对应文章正文；不能扫描整页，否则「相关推荐」等模块的标题也会混入。
+    const contentRoot = document.querySelector('[data-toc-content]')
+    if (!contentRoot) return
+
+    const articleHeadings = contentRoot.querySelectorAll('h2, h3, h4')
     const headingItems: TocItem[] = []
+    const usedIds = new Set<string>()
 
     articleHeadings.forEach((heading, index) => {
       let id = heading.getAttribute('id')
-      if (!id || id === '') {
-        id = `heading-${index}`
-        heading.setAttribute('id', id)
+      const baseId = id || `heading-${index}`
+      let uniqueId = baseId
+      let duplicateIndex = 2
+      while (usedIds.has(uniqueId)) {
+        uniqueId = `${baseId}-${duplicateIndex}`
+        duplicateIndex += 1
       }
+      if (id !== uniqueId) heading.setAttribute('id', uniqueId)
+      id = uniqueId
+      usedIds.add(id)
       headingItems.push({
         id,
         text: heading.textContent || '',
@@ -83,7 +92,7 @@ export default function ArticleTableOfContents() {
   }
 
   return (
-    <aside className="article-toc order-first lg:order-none" aria-label="章节目录">
+    <aside className="article-toc" aria-label="章节目录">
       {/* 移动端折叠头 */}
       <button
         type="button"

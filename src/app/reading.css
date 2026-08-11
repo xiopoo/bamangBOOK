@@ -567,7 +567,13 @@
   width: 100%;
   max-width: 260px;
 }
-@media (max-width: 1023px) {
+@media (min-width: 1180px) {
+  .article-toc {
+    width: 100%;
+    max-width: none;
+  }
+}
+@media (max-width: 1179px) {
   .article-toc {
     max-width: none;
     margin-bottom: 1.5rem;
@@ -695,7 +701,7 @@
 }
 
 /* 移动端：默认折叠抽屉 */
-@media (max-width: 1023px) {
+@media (max-width: 1179px) {
   .article-toc__toggle {
     display: inline-flex;
     margin-bottom: 0.8rem;

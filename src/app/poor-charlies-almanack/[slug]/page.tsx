@@ -6,6 +6,8 @@ import ReadingProgress from '@/components/ReadingProgress'
 import MarkdownContent from '@/components/MarkdownContent'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
+import AlmanackAudioPlayer from '@/components/AlmanackAudioPlayer'
+import { getAlmanackAudioTracks } from '@/lib/poor-charlies-audio'
 import {
   almanackSectionParams,
   almanackSections,
@@ -44,6 +46,7 @@ export default function AlmanackSectionPage({ params }: PageProps) {
   const progress = Math.round(
     ((almanackSections.findIndex(item => item.slug === section.slug) + 1) / almanackSections.length) * 100
   )
+  const audioTracks = getAlmanackAudioTracks(section.slug)
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
@@ -88,8 +91,8 @@ export default function AlmanackSectionPage({ params }: PageProps) {
       </header>
 
       <div className="mx-auto max-w-7xl px-4 py-7 sm:px-6 md:px-8 md:py-10">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <main className="min-w-0 flex-1">
+        <div className="reading-content-layout">
+          <main className="reading-content-layout__main min-w-0">
             <aside className="mb-6 rounded-2xl border border-primary/15 bg-primary/[0.04] p-4 text-sm leading-6 text-gray-700 dark:bg-primary/10 dark:text-gray-300">
               <div className="flex items-start gap-3">
                 <BookOpen className="mt-0.5 shrink-0 text-primary" size={18} />
@@ -108,7 +111,13 @@ export default function AlmanackSectionPage({ params }: PageProps) {
               </div>
             </aside>
 
-            <article className="rounded-card bg-bg-card p-5 shadow-card dark:bg-dark-card sm:p-7 md:p-10">
+            {audioTracks.length > 0 && (
+              <div className="mb-6">
+                <AlmanackAudioPlayer tracks={audioTracks} compact />
+              </div>
+            )}
+
+            <article data-toc-content className="rounded-card bg-bg-card p-5 shadow-card dark:bg-dark-card sm:p-7 md:p-10">
               <MarkdownContent content={section.content} />
             </article>
 
@@ -150,4 +159,3 @@ export default function AlmanackSectionPage({ params }: PageProps) {
     </div>
   )
 }
-

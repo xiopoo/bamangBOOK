@@ -73,8 +73,8 @@ export default function ModelDetailPage({ params }: PageProps) {
       </header>
 
       <div className="model-detail__shell">
-        <div className="model-detail__grid flex-col lg:flex-row">
-          <main className="flex-1 min-w-0">
+        <div className="reading-content-layout">
+          <main className="reading-content-layout__main min-w-0">
             {model.scenarios.length > 0 && (
               <div className="model-detail__scenarios">
                 <span>适用场景</span>
@@ -82,7 +82,7 @@ export default function ModelDetailPage({ params }: PageProps) {
               </div>
             )}
 
-            <article className="model-detail__article">
+            <article data-toc-content className="model-detail__article">
               <MarkdownContent content={model.content} />
             </article>
 

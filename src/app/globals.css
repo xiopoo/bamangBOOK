@@ -4785,6 +4785,40 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-oxblood);
 }
 
+/* 阅读页三栏：中间正文始终处于视口中心，目录占右栏，左栏仅作为对称留白。 */
+.reading-content-layout {
+  --toc-rail: minmax(10rem, 13rem);
+  display: grid;
+  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure)) var(--toc-rail);
+  justify-content: center;
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.reading-content-layout__main {
+  grid-column: 2;
+  min-width: 0;
+}
+
+@media (min-width: 1180px) {
+  .reading-content-layout > .article-toc {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 1179px) {
+  .reading-content-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reading-content-layout > .article-toc {
+    order: -1;
+    width: 100%;
+  }
+}
+
 .model-detail__related {
   margin-top: 4rem;
   padding-top: 1.5rem;
