@@ -144,6 +144,16 @@ export function getRelatedPeople(personId: string): RelatedPerson[] {
   return person ? person.relatedPeople : []
 }
 
+const archivePersonNames: Record<string, string> = {
+  duan: '段永平',
+  duanyongping: '段永平',
+  schloss: '沃尔特·施洛斯',
+}
+
+export function personDisplayName(personId: string): string {
+  return people[personId]?.name || archivePersonNames[personId] || personId
+}
+
 const personNameMap: Record<string, string> = {
   '巴菲特': 'buffett',
   '沃伦·巴菲特': 'buffett',

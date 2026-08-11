@@ -72,7 +72,6 @@ const mungerPoints = [
 const buffettPreviews = [
   { img: '/ebook-previews/buffett-p01.png', title: '封面', desc: '米白纸底配品牌玫红，五篇结构一目了然，书名列于封面正下方。' },
   { img: '/ebook-previews/buffett-p03.png', title: '目录', desc: '五篇两级目录，标注各章所含文章篇目与来源年份。' },
-  { img: '/ebook-previews/buffett-p13.png', title: '股东信正文', desc: '全文收录伯克希尔股东信，原文语境保留，来源逐条标注。' },
 ]
 const mungerPreviews = [
   { img: '/ebook-previews/munger-p01.png', title: '封面', desc: '与巴菲特文集同系列版式，五篇结构列于封面下方。' },

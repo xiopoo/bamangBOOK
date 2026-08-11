@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getAdjacentDocuments, getDocumentByFileName } from '@/lib/documents'
-import { people } from '@/lib/people'
+import { personDisplayName } from '@/lib/people'
 import { talkParams } from '@/lib/staticParams'
 import { documentHref } from '@/lib/content-routes'
 import ReadingArticleShell from '@/components/ReadingArticleShell'
@@ -17,7 +17,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const fileName = decodeURIComponent(params.id)
   const doc = getDocumentByFileName('talks', fileName)
   if (!doc) return { title: '演讲资料未找到' }
-  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).map(id => people[id]?.name).filter(Boolean).join('、')
+  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id)).map(personDisplayName).join('、')
   return {
     title: `${personName ? `${personName} · ` : ''}${doc.year ? `${doc.year}年 · ` : ''}演讲 · ${doc.title}`,
     description: `${doc.title}，${doc.year ? `${doc.year}年` : ''}演讲资料中文整理。`,
@@ -30,7 +30,7 @@ export default function TalkDetailPage({ params }: PageProps) {
   const doc = getDocumentByFileName('talks', fileName)
   if (!doc) notFound()
   const { prev, next } = getAdjacentDocuments('talks', fileName)
-  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).map(id => people[id]?.name).filter(Boolean).join('、') || '相关人物待核对'
+  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id)).map(personDisplayName).join('、') || '相关人物待核对'
 
   return <ReadingArticleShell
     title={doc.title}
