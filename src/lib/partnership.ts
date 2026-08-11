@@ -51,7 +51,8 @@ export function getPartnershipSortKey(subtitle: string): [number, number] {
   const normalized = normalizePartnershipSubtitle(subtitle)
   if (!normalized) return [12, 31]
   if (normalized === 'interim' || normalized === '年中') return [6, 30]
-  if (normalized === 'liquidation') return [5, 1]
+  // 1969 年清算信实际写于 12 月 26 日，应排在年内其他信件之后。
+  if (normalized === 'liquidation') return [12, 26]
   if (normalized === 'annual') return [12, 31]
   if (normalized === 'bond') return [12, 31]
   const monthMatch = normalized.match(/(\d+)月/)

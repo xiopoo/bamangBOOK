@@ -1,4 +1,4 @@
-巴菲特合伙人有限公司
+巴菲特合伙公司（BUFFETT PARTNERSHIP, LTD.）
 
 810 基威特广场
 
