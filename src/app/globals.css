@@ -54,6 +54,19 @@
 .reading-metadata__primary span + span::before { content: '·'; margin-right: 1rem; color: var(--archive-gold); }
 .reading-metadata__secondary { margin-top: .5rem; color: var(--archive-ink-faint); font-size: .74rem; }
 .reading-status { color: var(--archive-oxblood); }
+@media (max-width: 640px) {
+  .reading-metadata__primary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem .8rem;
+  }
+  .reading-metadata__primary span + span::before { display: none; }
+  .reading-metadata__secondary {
+    display: grid;
+    gap: .35rem;
+  }
+  .reading-metadata__secondary span { overflow-wrap: anywhere; }
+}
 .source-note { max-width: 44rem; margin: 2.5rem auto 0; padding: 1.15rem 1.25rem; border: 1px solid var(--archive-hairline); background: var(--archive-paper-tint); color: var(--archive-ink-soft); font: .8rem/1.75 var(--archive-sans); }
 .source-note p { margin: .25rem 0; }
 .source-note .archive-kicker { margin-bottom: .55rem; }
@@ -907,6 +920,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75;
 }
 
+.archive-page-header__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.archive-page-header__heading {
+  min-width: 0;
+}
+
 .archive-page-header__tools {
   display: flex;
   flex-shrink: 0;
@@ -1105,6 +1129,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 移动端字号控件：更紧凑，高度保持 44，但列宽稍减 */
 @media (max-width: 640px) {
+  .archive-page-header__row {
+    flex-direction: column;
+  }
+
+  .archive-page-header__heading {
+    width: 100%;
+  }
+
+  .archive-page-header__tools {
+    align-self: flex-start;
+  }
+
   .reader-font-control {
     grid-template-columns: 44px 52px 44px;
     height: 44px;

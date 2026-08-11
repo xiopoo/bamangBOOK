@@ -25,8 +25,8 @@ export default function PageHeader({
       <Breadcrumbs fallbackParent={backHref ? { href: backHref, label: backLabel } : undefined} />
       <header className="archive-page-header">
       <div>
-        <div className="flex items-start justify-between gap-4">
-          <div>
+        <div className="archive-page-header__row">
+          <div className="archive-page-header__heading">
             <h1>
               {title}
             </h1>

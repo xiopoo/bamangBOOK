@@ -83,7 +83,16 @@
   }
 
   .headerInner {
+    flex-direction: column;
     gap: 1rem;
+  }
+
+  .heading {
+    width: 100%;
+  }
+
+  .headerInner > :global(.reader-font-control) {
+    align-self: flex-start;
   }
 
   .heading h1 {

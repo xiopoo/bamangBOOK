@@ -3,7 +3,7 @@ import PageHeader from './PageHeader'
 import DocumentArchiveClient from './DocumentArchiveClient'
 import CatalogStats from './CatalogStats'
 import { getDocuments, type DocumentCategory } from '@/lib/documents'
-import { people } from '@/lib/people'
+import { personDisplayName } from '@/lib/people'
 
 interface DocumentArchivePageProps {
   category: DocumentCategory
@@ -34,9 +34,9 @@ export default function DocumentArchivePage({ category, title, subtitle, pathnam
       pathname={pathname}
       items={sorted.map(doc => {
         const ids = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id))
-        return { id: doc.id, href: doc.href, title: doc.title, year: doc.year, personIds: ids, person: ids.map(id => people[id]?.name || id).join('、'), contentType: doc.contentType, readMinutes: doc.readMinutes, status: doc.status }
+        return { id: doc.id, href: doc.href, title: doc.title, year: doc.year, personIds: ids, person: ids.map(personDisplayName).join('、'), contentType: doc.contentType, readMinutes: doc.readMinutes, status: doc.status }
       })}
-      people={personOptions.map(id => ({ value: id, label: people[id]?.name || id }))}
+      people={personOptions.map(id => ({ value: id, label: personDisplayName(id) }))}
       years={yearOptions}
       statuses={[...new Set(all.map(doc => doc.status))]}
       extraLink={extraLink}

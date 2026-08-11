@@ -57,8 +57,10 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
     ? getMungerArchiveRecordingBySlug(slugParts[1])
     : null
 
-  const sourceLabel = recording?.sourceLabel || doc.source || '查理·芒格公开资料'
-  const sourceUrl = recording?.sourceUrl
+  const rawSource = recording?.sourceLabel || doc.source || '查理·芒格公开资料'
+  const sourceIsUrl = /^https?:\/\//i.test(rawSource)
+  const sourceLabel = sourceIsUrl ? 'Munger Archive 原始资料' : rawSource
+  const sourceUrl = recording?.sourceUrl || (sourceIsUrl ? rawSource : undefined)
   const year = recording?.year || Number(doc.title.match(/(?:19|20)\d{2}/)?.[0]) || undefined
 
   return <ReadingArticleShell
