@@ -56,8 +56,19 @@ const missingTitle = []
 const missingDescription = []
 const missingCanonical = []
 const missingImageAlt = []
+const editorialBoilerplate = []
+const inlineBlackContent = []
+const legacyThemeBoot = []
 const titles = new Map()
 const canonicals = new Map()
+
+const forbiddenEditorialPhrases = [
+  '资料性质',
+  '整理说明',
+  '来源与编辑说明',
+  '持续修订中',
+  '内容仅用于学习与研究，不构成证券推荐',
+]
 
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8')
@@ -73,6 +84,11 @@ for (const file of htmlFiles) {
   if (!description) missingDescription.push(current)
   if (!canonical) missingCanonical.push(current)
   else canonicals.set(canonical, [...(canonicals.get(canonical) || []), current])
+
+  const matchedBoilerplate = forbiddenEditorialPhrases.filter(phrase => html.includes(phrase))
+  if (matchedBoilerplate.length) editorialBoilerplate.push([current, matchedBoilerplate])
+  if (/<(?:main|article|section|div)\b[^>]*(?:style=["'][^"']*(?:background\s*:\s*(?:black|#000)|background-color\s*:\s*(?:black|#000))|bgcolor=["']?(?:black|#000))/i.test(html)) inlineBlackContent.push(current)
+  if (html.includes("localStorage.getItem('theme')")) legacyThemeBoot.push(current)
 
   for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
     const tag = match[0]
@@ -112,6 +128,9 @@ const report = {
   duplicateTitles: duplicateTitles.length,
   canonicalAliasGroups: canonicalAliasGroups.length,
   canonicalConflicts: canonicalConflicts.length,
+  editorialBoilerplate: editorialBoilerplate.length,
+  inlineBlackContent: inlineBlackContent.length,
+  legacyThemeBoot: legacyThemeBoot.length,
 }
 
 console.log(JSON.stringify(report, null, 2))
@@ -121,6 +140,9 @@ if (unexpectedMissingCanonical.length) console.log('\nMissing canonical (first 3
 if (pagesMissingImageAlt.length) console.log('\nMissing image alt (first 30):\n' + pagesMissingImageAlt.slice(0, 30).join('\n'))
 if (duplicateTitles.length) console.log('\nDuplicate titles (first 20):\n' + duplicateTitles.slice(0, 20).map(([value, pages]) => `${value}: ${pages.join(', ')}`).join('\n'))
 if (canonicalConflicts.length) console.log('\nCanonical conflicts (first 20):\n' + canonicalConflicts.slice(0, 20).map(([value, pages]) => `${value}: ${pages.join(', ')}`).join('\n'))
+if (editorialBoilerplate.length) console.log('\nEditorial boilerplate (first 30):\n' + editorialBoilerplate.slice(0, 30).map(([page, phrases]) => `${page}: ${phrases.join(', ')}`).join('\n'))
+if (inlineBlackContent.length) console.log('\nInline black content surfaces (first 30):\n' + inlineBlackContent.slice(0, 30).join('\n'))
+if (legacyThemeBoot.length) console.log('\nLegacy automatic theme boot (first 30):\n' + legacyThemeBoot.slice(0, 30).join('\n'))
 
 if (
   broken.size
@@ -131,4 +153,7 @@ if (
   || pagesMissingImageAlt.length
   || duplicateTitles.length
   || canonicalConflicts.length
+  || editorialBoilerplate.length
+  || inlineBlackContent.length
+  || legacyThemeBoot.length
 ) process.exitCode = 1

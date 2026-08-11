@@ -6,7 +6,6 @@ import StatBadge from '@/components/StatBadge'
 import MarkdownContent from '@/components/MarkdownContent'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
@@ -78,11 +77,6 @@ export default async function CompanyDetailPage({ params }: PageProps) {
         backLabel="返回公司列表"
         sticky
         showFontSize
-      />
-
-      <ContentTrustPanel
-        source="公司资料，由本站收录的股东信与公开资料整理"
-        method="历史数据与引语应结合正文年份和相关股东信核对，不代表对公司当前状况的判断。"
       />
 
       <div className="mb-6">

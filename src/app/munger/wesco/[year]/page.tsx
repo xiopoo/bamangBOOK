@@ -33,9 +33,7 @@ export default function WescoMeetingDetailPage({ params }: PageProps) {
     subtitle={`查理·芒格 · ${meeting.edition}`}
     backHref="/munger/wesco"
     backLabel="返回 Wesco 股东大会目录"
-    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会', sourceLabel, status: '编辑整理', completeness: '未知', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
-    trust={{ source: sourceLabel, method: '依据英文会议笔记和公开资料整理；会议记录版本之间可能存在措辞和分段差异。' }}
-    sourceNote={{ source: sourceLabel, sourceUrl: meeting.meetingSourceUrl, method: '中文问答与会议笔记整理，保留会议年份和上下文。', completeness: '未知' }}
+    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会', sourceLabel, sourceUrl: meeting.meetingSourceUrl, status: '编辑整理', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
     previous={previous ? { href: `/munger/wesco/${previous.year}`, title: previous.title, meta: `${previous.year}年 · ${previous.edition}` } : null}
     next={next ? { href: `/munger/wesco/${next.year}`, title: next.title, meta: `${next.year}年 · ${next.edition}` } : null}
     navigationLabel="按时间从早到晚的相邻 Wesco 股东大会"

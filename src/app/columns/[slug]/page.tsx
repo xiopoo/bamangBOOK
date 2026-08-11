@@ -6,7 +6,6 @@ import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import MarkdownContent from '@/components/MarkdownContent'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
 import { columnParams } from '@/lib/staticParams'
 
 export function generateStaticParams() {
@@ -64,10 +63,6 @@ export default function ColumnDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
-        <ContentTrustPanel
-          source="站主原创投资随笔"
-          method="本文为个人投资思考，仅供交流学习，不构成任何投资建议。"
-        />
         <div className="flex flex-col lg:flex-row gap-8">
           <main className="flex-1 min-w-0">
             <article className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">

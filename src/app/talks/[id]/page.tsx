@@ -38,8 +38,6 @@ export default function TalkDetailPage({ params }: PageProps) {
     backHref="/talks"
     backLabel="返回演讲目录"
     metadata={{ person: personName, year: doc.year || undefined, contentType: '演讲', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
-    trust={{ source: doc.sourceLabel, method: '依据公开演讲资料进行中文阅读整理；涉及关键引语时应回到原始录音、视频或文字记录核对。' }}
-    sourceNote={{ source: doc.sourceLabel, method: '中文阅读整理，保留原始年份与演讲语境。', completeness: doc.completeness }}
     previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
     next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
     navigationLabel="按时间从早到晚的相邻演讲"

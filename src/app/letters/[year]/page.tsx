@@ -7,7 +7,6 @@ import LetterReader from '@/components/LetterReader'
 import ReadingProgress from '@/components/ReadingProgress'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
 import BerkshireSourceLink from '@/components/BerkshireSourceLink'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
@@ -15,7 +14,6 @@ import { letterYearParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
 import { companyIds, conceptIds, resolvePersonRouteId } from '@/lib/entity-resolver'
 import ReadingMetadata from '@/components/ReadingMetadata'
-import SourceNote from '@/components/SourceNote'
 
 export function generateStaticParams() {
   return letterYearParams()
@@ -115,15 +113,11 @@ export default async function LetterDetailPage({ params }: PageProps) {
             </div>
             <FontSizeControlFixed />
           </div>
-          <ReadingMetadata person="巴菲特" year={yearNum} contentType="信件" sourceLabel="伯克希尔·哈撒韦年度股东信" status="译文" reviewedAt="持续修订中" readMinutes={Math.max(8, Math.round((letterData.content?.length || letterData.letters?.reduce((sum, item) => sum + item.content.length, 0) || 0) / 900))} />
+          <ReadingMetadata person="巴菲特" year={yearNum} contentType="信件" sourceLabel="伯克希尔·哈撒韦年度股东信" status="译文" readMinutes={Math.max(8, Math.round((letterData.content?.length || letterData.letters?.reduce((sum, item) => sum + item.content.length, 0) || 0) / 900))} />
         </div>
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-5 md:py-8">
-        <ContentTrustPanel
-          source="伯克希尔·哈撒韦年度股东信中文整理稿"
-          method="本站提供阅读与知识索引；翻译、段落和引语存在整理差异时，应以伯克希尔发布的英文原文为准。"
-        />
         {showKnowledgePanel && (
           <div className="knowledge-panel">
             <h2 className="knowledge-panel__title">知识图谱</h2>
@@ -184,7 +178,6 @@ export default async function LetterDetailPage({ params }: PageProps) {
               isMultiLetter={!!isMultiLetter}
             />
             <BerkshireSourceLink year={yearNum} />
-            <SourceNote source="Berkshire Hathaway annual shareholder letters" method="中文阅读整理，保留年份与原始语境；重要表述请与英文原文核对。" completeness="部分" />
           </main>
           <ArticleTableOfContents />
         </div>

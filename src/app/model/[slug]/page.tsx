@@ -67,6 +67,7 @@ export default function ModelDetailPage({ params }: PageProps) {
             <span>{model.disciplineName || '思维模型'}</span>
             {model.importance >= 5 && <span>核心模型</span>}
             <span>综合资料条目</span>
+            {model.sourceUrl && <a href={model.sourceUrl} target="_blank" rel="noopener noreferrer">原始资料 ↗</a>}
           </div>
         </div>
       </header>
@@ -80,21 +81,6 @@ export default function ModelDetailPage({ params }: PageProps) {
                 <p>{model.scenarios.join(' · ')}</p>
               </div>
             )}
-
-            <details className="model-detail__source">
-              <summary>来源与编辑说明</summary>
-              <div>
-                <p>
-                  {model.content.includes('<!-- munger-archive-merged -->')
-                    ? '本条目由原有模型资料与 Munger Archive 同名内容归并整理，重复内容已合并。'
-                    : `本条目整理自 ${model.source || '原有模型库'}。`}
-                  内容仅供研究参考，不构成投资建议。
-                </p>
-                {model.sourceUrl && (
-                  <a href={model.sourceUrl} target="_blank" rel="noopener noreferrer">查看原始资料 ↗</a>
-                )}
-              </div>
-            </details>
 
             <article className="model-detail__article">
               <MarkdownContent content={model.content} />

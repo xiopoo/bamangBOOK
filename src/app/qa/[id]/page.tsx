@@ -49,8 +49,6 @@ export default function QADetailPage({ params }: PageProps) {
       backHref="/qa"
       backLabel="返回股东大会问答目录"
       metadata={{ person: '沃伦·巴菲特', year: doc.year || undefined, contentType: '股东大会', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
-      trust={{ source: doc.sourceLabel, method: '依据股东大会公开文字记录整理；问答分段与措辞可能因记录版本不同而有差异。' }}
-      sourceNote={{ source: doc.sourceLabel, method: '中文问答整理，保留会议年份与问答上下文。', completeness: doc.completeness }}
       previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
       next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
       navigationLabel="按时间从早到晚的相邻股东大会问答"

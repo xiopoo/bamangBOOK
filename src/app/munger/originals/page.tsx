@@ -1,5 +1,5 @@
-import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
+import ClientRedirect from '@/components/ClientRedirect'
 
 export const metadata: Metadata = {
   title: '芒格原典总入口（已迁移）',
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function MungerOriginalsPage() {
-  redirect('/munger')
+  return <ClientRedirect href="/munger" />
 }

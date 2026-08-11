@@ -92,9 +92,8 @@ export default function RootLayout({
               (function() {
                 try {
                   // ====== 1. 主题先于渲染生效（避免白/黑闪烁）======
-                  var theme = localStorage.getItem('theme');
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (theme === 'dark' || (!theme && prefersDark)) {
+                  var theme = localStorage.getItem('reading-theme-v2');
+                  if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
                   }
 

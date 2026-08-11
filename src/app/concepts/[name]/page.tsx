@@ -7,7 +7,6 @@ import MarkdownContent from '@/components/MarkdownContent'
 import { RecommendationList } from '@/components/RecommendationList'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
-import ContentTrustPanel from '@/components/ContentTrustPanel'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { conceptParams } from '@/lib/staticParams'
@@ -79,11 +78,6 @@ export default function ConceptDetailPage({ params }: PageProps) {
         backLabel="返回概念列表"
         sticky
         showFontSize
-      />
-
-      <ContentTrustPanel
-        source="知识卡片，由股东信、演讲及本站专题资料交叉整理"
-        method="引用年份可进入相关股东信核对；卡片中的归纳表述不等同于原作者原话。"
       />
 
       <div className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 dark:border-primary/30 shadow-sm hover:shadow-md transition-shadow">
