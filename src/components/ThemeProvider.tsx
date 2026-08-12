@@ -31,7 +31,7 @@ export default function ThemeProvider({
   useEffect(() => {
     setMounted(true)
     // 阅读站默认使用纸张浅色；只有用户主动选择后才进入深色模式。
-    const stored = localStorage.getItem('reading-theme-v2') as Theme | null
+    const stored = localStorage.getItem('reading-theme-v3') as Theme | null
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored)
       document.documentElement.classList.toggle('dark', stored === 'dark')
@@ -44,7 +44,7 @@ export default function ThemeProvider({
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
       const next = prev === 'light' ? 'dark' : 'light'
-      localStorage.setItem('reading-theme-v2', next)
+      localStorage.setItem('reading-theme-v3', next)
       document.documentElement.classList.toggle('dark', next === 'dark')
       return next
     })
