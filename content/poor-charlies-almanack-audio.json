@@ -1,0 +1,147 @@
+[
+  {
+    "id": "in-credits",
+    "sectionSlug": "forewords",
+    "titleZh": "制作说明",
+    "title": "In Credits",
+    "sourceUrl": "https://assets.ctfassets.net/fzn2n1nzq965/5ume8nWEohRqTICfJjOJNJ/a6d7c92be1ac1fc8e66e6d71d0d317f9/00.1_Poor-Charlies-Almanack_In-Credits.m4a",
+    "localPath": "/audio/poor-charlies-almanack/00.1-in-credits.m4a"
+  },
+  {
+    "id": "front-matter",
+    "sectionSlug": "forewords",
+    "titleZh": "卷首材料",
+    "title": "Front Matter",
+    "sourceUrl": "https://assets.ctfassets.net/fzn2n1nzq965/15pK2bQ5j4k4r0EEgvsbFi/da1bd5c3413acffb73fe56c58857c4d0/00.2_Poor-Charlies-Almanack_Front-Matter.m4a",
+    "localPath": "/audio/poor-charlies-almanack/00.2-front-matter.m4a"
+  },
+  {
+    "id": "foreword-collison",
+    "sectionSlug": "forewords",
+    "titleZh": "约翰·科利森序言",
+    "title": "Foreword by John Collison",
+    "sourceUrl": "https://assets.ctfassets.net/fzn2n1nzq965/6tYfOwUWkiG2S3Zs0Lqi0m/3a15662c8b81a57767131219b29597ea/00.3_Poor-Charlies-Almanack_Forward-Collison.m4a",
+    "localPath": "/audio/poor-charlies-almanack/00.3-foreword-collison.m4a"
+  },
+  {
+    "id": "foreword-buffett",
+    "sectionSlug": "forewords",
+    "titleZh": "沃伦·巴菲特序言",
+    "title": "Foreword by Warren E. Buffett",
+    "sourceUrl": "https://www.stripe.press/audio/Book/00.4_Poor-Charlies-Almanack_Forward-Buffett.m4a",
+    "localPath": null,
+    "status": "source-missing"
+  },
+  {
+    "id": "chapter-one",
+    "sectionSlug": "chapter-one",
+    "titleZh": "第一章：查理·芒格肖像",
+    "title": "Chapter One",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/7OTxxX44a421K0V7mPn6u/689b17465a90214a6fb3056c3694d7d3/01_Poor-Charlies-Almanack.m4a",
+    "localPath": "/audio/poor-charlies-almanack/01-chapter-one.m4a"
+  },
+  {
+    "id": "chapter-two",
+    "sectionSlug": "chapter-two",
+    "titleZh": "第二章：孩子们记忆中的查理",
+    "title": "Chapter Two",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/4iZVqTW97uyxBLJBn9hCQV/db409be2fe70c6ba3c8fa0ffba9c66e3/02_Poor-Charlies-Almanack.m4a",
+    "localPath": "/audio/poor-charlies-almanack/02-chapter-two.m4a"
+  },
+  {
+    "id": "chapter-three",
+    "sectionSlug": "chapter-three",
+    "titleZh": "第三章：芒格的方法",
+    "title": "Chapter Three",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/43eM6DIFY2QRyD3VxnfRIb/c8573019b14a931566985e91da713ea7/03_Poor-Charlies-Almanack.m4a",
+    "localPath": "/audio/poor-charlies-almanack/03-chapter-three.m4a"
+  },
+  {
+    "id": "talk-one",
+    "sectionSlug": "talk-one",
+    "titleZh": "第一讲：如何保证自己过上痛苦的生活",
+    "title": "Talk One",
+    "sourceUrl": "https://assets.ctfassets.net/fzn2n1nzq965/22zZaszXjWarvSkw1w3UWn/5b44befeb6edafff129317ec9a755c3b/05_Poor-Charlies-Almanack_Talk-1.m4a",
+    "localPath": "/audio/poor-charlies-almanack/05-talk-one.m4a"
+  },
+  {
+    "id": "talk-two",
+    "sectionSlug": "talk-two",
+    "titleZh": "第二讲：论基本的、普世的智慧",
+    "title": "Talk Two",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/592yzdY0FCkMSd9zYKmVMK/6a0c26ff71fdb08acd08707c5f310c3d/06_Poor-Charlies-Almanack_Talk-2.m4a",
+    "localPath": "/audio/poor-charlies-almanack/06-talk-two.m4a"
+  },
+  {
+    "id": "talk-three",
+    "sectionSlug": "talk-three",
+    "titleZh": "第三讲：论基本的、普世的智慧（再论）",
+    "title": "Talk Three",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/2g2MtAD53ldxLKbgWiKpkC/6aa536d8344c02c53289581438ffa57e/07_Poor-Charlies-Almanack_Talk-3.m4a",
+    "localPath": "/audio/poor-charlies-almanack/07-talk-three.m4a"
+  },
+  {
+    "id": "talk-four",
+    "sectionSlug": "talk-four",
+    "titleZh": "第四讲：关于实践思维的现实思考",
+    "title": "Talk Four",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/2UOrzSCfLqoHDES3l0RqfW/637835bad0dfb9b28ee24c274a5c7845/08_Poor-Charlies-Almanack_Talk-4.m4a",
+    "localPath": "/audio/poor-charlies-almanack/08-talk-four.m4a"
+  },
+  {
+    "id": "talk-five",
+    "sectionSlug": "talk-five",
+    "titleZh": "第五讲：跨学科技能的必要性",
+    "title": "Talk Five",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/2xgs7vDyMB5GlUgAwnv1mo/c32987c7b8a12d16174d7368d3d535db/09_Poor-Charlies-Almanack_Talk-5.m4a",
+    "localPath": "/audio/poor-charlies-almanack/09-talk-five.m4a"
+  },
+  {
+    "id": "talk-six",
+    "sectionSlug": "talk-six",
+    "titleZh": "第六讲：大型慈善基金的投资实践",
+    "title": "Talk Six",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/6LIKc3I7BjfobmnxftRh9Q/917618577b88ac16487630f2a544407e/10_Poor-Charlies-Almanack_Talk-6.m4a",
+    "localPath": "/audio/poor-charlies-almanack/10-talk-six.m4a"
+  },
+  {
+    "id": "talk-seven",
+    "sectionSlug": "talk-seven",
+    "titleZh": "第七讲：慈善圆桌会议早餐会讲话",
+    "title": "Talk Seven",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/2TSnxi3xxdLFxMsYG2ZSOH/b86fa1b409b837fdc700a9bdee7d38a7/11_Poor-Charlies-Almanack_Talk-7.m4a",
+    "localPath": "/audio/poor-charlies-almanack/11-talk-seven.m4a"
+  },
+  {
+    "id": "talk-eight",
+    "sectionSlug": "talk-eight",
+    "titleZh": "第八讲：2003年的金融大丑闻",
+    "title": "Talk Eight",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/6U5fVB90ZWuKWaZbgnYzug/ebc004b12ee9e1740fa9124ac136036b/12_Poor-Charlies-Almanack_Talk-8.m4a",
+    "localPath": "/audio/poor-charlies-almanack/12-talk-eight.m4a"
+  },
+  {
+    "id": "talk-nine",
+    "sectionSlug": "talk-nine",
+    "titleZh": "第九讲：学院派经济学的优点与缺点",
+    "title": "Talk Nine",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/3ES1f0zb48QEjcKNfUF2bU/73b8f3db792eaad84f297510daaf853c/13_Poor-Charlies-Almanack_Talk-9.m4a",
+    "localPath": "/audio/poor-charlies-almanack/13-talk-nine.m4a"
+  },
+  {
+    "id": "talk-ten",
+    "sectionSlug": "talk-ten",
+    "titleZh": "第十讲：获得人生智慧",
+    "title": "Talk Ten",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/2a8O7iZQrYAF4fP9i7T7ue/5071cbf68432b9e0bfbd05ababa9d70c/14_Poor-Charlies-Almanack_Talk-10.m4a",
+    "localPath": "/audio/poor-charlies-almanack/14-talk-ten.m4a"
+  },
+  {
+    "id": "talk-eleven",
+    "sectionSlug": "talk-eleven",
+    "titleZh": "第十一讲：人类误判心理学",
+    "title": "Talk Eleven",
+    "sourceUrl": "https://downloads.ctfassets.net/fzn2n1nzq965/4w2FpHbBRd4EhbfZJUdWin/b4b3ab5ff46a2ad947b988790b7f9ec4/15_Poor-Charlies-Almanack_Talk-11.m4a",
+    "localPath": "/audio/poor-charlies-almanack/15-talk-eleven.m4a"
+  }
+]
