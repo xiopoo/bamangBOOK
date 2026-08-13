@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812012101785624550/
 
-## 正文
-
 It’s much easier to stay out of trouble now than to get out of trouble later.
 
   个人理解：改正错误宜早不宜迟，多大的代价都是最小的代价
@@ -63,7 +61,9 @@ People would rather be promised a (presumably) winning lottery ticket next week 
 Warren Buffett
 http://www.quoteswise.com/warren-buffett-quotes-3.html
 
-## 评论区（共 11 条，其中段永平 1 条）
+---
+
+**评论区（共 11 条，其中段永平 1 条）**
 
 ### 1楼 守正不出奇　2012-11-17 20:52
 

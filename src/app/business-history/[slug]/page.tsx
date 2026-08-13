@@ -42,7 +42,7 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
   const index = histories.findIndex(candidate => candidate.slug === slug)
   const previous = index > 0 ? histories[index - 1] : null
   const next = index >= 0 && index < histories.length - 1 ? histories[index + 1] : null
-  const sourceLabel = item.sourcePdf ? `${item.company} 公司研究资料（${item.sourcePdf}）` : '公司公开资料与研究档案'
+  const sourceLabel = item.sourcePdf ? `${item.company} 公司研究资料` : '公司公开资料与研究档案'
 
   return (
     <ReadingArticleShell
@@ -53,7 +53,7 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
       metadata={{ person: item.company, contentType: '公司研究', sourceLabel, status: '编辑整理', completeness: '完整', readMinutes: item.readMinutes }}
       previous={previous ? { href: businessHistoryHref(previous.slug), title: previous.title, meta: previous.company } : null}
       next={next ? { href: businessHistoryHref(next.slug), title: next.title, meta: next.company } : null}
-      navigationLabel="按公司研究目录顺序的相邻内容"
+      navigationLabel="相邻公司研究"
       related={related.length > 0 ? <section className="mt-10 border-t border-[var(--archive-rule)] pt-6"><h2 className="mb-4 font-serif text-lg font-bold">延伸研究</h2><ul className="grid gap-3 sm:grid-cols-2">{related.map(candidate => <li key={candidate.slug}><Link href={businessHistoryHref(candidate.slug)} className="block border border-[var(--archive-rule)] p-3 text-sm hover:text-primary">{candidate.title}</Link></li>)}</ul></section> : null}
     ><MarkdownContent content={item.content} /></ReadingArticleShell>
   )

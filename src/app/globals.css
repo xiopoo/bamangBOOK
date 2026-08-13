@@ -91,7 +91,8 @@
    ============================================================ */
 :root {
   --font-size-base: 16px;
-  --text-size-base: 18px;
+  /* P3-04 修复：--text-size-base 唯一来源在 reading.css（19px，--reading-base-default），
+     此处历史遗留的 18px 定义已删除，避免双源误导维护。 */
   --archive-paper: #f7f2e7;
   --archive-paper-deep: #e9e0cc;
   --archive-paper-tint: #f1eada;
@@ -101,6 +102,10 @@
   --archive-rule: rgba(33, 29, 22, 0.22);
   --archive-rule-soft: rgba(33, 29, 22, 0.12);
   --archive-gold: #9a7a37;
+  /* P3-02 修复：--archive-gold（浅面 3.61:1）只用于装饰（花饰/边框/分隔符/徽章）；
+     编号角标、序号等小号功能性文字改用 --archive-gold-deep（浅面 #87662c 对纸面 4.74:1，
+     暗面 #d9b96b 对暗背景 9.82:1，均达 WCAG AA ≥4.5:1）。 */
+  --archive-gold-deep: #87662c;
   --archive-gild: rgba(154, 122, 55, 0.55);
   --archive-oxblood: #ab1942;
   --archive-oxblood-deep: #861230;
@@ -489,13 +494,25 @@ body {
 }
 
 a {
-  color: #AB1942;
+  color: var(--archive-oxblood);
   text-decoration: none;
   transition: color var(--archive-t-dur) var(--archive-ease);
 }
 
 a:hover {
-  color: #861230;
+  color: var(--archive-oxblood-deep);
+}
+
+/* 暗色模式链接对比度修复（WCAG AA 正文 ≥ 4.5:1）：
+   --archive-oxblood 暗面 = --reading-accent（#D85273，对 #17140F 为 4.70:1）。
+   仅作用于未自带颜色的裸链接与 text-primary 类链接，不影响 .archive-list__row 等
+   自行声明文字色的行级组件，也不影响 bg-primary 按钮。 */
+.dark a:not([class]) {
+  color: var(--reading-accent);
+}
+
+.dark .text-primary {
+  color: var(--reading-accent);
 }
 
 /* 入场动效：克制淡入 + 轻微上移（用于 hero、区块、卡片） */
@@ -523,6 +540,7 @@ h1, h2, h3, h4, h5, h6 {
   --archive-rule: rgba(241, 234, 218, 0.2);
   --archive-rule-soft: rgba(241, 234, 218, 0.11);
   --archive-gold: #b69751;       /* 暗面金：= Tailwind accent.light，保证两套体系一致 */
+  --archive-gold-deep: #d9b96b;  /* 暗面深金：小号功能性金字（编号角标/序号）用，对比度 9.82:1 */
   --archive-gild: rgba(201, 169, 88, 0.45);
   --archive-oxblood: #c64b6b;    /* 暗面红：= Tailwind primary.light，深背景可读性 */
   --archive-oxblood-deep: #a83856;
@@ -545,6 +563,37 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+/* P2-02 修复：知识图谱面板默认折叠（<details>）。折叠态仅显示一行标题，展开后恢复内容区。 */
+.knowledge-panel--collapsible {
+  padding-bottom: 0.9rem;
+}
+.knowledge-panel__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;               /* 隐藏浏览器默认 marker */
+  user-select: none;
+}
+.knowledge-panel__toggle::-webkit-details-marker {
+  display: none;
+}
+.knowledge-panel--collapsible .knowledge-panel__title {
+  margin-bottom: 0;
+}
+.knowledge-panel__caret {
+  color: var(--archive-ink-faint);
+  font-size: 0.85rem;
+  transition: transform 160ms ease;
+}
+.knowledge-panel--collapsible[open] .knowledge-panel__caret {
+  transform: rotate(90deg);
+}
+.knowledge-panel__body {
+  margin-top: 1.25rem;
 }
 .knowledge-panel__label {
   margin-bottom: 0.65rem;
@@ -2099,7 +2148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .study-entrances__grid > a > span {
   font-family: Georgia, serif;
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-size: 0.78rem;
 }
 
@@ -2463,7 +2512,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .edition-standards p span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
 }
 
@@ -2490,7 +2539,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .edition-samples a > span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.72rem;
 }
@@ -2822,7 +2871,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .checkout-block__heading > span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.72rem;
 }
@@ -3044,7 +3093,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .edition-faq summary span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.75rem;
 }
@@ -3493,7 +3542,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: inset 0 3px 0 var(--archive-gold);
 }
 .edition-toc__tab > span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.8rem;
 }
@@ -3567,7 +3616,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .edition-toc__n {
   flex-shrink: 0;
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -3662,7 +3711,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--archive-rule);
 }
 .edition-craft__list span {
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.8rem;
 }
@@ -3756,7 +3805,7 @@ h1, h2, h3, h4, h5, h6 {
 .edition-steps span {
   display: block;
   margin-bottom: 0.55rem;
-  color: var(--archive-gold);
+  color: var(--archive-gold-deep);
   font-family: Georgia, serif;
   font-size: 0.8rem;
 }
@@ -4696,47 +4745,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 2rem;
 }
 
-.model-detail__article .prose {
-  max-width: 45rem;
-  margin: 0;
-  color: var(--archive-ink-soft);
-  font-family: var(--archive-serif);
-  font-size: var(--text-size-base);
-  line-height: 2;
-}
-
-.model-detail__article .prose p {
-  line-height: 2;
-}
-
-.model-detail__article .prose h2 {
-  margin-top: 2.8em;
-  padding: 0 0 0.6rem;
-  color: var(--archive-ink);
-  border-color: var(--archive-rule);
-  font-size: 1.5em;
-}
-
-.model-detail__article .prose > h2:first-child {
-  margin-top: 1.35em;
-}
-
-.model-detail__article .prose h2 > span:first-child,
-.model-detail__article .prose h3 > span:first-child {
-  display: none;
-}
-
-.model-detail__article .prose h3 {
-  color: var(--archive-ink);
-  font-family: var(--archive-serif);
-}
-
-.model-detail__article .prose blockquote {
-  padding: 1.5rem 0 1.5rem 1.5rem;
-  color: var(--archive-ink);
-  background: transparent;
-  border-left-color: var(--archive-gold);
-}
+/* P2-01 修复：删除 model 页 prose 专用覆盖段（max-width 45rem / line-height 2 / margin 0 等），
+   让正文回归 reading.css 的 CN Reading Typography 统一规范（39em 居中、行距 1.82、统一标题装饰）。 */
 
 .article-toc {
   width: 13rem;
@@ -4785,11 +4795,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--archive-oxblood);
 }
 
-/* 阅读页三栏：中间正文始终处于视口中心，目录占右栏，左栏仅作为对称留白。 */
+/* 阅读页三栏：中间正文始终处于视口中心，目录占右栏，左栏仅作为对称留白。
+   P1-02 修复：中列改用 --reading-measure-layout（以正文 19px 基准换算后的 em 值，
+   见 reading.css），避免 39em 按 body 17px 解析导致中列偏窄；侧栏上限 12rem 为正文让位。 */
 .reading-content-layout {
-  --toc-rail: minmax(10rem, 13rem);
+  --toc-rail: minmax(10rem, 12rem);
   display: grid;
-  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure)) var(--toc-rail);
+  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure-layout)) var(--toc-rail);
   justify-content: center;
   align-items: start;
   gap: clamp(1.5rem, 3vw, 3rem);

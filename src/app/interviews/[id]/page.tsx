@@ -6,6 +6,7 @@ import { documentHref } from '@/lib/content-routes'
 import ReadingArticleShell from '@/components/ReadingArticleShell'
 import MarkdownContent from '@/components/MarkdownContent'
 import RelatedArticles from '@/components/RelatedArticles'
+import { personDisplayName } from '@/lib/people'
 
 export function generateStaticParams() { return interviewParams() }
 export const dynamicParams = false
@@ -27,15 +28,15 @@ export default function InterviewDetailPage({ params }: PageProps) {
   const doc = getDocumentByFileName('interviews', fileName)
   if (!doc) notFound()
   const { prev, next } = getAdjacentDocuments('interviews', fileName)
+  const personName = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id)).map(personDisplayName).join('、') || undefined
   return <ReadingArticleShell
     title={doc.title}
-    subtitle="访谈原典中文阅读整理"
     backHref="/interviews"
     backLabel="返回访谈目录"
-    metadata={{ year: doc.year || undefined, contentType: '访谈', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
+    metadata={{ person: personName, year: doc.year || undefined, contentType: '访谈', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
     previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
     next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
-    navigationLabel="按时间从早到晚的相邻访谈"
+    navigationLabel="相邻访谈"
     related={<RelatedArticles source="interviews" fileName={fileName} />}
   ><MarkdownContent content={doc.content} /></ReadingArticleShell>
 }

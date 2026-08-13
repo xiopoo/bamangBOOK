@@ -75,12 +75,12 @@ export default function PeoplePage() {
         <StatBadge icon="👤" count={uniquePeople.length} label="关键人物" />
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {uniquePeople.map((person) => (
           <Link
             key={person.id}
             href={`/people/${encodeURIComponent(person.id)}`}
-            className="bg-white dark:bg-[#16213e] p-5 rounded-lg border border-gray-100 dark:border-[#2a2a4a] hover:border-primary/30 dark:hover:border-primary/50 hover:shadow-sm dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all"
+            className="bg-white dark:bg-dark-card p-4 rounded-card border border-gray-100 dark:border-dark-border hover:border-primary/30 dark:hover:border-primary/40 hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all shadow-card"
           >
             <div className="font-medium text-text dark:text-dark-text mb-2">{person.id}</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">

@@ -1,4 +1,7 @@
-IBM 公司
+---
+title: "IBM（IBM）"
+content_type: "company"
+---
 
 # IBM（IBM）
 

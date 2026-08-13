@@ -173,7 +173,7 @@ export default function LetterReader({
         title={letterTitle}
       />
 
-      <article ref={contentRef} data-toc-content className="min-w-0 max-w-full bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow">
+      <article ref={contentRef} data-toc-content className="min-w-0 max-w-full bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-6 md:p-8 lg:p-10 shadow-sm hover:shadow-md transition-shadow">
         {isMultiLetter ? (
           <div className="space-y-8">
             {letterData.letters!.map((letter: LetterItem, index: number) => (

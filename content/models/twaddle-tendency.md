@@ -177,6 +177,6 @@ sourceUrl: "https://mungermodels.com/models/twaddle-tendency"
 
 他开出的药方既关乎管理,也关乎自身:把真正干活的人与废话连篇者隔离开来,同时约束自己,学会把实质内容与那种听上去信心十足的空洞区分开来——也包括你自己说的话。他推崇简练、信息密度高的表达,对言语里的废话填充毫无耐心。值得培养的本领,是识破一大堆话其实什么也没说,并且拒绝让这种表演来冒充思考、或吃掉那些正在把事情办成的人的时间。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/twaddle/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/twaddle/)。
 
 <!-- munger-archive-merged -->

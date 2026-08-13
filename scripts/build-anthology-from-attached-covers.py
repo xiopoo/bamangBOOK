@@ -17,14 +17,17 @@ pdfmetrics.registerFont(TTFont('CJK', '/System/Library/Fonts/Supplemental/Songti
 def cover_pdf(image_path, out_path, title):
     c = canvas.Canvas(str(out_path), pagesize=A4)
     c.drawImage(ImageReader(str(image_path)), 0, 0, width=A4[0], height=A4[1], preserveAspectRatio=True, anchor='c')
+    # Normalize the author line on the supplied cover.
+    c.setFillColor(HexColor('#F5EEE5')); c.rect(145, 135, 305, 45, fill=1, stroke=0)
+    c.setFillColor(HexColor('#B51648')); c.setFont('CJK', 15); c.drawCentredString(A4[0]/2, 148, '金融街小胖')
     c.save()
 
 def footer_overlay(title, person, years, n, total):
     buf = io.BytesIO(); c = canvas.Canvas(buf, pagesize=A4); W,H=A4
-    c.setFillColor(white); c.rect(0,H-25*72/25.4,W,25*72/25.4,fill=1,stroke=0); c.rect(0,0,W,24*72/25.4,fill=1,stroke=0)
-    c.setFillColor(HexColor('#777777')); c.setFont('CJK',7.5); c.drawString(18*72/25.4,H-12*72/25.4,title)
-    c.setFillColor(HexColor('#AB1942')); c.setFont('Helvetica',7.5); c.drawRightString(W-18*72/25.4,H-12*72/25.4,'THE WARREN BUFFETT READER' if person=='巴菲特' else 'THE CHARLIE MUNGER READER')
-    c.setFillColor(HexColor('#777777')); c.setFont('Helvetica',7.5); c.drawString(18*72/25.4,10*72/25.4,years); c.drawRightString(W-18*72/25.4,10*72/25.4,f'{n} / {total}')
+    c.setFillColor(white); c.rect(0,H-14*72/25.4,W,14*72/25.4,fill=1,stroke=0); c.rect(0,0,W,14*72/25.4,fill=1,stroke=0)
+    c.setFillColor(HexColor('#777777')); c.setFont('CJK',7.5); c.drawString(18*72/25.4,H-8*72/25.4,title)
+    c.setFillColor(HexColor('#AB1942')); c.setFont('Helvetica',7.5); c.drawRightString(W-18*72/25.4,H-8*72/25.4,'THE WARREN BUFFETT READER' if person=='巴菲特' else 'THE CHARLIE MUNGER READER')
+    c.setFillColor(HexColor('#777777')); c.setFont('Helvetica',7.5); c.drawString(18*72/25.4,6*72/25.4,years); c.drawRightString(W-18*72/25.4,6*72/25.4,f'{n} / {total}')
     c.save(); buf.seek(0); return PdfReader(buf).pages[0]
 
 def build(title, person, years, cover_img, copyright_pdf, body_pdf, out_pdf, total):

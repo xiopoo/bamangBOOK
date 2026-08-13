@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812012102582348295/
 
-## 正文
-
 偶尔看到的，转上来给大家参考一下
 
 http://seekingalpha.com/article/1024881-mobile-ads-growing-rapidly-apple-leads-in-monetizing-content?source=feed
@@ -65,7 +63,9 @@ Apple in Q3 accounted for 37% of all mobile ad impressions on its network, with 
 
 Meanwhile, Apple's stock witnessed steep correction before bouncing back from $505, the level that I pointed out in a previous article. The stock is currently trading in deep value zone with an estimated P/E multiple of just 11 for 09/2013. Given the company's earnings will grow by at least 20% annually over the next two years, investors should start accumulating the stock in every decline.
 
-## 评论区（共 17 条，其中段永平 2 条）
+---
+
+**评论区（共 17 条，其中段永平 2 条）**
 
 ### 1楼 ldx188　2012-11-25 12:47
 

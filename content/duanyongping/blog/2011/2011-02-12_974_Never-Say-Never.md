@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812011112315855/
 
-## 正文
-
 今天陪女儿去看了部电影《Never Say Never》。
 
 一个加拿大偏远小镇的小孩Justin Bieber, 从小酷爱音乐，靠youtube和social network让世界发现了自己，现在大概是所有大小女孩的最爱了。
@@ -26,7 +24,9 @@ Internet厉害啊！
 
 也许厉害的还在后面呢。
 
-## 评论区（共 22 条，其中段永平 6 条）
+---
+
+**评论区（共 22 条，其中段永平 6 条）**
 
 ### 1楼 bigfigure　2011-02-12 16:33
 

@@ -1,3 +1,10 @@
+---
+title: "Wesco 股东大会 2003"
+content_type: "qa"
+person: "芒格"
+year: "2003"
+---
+
 # Wesco 股东大会 2003
 
 ## 1. 学术界和投资机构不懂我们，我们走自己的路

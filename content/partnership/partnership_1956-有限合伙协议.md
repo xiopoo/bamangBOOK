@@ -1,3 +1,10 @@
+---
+title: "第一条"
+content_type: "partnership"
+person: "巴菲特"
+year: "1956"
+---
+
 签署人特此证明，自本日起缔结有限合伙关系，内容如下：
 
 ## 第一条

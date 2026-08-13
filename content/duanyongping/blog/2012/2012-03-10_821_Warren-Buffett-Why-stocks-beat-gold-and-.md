@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201221021729696/
 
-## 正文
-
 Warren Buffett: Why stocks beat gold and bonds
 
 February 9, 2012: 5:00 AM ETIn an adaptation from his upcoming shareholder letter, the Oracle of Omaha explains why equities almost always beat the alternatives over time.
@@ -76,7 +74,9 @@ Our country's businesses will continue to efficiently deliver goods and services
 
 Berkshire's goal will be to increase its ownership of first-class businesses. Our first choice will be to own them in their entirety -- but we will also be owners by way of holding sizable amounts of marketable stocks. I believe that over any extended period of time this category of investing will prove to be the runaway winner among the three we've examined. More important, it will be by farthe safest.
 
-## 评论区（共 8 条，其中段永平 0 条）
+---
+
+**评论区（共 8 条，其中段永平 0 条）**
 
 ### 1楼 寒江小笛　2012-03-10 15:12
 

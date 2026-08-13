@@ -94,26 +94,26 @@ export const duanYongpingArchive: ThinkerArchive = {
   years: '2006—至今',
   headline: '做对的事情，把事情做对。',
   introduction:
-    '从步步高、OPPO、vivo 的缔造者，到巴菲特午餐竞拍者、极简而犀利的价值投资者。他的表达散落在网易博客的逐条回复与雪球的万人问答里——不体系、却几乎句句可落到“本分、常识、长期”这三个字上。',
+    '从步步高、OPPO、vivo 的缔造者，到巴菲特午餐竞拍者、价值投资者。他的表达散落在网易博客的逐条回复与雪球问答里，反复围绕“本分、常识、长期”展开。',
   sourceHeading: '博客、问答与公开记录',
   sources: [
     {
       href: '/duanyongping/blog',
       label: '网易博客',
       meta: '2006—2020',
-      description: '597 篇原始博文与完整评论楼，含他本人逐条回复。博客 2018 关停前的第一手记录。',
+      description: '原始博文与完整评论楼，含他本人逐条回复。博客 2018 关停前的第一手记录。',
     },
     {
       href: '/duanyongping/qa',
       label: '雪球问答录',
       meta: '2011—2025',
-      description: '2212 条雪球问答，按年份分卷。他最密集、最直白的判断，几乎都在这。',
+      description: '雪球问答按年份分卷，是他最密集、最直白的公开判断。',
     },
     {
       href: '/duanyongping/talks',
       label: '演讲、采访与文章',
       meta: '1999—2025',
-      description: '万科财富人生、秦朔/网易/波士堂专访、浙大分享、斯坦福交流、方三文与王石对话等。',
+      description: '公开演讲、访谈与经标注的第三方人物文章，含浙大分享与斯坦福交流。',
     },
     {
       href: '/duanyongping/milestones',
@@ -135,12 +135,12 @@ export const duanYongpingArchive: ThinkerArchive = {
   chapters: [
     { period: '1989—1995', title: '小霸王与步步高', description: '从负巨债接手电子厂，到打造小霸王、创立步步高，形成“本分”的企业底色。' },
     { period: '2001—', title: '移居美国与价值投资', description: '拍下巴菲特午餐，公开以价值投资框架思考，投资网易、苹果、茅台等。' },
-    { period: '2006—2020', title: '网易博客时期', description: '最活跃的表达场，597 篇博文与海量评论互动，投资与企业方法论在此成形。' },
-    { period: '2011—2025', title: '雪球问答时期', description: '博客关停后转战雪球，2212 条问答成为晚年最密集、最直白的公开表达。' },
+    { period: '2006—2020', title: '网易博客时期', description: '最活跃的表达场，大量博文与评论互动，投资与企业方法论在此成形。' },
+    { period: '2011—2025', title: '雪球问答时期', description: '博客关停后转战雪球，问答成为晚年最密集、最直白的公开表达。' },
   ],
   cases: [
-    { href: '/duanyongping/blog', label: '网易博客', meta: '597 篇', description: '第一手表达与评论楼，含他本人回复。' },
-    { href: '/duanyongping/qa', label: '雪球问答', meta: '2212 条', description: '按年份分卷，几乎句句可落地。' },
+    { href: '/duanyongping/blog', label: '网易博客', meta: '2006—2020', description: '第一手表达与评论楼，含他本人回复。' },
+    { href: '/duanyongping/qa', label: '雪球问答', meta: '2011—2025', description: '按年份分卷的最密集公开表达。' },
     { href: '/duanyongping/talks', label: '浙大分享', meta: '2008 / 2025', description: '面向学生的两代对话。' },
     { href: '/duanyongping/milestones', label: '步步高体系', meta: '企业文化', description: '本分如何变成组织方法。' },
   ],

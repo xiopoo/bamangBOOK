@@ -182,6 +182,6 @@ FOMO（Fear of Missing Out，错失恐惧）是嫉妒在实时信息环境中的
 
 芒格之所以格外鄙视嫉妒，是因为它是七宗罪中唯一毫无收益可言的一种——暴食好歹吃到了那顿饭，淫欲好歹偷到了那场情，可嫉妒纯粹是受苦，到头来一无所获。他切实可行的告诫很简单，就是拒绝入局：别再拿自己的人生去和别人的相比，并把嫉妒，连同怨恨与自怜，都当作一种该被无情戒除的心智习惯——因为它伤不到目标，却毒害着沉溺其中的人。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/envy-jealousy/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/envy-jealousy/)。
 
 <!-- munger-archive-merged -->

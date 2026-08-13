@@ -103,6 +103,16 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '阅读', href: '/reading' },
     { label: '芒格资料', href: '/munger/archive' },
   ],
+  '/munger/wesco': [
+    { label: '首页', href: '/' },
+    { label: '芒格', href: '/munger' },
+    { label: 'Wesco 股东大会', href: '/munger/wesco' },
+  ],
+  '/poor-charlies-almanack': [
+    { label: '首页', href: '/' },
+    { label: '芒格', href: '/munger' },
+    { label: '穷查理宝典', href: '/poor-charlies-almanack' },
+  ],
   '/books': [
     { label: '首页', href: '/' },
     { label: '研究', href: '/books' },

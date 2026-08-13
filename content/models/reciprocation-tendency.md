@@ -191,6 +191,6 @@ sourceUrl: "https://mungermodels.com/models/reciprocation-tendency"
 
 芒格的建议不是拒绝一切善意——那会让你成为更糟糕的人——而是要识别出某份"礼物"其实是一种推销手法，并在心里把这份恩惠与它意图影响的那个决定剥离开来。西奥迪尼对同一机制做过详尽的记录，芒格对他的研究既推崇又坦言受益。其防御之道在于接受这样一个事实：你可以收下那朵花，或那顿免费午餐，而在真正的问题上仍对赠予者分文不欠。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/reciprocation/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/reciprocation/)。
 
 <!-- munger-archive-merged -->

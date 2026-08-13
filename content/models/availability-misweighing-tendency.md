@@ -161,6 +161,6 @@ sourceUrl: "https://mungermodels.com/models/availability-misweighing-tendency"
 
 芒格的防御手段是程序性的。使用检查清单，迫使那些重要却不鲜明的因素进入分析，而不是因为碰巧没人想到就被遗漏。刻意去寻找那些并不戏剧化、也不摆在你眼前的证据，并追问哪些数据其实重要，哪怕它们难以想象。还要对鲜明之物打折扣：当某件事因为呈现方式而显得无比有说服力时，这种鲜明本身就是重新核对底层数字的理由。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/availability-misweighing/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/availability-misweighing/)。
 
 <!-- munger-archive-merged -->

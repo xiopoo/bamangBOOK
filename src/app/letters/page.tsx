@@ -54,7 +54,6 @@ export default function LettersPage() {
             合伙基金时期（1956-1970）
           </Link>
           的信件另成一册。
-          两类信件已完全分离，本页面仅展示股东信内容。
         </p>
       </div>
 
@@ -66,7 +65,7 @@ export default function LettersPage() {
           )
           if (decadeLetters.length === 0) return null
 
-          return <section key={decade.label} className="archive-catalog-section"><header><h2>{decade.label}</h2><span>{decadeLetters.length} 封</span></header>{decadeLetters.map(letter => <Link key={letter.year} href={`/letters/${letter.year}`} className="archive-catalog-row"><span className="archive-catalog-row__year">{letter.year}</span><span className="archive-catalog-row__title">{letter.year} 年巴菲特致伯克希尔股东的信</span><span className="archive-catalog-row__type">股东信 · 编辑整理</span><span className="archive-catalog-row__read">原典资料</span><span aria-hidden="true">→</span></Link>)}</section>
+          return <section key={decade.label} className="archive-catalog-section"><header><h2>{decade.label}</h2><span>{decadeLetters.length} 封</span></header>{decadeLetters.map(letter => <Link key={letter.year} href={`/letters/${letter.year}`} className="archive-catalog-row" style={{ gridTemplateColumns: '4.5rem minmax(0, 1.6fr) 1fr 1rem' }}><span className="archive-catalog-row__year">{letter.year}</span><span className="archive-catalog-row__title">巴菲特致伯克希尔股东的信</span><span className="archive-catalog-row__type">中文译文</span><span aria-hidden="true">→</span></Link>)}</section>
         })}
       </div>
 

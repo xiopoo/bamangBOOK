@@ -47,7 +47,7 @@ export default function DYList({
       <div className="talks-ledger">
         <div><strong>{docs.length}</strong><span>篇</span></div>
         {!indexOnly && (
-          <div><strong>{totalWords / 10000 > 1 ? (totalWords / 10000).toFixed(1) + '万' : totalWords}</strong><span>正文字数（估）</span></div>
+          <div><strong>{totalWords / 10000 > 1 ? (totalWords / 10000).toFixed(1) + '万' : totalWords}</strong><span>正文字数</span></div>
         )}
         {groupByYearEnabled && docs.length > 0 && (
           <div><strong>{groups.length}</strong><span>个年份</span></div>
@@ -65,7 +65,6 @@ export default function DYList({
                   {g.docs.length}篇
                 </span>
                 <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700" />
-                <span className="text-xs text-text-muted dark:text-dark-muted">展开 / 收起</span>
               </summary>
             )}
             {indexOnly && g.year && yearPath ? (
@@ -76,7 +75,7 @@ export default function DYList({
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <h3 className="text-lg font-semibold text-text dark:text-dark-text">进入 {g.year} 年问答</h3>
-                    <p className="mt-1 text-sm text-text-muted dark:text-dark-muted">按时间顺序阅读本年份的 {g.docs.length} 条问答</p>
+                    <p className="mt-1 text-sm text-text-muted dark:text-dark-muted">共 {g.docs.length} 条问答</p>
                   </div>
                   <span className="text-xl text-primary" aria-hidden="true">→</span>
                 </div>
@@ -102,8 +101,8 @@ export default function DYList({
                       </summary>
                       <div className="border-t border-gray-100 px-4 pb-5 pt-4 dark:border-dark-border">
                         <MarkdownContent content={doc.content} isQA />
-                        <Link href={`${basePath}/${encodeURIComponent(doc.slug)}`} className="mt-4 inline-flex text-xs text-primary hover:underline dark:text-primary-light">
-                          打开独立阅读页 ↗
+                        <Link href={`${basePath}/${encodeURIComponent(doc.slug)}`} className="mt-4 inline-flex items-center gap-1 text-xs text-primary hover:underline dark:text-primary-light">
+                          独立阅读页 ↗
                         </Link>
                       </div>
                     </details>

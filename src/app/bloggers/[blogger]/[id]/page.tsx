@@ -51,7 +51,7 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <ReadingProgress />
+      <ReadingProgress historyTitle={doc.title} />
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
@@ -65,7 +65,7 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
                   {bloggerName}
                 </Link>
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary dark:text-primary-light">{doc.title}</h1>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text dark:text-dark-text tracking-tight">{doc.title}</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
                 {doc.date && <span>{doc.date.slice(0, 10)}</span>}
                 {doc.author && doc.author !== bloggerName && <span>· {doc.author}</span>}
@@ -90,10 +90,10 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
         <div className="reading-content-layout">
           <main className="reading-content-layout__main min-w-0">
-            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
+            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-8 shadow-card rounded-card">
               <MarkdownContent content={doc.content} />
             </article>
 

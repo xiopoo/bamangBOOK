@@ -15,7 +15,7 @@ export default function Page() {
       docs={docs}
       basePath="/duanyongping/milestones"
       title="段永平 · 公司与里程碑"
-      subtitle="步步高 / OPPO / vivo 企业文化与周年讲话：看“本分”如何变成一套可运行的组织方法。"
+      subtitle="步步高 / OPPO / vivo 企业文化与周年讲话的原始记录。"
       metaField="year"
       groupByYearEnabled={false}
     />

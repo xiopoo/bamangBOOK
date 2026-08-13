@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201211465757643/
 
-## 正文
-
 http://www.cnblogs.com/CampFeather/archive/2006/08/11/474119.html
 
 Mama always said:" life is like a box of chocolates. You never know what you're gonna get."
@@ -37,7 +35,9 @@ Mama always said:" life is like a box of chocolates. You never know what you're 
 
 但在爆发般的表演之后，林书豪获得了保障合同。据TMZ报道，林书豪将会在纽约拥有自己独立的住处。过去的五场比赛中，林书豪用出色的表现，让尼克斯取得了赛季最长的五连胜。
 
-## 评论区（共 22 条，其中段永平 5 条）
+---
+
+**评论区（共 22 条，其中段永平 5 条）**
 
 ### 1楼 草自春　2012-02-14 08:11
 

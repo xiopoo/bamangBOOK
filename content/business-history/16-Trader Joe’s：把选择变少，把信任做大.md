@@ -1,3 +1,8 @@
+---
+title: "Trader Joe’s：把选择变少，把信任做大"
+content_type: "article"
+---
+
 # Trader Joe’s：把选择变少，把信任做大
 
 ## 一、研究导读与核心结论

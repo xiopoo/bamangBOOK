@@ -4,6 +4,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import MarkdownContent from '@/components/MarkdownContent'
+import ReadingProgress from '@/components/ReadingProgress'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
@@ -65,6 +66,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
 
   return (
     <PageContainer maxWidth="5xl">
+      <ReadingProgress historyTitle={title} />
       <JsonLd data={breadcrumbJsonLd([
         { name: '首页', href: '/' },
         { name: '公司研究索引', href: '/companies' },

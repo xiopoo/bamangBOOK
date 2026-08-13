@@ -264,6 +264,6 @@ LTCM的故事就是最好的例子。他们在能力圈内部（统计套利）�
 
 在伯克希尔的实践中，这意味着一个"太难"的篮子——整类整类的投资，他们干脆拒绝去评估，因为这些投资落在合伙人无法可靠判断的范围之外，不论它们看上去多么诱人。这并不是说永远不要拓展能力圈；好奇心与钻研可以让它随时间扩大。重点是要对今天的边界保持冷酷的清醒，只在圈内、在你的判断真正有分量的地方下重注。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/circle-of-competence/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/circle-of-competence/)。
 
 <!-- munger-archive-merged -->

@@ -242,6 +242,12 @@ export default function MarkdownContent({
           }
         }
 
+        // 阅读优先重构：正文中的「编者按/来源说明」整段降噪——
+        // 加 prose-editorial-note 类（小字、弱色、侧边细线），退居正文之后，不打断阅读节奏。
+        if (!isQA && /^(编者按|【编者按】|\(编者按|（编者按)/.test(text.trim())) {
+          return <p className="prose-editorial-note">{children}</p>
+        }
+
         return <p>{children}</p>
       },
       ul: ({ children }: any) => <ul>{children}</ul>,

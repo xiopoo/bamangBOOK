@@ -23,8 +23,12 @@
 
   /* —— 行长与间距 —— */
   --reading-measure:       39em;       /* 中文 39±3 字 / 行（约 68–70ch 拉丁字符） */
+  /* 布局中列宽度：--reading-measure 的 em 按正文 19px 解析（.prose 内），而
+     .reading-content-layout 网格元素继承 body 17px，需换算为 39em × 19/17 ≈ 43.59em @17px
+     = 741px @19px，保证网格中列恰好容纳 39em 正文。 */
+  --reading-measure-layout: calc(var(--reading-measure) * 19 / 17);
   --reading-leading:       1.82;       /* 正文保持舒适，但避免段落彼此漂浮 */
-  --reading-paragraph-gap: 1.15em;     /* 正文段距收紧，靠标题与分隔建立节奏 */
+  --reading-paragraph-gap: 1.25em;     /* P3-05 复核：段落辨识以 2em 首行缩进为主，段距由 1.15em 微调至 1.25em，长文段间呼吸更足而不失克制 */
   --reading-heading-gap-factor: 1.5;   /* 标题上边距 = 字号 × 该系数 */
 
   /* —— 列表与表格 —— */
@@ -36,8 +40,10 @@
   --reading-text:          #e7decf;
   --reading-text-muted:    #b8ad99;
   --reading-heading:       #f7f1e5;
-  --reading-accent:        #d85273;   /* 夜间提亮赭红，对比度仍 ≥ 6.5:1 */
-  --reading-accent-soft:   rgba(216, 82, 115, 0.18);
+  /* P3-01 修复：暗面赭红由 #d85273（4.70:1）提亮至 #e06a8c，对 #17140F 背景对比度 ≥5.5:1，
+     为正文链接与全局暗色链接留出 AAA 冗余，避免逼近 AA 下限。 */
+  --reading-accent:        #e06a8c;
+  --reading-accent-soft:   rgba(224, 106, 140, 0.18);
   --reading-card:          #251f17;
 }
 
@@ -92,10 +98,24 @@
   text-indent: 0;
 }
 
+/* 阅读优先重构：正文中的「编者按/来源说明」整段降噪——小字、弱色、侧边细线，
+   与正文段落明显区分，读者可自然略过而不打断原文阅读节奏。 */
+.prose p.prose-editorial-note {
+  margin-top: 1.6em;
+  margin-bottom: 1.8em;
+  padding: 0.85em 1.1em;
+  font-size: 0.88em;
+  line-height: 1.7;
+  color: var(--reading-text-muted);
+  text-indent: 0;
+  background: color-mix(in srgb, var(--reading-text) 4%, transparent);
+  border-left: 2px solid color-mix(in srgb, var(--reading-accent) 30%, transparent);
+}
+
 /* 首段放大成"引子"（像书籍第一章首段） */
 .prose > p:first-of-type {
   font-size: 1.05em;
-  line-height: 1.82;
+  line-height: var(--reading-leading);
   color: var(--reading-heading);
   text-indent: 2em;            /* 引子也缩进，保留中文阅读传统一致性 */
 }
@@ -176,7 +196,7 @@
   color: var(--reading-text-muted);
 }
 
-.dark .prose h2 { border-bottom-color: rgba(216, 82, 115, 0.3); }
+.dark .prose h2 { border-bottom-color: rgba(224, 106, 140, 0.3); }
 
 /* =========================================================
    4. 加粗 / 斜体 / 行内强调 —— 不过度抢眼但清晰
@@ -353,7 +373,7 @@
 .dark .prose table,
 .dark .prose th,
 .dark .prose td {
-  border-color: rgba(216, 82, 115, 0.22);
+  border-color: rgba(224, 106, 140, 0.22);
 }
 /* 斑马纹（隔行淡色）提升长表可读性 */
 .prose tbody tr:nth-child(even) {
@@ -700,6 +720,15 @@
   box-shadow: 0 0 0 2px var(--reading-accent-soft);
 }
 
+/* P2-03 修复：目录小节标题超容量上限时的截断提示 */
+.article-toc__truncated {
+  margin: 0.8rem 0.2rem 0;
+  padding-top: 0.7rem;
+  border-top: 1px dashed color-mix(in srgb, var(--reading-accent) 18%, transparent);
+  font-size: 0.78em;
+  color: var(--reading-text-muted);
+}
+
 /* 移动端：默认折叠抽屉 */
 @media (max-width: 1179px) {
   .article-toc__toggle {
@@ -783,9 +812,15 @@
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
+/* P3-03 修复：滚动停止后降为半透明，减少 52×52 圆钮对正文右下角的持续遮挡；
+   hover / 点击时恢复完全不透明。 */
+.back-to-top.is-visible:not(.is-scrolling) {
+  opacity: 0.38;
+}
 .back-to-top:hover {
   background: var(--reading-accent);
   color: #fff;
+  opacity: 1;
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(171, 25, 66, 0.25);
 }
@@ -796,10 +831,11 @@
    然后用 .no-fouc-body 在 hydration 之前先生效，避免首屏 16→19px 抖动。
    ========================================================= */
 html.reading-no-fouc .prose,
-html.reading-no-fouc .prose p,
 html.reading-no-fouc .prose-gray,
 html.reading-no-fouc .prose-lg {
-  /* 在 layout 的 <script> 里先写入 --text-size-base，这里只是兜底 19px */
+  /* 在 layout 的 <script> 里先写入 --text-size-base，这里只是兜底 19px。
+     P3-05 修复：不再单独覆盖 .prose p —— 容器字号已可让 p 继承 19px，
+     且避免 (0,2,2) 特异性压过 .prose > p:first-of-type 的 1.05em 引子放大。 */
   font-size: var(--text-size-base, 19px);
 }
 

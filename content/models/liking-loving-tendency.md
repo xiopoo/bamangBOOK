@@ -197,6 +197,6 @@ sourceUrl: "https://mungermodels.com/models/liking-loving-tendency"
 
 这并不是在反对情感——芒格认为，敬仰恰当的人是人生最美好的事情之一，也是学习的强大动力。危险在于让它在不加省察的情况下肆意发挥。防御之道是：留意自己是否喜欢消息的来源，并自问：如果这话出自一个你觉得讨厌的人之口，你是否依然会相信它。如果答案是否定的，那就是你的情感在替你思考。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/liking-loving/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/liking-loving/)。
 
 <!-- munger-archive-merged -->

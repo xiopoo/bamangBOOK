@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import MarkdownContent from '@/components/MarkdownContent'
+import ReadingProgress from '@/components/ReadingProgress'
+import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import { resolveEntityLink, resolvePersonContentFile } from '@/lib/entity-resolver'
 import { personParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -104,7 +106,10 @@ export default function PersonDetailPage({ params }: PageProps) {
     }
   }
 
-  const info = personInfo[personName] || { title: personName, description: '关键人物' }
+  const info = personInfo[personName] || {
+    title: personName,
+    description: '该人物在巴菲特、芒格与段永平的原典资料中被提及，详细档案整理中。',
+  }
 
   const personPath = resolvePersonContentFile(personName)
   let content = ''
@@ -116,6 +121,7 @@ export default function PersonDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg px-4 md:px-8 lg:px-12 py-8 md:py-12">
+      <ReadingProgress historyTitle={info.title} />
       <JsonLd data={breadcrumbJsonLd([
         { name: '首页', href: '/' },
         { name: '人物索引', href: '/people' },
@@ -128,10 +134,16 @@ export default function PersonDetailPage({ params }: PageProps) {
         >
           ← 返回人物列表
         </Link>
-        <h1 className="text-2xl md:text-4xl font-bold text-[#2c2c2c] dark:text-[#e0e0e0] mb-2">
-          {info.title}
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">{info.description}</p>
+        {/* P2-04 修复：people 详情页补上正文字号调整控件，与其余阅读模板（letters/qa/concepts 等）一致 */}
+        <div className="flex items-start justify-between gap-4 flex-wrap">
+          <div className="min-w-0 flex-1">
+            <h1 className="text-2xl md:text-4xl font-bold text-[#2c2c2c] dark:text-[#e0e0e0] mb-2">
+              {info.title}
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">{info.description}</p>
+          </div>
+          <FontSizeControlFixed />
+        </div>
       </div>
 
       <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 shadow-sm hover:shadow-md transition-shadow">

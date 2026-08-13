@@ -8,6 +8,7 @@ import {
   getMungerLocalArchiveStats,
   getMungerArchiveRecordings,
 } from '@/lib/munger-archive'
+import { getModelStats } from '@/lib/models'
 
 export const metadata: Metadata = {
   title: '芒格资料',
@@ -35,13 +36,13 @@ export default function MungerArchivePage() {
         <div><strong>{readableTotal}</strong><span>篇可读内容</span></div>
         <div><strong>{stats.recordings}</strong><span>篇演讲与访谈</span></div>
         <div><strong>{stats.quotes}</strong><span>组主题语录</span></div>
-        <div><strong>232</strong><span>个思维模型</span></div>
+        <div><strong>{getModelStats().total}</strong><span>个思维模型</span></div>
       </div>
 
       <section className="archive-catalog__intro">
         <p>WATCH · LISTEN · READ</p>
         <h2>先看见他说话的语境，<br />再进入文字。</h2>
-        <span>仿照 Munger Archive 的影音档案方式：先浏览、筛选和播放，再沿着中文整理稿继续阅读。首批接入公开来源播放器，之后可直接替换为复利书房的 B 站视频。</span>
+        <span>仿照 Munger Archive 的影音档案方式：先浏览、筛选和播放，再沿着中文整理稿继续阅读。</span>
       </section>
 
       <MungerRecordingBrowser recordings={recordings} />

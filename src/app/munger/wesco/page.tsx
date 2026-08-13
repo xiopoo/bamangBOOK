@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   alternates: { canonical: '/munger/wesco' },
   openGraph: {
     title: 'Wesco 股东大会',
-    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
+    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1987—2011。',
     images: [{ url: '/og-wesco.jpg', width: 1200, height: 630, alt: 'Wesco 股东大会：查理·芒格中文问答' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Wesco 股东大会',
-    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
+    description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1987—2011。',
     images: ['/og-wesco.jpg'],
   },
 }
@@ -40,18 +40,10 @@ export default function WescoMeetingsPage() {
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-        <StatBadge icon="问" count={`${meetings.length}场`} label="中文可读" sub="Wesco 股东大会" />
-        <StatBadge icon="中" count={`${transcriptCount}篇`} label="中文实录" sub="现有完整资料" />
-        <StatBadge icon="编" count={`${editorialCount}篇`} label="中文整理" sub="英文会议笔记" />
+        <StatBadge icon="问" count={`${meetings.length}场`} label="中文可读" sub={`${firstYear}-${lastYear}`} />
+        <StatBadge icon="中" count={`${transcriptCount}篇`} label="中文实录" sub="完整逐字稿" />
+        <StatBadge icon="编" count={`${editorialCount}篇`} label="中文整理" sub="会议笔记整理" />
         <StatBadge icon="年" count={`${firstYear}-${lastYear}`} label="时间范围" sub="按年份归档" />
-      </div>
-
-      <div className="mb-8 border-y border-gray-200 dark:border-gray-700 py-4 text-sm text-text-muted dark:text-dark-muted leading-7">
-        <p>
-          Wesco 公司 1997-2009 年年度股东大会资料。
-          <span className="font-medium text-text dark:text-dark-text">&ldquo;中文实录&rdquo;</span> 为现有完整逐字稿，
-          <span className="font-medium text-text dark:text-dark-text">&ldquo;中文整理&rdquo;</span> 为根据公开会议笔记整理的版本，两者已在每一条目中分别标注。
-        </p>
       </div>
 
       <section>

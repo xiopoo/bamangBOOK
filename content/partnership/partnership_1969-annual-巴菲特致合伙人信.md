@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1969 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1969"
+---
+
 ## 1969 年 5 月 29 日
 
 致合伙人：

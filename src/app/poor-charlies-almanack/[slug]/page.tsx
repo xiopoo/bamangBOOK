@@ -65,7 +65,7 @@ export default function AlmanackSectionPage({ params }: PageProps) {
           }))}
         />
       )}
-      <ReadingProgress />
+      <ReadingProgress historyTitle={section.title} />
 
       <header className="border-b border-primary/10 bg-bg-card dark:bg-dark-card">
         <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
@@ -132,7 +132,7 @@ export default function AlmanackSectionPage({ params }: PageProps) {
               </div>
             )}
 
-            <article data-toc-content className="rounded-card bg-bg-card p-5 shadow-card dark:bg-dark-card sm:p-7 md:p-10">
+            <article data-toc-content className="rounded-card bg-bg-card p-5 shadow-card dark:bg-dark-card sm:p-7 md:p-8">
               <MarkdownContent content={section.content} />
             </article>
 

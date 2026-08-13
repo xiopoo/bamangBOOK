@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1961 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1961"
+---
+
 巴菲特合伙公司（BUFFETT PARTNERSHIP, LTD.）
 
 810 基威特广场

@@ -1,3 +1,10 @@
+---
+title: "如何购买和保管免税债券"
+content_type: "partnership"
+person: "巴菲特"
+year: "1970"
+---
+
 1970 年 2 月 25 日
 
 致各位合伙人：

@@ -1,3 +1,10 @@
+---
+title: "Wesco 股东大会 2009"
+content_type: "qa"
+person: "芒格"
+year: "2009"
+---
+
 ## Wesco 股东大会 2009
 
 2009 年 5 月 6 日

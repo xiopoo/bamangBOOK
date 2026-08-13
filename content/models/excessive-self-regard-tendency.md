@@ -203,6 +203,6 @@ sourceUrl: "https://mungermodels.com/models/excessive-self-regard-tendency"
 
 积极的另一面在于，你可以驾驭这种倾向：人们对自己所认同的事物会怀有更多的自豪，行事也更负责，因此那些能让人感到「这是我的」的文化与品牌，会赢得真正的忠诚。但就清晰的思考而言，法则是：假定你正在高估自己，建立起客观的核查机制，并让一份扎实的业绩记录压过一个自信的印象——包括你自己的印象在内。芒格还为此配上了一份得来不易的谦逊：他说，赢得好名声的办法，是努力去成为你想要显得的那种人，因为自我吹捧默认是朝着相反方向运作的。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/excessive-self-regard/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/excessive-self-regard/)。
 
 <!-- munger-archive-merged -->

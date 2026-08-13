@@ -42,7 +42,7 @@ export default function ColumnDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <ReadingProgress />
+      <ReadingProgress historyTitle={column.title} />
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
@@ -50,7 +50,7 @@ export default function ColumnDetailPage({ params }: PageProps) {
               <Link href="/columns" className="text-sm text-primary hover:text-primary-light transition-colors mb-1 inline-flex items-center gap-1">
                 ← 返回专栏列表
               </Link>
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary dark:text-primary-light">{column.title}</h1>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text dark:text-dark-text tracking-tight">{column.title}</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
                 <span>✍️ {column.series}</span>
                 {column.date && <span>· {column.date}</span>}
@@ -62,10 +62,10 @@ export default function ColumnDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
         <div className="reading-content-layout">
           <main className="reading-content-layout__main min-w-0">
-            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
+            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-8 shadow-card rounded-card">
               <MarkdownContent content={column.content} />
 
               {column.tags.length > 0 && (

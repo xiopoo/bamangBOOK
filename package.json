@@ -12,6 +12,8 @@
     "index-bloggers": "node scripts/generate-bloggers-index.js",
     "index-bloggers:incr": "node scripts/generate-bloggers-index.js --incremental",
     "audit:editorial": "node scripts/audit-editorial-books.mjs",
+    "inventory:dual-volume": "node scripts/inventory-dual-volume.mjs",
+    "audit:dual-volume-final": "node scripts/finalize-dual-volume-audit.mjs",
     "derive:editorial": "node scripts/derive-editorial-books.mjs",
     "build:munger-continuous": "node scripts/build-munger-continuous.mjs",
     "audit:munger-continuous": "node scripts/audit-munger-continuous.mjs",

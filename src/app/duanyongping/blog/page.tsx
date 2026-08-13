@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '段永平 · 网易博客',
-  description: '段永平网易博客 597 篇（2006—2020），含完整评论楼与本人逐条回复。',
+  description: '段永平网易博客（2006—2020），含完整评论楼与本人逐条回复。',
   alternates: { canonical: '/duanyongping/blog' },
 }
 
@@ -15,7 +15,7 @@ export default function Page() {
       docs={docs}
       basePath="/duanyongping/blog"
       title="段永平 · 网易博客"
-      subtitle="2006—2020 年原始博文与完整评论楼（含段永平本人逐条回复）。每篇保留网易原文链接可回溯核对。"
+      subtitle="2006—2020 年原始博文与完整评论楼（含段永平本人逐条回复）。"
       metaField="platform"
     />
   )

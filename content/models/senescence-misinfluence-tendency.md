@@ -162,6 +162,6 @@ sourceUrl: "https://mungermodels.com/models/senescence-misinfluence-tendency"
 
 他的实践结论是：要刻意地、不间断地坚持学习、坚持思考，以此作为对抗年龄否则带来的衰退的最佳防御。那种让人在中年变得更睿智的持续、跨学科的投入，正是让这台机器在晚年也能运转得更久的东西。这归根结底还是那个"学习机器"的理想——而芒格自己漫长而高产的一生，就是用来佐证这一策略行之有效的证据。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/senescence-misinfluence/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/senescence-misinfluence/)。
 
 <!-- munger-archive-merged -->

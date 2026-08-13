@@ -1,3 +1,8 @@
+---
+title: "Alphabet：搜索入口如何长成AI基础设施"
+content_type: "article"
+---
+
 # Alphabet：搜索入口如何长成AI基础设施
 
 ## 一、研究导读与核心结论

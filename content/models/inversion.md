@@ -221,6 +221,6 @@ sourceUrl: "https://mungermodels.com/models/inversion"
 
 芒格最重要的一场演讲——他凭自学梳理了约25种让人陷入可预测的非理性的心理倾向，以及这些倾向如何叠加成一场"lollapalooza"（多重因素共振）。这是1995年的口头原版；他于2005年为《穷查理宝典》重写并扩充了这篇内容。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/inversion/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/inversion/)。
 
 <!-- munger-archive-merged -->

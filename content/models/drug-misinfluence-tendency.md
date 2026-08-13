@@ -167,6 +167,6 @@ sourceUrl: "https://mungermodels.com/models/drug-misinfluence-tendency"
 
 芒格的告诫与此相称，既直白又出于切身体会：远离任何可能让人上瘾的行为，对这种风险要怀着敬畏而非逞强。他亲眼看着物质滥用毁掉了他认识的一些才华横溢的人，他的法则很简单——别踏上一条结局如此可靠地糟糕的路。在他论及的诸多倾向中，这是为数不多他的建议纯粹是「回避」、丝毫不去巧妙利用其好处的一种，因为它根本就没有什么好处可言。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/drug-misinfluence/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/drug-misinfluence/)。
 
 <!-- munger-archive-merged -->

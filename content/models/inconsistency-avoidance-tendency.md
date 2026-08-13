@@ -208,6 +208,6 @@ sourceUrl: "https://mungermodels.com/models/inconsistency-avoidance-tendency"
 
 这里那剂著名的解药,是芒格借自达尔文的法则:主动去寻找那些能推翻你自己珍爱信念的证据,并对它格外留意。他引以为傲的是:在能把对方观点论证得比其最强的拥护者还要出色之前,自己无权持有一种意见。这违逆本性、需要下苦功,而这恰恰是它价值所在——它是一种刻意为之的反制手段,用来对付一种不然就会把你锁死在最初、最糟想法里的倾向。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/inconsistency-avoidance/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/inconsistency-avoidance/)。
 
 <!-- munger-archive-merged -->

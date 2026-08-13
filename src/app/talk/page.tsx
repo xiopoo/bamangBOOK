@@ -15,7 +15,7 @@ interface Message {
 
 const suggestions = [
   { question: '什么是能力圈？', category: '投资概念' },
-  { question: '你为什么买可口可乐？', category: '投资案例' },
+  { question: '哪些资料提到可口可乐？', category: '公司案例' },
   { question: '市场先生是什么意思？', category: '投资概念' },
   { question: '如何看待科技股？', category: '投资观点' },
   { question: '什么是护城河？', category: '投资概念' },
@@ -46,10 +46,8 @@ export default function TalkPage() {
       const assistantMessage: Message = {
         role: 'assistant',
         content:
-          `（巴芒知识助手 · 静态检索模式）\n\n` +
           `根据站内资料，与「${q}」最相关的内容如下：\n\n` +
-          (context || '未找到相关资料，建议调整关键词或在左侧导航浏览原著。') +
-          `\n\n> 说明：当前回答基于本站静态索引整理，不连接外部模型。`,
+          (context || '未找到相关资料，建议调整关键词或浏览原典目录。'),
         sources,
         searchUrl: `/search?q=${encodeURIComponent(q)}`,
       }

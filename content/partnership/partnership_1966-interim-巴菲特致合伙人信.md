@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1966 中报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1966"
+---
+
 1966 年 7 月 12 日
 
 ## 上半年业绩

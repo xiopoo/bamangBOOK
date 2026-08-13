@@ -1,4 +1,7 @@
-BNSF 公司
+---
+title: "BNSF铁路（BNSF）"
+content_type: "company"
+---
 
 # BNSF铁路（BNSF）
 

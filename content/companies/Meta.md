@@ -1,3 +1,8 @@
+---
+title: "Meta (Meta Platforms, Inc.)"
+content_type: "company"
+---
+
 # Meta (Meta Platforms, Inc.)
 
 ## 公司简介

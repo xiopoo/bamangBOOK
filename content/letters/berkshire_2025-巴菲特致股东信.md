@@ -1,3 +1,10 @@
+---
+title: "致各位股东"
+content_type: "letter"
+person: "巴菲特"
+year: "2025"
+---
+
 **伯克希尔·哈撒韦公司（BERKSHIRE HATHAWAY INC.）**
 
 **新闻稿 · 即时发布**

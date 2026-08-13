@@ -233,6 +233,6 @@ sourceUrl: "https://mungermodels.com/models/latticework-of-mental-models"
 
 正是在这场演讲中，芒格首次阐述了"思维模型的栅格"——这个理念是说，你必须把每一门主要学科的重大思想挂在一个思维框架上，否则你拥有的只是一堆零散、无法使用的事实。这次演讲于1994年面向南加州大学马歇尔商学院的一个班级发表，是他此后关于思考所教一切的哲学基石，并以一段坦率剖白他实际如何挑选股票的内容收尾。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/latticework-of-mental-models/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/latticework-of-mental-models/)。
 
 <!-- munger-archive-merged -->

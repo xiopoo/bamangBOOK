@@ -1,3 +1,8 @@
+---
+title: "Indian Premier League：把板球变成稀缺直播资产"
+content_type: "article"
+---
+
 # Indian Premier League：把板球变成稀缺直播资产
 
 ## 一、研究导读与核心结论

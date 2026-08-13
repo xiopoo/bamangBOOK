@@ -1,3 +1,10 @@
+---
+title: "巴菲特致股东的信 1991"
+content_type: "letter"
+person: "巴菲特"
+year: "1991"
+---
+
 伯克希尔·哈撒韦公司 (BERKSHIRE HATHAWAY INC.)
 
 致伯克希尔·哈撒韦公司所有股东：

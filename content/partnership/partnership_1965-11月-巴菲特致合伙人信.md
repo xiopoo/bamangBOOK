@@ -1,3 +1,10 @@
+---
+title: "补充内容"
+content_type: "partnership"
+person: "巴菲特"
+year: "1965"
+---
+
 1965 年 11 月 1 日
 
 致 1966 年的各位合伙人：

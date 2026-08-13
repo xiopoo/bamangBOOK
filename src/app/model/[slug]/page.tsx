@@ -44,7 +44,7 @@ export default function ModelDetailPage({ params }: PageProps) {
 
   return (
     <div className="archive-page model-detail-page min-h-screen">
-      <ReadingProgress />
+      <ReadingProgress historyTitle={model.title} />
       <header className="model-detail__hero">
         <div className="model-detail__hero-inner">
           <div className="model-detail__breadcrumb">

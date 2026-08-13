@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201541974041722/
 
-## 正文
-
 http://tech.qq.com/a/20150518/017091.htm
 库克毕业典礼演讲：乔布斯让我学会质疑一切(我觉得标题也许应该是找到你自己的北斗星，或者是做对的事情）
 
@@ -128,7 +126,9 @@ Don’t shrink from risk. And tune out those cynics and critics. History rarely 
 
 That can be you. That should be you. That must be you.
 
-## 评论区（共 52 条，其中段永平 13 条）
+---
+
+**评论区（共 52 条，其中段永平 13 条）**
 
 ### 1楼 段永平　2015-05-19 09:28
 

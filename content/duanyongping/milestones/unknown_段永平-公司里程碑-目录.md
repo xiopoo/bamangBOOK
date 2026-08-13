@@ -1,10 +1,10 @@
 ---
 title: "段永平 · 公司里程碑 · 目录"
 year: "unknown"
-source: "步步高/OPPO/vivo 企业文化与周年讲话（@杨不为整理）"
+source: "步步高/OPPO/vivo 企业文化与周年讲话"
 category: "milestones"
 ---
-共 8 篇。来源：@杨不为 整理（github.com/DayDreammy/duan），视频类为 AI 转录稿，未逐字人工校对，引用请核对原视频。
+共 8 篇。视频类为 AI 转录稿，未逐字人工校对，引用请核对原视频。
 
 | # | 标题 | 原始出处 | 文件 |
 |---|------|----------|------|

@@ -46,7 +46,7 @@ export default function PartnershipPage() {
           icon="📝"
           count={`${totalCount}封`}
           label="合伙人信"
-          sub="完整收录"
+          sub={`${firstYear}-${lastYear}`}
         />
         <StatBadge
           icon="📅"
@@ -67,14 +67,13 @@ export default function PartnershipPage() {
       <div className="archive-card mb-8">
         <p className="text-sm text-text-muted dark:text-dark-muted leading-relaxed">
           <span className="font-medium text-primary dark:text-primary-light">合伙基金时期</span>
-          （1956-1970）是巴菲特投资生涯的起点。26岁的巴菲特带着家人和朋友的支持回到奥马哈创立合伙基金，
-          这14年间的致合伙人信奠定了他日后全部投资哲学的基础——
+          （1956-1970）是巴菲特投资生涯的起点。26岁的巴菲特回到奥马哈创立合伙基金，
+          这14年间的致合伙人信记录了他早期的套利、控制型投资与业绩衡量方法，
           <span className="text-text dark:text-dark-text">「市场先生」「能力圈」「安全边际」</span>
-          等核心思想，都最早在这里成形。
+          等概念也最早出现在这批信件里。
         </p>
         <p className="mt-2 text-xs text-text-light dark:text-dark-muted">
-          巴菲特写信多集中在<strong className="font-medium text-primary dark:text-primary-light">年中</strong>与<strong className="font-medium text-primary dark:text-primary-light">年末</strong>，
-          下方按时间顺序列出每一封信，方便连续阅读。
+          巴菲特写信多集中在<strong className="font-medium text-primary dark:text-primary-light">年中</strong>与<strong className="font-medium text-primary dark:text-primary-light">年末</strong>。
         </p>
       </div>
 

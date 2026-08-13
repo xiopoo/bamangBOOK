@@ -52,7 +52,7 @@ export default function Page({ params }: PageProps) {
       docs={result.docs}
       basePath="/duanyongping/qa"
       title={`${year === '未知' ? '未标注年份' : `${year} 年`} · 段永平雪球问答`}
-      subtitle={`共 ${result.total} 条问答，每页 ${DY_QA_PAGE_SIZE} 条 · 第 ${result.page}/${result.totalPages} 页`}
+      subtitle={`共 ${result.total} 条问答，每页 ${DY_QA_PAGE_SIZE} 条`}
       metaField="year"
       groupByYearEnabled={false}
       inlineContent

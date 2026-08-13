@@ -16,11 +16,11 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981200741115012608/
 
-## 正文
-
 Mr. W. Buffett is a very nice guy. I learned much more than what I expected.
 
-## 评论区（共 7 条，其中段永平 0 条）
+---
+
+**评论区（共 7 条，其中段永平 0 条）**
 
 ### 1楼 回复　2009-08-24 13:03
 
