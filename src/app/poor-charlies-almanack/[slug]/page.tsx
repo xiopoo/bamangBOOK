@@ -7,6 +7,8 @@ import MarkdownContent from '@/components/MarkdownContent'
 import ArticleTableOfContents from '@/components/ArticleTableOfContents'
 import FontSizeControlFixed from '@/components/FontSizeControlFixed'
 import AlmanackAudioPlayer from '@/components/AlmanackAudioPlayer'
+import JsonLd from '@/components/JsonLd'
+import { siteConfig } from '@/lib/site'
 import { getAlmanackAudioTracks } from '@/lib/poor-charlies-audio'
 import {
   almanackSectionParams,
@@ -50,6 +52,19 @@ export default function AlmanackSectionPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
+      {audioTracks.length > 0 && (
+        <JsonLd
+          data={audioTracks.map(track => ({
+            '@context': 'https://schema.org',
+            '@type': 'AudioObject',
+            name: `${track.titleZh} · 《穷查理宝典》`,
+            description: `${section.title}：英文有声原版，与中文译文同步阅读。`,
+            contentUrl: `${siteConfig.url}${track.localPath}`,
+            encodingFormat: 'audio/mp4',
+            inLanguage: 'en',
+          }))}
+        />
+      )}
       <ReadingProgress />
 
       <header className="border-b border-primary/10 bg-bg-card dark:bg-dark-card">
