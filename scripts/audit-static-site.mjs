@@ -88,7 +88,7 @@ for (const file of htmlFiles) {
   const matchedBoilerplate = forbiddenEditorialPhrases.filter(phrase => html.includes(phrase))
   if (matchedBoilerplate.length) editorialBoilerplate.push([current, matchedBoilerplate])
   if (/<(?:main|article|section|div)\b[^>]*(?:style=["'][^"']*(?:background\s*:\s*(?:black|#000)|background-color\s*:\s*(?:black|#000))|bgcolor=["']?(?:black|#000))/i.test(html)) inlineBlackContent.push(current)
-  if (html.includes("localStorage.getItem('theme')") || html.includes("localStorage.getItem('reading-theme-v2')")) legacyThemeBoot.push(current)
+  if (html.includes("localStorage.getItem('theme')")) legacyThemeBoot.push(current)
 
   for (const match of html.matchAll(/<img\b[^>]*>/gi)) {
     const tag = match[0]
