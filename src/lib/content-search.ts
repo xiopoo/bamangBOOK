@@ -221,8 +221,8 @@ function addBloggerItems(items: SearchItem[]) {
 // 拆书与专栏均为 content 下的扁平 Markdown 目录，用 slug（文件名）作为路由 id。
 function addFlatItems(
   items: SearchItem[],
-  directory: 'books' | 'columns' | 'models',
-  type: 'book' | 'column' | 'model',
+  directory: 'books' | 'columns' | 'models' | 'articles',
+  type: 'book' | 'column' | 'model' | 'article',
   route: string
 ) {
   for (const filePath of markdownFiles(path.join(CONTENT_DIR, directory))) {
@@ -261,6 +261,7 @@ export function getSearchItems(): SearchItem[] {
   addFlatItems(items, 'books', 'book', 'books')
   addFlatItems(items, 'columns', 'column', 'columns')
   addFlatItems(items, 'models', 'model', 'model')
+  addFlatItems(items, 'articles', 'article', 'articles')
   cachedItems = items
   return items
 }

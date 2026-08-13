@@ -10,6 +10,9 @@ import { getWescoMeetings } from '@/lib/wesco-meetings'
 import { getModels } from '@/lib/models'
 import { getBooks } from '@/lib/books'
 import { getColumns } from '@/lib/columns'
+import { getAllArticles } from '@/lib/articles'
+import { getAllMeetingYears } from '@/lib/meetings'
+import { getAllBuffettFaqTopics } from '@/lib/buffett-faq'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
 import { getBloggers, getAllBloggerArticles } from '@/lib/bloggers'
 import { getDYDocs, type DYSection } from '@/lib/duanyongping'
@@ -54,6 +57,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getModels().forEach(model => urls.add(`${baseUrl}/model/${encodeURIComponent(model.slug)}`))
   getBooks().forEach(book => urls.add(`${baseUrl}/books/${encodeURIComponent(book.slug)}`))
   getColumns().forEach(column => urls.add(`${baseUrl}/columns/${encodeURIComponent(column.slug)}`))
+  getAllArticles().forEach(article => urls.add(`${baseUrl}/articles/${encodeURIComponent(article.slug)}`))
+  urls.add(`${baseUrl}/meetings`)
+  getAllMeetingYears().forEach(({ year, sessions, clips }) => {
+    [...sessions, ...clips].forEach(item => urls.add(`${baseUrl}/meetings/${year}/${encodeURIComponent(item.session)}`))
+  })
+  urls.add(`${baseUrl}/buffett-faq`)
+  getAllBuffettFaqTopics()
+    .filter(topic => topic.slug !== 'buffettfaq')
+    .forEach(topic => urls.add(`${baseUrl}/buffett-faq/${encodeURIComponent(topic.slug)}`))
   getMungerLocalArchiveItems()
     .filter(item => item.section !== 'mental-models')
     .forEach(item => urls.add(`${baseUrl}/munger/archive/${item.slug.split('/').map(encodeURIComponent).join('/')}`))

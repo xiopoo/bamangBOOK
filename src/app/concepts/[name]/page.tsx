@@ -6,6 +6,7 @@ import PageHeader from '@/components/PageHeader'
 import MarkdownContent from '@/components/MarkdownContent'
 import ReadingProgress from '@/components/ReadingProgress'
 import { RecommendationList } from '@/components/RecommendationList'
+import EntityArticleLinks from '@/components/EntityArticleLinks'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
@@ -189,6 +190,9 @@ export default function ConceptDetailPage({ params }: PageProps) {
           />
         </div>
       )}
+
+      {/* 延伸阅读：关联文章 */}
+      <EntityArticleLinks entityName={conceptName} />
 
     </PageContainer>
   )

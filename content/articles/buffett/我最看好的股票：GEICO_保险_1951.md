@@ -1,3 +1,11 @@
+---
+title: "我最看好的股票：GEICO 保险 1951"
+content_type: "article"
+person: "巴菲特"
+year: 1951
+entities: "GEICO, 保险业, 通货膨胀, 格雷厄姆, 巴菲特"
+---
+
 # 我最看好的股票：GEICO 保险 1951
 
 1951 年 12 月 6 日

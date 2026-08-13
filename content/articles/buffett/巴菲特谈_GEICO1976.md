@@ -1,3 +1,11 @@
+---
+title: "巴菲特谈 GEICO1976"
+content_type: "article"
+person: "巴菲特"
+year: 1976
+entities: "GEICO, 再保险, 巴菲特, 竞争优势"
+---
+
 # 巴菲特谈 GEICO1976
 
 1976 年 7 月 22 日

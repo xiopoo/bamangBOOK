@@ -8,6 +8,7 @@ import ReadingProgress from '@/components/ReadingProgress'
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
+import EntityArticleLinks from '@/components/EntityArticleLinks'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -130,6 +131,9 @@ export default async function CompanyDetailPage({ params }: PageProps) {
           </Link>
         </div>
       </div>
+
+      {/* 延伸阅读：关联文章 */}
+      <EntityArticleLinks entityName={companyName} />
 
     </PageContainer>
   )

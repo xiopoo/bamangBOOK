@@ -1,0 +1,717 @@
+{
+  "apply": true,
+  "plan": [],
+  "records": [
+    {
+      "file": "articles/buffett/企业收藏家_1977.md",
+      "title": "企业收藏家 1977",
+      "person": "巴菲特",
+      "year": "1977",
+      "entities": "巴菲特, 收购, 格雷厄姆, 华盛顿邮报, 蓝筹印花, 保险",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/伯克希尔_50_周年：过去、现在和未来.md",
+      "title": "伯克希尔 50 周年：过去、现在和未来",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "收购, 喜诗糖果, 回购, 保险, 内在价值, 账面价值",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/伯克希尔股东手册_1996.md",
+      "title": "伯克希尔股东手册 1996",
+      "person": "巴菲特",
+      "year": "1996",
+      "entities": "收购, 内在价值, 浮存金, 管理层, 回购, 账面价值",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特_你应该了解珠宝生意.md",
+      "title": "巴菲特: 你应该了解珠宝生意",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "波仙珠宝, 巴菲特, 收购",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特估值逻辑.md",
+      "title": "巴菲特估值逻辑",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "内在价值, 巴菲特, 可口可乐, 芒格, 债券, 收购",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特合伙公司时代.md",
+      "title": "巴菲特合伙公司时代",
+      "person": "巴菲特",
+      "year": "1956",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特合伙契约_1956.md",
+      "title": "巴菲特合伙契约 1956",
+      "person": "巴菲特",
+      "year": "1956",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特接见_Dardashti_2007.md",
+      "title": "巴菲特接见 Dardashti 2007",
+      "person": "巴菲特",
+      "year": "2007",
+      "entities": "巴菲特, 穆迪, 格雷厄姆, 市盈率, 费雪",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特推荐过的书籍.md",
+      "title": "巴菲特推荐过的书籍",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "格雷厄姆, 巴菲特, 费雪, 穆迪, 保险, 芒格",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特收购_LTMC_要约_1998.md",
+      "title": "巴菲特收购 LTMC 要约 1998",
+      "person": "巴菲特",
+      "year": "1998",
+      "entities": "收购, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特致所罗门股东信_1991.md",
+      "title": "巴菲特致所罗门股东信 1991",
+      "person": "巴菲特",
+      "year": "1991",
+      "entities": "所罗门兄弟, 管理层, 巴菲特, 杠杆, 能源",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈_GEICO1976.md",
+      "title": "巴菲特谈 GEICO1976",
+      "person": "巴菲特",
+      "year": "1976",
+      "entities": "GEICO, 再保险, 巴菲特, 竞争优势",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈养老金问题_1975.md",
+      "title": "巴菲特谈养老金问题 1975",
+      "person": "巴菲特",
+      "year": "1975",
+      "entities": "通货膨胀, 管理层, 债券, 利率, 巴菲特, 保险",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈喜诗糖果_1972.md",
+      "title": "巴菲特谈喜诗糖果 1972",
+      "person": "巴菲特",
+      "year": "1972",
+      "entities": "喜诗糖果, 收购, 品牌, 蓝筹印花, 芒格",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈微软的信_1997.md",
+      "title": "巴菲特谈微软的信 1997",
+      "person": "巴菲特",
+      "year": "1997",
+      "entities": "微软, 收购, 特许经营权, 可口可乐, 护城河, IBM",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈投资_1985.md",
+      "title": "巴菲特谈投资 1985",
+      "person": "巴菲特",
+      "year": "1985",
+      "entities": "巴菲特, 能力圈, 格雷厄姆, IBM",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈投资_1988.md",
+      "title": "巴菲特谈投资 1988",
+      "person": "巴菲特",
+      "year": "1988",
+      "entities": "巴菲特, 格雷厄姆, 特许经营权, 债券, 华盛顿邮报, 利率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈指数期货_1982.md",
+      "title": "巴菲特谈指数期货 1982",
+      "person": "巴菲特",
+      "year": "1982",
+      "entities": "资本市场, 巴菲特, 低估",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈施洛斯的信_1994.md",
+      "title": "巴菲特谈施洛斯的信 1994",
+      "person": "巴菲特",
+      "year": "1994",
+      "entities": "巴菲特, 格雷厄姆",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈股市_1974.md",
+      "title": "巴菲特谈股市 1974",
+      "person": "巴菲特",
+      "year": "1974",
+      "entities": "蓝筹印花, 格雷厄姆",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈股市_1979.md",
+      "title": "巴菲特谈股市 1979",
+      "person": "巴菲特",
+      "year": "1979",
+      "entities": "账面价值, 债券, 市盈率, 管理层, 利率, 收购",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈股市_1999.md",
+      "title": "巴菲特谈股市 1999",
+      "person": "巴菲特",
+      "year": "1999",
+      "entities": "利率, 巴菲特, 航空业, 债券, 股息",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈股市_2001.md",
+      "title": "巴菲特谈股市 2001",
+      "person": "巴菲特",
+      "year": "2001",
+      "entities": "利率, 巴菲特, 债券, 通货膨胀, 股息",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特谈通货膨胀_1977.md",
+      "title": "巴菲特谈通货膨胀 1977",
+      "person": "巴菲特",
+      "year": "1977",
+      "entities": "债券, 通货膨胀, 杠杆, 账面价值, 利率, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特青春时代.md",
+      "title": "巴菲特青春时代",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "巴菲特, 格雷厄姆, Charlie Munger",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：500_亿美元的决定.md",
+      "title": "巴菲特：500 亿美元的决定",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "格雷厄姆, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：买入美国正当时_2008.md",
+      "title": "巴菲特：买入美国正当时 2008",
+      "person": "巴菲特",
+      "year": "2008",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：保险业的_FDIC_2001.md",
+      "title": "巴菲特：保险业的 FDIC 2001",
+      "person": "巴菲特",
+      "year": "2001",
+      "entities": "保险业, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：关于游牧者基金_2014.md",
+      "title": "巴菲特：关于游牧者基金 2014",
+      "person": "巴菲特",
+      "year": "2014",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：回忆进入证券行业_2005.md",
+      "title": "巴菲特：回忆进入证券行业 2005",
+      "person": "巴菲特",
+      "year": "2005",
+      "entities": "格雷厄姆, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：怀念恩师格雷厄姆_1976.md",
+      "title": "巴菲特：怀念恩师格雷厄姆 1976",
+      "person": "巴菲特",
+      "year": "1976",
+      "entities": "格雷厄姆, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：怀念恩师格雷厄姆_2008.md",
+      "title": "巴菲特：怀念恩师格雷厄姆 2008",
+      "person": "巴菲特",
+      "year": "2008",
+      "entities": "格雷厄姆, 巴菲特, 管理层, GEICO, 价值投资",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：我为什么不看好美元_2003.md",
+      "title": "巴菲特：我为什么不看好美元 2003",
+      "person": "巴菲特",
+      "year": "2003",
+      "entities": "债券, 巴菲特, 通货膨胀, 汇率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：扩大所得税抵免比提高最低工资更好.md",
+      "title": "巴菲特：扩大所得税抵免比提高最低工资更好",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：收购_BNSF_铁路.md",
+      "title": "巴菲特：收购 BNSF 铁路",
+      "person": "巴菲特",
+      "year": "2009",
+      "entities": "巴菲特, 收购, 铁路运输, 优质企业",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：模糊数学与股票期权_2004.md",
+      "title": "巴菲特：模糊数学与股票期权 2004",
+      "person": "巴菲特",
+      "year": "2004",
+      "entities": "华盛顿邮报, 巴菲特, 会计准则, 低估",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：给保尔森的信_2008.md",
+      "title": "巴菲特：给保尔森的信 2008",
+      "person": "巴菲特",
+      "year": "2008",
+      "entities": "杠杆, 利率, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：给全体经理人备忘录_2001.md",
+      "title": "巴菲特：给全体经理人备忘录 2001",
+      "person": "巴菲特",
+      "year": "2001",
+      "entities": "保险, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：给全体经理人备忘录_2006.md",
+      "title": "巴菲特：给全体经理人备忘录 2006",
+      "person": "巴菲特",
+      "year": "2006",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：给全体经理人备忘录_2010.md",
+      "title": "巴菲特：给全体经理人备忘录 2010",
+      "person": "巴菲特",
+      "year": "2010",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：给全体经理人备忘录_2014.md",
+      "title": "巴菲特：给全体经理人备忘录 2014",
+      "person": "巴菲特",
+      "year": "2014",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：美元效应_2009.md",
+      "title": "巴菲特：美元效应 2009",
+      "person": "巴菲特",
+      "year": "2009",
+      "entities": "巴菲特, 国债",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：美国的未来_2017.md",
+      "title": "巴菲特：美国的未来 2017",
+      "person": "巴菲特",
+      "year": "2017",
+      "entities": "巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：股息巫术_2003.md",
+      "title": "巴菲特：股息巫术 2003",
+      "person": "巴菲特",
+      "year": "2003",
+      "entities": "股息, 伯克希尔哈撒韦, 华盛顿邮报, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：股票期权与常识_2002.md",
+      "title": "巴菲特：股票期权与常识",
+      "person": "巴菲特",
+      "year": "2002",
+      "entities": "巴菲特, 华盛顿邮报, 会计准则, 霍尼韦尔, 管理层, 收购",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/巴菲特：谁是真正的账房先生.md",
+      "title": "巴菲特：谁是真正的账房先生",
+      "person": "巴菲特",
+      "year": "2002",
+      "entities": "会计准则, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/我最看好的股票：GEICO_保险_1951.md",
+      "title": "我最看好的股票：GEICO 保险 1951",
+      "person": "巴菲特",
+      "year": "1951",
+      "entities": "GEICO, 保险业, 通货膨胀, 格雷厄姆, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/我最看好的股票：人寿保险_1957.md",
+      "title": "我最看好的股票：人寿保险 1957",
+      "person": "巴菲特",
+      "year": "1957",
+      "entities": "保险, 市盈率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/我最看好的股票：油气资产管理公司_1957.md",
+      "title": "我最看好的股票：油气资产管理公司 1957",
+      "person": "巴菲特",
+      "year": "1957",
+      "entities": "债券, 收购, 巴菲特, 通货膨胀, 杠杆",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/我最看好的股票：西部保险_1953.md",
+      "title": "我最看好的股票：西部保险 1953",
+      "person": "巴菲特",
+      "year": "1953",
+      "entities": "股息, 保险业, 债券, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/沃伦在担心什么_2003.md",
+      "title": "沃伦在担心什么 2003",
+      "person": "巴菲特",
+      "year": "2003",
+      "entities": "衍生品, 再保险, 巴菲特, 债券, 杠杆, 保险业",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/buffett/财富杂志：沃伦之思_2008.md",
+      "title": "财富杂志：沃伦之思 2008",
+      "person": "巴菲特",
+      "year": "2008",
+      "entities": "巴菲特, 杠杆, 利率, 可口可乐, 通用电气, 保险",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/li-lu/2011-11 书中自有黄金屋.md",
+      "title": "2011-11 书中自有黄金屋",
+      "person": "李录",
+      "year": "2011",
+      "entities": "巴菲特, 价值投资, 能力圈",
+      "changed": true,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/li-lu/2014-07 李录谈现代化十六讲.md",
+      "title": "2014-07 李录谈现代化十六讲",
+      "person": "李录",
+      "year": "2014",
+      "entities": "",
+      "changed": true,
+      "content_type": "talk"
+    },
+    {
+      "file": "articles/li-lu/2015-10 价值投资在中国的展望.md",
+      "title": "2015-10 价值投资在中国的展望",
+      "person": "李录",
+      "year": "2015",
+      "entities": "通货膨胀, 债券, 价值投资, 复利, 利率",
+      "changed": true,
+      "content_type": "talk"
+    },
+    {
+      "file": "articles/li-lu/2019-11 李录价值投资的知行合一.md",
+      "title": "2019-11 李录价值投资的知行合一",
+      "person": "李录",
+      "year": "2019",
+      "entities": "价值投资, 市场先生, 能力圈, 安全边际, 格雷厄姆",
+      "changed": true,
+      "content_type": "talk"
+    },
+    {
+      "file": "articles/munger/查理芒格：伯克希尔的总设计师.md",
+      "title": "查理芒格：伯克希尔的总设计师",
+      "person": "芒格",
+      "year": "",
+      "entities": "芒格",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/munger/芒格：2003_年的金融大丑闻.md",
+      "title": "芒格：2003 年的金融大丑闻",
+      "person": "芒格",
+      "year": "2003",
+      "entities": "管理层, 企业文化, 市盈率, 芒格, 利率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/「所有者收益」vs「自由现金流」.md",
+      "title": "「所有者收益」vs「自由现金流」",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "会计准则, 商誉, 收购, 账面价值, 巴菲特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/伯克希尔与标普_500_指数.md",
+      "title": "伯克希尔与标普 500 指数",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "能源, 西方石油, 巴菲特, 资本配置, 管理层, 保险业",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/伯克希尔业务版图.md",
+      "title": "伯克希尔业务版图",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "巴菲特, 可口可乐, 保险业, 微软, 芒格",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/伯克希尔哈撒韦时代.md",
+      "title": "伯克希尔哈撒韦时代",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "巴菲特, 回购, 纺织业务, 保险业, 银行业, 伯克希尔哈撒韦",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/伯克希尔投资历史.md",
+      "title": "伯克希尔投资历史",
+      "person": "其他",
+      "year": "",
+      "entities": "收购, 股息, 债券, 吉列, 宝洁",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/伯克希尔：集团企业的终极折让.md",
+      "title": "伯克希尔：集团企业的终极折让",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "保险业, 收购, 再保险, 内在价值, 杠杆, GEICO",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/关于市场先生和人性的理解.md",
+      "title": "关于市场先生和人性的理解",
+      "person": "格雷厄姆",
+      "year": "",
+      "entities": "债券, 市场先生, 市场预测, 格雷厄姆, 股息, 大众",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/卢米斯：回顾职业生涯_2005.md",
+      "title": "卢米斯：回顾职业生涯 2005",
+      "person": "卢米斯",
+      "year": "2005",
+      "entities": "通用电气",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/卢米斯：我在财富杂志的_51_年.md",
+      "title": "卢米斯：我在财富杂志的 51 年",
+      "person": "卢米斯",
+      "year": "",
+      "entities": "",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/如何建立能力圈.md",
+      "title": "如何建立能力圈",
+      "person": "格雷厄姆",
+      "year": "",
+      "entities": "巴菲特, 芒格, 能力圈, 格雷厄姆, 债券, 利率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/康布斯：在普通股中寻找价值.md",
+      "title": "康布斯：在普通股中寻找价值",
+      "person": "康布斯",
+      "year": "",
+      "entities": "管理层, 内在价值, 格雷厄姆, 资本配置, 利率, 留存收益",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/恩师格雷厄姆生平回顾.md",
+      "title": "恩师格雷厄姆生平回顾",
+      "person": "格雷厄姆",
+      "year": "",
+      "entities": "格雷厄姆, 债券, 利率",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/施洛斯：怀念恩师格雷厄姆_1976.md",
+      "title": "施洛斯：怀念恩师格雷厄姆 1976",
+      "person": "施洛斯",
+      "year": "1976",
+      "entities": "格雷厄姆, 债券, 保险, 套利, GEICO, 买入价格",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/最资深的经理人桑迪威尔.md",
+      "title": "最资深的经理人桑迪威尔",
+      "person": "巴菲特",
+      "year": "",
+      "entities": "美国运通, 美国银行, 保险, 收购",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/杰米·戴蒙_2008_年致股东信.md",
+      "title": "杰米·戴蒙 2008 年致股东信",
+      "person": "杰米·戴蒙",
+      "year": "2008",
+      "entities": "银行业, 收购, 摩根大通, 杠杆",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/格雷厄姆谈股市_1976.md",
+      "title": "格雷厄姆谈股市 1976",
+      "person": "格雷厄姆",
+      "year": "1976",
+      "entities": "格雷厄姆, GEICO, 市盈率, 利率, 有效市场, 低估",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/考夫曼：Glenair_企业文化.md",
+      "title": "考夫曼：Glenair 企业文化",
+      "person": "考夫曼",
+      "year": "",
+      "entities": "企业文化",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/other/财富杂志：恐龙.md",
+      "title": "财富杂志：恐龙",
+      "person": "其他",
+      "year": "",
+      "entities": "通用汽车, IBM, 通用电气, 沃尔玛, 企业文化, 福特",
+      "changed": false,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/special/2014-伯克希尔的过去现在与未来.md",
+      "title": "2014 伯克希尔的过去现在与未来",
+      "person": "巴菲特",
+      "year": "2014",
+      "entities": "收购, 喜诗糖果, 回购, 纺织业务, 保险, 内在价值",
+      "changed": true,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/special/2014-副董事长的思考-芒格.md",
+      "title": "2014 副董事长的思考",
+      "person": "芒格",
+      "year": "2014",
+      "entities": "巴菲特, 收购, 保险业, 浮存金, 阿吉特·贾恩, GEICO",
+      "changed": true,
+      "content_type": "article"
+    },
+    {
+      "file": "articles/special/2025-感恩节致辞.md",
+      "title": "2025 感恩节致辞",
+      "person": "巴菲特",
+      "year": "2025",
+      "entities": "巴菲特, 可口可乐, 格雷格·阿贝尔, 阿吉特·贾恩, 格雷厄姆",
+      "changed": true,
+      "content_type": "article"
+    }
+  ]
+}
