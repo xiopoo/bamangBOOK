@@ -452,6 +452,8 @@ function removeDanglingFootnoteReferences(markdown: string): string {
 /** Normalize imported PDF text to the paragraph and table semantics used by the site. */
 export function normalizeImportedMarkdown(markdown: string): string {
   let restored = markdown
+    // 剥离 YAML frontmatter（档案层已统一补齐元数据，渲染时不应出现）
+    .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
     .replace(/\r\n?/g, '\n')
     .replace(/^(\*{3,})(?=\S)/gm, '$1\n\n')
     .replace(/(?:__\s*){3,}/g, '\n\n')

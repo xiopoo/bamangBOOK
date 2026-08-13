@@ -2,177 +2,197 @@
   {
     "title": "巴菲特：哥大商学院演讲 1984",
     "year": 1984,
-    "wordCount": 9201,
-    "contentLength": 15612,
+    "wordCount": 9385,
+    "contentLength": 17992,
     "fileName": "巴菲特：哥大商学院演讲_1984",
     "person": "buffett"
   },
   {
     "title": "芒格：哈佛中学演讲 1986",
     "year": 1986,
-    "wordCount": 3925,
-    "contentLength": 4388,
+    "wordCount": 3927,
+    "contentLength": 4392,
     "fileName": "芒格：哈佛中学演讲_1986",
     "person": "munger"
   },
   {
     "title": "巴菲特：斯坦福法学院演讲 1990",
     "year": 1990,
-    "wordCount": 8853,
-    "contentLength": 10530,
+    "wordCount": 8903,
+    "contentLength": 10534,
     "fileName": "巴菲特：斯坦福法学院演讲_1990",
     "person": "buffett"
   },
   {
     "title": "巴菲特：圣母大学演讲 1991",
     "year": 1991,
-    "wordCount": 38683,
-    "contentLength": 47794,
+    "wordCount": 39055,
+    "contentLength": 47830,
     "fileName": "巴菲特：圣母大学演讲_1991",
+    "person": "buffett"
+  },
+  {
+    "title": "巴菲特奥马哈新闻俱乐部 1992",
+    "year": 1992,
+    "wordCount": 11629,
+    "contentLength": 14010,
+    "fileName": "巴菲特奥马哈新闻俱乐部_1992",
     "person": "buffett"
   },
   {
     "title": "施洛斯：哥大商学院演讲 1993",
     "year": 1993,
-    "wordCount": 5973,
-    "contentLength": 8011,
-    "fileName": "施洛斯：哥大商学院演讲_1993",
-    "person": "schloss"
-  },
-  {
-    "title": "芒格：南加大商学院演讲 1994",
-    "year": 1994,
-    "wordCount": 21944,
-    "contentLength": 25315,
-    "fileName": "芒格：南加大商学院演讲_1994",
-    "person": "munger"
+    "wordCount": 6088,
+    "contentLength": 8040,
+    "fileName": "施洛斯：哥大商学院演讲_1993"
   },
   {
     "title": "巴菲特：内布拉斯加大学演讲 1994",
     "year": 1994,
-    "wordCount": 23981,
-    "contentLength": 28777,
+    "wordCount": 24171,
+    "contentLength": 28851,
     "fileName": "巴菲特：内布拉斯加大学演讲_1994",
     "person": "buffett"
   },
   {
+    "title": "芒格：南加大商学院演讲 1994",
+    "year": 1994,
+    "wordCount": 22002,
+    "contentLength": 25318,
+    "fileName": "芒格：南加大商学院演讲_1994",
+    "person": "munger"
+  },
+  {
+    "title": "芒格：关于实践思维的现实思考 1996",
+    "year": 1996,
+    "wordCount": 7245,
+    "contentLength": 8570,
+    "fileName": "芒格：关于实践思维的现实思考_1996",
+    "person": "munger"
+  },
+  {
     "title": "芒格：斯坦福法学院演讲 1996",
     "year": 1996,
-    "wordCount": 24937,
-    "contentLength": 28591,
+    "wordCount": 25010,
+    "contentLength": 28594,
     "fileName": "芒格：斯坦福法学院演讲_1996",
     "person": "munger"
   },
   {
-    "title": "芒格：哈佛法学院演讲 1998",
+    "title": "巴菲特：佛罗里达大学演讲 1998",
     "year": 1998,
-    "wordCount": 6392,
-    "contentLength": 7415,
-    "fileName": "芒格：哈佛法学院演讲_1998",
-    "person": "munger"
+    "wordCount": 22266,
+    "contentLength": 26604,
+    "fileName": "巴菲特：佛罗里达大学演讲_1998",
+    "person": "buffett"
   },
   {
     "title": "巴菲特：华盛顿大学谈话 1998",
     "year": 1998,
-    "wordCount": 4698,
-    "contentLength": 5440,
+    "wordCount": 4710,
+    "contentLength": 5444,
     "fileName": "巴菲特：华盛顿大学谈话_1998",
     "person": "buffett"
   },
   {
     "title": "芒格：财务总监联合会演讲 1998",
     "year": 1998,
-    "wordCount": 6095,
-    "contentLength": 6971,
+    "wordCount": 6112,
+    "contentLength": 6975,
     "fileName": "芒格：财务总监联合会演讲_1998",
     "person": "munger"
   },
   {
-    "title": "巴菲特：佛罗里达大学演讲 1998",
+    "title": "芒格：哈佛法学院演讲 1998",
     "year": 1998,
-    "wordCount": 22223,
-    "contentLength": 26568,
-    "fileName": "巴菲特：佛罗里达大学演讲_1998",
-    "person": "buffett"
+    "wordCount": 6418,
+    "contentLength": 7419,
+    "fileName": "芒格：哈佛法学院演讲_1998",
+    "person": "munger"
   },
   {
     "title": "巴菲特：内布拉斯加教育论坛演讲 1999",
     "year": 1999,
-    "wordCount": 8356,
-    "contentLength": 9743,
+    "wordCount": 8370,
+    "contentLength": 9793,
     "fileName": "巴菲特：内布拉斯加教育论坛演讲_1999",
     "person": "buffett"
   },
   {
     "title": "巴菲特太阳谷演讲 1999",
     "year": 1999,
-    "wordCount": 4653,
-    "contentLength": 5745,
+    "wordCount": 4667,
+    "contentLength": 5746,
     "fileName": "巴菲特太阳谷演讲_1999",
     "person": "buffett"
   },
   {
+    "title": "芒格：慈善圆桌会议讲话 2000",
+    "year": 2000,
+    "wordCount": 5704,
+    "contentLength": 6576,
+    "fileName": "芒格：慈善圆桌会议讲话_2000",
+    "person": "munger"
+  },
+  {
     "title": "巴菲特：佐治亚大学演讲 2001",
     "year": 2001,
-    "wordCount": 19651,
-    "contentLength": 24029,
+    "wordCount": 19766,
+    "contentLength": 24045,
     "fileName": "巴菲特：佐治亚大学演讲_2001",
     "person": "buffett"
   },
   {
     "title": "巴菲特：哥大商学院演讲 2002",
     "year": 2002,
-    "wordCount": 6636,
-    "contentLength": 8484,
+    "wordCount": 6731,
+    "contentLength": 8539,
     "fileName": "巴菲特：哥大商学院演讲_2002",
     "person": "buffett"
   },
   {
-    "title": "巴菲特奥马哈新闻俱乐部 1992",
-    "year": 1992,
-    "wordCount": 11532,
-    "contentLength": 14009,
-    "fileName": "巴菲特奥马哈新闻俱乐部_1992",
-    "person": "buffett"
-  },
-  {
-    "title": "芒格：关于实践思维的现实思考 1996",
-    "year": 1996,
-    "wordCount": 7226,
-    "contentLength": 8566,
-    "fileName": "芒格：关于实践思维的现实思考_1996",
-    "person": "munger"
-  },
-  {
-    "title": "芒格：慈善圆桌会议讲话 2000",
-    "year": 2000,
-    "wordCount": 5697,
-    "contentLength": 6572,
-    "fileName": "芒格：慈善圆桌会议讲话_2000",
-    "person": "munger"
-  },
-  {
     "title": "芒格：论学院派经济学 2003",
     "year": 2003,
-    "wordCount": 25392,
-    "contentLength": 29636,
+    "wordCount": 25528,
+    "contentLength": 29686,
     "fileName": "芒格：论学院派经济学_2003",
+    "person": "munger"
+  },
+  {
+    "title": "芒格：南加大法学院演讲 2007",
+    "year": 2007,
+    "wordCount": 11242,
+    "contentLength": 13105,
+    "fileName": "芒格：南加大法学院演讲_2007",
     "person": "munger"
   },
   {
     "title": "芒格：DJ 年会 2013",
     "year": 2013,
-    "wordCount": 22423,
-    "contentLength": 26671,
+    "wordCount": 22619,
+    "contentLength": 26704,
     "fileName": "芒格：DJ_年会_2013",
     "person": "munger"
   },
   {
-    "title": "芒格：南加大法学院演讲 2007",
-    "fileName": "芒格：南加大法学院演讲_2007",
-    "year": 2007,
-    "wordCount": 11190,
-    "contentLength": 13104,
-    "person": "munger"
+    "title": "1999.12 巴菲特在太阳谷的演讲",
+    "year": null,
+    "wordCount": 2846,
+    "contentLength": 3655,
+    "fileName": "1999.12 巴菲特在太阳谷的演讲"
+  },
+  {
+    "title": "2013.11 巴菲特在马里兰大学的演讲",
+    "year": null,
+    "wordCount": 6256,
+    "contentLength": 7886,
+    "fileName": "2013.11 巴菲特在马里兰大学的演讲"
+  },
+  {
+    "title": "2018.02 北京大学光华管理学院",
+    "year": null,
+    "wordCount": 5394,
+    "contentLength": 6796,
+    "fileName": "2018.02 北京大学光华管理学院"
   }
 ]

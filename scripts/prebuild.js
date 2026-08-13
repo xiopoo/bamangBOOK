@@ -257,6 +257,14 @@ function main() {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
+
+  // 派生档案索引：从 md frontmatter + 正文生成 talks/interviews/qa/letters/partnership 索引。
+  // 单一事实来源 = content/ 下的 md，索引 json 为纯派生物，构建时自动刷新，禁止手改。
+  console.log('\n🔄 生成档案索引（从 frontmatter 派生）...');
+  execSync('node scripts/generate-archive-index.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
   
   // 同时把索引文件复制到 bloggers_original，防止 Next.js 输出文件追踪时报 ENOENT
   const srcIndex = path.join(BLOGGERS_DIR, INDEX_FILE);
