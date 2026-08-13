@@ -44,7 +44,9 @@ function normalizeMarkdownStructure(content: string): string {
   let removedFirstH1 = false
   let inFence = false
 
-  const normalized = (content || '')
+  const stripped = (content || '').replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+
+  const normalized = stripped
     .replace(/\r\n?/g, '\n')
     .split('\n')
     .map((line) => {

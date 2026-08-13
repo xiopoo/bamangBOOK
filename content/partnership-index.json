@@ -1,156 +1,261 @@
 [
   {
+    "title": "第一条",
+    "year": 1956,
+    "wordCount": 1132,
+    "contentLength": 2141,
+    "fileName": "partnership_1956-有限合伙协议.md"
+  },
+  {
     "title": "巴菲特致合伙人的信 1957",
     "year": 1957,
-    "wordCount": 2037,
-    "contentLength": 2365,
+    "wordCount": 1753,
+    "contentLength": 2233,
     "fileName": "partnership_1957-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1958",
     "year": 1958,
-    "wordCount": 2319,
-    "contentLength": 2642,
+    "wordCount": 1998,
+    "contentLength": 2465,
     "fileName": "partnership_1958-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1959",
     "year": 1959,
-    "wordCount": 1627,
-    "contentLength": 1897,
+    "wordCount": 1351,
+    "contentLength": 1719,
     "fileName": "partnership_1959-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1960",
     "year": 1960,
-    "wordCount": 3975,
-    "contentLength": 4951,
+    "wordCount": 3574,
+    "contentLength": 4643,
     "fileName": "partnership_1960-巴菲特致合伙人信.md"
-  },
-  {
-    "title": "巴菲特致合伙人的信 1961 中报",
-    "year": 1961,
-    "wordCount": 2256,
-    "contentLength": 2345,
-    "fileName": "partnership_1961-interim-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1961 年报",
     "year": 1961,
-    "wordCount": 6553,
-    "contentLength": 9325,
+    "wordCount": 5754,
+    "contentLength": 9183,
     "fileName": "partnership_1961-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1962 中报",
+    "title": "巴菲特致合伙人的信 1961 中报",
+    "year": 1961,
+    "wordCount": 1978,
+    "contentLength": 2472,
+    "fileName": "partnership_1961-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1962-11月-巴菲特致合伙人信",
     "year": 1962,
-    "wordCount": 3143,
-    "contentLength": 7582,
-    "fileName": "partnership_1962-interim-巴菲特致合伙人信.md"
+    "wordCount": 1589,
+    "contentLength": 2041,
+    "fileName": "partnership_1962-11月-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1962-12月-巴菲特致合伙人信",
+    "year": 1962,
+    "wordCount": 657,
+    "contentLength": 924,
+    "fileName": "partnership_1962-12月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1962 年报",
     "year": 1962,
-    "wordCount": 884,
-    "contentLength": 11463,
+    "wordCount": 7579,
+    "contentLength": 11844,
     "fileName": "partnership_1962-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1963 中报",
+    "title": "巴菲特致合伙人的信 1962 中报",
+    "year": 1962,
+    "wordCount": 2533,
+    "contentLength": 4829,
+    "fileName": "partnership_1962-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1963-11月-巴菲特致合伙人信",
     "year": 1963,
-    "wordCount": 4178,
-    "contentLength": 7913,
-    "fileName": "partnership_1963-interim-巴菲特致合伙人信.md"
+    "wordCount": 1089,
+    "contentLength": 1506,
+    "fileName": "partnership_1963-11月-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1963-12月-巴菲特致合伙人信",
+    "year": 1963,
+    "wordCount": 643,
+    "contentLength": 844,
+    "fileName": "partnership_1963-12月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1963 年报",
     "year": 1963,
-    "wordCount": 1355,
-    "contentLength": 14928,
+    "wordCount": 8210,
+    "contentLength": 12826,
     "fileName": "partnership_1963-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1964 中报",
-    "year": 1964,
-    "wordCount": 2898,
-    "contentLength": 4356,
-    "fileName": "partnership_1964-interim-巴菲特致合伙人信.md"
+    "title": "巴菲特致合伙人的信 1963 中报",
+    "year": 1963,
+    "wordCount": 3495,
+    "contentLength": 6349,
+    "fileName": "partnership_1963-interim-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1964 年报",
     "year": 1964,
-    "wordCount": 11278,
-    "contentLength": 15623,
+    "wordCount": 10128,
+    "contentLength": 15678,
     "fileName": "partnership_1964-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1965 中报",
+    "title": "巴菲特致合伙人的信 1964 中报",
+    "year": 1964,
+    "wordCount": 2365,
+    "contentLength": 4206,
+    "fileName": "partnership_1964-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "补充内容",
     "year": 1965,
-    "wordCount": 3026,
-    "contentLength": 5871,
-    "fileName": "partnership_1965-interim-巴菲特致合伙人信.md"
+    "wordCount": 1604,
+    "contentLength": 2092,
+    "fileName": "partnership_1965-11月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1965 年报",
     "year": 1965,
-    "wordCount": 1926,
-    "contentLength": 12029,
+    "wordCount": 8371,
+    "contentLength": 12599,
     "fileName": "partnership_1965-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1966 中报",
+    "title": "巴菲特致合伙人的信 1965 中报",
+    "year": 1965,
+    "wordCount": 2471,
+    "contentLength": 4383,
+    "fileName": "partnership_1965-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1966-11月-巴菲特致合伙人信",
     "year": 1966,
-    "wordCount": 4025,
-    "contentLength": 10914,
-    "fileName": "partnership_1966-interim-巴菲特致合伙人信.md"
+    "wordCount": 1817,
+    "contentLength": 2198,
+    "fileName": "partnership_1966-11月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1966 年报",
     "year": 1966,
-    "wordCount": 2155,
-    "contentLength": 8850,
+    "wordCount": 5488,
+    "contentLength": 9005,
     "fileName": "partnership_1966-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1967 中报",
+    "title": "巴菲特致合伙人的信 1966 中报",
+    "year": 1966,
+    "wordCount": 3360,
+    "contentLength": 5675,
+    "fileName": "partnership_1966-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1967-10月-巴菲特致合伙人信",
     "year": 1967,
-    "wordCount": 2106,
-    "contentLength": 9148,
-    "fileName": "partnership_1967-interim-巴菲特致合伙人信.md"
+    "wordCount": 3477,
+    "contentLength": 4126,
+    "fileName": "partnership_1967-10月-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1967-11月-巴菲特致合伙人信",
+    "year": 1967,
+    "wordCount": 987,
+    "contentLength": 1260,
+    "fileName": "partnership_1967-11月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1967 年报",
     "year": 1967,
-    "wordCount": 3784,
-    "contentLength": 5854,
+    "wordCount": 2880,
+    "contentLength": 5755,
     "fileName": "partnership_1967-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1968 中报",
+    "title": "巴菲特致合伙人的信 1967 中报",
+    "year": 1967,
+    "wordCount": 1523,
+    "contentLength": 3498,
+    "fileName": "partnership_1967-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1968-11月-巴菲特致合伙人信",
     "year": 1968,
-    "wordCount": 2590,
-    "contentLength": 5681,
-    "fileName": "partnership_1968-interim-巴菲特致合伙人信.md"
+    "wordCount": 1025,
+    "contentLength": 1297,
+    "fileName": "partnership_1968-11月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1968 年报",
     "year": 1968,
-    "wordCount": 1293,
-    "contentLength": 7590,
+    "wordCount": 3953,
+    "contentLength": 7614,
     "fileName": "partnership_1968-annual-巴菲特致合伙人信.md"
   },
   {
-    "title": "巴菲特致合伙人的信 1969 清盘",
+    "title": "巴菲特致合伙人的信 1968 中报",
+    "year": 1968,
+    "wordCount": 1986,
+    "contentLength": 4082,
+    "fileName": "partnership_1968-interim-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1969-10月-巴菲特致合伙人信",
     "year": 1969,
-    "wordCount": 3673,
-    "contentLength": 17258,
-    "fileName": "partnership_1969-liquidation-巴菲特致合伙人信.md"
+    "wordCount": 4547,
+    "contentLength": 5747,
+    "fileName": "partnership_1969-10月-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1969-12月-巴菲特致合伙人信",
+    "year": 1969,
+    "wordCount": 3390,
+    "contentLength": 4427,
+    "fileName": "partnership_1969-12月-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1969-12月26日-巴菲特致合伙人信",
+    "year": 1969,
+    "wordCount": 3296,
+    "contentLength": 3952,
+    "fileName": "partnership_1969-12月26日-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "partnership_1969-5月-巴菲特致合伙人信",
+    "year": 1969,
+    "wordCount": 2408,
+    "contentLength": 2883,
+    "fileName": "partnership_1969-5月-巴菲特致合伙人信.md"
   },
   {
     "title": "巴菲特致合伙人的信 1969 年报",
     "year": 1969,
-    "wordCount": 4983,
-    "contentLength": 24438,
+    "wordCount": 5435,
+    "contentLength": 6859,
     "fileName": "partnership_1969-annual-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "巴菲特致合伙人的信 1969 清盘",
+    "year": 1969,
+    "wordCount": 3128,
+    "contentLength": 3765,
+    "fileName": "partnership_1969-liquidation-巴菲特致合伙人信.md"
+  },
+  {
+    "title": "如何购买和保管免税债券",
+    "year": 1970,
+    "wordCount": 8003,
+    "contentLength": 9444,
+    "fileName": "partnership_1970-bond-巴菲特致合伙人信.md"
   }
 ]

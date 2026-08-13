@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/generate-archive-index.mjs && next dev",
     "build": "node scripts/prebuild.js && next build && if [ -z \"$VERCEL\" ]; then node scripts/prebuild.js --restore; fi",
     "start": "next start",
     "lint": "next lint",

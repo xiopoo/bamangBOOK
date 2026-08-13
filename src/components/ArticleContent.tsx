@@ -18,7 +18,9 @@ interface ArticleContentProps {
  * 页面 header 已显示标题，内容里的 # h1 会重复渲染且字号过大。
  */
 function stripLeadingMetadata(content: string): string {
-  const withoutTitle = content.replace(/^# .+\n\n?/, '')
+  // 剥离 YAML frontmatter（档案层已统一补齐元数据，渲染时不应出现）
+  const withoutFrontmatter = content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
+  const withoutTitle = withoutFrontmatter.replace(/^# .+\n\n?/, '')
 
   // 部分文件在页首标题后带分隔线；正文内的分隔线必须保留。
   return withoutTitle.replace(/^---\n+/, '')
