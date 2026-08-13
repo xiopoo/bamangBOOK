@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Wesco 股东大会',
     description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
-    images: [{ url: '/og-wesco.png', width: 1728, height: 910, alt: 'Wesco 股东大会：查理·芒格中文问答' }],
+    images: [{ url: '/og-wesco.jpg', width: 1200, height: 630, alt: 'Wesco 股东大会：查理·芒格中文问答' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Wesco 股东大会',
     description: '查理·芒格在 Wesco 股东大会上的中文问答与会议笔记，1996—2011。',
-    images: ['/og-wesco.png'],
+    images: ['/og-wesco.jpg'],
   },
 }
 
