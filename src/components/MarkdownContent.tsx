@@ -54,7 +54,12 @@ function normalizeMarkdownStructure(content: string): string {
       }
       if (inFence) return line
 
-      let normalized = line.replace(/^(\s*)(#{1,6})(?=[^\s#])/, '$1$2 ')
+      // 历史导入内容（如网易博客）常把段首排版空格转成半角缩进；
+      // CommonMark 会把行首 4+ 空格或 tab 解析为“缩进代码块”（深色 pre 块），
+      // 导致正文变成大面积黑底且不换行、无法阅读。
+      // 仅对非列表/非引用/非表格的缩进行去掉缩进，还原为普通段落。
+      let normalized = line.replace(/^(\t+| {4,})(?![*+\-\d]|>\s|\|)/, '')
+      normalized = normalized.replace(/^(\s*)(#{1,6})(?=[^\s#])/, '$1$2 ')
       normalized = normalized.replace(/^(\s*\*{2,3})#(?=关于付费星球)/, '$1')
       if (/\*{4,}/.test(normalized)) {
         normalized = normalized.replace(/\*/g, '')
