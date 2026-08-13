@@ -1,3 +1,11 @@
+---
+title: "巴菲特接见 Dardashti 2007"
+content_type: "article"
+person: "巴菲特"
+year: 2007
+entities: "巴菲特, 穆迪, 格雷厄姆, 市盈率, 费雪"
+---
+
 # 巴菲特接见 Dardashti 2007
 
 2007 年 1 月 19 日

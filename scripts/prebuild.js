@@ -265,6 +265,13 @@ function main() {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
+
+  // 股东大会英文原档索引（buffettfaq_cnbc）
+  console.log('\n🔄 生成股东大会英文原档索引...');
+  execSync('node scripts/generate-meetings-index.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
   
   // 同时把索引文件复制到 bloggers_original，防止 Next.js 输出文件追踪时报 ENOENT
   const srcIndex = path.join(BLOGGERS_DIR, INDEX_FILE);

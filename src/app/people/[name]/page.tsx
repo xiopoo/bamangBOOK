@@ -8,6 +8,7 @@ import { resolveEntityLink, resolvePersonContentFile } from '@/lib/entity-resolv
 import { personParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
+import EntityArticleLinks from '@/components/EntityArticleLinks'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -215,6 +216,11 @@ export default function PersonDetailPage({ params }: PageProps) {
           <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">请查看相关年份的股东信获取更多信息</p>
         </div>
       )}
+
+      {/* 延伸阅读：关联文章 */}
+      <div className="max-w-4xl mx-auto">
+        <EntityArticleLinks entityName={personName} />
+      </div>
 
       <div className="max-w-4xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400 pt-8 mt-8 border-t border-gray-100 dark:border-[#2a2a4a]">
         复利书房

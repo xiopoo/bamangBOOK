@@ -1,3 +1,11 @@
+---
+title: "巴菲特：收购 BNSF 铁路"
+content_type: "article"
+person: "巴菲特"
+year: 2009
+entities: "巴菲特, 收购, 铁路运输, 优质企业"
+---
+
 # 巴菲特：收购 BNSF 铁路
 
 2009 年 11 月 13 日
