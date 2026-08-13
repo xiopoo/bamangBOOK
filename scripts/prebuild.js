@@ -174,6 +174,13 @@ function main() {
   }
 
   syncDuanyongpingAttachments();
+
+  // 音频不随 git 入库（365M），构建前按 manifest 补齐本地副本（已有则跳过）
+  console.log('🎧 同步《穷查理宝典》有声书音频...');
+  execSync('node scripts/download-almanack-audio.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
   
   // 清理上一次失败构建残留的 bloggers_original
   if (fs.existsSync(ORIGINAL_DIR)) {

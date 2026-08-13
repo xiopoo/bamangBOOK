@@ -16,6 +16,8 @@ content/bloggers/_inbox/
 content/bloggers_original/
 public/graph-nodes.json
 public/search-index.json
+# 《穷查理宝典》有声书（365M，单文件最大 91M，不入库；构建时由 scripts/download-almanack-audio.mjs 补齐）
+public/audio/
 tsconfig.tsbuildinfo
 .agently-home/
 tmp/

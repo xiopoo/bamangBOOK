@@ -3,7 +3,9 @@ import type { Metadata } from 'next'
 import { BookOpen, ChevronRight, Library, Route } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
+import AlmanackAudioPlayer from '@/components/AlmanackAudioPlayer'
 import { almanackSections } from '@/lib/poor-charlies-almanack'
+import { getAlmanackAudioTracks } from '@/lib/poor-charlies-audio'
 
 export const metadata: Metadata = {
   title: '《穷查理宝典》统一阅读入口',
@@ -40,6 +42,7 @@ const groups = [
 export default function PoorCharliesAlmanackPage() {
   const fullTextCount = almanackSections.filter(section => section.kind === '原书演讲').length
   const translationCount = almanackSections.filter(section => section.kind === '中文译稿').length
+  const audioTracks = getAlmanackAudioTracks()
 
   return (
     <PageContainer maxWidth="6xl">
@@ -98,6 +101,10 @@ export default function PoorCharliesAlmanackPage() {
         本专题以 Stripe Press 2023 年英文删节版的结构为对照。十场演讲采用站内既有中文译稿；
         卷首、前三章、第十一讲和推荐书目依据用户提供的英文文件翻译。涉及专名或疑难表述时，建议同时核对官方英文原文。
       </aside>
+
+      <div className="mb-10">
+        <AlmanackAudioPlayer tracks={audioTracks} />
+      </div>
 
       <div className="space-y-12">
         {groups.map(group => (
