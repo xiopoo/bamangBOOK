@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1968 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1968"
+---
+
 1969 年 1 月 22 日
 
 ## 1968 年的业绩

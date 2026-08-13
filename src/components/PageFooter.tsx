@@ -1,12 +1,13 @@
 import Link from 'next/link'
 
+// 阅读优先重构：页脚只保留阅读内容入口，已移除电商（巴芒文集）、
+// 知识图谱、阅读历史、已购内容等平台功能入口。
 const footerLinks = [
   { href: '/buffett', label: '巴菲特' },
   { href: '/munger', label: '芒格' },
   { href: '/business-history', label: '公司研究' },
   { href: '/concepts', label: '投资方法' },
   { href: '/reading', label: '全部内容' },
-  { href: '/bound-edition', label: '巴芒文集' },
   { href: '/search', label: '全站搜索' },
 ]
 
@@ -28,9 +29,8 @@ export default function PageFooter() {
         <div className="archive-footer__grid">
           <div className="archive-footer__brand">
             <h3>复利书房</h3>
-            <p>巴菲特、芒格与公司研究。</p>
-            <blockquote>阅读原典，形成自己的判断。</blockquote>
-            <Link href="/about" className="archive-footer__byline">由金融街小胖整理 · 了解整理方法 →</Link>
+            <p>巴菲特、芒格与段永平公开资料的阅读档案。</p>
+            <Link href="/about" className="archive-footer__byline">由金融街小胖整理 · 了解来源与整理方法 →</Link>
           </div>
 
           <nav aria-label="页脚阅读入口">
@@ -41,13 +41,10 @@ export default function PageFooter() {
           </nav>
 
           <div className="archive-footer__support">
-            <p>想从头读完，可以查看巴芒文集</p>
+            <p>关于本站</p>
             <p className="archive-footer__support-desc">
-              网站适合查找和交叉阅读，文集适合按人物和年代连续阅读。
+              以巴菲特、芒格与段永平原典为核心，保留来源与完整上下文。
             </p>
-            <Link href="/bound-edition" className="archive-button archive-button--solid archive-footer__support-cta">
-              查看巴芒文集
-            </Link>
             <div className="archive-footer__support-links">
               {aboutLinks.map(link => (
                 <Link key={link.href} href={link.href} {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>

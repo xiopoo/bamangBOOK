@@ -34,7 +34,7 @@ export default function ArchiveList({ items, emptyMessage = '没有符合当前�
         <Link href={item.href} className={styles.row}>
           <span className={styles.year}>{item.year || '待考'}</span>
           <span className={styles.main}><strong>{item.title}</strong>{item.description && <small>{item.description}</small>}<small>{[item.person, item.contentType, `${item.readMinutes} 分钟`].filter(Boolean).join(' · ')}</small></span>
-          <span className={styles.status}>{item.status}</span>
+          {item.status && item.status !== '编辑整理' && <span className={styles.status}>{item.status}</span>}
           <span aria-hidden="true">→</span>
         </Link>
       </li>)}</ol>

@@ -1,3 +1,10 @@
+---
+title: "Wesco 股东大会 2000"
+content_type: "qa"
+person: "芒格"
+year: "2000"
+---
+
 # Wesco 股东大会 2000
 
 ## 1. 伯克希尔的子公司和人才拥有共同的美德

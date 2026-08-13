@@ -201,6 +201,6 @@ sourceUrl: "https://mungermodels.com/models/contrast-misreaction-tendency"
 
 更危险的版本是渐进式的：一种若一次性发生本会一目了然的恶化，因为是分小步到来而无人察觉，因为每一步与上一步相比都只是轻微的对比。芒格援引了那个（虽属杜撰但发人深省的）青蛙意象——把青蛙扔进热水里它会跳出来，但若水缓缓加热，它就会被煮死。应对之道是依据事物的真实价值、或对照一个固定标准来评估它们，而不是拿它跟摆在旁边的东西比较——并且通过把现在的处境同很久以前而非昨天作比较，来留意那些缓慢的漂移。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/contrast-misreaction/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/contrast-misreaction/)。
 
 <!-- munger-archive-merged -->

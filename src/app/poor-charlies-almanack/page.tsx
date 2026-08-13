@@ -63,8 +63,8 @@ export default function PoorCharliesAlmanackPage() {
             按原书顺序连续阅读
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-gray-700 dark:text-gray-300">
-            本专题把站内已有的十场中文演讲重新归入《穷查理宝典》的阅读次序，
-            卷首、前三章和第十一讲已根据文件夹中的译稿整理，并与站内既有译名统一。
+            按 Stripe Press 2023 年英文删节版的结构重新组织：十场演讲沿用站内中文译稿，
+            卷首、前三章与第十一讲为新增中文译稿。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -91,15 +91,15 @@ export default function PoorCharliesAlmanackPage() {
         </div>
         <div className="rounded-2xl border border-gray-100 bg-white p-5 dark:border-dark-border dark:bg-dark-card">
           <Library className="mb-3 text-primary" size={22} />
-          <strong className="block text-2xl text-text dark:text-dark-text">{almanackSections.length}站</strong>
-          <span className="text-sm text-text-muted dark:text-dark-muted">完整连续阅读路线</span>
+          <strong className="block text-2xl text-text dark:text-dark-text">{almanackSections.length}篇</strong>
+          <span className="text-sm text-text-muted dark:text-dark-muted">按原书顺序连续阅读</span>
         </div>
       </section>
 
       <aside className="mb-10 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-4 text-sm leading-7 text-accent dark:border-accent/50 dark:bg-accent/10 dark:text-accent-light">
         <strong>版本与版权说明：</strong>
-        本专题以 Stripe Press 2023 年英文删节版的结构为对照。十场演讲采用站内既有中文译稿；
-        卷首、前三章、第十一讲和推荐书目依据用户提供的英文文件翻译。涉及专名或疑难表述时，建议同时核对官方英文原文。
+        本专题以 Stripe Press 2023 年英文删节版的结构为对照。十场演讲沿用站内既有中文译稿；
+        卷首、前三章、第十一讲与推荐书目依据 Stripe Press 英文原版翻译。专名与疑难表述可对照官方英文原文。
       </aside>
 
       <div className="mb-10">

@@ -42,7 +42,7 @@ export default function DuanReadingArticle({ doc, section, backLabel, contentTyp
     metadata={{ person: '段永平', year, contentType, sourceLabel, sourceUrl, status: '编辑整理', readMinutes: Math.max(1, Math.round(body.length / 900)) }}
     previous={previous ? { href: hrefFor(previous.slug), title: previous.title, meta: previous.date?.slice(0, 10) || previous.year } : null}
     next={next ? { href: hrefFor(next.slug), title: next.title, meta: next.date?.slice(0, 10) || next.year } : null}
-    navigationLabel={`按时间从早到晚的相邻${SECTION_LABEL[section]}`}
+    navigationLabel={`相邻${SECTION_LABEL[section]}`}
   >
     {beforeBody}
     <MarkdownContent content={body} isQA={isQA} />

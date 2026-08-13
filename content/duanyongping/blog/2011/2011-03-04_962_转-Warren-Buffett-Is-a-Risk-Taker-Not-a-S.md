@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/126998120112432115447/
 
-## 正文
-
 Warren Buffett Is a Risk Taker, Not a Sleepy Investor
 2 comments  |  by: Carlos X. Alexandre March 01, 2011  | about: BRK.A
 
@@ -63,7 +61,9 @@ Common yardsticks such as dividend yield, the ratio of price to earnings or to b
 
 I do believe that up to a point, Warren’s driving force was about the money, just like most people. Now it’s about the game.
 
-## 评论区（共 10 条，其中段永平 3 条）
+---
+
+**评论区（共 10 条，其中段永平 3 条）**
 
 ### 1楼 衡山行侠　2011-03-04 10:14
 

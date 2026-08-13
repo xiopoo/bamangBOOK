@@ -194,6 +194,6 @@ sourceUrl: "https://mungermodels.com/models/reason-respecting-tendency"
 
 所以这种倾向是把双刃剑。要用得正派：当你想要别人配合时，就把真实的理由告诉他们；当你想要学习或教授时，就把每一个事实都锚定在其背后的因果之上，因为知识唯有如此才能变得可用。也要提防它：当有人递给你一个"因为"时，要查一查这个理由是否真的站得住脚，因为一个空洞的缘由仅凭其形式就可能骗取你的认同。芒格认为，弄清事物背后真正的理由，是受过良好教育的头脑最核心的习惯之一。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/reason-respecting/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/reason-respecting/)。
 
 <!-- munger-archive-merged -->

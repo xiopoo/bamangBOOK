@@ -23,7 +23,7 @@ export default function PaymentSuccessPage() {
           <Link href="/my-study" className="archive-button archive-button--solid">查看已购内容</Link>
           <Link href="/orders" className="archive-button">查看订单</Link>
         </div>
-        <small>如长时间未确认，请通过微信公众号“金家岭小胖”联系客服，并提供订单编号。</small>
+        <small>如长时间未确认，请通过购买微信 igrape 联系客服，并提供订单编号。</small>
       </main>
     </div>
   )

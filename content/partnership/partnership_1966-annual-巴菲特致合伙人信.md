@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1966 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1966"
+---
+
 1967 年 1 月 25 日
 
 ## 第一个十年

@@ -4,6 +4,7 @@ import path from 'path'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import MarkdownContent from '@/components/MarkdownContent'
+import ReadingProgress from '@/components/ReadingProgress'
 import { RecommendationList } from '@/components/RecommendationList'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
@@ -66,6 +67,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
 
   return (
     <PageContainer maxWidth="4xl">
+      <ReadingProgress historyTitle={conceptName} />
       <JsonLd data={breadcrumbJsonLd([
         { name: '首页', href: '/' },
         { name: '投资概念库', href: '/concepts' },

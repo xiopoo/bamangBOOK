@@ -179,6 +179,6 @@ Webvan的创始人路易斯·博德斯（Louis Borders，对，就是Borders书�
 
 芒格开出的纠正之方,是用冷冰冰的算术去对抗一厢情愿的想法——也就是帕斯卡和费马推演出来的那套初等概率数学。当乐观情绪在替你做预测时,你应当刻意去查阅基准率:像这样的事业实际有多大概率成功,这一类项目有多少能按时按预算完成。那些数字并不光鲜,通常还令人失望,而这恰恰是人们对其避而不看的原因,也正因如此,逼自己去看才成为一种持久的优势。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/overoptimism/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/overoptimism/)。
 
 <!-- munger-archive-merged -->

@@ -16,11 +16,11 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201262112929448/
 
-## 正文
-
 http://www.yinyuetai.com/video/140612
 
-## 评论区（共 11 条，其中段永平 1 条）
+---
+
+**评论区（共 11 条，其中段永平 1 条）**
 
 ### 1楼 海之鱼　2012-07-02 12:34
 

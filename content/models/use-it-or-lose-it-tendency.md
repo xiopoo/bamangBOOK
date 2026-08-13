@@ -176,6 +176,6 @@ NASA在1990年代进行的一系列研究量化了这种退化。研究发现，
 
 芒格的药方直接由这一诊断而来。要刻意地运用你那些重要的模型,让它们保持在活跃使用之中,哪怕面对的问题用个省事的捷径就能搞定也要如此,因为正是这种练习,才让工具在你真正需要时还能用得上。他还主张把最重要的那些观念过度学习到融会贯通的地步,这样它们才会被掌握得更牢固、衰退得更缓慢。整个"学习机器"的理想——每晚睡觉时都比早晨更聪明一点——靠的正是持续的使用,而非一次性的获取。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/use-it-or-lose-it/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/use-it-or-lose-it/)。
 
 <!-- munger-archive-merged -->

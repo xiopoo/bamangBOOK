@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/126998120103255946401/
 
-## 正文
-
 如果有谁还不太理解什么叫价值投资，看看巴菲特1984年写的这篇东西或许会很有帮助。这里的是节选，没找到中文的，不好意思。
 
 哈哈，刚刚发现有人给翻译过来了，真是非常谢谢啊。http://blog.sina.com.cn/s/blog_600ae2530100gnoc.html
@@ -124,7 +122,9 @@ Tables 1-9 follow:
 
 If you have a high-speed internet connection, you may prefer to read this version of the speech (a 1.6 MB .pdf file), which has all of the tables.
 
-## 评论区（共 190 条，其中段永平 50 条）
+---
+
+**评论区（共 190 条，其中段永平 50 条）**
 
 ### 1楼 回复　2010-04-02 06:19
 

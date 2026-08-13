@@ -1,3 +1,10 @@
+---
+title: "巴菲特致股东的信 1970"
+content_type: "letter"
+person: "巴菲特"
+year: "1970"
+---
+
 伯克希尔·哈撒韦公司 (Berkshire Hathaway Inc.)
 
 1971 年 3 月 15 日

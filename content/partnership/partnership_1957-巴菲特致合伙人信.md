@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1957"
+content_type: "partnership"
+person: "巴菲特"
+year: "1957"
+---
+
 沃伦·E·巴菲特 (Warren E. Buffett)
 
 内布拉斯加州奥马哈市安德伍德大道 5202 号

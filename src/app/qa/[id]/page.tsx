@@ -45,13 +45,12 @@ export default function QADetailPage({ params }: PageProps) {
     <JsonLd data={breadcrumbJsonLd([{ name: '首页', href: '/' }, { name: '股东大会问答', href: '/qa' }, { name: doc.title }])} />
     <ReadingArticleShell
       title={doc.title}
-      subtitle="股东大会现场问答中文整理"
       backHref="/qa"
       backLabel="返回股东大会问答目录"
       metadata={{ person: '沃伦·巴菲特', year: doc.year || undefined, contentType: '股东大会', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
       previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
       next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
-      navigationLabel="按时间从早到晚的相邻股东大会问答"
+      navigationLabel="相邻股东大会问答"
       related={<RelatedArticles source="qa" fileName={fileName} />}
     ><MarkdownContent content={doc.content} isQA /></ReadingArticleShell>
   </>

@@ -183,6 +183,6 @@ sourceUrl: "https://mungermodels.com/models/doubt-avoidance-tendency"
 
 切实可行的防御，是认清「不知道」带来的不适只是一种感受，而非一项事实，并明白有些决定恰恰是靠刻意在怀疑中多停留一阵才得以改善的。芒格之所以推崇法官和科学家，正是因为他们的职业受过训练，会在证据齐备之前悬置判断。当你感到那股「赶紧定了吧」的痒——尤其是在压力或困惑之下——这股痒是叫你慢下来的信号，而不是叫你加速。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/doubt-avoidance/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/doubt-avoidance/)。
 
 <!-- munger-archive-merged -->

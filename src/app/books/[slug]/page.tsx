@@ -45,7 +45,7 @@ export default function BookDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
-      <ReadingProgress />
+      <ReadingProgress historyTitle={book.title} />
       <header className="bg-bg-card dark:bg-dark-card border-b border-primary/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4">
           <div className="flex items-center justify-between gap-2">
@@ -53,7 +53,7 @@ export default function BookDetailPage({ params }: PageProps) {
               <Link href="/books" className="text-sm text-primary hover:text-primary-light transition-colors mb-1 inline-flex items-center gap-1">
                 ← 返回拆书列表
               </Link>
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-primary dark:text-primary-light">{book.title}</h1>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text dark:text-dark-text tracking-tight">{book.title}</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
                 <span>📚 {book.category}</span>
                 {book.originalAuthor && <span>· 原著：{book.originalAuthor}</span>}
@@ -65,7 +65,7 @@ export default function BookDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 md:py-10">
         {/* 书籍信息卡 */}
         <div className="bg-white dark:bg-dark-card rounded-card shadow-card p-4 sm:p-6 mb-6 flex flex-wrap items-center gap-x-8 gap-y-3">
           <div className="flex items-center gap-2">
@@ -91,7 +91,7 @@ export default function BookDetailPage({ params }: PageProps) {
 
         <div className="reading-content-layout">
           <main className="reading-content-layout__main min-w-0">
-            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-10 shadow-card rounded-card">
+            <article data-toc-content className="bg-bg-card dark:bg-dark-card p-4 sm:p-6 md:p-8 shadow-card rounded-card">
               <MarkdownContent content={book.content} />
             </article>
 

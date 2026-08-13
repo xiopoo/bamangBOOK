@@ -16,12 +16,12 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/126998120136210059414/
 
-## 正文
-
 https://petitions.whitehouse.gov/petition/allow-tesla-motors-sell-directly-consumers-all-50-states/bFN7NHQR
 喜欢tesla的快来投一票。七月五号是最后一天。
 
-## 评论区（共 226 条，其中段永平 40 条）
+---
+
+**评论区（共 226 条，其中段永平 40 条）**
 
 ### 1楼 张信华　2013-07-02 22:53
 

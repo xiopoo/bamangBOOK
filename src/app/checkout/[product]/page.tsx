@@ -55,10 +55,10 @@ export default function CheckoutPage({ params }: { params: { product: string } }
         <section className="checkout-block checkout-manual">
           <div className="checkout-block__heading"><span>03</span><div><h2>当前购买方式</h2><p>在线收银台启用前，可通过客服确认产品与交付。</p></div></div>
           <div className="checkout-manual__content">
-            <Image src="/qrcode.jpeg" alt={`微信公众号"金家岭小胖"二维码`} width={132} height={132} />
+            <Image src="/wechat-purchase-qr.jpg" alt="复利书房购买微信二维码" width={132} height={132} />
             <div>
-              <strong>扫码联系&ldquo;复利书房主理人&rdquo;</strong>
-              <p>关注微信公众号&ldquo;金家岭小胖&rdquo;，发送&ldquo;巴芒文集 + {product.shortTitle}&rdquo;。客服会在付款前再次确认价格、版本、EPUB 交付方式、更新范围与退款条件。</p>
+              <strong>扫码添加购买微信</strong>
+              <p>添加购买微信 igrape，备注&ldquo;复利书房&rdquo;，发送&ldquo;{product.shortTitle}&rdquo;。确认书名与付款后，{product.deliveryType} 文件会直接通过微信发送；客服会在付款前再次确认价格、版本、更新范围与退款条件。</p>
               <small>请勿向非官方页面提交付款信息；当前页面不会收集银行卡资料。</small>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function CheckoutPage({ params }: { params: { product: string } }
             <Link href="/terms">服务条款</Link>
             <Link href="/privacy">隐私政策</Link>
           </div>
-          <p><MessageCircle size={16} />客服：微信公众号&ldquo;金家岭小胖&rdquo;</p>
+          <p><MessageCircle size={16} />客服：购买微信 igrape</p>
         </section>
       </main>
     </div>

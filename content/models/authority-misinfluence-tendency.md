@@ -202,6 +202,6 @@ sourceUrl: "https://mungermodels.com/models/authority-misinfluence-tendency"
 
 当权威本身是错的、被误解的，或仅仅是表面上的权威时，危险便更加尖锐——一位在自己真正专长之外却信心十足的"专家"，或是一道被下属误读的指令，因为下属总假定上司必定最清楚。芒格的防御之道是：评估权威所言的实质内容，而非因其职位高低便盲从；当权威的命令与你自己清晰的判断相冲突时，尤其要保持警惕；而作为领导者，则要主动鼓励下属提出异议，因为一种盲目服从的文化，最终会把飞机一头撞向地面。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/authority-misinfluence/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/authority-misinfluence/)。
 
 <!-- munger-archive-merged -->

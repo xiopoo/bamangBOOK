@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812010313113629828/
 
-## 正文
-
 一个朋友刚刚发给我的，大家共享。这个没有中文，不好意思。
 
 翻译件
@@ -220,7 +218,9 @@ Other
 
 · As a general observation, Warren Buffett was one of the nicest, warmest and most generous people that I have met. He treated all of us to Piccolo Pete’s for Chicken Parm and NY strip and Root Beer floats for desert. Afterwards he spent 1+ hours taking photos with students from Stanford, Minnesota, Indiana, Emory, Smart Women in Securities and MIT.
 
-## 评论区（共 965 条，其中段永平 127 条）
+---
+
+**评论区（共 965 条，其中段永平 127 条）**
 
 ### 1楼 xlli777　2010-04-13 11:52
 

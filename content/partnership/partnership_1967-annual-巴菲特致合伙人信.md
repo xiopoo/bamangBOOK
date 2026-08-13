@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1967 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1967"
+---
+
 1968 年 1 月 24 日
 
 ## 1967 年业绩

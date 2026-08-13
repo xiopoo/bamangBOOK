@@ -1,3 +1,8 @@
+---
+title: "B夫人（Mrs. B / Rose Blumkin）"
+content_type: "person"
+---
+
 Mrs. B / Rose Blumkin 人物
 
 # B夫人（Mrs. B / Rose Blumkin）

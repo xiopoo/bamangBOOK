@@ -3,14 +3,9 @@ title: "2004（左右）-段永平北大总裁班演讲：企业的诚信意识"
 author: "段永平"
 year: "unknown"
 platform: "演讲/采访"
-source: "整理自公开视频/文字记录（@杨不为）"
+source: "整理自公开视频/文字记录"
 category: "talks"
 ---
-> URLs:   https://www.bilibili.com/video/BV1XD4y197yr     
-> Link:    
-> Category: #2-对外采访、演讲    
-> Tag:    
-> Editor: @杨不为     
 
 
 ![](attachments/PixPin_2026-01-20_10-58-12.png)  

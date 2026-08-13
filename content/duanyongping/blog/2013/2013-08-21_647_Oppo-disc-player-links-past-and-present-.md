@@ -16,11 +16,11 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/126998120137212258832/
 
-## 正文
-
 http://www.usatoday.com/story/tech/personal/2013/08/20/oppo-disc-player-review/2653555/
 
-## 评论区（共 74 条，其中段永平 20 条）
+---
+
+**评论区（共 74 条，其中段永平 20 条）**
 
 ### 1楼 wusowzp　2013-08-26 04:48
 

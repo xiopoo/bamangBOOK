@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1965 年报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1965"
+---
+
 1966 年 1 月 20 日
 
 ## 1965 年业绩

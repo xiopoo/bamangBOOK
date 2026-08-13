@@ -12,6 +12,7 @@ export default function ArticleTableOfContents() {
   const [headings, setHeadings] = useState<TocItem[]>([])
   const [activeId, setActiveId] = useState('')
   const [isOpen, setIsOpen] = useState(false) // 移动端折叠状态
+  const [isTruncated, setIsTruncated] = useState(false) // 小节标题超出容量上限
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
@@ -19,11 +20,27 @@ export default function ArticleTableOfContents() {
     const contentRoot = document.querySelector('[data-toc-content]')
     if (!contentRoot) return
 
-    const articleHeadings = contentRoot.querySelectorAll('h2, h3, h4')
+    // P2-03 修复：目录容量保护。QA/访谈等长实录会把每个问题自动升为 h3
+    //（MarkdownContent isQA 模式），一篇数十问的实录会生成几十条目录，展开后
+    // 难以扫读。策略：h2 章节级标题全收；h3/h4 小节级标题最多保留 MAX_SUB_HEADINGS 条。
+    const MAX_SUB_HEADINGS = 24
+
+    const articleHeadings = Array.from(contentRoot.querySelectorAll('h2, h3, h4'))
     const headingItems: TocItem[] = []
+    const observedHeadings: HTMLElement[] = []
     const usedIds = new Set<string>()
+    let subHeadingCount = 0
+    let truncated = false
 
     articleHeadings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName[1])
+      if (level >= 3) {
+        if (subHeadingCount >= MAX_SUB_HEADINGS) {
+          truncated = true
+          return
+        }
+        subHeadingCount += 1
+      }
       let id = heading.getAttribute('id')
       const baseId = id || `heading-${index}`
       let uniqueId = baseId
@@ -38,11 +55,13 @@ export default function ArticleTableOfContents() {
       headingItems.push({
         id,
         text: heading.textContent || '',
-        level: parseInt(heading.tagName[1]),
+        level,
       })
+      observedHeadings.push(heading as HTMLElement)
     })
 
     setHeadings(headingItems)
+    setIsTruncated(truncated)
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -65,7 +84,8 @@ export default function ArticleTableOfContents() {
       }
     )
 
-    articleHeadings.forEach((heading) => {
+    // 只观察已收录进目录的标题，被容量截断的小节标题不参与高亮
+    observedHeadings.forEach((heading) => {
       observerRef.current?.observe(heading)
     })
 
@@ -136,6 +156,9 @@ export default function ArticleTableOfContents() {
             )
           })}
         </nav>
+        {isTruncated && (
+          <p className="article-toc__truncated">目录较长，仅显示部分小节标题</p>
+        )}
       </div>
     </aside>
   )

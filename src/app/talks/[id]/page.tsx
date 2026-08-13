@@ -34,13 +34,12 @@ export default function TalkDetailPage({ params }: PageProps) {
 
   return <ReadingArticleShell
     title={doc.title}
-    subtitle="演讲原典中文阅读整理"
     backHref="/talks"
     backLabel="返回演讲目录"
     metadata={{ person: personName, year: doc.year || undefined, contentType: '演讲', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
     previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
     next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
-    navigationLabel="按时间从早到晚的相邻演讲"
+    navigationLabel="相邻演讲"
     related={<RelatedArticles source="talks" fileName={fileName} />}
   ><MarkdownContent content={doc.content} /></ReadingArticleShell>
 }

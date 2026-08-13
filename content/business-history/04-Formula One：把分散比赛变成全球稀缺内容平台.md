@@ -1,3 +1,8 @@
+---
+title: "Formula One：把分散比赛变成全球稀缺内容平台"
+content_type: "article"
+---
+
 # Formula One：把分散比赛变成全球稀缺内容平台
 
 ## 一、研究导读与核心结论

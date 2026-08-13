@@ -1,3 +1,10 @@
+---
+title: "巴菲特致股东的信 2021"
+content_type: "letter"
+person: "巴菲特"
+year: "2021"
+---
+
 伯克希尔·哈撒韦公司
 
 致伯克希尔·哈撒韦公司 (Berkshire Hathaway Inc.) 股东们：

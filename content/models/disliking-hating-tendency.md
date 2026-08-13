@@ -183,6 +183,6 @@ Robert在那次会议之后，把那家零售公司放进了他脑中的“黑�
 
 芒格的意思并不是说你永远不该厌恶任何人——有些人和有些观念确实活该被厌恶。真正的风险在于，这份厌恶会污染你对事实、以及对那位被厌恶者周遭一切事物的认知，使你仅仅因为某个观点出自某人之口就将其否定。所需的修炼，是逼着自己公允地陈述对方的论点，并认真对待一个有道理的论证——哪怕它出自你所无法忍受的人。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/disliking-hating/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/disliking-hating/)。
 
 <!-- munger-archive-merged -->

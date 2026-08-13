@@ -212,6 +212,6 @@ Craigslist以接近零的成本提供了分类广告的替代品。Google让广�
 
 其中最要紧的词是"持久"。许许多多公司享有的只是一种看起来像护城河的暂时优势,一旦技术或品味发生变化便会蒸发殆尽;芒格对这类东西心存戒备。真正难下的判断,是一项优势在十年、二十年后是否依然屹立不倒,而大多数都不会——这正是为什么真正拥有护城河的企业如此稀有,一旦找到便值得长期持有。这个模型与"屁股坐稳"式投资直接相关:你之所以能买下一家了不起的企业然后干脆一直持有,正是因为在你无所作为之时,护城河替你做着保护回报的活儿。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/moats-and-durable-advantage/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/moats-and-durable-advantage/)。
 
 <!-- munger-archive-merged -->

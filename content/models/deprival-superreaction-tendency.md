@@ -196,6 +196,6 @@ sourceUrl: "https://mungermodels.com/models/deprival-superreaction-tendency"
 
 芒格的告诫是：要认识到一笔潜在损失在感受上的大小被这种倾向夸大了，并据实际的利害得失而非那种失衡的感受来做决定。同一洞见还有一种进攻性的用途：人们会凶猛地捍卫自认为属于自己的东西，因此把某件事框定为一笔需要避免的损失，远比框定为一笔需要赢取的收益更能激励人——这是一根值得理解的杠杆，既为利用它，也为抵御它。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/deprival-superreaction/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/deprival-superreaction/)。
 
 <!-- munger-archive-merged -->

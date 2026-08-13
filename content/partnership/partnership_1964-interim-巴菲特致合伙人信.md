@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1964 中报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1964"
+---
+
 巴菲特合伙基金有限公司
 
 810 基威特广场

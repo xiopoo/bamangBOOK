@@ -16,14 +16,14 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201011115217516/
 
-## 正文
-
 Munger Talk--University of Michigan
 http://rossmedia.bus.umich.edu/rossmedia/SilverlightPlayer/Default.aspx?peid=4d215177cbe44b1e8e94d0dd68f5058f
 
 "If you take out top 20 investments away from Berkshire Hathaway, our record is a joke.   Good opportunity comes once about every two years.  Swing big and decisively."--Charlie Munger
 
-## 评论区（共 383 条，其中段永平 10 条）
+---
+
+**评论区（共 383 条，其中段永平 10 条）**
 
 ### 1楼 段永平　2010-12-11 05:27
 

@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/126998120119674056326/
 
-## 正文
-
 Stanford Report, June 14, 2005
 'You've got to find what you love,' Jobs says
 This is a prepared text of the Commencement address delivered by Steve Jobs, CEO of Apple Computer and of Pixar Animation Studios, on June 12, 2005.
@@ -49,7 +47,9 @@ Stewart and his team put out several issues of?The Whole Earth Catalog, and then
 Stay Hungry. Stay Foolish.
 Thank you all very much.
 
-## 评论区（共 2 条，其中段永平 0 条）
+---
+
+**评论区（共 2 条，其中段永平 0 条）**
 
 ### 1楼 bigfigure　2011-10-08 10:28
 

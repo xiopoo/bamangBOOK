@@ -191,6 +191,6 @@ sourceUrl: "https://mungermodels.com/models/social-proof-tendency"
 
 在投资中，社会认同驱动着泡沫与恐慌：价格因为在上涨而上涨、人们蜂拥而入，随后又因为在下跌而崩盘、人们仓皇逃离，人群的行为取代了对价值的任何独立估算。芒格的防御之道是：当你已经做过自己的思考时，要学会无视人群；对任何仅仅因为众人持有、你才持有的结论，要格外警惕。他珍视那种能特立独行的性情——在别人恐惧时贪婪，在别人贪婪时恐惧——恰恰因为这与这种倾向背道而驰。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/social-proof/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/social-proof/)。
 
 <!-- munger-archive-merged -->

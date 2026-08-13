@@ -192,6 +192,6 @@ sourceUrl: "https://mungermodels.com/models/simple-pain-avoiding-psychological-d
 
 芒格想说的是,你无法去管理一个你拒绝正视的问题,所以否认尽管能起保护作用,却往往正是把一次本可挺过去的挫折变成一场灾难的元凶。要养成的纪律是,训练自己直截了当且趁早去面对那些艰难的事实,尤其是关于自身错误、金钱与健康的那些——恰恰因为这些事实正是大脑最想对你隐瞒的。要逮住否认,就得留心那些真相最伤人的处境,然后在那里看得最仔细。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/psychological-denial/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/psychological-denial/)。
 
 <!-- munger-archive-merged -->

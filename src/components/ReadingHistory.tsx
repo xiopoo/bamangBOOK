@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ReadingProgress, getAllProgress, clearProgress } from '@/lib/reading-progress'
+import { logger } from '@/lib/logger'
 
 const TYPE_LABELS: Record<string, string> = {
   letter: '股东信',
@@ -10,6 +11,18 @@ const TYPE_LABELS: Record<string, string> = {
   concept: '概念',
   company: '公司',
   people: '人物',
+  qa: '问答',
+  talks: '演讲',
+  interviews: '访谈',
+  model: '思维模型',
+  almanack: '穷查理宝典',
+  book: '拆书',
+  column: '专栏',
+  blogger: '博主文章',
+  'business-history': '商业史',
+  duanyongping: '段永平',
+  wesco: 'Wesco 问答',
+  archive: '芒格原典',
 }
 
 const TYPE_COLORS: Record<string, string> = {
@@ -18,6 +31,18 @@ const TYPE_COLORS: Record<string, string> = {
   concept: 'bg-primary/10 text-primary',
   company: 'bg-primary/10 text-primary',
   people: 'bg-primary/10 text-primary',
+  qa: 'bg-primary/10 text-primary',
+  talks: 'bg-primary/10 text-primary',
+  interviews: 'bg-primary/10 text-primary',
+  model: 'bg-primary/10 text-primary',
+  almanack: 'bg-primary/10 text-primary',
+  book: 'bg-primary/10 text-primary',
+  column: 'bg-primary/10 text-primary',
+  blogger: 'bg-primary/10 text-primary',
+  'business-history': 'bg-primary/10 text-primary',
+  duanyongping: 'bg-primary/10 text-primary',
+  wesco: 'bg-primary/10 text-primary',
+  archive: 'bg-primary/10 text-primary',
 }
 
 function formatTime(isoString: string): string {
@@ -40,8 +65,19 @@ function formatTime(isoString: string): string {
 }
 
 function getDocLink(item: ReadingProgress): string {
+  // P1-03：ReadingProgress 全局模式写入的条目 letterId 为完整路径（如 "qa/2006-07"），
+  // 直接以根路径还原即可；旧条目（letterId 为年份/名称）走下方类型分支。
+  if (item.letterId.includes('/')) return `/${item.letterId}`
   switch (item.letterType) {
-    case 'partnership':
+    case 'partnership': {
+      const href = `/partnership/${item.letterId}`
+      logger.info('reading-history:getDocLink', '合伙人信历史条 → 跳转合伙人信详情', {
+        letterType: item.letterType,
+        letterId: item.letterId,
+        href,
+      })
+      return href
+    }
     case 'letter':
       return `/letters/${item.letterId}`
     case 'concept':
@@ -51,6 +87,10 @@ function getDocLink(item: ReadingProgress): string {
     case 'people':
       return `/people/${encodeURIComponent(item.letterId)}`
     default:
+      logger.warn('reading-history:getDocLink', '未知 letterType，回退到股东信路由', {
+        letterType: item.letterType,
+        letterId: item.letterId,
+      })
       return `/letters/${item.letterId}`
   }
 }
@@ -87,7 +127,7 @@ export default function ReadingHistory({ filterType, onDataChange }: ReadingHist
           暂无阅读记录
         </h2>
         <p className="text-gray-500">
-          开始阅读一篇股东信，进度将自动保存到这里
+          开始阅读，进度将自动保存到这里
         </p>
       </div>
     )

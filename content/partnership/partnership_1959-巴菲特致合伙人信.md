@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1959"
+content_type: "partnership"
+person: "巴菲特"
+year: "1959"
+---
+
 沃伦·E·巴菲特
 
 内布拉斯加州奥马哈市恩德伍德大道5202号

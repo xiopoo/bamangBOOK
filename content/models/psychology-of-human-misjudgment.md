@@ -87,6 +87,6 @@ sourceUrl: "https://mungerarchive.com/zh/mental-models/psychology-of-human-misju
 
 ## 资料来源
 
-本文整理自 [Munger Archive](https://mungerarchive.com/zh/mental-models/psychology-of-human-misjudgment/)，并已纳入复利书房统一的多元思维模型索引。
+本文整理自 [Munger Archive](https://mungerarchive.com/zh/mental-models/psychology-of-human-misjudgment/)
 
 <!-- munger-archive-merged -->

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Brain, BookOpen, ChevronRight } from 'lucide-react'
 import type { Person, RelatedPerson } from '@/lib/people'
 import type { ModelMeta } from '@/lib/models'
+import { logger } from '@/lib/logger'
 
 interface MungerContentProps {
   person: Person
@@ -96,6 +97,11 @@ export default function MungerContent({
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
+
+  logger.info('munger-content:concepts', '渲染核心投资概念入口，统一指向 /concepts 体系', {
+    count: concepts.length,
+    firstHref: concepts[0] ? `/concepts/${encodeURIComponent(concepts[0].name)}` : null,
+  })
 
   return (
     <>
@@ -371,7 +377,7 @@ export default function MungerContent({
             {concepts.map((concept) => (
               <Link
                 key={concept.name}
-                href={`/munger/concept/${concept.name}`}
+                href={`/concepts/${encodeURIComponent(concept.name)}`}
                 className="block p-3 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:border-primary/20 transition-all group"
               >
                 <div className="flex items-center justify-between">

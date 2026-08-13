@@ -1,6 +1,14 @@
+// 全站可记录阅读历史的文档类型。除信件类（letter/partnership/概念/公司/人物，由
+// useReadingProgress 写入）外，其余为 ReadingProgress 全局模式按路由推导的补充类型。
+export type ReadingProgressType =
+  | 'letter' | 'partnership' | 'concept' | 'company' | 'people'
+  | 'qa' | 'talks' | 'interviews' | 'model' | 'almanack'
+  | 'book' | 'column' | 'blogger' | 'business-history'
+  | 'duanyongping' | 'wesco' | 'archive'
+
 export interface ReadingProgress {
   letterId: string
-  letterType: 'letter' | 'partnership' | 'concept' | 'company' | 'people'
+  letterType: ReadingProgressType
   scrollPosition: number
   totalHeight: number
   paragraphIndex: number

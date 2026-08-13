@@ -1,3 +1,8 @@
+---
+title: "Meta：从社交图谱到AI推荐引擎"
+content_type: "article"
+---
+
 # Meta：从社交图谱到AI推荐引擎
 
 ## 一、研究导读与核心结论

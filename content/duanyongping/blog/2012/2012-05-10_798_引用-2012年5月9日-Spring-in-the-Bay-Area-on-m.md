@@ -16,11 +16,11 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812012410115352135/
 
-## 正文
-
 Bay Bridge and Treasure Island, San Francisco 旧金山湾桥和珍宝岛
 
-## 评论区（共 14 条，其中段永平 3 条）
+---
+
+**评论区（共 14 条，其中段永平 3 条）**
 
 ### 1楼 段永平　2012-05-10 11:56
 

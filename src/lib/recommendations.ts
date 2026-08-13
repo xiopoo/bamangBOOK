@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import { companyIds, conceptIds, resolvePersonRouteId } from './entity-resolver'
+import { logger } from './logger'
 
 export interface Recommendation {
   id: string
@@ -45,6 +46,11 @@ const companies = indexData.companies
 const cooccurrence = indexData.cooccurrence
 
 export function getRelatedConcepts(targetConcept: string, limit: number = 5): Recommendation[] {
+  logger.info('recommendations:getRelatedConcepts', '计算关联概念', {
+    targetConcept,
+    limit,
+    cooccurrenceSize: cooccurrence.length,
+  })
   const related: Recommendation[] = []
   
   cooccurrence.forEach((item: ConceptCooccurrence) => {
@@ -65,7 +71,20 @@ export function getRelatedConcepts(targetConcept: string, limit: number = 5): Re
     }
   })
   
-  return related.sort((a: Recommendation, b: Recommendation) => b.relevance - a.relevance).slice(0, limit)
+  const result = related.sort((a: Recommendation, b: Recommendation) => b.relevance - a.relevance).slice(0, limit)
+  if (result.length === 0) {
+    logger.warn('recommendations:getRelatedConcepts', '未找到共现关联，返回空列表（检查 content/index.json 的 cooccurrence）', {
+      targetConcept,
+      cooccurrenceSize: cooccurrence.length,
+    })
+  } else {
+    logger.info('recommendations:getRelatedConcepts', '关联概念已生成', {
+      targetConcept,
+      count: result.length,
+      top: result.slice(0, 3).map((r: Recommendation) => r.id),
+    })
+  }
+  return result
 }
 
 export function getRecommendedConceptsByYear(year: number, limit: number = 6): Recommendation[] {

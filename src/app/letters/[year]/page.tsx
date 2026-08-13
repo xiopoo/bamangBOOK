@@ -84,11 +84,9 @@ export default async function LetterDetailPage({ params }: PageProps) {
       .filter((item): item is { id: string; name: string; count: number } => Boolean(item.name)),
     companies: rawGraphData.companies.filter(item => companyIds.has(item.name)),
   } : null
-  const topConcepts = graphData?.concepts?.slice(0, 5) || []
-  const relatedPeople = graphData?.people || []
-  const relatedCompanies = graphData?.companies || []
 
-  const showKnowledgePanel = topConcepts.length > 0 || relatedPeople.length > 0 || relatedCompanies.length > 0
+  // 阅读优先重构：移除页面顶部的知识图谱面板，正文中的概念/人物/公司交叉链接
+  // 仍由 LetterReader 依据 graphData 渲染，阅读与查找互不干扰。
 
   return (
     <div className="min-h-screen bg-bg-card dark:bg-dark-bg">
@@ -105,7 +103,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
               <Link href="/letters" className="text-sm text-primary hover:text-primary-light transition-colors mb-2 inline-flex items-center gap-1">
                 ← 返回信全集
               </Link>
-              <h1 className="text-4xl font-serif font-bold text-primary dark:text-primary-light">{year}年</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-text dark:text-dark-text tracking-tight">{year}年</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted">
                 巴菲特致伯克希尔股东的信
                 {isMultiLetter && `（共${letterData.letters?.length}封）`}
@@ -118,55 +116,6 @@ export default async function LetterDetailPage({ params }: PageProps) {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-5 md:py-8">
-        {showKnowledgePanel && (
-          <div className="knowledge-panel">
-            <h2 className="knowledge-panel__title">知识图谱</h2>
-            {topConcepts.length > 0 && (
-              <div className="mb-5">
-                <h3 className="knowledge-panel__label">核心概念</h3>
-                <div className="flex flex-wrap gap-2">
-                  {topConcepts.map((concept) => (
-                    <Link
-                      key={concept.id}
-                      href={`/concepts/${encodeURIComponent(concept.name)}`}
-                      className="knowledge-panel__tag"
-                    >
-                      {concept.name}
-                      <span className="opacity-70 ml-1">({concept.count})</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-            <div className="grid md:grid-cols-2 gap-5">
-              {relatedPeople.length > 0 && (
-                <div>
-                  <h3 className="knowledge-panel__label">人物</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {relatedPeople.slice(0, 5).map((person: any) => (
-                      <Link key={person.id} href={`/people/${encodeURIComponent(person.name)}`} className="knowledge-panel__tag">
-                        {person.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {relatedCompanies.length > 0 && (
-                <div>
-                  <h3 className="knowledge-panel__label">公司</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {relatedCompanies.slice(0, 5).map((company: any) => (
-                      <Link key={company.id} href={`/companies/${encodeURIComponent(company.name)}`} className="knowledge-panel__tag">
-                        {company.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
         <div className="reading-content-layout">
           <main className="reading-content-layout__main min-w-0">
             <LetterReader
@@ -183,7 +132,6 @@ export default async function LetterDetailPage({ params }: PageProps) {
         </div>
 
         {/* —— 上下篇（年份）导航：统一使用 CN Reading 阅读规范样式 —— */}
-        <p className="archive-sort-note">按时间从早到晚 · 上一封为前一年，下一封为后一年</p>
         <nav className="reading-nav-pair reading-adjacent" aria-label="相邻股东信导航">
           {yearNum > 1956 ? (
             <Link

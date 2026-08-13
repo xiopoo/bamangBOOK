@@ -254,6 +254,6 @@ Lollapalooza倾向与前24个心理倾向中的每一个都有关联——它本
 
 这里的教训是：你无法通过孤立地审视各种偏差，来理解那些重大的结果——无论是灾难还是势不可挡的成功——因为现实会把它们组合在一起。鲁拉帕路萨既可以朝坏的方向发力（一桩骗局得以存续，正是因为几种倾向一齐压制了所有人的怀疑），也可以朝好的方向发力（一种优秀的文化，其中协调一致的各种力量彼此强化着信任与努力）。防御之道，以及芒格之所以讲授整份清单的理由，就是学会察觉何时有多种倾向正在同一时刻向你汇聚，因为那恰恰是判断失误最严重、利害也最高的时候。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/lollapalooza/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/lollapalooza/)。
 
 <!-- munger-archive-merged -->

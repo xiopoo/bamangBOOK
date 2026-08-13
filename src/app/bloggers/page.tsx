@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import CatalogStats from '@/components/CatalogStats'
-import { getBloggers } from '@/lib/bloggers'
+import { getBloggers, getAllBloggerTags } from '@/lib/bloggers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 }
 
 const BLOGGER_DESCRIPTIONS: Record<string, string> = {
-  '在苍茫中传灯': '姚斌的投资随笔，涵盖价值投资、复杂科学、商业思维等多元领域，以跨界视角解读投资本质。',
-  '方伟看十年': '投资向善的产品与投资分析，聚焦商业模式、企业护城河和长期价值，以产品经理视角看投资。',
-  '梁孝永康': '以长期价值投资为核心，分享公司分析、投资理念与人生感悟，文字质朴，思考深邃。',
-  '唐僧的碎碎念': '金融从业者的多元思考，横跨宏观经济、债券市场、个人成长与社会观察，犀利幽默，不拘一格。',
+  '在苍茫中传灯': '姚斌的长期投资随笔，跨度十余年，覆盖价值投资、商业史与公司案例。',
+  '方伟看十年': '以产品与商业分析见长的投资写作，关注公司质量与长期价值。',
+  '梁孝永康': '公司分析与投资理念的长期记录，从个股案例到价值投资方法。',
+  '唐僧的碎碎念': '金融从业者的多元随笔，涉及宏观、债券市场、投资与个人成长。',
 }
 
 export default function BloggersPage() {
@@ -39,7 +39,7 @@ export default function BloggersPage() {
       <CatalogStats items={[
         { value: bloggers.length, label: '位博主' },
         { value: totalArticles.toLocaleString(), label: '篇文章' },
-        { value: 12, label: '个主题标签' },
+        { value: getAllBloggerTags().length, label: '个主题标签' },
       ]} />
 
       {/* Blogger cards */}

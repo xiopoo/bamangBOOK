@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/12699812012101785244698/
 
-## 正文
-
 Stocks
 
 Bad news from Europe, macro news and other headlines would not cause you to sell a farm run by capable people, or an apartment house where you had rents rising. You wouldn't sell it just because there is some bad news. A McDonald franchisee that has a good business wouldn't sell the business because of what is in the news. You know you will do well over time and that should be the same with stocks.

@@ -1,3 +1,8 @@
+---
+title: "Epic Systems：把医院最难替换的软件做成四十年复利"
+content_type: "article"
+---
+
 # Epic Systems：把医院最难替换的软件做成四十年复利
 
 ## 一、研究导读与核心结论

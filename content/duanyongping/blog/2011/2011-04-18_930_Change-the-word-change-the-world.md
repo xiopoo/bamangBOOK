@@ -16,11 +16,11 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201131804546170/
 
-## 正文
-
 http://www.tudou.com/programs/view/uGSa4uqu9fM/
 
-## 评论区（共 42 条，其中段永平 8 条）
+---
+
+**评论区（共 42 条，其中段永平 8 条）**
 
 ### 1楼 海冰　2011-04-18 13:45
 

@@ -86,7 +86,7 @@ export default function DocumentArchiveClient({ title, pathname, items, people, 
     <form className="archive-filters" action={pathname} method="get" aria-label={`${title}筛选`} onSubmit={apply}>
       <label>人物<select name="person" value={draft.person} onChange={event => setDraft(current => ({ ...current, person: event.target.value }))}><option value="">全部人物</option>{people.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
       <label>年份<select name="year" value={draft.year} onChange={event => setDraft(current => ({ ...current, year: event.target.value }))}><option value="">全部年份</option>{years.map(year => <option key={year} value={year}>{year}</option>)}</select></label>
-      <label>状态<select name="status" value={draft.status} onChange={event => setDraft(current => ({ ...current, status: event.target.value }))}><option value="">全部状态</option>{statuses.map(status => <option key={status} value={status}>{status}</option>)}</select></label>
+      {statuses.length > 1 && <label>状态<select name="status" value={draft.status} onChange={event => setDraft(current => ({ ...current, status: event.target.value }))}><option value="">全部状态</option>{statuses.map(status => <option key={status} value={status}>{status}</option>)}</select></label>}
       <button type="submit">应用筛选</button>
       {active && <button type="button" onClick={clear}>清除</button>}
       {extraLink && <Link href={extraLink.href}>{extraLink.label}</Link>}

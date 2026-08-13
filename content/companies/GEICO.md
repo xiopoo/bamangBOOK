@@ -1,4 +1,7 @@
-GEICO 公司
+---
+title: "盖可保险（GEICO）"
+content_type: "company"
+---
 
 # 盖可保险（GEICO）
 

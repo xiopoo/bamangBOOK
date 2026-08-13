@@ -27,7 +27,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '约翰·科利森、沃伦·巴菲特、查理·芒格与彼得·考夫曼',
     kind: '中文译稿',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-forewords.md',
-    sourceNote: '依据文件夹中的 Stripe Press 英文稿翻译，并统一采用本站人名与术语译法。',
+    sourceNote: '依据 Stripe Press 英文原版翻译。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/forewords',
   },
   {
@@ -38,7 +38,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '从奥马哈少年到伯克希尔副董事长',
     kind: '中文译稿',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-chapter-one.md',
-    sourceNote: '依据 Michael Broggie 的英文传记章节翻译，并统一采用本站人名与术语译法。',
+    sourceNote: '依据 Michael Broggie 英文传记章节翻译。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/chapter-one',
   },
   {
@@ -49,7 +49,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '家庭生活里的原则、耐心与身教',
     kind: '中文译稿',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-chapter-two.md',
-    sourceNote: '依据文件夹中的英文家庭回忆章节翻译，并统一采用本站译法。',
+    sourceNote: '依据英文原版家庭回忆章节翻译。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/chapter-two',
   },
   {
@@ -60,7 +60,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '多元思维模型、逆向思考与终身学习',
     kind: '中文译稿',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-chapter-three.md',
-    sourceNote: '依据 Peter D. Kaufman 的英文方法论章节翻译，并与站内思维模型术语统一。',
+    sourceNote: '依据 Peter D. Kaufman 英文方法论章节翻译。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/chapter-three',
   },
   {
@@ -72,7 +72,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1986,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-one.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-one',
   },
   {
@@ -84,7 +84,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1994,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-two.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-two',
   },
   {
@@ -96,7 +96,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1996,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-three.md',
-    sourceNote: '站内既有中文译稿，含现场问答，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿，含现场问答。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-three',
   },
   {
@@ -108,7 +108,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1996,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-four.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-four',
   },
   {
@@ -120,7 +120,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1998,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-five.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-five',
   },
   {
@@ -132,7 +132,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 1998,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-six.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-six',
   },
   {
@@ -144,7 +144,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 2000,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-seven.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-seven',
   },
   {
@@ -156,7 +156,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 2003,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-eight.md',
-    sourceNote: '站内既有中文译稿，原位于专题文章栏目，现统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-eight',
   },
   {
@@ -168,7 +168,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 2003,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-nine.md',
-    sourceNote: '站内既有中文译稿，含“重读第九讲”，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿，含“重读第九讲”。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-nine',
   },
   {
@@ -180,7 +180,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 2007,
     kind: '原书演讲',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-ten.md',
-    sourceNote: '站内既有中文译稿，统一纳入本书阅读顺序。',
+    sourceNote: '站内既有中文译稿。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-ten',
   },
   {
@@ -192,7 +192,7 @@ export const almanackSections: AlmanackSection[] = [
     year: 2005,
     kind: '中文译稿',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md',
-    sourceNote: '依据文件夹中的2005年修订英文稿翻译，并统一采用本站25种心理倾向译名。',
+    sourceNote: '依据 2005 年修订英文原版翻译。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/talk-eleven',
   },
   {
@@ -203,7 +203,7 @@ export const almanackSections: AlmanackSection[] = [
     subtitle: '搭建多元思维格栅的延伸书目',
     kind: '延伸阅读',
     sourceFile: 'poor-charlies-almanack/poor-charlies-almanack-recommended-reading.md',
-    sourceNote: '依据 Stripe Press 版推荐书目整理，并与站内芒格资料互联。',
+    sourceNote: '依据 Stripe Press 版推荐书目整理。',
     officialUrl: 'https://www.stripe.press/poor-charlies-almanack/recommended-reading',
   },
 ]

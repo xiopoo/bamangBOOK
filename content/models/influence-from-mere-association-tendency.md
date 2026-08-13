@@ -212,6 +212,6 @@ NASA的哥伦比亚号航天飞机灾难（2003年）是另一个经典案例。
 
 这种倾向也会反向运作:我们会惩罚报告坏消息的人。那些传递不受欢迎之真相的人,会与他们所报告的不快联系在一起,于是遭人厌恶、被人疏远——这便训练了权势者身边的每一个人,只对他说他爱听的话。芒格开出的解药是:就每个决策本身的是非曲直来评判它,而不是凭它附带的种种联想;同时,作为领导者,要刻意欢迎坏消息,这样报信者就永远不会因为消息本身而受到惩罚。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/mere-association/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/mere-association/)。
 
 <!-- munger-archive-merged -->

@@ -180,6 +180,6 @@ sourceUrl: "https://mungermodels.com/models/man-with-a-hammer-syndrome"
 
 解药就是这张格栅——有意地从几个领域获取那些重大思想，让你手里不止一件工具，从而能为眼前的问题挑出合适的那一件。芒格的意思并不是说专门化一文不值，而是说一个狭窄的工具箱会让一个聪明人在自己擅长的领域之外可预见地犯傻。尽管带上一把锤子；只是要确保你同时也带着一把扳手、一个水平仪和一把锯子，并且知道哪个问题需要哪一件。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/man-with-a-hammer/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/man-with-a-hammer/)。
 
 <!-- munger-archive-merged -->

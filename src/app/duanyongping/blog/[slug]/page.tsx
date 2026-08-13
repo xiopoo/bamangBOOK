@@ -7,7 +7,7 @@ export function generateStaticParams() { return getDYSlugs('blog').map(slug => (
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const doc = getDYDoc('blog', params.slug)
   if (!doc) return { title: '未找到' }
-  return { title: `${doc.title} · 档案 ${doc.slug.slice(0, 6)} · 段永平网易博客`, description: `${doc.title}，段永平公开博客资料归档。`, alternates: { canonical: `/duanyongping/blog/${params.slug}` } }
+  return { title: `${doc.title} · 段永平网易博客`, description: `${doc.title}，段永平公开博客资料归档。`, alternates: { canonical: `/duanyongping/blog/${params.slug}` } }
 }
 export default function Page({ params }: { params: { slug: string } }) {
   const doc = getDYDoc('blog', params.slug)

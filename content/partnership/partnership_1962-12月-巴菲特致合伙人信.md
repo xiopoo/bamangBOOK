@@ -1,3 +1,10 @@
+---
+title: "partnership_1962-12月-巴菲特致合伙人信"
+content_type: "partnership"
+person: "巴菲特"
+year: "1962"
+---
+
 巴菲特合伙公司（BUFFETT PARTNERSHIP, LTD.）
 
 810 KIEWIT PLAZA

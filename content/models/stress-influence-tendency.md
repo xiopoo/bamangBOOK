@@ -181,6 +181,6 @@ sourceUrl: "https://mungermodels.com/models/stress-influence-tendency"
 
 现实层面的启示有两点。其一,凡是重要决策,只要能往后拖,就别在巨大压力之下做出,因为此时你的判断力已经受损,而你从内心却感觉不到。其二,要识破有人在故意给你施压——限时优惠、高压逼单、人为制造的危机——并把这种压力本身当作一个让你退后一步、而非贸然行动的理由。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/stress-influence/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/stress-influence/)。
 
 <!-- munger-archive-merged -->

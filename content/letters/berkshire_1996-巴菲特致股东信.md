@@ -1,3 +1,10 @@
+---
+title: "巴菲特致股东的信 1996"
+content_type: "letter"
+person: "巴菲特"
+year: "1996"
+---
+
 伯克希尔·哈撒韦公司
 
 董事长致辞

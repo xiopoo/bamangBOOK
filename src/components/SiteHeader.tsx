@@ -7,9 +7,12 @@ import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
 
+// 阅读优先重构：导航只保留阅读内容入口。
+// 已移除平台/电商功能：学习路径（/learn）、巴芒文集（/bound-edition）、知识图谱（/graph）、
+// 阅读历史（/history）、已购内容（/my-study）、订单与登录等。相关路由与代码保留，入口不再暴露。
 const navGroups = [
   { label: '原典档案', activePrefixes: ['/reading', '/buffett', '/munger', '/duanyongping', '/letters', '/partnership', '/qa', '/talks', '/interviews', '/poor-charlies-almanack'], links: [
-    { href: '/reading', label: '原典总览', meta: '按人物与资料类型进入' },
+    { href: '/reading', label: '原典总览', meta: '按人物与资料类型' },
     { href: '/buffett', label: '巴菲特', meta: '信件、问答、演讲与访谈' },
     { href: '/munger', label: '芒格', meta: '演讲、问答与思维模型' },
     { href: '/duanyongping', label: '段永平', meta: '问答、访谈与公开表达' },
@@ -22,12 +25,12 @@ const navGroups = [
     { href: '/companies', label: '公司索引', meta: '按公司查找研究' },
     { href: '/business-history/themes', label: '商业主题', meta: '从行业与商业史进入' },
   ] },
-  { label: '阅读路径', activePrefixes: ['/learn', '/model', '/books', '/columns', '/bloggers'], links: [
-    { href: '/learn/path', label: '从第一封合伙人信开始', meta: '循序渐进的入口' },
-    { href: '/buffett', label: '巴菲特阅读路径', meta: '从信件到企业' },
-    { href: '/munger', label: '芒格阅读路径', meta: '从投资到判断' },
-    { href: '/duanyongping', label: '段永平阅读路径', meta: '公开表达与实践' },
+  { label: '延伸阅读', activePrefixes: ['/model', '/books', '/columns', '/bloggers', '/concepts'], links: [
     { href: '/model', label: '主题阅读', meta: '概念、模型与公司' },
+    { href: '/concepts', label: '投资方法', meta: '概念索引' },
+    { href: '/books', label: '拆书', meta: '经典书籍拆解' },
+    { href: '/columns', label: '专栏', meta: '系列文章' },
+    { href: '/bloggers', label: '博主文章', meta: '外部优质文章' },
   ] },
 ]
 

@@ -1,3 +1,10 @@
+---
+title: "巴菲特致合伙人的信 1968 中报"
+content_type: "partnership"
+person: "巴菲特"
+year: "1968"
+---
+
 1968 年 7 月 11 日
 
 ## 上半年业绩

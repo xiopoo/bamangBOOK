@@ -82,7 +82,7 @@ function SearchContent() {
   const [results, setResults] = useState<SearchResult[]>([])
   const [total, setTotal] = useState(0)
   const [typeStats, setTypeStats] = useState<TypeStats>(emptyTypeStats)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(Boolean(initialQuery))
 
   // 执行搜索
   const performSearch = useCallback(async (searchQuery: string, filterType: StaticSearchItemType | 'all' = 'all') => {

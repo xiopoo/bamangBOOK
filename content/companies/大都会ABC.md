@@ -1,3 +1,8 @@
+---
+title: "大都会通信（Cap Cities/ABC）"
+content_type: "company"
+---
+
 Cap Cities/ABC 公司
 
 # 大都会通信（Cap Cities/ABC）

@@ -1,3 +1,10 @@
+---
+title: "partnership_1966-11月-巴菲特致合伙人信"
+content_type: "partnership"
+person: "巴菲特"
+year: "1966"
+---
+
 1966 年 11 月 1 日
 
 致 1967 年的各位合伙人：

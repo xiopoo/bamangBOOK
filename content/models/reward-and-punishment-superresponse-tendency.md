@@ -206,6 +206,6 @@ sourceUrl: "https://mungermodels.com/models/reward-and-punishment-superresponse-
 
 [All 25 ▦](/model/psychology-of-human-misjudgment) [Next →Liking/Loving Tendency](/model/liking-loving-tendency)
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/incentive-superresponse/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/incentive-superresponse/)。
 
 <!-- munger-archive-merged -->

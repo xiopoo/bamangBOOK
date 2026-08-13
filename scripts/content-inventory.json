@@ -1,0 +1,402 @@
+{
+  "generatedAt": "2026-08-13T14:10:38.082Z",
+  "summary": {
+    "totalFiles": 7214,
+    "withFrontmatter": 6447,
+    "withoutFrontmatter": 767,
+    "fmCoverage": 89.4,
+    "hasContentType": "450 (6%)",
+    "hasPerson": "239 (3%)",
+    "hasYear": "2479 (34%)"
+  },
+  "byDirectory": {
+    "bloggers/在苍茫中传灯": {
+      "files": 947,
+      "withFrontmatter": 947
+    },
+    "duanyongping/qa/2019": {
+      "files": 792,
+      "withFrontmatter": 792
+    },
+    "bloggers/方伟看十年": {
+      "files": 735,
+      "withFrontmatter": 735
+    },
+    "bloggers/梁孝永康": {
+      "files": 511,
+      "withFrontmatter": 511
+    },
+    "duanyongping/qa/2020": {
+      "files": 452,
+      "withFrontmatter": 452
+    },
+    "bloggers/唐僧的碎碎念": {
+      "files": 445,
+      "withFrontmatter": 445
+    },
+    "duanyongping/qa/2024": {
+      "files": 291,
+      "withFrontmatter": 291
+    },
+    "models": {
+      "files": 232,
+      "withFrontmatter": 232
+    },
+    "duanyongping/qa/2025": {
+      "files": 207,
+      "withFrontmatter": 207
+    },
+    "duanyongping/qa/2023": {
+      "files": 155,
+      "withFrontmatter": 155
+    },
+    "duanyongping/blog/2011": {
+      "files": 142,
+      "withFrontmatter": 142
+    },
+    "duanyongping/blog/2012": {
+      "files": 142,
+      "withFrontmatter": 142
+    },
+    "duanyongping/blog/2010": {
+      "files": 125,
+      "withFrontmatter": 125
+    },
+    "duanyongping/qa/2022": {
+      "files": 123,
+      "withFrontmatter": 123
+    },
+    "source-documents/value-investing-yxc-gdut/duanyongping/xueqiu-posts": {
+      "files": 119,
+      "withFrontmatter": 119
+    },
+    "companies": {
+      "files": 98,
+      "withFrontmatter": 98
+    },
+    "duanyongping/qa/2012": {
+      "files": 73,
+      "withFrontmatter": 73
+    },
+    "duanyongping/blog/2013": {
+      "files": 71,
+      "withFrontmatter": 71
+    },
+    "qa": {
+      "files": 70,
+      "withFrontmatter": 70
+    },
+    "concepts": {
+      "files": 67,
+      "withFrontmatter": 67
+    },
+    "duanyongping/qa/2011": {
+      "files": 61,
+      "withFrontmatter": 61
+    },
+    "letters": {
+      "files": 61,
+      "withFrontmatter": 61
+    },
+    "articles/buffett": {
+      "files": 52,
+      "withFrontmatter": 0
+    },
+    "duanyongping/blog/2014": {
+      "files": 42,
+      "withFrontmatter": 42
+    },
+    "interviews": {
+      "files": 40,
+      "withFrontmatter": 40
+    },
+    "munger-archive/recordings": {
+      "files": 37,
+      "withFrontmatter": 37
+    },
+    "partnership": {
+      "files": 37,
+      "withFrontmatter": 37
+    },
+    "duanyongping/talks": {
+      "files": 35,
+      "withFrontmatter": 35
+    },
+    "munger-archive/mental-models": {
+      "files": 35,
+      "withFrontmatter": 35
+    },
+    "duanyongping/qa/2021": {
+      "files": 34,
+      "withFrontmatter": 34
+    },
+    "duanyongping/blog/2015": {
+      "files": 33,
+      "withFrontmatter": 33
+    },
+    "business-history": {
+      "files": 29,
+      "withFrontmatter": 29
+    },
+    "munger-archive/quotes": {
+      "files": 27,
+      "withFrontmatter": 27
+    },
+    "buffettfaq_cnbc/2008": {
+      "files": 26,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2009": {
+      "files": 26,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2014": {
+      "files": 26,
+      "withFrontmatter": 0
+    },
+    "duanyongping/qa/2018": {
+      "files": 26,
+      "withFrontmatter": 26
+    },
+    "buffett-quotes": {
+      "files": 25,
+      "withFrontmatter": 25
+    },
+    "buffettfaq_cnbc/1998": {
+      "files": 25,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2015": {
+      "files": 25,
+      "withFrontmatter": 0
+    },
+    "talks": {
+      "files": 25,
+      "withFrontmatter": 25
+    },
+    "buffettfaq_cnbc/2010": {
+      "files": 24,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2011": {
+      "files": 24,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/1995": {
+      "files": 23,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/1996": {
+      "files": 23,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/1999": {
+      "files": 23,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2013": {
+      "files": 23,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2025": {
+      "files": 23,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2000": {
+      "files": 22,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2007": {
+      "files": 22,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/1997": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2005": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2012": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2017": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2018": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2023": {
+      "files": 21,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2003": {
+      "files": 20,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2022": {
+      "files": 20,
+      "withFrontmatter": 0
+    },
+    "duanyongping/blog/2016": {
+      "files": 20,
+      "withFrontmatter": 20
+    },
+    "buffettfaq_cnbc/2016": {
+      "files": 19,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2026": {
+      "files": 19,
+      "withFrontmatter": 0
+    },
+    "articles/other": {
+      "files": 18,
+      "withFrontmatter": 0
+    },
+    "buffettfaq": {
+      "files": 18,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2021": {
+      "files": 18,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2004": {
+      "files": 17,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/1994": {
+      "files": 14,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2001": {
+      "files": 14,
+      "withFrontmatter": 0
+    },
+    "munger-archive": {
+      "files": 13,
+      "withFrontmatter": 13
+    },
+    "munger-originals": {
+      "files": 13,
+      "withFrontmatter": 13
+    },
+    "people": {
+      "files": 13,
+      "withFrontmatter": 13
+    },
+    "buffettfaq_cnbc/2002": {
+      "files": 12,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2024": {
+      "files": 10,
+      "withFrontmatter": 0
+    },
+    "duanyongping/blog/2017": {
+      "files": 10,
+      "withFrontmatter": 10
+    },
+    "duanyongping/qa/按年份": {
+      "files": 10,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2006": {
+      "files": 9,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2019": {
+      "files": 9,
+      "withFrontmatter": 0
+    },
+    "duanyongping/milestones": {
+      "files": 9,
+      "withFrontmatter": 9
+    },
+    "duanyongping/blog/2018": {
+      "files": 7,
+      "withFrontmatter": 7
+    },
+    "poor-charlies-almanack": {
+      "files": 6,
+      "withFrontmatter": 0
+    },
+    "source-documents/value-investing-yxc-gdut/duanyongping/references/research": {
+      "files": 6,
+      "withFrontmatter": 0
+    },
+    "buffettfaq_cnbc/2020": {
+      "files": 5,
+      "withFrontmatter": 0
+    },
+    "books": {
+      "files": 4,
+      "withFrontmatter": 4
+    },
+    "columns": {
+      "files": 4,
+      "withFrontmatter": 4
+    },
+    "li-lu": {
+      "files": 4,
+      "withFrontmatter": 4
+    },
+    "buffettfaq_cnbc": {
+      "files": 3,
+      "withFrontmatter": 0
+    },
+    "special": {
+      "files": 3,
+      "withFrontmatter": 0
+    },
+    "articles/munger": {
+      "files": 2,
+      "withFrontmatter": 0
+    },
+    "duanyongping/blog/2006": {
+      "files": 2,
+      "withFrontmatter": 2
+    },
+    "duanyongping/blog/2007": {
+      "files": 2,
+      "withFrontmatter": 2
+    },
+    "duanyongping/blog/2020": {
+      "files": 1,
+      "withFrontmatter": 1
+    },
+    "source-documents/value-investing-yxc-gdut/duanyongping": {
+      "files": 1,
+      "withFrontmatter": 1
+    },
+    "wechat": {
+      "files": 1,
+      "withFrontmatter": 0
+    },
+    "content": {
+      "files": 1,
+      "withFrontmatter": 0
+    }
+  },
+  "byContentType": {
+    "company": 98,
+    "qa": 70,
+    "concept": 67,
+    "letter": 61,
+    "interview": 51,
+    "partnership": 37,
+    "talk": 32,
+    "article": 21,
+    "person": 13
+  },
+  "byPerson": {
+    "巴菲特": 191,
+    "芒格": 35,
+    "munger": 13
+  }
+}

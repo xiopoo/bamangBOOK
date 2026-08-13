@@ -16,8 +16,6 @@ category: "blog"
 >
 > 原文：http://nteswjq.blog.163.com/blog/static/1269981201172524925170/
 
-## 正文
-
 hiking中，一会居然下起雪来了。
 
 就是坐的这架小飞机

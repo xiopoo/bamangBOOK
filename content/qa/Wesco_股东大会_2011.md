@@ -1,3 +1,10 @@
+---
+title: "Wesco 股东大会 2011"
+content_type: "qa"
+person: "芒格"
+year: "2011"
+---
+
 ## Wesco 股东大会 2011
 
 2011 年 6 月 24 日

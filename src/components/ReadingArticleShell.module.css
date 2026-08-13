@@ -53,12 +53,13 @@
 }
 
 .layout {
-  --toc-rail: minmax(10rem, 13rem);
+  --toc-rail: minmax(10rem, 12rem);
   width: min(100% - 2rem, 78rem);
   margin: 0 auto;
   padding: 2rem 0 4rem;
   display: grid;
-  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure)) var(--toc-rail);
+  /* P1-02 修复：中列改用以正文 19px 基准换算的 --reading-measure-layout（见 reading.css） */
+  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure-layout)) var(--toc-rail);
   justify-content: center;
   gap: clamp(1.5rem, 3vw, 3rem);
 }

@@ -209,6 +209,6 @@ sourceUrl: "https://mungermodels.com/models/kantian-fairness-tendency"
 
 认清这一点有两方面的好处。作为系统的设计者，当规则明显公平、且对所有人一视同仁时，你可以借助人们合作的意愿 —— 而一旦某个流程被视为专断或暗箱操作，你就该预料到麻烦和合作意愿的下降。作为个人，则值得留意：当自己心里冒出「这不公平」的念头、并由此驱动一个代价高昂的反应时，不妨问问，这条原则是否值得你即将为捍卫它而付出的代价。
 
-> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/kantian-fairness/)。本节已与原有模型正文合并，不再作为独立模型页面维护。
+> 资料来源：[Munger Archive](https://mungerarchive.com/zh/mental-models/kantian-fairness/)。
 
 <!-- munger-archive-merged -->

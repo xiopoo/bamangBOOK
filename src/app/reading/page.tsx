@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
+import PageHeader from '@/components/PageHeader'
 import { getReadingStats, type ReadingAuthor } from '@/lib/reading-library'
 import { getBloggers } from '@/lib/bloggers'
 import { getBusinessHistoryStats } from '@/lib/business-history'
@@ -8,7 +9,6 @@ import { getBookStats } from '@/lib/books'
 import { getColumnStats } from '@/lib/columns'
 import { getModelStats } from '@/lib/models'
 import type { Metadata } from 'next'
-import styles from './reading.module.css'
 
 export const metadata: Metadata = {
   title: '阅读总库',
@@ -47,78 +47,76 @@ export default function ReadingPage() {
   }
 
   return (
-    <>
-      <PageContainer maxWidth="7xl" className={styles.page}>
-        <header className={styles.hero}>
-          <p>THE READING ROOM</p>
-          <h1>阅读总库</h1>
-          <span>
-            从人物、资料类型和研究主题进入书房。这里是全站阅读入口；核心原典与其他专题内容分区统计，方便你理解内容范围。
-          </span>
-        </header>
+    <PageContainer maxWidth="7xl">
+      <PageHeader
+        title="阅读总库"
+        subtitle="从人物、资料类型和研究主题进入书房，这里是全站阅读入口；核心原典与其他专题内容分区统计。"
+        sticky
+      />
 
-        <dl className={styles.stats}>
-          <div><dt>{stats.totalItems}</dt><dd>核心资料</dd></div>
-          <div><dt>{stats.authorCount}</dt><dd>位核心人物</dd></div>
-          <div><dt>{stats.authorCounts['巴菲特'] || 0}</dt><dd>篇巴菲特相关</dd></div>
-          <div><dt>{stats.authorCounts['芒格'] || 0}</dt><dd>篇芒格相关</dd></div>
-          <div><dt>{stats.authorCounts['段永平'] || 0}</dt><dd>篇段永平相关</dd></div>
-        </dl>
+      <div className="archive-stats-line" aria-label="档案统计">
+        <span>{stats.totalItems} 篇核心资料</span>
+        <span>{stats.authorCount} 位核心人物</span>
+        <span>{stats.authorCounts['巴菲特'] || 0} 篇巴菲特相关</span>
+        <span>{stats.authorCounts['芒格'] || 0} 篇芒格相关</span>
+        <span>{stats.authorCounts['段永平'] || 0} 篇段永平相关</span>
+      </div>
 
-        <div className={styles.authors}>
-          {stats.library.map((author, index) => (
-            <AuthorSection key={author.name} author={author} index={index + 1} />
+      {stats.library.map((author, index) => (
+        <AuthorSection key={author.name} author={author} index={index + 1} />
+      ))}
+
+      <section className="mb-12" aria-labelledby="reading-hubs-title">
+        <div className="flex items-end justify-between gap-4 mb-4">
+          <div>
+            <p className="archive-kicker">专题内容</p>
+            <h2 id="reading-hubs-title" className="mt-1 text-xl md:text-2xl font-bold text-text dark:text-dark-text">
+              继续探索
+            </h2>
+          </div>
+          <span className="text-sm text-text-muted dark:text-dark-muted">专题内容与上方核心原典分区统计。</span>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {READING_HUBS.map((hub) => (
+            <Link
+              key={hub.href}
+              href={hub.href}
+              className="bg-white dark:bg-dark-card p-4 rounded-card border border-gray-100 dark:border-dark-border hover:border-primary/30 dark:hover:border-primary/40 hover:shadow-card-hover dark:hover:shadow-lg dark:hover:shadow-black/20 transition-all shadow-card"
+            >
+              <div className="font-medium text-text dark:text-dark-text mb-1">{hub.label}</div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{hub.description}</p>
+              <span className="text-xs text-primary dark:text-primary-light">{hubCounts[hub.key]} 篇</span>
+            </Link>
           ))}
         </div>
-
-        <section className={styles.hubs} aria-labelledby="reading-hubs-title">
-          <header className={styles.hubsHeader}>
-            <div>
-              <p>EXPLORE THE LIBRARY</p>
-              <h2 id="reading-hubs-title">继续探索</h2>
-            </div>
-            <span>以下是独立专题内容，数量不与上方核心原典重复相加。</span>
-          </header>
-          <div className={styles.hubGrid}>
-            {READING_HUBS.map((hub, index) => (
-              <Link key={hub.href} href={hub.href} className={styles.hubCard}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3>{hub.label}</h3>
-                  <p>{hub.description}</p>
-                </div>
-                <small>{hubCounts[hub.key]} 篇</small>
-                <ArrowRight size={15} aria-hidden="true" />
-              </Link>
-            ))}
-          </div>
-        </section>
-      </PageContainer>
-    </>
+      </section>
+    </PageContainer>
   )
 }
 
 function AuthorSection({ author, index }: { author: ReadingAuthor; index: number }) {
   return (
-    <section className={styles.author}>
-      <header>
-        <span>{String(index).padStart(2, '0')}</span>
+    <section className="mb-12">
+      <div className="flex items-end justify-between gap-4 mb-4">
         <div>
-          <h2>{author.name}</h2>
-          <p>{author.totalCount} 篇资料</p>
+          <p className="archive-kicker">{String(index).padStart(2, '0')} · 核心人物</p>
+          <h2 className="mt-1 text-xl md:text-2xl font-bold text-text dark:text-dark-text">{author.name}</h2>
         </div>
-      </header>
-      <div>
+        <span className="text-sm text-text-muted dark:text-dark-muted">{author.totalCount} 篇资料</span>
+      </div>
+      <div className="archive-list">
         {author.categories.map((category) => (
-          <Link key={category.name} href={CATEGORY_HREF[category.name] || '/search'}>
-            <div>
-              <h3>{category.name}</h3>
-              <p>
-                {category.items.slice(0, 2).map((item) => item.title).join(' · ')}
-              </p>
-            </div>
-            <small>{category.totalCount} 篇</small>
-            <ArrowRight size={15} aria-hidden="true" />
+          <Link
+            key={category.name}
+            href={CATEGORY_HREF[category.name] || '/search'}
+            className="archive-list__row"
+          >
+            <span className="archive-list__year">{category.totalCount}</span>
+            <span className="archive-list__main">
+              <strong>{category.name}</strong>
+              <small>{category.items.slice(0, 2).map((item) => item.title).join(' · ')}</small>
+            </span>
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         ))}
       </div>
