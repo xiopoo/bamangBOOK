@@ -1,5 +1,6 @@
 import PageContainer from '@/components/PageContainer'
 import ThinkerArchivePage from '@/components/ThinkerArchivePage'
+import BlogEntityLinks from '@/components/BlogEntityLinks'
 import { mungerArchive } from '@/lib/thinker-archives'
 import type { Metadata } from 'next'
 
@@ -17,6 +18,10 @@ export default function MungerPage() {
   return (
     <PageContainer maxWidth="7xl">
       <ThinkerArchivePage archive={mungerArchive} />
+      {/* 相关博客文章（B-05：博客与档案双向打通） */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+        <BlogEntityLinks entityName="芒格" title="与芒格相关的博客文章" />
+      </div>
     </PageContainer>
   )
 }

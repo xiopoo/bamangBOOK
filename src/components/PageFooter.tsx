@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
-// 阅读优先：页脚保留核心原典入口，延伸内容（拆书/专栏/博主文章/中文文章）作为次要入口
+// 博客做入口，档案做底盘：页脚保留博客 + 原典核心入口
 const footerLinks = [
+  { href: '/blog', label: '博客' },
   { href: '/buffett', label: '巴菲特' },
   { href: '/munger', label: '芒格' },
   { href: '/duanyongping', label: '段永平' },
+  { href: '/letters', label: '股东信' },
   { href: '/business-history', label: '公司研究' },
+  { href: '/concepts', label: '投资概念' },
   { href: '/books', label: '拆书' },
-  { href: '/columns', label: '专栏' },
-  { href: '/bloggers', label: '博主文章' },
-  { href: '/articles', label: '中文文章' },
   { href: '/search', label: '全站搜索' },
 ]
 

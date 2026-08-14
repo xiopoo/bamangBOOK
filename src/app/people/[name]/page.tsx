@@ -9,6 +9,7 @@ import { personParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import EntityArticleLinks from '@/components/EntityArticleLinks'
+import BlogEntityLinks from '@/components/BlogEntityLinks'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
@@ -220,6 +221,7 @@ export default function PersonDetailPage({ params }: PageProps) {
       {/* 延伸阅读：关联文章 */}
       <div className="max-w-4xl mx-auto">
         <EntityArticleLinks entityName={personName} />
+        <BlogEntityLinks entityName={personName} />
       </div>
 
       <div className="max-w-4xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400 pt-8 mt-8 border-t border-gray-100 dark:border-[#2a2a4a]">

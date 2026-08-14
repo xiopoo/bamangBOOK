@@ -9,6 +9,7 @@ import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import EntityArticleLinks from '@/components/EntityArticleLinks'
+import BlogEntityLinks from '@/components/BlogEntityLinks'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
@@ -134,6 +135,9 @@ export default async function CompanyDetailPage({ params }: PageProps) {
 
       {/* 延伸阅读：关联文章 */}
       <EntityArticleLinks entityName={companyName} />
+
+      {/* 相关博客文章（B-05：博客与档案双向打通） */}
+      <BlogEntityLinks entityName={companyName} />
 
     </PageContainer>
   )

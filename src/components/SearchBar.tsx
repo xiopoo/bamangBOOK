@@ -49,10 +49,12 @@ export default function SearchBar({
   initialQuery = '',
   autoFocus = false,
   onSearch,
+  onQueryChange,
 }: { 
   initialQuery?: string
   autoFocus?: boolean
   onSearch?: (query: string) => void
+  onQueryChange?: (query: string) => void
 }) {
   const router = useRouter()
   const [query, setQuery] = useState(initialQuery)
@@ -101,6 +103,8 @@ export default function SearchBar({
 
     debounceTimer.current = setTimeout(() => {
       fetchSuggestions(value)
+      // 与建议同一防抖节奏：通知外部（搜索页）同步更新主结果区
+      onQueryChange?.(value)
     }, 250)
   }
 

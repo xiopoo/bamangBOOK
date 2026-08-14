@@ -128,6 +128,20 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '首页', href: '/' },
     { label: '经典书籍', href: '/books' },
   ],
+  '/blog': [
+    { label: '首页', href: '/' },
+    { label: '博客', href: '/blog' },
+  ],
+  '/blog/category': [
+    { label: '首页', href: '/' },
+    { label: '博客', href: '/blog' },
+    { label: '分类', href: '/blog' },
+  ],
+  '/blog/tag': [
+    { label: '首页', href: '/' },
+    { label: '博客', href: '/blog' },
+    { label: '标签', href: '/blog' },
+  ],
 }
 
 interface BreadcrumbsProps {
@@ -144,10 +158,15 @@ export default function Breadcrumbs({ fallbackParent }: BreadcrumbsProps) {
       .sort((a, b) => b.length - a.length)
       .find(key => pathname === key || pathname.startsWith(`${key}/`))
     if (!basePath) {
+      let lastLabel = pathname.split('/').pop() || '未知页面'
+      try {
+        lastLabel = decodeURIComponent(lastLabel)
+      } catch {
+      }
       return [
         { label: '首页', href: '/' },
         ...(fallbackParent ? [fallbackParent] : []),
-        { label: pathname.split('/').pop() || '未知页面' },
+        { label: lastLabel },
       ]
     }
 

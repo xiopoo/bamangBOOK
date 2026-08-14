@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { formatDateValue } from './date-format'
 
 const BUSINESS_HISTORY_DIR = path.join(process.cwd(), 'content/business-history')
 
@@ -183,7 +184,7 @@ function parseBusinessHistory(slug: string, raw: string): BusinessHistoryDetail 
       || (typeof data.company === 'string' && data.company.trim() ? data.company.trim() : title.split('：')[0]),
     sourcePdf: manifest?.sourcePdf
       || (typeof data.sourcePdf === 'string' && data.sourcePdf.trim() ? data.sourcePdf.trim() : undefined),
-    date: data.date ? String(data.date).slice(0, 10) : null,
+    date: formatDateValue(data.date),
     summary: manifest?.summary || (typeof data.summary === 'string' ? data.summary.trim() : ''),
     tags: manifest?.tags || toStringArray(data.tags),
     readMinutes: estimateReadMinutes(content),

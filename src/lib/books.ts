@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { formatDateValue } from './date-format'
 
 const BOOKS_DIR = path.join(process.cwd(), 'content/books')
 
@@ -66,7 +67,7 @@ function parseBook(slug: string, raw: string): BookDetail {
     oneLiner: typeof data.oneLiner === 'string' ? data.oneLiner : '',
     tags: toStringArray(data.tags),
     status: typeof data.status === 'string' && data.status.trim() ? data.status.trim() : '已拆解',
-    date: data.date ? String(data.date).slice(0, 10) : null,
+    date: formatDateValue(data.date),
     content,
   }
 }

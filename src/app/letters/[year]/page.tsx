@@ -14,6 +14,7 @@ import { letterYearParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
 import { companyIds, conceptIds, resolvePersonRouteId } from '@/lib/entity-resolver'
 import ReadingMetadata from '@/components/ReadingMetadata'
+import BlogArchiveLinks from '@/components/BlogArchiveLinks'
 
 export function generateStaticParams() {
   return letterYearParams()
@@ -172,6 +173,9 @@ export default async function LetterDetailPage({ params }: PageProps) {
             </span>
           )}
         </nav>
+
+        {/* 读这份原典的导读文章（B-05：博客与档案双向打通） */}
+        <BlogArchiveLinks archiveHref={`/letters/${yearNum}`} />
       </div>
 
     </div>

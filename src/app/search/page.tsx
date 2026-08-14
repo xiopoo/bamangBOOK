@@ -142,6 +142,35 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
+  // 输入时实时同步主结果区（与建议下拉共用 250ms 防抖节奏）
+  const handleQueryChange = useCallback((searchQuery: string) => {
+    setQuery(searchQuery)
+
+    if (!searchQuery.trim()) {
+      // 清空输入：清空结果、筛选、URL 参数，回到引导空态
+      setResults([])
+      setTotal(0)
+      setTypeStats(emptyTypeStats)
+      setSelectedType('all')
+      const url = new URL(window.location.href)
+      url.searchParams.delete('q')
+      url.searchParams.delete('type')
+      window.history.replaceState({}, '', url.toString())
+      return
+    }
+
+    // 非空关键词：实时搜索并 replaceState 更新 URL，避免制造浏览器历史记录
+    performSearch(searchQuery, selectedType)
+    const url = new URL(window.location.href)
+    url.searchParams.set('q', searchQuery)
+    if (selectedType !== 'all') {
+      url.searchParams.set('type', selectedType)
+    } else {
+      url.searchParams.delete('type')
+    }
+    window.history.replaceState({}, '', url.toString())
+  }, [performSearch, selectedType])
+
   const handleTypeFilter = (type: StaticSearchItemType | 'all') => {
     setSelectedType(type)
     performSearch(query, type)
@@ -172,6 +201,7 @@ function SearchContent() {
           initialQuery={initialQuery}
           autoFocus={!initialQuery}
           onSearch={handleSearch}
+          onQueryChange={handleQueryChange}
         />
       </div>
 

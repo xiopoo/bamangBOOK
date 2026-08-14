@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { formatDateValue } from './date-format'
 
 const COLUMNS_DIR = path.join(process.cwd(), 'content/columns')
 
@@ -59,7 +60,7 @@ function parseColumn(slug: string, raw: string): ColumnDetail {
     title,
     series: typeof data.series === 'string' && data.series.trim() ? data.series.trim() : '独立随笔',
     order: typeof data.order === 'number' ? data.order : Number(data.order) || 0,
-    date: data.date ? String(data.date).slice(0, 10) : null,
+    date: formatDateValue(data.date),
     tags: toStringArray(data.tags),
     summary: typeof data.summary === 'string' ? data.summary.trim() : '',
     readMinutes: estimateReadMinutes(content),
