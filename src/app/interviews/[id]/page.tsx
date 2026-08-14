@@ -33,7 +33,8 @@ export default function InterviewDetailPage({ params }: PageProps) {
     title={doc.title}
     backHref="/interviews"
     backLabel="返回访谈目录"
-    metadata={{ person: personName, year: doc.year || undefined, contentType: '访谈', sourceLabel: doc.sourceLabel, status: doc.status, completeness: doc.completeness, readMinutes: doc.readMinutes }}
+    metadata={{ person: personName, year: doc.year || undefined, contentType: '访谈',
+ readMinutes: doc.readMinutes }}
     previous={prev ? { href: prev.href, title: prev.title, meta: prev.year ? `${prev.year}年` : undefined } : null}
     next={next ? { href: next.href, title: next.title, meta: next.year ? `${next.year}年` : undefined } : null}
     navigationLabel="相邻访谈"

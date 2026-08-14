@@ -40,7 +40,7 @@ function Player({ recording }: { recording: MungerArchiveRecording }) {
             <button type="button" className="recording-player__launch" onClick={() => setPlaying(true)}>
               <Play size={34} aria-hidden="true" />
               <strong>点击播放：{recording.titleZh}</strong>
-              <p>视频托管于 YouTube 原始公开来源；若当前网络无法访问，请使用下方「来源」链接在浏览器中打开。</p>
+              <p>视频托管于 YouTube，加载失败时请更换网络后重试。</p>
             </button>
           )
         ) : (
@@ -60,10 +60,8 @@ function Player({ recording }: { recording: MungerArchiveRecording }) {
         </div>
         <div className="recording-player__links">
           {recording.transcriptUrl && <Link href={recording.transcriptUrl}>边看边读中文整理稿</Link>}
-          {recording.sourceUrl && <a href={recording.sourceUrl} target="_blank" rel="noreferrer">来源：{recording.sourceLabel} <ExternalLink size={14} /></a>}
         </div>
       </div>
-      <p className="recording-player__notice">视频嵌入自原始公开来源，版权归来源方所有；复利书房不存储视频文件。</p>
     </article>
   )
 }

@@ -21,9 +21,6 @@ export default function MeetingsArchivePage() {
         backHref="/qa"
         backLabel="返回股东大会问答"
       />
-      <p className="text-sm text-text-muted dark:text-dark-muted mb-6">
-        原始来源：Buffett FAQ（buffett.cnbc.com）年会视频转写。中文整理版见「股东大会问答」栏目。
-      </p>
 
       <div className="space-y-8">
         {years.map(({ year, sessions, clips }) => (

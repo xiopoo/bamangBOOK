@@ -22,9 +22,6 @@ export default function BuffettFaqArchivePage() {
         backHref="/qa"
         backLabel="返回问答栏目"
       />
-      <p className="mb-6 text-sm text-text-muted dark:text-dark-muted">
-        原始来源：Buffett FAQ（buffettfaq.com，编译者 Nick Webb）。已剔除与「股东大会英文原档实录」重复的年会问答，保留媒体访谈、商学院座谈等独有内容。
-      </p>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {topics.map(topic => (

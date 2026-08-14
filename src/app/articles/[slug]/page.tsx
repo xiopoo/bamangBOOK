@@ -54,9 +54,6 @@ export default function ArticleDetailPage({ params }: PageProps) {
         person: meta.person,
         year: meta.year,
         contentType: '文章',
-        sourceLabel: meta.sourceTitle,
-        sourceUrl: meta.sourceUrl,
-        status: '编辑整理',
         readMinutes: Math.max(3, Math.round(meta.wordCount / 700)),
       }}
       related={<EntityChips entities={meta.entities} />}

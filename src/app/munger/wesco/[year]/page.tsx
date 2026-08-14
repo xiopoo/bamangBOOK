@@ -26,14 +26,13 @@ export default function WescoMeetingDetailPage({ params }: PageProps) {
   const index = meetings.findIndex(item => item.year === meeting.year)
   const previous = index > 0 ? meetings[index - 1] : null
   const next = index >= 0 && index < meetings.length - 1 ? meetings[index + 1] : null
-  const sourceLabel = meeting.meetingSourceUrl ? 'Wesco 股东大会英文会议笔记' : 'Wesco 股东大会公开记录'
 
   return <ReadingArticleShell
     title={meeting.title}
     subtitle={`查理·芒格 · ${meeting.edition}`}
     backHref="/munger/wesco"
     backLabel="返回 Wesco 股东大会目录"
-    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会', sourceLabel, sourceUrl: meeting.meetingSourceUrl, status: '编辑整理', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
+    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
     previous={previous ? { href: `/munger/wesco/${previous.year}`, title: previous.title, meta: `${previous.year}年 · ${previous.edition}` } : null}
     next={next ? { href: `/munger/wesco/${next.year}`, title: next.title, meta: `${next.year}年 · ${next.edition}` } : null}
     navigationLabel="按时间从早到晚的相邻 Wesco 股东大会"

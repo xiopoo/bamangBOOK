@@ -52,10 +52,6 @@ export default function AlmanackAudioPlayer({ tracks, compact = false }: Props) 
           ))}
         </ol>
       )}
-
-      <p className="mt-3 text-xs leading-5 text-text-muted dark:text-dark-muted">
-        音频来自 Stripe Press 公开版，本站保存本地副本以便与正文同步阅读；版权归原权利人所有。
-      </p>
     </section>
   )
 }
