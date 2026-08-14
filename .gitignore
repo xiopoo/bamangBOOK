@@ -37,3 +37,6 @@ stock-radar/data/
 *.db
 stock-radar/data/*.log
 launchd.*.log
+
+# B站爬虫会话凭证（含 access_token），禁止入库
+cookies.json
