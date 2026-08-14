@@ -32,7 +32,7 @@ export function generateStaticParams() {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
   const routes = [
-    '', '/about', '/search', '/learn', '/learn/path', '/buffett', '/munger', '/graph', '/talk', '/letters', '/partnership',
+    '', '/about', '/search', '/buffett', '/munger', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers', '/articles',
     '/business-history', '/business-history/themes', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/duanyongping', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks', '/duanyongping/milestones',

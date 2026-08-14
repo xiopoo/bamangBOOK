@@ -1,0 +1,203 @@
+# 芒格：2003 年的金融大丑闻｜中英校勘包
+
+> 校勘状态：full-pair-candidate-needs-paragraph-collation
+> 中英文均为全文候选，仍需逐段核对，未正式验收。 开头首段为第三人称作品介绍，不是芒格虚构文章正文。
+> - 中文候选：`poor-charlies-almanack/poor-charlies-almanack-talk-eight.md`
+> - 英文候选：`poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-eight.md`
+> - 在线来源：https://www.stripe.press/poor-charlies-almanack/talk-eight
+> - 中文 SHA-256：`faa3a2a67d49d76937797b16d4c22af9f6cd263467741c5c430e8679e75881b5`
+> - 英文 SHA-256：`e15a6f34d749f89f4ece2368931d93479a9af86c925d508e06f2ed1483e69e5e`
+
+## 英文候选（原 Markdown 原样嵌入）
+
+<!-- ENGLISH-BEGIN poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-eight.md e15a6f34d749f89f4ece2368931d93479a9af86c925d508e06f2ed1483e69e5e -->
+# Poor Charlie's Almanack — Talk Eight: The Great Financial Scandal of 2003
+
+**来源：** https://www.stripe.press/poor-charlies-almanack/talk-eight
+
+---
+
+## 编者导言
+
+This parable and morality play gives Charlie a chance to vent his anger at the accounting profession's role in corporate malfeasance. Handwritten by Charlie when he was vacationing in the summer of 2000, the speech is an eerie prediction of the scandals that surfaced well before his predicted date of 2003 and that continue today to be an important issue.
+
+The early Quant Tech appears to be loosely based on C. F. Braun Engineering, a firm whose brilliant founder, Carl F. Braun, and business practices Charlie greatly admired.
+
+Charlie chronicles how leadership change in a very successful company can consign the firm to mediocrity—or worse, to disrepute and failure. When new management adopts modern financial engineering techniques, especially the use of stock options that aren't expensed, all is lost.
+
+Shakespeare's *Henry VI* said, "The first thing we do, let's kill all the lawyers." Charlie, an attorney, might reject that idea, but accountants? Well…
+
+---
+
+## 演讲正文
+
+The great financial scandal erupted in 2003 with the sudden, deserved disgrace of **Quant Technical Corporation**, always called Quant Tech. By this time, Quant Tech was the country's largest pure engineering firm, having become so as a consequence of the contributions of its legendary founder, engineer Albert Berzog Quant.
+
+The Quant Tech story is best understood as a classic sort of tragedy in which a single flaw is inexorably punished by remorseless Fate. The flaw was **the country's amazingly peculiar accounting treatment for employee stock options**. The victims were Quant Tech and its country.
+
+### Act I: The Golden Age
+
+As his life ended in 1982, Albert Berzog Quant delivered to his successors a wonderfully prosperous company. Quant Tech had a dominant market share, earning $100 million on revenues of $1 billion. All compensation was paid in cash—**there were no stock options** because the old man considered the accounting treatment required for stock options to be "weak, corrupt, and contemptible."
+
+In 1982, Quant Tech was debt-free with $500 million in cash equivalents. Its stock sold at a mere 15 times earnings, with a market capitalization of only $1.5 billion, despite brilliant prospects.
+
+### Act II: The Age of False Values
+
+Quant Tech's directors, uneasy about the low market capitalization, recruited a new CEO and CFO from a company with conventional stock option plans and higher multiples. The new officers quickly realized they couldn't improve revenues or margins—the founder had achieved an optimum. Instead, they turned to **"modern financial engineering."**
+
+The officers saw a breathtaking opportunity: if Quant Tech substituted employee stock option exercise profits for all its incentive bonus expenses of $400 million, while buying back shares, reported earnings would go up by 400 percent—from $100 million to $500 million—while shares outstanding remained exactly the same.
+
+They adopted what they privately called the **"dollop-by-dollop system"** — shifting a moderate amount of compensation to stock options each year. As the CFO privately said, "If we mix only a moderate minority share of turds with the raisins each year, probably no one will recognize what will ultimately become a very large collection of turds."
+
+The math was simple: they decided to make reported earnings increase by 28 percent per year instead of the real 20 percent.
+
+### The Collapse
+
+By 2003, Quant Tech's real earning power was growing at only 4 percent per year. In 2002, Quant Tech reported $16 billion in earnings on $47 billion in revenue, with cash equivalents of $85 billion. Market capitalization peaked early in 2003 at $1.4 trillion—about 90 times reported earnings.
+
+Then the stock declined suddenly by 50 percent, triggering a careful examination. Nearly everyone realized that a very large majority of reported earnings had long been phony. The stock fell further until market capitalization was only $140 billion—**down 90 percent from its peak only six months earlier**. A $1.3 trillion in market value had disappeared.
+
+### Divine Judgment
+
+God himself called in his chief detective and said, "Smith, bring in for harsh but fair judgment the most depraved of those responsible for this horrible outcome."
+
+Security analysts who touted the stock? "I can't come down hardest on low-level cognitive error." SEC commissioners and politicians? "These people operate in a virtual maelstrom." Corporate officers? "Getting close, but I want the miscreants who will soon be in the lowest circle in Hell."
+
+The chief detective remembered that the lowest circle of Hell was reserved for **traitors**. And so he brought in a group of elderly persons who, in their days on earth, had been prominent partners in major accounting firms.
+
+"Here are your traitors," said the chief detective. "They adopted the false accounting convention for employee stock options. They well knew what they were doing was disastrously wrong, yet they did it anyway."
+
+---
+
+*This account is not an implied prediction about 2003. It is a work of fiction. Except in the case of Professor Galbraith, any resemblance to real persons or companies is accidental.*
+
+---
+
+## Talk Eight — Revisited
+
+I had a lot of fun composing this account in the summer of 2000. But I was serious as I tried to show how standard accounting treatment for stock options was functionally equivalent to simpler types of promotional fraud.
+
+To me, a profession and a nation that allow unsound accounting for management cost are leaning in the same moral direction as the group that leaves most of the steel out of the concrete in erecting high-rise apartment buildings. Moreover, the unsound accounting is more virulent than the murderous construction practice—the defective constructors have a harder time rationalizing their deplorable behavior.
+
+There has been some good news since Talk Eight was delivered. The accounting profession now requires that some provision for stock option cost be charged against earnings. However, by the time stock options are exercised, the total cost charged is usually far less than total cost incurred. Moreover, the part of the cost that is charged to earnings is often manipulated downward by dubious techniques.
+
+What this accounting saga constitutes is one more sad example of evil rewarded dying hard, as a great many people conclude that something can't be evil if they are profiting from it.
+<!-- ENGLISH-END poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-eight.md -->
+
+## 中文候选（原 Markdown 原样嵌入）
+
+<!-- CHINESE-BEGIN poor-charlies-almanack/poor-charlies-almanack-talk-eight.md faa3a2a67d49d76937797b16d4c22af9f6cd263467741c5c430e8679e75881b5 -->
+# 芒格：2003 年的金融大丑闻
+
+2000 年夏天，查理写下这则以虚构企业宽特科技为主角的商业寓言，借此表达他对会计业在公司失范中推波助澜的愤怒。文中预想的丑闻在 2003 年前后竟陆续成为现实，直到今天，作品提出的问题仍未过时。宽特科技创业初期的原型，多少让人想起查理十分敬重的卡尔·F·布劳恩工程公司；公司后期的病症与灾难，则汇集了许多真实企业的通病，尤其是股票期权制度的致命缺陷。查理写出了领导层更替怎样把一家卓越公司变成平庸企业，继而使它声名扫地、关门收场。当新管理层采用现代金融工程手段，尤其在推行股票期权激励的同时拒绝把期权计作公司成本时，败局便已注定。莎士比亚笔下有句名言：“我们首先要做的，是杀光所有律师。”做过律师的查理大概会反对；但如果把对象换成会计师呢？那就……
+
+芒格说明：我写这篇文章，并不是为了预言 2003 年会发生什么。它是一篇虚构作品。除有关加尔布雷思教授的部分外，任何情节若与真实人物或企业雷同，纯属巧合。本文旨在提醒人们警惕现代社会中的某些行为方式和信念体系。
+
+2003 年爆发的金融大丑闻，使得宽特科技公司(QuantTech)突然间声名扫地。
+
+宽特科技这时已经是全国最大的纯工程企业，这是其传奇般的工程师创始人阿尔伯特·贝索格·宽特多年苦心经营的成果。2003 年之后，人们开始把宽特科技的故事当做一出两幕的道德剧。第一幕是伟大的创始人宽特的时代，被看做是道德高尚的黄金时代。第二幕是这位创始人的后继者的时代，被视为道德沦丧的时代，在这个时代的末期，宽特科技变得跟索多玛与蛾摩拉差不多(《旧约》所载的两座罪恶之城)。
+
+这篇记录将会清楚地展示，宽特科技从好到坏的转变并不是在其创始人于 1982 年去世后突然发生的。1982年之后，该公司仍保留了许多好的作风，而早在 1982 年之前许多年，宽特科技所处的金融文化环境就已经出现严重的问题了。
+
+要理解宽特科技的故事，我们最好把它当做一出经典悲剧，在剧中，只是一个漏洞就遭到了命运女神的惩罚。这个漏洞就是该国对职工股票期权的特殊会计处理。宽特科技和它的国家成了受害者。这次金融大丑闻的情节就好像是悲剧作家索福克勒斯(Sophocles)笔下的悲剧。
+
+1982 年去世的时候，阿尔伯特·贝索格·宽特为他的继任者和造物主留下了一家非常繁荣和有为的公司。宽特科技惟一的业务是设计新型的发电厂，这种小型发电厂能够改善电力供应，而且超级清洁、超级节能，备受世界各国欢迎，给该公司带来了不菲的设计收入。
+
+在 1982 年，宽特科技占据该行业的龙头地位，营业收入为 10 亿美元，而盈利高达 1 亿美元。它的成本主要是支付给参与设计的技术员工的薪酬。直接的员工薪酬成本占到营业收入的 70%。在这里面，30%是基本工资，40%是依据创始人设计的一套复杂方法计算出来的奖金。所有薪酬都以现金支付。该公司没有股票期权，因为宽特先生认为对股票期权的法定会计处理方式"软弱、腐败和令人鄙视"，他不想企业做糟糕的账目，正如他不想做糟糕的工程设计。除此之外，这位老先生还坚持严格依据业绩标准来给个人或项目小组发放巨额的激励性奖金，而不愿意像其他公司那样采用股票期权作为激励机制，因为他认为那种做法是不可取的。
+
+在我们的故事中，宽特科技是一家虚构的工程公司，它经历了许多真实公司常见的弊端——特别是没有在会计报表中正确地反映出职工股票期权成本的致命伤。
+
+1940 年 11 月 7 日，华盛顿州 Puget 河 Tacoma 湾上第一座悬索桥垮塌，原因是施工不合格，该地区常年刮大风，设计方却没有正确地考虑到风振这个因素的影响。当时该桥才通车几个月。
+
+然而，即使在这位创始人的制度之下，大多数把毕生心血奉献给宽特科技的员工也已经变得富裕起来，或者肯定会变得富裕起来。之所以如此，是因为那些员工和其他不在公司任职的股东一样，也从市场上购买宽特科技的股票。这位创始人一直认为，他的员工既然拥有足以设计发电厂的聪明才智和自律意识，当然会通过这种方式来好好为自己谋利。他有时候会建议员工去购买宽特的股票，但也就到此为止，不会表现出更多的家长作风。
+
+等到 1982 年他去世的时候，宽特科技完全没有债务，如果不是为了提高公司知名度，不管业务增长多快，它的运营根本就不需要股东的资金。然而，老先生相信本杰明·富兰克林的名言"空袋子很难竖起来"，他想要宽特科技巍然屹立。他热爱他的企业和同事，总是希望手里持有大量的现金等价物，以便发生不测时有充分准备，或者遇到机会时能够抓得住。所以到 1982 年，宽特科技持有 5 亿美元的现金等价物，大概是年收入的 50%。
+
+1982 年的宽特科技不但拥有健康的财务报表和行之有效的企业文化，还拥有一个快速变化、快速增长的行业中的关键技术，只要继续采用老先生的方法，在未来 20 年，它的年均利润必定可以达到收入的 10%，而年收入增长必定可以达到 20%。在这 20 年之后，从 2003 年开始，在很长一段时间内，宽特科技的利润将会继续保持在年收入的 10%，而年收入的增长速度将会下降到每年 4%。但没有人能够准确地预言这段不可避免的收入增长缓慢期将会从什么时候开始。(净利率保持 10%，1982-2002：增长 20%，2003-未来：增长 4%)老先生为宽特科技设定的利润分配制度非常简单：他从来不派红利，而是把所有利润转换成现金等价物累积起来。
+
+任何有经验的股票投资者都能看到，1982 年是购入拥有大量现金的宽特科技的良机，当时它的市盈率只有15 倍，而且尽管它的前景非常好，整个公司的市值只有 15 亿美元。既然公司前景很好，市值为什么很低呢？这是因为在 1982 年，其他很棒的股票的市盈率也只有 15 倍，甚至更少，这也是因为当时的利率很高，而且持股人此前多年的投资回报率相当令人失望。
+
+宽特公司在 1982 年的低市值造成的后果之一，就是令那些董事感到不满意，老先生刚刚去世，他们就开始蠢蠢欲动。如果这个董事会很明智，他们会利用手头所有的现金和外面借来的资金大量买进宽特科技的股票。然而，这样的决定并不符合 1982 年常见的企业经营智慧，所以董事会作出了常见的决策。他们从宽特科技之外聘请了新的首席执行官(CEO)和财务总监(CFO)，这些人来自一家实行员工股票期权激励计划的公司，该公司市盈率是20 倍，尽管其资产负债表比宽特科技差很多，利润的增长速度也没有宽特科技那么高。宽特科技的董事们聘请这两位新的高层管理人员的意图很明确，就是希望尽快提高公司的市值。
+
+宽特科技新上任的管理层很快意识到，他们很难更快地提高公司的年收入，也很难增加宽特科技的利润率。
+
+创始人在这两方面已经做到了尽善尽美。新上任的管理层也不敢改变运作得如此之好的企业文化。因此，新管理层决定启动他们所谓的"现代金融工程术"，迅速采用各种尽管存在争议但又合法的手段以提高财务报表上的盈利，先从简单但是重大的改起。
+
+命运弄人，这种让宽特科技的创始人原本极其憎恶的股票期权记账方法，现在却让新管理层的工作变得十分轻松，而且最终将会毁掉宽特科技的声望。
+
+当时美国通常的会计做法是这样的，假如，先给了员工认股权，公司便可以将股票低于市场价卖给员工，折让给员工的部分就相当于现金(如果员工同时将股票以市场价格立刻卖掉的话)，但在做账的时候并不用记为薪酬支出，从而不会影响年报披露的盈利。
+
+虽然这种特别奇怪的记账方法遭到某些最聪明正直的会计师的反对，但会计行业还是采纳了，因为大多数企业的管理人员，不同意会计师将他们从行使股票期权中得到的收益算入公司成本，那样的话他们任职的公司的利润就会下降。会计行业在做出这个特别怪异的决定时，竟然奉行的是那些跟富裕的资深会计师截然不同的人所奉行的准则。这项准则通常是那些食不果腹、无权无势的人遵守的："谁给我面包吃，我就给谁唱歌。"幸运的是，税务部门并没有像会计行业那样采用这种特别怪异的记账方法。税务部门拥有基本的常识，理所当然地将行使股票期权获得的收益视为薪酬成本，在计算企业所得税的时候会把这部分减去。
+
+宽特科技的新管理层精通金融业务，他们一眼就看出，只要使用这种特别怪异的记账方法，再加上完善的所得税征收制度，宽特科技会有极大的机会，只要采取非常简单的做法，就能增加其年报上披露的利润。宽特科技每年大量的成本，本来就是发放给员工的激励性奖金，这为"现代金融工程术"提供了千载难逢的良机。
+
+厄普顿·辛克莱(Upton Sinclair)：让人们去理解那些跟他们的利益冲突的事情是很难的。
+
+例如，管理层可以很容易看出，如果 1982 年的宽特科技，用行使员工股票期权得到的利润，代替它那四亿美元的激励性奖金成本，同时，用省下来的奖金，加上员工为股票期权支付的金钱，来回购所有因行使期权而增发的股份，其他一切保留不变，那么 1982 年宽特科技的年报披露的利润将会上涨 400%，从 1 亿美元上涨到 5 亿美元，而流通股的份额仍跟原来一样！所以在管理人员看来，最正确的做法就是，用员工行使股票期权的盈利来取代激励性奖金。那些精于计算的工程师怎么会在意他们的奖金到底是现金还是现金等价物呢？只要管理层愿意，作出这样的替换安排似乎没有什么困难的。
+
+然而，新管理层也很容易可以看出，他们在推行新把戏的时候必须小心谨慎，有所约束。很明显，如果他们在某一年推行新把戏的力度太大，那么可能会引起会计人员的抗议，或者遭到其他方面的敌视。这无异于杀死一只会下很多金蛋的鹅，至少对管理层来说是这样。毕竟，他们非常清楚地知道，他们的把戏能够增加年报披露的利润，只是因为他们把真实的盈利和伪造的盈利相加而已。因为通过这种把戏，在年报上增加的盈利并不会给宽特科技带来真正的经济效应，只会带来那种临时的虚假效应，这跟虚报期末存货造成的虚假效应是一样的。新的CEO 私下把这种迷人的、谨慎的做法称为"明智的克制型造假"。
+
+"正确的做法是永远别让错误的会计开始"1991 年，金融会计标准委员会提议将员工股票期权的部分真实成本视为支出。由于遭到企业界和国会的强烈反对，这项提案最终被大大缩水，仅仅要求公司在备注中有所披露。然而，目前美国通行的会计准则要求，员工股票期权的部分真实成本在损益表中必须被记为支出。查理对此持怀疑态度："等到股票期权被行使时，账目上记录的总成本往往比实际发生的总成本低很多。此外，那部分记到盈利下面的成本通常被故意用不正当的办法降低了。这种事情是很难杜绝的。正确的做法是永远别让错误的会计开始。"显然，新管理层也认识到，用行使员工股票期权的利润来取代奖金的做法不能一蹴而就，应该在未来多年里逐渐实施。他们私下管这种谨慎的方法叫做"细水长流"计划。他们认为这个计划有四个优点：第一，每年虚报一点利润，被发现的概率比虚报大量利润要低。
+
+第二，虽然每年虚报的利润不多，但经过多年累积，这个"细水长流"计划将会产生巨大的长期效应，而且也不容易被人发现。那位财务总监私下恬不知耻地说："如果我们每年只在葡萄干里掺入一点点大便，这样的话，就算最后出现了一大堆大便，可能也不会有人发现。"第三，对于公司外部的会计师来说，一旦包庇过几份显示利润有增长但包含了少数造假成分的财务报表，而不包庇同样虚报利润增长的财务报表，他们可能会觉得非常难为情。
+
+第四，通过实施"细水长流"计划，宽特科技的管理层可以防止丑闻或者更为严重的事情发生。
+
+其他公司实施的股票期权计划比宽特科技更加大方，所以如果有人提出异议，管理层可以解释说，适当地实行员工股票期权计划有助于吸引和留住人才。实际上，考虑到这种怪异的股票期权记账方法对企业文化和股市热情的影响，这种说辞往往是正确的。
+
+1947 年 1 月 13 日邓肯·利托菲尔牧师在阿瑟·安达信葬礼上的讲话：你们必须遵守他为这家事务所设定的原则，必须维护他的声誉。你们不能打着他的旗号去做坏事。我敢保证，如果你们不遵守他的原则，他宁愿这家事务所倒闭。他给你们留下了巨大的信誉。你们的机会很好，你们的责任也很重大。
+
+具备上述四个优点的"细水长流"计划明显是个好方法，宽特科技的管理层现在只要决定每年增加多少虚假利润就行了。这个决定也是很容易做出的。管理层首先考虑三个他们想要满足的合理条件：首先，他们希望这个"细水长流"计划能够持续不断地实施 20 年。
+
+其次，他们希望在这 20 年里，宽特科技每年披露的利润增长幅度都差不多，因为他们认为，如果宽特科技每年年报披露的利润增长都很稳定，那些代表机构投资者的理财分析专家将会给予宽特科技的股票较高的估值。
+
+第三，为了维护年报披露的利润的可信度，他们不想引起投资者的怀疑，所以即使在第 20 年，宽特科技从设计发电厂得到的利润率也不会高过 40%。
+
+第四，确定这些要求之后，管理人员计算起来就简单了，因为他们已经估算出宽特科技的收入和盈利将会在未来 20 年里每年增长 20%。管理人员很快决定利用他们的"细水长流"计划，让宽特科技的披露利润每年增长28%，而不是像该公司的创始人老老实实地报出 20%。
+
+就这样，这个"现代金融工程"大骗局逐渐将宽特科技推向悲剧的下场。人类历史上没有几个臭名昭着的大骗局能比这场骗局干得更漂亮了。根据会计师核准的年报，宽特科技的利润每年增长 28%。除了少数几个公认的不切实际、过于迂腐、愤世嫉俗的怪物之外，没有人批评宽特科技的财务报表。
+
+该公司的管理层继续执行创始人从不分派红利的做法，这很大程度上维护了宽特科技年报的可信度，人们相信它每年的盈利增幅确实达到了。在那种通常破坏现实认知的巴甫洛夫联想反射效应的影响之下，认为宽特科技拥有大量现金等价物的人们万万不会想到其年报披露的部分利润竟然是伪造的。
+
+庞氏骗局：现代金融工程术最着名的例子之一是 1919 年在波士顿发源的庞氏骗局。卡尔洛·"查理"·庞兹(Carlo"Charles"Ponzi)声称他有能力利用国际邮政票据套利，许诺 90 天可盈利 50%，吸引了数以千计的投资者。
+
+为了建立信用，他把新投资者的钱作为利润返回给旧投资者——这是典型的金字塔骗局所用的花招。庞兹很快就募集了数百万美元的资金。1920 年，《波士顿邮报》刊发文章质疑庞兹的做法，于是有关方面对庞兹展开了独立的审计。审计表明这是骗局，投资者要求退钱。到最后，平均每个投资者只收回了 37%的资金，庞兹被判了几年有期徒刑。1920 年代末期，出狱后的庞兹死不悔改，又开始兜售佛罗里达州一些毫无价值的土地。
+
+因此，在"细水长流"计划实施了几年之后，宽特科技的管理层自然想要让该公司年报披露的每股盈利继续以28%的速度增长，同时大幅度地虚报公司持有的现金等价物的增长。这种办法取得了很大的成效。等到这个时候，宽特科技公司股票的市盈率已经非常高，通过不匹配地逐步增加购股权持有量，公司管理层开始相应减少用现金支付奖金，或者相应减少现金回购宽特科技的股票。管理层很容易意识到，这种改变极大地完善了他们最初的计划。这不但使得他们虚报盈利的做法，因现金加速增长而变得更难以察觉，而且还为宽特科技引入了庞氏骗局效应或者连锁信效应，给包括管理层在内的现有股东带来了切实的好处。
+
+在这个时候，管理层还解决了最初的计划中的另一个漏洞。他们发现，由于宽特科技虚报的盈利以每年 28%的利润增长，而作为税前利润的一部分，宽特科技缴纳的所得税相对税前利润税率却逐年下降。这显然会招致他们不想看到的质疑和批评。这个问题很快被消除了。外国的许多发电厂都是由政府出资兴建并归政府所有的，宽特科技很容易说服某些外国政府支付更高的设计费，只要宽特科技额外交给这些外国政府的所得税比增加的设计费多一点点就可以。
+
+信任，但去证实。有一个好办法可以查证企业年报中披露的利润是否属实，那就是将年报中披露的好消息和该企业实际缴纳的所得税进行比较。由于管理层不愿给美国税务局看他们用来糊弄股东的注水报表，所以企业的表格中"支付所得税的现金"一栏往往更为准确、更为忠实地反映了该企业的真实盈利。
+
+最后，宽特科技在 2002 年的年报中披露，该公司的利润为 160 亿美元，收入为 470 亿美元，包括大量由现金等价物产生的利息收入，而这些现金有相当一部分来源于这些年净增加的股份。现在宽特科技持有的现金等价物达到了惊人的 850 亿美元，大多数投资者认为一家拥有如此之多现金的企业每年能够赚到其年报披露的亿美元的利润也不是不可能的。在 2003 年，宽特科技的市值高达 14000 亿美元，是其 2002 年披露利润的 90 倍。
+
+如果让人选择增长速度的话，所有人会选几何级数，可惜地球上的资源是有限的。但是，所有人类对几何级数增长的过度追求，在一个有限的地球上，最终都以惨痛收场。2003 年，宽特科技在这两个方面都失败了。
+
+到 2003 年，宽特科技的真实盈利能力只以每年 4%的速度增长，因为公司的销售收入增长速度已经下降到4%。这时宽特科技没有办法避免让其股东大失所望——主要是机构投资者。股东的失望使宽特科技的股票价格直线下跌，一下子跌去了 50%。股票价格的暴跌反过来又促使人们重新审视宽特科技的财务报告。最后，终于人人都看清楚了，原来该公司绝大部分的利润都是伪造的，而且这种大规模的故意篡改已经持续了很多年。这导致宽特科技的股票继续狂跌，等到 2003 年年中，宽特科技的市值只剩下 1400 亿美元，和六个月前的高峰期相比，90%的市值蒸发了。
+
+几何级数增长：与直觉背道而驰为了让年轻的学生领略复利的魔力，有位教师提出了一个有趣的方案："我打算给你两个选择，但选中之后不能改变主意，所以选之前仔细考虑。第一个选择是，我每天给你 1000美元，连给天，你拿到钱之后随时可以花。第二个选择是，我第一天给你一美分，第二天给你两美分，第三天给你四美分，每天给你的钱是前一天的两倍，这样持续 30 天，但你必须等到 30 天结束之后才能用这笔钱。"年轻人想到连续一个月每天有 1000 美元可以花就很心动，他可不想一个月后口袋里只有一堆分币可以用，所以他选择了第一个。他的选择明智吗？按照第一个选择，年轻人总共可以得到 3 万美元。按照第二个选择，复利的魔力将会使总数达到 5368709.12 美元。
+
+这是一家非常重要的公司，从前它广受推崇，很多人都买了它的股票，所以它的股票价格暴跌了，总共有13000 亿美元的市值消失了，这给人们带来了巨大的痛苦。宽特科技的丑闻败露之后，公众和政界自然把满腔怒火都发向了宽特科技，尽管这个国家最好的发电厂依然是由该公司那些值得尊敬的工程师设计的。
+
+怒火并没有只烧到宽特科技就熄灭。它很快蔓延到其他公司，其中有些公司明显也犯了跟宽特科技相同的错误，只是严重程度有所不同。公众和政界的怒火就像引发它的行为那样，很快就变得不可收拾。这次金融丑闻不仅令投资者血本无归，而且还引发了严重的经济衰退，就像 1990 年代日本经济在企业界长年累月做假账之后陷入萧条那样。
+
+这次大丑闻之后，公众对各种专业人士非常反感。当然，遭到最多谴责的是会计专业人士。制定会计师准则的机构的缩写是"F.A.S.B"(Financial Accounting Standard Board 金融会计标准委员会)，现在每个人都说这四个字母代表"Financial Accounts Still Bogus"(金融会计还做假)。
+
+经济学教授也遭到非议，人们责怪他们未能敲响警钟，没有提醒公众注意广泛的做假账行为将会给宏观经济带来的糟糕后果。传统经济学家是如此令人大失所望，乃至哈佛的约翰·加尔布雷斯理应获得了诺贝尔经济学奖。
+
+毕竟他曾经预言大规模的、尚未败露的公司舞弊行为将会对经济产生极大的刺激效应。人们发现 2003 年之前的情况跟加尔布雷斯的预测差不多，而且随后那些年里，那种情况果然导致经济陷入了大衰退。
+
+下面是着名经济学家约翰·肯尼思·加尔布雷斯(John Kenneth Galbraith)的名言集锦："我们都认为悲观是智力超群的标志。""美当然没有绝对的标准。所以追求美才会如此有趣。""如果你什么都不想做，那么你就去开会吧。""经济预测的惟一功能是让占星学变得令人尊敬。""现代的保守主义者从事的是道德哲学中最古老的活动，也就是说，他们要为自私寻找一个超级漂亮的道德借口。""许多美国人死于食物过多，而非死于食物太少。""当面临要么改变想法、要么证明无需这么做的选择时，绝大多数人都会忙于寻找证据。""那些走运的人总是说他们过得幸福是因为他们的道德很高尚。""难道你不明白吗，'让一家企业停泊在废话当中，和让它驶入麻烦的思维之海比起来，是一种好得太多、太多的做法。'""有权势的人总是宁愿拿全副身家去冒险，也不肯舍弃一点利益。""在任何大型组织里面，和多数人一起错比一个人对安全得多。"由于美国国会和证券交易委员会(SEC)的许多成员都是律师，而这些律师参与起草的财务披露法规现在都被视为是漏洞百出，所以每个周都有关于"律师"的新笑话。其中有一个是这样的："肉贩说：'律师的声誉最近下跌了好多啊。'收银员说：'他们的声誉本来就只有薄饼那么点，哪有好多可以跌啊。'"但公众对专业人士的敌视并不仅限于会计师、经济学家和律师。许多向来洁身自好的专业人士的声誉也遭到了"池鱼之殃"，比如说工程师，他们根本就不懂得在这个国家已经泛滥成灾的金融诈骗。到最后，许多对这个国家有益的、也是它未来的福祉所需的行业都遭到了广泛的、不明智的仇视。
+
+这时，天庭采取了行动。目睹一切的上帝本人改变主意，决定提前审判 2003 年金融大丑闻这桩令人伤心的案子。他召唤来他的首席大侦探，并说："史密斯，我要公正严明地处理这件事，你去把那些最应该为此负责的罪人带进来。"但史密斯带来的是一群证券分析专家，多年以来，这些人一直为宽特科技的股票摇旗呐喊。大法官感到很不高兴。"史密斯，我不能对低级的认知错误进行最严厉的处罚，这些错误大部分由俗世的标准激励制度引起，是在下意识的情况下发生的。"接下来，史密斯带来了一群美国证券交易委员会的委员和一些位高权重的政治家。"不，不，这些人受到许多令人遗憾的力量的左右，他们也是身不由己，你指望他们遵守正确的行为规范是不合理的。"首席侦探这下以为他终于明白了。接着他把那些在宽特科技落实他们的"现代金融工程"的高层管理人员给抓来了。"你差不多抓对了。"大法官说，"但我要你带来的是造孽最深的罪人。这些管理人员当然会遭到严厉的处罚，因为他们作奸犯科，毁掉了那位伟大工程师的遗产。但我要你抓的是那些很快会被打入地狱最底层的混蛋，那些本来可以轻而易举地阻止这次大灾难的人。"首席侦探终于真正明白了。他记得地狱最底层是为背叛者准备的。所以他现在从炼狱带来一群老人，这些人在世时曾是各大会计师事务所杰出的合伙人。"这就是你要的背叛者，"首席侦探说，"他们在处理员工股票期权时采用了错误的记账方法。他们在一个高尚的行业中身居高位，那个行业的职责和你差不多，都是通过设定正确的规则，来帮助社会正确地运转。才华出众、锦衣玉食的他们居然故意造成如此明显可预测的谎言和欺骗，真是罪无可赦。他们完全知道他们的所作所为是极其错误的，然而他们还是执迷不悟。由于司法系统受到商界的影响，你开始误将他们判得很轻。但现在你可以把他们送到地狱的最底层啦。"大法官被这通慷慨陈词镇住了，沉默了片刻。然后他安静地说："干得好，你是我忠诚的好仆人。"
+
+<!-- CHINESE-END poor-charlies-almanack/poor-charlies-almanack-talk-eight.md -->
+
+## 人工校勘记录
+
+- [ ] 标题、日期、场合与演讲版本一致
+- [ ] 英文底本完整度已经确认
+- [ ] 段落无整段遗漏、重复或错位
+- [ ] 引语、专名、数字和案例逐项核对
+- [ ] 译者注、编者注与芒格正文完全隔离
+- [ ] 实质性修订已登记校勘日志

@@ -351,14 +351,6 @@ export default function BuffettContent({
         <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">📚 快速导航</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Link
-            href="/graph"
-            className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
-          >
-            <div className="text-2xl mb-2">🕸️</div>
-            <div className="text-sm font-medium text-text dark:text-dark-text">知识图谱</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">探索概念关联</div>
-          </Link>
-          <Link
             href="/concepts"
             className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
           >
@@ -373,14 +365,6 @@ export default function BuffettContent({
             <div className="text-2xl mb-2">🏢</div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资公司</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">61家公司资料</div>
-          </Link>
-          <Link
-            href="/talk"
-            className="text-center p-4 bg-primary/5 dark:bg-primary/10 rounded-lg border border-primary/20 dark:border-primary/30 hover:shadow-md transition-shadow"
-          >
-            <div className="text-2xl mb-2">🍵</div>
-            <div className="text-sm font-medium text-primary dark:text-primary-light">AI对话</div>
-            <div className="text-xs text-primary/70 dark:text-primary-light/70 mt-0.5">与巴菲特对话</div>
           </Link>
         </div>
       </section>
