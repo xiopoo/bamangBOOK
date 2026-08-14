@@ -50,32 +50,18 @@ export default function ReadingPage() {
     <PageContainer maxWidth="7xl">
       <PageHeader
         title="阅读总库"
-        subtitle="从人物、资料类型和研究主题进入书房，这里是全站阅读入口；核心原典与其他专题内容分区统计。"
+        subtitle="全站阅读入口：核心原典与其他专题内容。"
         sticky
       />
-
-      <div className="archive-stats-line" aria-label="档案统计">
-        <span>{stats.totalItems} 篇核心资料</span>
-        <span>{stats.authorCount} 位核心人物</span>
-        <span>{stats.authorCounts['巴菲特'] || 0} 篇巴菲特相关</span>
-        <span>{stats.authorCounts['芒格'] || 0} 篇芒格相关</span>
-        <span>{stats.authorCounts['段永平'] || 0} 篇段永平相关</span>
-      </div>
 
       {stats.library.map((author, index) => (
         <AuthorSection key={author.name} author={author} index={index + 1} />
       ))}
 
       <section className="mb-12" aria-labelledby="reading-hubs-title">
-        <div className="flex items-end justify-between gap-4 mb-4">
-          <div>
-            <p className="archive-kicker">专题内容</p>
-            <h2 id="reading-hubs-title" className="mt-1 text-xl md:text-2xl font-bold text-text dark:text-dark-text">
-              继续探索
-            </h2>
-          </div>
-          <span className="text-sm text-text-muted dark:text-dark-muted">专题内容与上方核心原典分区统计。</span>
-        </div>
+        <h2 id="reading-hubs-title" className="text-xl md:text-2xl font-bold text-text dark:text-dark-text mb-4">
+          继续探索
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
           {READING_HUBS.map((hub) => (
             <Link
@@ -99,8 +85,7 @@ function AuthorSection({ author, index }: { author: ReadingAuthor; index: number
     <section className="mb-12">
       <div className="flex items-end justify-between gap-4 mb-4">
         <div>
-          <p className="archive-kicker">{String(index).padStart(2, '0')} · 核心人物</p>
-          <h2 className="mt-1 text-xl md:text-2xl font-bold text-text dark:text-dark-text">{author.name}</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-text dark:text-text">{author.name}</h2>
         </div>
         <span className="text-sm text-text-muted dark:text-dark-muted">{author.totalCount} 篇资料</span>
       </div>

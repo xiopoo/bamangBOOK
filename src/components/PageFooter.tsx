@@ -42,9 +42,6 @@ export default function PageFooter() {
 
           <div className="archive-footer__support">
             <p>关于本站</p>
-            <p className="archive-footer__support-desc">
-              以巴菲特、芒格与段永平原典为核心，保留来源与完整上下文。
-            </p>
             <div className="archive-footer__support-links">
               {aboutLinks.map(link => (
                 <Link key={link.href} href={link.href} {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>

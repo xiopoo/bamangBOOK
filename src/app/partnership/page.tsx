@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import StatBadge from '@/components/StatBadge'
 import {
   getPartnershipYearGroups,
-  getPartnershipCount,
   formatPartnershipSubtitle,
   formatPartnershipLabel,
   type PartnershipLetter,
@@ -23,8 +21,6 @@ export const metadata: Metadata = {
 
 export default function PartnershipPage() {
   const yearGroups = getPartnershipYearGroups()
-  const totalCount = getPartnershipCount()
-  const yearSpan = yearGroups.length
 
   // 跨度年份（首末）
   const firstYear = yearGroups[0]?.year
@@ -34,48 +30,11 @@ export default function PartnershipPage() {
     <PageContainer maxWidth="6xl">
       <PageHeader
         title="巴菲特致合伙人信"
-        subtitle={`${firstYear}-${lastYear}年 · 巴菲特合伙基金时期完整收录`}
+        subtitle={`${firstYear}-${lastYear}年 · 巴菲特合伙基金时期`}
         backHref="/buffett"
         backLabel="返回巴菲特主页"
         sticky
       />
-
-      {/* 概览：三张统计卡 */}
-      <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-10">
-        <StatBadge
-          icon="📝"
-          count={`${totalCount}封`}
-          label="合伙人信"
-          sub={`${firstYear}-${lastYear}`}
-        />
-        <StatBadge
-          icon="📅"
-          count={`${yearSpan}年`}
-          label="时间跨度"
-          sub={`${firstYear}-${lastYear}`}
-        />
-        <StatBadge
-          icon="🤝"
-          count="合伙基金"
-          label="时期"
-          sub="巴菲特投资起点"
-          variant="highlight"
-        />
-      </div>
-
-      {/* 时期说明 */}
-      <div className="archive-card mb-8">
-        <p className="text-sm text-text-muted dark:text-dark-muted leading-relaxed">
-          <span className="font-medium text-primary dark:text-primary-light">合伙基金时期</span>
-          （1956-1970）是巴菲特投资生涯的起点。26岁的巴菲特回到奥马哈创立合伙基金，
-          这14年间的致合伙人信记录了他早期的套利、控制型投资与业绩衡量方法，
-          <span className="text-text dark:text-dark-text">「市场先生」「能力圈」「安全边际」</span>
-          等概念也最早出现在这批信件里。
-        </p>
-        <p className="mt-2 text-xs text-text-light dark:text-dark-muted">
-          巴菲特写信多集中在<strong className="font-medium text-primary dark:text-primary-light">年中</strong>与<strong className="font-medium text-primary dark:text-primary-light">年末</strong>。
-        </p>
-      </div>
 
       {/* 按年份分组的时间轴列表：仅列出有信件的月份，完全响应式 */}
       <div className="space-y-8">

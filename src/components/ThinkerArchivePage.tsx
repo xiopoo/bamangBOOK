@@ -4,17 +4,10 @@ import type { ThinkerArchive } from '@/lib/thinker-archives'
 import Breadcrumbs from './Breadcrumbs'
 import styles from './ThinkerArchivePage.module.css'
 
-type Stat = {
-  value: string | number
-  label: string
-}
-
 export default function ThinkerArchivePage({
   archive,
-  stats,
 }: {
   archive: ThinkerArchive
-  stats: Stat[]
 }) {
   return (
     <>
@@ -23,20 +16,7 @@ export default function ThinkerArchivePage({
       <header className={styles.hero}>
         <p>{archive.eyebrow}</p>
         <h1>{archive.name}</h1>
-        <div className={styles.heroStatement}>
-          <strong>{archive.headline}</strong>
-          <span>{archive.introduction}</span>
-        </div>
       </header>
-
-      <dl className={styles.stats}>
-        {stats.map((stat) => (
-          <div key={stat.label}>
-            <dt>{stat.value}</dt>
-            <dd>{stat.label}</dd>
-          </div>
-        ))}
-      </dl>
 
       <section className={styles.sources}>
         <header>
@@ -61,7 +41,6 @@ export default function ThinkerArchivePage({
       <section className={styles.ideas}>
         <header>
           <p>核心思想</p>
-          <h2>思想不是清单，而是一组彼此制约的判断</h2>
         </header>
         <div>
           {archive.ideas.map((idea, index) => (
@@ -77,7 +56,6 @@ export default function ThinkerArchivePage({
       <section className={styles.chapters}>
         <header>
           <p>人生经历</p>
-          <h2>思想怎样被经历改写</h2>
         </header>
         <ol>
           {archive.chapters.map((chapter) => (
@@ -92,10 +70,7 @@ export default function ThinkerArchivePage({
 
       <section className={styles.cases}>
         <header>
-          <div>
-            <p>实践案例</p>
-            <h2>在公司里检验这些判断</h2>
-          </div>
+          <p>实践案例</p>
           <Link href="/companies">全部公司 →</Link>
         </header>
         <div>

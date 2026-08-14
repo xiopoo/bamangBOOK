@@ -38,21 +38,10 @@ export default function DYList({
   inlineContent = false,
 }: DYListProps) {
   const groups = groupByYearEnabled ? groupByYear(docs) : [{ year: '', docs }]
-  const totalWords = docs.reduce((s, d) => s + Math.round((d.content.length || 0) / 2), 0)
 
   return (
     <PageContainer maxWidth="7xl">
       <PageHeader title={title} subtitle={subtitle} backHref="/duanyongping" backLabel="返回段永平专题" />
-
-      <div className="talks-ledger">
-        <div><strong>{docs.length}</strong><span>篇</span></div>
-        {!indexOnly && (
-          <div><strong>{totalWords / 10000 > 1 ? (totalWords / 10000).toFixed(1) + '万' : totalWords}</strong><span>正文字数</span></div>
-        )}
-        {groupByYearEnabled && docs.length > 0 && (
-          <div><strong>{groups.length}</strong><span>个年份</span></div>
-        )}
-      </div>
 
       <div className="space-y-8">
         {groups.map((g) => (
