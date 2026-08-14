@@ -106,7 +106,7 @@ export const duanYongpingArchive: ThinkerArchive = {
     {
       href: '/duanyongping/qa',
       label: '雪球问答录',
-      meta: '2011—2025',
+      meta: '2011—2025 · 2200+ 条',
       description: '雪球问答按年份分卷，是他最密集、最直白的公开判断。',
     },
     {

@@ -1,0 +1,1339 @@
+{
+  "generatedAt": "2026-08-10T15:41:50.794Z",
+  "count": 166,
+  "groups": [
+    {
+      "type": "exact",
+      "hash": "9d45dfa711334b753acf9da15e8b75ec3ce20ed91d2585857f85d584e50077ee",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V2_20260801_113844.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V2_20260801_113923.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V3_20260801_124038.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_pass2_before_102415.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ebe07db6d3c5bc30b55eb1c7068ee49f9044f41e20eff5d0ed3f88aac4278023",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V2_20260801_113844.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V2_20260801_113923.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_CH04-15_V3_20260801_124038.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿_pass2_before_102415.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": [
+        "content/bloggers/唐僧的碎碎念/20251003_欲望快过收入：美国消费社会七十年.md",
+        "content/bloggers/唐僧的碎碎念/20260619_其实我不太明白最近老登股有什么低迷的。.md",
+        "content/yearly-events.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "55d96396d50ba4d51b9bb5695658d3498e4476cd848de3b03299d18dc1271aa7",
+      "files": [
+        ".trae/specs/content-proofread/spec.md",
+        ".trae/specs/content-structural-fix/spec.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "403b3829128fad576bbf29142cee2a2357cbf375995a843b0abb539ac538b309",
+      "files": [
+        ".trae/specs/content-proofread/spec.md",
+        ".trae/specs/content-structural-fix/spec.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "cabbcef1e97d9cc20addbd600aa1269461e9bbecbe9db8d8e39811f250741c28",
+      "files": [
+        ".trae/specs/crawl-website-content/spec.md",
+        ".trae/specs/crawl-website-content/tasks.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "8fdf71f6e5bdff1d3f75ff6668af4a7dc2b726a2eaadd72d7a27bea4c0765ca4",
+      "files": [
+        ".trae/specs/crawl-website-content/spec.md",
+        ".trae/specs/crawl-website-content/tasks.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "89aa1d11a5c90e5dbb6d264d30ea43ee50cec7d93b41e8e900f12958c65f3c3c",
+      "files": [
+        "content/letters/berkshire_1977-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1977-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a2ccaa68282441ede5854a878949d2b267f93074d968d940223689f5280a7177",
+      "files": [
+        "content/letters/berkshire_1977-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1977-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "f7f8303d9b10fd73b4b58b1ef0c69070937387400936d5b318ad27fc41665b87",
+      "files": [
+        "content/letters/berkshire_1978-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1978-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "75a312f044f64744f0050787554c58fb95de3be059164918b181e8d21c688682",
+      "files": [
+        "content/letters/berkshire_1978-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1978-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "3d4e93c881f261446f52a51dfb787ff061e6a73234636e42a080a072d554512a",
+      "files": [
+        "content/letters/berkshire_1979-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1979-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "12f61f0650c655dd7bf2badb964c695d0308aefe1c7fc6c4f736cb0c9aad10a3",
+      "files": [
+        "content/letters/berkshire_1979-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1979-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6be07829e7e52c127d1f5bd77de81d740774679230001f9b609aaf98b346a874",
+      "files": [
+        "content/letters/berkshire_1980-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1980-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a62d9f9a326d67e5506a36ac58b76706f9bc6990cd56db818481862e7353139a",
+      "files": [
+        "content/letters/berkshire_1980-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1980-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6ddd9c3dec2bfec3071bc4c8fd0fe9b33b4fe7d0febff29f4327c1d816787ccd",
+      "files": [
+        "content/letters/berkshire_1981-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1981-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "eec52a1c048c10bd9f16542681f11a5120ec87478db4b3059ee386b23edc46da",
+      "files": [
+        "content/letters/berkshire_1981-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1981-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "15cd44d07a7332a38c6b903299ba9cd0b24cb779a4026f9cc9e3f0cca5923cda",
+      "files": [
+        "content/letters/berkshire_1982-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1982-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "9cb45f631adade95a8d9578bbe7b41212805882c8f8547667102f4b9a1a2843a",
+      "files": [
+        "content/letters/berkshire_1982-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1982-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "70e3eb6a66d62870742761bd831b41e548b20119564db48290e4284e46fd8dd6",
+      "files": [
+        "content/letters/berkshire_1983-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1983-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "e45eccb619c6bc554b89cf432c69b11e18cfc876161335e2d778ecbb3812dada",
+      "files": [
+        "content/letters/berkshire_1983-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1983-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "bcfc97cf3d359f8cd7acf93d7a8e7d2f650cfcf4fc993972855ab7e9095f9366",
+      "files": [
+        "content/letters/berkshire_1984-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1984-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "8844896b4b7ad78173a9305be877be42a45dbe904f6fe3d5222be3e9d5f8b606",
+      "files": [
+        "content/letters/berkshire_1984-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1984-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "d4745abba5b7ad49cdf968ddab2b5545cee921c29b20b697d08775a9557a7efc",
+      "files": [
+        "content/letters/berkshire_1985-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1985-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "f1af650c6841cf0bdc1b7a1c929b065a7a948d4c7947bf4080c3973208609554",
+      "files": [
+        "content/letters/berkshire_1985-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1985-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "f709bfd622aacf9c7e1b310d82d978561dbada320793e1db36a0bf759f6c1791",
+      "files": [
+        "content/letters/berkshire_1986-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1986-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "39a0036c28ca72041b7d95de689de7abb9ff243e05cd4df645c72540761d763a",
+      "files": [
+        "content/letters/berkshire_1986-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1986-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "08eafb0f98b556e99503057d0b3daad0928be168218e65a0bfc60d26671ce92f",
+      "files": [
+        "content/letters/berkshire_1987-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1987-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "06ef4729fc47f6775c399afb6dda31b7e35e46d2c6e87182428dac74fe32b95e",
+      "files": [
+        "content/letters/berkshire_1987-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1987-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "4c01a31eeb148993ba0a41aa53a154b0ea3cb85dd36b1f635ccd6d9e0b5aee1d",
+      "files": [
+        "content/letters/berkshire_1988-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1988-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "0741e00c79d307f014e922e7a3a879c981870909448f0e110ee1a9304ef56971",
+      "files": [
+        "content/letters/berkshire_1988-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1988-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "1832341510a4f2cb5e6e3a737a20f4b2183f3a6e6ad8d24eb06d5098a10b62bc",
+      "files": [
+        "content/letters/berkshire_1989-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1989-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "2e15b301446478983dfca491210d508f1055a49cb656accece2107e5b4a29218",
+      "files": [
+        "content/letters/berkshire_1989-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1989-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "a0932ca318cd37dcb8f1fc55dbed0efa9595c1b38a51e758e52203fb9537b5d3",
+      "files": [
+        "content/letters/berkshire_1991-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1991-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "b856c63067e8d1dbe7a189fe67df562f25b97722702a595025f7a0c532739fc3",
+      "files": [
+        "content/letters/berkshire_1991-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1991-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "bb90bed5452d7f121f495b07df0f6a9a76fda7bcb88ab672eeec980e2c333a33",
+      "files": [
+        "content/letters/berkshire_1992-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1992-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "81a64248ef8bcd2adfbae44332d700589805e16b59e0a133f3afb7a06c3dc9e9",
+      "files": [
+        "content/letters/berkshire_1992-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1992-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "d49be52930f96a3e6dfae655ee3e80cb0516f1f14774fb8ec2884643ba9a170d",
+      "files": [
+        "content/letters/berkshire_1993-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1993-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "2a7b5e7dfa26b46be01be988e5a4babda800e074c72ea0d8da83b6fa028c2322",
+      "files": [
+        "content/letters/berkshire_1993-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1993-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "d204a9889161af62f46af96fb7a95420e693e8f9e1eb0e65a9b79f1ed88be6e5",
+      "files": [
+        "content/letters/berkshire_1994-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1994-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "7ffc99423edb98377170b116eec9a4a1474befa7383cbd5cd004b903cc9dd388",
+      "files": [
+        "content/letters/berkshire_1994-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1994-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "c72a8b72668a51544cd3d460e6c909db8af47f0f02402aed50a8a4ad14b505ba",
+      "files": [
+        "content/letters/berkshire_1995-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1995-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ad62b64c25867d71a00ce40cd2d90b370f49c61b9d086796cd8e1663f54e5dc3",
+      "files": [
+        "content/letters/berkshire_1995-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1995-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "1608b85371446b320cc42a04fd171127e112d8b7a8bf9287ef895520eb864338",
+      "files": [
+        "content/letters/berkshire_1996-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1996-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "2e3e9d44a33be77d9610b785a407804d44e50feda528e96149a5f63311f4b346",
+      "files": [
+        "content/letters/berkshire_1996-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1996-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "5a5b4700b613442a01f53a187a3147eb12d72a7604ef8ade25364b66f786e339",
+      "files": [
+        "content/letters/berkshire_1997-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1997-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "8beb07365f753d7b0f65695342cd932eda6a607abda8c99d1b20bf5328116bd9",
+      "files": [
+        "content/letters/berkshire_1997-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1997-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "a37c5cc9e627713c92c3537489dcb165fa234409402e6d781827119b65f6e992",
+      "files": [
+        "content/letters/berkshire_1998-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1998-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "bc8edc2b0f3b49cc51cd83138719e79d788c8b2a3be1a2ae9585490ee1cddfa9",
+      "files": [
+        "content/letters/berkshire_1998-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1998-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "35583e8952bb72cb8caa95d04ce9ca27015b01a25c14f17d672ee75e263e5a0e",
+      "files": [
+        "content/letters/berkshire_1999-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1999-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "49722977ee3758652a9aee58fc2f7e42135ac35e44a9ce0465a039008f15db99",
+      "files": [
+        "content/letters/berkshire_1999-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_1999-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "e6b1851b474d269a16f369721695138aafd20f45845ac1a89e359377d709b292",
+      "files": [
+        "content/letters/berkshire_2005-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2005-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "be65fb21255ea5a1295f2e8191fe42753703009ef5ef7d5a3a73263ae9c00e45",
+      "files": [
+        "content/letters/berkshire_2005-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2005-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6f86a931ffe56c532f0d7dd971fc6dd4a4ed4232d2198de91331818b33ee104d",
+      "files": [
+        "content/letters/berkshire_2008-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2008-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "213fb0979a4e0b9602e3d05f1a09a3a94eca17e842b9d5eaac599251d61a35c8",
+      "files": [
+        "content/letters/berkshire_2008-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2008-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "3d073008a9bfdf2d59792f6e7d08a3648b2aedeba37a181eb2d821a664e2e010",
+      "files": [
+        "content/letters/berkshire_2009-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2009-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "f4c19c5d1fcbc84338d8d78aa8e15a91e2160e5cdaea4b51801bcb4be5a0f82a",
+      "files": [
+        "content/letters/berkshire_2009-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2009-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "c42f29922cfec58aca80d202e25d1f0f67c0d17e687cfac5c9ef5ca2fbca9048",
+      "files": [
+        "content/letters/berkshire_2010-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2010-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "8c43d387d46b2fb9c67a0b544c831c3a1b6eac5bc9df3eaeeb9a78019a7eff86",
+      "files": [
+        "content/letters/berkshire_2010-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2010-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "d352d7e2eb9406e0246b3c8e9b656e872dcde88f1890b20857face39ee074bba",
+      "files": [
+        "content/letters/berkshire_2011-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2011-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "41b89a00126348596311d46b0c801a33541ef69b493e84e135135d77dea7d6d7",
+      "files": [
+        "content/letters/berkshire_2011-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2011-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "272c19b3bddbd2f6bab7efd2406e3caa67c3e8d27319b65df976e6bf76b4ad27",
+      "files": [
+        "content/letters/berkshire_2012-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2012-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "d1358132b81e5951bfb258a5d0f5a0ff2155ee1f46944ecc2d0a21e4825ace67",
+      "files": [
+        "content/letters/berkshire_2012-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2012-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "0763f845fa6564d96bbae9178bd65a48d761814967bff17df2e7c8435dc3d3f4",
+      "files": [
+        "content/letters/berkshire_2013-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2013-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a4402c81992a7e461cdd4c346b0bc8bc9a879d9467a2a45620ca6cffacb0dec0",
+      "files": [
+        "content/letters/berkshire_2013-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2013-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "f8535d7ac0714dc92d48c2c42820c202f87eaeea72ff848c2d35350d93fa003b",
+      "files": [
+        "content/letters/berkshire_2014-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2014-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "05b20568beffe72ec5148f3c92e93c8df2d0933b9498a5858dba7d57ff00e9bc",
+      "files": [
+        "content/letters/berkshire_2014-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2014-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "166df3b12fd2ecfed902e1cb412254bf2145bbef27037eaa652fcbddbb77f8a6",
+      "files": [
+        "content/letters/berkshire_2015-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2015-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "4c931ac2df0426fcee0928bc872152faacfd6380251aba5682e66ed62fef80ca",
+      "files": [
+        "content/letters/berkshire_2015-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2015-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "c33fc310f85f3ae3f2acb84b4c5134908c1fb7e8df4a0432263b84dc3e936d25",
+      "files": [
+        "content/letters/berkshire_2017-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2017-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "3df98aa5ce1fe0b3f9d95c97697fc8a1211cc23ac3d49405cad07393dabd36a0",
+      "files": [
+        "content/letters/berkshire_2017-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2017-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "c082232697a0a4ca7dc0603a81aeba30ca0d97c79918bfdd6639229f2d748732",
+      "files": [
+        "content/letters/berkshire_2018-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2018-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "f64e89b1078932623d8715ca019a9af13d19bb789a8770dad0fe21474d735325",
+      "files": [
+        "content/letters/berkshire_2018-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2018-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "e57057420542ce2a009d61e43c9dd770efd437aba99c70fc6c1fd6baaa768796",
+      "files": [
+        "content/letters/berkshire_2019-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2019-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "13222dc45a2be6ca836ad20ebb1d60793ec2e9191dbb20ba77ef2b40112c8e8f",
+      "files": [
+        "content/letters/berkshire_2019-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2019-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "0804eedcec9f227388b1c4ed9c36d8ab15dbe823c4c476472886b8764e846677",
+      "files": [
+        "content/letters/berkshire_2020-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2020-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "bfb4775f1a8b379cd9ee41cca92b7878dfce5070ead8ec460ee5c70bb5639e7c",
+      "files": [
+        "content/letters/berkshire_2020-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2020-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "5c3a214f9e96ba9a0d46515eef5c6f91a52ed53eeed1c61840b80f6c25de5641",
+      "files": [
+        "content/letters/berkshire_2021-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2021-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "0d00fa63963b6ca6142e775045d0b2489b5182e0f49939aab4aa93d9655de567",
+      "files": [
+        "content/letters/berkshire_2021-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2021-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "5b00f7418545b52185a03611153f9a63c90c7a405cbc2da9ccc8356174889e89",
+      "files": [
+        "content/letters/berkshire_2022-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2022-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "7e2fa22a8dbd61897b8097b7fb4a73e37eb8eb3cedb65494fd20f5db8b1e54b4",
+      "files": [
+        "content/letters/berkshire_2022-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2022-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "64eccbcf4a6392ceb7b1d5057b7f2e7ead92a53240b185cec77cd9f486dfdf53",
+      "files": [
+        "content/letters/berkshire_2023-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2023-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "73ce4a838f57daedb5daf3adbafd53ccb3903aae95139f87d062701514f92b9c",
+      "files": [
+        "content/letters/berkshire_2023-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2023-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "ef5ada8535e77824db0cc6d6b38ba2f4f3fe7898270e7f313ae7a084eb0c359b",
+      "files": [
+        "content/letters/berkshire_2024-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2024-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "554403c7f2274a9985a6253262e2e1415c3d82aa7ba5ee8260a8db26350c48d7",
+      "files": [
+        "content/letters/berkshire_2024-巴菲特致股东信.md",
+        "editorial/buffett/collation/shareholder-letters/berkshire_2024-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "93bfce719c96a5ef47036a18f70f4f7c753e53bf13bc1c5cf6e15fefd19603d6",
+      "files": [
+        "editorial/buffett/manuscript/第一篇_所有者的起点/第一篇_所有者的起点_连续阅读定稿候选.md",
+        "editorial/buffett/manuscript/第一篇_所有者的起点/第一篇_所有者的起点_锁定稿.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "bb430b45a9c7c1859b07e910da2652427f8af7961c5206dafad0f6bdc6b43e31",
+      "files": [
+        "editorial/buffett/manuscript/第一篇_所有者的起点/第一篇_所有者的起点_连续阅读定稿候选.md",
+        "editorial/buffett/manuscript/第一篇_所有者的起点/第一篇_所有者的起点_锁定稿.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "f9d2e1f94784f7a8b0add13d513afc659127ffd2b7eaae279aad766f1154ac96",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿.md_V4_before_20260801_131252.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿.md_V4b_before_20260801_132052.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "667faa3b19adc0a5ca31d3f8a45dcf75eae6268b8e3c08371d3908222fed709a",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿.md_V4_before_20260801_131252.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/.deai_bak/所有者的眼光_巴菲特卷全卷锁定工作稿.md_V4b_before_20260801_132052.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "5be3c140060420635654db135fd61adb42cf74b10d96f4846a2d247db4f4a11d",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷连续正文.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/buffett/manuscript/全卷/所有者的眼光_巴菲特卷全卷锁定工作稿.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "a1a301103472fccc521416ce55356811f497e3dff6f51ab1d51d21e097c94e2e",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第二章_多元思维模型怎样连成知识格栅.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第二章_多元思维模型怎样连成知识格栅.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "55c3e27f6e9f4c116d00d047edf1d89aa6b2b45d512943467cb26a332daf46bf",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第二章_多元思维模型怎样连成知识格栅.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第二章_多元思维模型怎样连成知识格栅.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "52e1b39b9256ead3b274b7a12d4120a80e58fae826bfe8b86b842e3288942f5a",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第九章_群体、权威与被剥夺感.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第九章_群体、权威与被剥夺感.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "19b7468885f1e0f16cc4ba61080c2a78bdb87400ff9727a8698b7ce6cd1e0736",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第九章_群体、权威与被剥夺感.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第九章_群体、权威与被剥夺感.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6af8911c586ce0df36d84561089bf3f93269ff1cecd5ccfc72b3012a224257a2",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第六章_反证、检查清单与第二次思考.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第六章_反证、检查清单与第二次思考.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a094f44305502de689e151523abbdea91191b99cfb7bb6b454fc912325738cea",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第六章_反证、检查清单与第二次思考.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第六章_反证、检查清单与第二次思考.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "8325a8edb3e9b17fa6ade5ce28a1cbcc2fd9797469728d788f85090e74cba4ef",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第七章_误判不是偶然：心理倾向的系统.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第七章_误判不是偶然：心理倾向的系统.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "acb81b92f04155e4f618d2d95c18442417f856774ad9c2b969d04d6c690b1e7a",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第七章_误判不是偶然：心理倾向的系统.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第七章_误判不是偶然：心理倾向的系统.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "c51908edffc79fe574e291095f1226eba3a59a1c790c636cd4d0bb8ac3395890",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第三章_终身学习：让模型保持活性.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第三章_终身学习：让模型保持活性.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "902bd25c7792ef9cf862c02f9ae723f8a1eb5a1ad7d1b327fbc08d1b370d59a4",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第三章_终身学习：让模型保持活性.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第三章_终身学习：让模型保持活性.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "b8888b79b3ef767de457bd5be394e971f22787ff9bce9d8571e9d564d9fc440f",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十二章_好企业让少行动成为优势.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十二章_好企业让少行动成为优势.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "5d396340cbb5c1875e08f8c78cfa2a14fa5875b001ac6a1efa56c59a5fe49ce5",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十二章_好企业让少行动成为优势.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十二章_好企业让少行动成为优势.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "e0f5667e6ea83975fe9f81bd6a789d9ea400a87f302b516d3fb89a0b39f898d0",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十六章_理性近乎一种道德义务.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十六章_理性近乎一种道德义务.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "e973b39b060826fcff3f1821fd418dfe78a84a36e34daf6dfaf11ae6e72e5f5b",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十六章_理性近乎一种道德义务.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十六章_理性近乎一种道德义务.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "3f4beda5b6d21f81440713c7851aa855dbcb542e14bcd2e26102d241f5f57c54",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十四章_应得信任：合作如何降低摩擦.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十四章_应得信任：合作如何降低摩擦.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "c60190ce852010095316b769db3c2240512d4609e7599472dc4ca73a00a21079",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十四章_应得信任：合作如何降低摩擦.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十四章_应得信任：合作如何降低摩擦.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "b4c5363e6a841036c7587eecdbfc5916beeaf927e410e71dc734dcb1fd409ce6",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十五章_避免惯常的失败方式.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十五章_避免惯常的失败方式.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "f4353e7ec09aa5871ffa5c9a2cd299a62e4f387262fc6d862bbb5e3dc358d483",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十五章_避免惯常的失败方式.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十五章_避免惯常的失败方式.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "19f4306fc4a1eafba10515b3d9b5da0ec6e58ba984fbfb933504e5d704c689e9",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十一章_穿过会计看商业现实.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十一章_穿过会计看商业现实.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a30da85b6f2b4abaa127b56613b0d9870e780a0a7336673451c99af2f5d6631c",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十一章_穿过会计看商业现实.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十一章_穿过会计看商业现实.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "4d0f61d9400d314794e283886ca817865505d5126c3758ec257ec36346a055c8",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十章_当偏误彼此增强.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十章_当偏误彼此增强.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "dd968916f0e57bfefa04daf8463c4ce17579b1b134b7827c6bdf843bb6610718",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第十章_当偏误彼此增强.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第十章_当偏误彼此增强.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "3c683489c0bf704aa5ef4e78e7f2349c80501d7860be1e47fd188bb081cc5cd6",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第四章_概率：把故事变成可以检验的判断.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第四章_概率：把故事变成可以检验的判断.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "eac17bbecbaea831aca780c1f1d773c7bfac72c81c6e300d85b42acf95ec0517",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第四章_概率：把故事变成可以检验的判断.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第四章_概率：把故事变成可以检验的判断.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "96f20569e38f208ee46810174e79ecda90fb895d0bd489932d242f636a594cf8",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第五章_逆向：先问怎样会失败.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第五章_逆向：先问怎样会失败.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a2c7e3194e5a9e2164773650db28179f07ca02cc3f77722383579fb6bae7fea1",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第五章_逆向：先问怎样会失败.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第五章_逆向：先问怎样会失败.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "1f4bd5a9b8a9dc0b38282d464ebf0709308678514b4703a753a29bd5812982ae",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第一章_一把锤子为什么不够.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第一章_一把锤子为什么不够.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "8e3b8edf167a9951fa1fd031c764de28b71436cbc31c8ff917044fbaa6987038",
+      "files": [
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/.split_bak_20260801/第一章_一把锤子为什么不够.md",
+        "recovery_archive/deepseek_editorial_20260801/post_boundary_files/editorial/munger/manuscript/第一章_一把锤子为什么不够.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "770039111c06941b9b77bdabf20dfd9a1525ebcb7358682753cfef6062620ecc",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1981-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1981-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "dd1fa1b7e3136161e5c6884b1295c1007dcfa8dc00a2cf70be52ca00729e5df6",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1981-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1981-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "afd082793260bd6ae49cbe18fcb97453d8ffb10f4842776e2f79abfbe119af5e",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1982-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1982-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "9aaf6930501e10964372afb043778eff7e5fc244ad7aa4a8e69d1066896f8281",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1982-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1982-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "2bb1acdc16dc57c9efd9ed9b0e733217c7276e3c9e16bb0578542e0c6d14ad38",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1988-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1988-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "57320c9386c772037979e8fa78d1d5d4baf87d4f308fe139015ae76e5f119fb2",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1988-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1988-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "470ecacd19a3ec15b0bffc223a994315d891be93ddd4e4972ecc9dbd5f8628b5",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1989-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1989-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ff1246f63724e5f3cd3a1986713550a5a49e9b1c00572d8441db56dd8032588d",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1989-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1989-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6a09aefb077b30ef858fc76bfa8c35643b275b3b855e7e6904aeadecd805f7d2",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1990-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1990-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "187fcad07ee16e5867d66c9abdec8bb239f203030ce4ba18bb8cba98d7903736",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1990-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1990-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "e3f3719a23a61c80eb90fc58e8093bbec7e7aff5d951cb432e56978b408a39f8",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1992-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1992-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "6374773a213fdfb5110b4b4bf6dd35666365369263c93bf15409937299d06146",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1992-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1992-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "25a6a3e2707ce2f109a56417264d16dae2738101d333ea374377b328e40923dc",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1994-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1994-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "a52b0a885f95a5ea33ab9adcd7585f700f1655942d342fb89e34c33e4d803ce2",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1994-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1994-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "55ef87315ebf743f7d5ebdc7f4dc1570af870aaad87e0d585778a97671021881",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1998-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1998-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ff498ed2a0ed9265d14c56e3f9923061249d462e60dac58dbdbf6c736a775845",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1998-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1998-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "1517540b69388a8febe50247b85658850e9877ee3439262838898a966c1a48af",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1999-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1999-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "49c38bcc47fe52bf53e131f6200d1d991f174311d57f06f752c5433f9c27c7df",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_1999-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_1999-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "5f1d0359cc60e98ffe0609a1b0b0f6c87fca266b132b93d09d2e664a92d33159",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2000-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2000-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ade5b05814331b3cc53a82c3def42a544ea3a15e7f52b7112d757e27c7e9bf5c",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2000-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2000-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "818e6f219d0f32fea1a530ea5325ef78ab0c1b14cd4f735435652af728b0222b",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2001-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2001-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "9b33b54711d82452d5bf8c30cef4e5dbb643a70d1b4552ec5f76da206f1dd506",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2001-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2001-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "cfa639409d657cdea535da1dd61e9bc4f97da6e4cbc81d09fe8af969019fd475",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2002-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2002-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "5a3df92b28583e516d73a1e77441e0e1eb9832874302d24b588ba19841fa0637",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2002-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2002-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "eb79282a50e354347d5100f94ade4cdb8ec773e3e949088a60aad66227f46c3d",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2004-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2004-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "4d781c3723ecaa1601d6b8a6e22f598512725c7e38d47a718340534d132e3042",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2004-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2004-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "aeca5eca143ec4a9fd4c82cad1f4a87d4f90ea3afa572bc8eb8efd8ce0c15e9a",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2007-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2007-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "37b3d01487880e46b44de087411a1aee3bbad8eb8f0a7481bf57b4017697e493",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2007-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2007-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "a83d10601694513b610efcac7f5aa132b780a690de85cd01c650c02ce3983c3d",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2009-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2009-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "beaf17e1887c4bdf4f74b725650c555ede380f42e3122fd47f22f782cd64fead",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2009-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2009-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "4f72db13185e7ab3f013618d4146154f02de33eca3652cec56f782720089ec54",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2012-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2012-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "057d9b5f9c3d5d6791e3d94a95b533f8ab63d06361c1450458f211d57bbd34da",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2012-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2012-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "872f541d93f1b0bfb8d6b7c24c88ec12689068072c9345278a96998050365de2",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2013-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2013-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "e909e8297ac2dcf60fa2c2285d9ceefb67fc9176912106a1bc51b05b0f819b89",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2013-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2013-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "6826528efcc1427c7c6d3e83335cffa6ecacc12ed6d69b9eb404d1b758f11c6f",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2015-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2015-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "91952375b8bb16eb979f808165944816f35cdfae35c745bdb625b022df0f8e1e",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2015-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2015-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "aa85cb494298afcfb689989f66cb112a169f0af43248f02b19ed5d2cf8ec847e",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2016-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2016-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "fdb699e4e5fed6003c8c7e19e116a9b34ea47b52580d03fc87582e20ed796afa",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2016-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2016-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "d7a337e1da4a8ae33486fe723892e0985f4ae246187f09cf2169d96fb265aeb8",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2017-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2017-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "2585bc5a44e1270fd4fb530b873b375689edac213223653454aa34bfa0dcf55d",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2017-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2017-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "5de3ffa9ab793f3b7dcfe727ecf1f91c785343d72226e31dc8b36e23ccaa6bfa",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2018-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2018-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "4f7bcaf320005c5c9bd29253733f0327fc21d5577c0c77c9d22642bec7fde0a6",
+      "files": [
+        "tmp/ima-audit/letter-preview/berkshire_2018-巴菲特致股东信.md",
+        "tmp/ima-audit/letter-preview2/berkshire_2018-巴菲特致股东信.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "7b0af3ee338852a14f953eb7f8358589b78a0b0987686a3f9e616abcc97c1ef2",
+      "files": [
+        "tmp/ima-audit/preview3/伯克希尔股东大会实录_2005.md",
+        "tmp/ima-audit/preview6/伯克希尔股东大会实录_2005.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "c288427f83914b66bd6775d5bd9bc77e15fa4aa330094a2cd1eee4215e6f2ddc",
+      "files": [
+        "tmp/ima-audit/preview3/伯克希尔股东大会实录_2005.md",
+        "tmp/ima-audit/preview6/伯克希尔股东大会实录_2005.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "13ba7d5a87cb31b0aa032dc6a648311a40371a6c11a42e0e8969b9cfa2593260",
+      "files": [
+        "tmp/pdfs/original-compendia/buffett.md",
+        "tmp/pdfs/original-compilation-trial/buffett.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "ed2296fd8ee91cf7ccfcedb3af67e74ffe29639cd9b329e176ab8f1beaaa336e",
+      "files": [
+        "tmp/pdfs/original-compendia/buffett.md",
+        "tmp/pdfs/original-compilation-trial/buffett.md"
+      ]
+    },
+    {
+      "type": "exact",
+      "hash": "e36fbb978afa42479e8177f08eb76a5e85d5f6f37ba3caee5e9d8d9bc8897b16",
+      "files": [
+        "tmp/pdfs/original-compendia/munger.md",
+        "tmp/pdfs/original-compilation-trial/munger.md"
+      ]
+    },
+    {
+      "type": "normalized",
+      "hash": "9120e5ea4c1a12f59ef5d1fa952c3c19b4a121d7ae68f887c077d8ec8fdf48ed",
+      "files": [
+        "tmp/pdfs/original-compendia/munger.md",
+        "tmp/pdfs/original-compilation-trial/munger.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+# July 12, 1967 interim letter｜中英校勘包
+
+> 校勘状态：待逐段核对。此文件不作自动改译。
+> - 中文候选：`content/partnership/partnership_1967-interim-巴菲特致合伙人信.md`
+> - 英文底本：`content/source-documents/buffett-partnership-letters/ivey-buffett-partnership-letters.pdf`，PDF 第 108—110 页
+> - 来源：https://www.ivey.uwo.ca/media/2975913/buffett-partnership-letters.pdf
+> - 中文 SHA-256：`627eb6b1f1ff686dec417cbe90bd6405294644663ade4d14b32cbddfd58e393e`
+> - 英文抽取 SHA-256：`d1a97b4ae4427e9249f4ea07b5228ebbedccd5a84cbfd77af2a6239a970d1742`
+
+## 英文底本（按指定 PDF 页机械抽取）
+
+~~~text
+--- PDF PAGE 108 ---
+BUFFETT PARTNERSHIP. LTD.
+610 KIEWIT PLAZA
+OMAHA, NEBRASKA 68131
+TELEPHONE 042-4110
+July 12, 1967 
+First Half Performance
+Again, this is being ,written in late June prior to the family's trip to California. To maintain the usual 
+chronological symmetry (I try to sublimate my aesthetic urges when it comes to creating symmetry in the profit 
+and loss statement), I will leave a few blanks and trust that the conclusions look appropriate when the figures are 
+entered.
+We began 1967 on a traumatic note with January turning out to be one of the worst months we have experienced 
+with a plus 3.3% for BPL versus a plus 8.5% for the Dow. Despite this sour start, we finished the half about plus 
+21% for an edge of 9.6 percentage points over the Dow. Again, as throughout 1966, the Dow was a relatively 
+easy competitor (it won't be every year, prevailing thinking to the contrary notwithstanding) and a large majority 
+of investment managers outdid this yardstick. The following table summarizes performance to date on the usual 
+basis:
+Year Overall Results From 
+Dow (1)
+Partnership Results (2) Limited Partners’ 
+Results (3)
+1957 -8.4% 10.4% 9.3%
+1958 38.5% 40.9% 32.2%
+1959 20.0% 25.9% 20.9%
+1960 -6.2% 22.8% 18.6%
+1961 22.4% 45.9% 35.9%
+1962 -7.6% 13.9% 11.9%
+1963 20.6% 38.7% 30.5%
+1964 18.7% 27.8% 22.3%
+1965 14.2% 47.2% 36.9%
+1966 -15.6% 20.4% 16.8%
+First half 1967 11.4% 21.0% 17.3%
+Cumulative Results 148.3% 1419.8% 843.3%
+Annual Compounded 
+Rate
+9.1% 29.6% 23.8%
+(1) Based on yearly changes in the value of the Dow plus dividends that would have been received through 
+ownership of the Dow during that year. The table includes all complete years of partnership activity.
+(2) For 1957-61 consists of combined results of all predecessor limited partnerships operating throughout 
+the entire year after all expenses but before distributions to partners or allocations to the general partner.
+(3) For 1957-61 computed on the basis of the preceding column of partnership results allowing for 
+allocation to the general partner based upon the present partnership agreement, but before monthly 
+withdrawals by limited partners.
+BPL's performance during the first hall reflects no change in valuation of our controlled companies and was thus 
+achieved solely by the 63.3% of our net assets invested in marketable securities at the beginning of the year. 
+108
+
+--- PDF PAGE 109 ---
+Any revaluation of Diversified Retailing Company (DRC) and Berkshire Hathaway Inc. (B-H) will be made in 
+December prior to the time the commitment letters become final and will be based upon all relevant criteria 
+(including current operating. market and credit conditions) at that time.
+Both DRC and B-H made important acquisitions during the first half. The overall progress of DRC (80% 
+owned) and both of its subsidiaries (Hochschild Kohn and Associated Cotton Shops) is highly satisfactory. 
+However, B-H is experiencing and faces real difficulties in the textile business, while I don't presently foresee 
+any loss in underlying values. I similarly see no prospect of a good return on the assets employed in the textile 
+business. Therefore, this segment of our portfolio will be a substantial drag on our relative performance (as it 
+has been during the first half) if the Dow continues to advance. Such relative performance with controlled 
+companies is expected in a strongly advancing market, but is accentuated when the business is making no 
+progress. As a friend of mine says. “Experience is what you find when you're looking for something else.”
+Investment Companies
+The usual comparison follows showing the results of the two largest open-end and two largest closed-end 
+investment companies which pursue a policy of 95-100% investment in common stocks.
+Year Mass. Inv. 
+Trust (1)
+Investors 
+Stock (1)
+Lehman (2) Tri-Cont 
+(2)
+Dow Limited 
+Partners
+1957 -11.4% -12.4% -11.4% -2.4% -8.4% 9.3%
+1958 42.7% 47.5% 40.8% 33.2% 38.5% 32.2%
+1959 9.0% 10.3% 8.1% 8.4% 20.0% 20.9%
+1960 -1.0% -0.6% 2.5% 2.8% -6.2% 18.6%
+1961 25.6% 24.9% 23.6% 22.5% 22.4% 35.9%
+1962 -9.8% -13.4% -14.4% -10.0% -7.6% 11.9%
+1963 20.0% 16.5% 23.7% 18.3% 20.6% 30.5%
+1964 15.9% 14.3% 13.6% 12.6% 18.7% 22.3%
+1965 10.2% 9.8% 19.0% 10.7% 14.2% 36.9%
+1966 -7.7% -10.0% -2.6% -6.9% -15.6% 16.8%
+First half 
+1967
+11.3% 12.3% 19.3% 14.4% 11.4% 17.3%
+Cumulative 
+Results
+143.3% 126.4% 185.4% 156.8% 148.3% 843.3%
+Annual 
+Compounded 
+Rate
+8.9% 8.1% 10.5% 9.4% 9.1% 23.8%
+(1) Computed from changes in asset value plus any distributions to holders of record during year.
+(2) From 1967 Moody's Bank & Finance Manual for 1957-1966. Estimated for first half of 1967.
+The tide continues to be far more important than the swimmers.
+Taxes
+We entered 1967 with unrealized gains of $16,361,974. Through June 30 we have realized net capital gains of 
+$7,084,104 so it appears likely that we will realize in 1967 a fairly substantial portion of the unrealized gain 
+attributable to your interest at the beginning of the year. This amount was reported to you as Item 3 of our 
+February 2, 1967 letter. A copy of that letter, along with a tax letter, will be mailed to you in November giving a 
+rough idea of the tax situation at that time.
+109
+
+--- PDF PAGE 110 ---
+As I regularly suggest, the safe course to follow on interim estimates is to pay the same estimated tax for 1967 
+as your actual tax was for 1966. There can be no penalties if you follow this procedure. 
+Whatever our final figure, it looks now as if it will be very largely long term capital gain with only minor 
+amounts, if any, of short term gain and ordinary income. (I consider the whole Income-Principal Myth fair game 
+for one of my soft-spoken gently worded critiques. As I told Susie in the early days of our marriage, “Don't 
+worry about the income; just the outcome.”)
+Miscellaneous
+During the first half, Stan Perimeter resigned from the Dissolution Committee because of his present full-time 
+involvement in investment management. Fred Stanback, Jr., a long time partner and experienced investor, was 
+elected by the remaining members to fill the vacancy.
+As in past years, we will have a report out about November 11 along with the Commitment Letter, and the rough 
+estimate of the 1967 tax situation, etc.
+However, there will be a special letter (to focus your attention upon it) in October. The subject matter will not 
+relate to change in the Partnership Agreement, but will involve some evolutionary changes in several "Ground 
+Rules" which I want you to have ample time to contemplate before making your plans for 1968. Whereas the 
+Partnership Agreement represents the legal understanding among us, the "Ground Rules" represent the personal 
+understanding and in some ways is the more important document. I consider it essential that any changes be 
+clearly set forth and explained prior to their effect on partnership activity or performance – hence, the October 
+letter.
+Cordially, 
+Warren E. Buffett 
+WEBeh
+110
+~~~
+
+## 中文候选（原 Markdown 原样嵌入）
+
+<!-- SOURCE-BEGIN content/partnership/partnership_1967-interim-巴菲特致合伙人信.md 627eb6b1f1ff686dec417cbe90bd6405294644663ade4d14b32cbddfd58e393e -->
+1967 年 7 月 12 日
+
+## 上半年业绩
+
+和往年一样，因为我们一家要去加州度假，这封信也是六月末写的。为了与往年相称（对于损益表，我总是克服我对美感的追求，不讲对称），有些地方我先保留了空白，等数字补上后，相信我的结论也不会有问题。
+
+1967 年，我们一开局就很受伤，一月份表现惨淡，道指上涨 8.5%，合伙基金上涨 3.3%。尽管开局不利，上半年结束之时，我们还是取得了 21% 的收益率，领先道指 9.6 个百分点。今年上半年和去年一样，打败道指比较容易（很多人觉得战胜道指很容易，不可能每年都如此），很多基金经理都跑赢了道指。按照惯例，下表汇总了我们上半年的业绩：
+
+| 年份 | 道指整体收益率 (1) | 合伙基金收益率 (2) | 有限合伙人收益率 (3) |
+| --- | --- | --- | --- |
+| 1957 | -8.4% | 10.4% | 9.3% |
+| 1958 | 38.5% | 40.9% | 32.2% |
+| 1959 | 20.0% | 25.9% | 20.9% |
+| 1960 | -6.2% | 22.8% | 18.6% |
+| 1961 | 22.4% | 45.9% | 35.9% |
+| 1962 | -7.6% | 13.9% | 11.9% |
+| 1963 | 20.6% | 38.7% | 30.5% |
+| 1964 | 18.7% | 27.8% | 22.3% |
+| 1965 | 14.2% | 47.2% | 36.9% |
+| 1966 | -15.6% | 20.4% | 16.8% |
+| 1967 年上半年 | 11.4% | 21.0% | 17.3% |
+| 累计收益率 | 148.3% | 1419.8% | 843.3% |
+| 年化复合收益率 | 9.1% | 29.6% | 23.8% |
+
+> (1) 根据道指年度涨跌计算，其中包含股息。表格中为合伙基金整年运作的年份。
+>
+> (2) 1957-61 年的数据是之前全年管理的所有有限合伙人账户的综合业绩，其中扣除了经营费用，未计算有限合伙人利息和普通合伙人分成。
+>
+> (3) 1957-61 年的数据按前一列合伙基金收益率计算得出，按照当前合伙协议，扣除了普通合伙人分成。
+
+在合伙基金上半年业绩统计中，控股公司的估值保持不变，我们的收益完全来自有价证券投资。今年年初，我们投资有价证券的部分占净资产的 63.3%。
+
+在 12 月份承诺书最终生效之前，我们会考虑所有相关情况（包括经营、市场和信用情况），决定是否对多元零售公司 (Diversified Retailing Company, DRC) 和伯克希尔•哈撒韦公司重新估值。
+
+上半年，多元零售公司和伯克希尔哈撒韦公司都进行了大型收购。多元零售公司（我们持有 80% 股份）及其两个子公司（霍赫希尔德科恩公司 (Hochschild Kohn) 和联合棉布商店 (Associated Cotton Shops)）都非常令人满意。纺织行业的伯克希尔哈撒韦却步履维艰。虽然现在我没看到它的内在价值有任何减损，但是它的纺织业务是不可能取得像样的资产回报率了。如果道指继续上涨，投资组合中的伯克希尔纺织业务会严重拖累我们的相对表现（今年上半年就是如此）。在市场强劲上涨时，控股公司的相对表现较弱是意料之中的，但是如果控股公司本身的业务也没起色，那就麻烦了。我一个朋友有句话说得好：“想要的东西没得到，就得到了经验。”(Experience is what you find when you're looking for something else.)
+
+## 基金公司
+
+与往常一样，下面是合伙基金与股票投资占 95-100% 的最大的两只开放式股票型基金（共同基金）和最大的两只封闭式基金的对比情况。
+
+| 年份 | Mass. Inv. Trust (1) | Investors Stock (1) | Lehman (2) | Tri-Cont. (2) | 道指 | 有限合伙人 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1957 | -11.4% | -12.4% | -11.4% | -2.4% | -8.4% | 9.3% |
+| 1958 | 42.7% | 47.5% | 40.8% | 33.2% | 38.5% | 32.2% |
+| 1959 | 9.0% | 10.3% | 8.1% | 8.4% | 20.0% | 20.9% |
+| 1960 | -1.0% | -0.6% | 2.5% | 2.8% | -6.2% | 18.6% |
+| 1961 | 25.6% | 24.9% | 23.6% | 22.5% | 22.4% | 35.9% |
+| 1962 | -9.8% | -13.4% | -14.4% | -10.0% | -7.6% | 11.9% |
+| 1963 | 20.0% | 16.5% | 23.7% | 18.3% | 20.6% | 30.5% |
+| 1964 | 15.9% | 14.3% | 13.6% | 12.6% | 18.7% | 22.3% |
+| 1965 | 10.2% | 9.8% | 19.0% | 10.7% | 14.2% | 36.9% |
+| 1966 | -7.7% | -10.0% | -2.6% | -6.9% | -15.6% | 16.8% |
+| 1967 年上半年 | 11.3% | 12.3% | 19.3% | 14.4% | 11.4% | 17.3% |
+| 累计收益率 | 143.3% | 126.4% | 185.4% | 156.8% | 148.3% | 843.3% |
+| 年化复合收益率 | 8.9% | 8.1% | 10.5% | 9.4% | 9.1% | 23.8% |
+
+> (1) 计算包括资产价值变化以及当年持有人获得的分红。
+>
+> (2) 来源：1967 Moody&# 39;s Bank & Finance Manual for 1957-1966。1967 年上半年数据为估算值。
+
+主要还是靠潮涨潮落，不是游泳的真本事。
+
+## 税项
+
+进入 1967 年，我们未实现的收益是 16,361,974 美元。截止 6 月 30 日，我们实现了 7,084,104 美元的净资本收益，由此看来，今年年初归属于合伙人权益的未实现收益中的很大一部分，都会在今年实现。在 1967 年 2 月 2 日寄给各位的信中，我们在第三条报告了这一金额。11 月份，我们会将 2 月 2 日信的副本以及税收信函寄给各位，让各位了解大概的纳税情况。
+
+我一直这样建议大家，在估算中期纳税数字时，使用上一年实际支付的税收金额，这样比较稳妥，不会受罚。
+
+最终数字是多少还不得而知，但现在知道的是，缴纳的税款中大部分是长期资本利得，短期资本利得和普通所得很少。（有些人计算收益和本金时总是很糊涂，我经常想善意地批评一下。我和苏茜刚结婚的时候，我对她说：“别担心 income（收入），重要的是 outcome（结果）。”）
+
+## 其他事项
+
+上半年，由于要全身心投入到自己的投资管理工作中，斯坦•波尔米塔 (Stan Perlmeter) 辞去了合伙基金解散委员会的职务。经其余委员选举，小弗雷德•斯坦贝克 (Fred Stanback, Jr.) 填补了空缺。小弗雷德是我们的一位老合伙人，也是一位经验丰富的投资者。
+
+和往年一样，我们将在 11 月 1 日左右寄出承诺书以及 1967 年纳税估算数据等文件。
+
+今年有个特殊情况，为了引起各位的注意，我会在 10 月份专门给大家写一封信。我要说的不是修改《合伙协议》，而是由于环境变化，“基本原则”需要进行一些修改。我希望提前通知大家，让大家在安排 1968 年的计划之前有足够的时间消化。《合伙协议》代表我们在法律上达成的一致，“基本原则”代表我们在个人理念上达成的一致。从某些方面来说，我认为“基本原则”这份文件更重要。在我看来，如果有可能影响合伙基金的活动或业绩的变化，一定要事先告诉大家，把一切都讲明白，这就是我为什么 10 月份会专门写一封信给各位。
+
+沃伦 E. 巴菲特谨上
+
+<!-- SOURCE-END content/partnership/partnership_1967-interim-巴菲特致合伙人信.md -->
+
+## 人工校勘记录
+
+- [ ] 文献起止位置与日期一致
+- [ ] 标题、称谓、签名与附注完整
+- [ ] 数字、百分比、金额、年份逐项核对
+- [ ] 段落无整段遗漏或重复
+- [ ] 专名与投资术语核对
+- [ ] 实质性修订已写入校勘日志

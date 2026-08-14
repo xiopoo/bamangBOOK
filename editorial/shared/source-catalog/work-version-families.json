@@ -1,0 +1,346 @@
+{
+  "generatedAt": "2026-08-10T15:41:50.794Z",
+  "count": 17,
+  "families": [
+    {
+      "workKey": "berkshire-meeting-1994",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/munger-archive/recordings/berkshire-hathaway-annual-meetings.md",
+          "title": "伯克希尔-哈撒韦年度股东大会(1994年至今)",
+          "language": "zh",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-include-selection"
+        },
+        {
+          "relative": "content/qa/伯克希尔股东大会实录_1994.md",
+          "title": "1994 年伯克希尔股东大会实录",
+          "language": "zh",
+          "completeness": "incomplete-or-omitted-sections",
+          "decision": "candidate-include-selection"
+        }
+      ]
+    },
+    {
+      "workKey": "berkshire-meeting-2009",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/qa/伯克希尔股东大会发布会_2009.md",
+          "title": "伯克希尔股东大会发布会 2009",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-include-selection"
+        },
+        {
+          "relative": "content/qa/伯克希尔股东大会实录_2009.md",
+          "title": "2009 年伯克希尔股东大会实录",
+          "language": "zh",
+          "completeness": "incomplete-or-omitted-sections",
+          "decision": "candidate-include-selection"
+        }
+      ]
+    },
+    {
+      "workKey": "berkshire-meeting-2009-morning",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/buffettfaq_cnbc/2009/Morning_Session_-_2009__Meeting.md",
+          "title": "Morning Session - 2009  Meeting",
+          "language": "en",
+          "completeness": "full-candidate",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "content/buffettfaq_cnbc/2009/Morning_Session_-_2009_Meeting.md",
+          "title": "Morning Session - 2009  Meeting",
+          "language": "en",
+          "completeness": "full-candidate",
+          "decision": "candidate-source-version"
+        }
+      ]
+    },
+    {
+      "workKey": "berkshire-meeting-2020",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/qa/2020.05 伯克希尔股东大会文字记录.md",
+          "title": "第一部分",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-include-selection"
+        },
+        {
+          "relative": "content/qa/伯克希尔股东大会实录_2020.md",
+          "title": "伯克希尔股东大会实录 2020",
+          "language": "zh",
+          "completeness": "full-candidate",
+          "decision": "candidate-include-full"
+        }
+      ]
+    },
+    {
+      "workKey": "berkshire-meeting-2023",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/munger-archive/recordings/berkshire-2023-annual-meeting.md",
+          "title": "伯克希尔-哈撒韦2023年年度股东大会——巴菲特与芒格最后一次同台",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        },
+        {
+          "relative": "content/qa/伯克希尔股东大会实录_2023.md",
+          "title": "伯克希尔股东大会实录 2023",
+          "language": "zh",
+          "completeness": "full-candidate",
+          "decision": "candidate-include-full"
+        }
+      ]
+    },
+    {
+      "workKey": "buffett-partnership-1969-month-12",
+      "count": 2,
+      "files": [
+        {
+          "relative": "content/partnership/partnership_1969-12月-巴菲特致合伙人信.md",
+          "title": "1969 年 12月致合伙人信",
+          "language": "zh",
+          "completeness": "full-candidate",
+          "decision": "candidate-include-full"
+        },
+        {
+          "relative": "content/partnership/partnership_1969-12月26日-巴菲特致合伙人信.md",
+          "title": "1969 年 12月26日致合伙人信",
+          "language": "zh",
+          "completeness": "full-candidate",
+          "decision": "candidate-include-full"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-eight",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-eight.md",
+          "title": "Poor Charlie's Almanack — Talk Eight: The Great Financial Scandal of 2003",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-eight.md",
+          "title": "芒格：2003 年的金融大丑闻",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-eleven",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-eleven.md",
+          "title": "Talk Eleven: The Psychology of Human Misjudgment",
+          "language": "en",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-primary-review"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-eleven.md",
+          "title": "第十一讲：人类误判心理学",
+          "language": "zh",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-include-selection"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-five",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-five.md",
+          "title": "Poor Charlie's Almanack — Talk Five: The Need for More Multidisciplinary Skills from Professionals: Educational Implications",
+          "language": "en",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-primary-review"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-five.md",
+          "title": "芒格：哈佛法学院演讲 1998",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-four",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-four.md",
+          "title": "Talk Four: Practical Thought about Practical Thought?",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-four.md",
+          "title": "芒格：关于实践思维的现实思考 1996",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-nine",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-nine.md",
+          "title": "Poor Charlie's Almanack — Talk Nine: Academic Economics: Strengths and Faults After Considering Interdisciplinary Needs",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-nine.md",
+          "title": "芒格：论学院派经济学 2003",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-one",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-one.md",
+          "title": "Poor Charlie's Almanack — Talk One: Harvard School Commencement Speech",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-one.md",
+          "title": "芒格：哈佛中学演讲 1986",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-seven",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-seven.md",
+          "title": "Poor Charlie's Almanack — Talk Seven: Breakfast Meeting of the Philanthropy Roundtable",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-seven.md",
+          "title": "芒格：慈善圆桌会议讲话 2000",
+          "language": "zh",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-include-selection"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-six",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-six.md",
+          "title": "Poor Charlie's Almanack — Talk Six: Investment Practices of Leading Charitable Foundations",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-six.md",
+          "title": "芒格：财务总监联合会演讲 1998",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-ten",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-ten.md",
+          "title": "Talk Ten: USC Gould School of Law Commencement Address",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-ten.md",
+          "title": "芒格：南加大法学院演讲 2007",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-three",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-three.md",
+          "title": "Poor Charlie's Almanack — Talk Three: A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business",
+          "language": "en",
+          "completeness": "selection-or-excerpt",
+          "decision": "candidate-primary-review"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-three.md",
+          "title": "芒格：斯坦福法学院演讲 1996",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    },
+    {
+      "workKey": "munger-poor-charlie-talk-two",
+      "count": 2,
+      "files": [
+        {
+          "relative": "poor-charlies-almanack/_english-source/poor-charlies-almanack-talk-two.md",
+          "title": "Poor Charlie's Almanack — Talk Two: A Lesson on Elementary, Worldly Wisdom as It Relates to Investment Management and Business",
+          "language": "en",
+          "completeness": "unknown",
+          "decision": "candidate-source-version"
+        },
+        {
+          "relative": "poor-charlies-almanack/poor-charlies-almanack-talk-two.md",
+          "title": "芒格：南加大商学院演讲 1994",
+          "language": "zh",
+          "completeness": "unknown",
+          "decision": "candidate-primary-review"
+        }
+      ]
+    }
+  ]
+}

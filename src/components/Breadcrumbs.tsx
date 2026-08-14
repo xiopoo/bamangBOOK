@@ -53,10 +53,6 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '首页', href: '/' },
     { label: '人物', href: '/people' },
   ],
-  '/graph': [
-    { label: '首页', href: '/' },
-    { label: '知识图谱', href: '/graph' },
-  ],
   '/search': [
     { label: '首页', href: '/' },
     { label: '搜索', href: '/search' },
@@ -64,10 +60,6 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   '/history': [
     { label: '首页', href: '/' },
     { label: '阅读历史', href: '/history' },
-  ],
-  '/talk': [
-    { label: '首页', href: '/' },
-    { label: 'AI对话', href: '/talk' },
   ],
   '/model': [
     { label: '首页', href: '/' },

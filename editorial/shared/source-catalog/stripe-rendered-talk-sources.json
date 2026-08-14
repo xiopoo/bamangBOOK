@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-08-11T00:52:42.386Z",
+  "count": 4,
+  "records": [
+    {
+      "slug": "talk-three",
+      "sourceUrl": "https://www.stripe.press/poor-charlies-almanack/talk-three",
+      "pageTitle": "Poor Charlie’s Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+      "articleCount": 2,
+      "textPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-three.source.txt",
+      "textBytes": 93760,
+      "textSha256": "e82dde34cd04f77233dc2716b6b998423f857b44f79fe55888872ffff3dc8a33",
+      "htmlPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-three.source.html",
+      "htmlBytes": 136722,
+      "htmlSha256": "b9c89c12ce730c8c464aa48913cb75ac25240f3640c99a38b14ad69708d46585"
+    },
+    {
+      "slug": "talk-five",
+      "sourceUrl": "https://www.stripe.press/poor-charlies-almanack/talk-five",
+      "pageTitle": "Poor Charlie’s Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+      "articleCount": 1,
+      "textPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-five.source.txt",
+      "textBytes": 26554,
+      "textSha256": "55b8908f07a7e1b6d545f85844191f3f0a2e0099051fc0c0f8a6dfa15a91668e",
+      "htmlPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-five.source.html",
+      "htmlBytes": 39079,
+      "htmlSha256": "7565c414ac4cd7930040b1be476e8a32adb0a358798c69da0c8be6578aafca36"
+    },
+    {
+      "slug": "talk-nine",
+      "sourceUrl": "https://www.stripe.press/poor-charlies-almanack/talk-nine",
+      "pageTitle": "Poor Charlie’s Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+      "articleCount": 2,
+      "textPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-nine.source.txt",
+      "textBytes": 72993,
+      "textSha256": "23d8ea1f326bc8416ec706d836455f13df40acdb63e62ce52feacbcd59160b10",
+      "htmlPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-nine.source.html",
+      "htmlBytes": 108642,
+      "htmlSha256": "b90c82be6fbbae74b1b05ccf5c5baa17fc2e96b6ca329d75aff74fd2b5dc9772"
+    },
+    {
+      "slug": "talk-eleven",
+      "sourceUrl": "https://www.stripe.press/poor-charlies-almanack/talk-eleven",
+      "pageTitle": "Poor Charlie’s Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+      "articleCount": 2,
+      "textPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-eleven.source.txt",
+      "textBytes": 163140,
+      "textSha256": "7769244776770383cd0542e084fa075561346c5a2032596e01ed42e504875224",
+      "htmlPath": "content/source-documents/poor-charlies-almanack-stripe/rendered/talk-eleven.source.html",
+      "htmlBytes": 225531,
+      "htmlSha256": "8af129dc623b47e73a8de017b8ea4d5dcc18ab1056fe9ff798d12e04963cf97a"
+    }
+  ]
+}
