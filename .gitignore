@@ -40,3 +40,8 @@ launchd.*.log
 
 # B站爬虫会话凭证（含 access_token），禁止入库
 cookies.json
+
+# 大文件不入库（>10MB 历史已剥离，工作区保留本地副本）
+content/companies-studies/*.pdf
+content/巴菲特致股东信60年合集*.pdf
+recovery_archive/*.tar.gz
