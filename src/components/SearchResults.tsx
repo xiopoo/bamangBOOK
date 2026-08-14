@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 interface SearchResult {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq'
   description: string
   count: number
   years: number[]
@@ -32,6 +32,8 @@ const typeLabels: Record<string, string> = {
   book: '拆书',
   column: '专栏',
   model: '思维模型',
+  meeting: '股东大会实录',
+  faq: '主题问答',
 }
 
 const typeIcons: Record<string, string> = {
@@ -48,6 +50,8 @@ const typeIcons: Record<string, string> = {
   book: '📖',
   column: '✍️',
   model: '🧠',
+  meeting: '🏛️',
+  faq: '📋',
 }
 
 const typeColors: Record<string, string> = {
@@ -64,6 +68,8 @@ const typeColors: Record<string, string> = {
   book: 'border-primary/20 hover:border-primary/45',
   column: 'border-primary/20 hover:border-primary/45',
   model: 'border-primary/20 hover:border-primary/45',
+  meeting: 'border-primary/20 hover:border-primary/45',
+  faq: 'border-primary/20 hover:border-primary/45',
 }
 
 const sectionColors: Record<string, string> = {
@@ -80,6 +86,8 @@ const sectionColors: Record<string, string> = {
   book: 'text-primary dark:text-primary-light',
   column: 'text-primary dark:text-primary-light',
   model: 'text-primary dark:text-primary-light',
+  meeting: 'text-primary dark:text-primary-light',
+  faq: 'text-primary dark:text-primary-light',
 }
 
 const sectionBg: Record<string, string> = {
@@ -138,6 +146,8 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
     book: results.filter(r => r.type === 'book'),
     column: results.filter(r => r.type === 'column'),
     model: results.filter(r => r.type === 'model'),
+    meeting: results.filter(r => r.type === 'meeting'),
+    faq: results.filter(r => r.type === 'faq'),
   }
 
   // 加载状态

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import ReadingArticleShell from './ReadingArticleShell'
 import MarkdownContent from './MarkdownContent'
-import { getDYNeighbors, stripTalkSourceNote, type DYDoc, type DYSection } from '@/lib/duanyongping'
+import { getDYNeighbors, rewriteRelativeMdLinks, stripTalkSourceNote, type DYDoc, type DYSection } from '@/lib/duanyongping'
 import type { ReadingContentType } from '@/lib/reading-content'
 
 interface DuanReadingArticleProps {
@@ -30,7 +30,7 @@ export default function DuanReadingArticle({ doc, section, backLabel, contentTyp
   const sourceCandidate = doc.sourceUrl || doc.source
   const sourceUrl = isUrl(sourceCandidate) ? sourceCandidate : undefined
   const sourceLabel = doc.platform || (!isUrl(doc.source) && doc.source) || SECTION_LABEL[section]
-  const body = section === 'talks' ? stripTalkSourceNote(doc.content) : doc.content
+  const body = section === 'talks' ? stripTalkSourceNote(doc.content) : rewriteRelativeMdLinks(section, doc.content)
   const year = doc.year ? Number(doc.year) : doc.date?.slice(0, 4)
   const hrefFor = (slug: string) => `/duanyongping/${section}/${slug}`
 

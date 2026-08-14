@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import path from 'path'
+import matter from 'gray-matter'
 import { resolvePersonCanonical } from './entity-resolver'
 
 export interface ArticleMeta {
@@ -29,16 +30,10 @@ function walkMarkdown(dir: string, out: string[] = []): string[] {
   return out
 }
 
-function parseFrontmatter(raw: string): { fm: Record<string, string>; body: string } {
-  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/)
-  const fm: Record<string, string> = {}
-  if (m) {
-    for (const line of m[1].split('\n')) {
-      const kv = line.match(/^([A-Za-z_]+):\s*(.*)$/)
-      if (kv) fm[kv[1]] = kv[2].trim().replace(/^["']|["']$/g, '')
-    }
-  }
-  return { fm, body: m ? raw.slice(m[0].length) : raw }
+function parseFrontmatter(raw: string): { fm: Record<string, unknown>; body: string } {
+  // 用 gray-matter 解析，兼容多行值 / 数组等复杂 frontmatter
+  const { data, content } = matter(raw)
+  return { fm: data, body: content }
 }
 
 let cache: ArticleMeta[] | null = null
@@ -48,10 +43,11 @@ function loadArticles(): ArticleMeta[] {
   cache = walkMarkdown(ARTICLES_DIR).map(filePath => {
     const raw = readFileSync(filePath, 'utf8')
     const { fm, body } = parseFrontmatter(raw)
+    const str = (v: unknown) => (typeof v === 'string' ? v : Array.isArray(v) ? v.join(',') : v == null ? '' : String(v))
     const slug = path.basename(filePath, '.md')
-    const title = fm.title || body.match(/^#\s+(.+)$/m)?.[1]?.trim() || slug
-    const entities = (fm.entities || '')
-      .split(/[,，]/)
+    const title = str(fm.title) || body.match(/^#\s+(.+)$/m)?.[1]?.trim() || slug
+    const entities = (Array.isArray(fm.entities) ? fm.entities : str(fm.entities).split(/[,，]/))
+      .map(String)
       .map(e => e.trim())
       .filter(Boolean)
     const firstProse = body
@@ -62,12 +58,12 @@ function loadArticles(): ArticleMeta[] {
     return {
       slug,
       title,
-      contentType: fm.content_type || 'article',
-      person: fm.person || undefined,
-      year: fm.year || undefined,
+      contentType: str(fm.content_type) || 'article',
+      person: str(fm.person) || undefined,
+      year: str(fm.year) || undefined,
       entities,
-      sourceTitle: fm.source_title || undefined,
-      sourceUrl: fm.source_url || undefined,
+      sourceTitle: str(fm.source_title) || undefined,
+      sourceUrl: str(fm.source_url) || undefined,
       filePath,
       wordCount: body.replace(/[A-Za-z]+/g, ' ').replace(/\s+/g, '').length,
       summary: firstProse ? firstProse.slice(0, 120) : '',

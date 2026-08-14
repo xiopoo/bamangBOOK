@@ -35,6 +35,27 @@ const TOPIC_LABELS: Record<string, string> = {
   buffettfaq: '全部问答（总目录）',
 }
 
+/**
+ * 条目是否为年会来源（与 buffettfaq_cnbc 股东大会实录重复，应剔除）。
+ * 非年会来源（媒体访谈、商学院座谈、杂志文章等）保留。
+ */
+export function isMeetingEntry(entry: string): boolean {
+  return /^> 来源：Source: BRK Annual Meeting/m.test(entry)
+}
+
+/**
+ * 过滤掉年会来源的问答条目，其余条目重新编号。
+ * 原档文件不做修改，仅在加载时派生。
+ */
+export function filterMeetingEntries(content: string): string {
+  const parts = content.split(/^## /m)
+  const header = parts[0]
+  const kept = parts.slice(1).filter(entry => !isMeetingEntry(entry))
+  if (kept.length === 0) return header
+  const renumbered = kept.map((entry, i) => `## ${entry.replace(/^\d+\.\s*/, `${i + 1}. `)}`)
+  return header + renumbered.join('')
+}
+
 let cache: BuffettFaqTopic[] | null = null
 
 function loadTopics(): BuffettFaqTopic[] {
@@ -45,15 +66,15 @@ function loadTopics(): BuffettFaqTopic[] {
       const raw = readFileSync(path.join(FAQ_DIR, file), 'utf8')
       const slug = file.replace(/\.md$/, '')
       const title = raw.match(/^#\s+(.+)$/m)?.[1]?.trim() || slug
-      const body = raw.replace(/^#\s+.+\n+/, '').trim()
-      const years = [...raw.matchAll(/Time:\s*(\d{4})/g)]
+      const filtered = slug === 'buffettfaq' ? raw : filterMeetingEntries(stripBuffettFaqMetadata(raw))
+      const years = [...filtered.matchAll(/Time:\s*(\d{4})/g)]
         .map(m => Number(m[1]))
         .filter(y => y >= 1950)
       const uniqueYears = [...new Set(years)].sort((a, b) => a - b)
       // 各主题以 ## 分节；总目录页（buffettfaq.md）内嵌全部问答，以 ### 分条
-      const questionCount = (body.match(slug === 'buffettfaq' ? /^###\s+/gm : /^##\s+/gm) || []).length
-      const wordCount = body.split(/\s+/).filter(Boolean).length
-      const firstProse = body
+      const questionCount = (filtered.match(slug === 'buffettfaq' ? /^###\s+/gm : /^##\s+/gm) || []).length
+      const wordCount = filtered.split(/\s+/).filter(Boolean).length
+      const firstProse = filtered
         .split(/\n+/)
         .map(l => l.trim())
         .find(l => l.length > 40 && !l.startsWith('>'))
@@ -79,7 +100,8 @@ export function getBuffettFaqTopic(slug: string): { topic: BuffettFaqTopic; cont
   const topic = loadTopics().find(t => t.slug === slug)
   if (!topic) return null
   const raw = readFileSync(path.join(FAQ_DIR, `${slug}.md`), 'utf8')
-  return { topic, content: stripBuffettFaqMetadata(raw) }
+  const content = slug === 'buffettfaq' ? raw : filterMeetingEntries(stripBuffettFaqMetadata(raw))
+  return { topic, content }
 }
 
 /** 去掉 H1 与顶部「来源」注记行，保留各节问答及每条的出处注记 */
@@ -88,5 +110,7 @@ export function stripBuffettFaqMetadata(markdown: string): string {
     .replace(/^#\s+.+\n+/, '')
     .replace(/^>\s*来源：https:\/\/buffettfaq\.com\/.*\n+/, '')
     .replace(/^---\s*\n+/m, '')
+    // BUG-3a：主题页底部的「返回总索引」指向源文件 buffettfaq.md → 指向栏目归档页
+    .replace(/\]\(buffettfaq\.md\)/g, '](/buffett-faq)')
     .trim()
 }

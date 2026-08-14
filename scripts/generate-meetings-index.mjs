@@ -60,5 +60,16 @@ const report = {
   years: Object.values(grouped),
 }
 
-fs.writeFileSync(OUT, JSON.stringify(report, null, 2))
-console.log(`meetings 索引：${entries.length} 条 / ${years.length} 年 -> content/meetings-index.json`)
+const next = JSON.stringify(report, null, 2) + '\n'
+// BUG-7：内容无变化时不重写文件（比较时忽略 generatedAt），避免每次构建制造 git 时间戳噪声
+const stripStamp = s => s.replace(/^  "generatedAt": ".*",$/m, '')
+let unchanged = false
+if (fs.existsSync(OUT)) {
+  unchanged = stripStamp(fs.readFileSync(OUT, 'utf8')) === stripStamp(next)
+}
+if (unchanged) {
+  console.log(`meetings 索引无变化，跳过写入（${entries.length} 条 / ${years.length} 年）`)
+} else {
+  fs.writeFileSync(OUT, next)
+  console.log(`meetings 索引：${entries.length} 条 / ${years.length} 年 -> content/meetings-index.json`)
+}

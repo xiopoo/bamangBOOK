@@ -98,6 +98,38 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
   ],
+  '/duanyongping/qa': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '段永平', href: '/duanyongping' },
+    { label: '问答', href: '/duanyongping/qa' },
+  ],
+  '/duanyongping/blog': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '段永平', href: '/duanyongping' },
+    { label: '博客', href: '/duanyongping/blog' },
+  ],
+  '/duanyongping/talks': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '段永平', href: '/duanyongping' },
+    { label: '演讲', href: '/duanyongping/talks' },
+  ],
+  '/duanyongping/milestones': [
+    { label: '首页', href: '/' },
+    { label: '阅读', href: '/reading' },
+    { label: '段永平', href: '/duanyongping' },
+    { label: '里程碑', href: '/duanyongping/milestones' },
+  ],
+  '/meetings': [
+    { label: '首页', href: '/' },
+    { label: '股东大会英文原档实录', href: '/meetings' },
+  ],
+  '/buffett-faq': [
+    { label: '首页', href: '/' },
+    { label: '巴菲特主题问答', href: '/buffett-faq' },
+  ],
   '/munger/archive': [
     { label: '首页', href: '/' },
     { label: '阅读', href: '/reading' },
@@ -149,15 +181,19 @@ export default function Breadcrumbs({ fallbackParent }: BreadcrumbsProps) {
     const parts = remainingPath.split('/').filter(Boolean)
     const crumbs = [...baseCrumbs]
 
-    let currentPath = basePath
+    // 动态路由的参数名段（如 year / page）不显示也不生成链接：
+    // 它们不是真实页面，链接会导致 404；其余段仅作纯文本展示，避免死链。
     parts.forEach((part) => {
-      currentPath += `/${part}`
       let label = part
       try {
         label = decodeURIComponent(part)
       } catch {
       }
-      crumbs.push({ label, href: currentPath })
+      // 全小写英文段视为动态参数名，跳过（最后一段除外，作为当前页标题展示）
+      if (/^[a-z]+$/.test(part) && part !== parts[parts.length - 1]) {
+        return
+      }
+      crumbs.push({ label })
     })
 
     return crumbs

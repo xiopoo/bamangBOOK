@@ -36,6 +36,8 @@ const emptyTypeStats: TypeStats = {
   book: 0,
   column: 0,
   model: 0,
+  meeting: 0,
+  faq: 0,
 }
 
 const typeLabels: Record<string, string> = {
@@ -53,6 +55,8 @@ const typeLabels: Record<string, string> = {
   book: '拆书',
   column: '专栏',
   model: '思维模型',
+  meeting: '股东大会实录',
+  faq: '主题问答',
 }
 
 const typeIcons: Record<string, string> = {
@@ -70,6 +74,8 @@ const typeIcons: Record<string, string> = {
   book: '📖',
   column: '✍️',
   model: '🧠',
+  meeting: '🏛️',
+  faq: '📋',
 }
 
 function SearchContent() {
@@ -150,7 +156,7 @@ function SearchContent() {
     window.history.replaceState({}, '', url.toString())
   }
 
-  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger', 'book', 'column', 'model'] as const
+  const allTypes = ['all', 'concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger', 'book', 'column', 'model', 'meeting', 'faq'] as const
 
   return (
     <PageContainer maxWidth="4xl">
