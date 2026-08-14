@@ -186,6 +186,57 @@ function truncateForSearch(text) {
   return clean.length < String(text).length ? `${clean}…` : clean
 }
 
+// 股东大会英文实录：来自构建时生成的 meetings-index.json（含标题/摘要）
+function addMeetingItems(items) {
+  const index = readJson(path.join(CONTENT_DIR, 'meetings-index.json'), null)
+  if (!index) return
+  for (const y of index.years || []) {
+    for (const e of [...(y.sessions || []), ...(y.clips || [])]) {
+      items.push({
+        id: `${y.year}/${e.session}`,
+        name: e.title || e.session,
+        type: 'meeting',
+        description: e.summary || '',
+        count: e.itemCount || 1,
+        years: [y.year],
+        url: `/meetings/${y.year}/${encodeURIComponent(e.session)}`,
+        content: `${e.title || ''} ${e.summary || ''}`,
+      })
+    }
+  }
+}
+
+// 巴菲特主题问答：仅索引主题页元信息（标题/摘要/条数），不加载问答全文
+const FAQ_LABELS = {
+  investing: '投资方法', valuation: '估值', businesses: '如何思考生意',
+  alternatives: '普通股之外的选择', accounting: '会计、公司金融与投资',
+  foreign: '海外投资', invindustry: '投资行业', industries: '行业',
+  specific: '具体企业', berkshire: '伯克希尔', market: '市场',
+  management: '管理层', technology: '科技', education: '教育',
+  personal: '个人', advice: '建议', picture: '宏观图景',
+}
+function addBuffettFaqItems(items) {
+  const dir = path.join(CONTENT_DIR, 'buffettfaq')
+  if (!fs.existsSync(dir)) return
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith('.md')) continue
+    const slug = f.replace(/\.md$/, '')
+    if (slug === 'buffettfaq') continue // 总目录页内嵌全部问答，不单独索引
+    const raw = readMarkdown(path.join(dir, f))
+    const title = titleFromContent(raw, slug)
+    items.push({
+      id: slug,
+      name: `${FAQ_LABELS[slug] || '主题问答'}（${title}）`,
+      type: 'faq',
+      description: title,
+      count: (raw.match(/^##\s+/gm) || []).length,
+      years: [],
+      url: `/buffett-faq/${encodeURIComponent(slug)}`,
+      content: `${title} ${FAQ_LABELS[slug] || ''}`,
+    })
+  }
+}
+
 function generateSearchIndex(index) {
   const items = []
   addEntityItems(items, 'concepts', 'concept', 'concepts', index.concepts)
@@ -200,6 +251,9 @@ function generateSearchIndex(index) {
   addFlatItems(items, 'books', 'book', 'books')
   addFlatItems(items, 'columns', 'column', 'columns')
   addFlatItems(items, 'models', 'model', 'model')
+  addFlatItems(items, 'articles', 'article', 'articles')
+  addMeetingItems(items)
+  addBuffettFaqItems(items)
 
   // 写入前统一截断 content，控制索引体积
   const slimItems = items.map(item => ({ ...item, content: truncateForSearch(item.content) }))

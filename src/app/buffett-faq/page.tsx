@@ -6,23 +6,24 @@ import { getAllBuffettFaqTopics } from '@/lib/buffett-faq'
 
 export const metadata: Metadata = {
   title: '巴菲特主题问答 · 英文原档',
-  description: 'Buffett FAQ 主题汇编：巴菲特在年会与访谈中对投资、估值、会计、管理、市场等主题的问答英文原档，按主题分页整理。',
+  description: 'Buffett FAQ 主题汇编：巴菲特在访谈、商学院座谈与杂志报道中的问答英文原档，按主题分页整理（已剔除与股东大会实录重复的内容）。',
   alternates: { canonical: '/buffett-faq' },
 }
 
 export default function BuffettFaqArchivePage() {
   const topics = getAllBuffettFaqTopics().filter(t => t.slug !== 'buffettfaq')
+  const total = topics.reduce((sum, t) => sum + t.questionCount, 0)
 
   return (
     <PageContainer maxWidth="4xl">
       <PageHeader
         title="巴菲特主题问答 · 英文原档"
-        subtitle="按主题整理的巴菲特问答汇编（1977–2015 年会实录摘录），英文原档。"
+        subtitle={`按主题整理的巴菲特问答汇编（非年会来源），英文原档，共 ${total} 条。`}
         backHref="/qa"
         backLabel="返回问答栏目"
       />
       <p className="mb-6 text-sm text-text-muted dark:text-dark-muted">
-        原始来源：Buffett FAQ（buffettfaq.com，编译者 Nick Webb），引文出处逐条注于各问答之后。
+        原始来源：Buffett FAQ（buffettfaq.com，编译者 Nick Webb）。已剔除与「股东大会英文原档实录」重复的年会问答，保留媒体访谈、商学院座谈等独有内容。
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2">

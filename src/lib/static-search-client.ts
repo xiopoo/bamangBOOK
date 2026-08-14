@@ -12,6 +12,8 @@ export type StaticSearchItemType =
   | 'book'
   | 'column'
   | 'model'
+  | 'meeting'
+  | 'faq'
 
 export interface StaticSearchItem {
   id: string

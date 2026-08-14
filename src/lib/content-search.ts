@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'fs'
 import path from 'path'
 import Fuse from 'fuse.js'
+import { getAllBuffettFaqTopics } from './buffett-faq'
 
 export type SearchItemType =
   | 'concept'
@@ -16,6 +17,8 @@ export type SearchItemType =
   | 'book'
   | 'column'
   | 'model'
+  | 'meeting'
+  | 'faq'
 
 export interface SearchItem {
   id: string
@@ -241,6 +244,48 @@ function addFlatItems(
   }
 }
 
+// 股东大会英文实录：来自构建时生成的 meetings-index.json（含标题/摘要，不重复加载全文）
+function addMeetingItems(items: SearchItem[]) {
+  const indexPath = path.join(CONTENT_DIR, 'meetings-index.json')
+  if (!existsSync(indexPath)) return
+  try {
+    const index = JSON.parse(readFileSync(indexPath, 'utf-8'))
+    for (const y of index.years || []) {
+      for (const e of [...(y.sessions || []), ...(y.clips || [])]) {
+        items.push({
+          id: `${y.year}/${e.session}`,
+          name: e.title || e.session,
+          type: 'meeting',
+          description: e.summary || '',
+          count: e.itemCount || 1,
+          years: [y.year],
+          url: `/meetings/${y.year}/${encodeURIComponent(e.session)}`,
+          content: `${e.title || ''} ${e.summary || ''}`,
+        })
+      }
+    }
+  } catch {
+    // 索引缺失或损坏时静默跳过
+  }
+}
+
+// 巴菲特主题问答：仅索引主题页元信息（标题/摘要/条数），不加载问答全文
+function addBuffettFaqItems(items: SearchItem[]) {
+  for (const t of getAllBuffettFaqTopics()) {
+    if (t.slug === 'buffettfaq') continue
+    items.push({
+      id: t.slug,
+      name: `${t.label}（${t.title}）`,
+      type: 'faq',
+      description: t.summary,
+      count: t.questionCount,
+      years: [],
+      url: `/buffett-faq/${encodeURIComponent(t.slug)}`,
+      content: `${t.title} ${t.summary}`,
+    })
+  }
+}
+
 let cachedItems: SearchItem[] | null = null
 let cachedFuse: Fuse<SearchItem> | null = null
 
@@ -262,6 +307,8 @@ export function getSearchItems(): SearchItem[] {
   addFlatItems(items, 'columns', 'column', 'columns')
   addFlatItems(items, 'models', 'model', 'model')
   addFlatItems(items, 'articles', 'article', 'articles')
+  addMeetingItems(items)
+  addBuffettFaqItems(items)
   cachedItems = items
   return items
 }

@@ -25,6 +25,8 @@ const typeLabels: Record<string, string> = {
   book: '拆书',
   column: '专栏',
   model: '思维模型',
+  meeting: '股东大会实录',
+  faq: '主题问答',
 }
 
 const typeColors: Record<string, string> = {

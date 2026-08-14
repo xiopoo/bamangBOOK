@@ -84,7 +84,38 @@ function shouldIncludeFile(section: DYSection, fileName: string): boolean {
 }
 
 /**
- * 用文件名的稳定短哈希作为 URL slug。
+ * 重写正文中的相对 .md 链接：
+ * - 指向本栏目已有 .md 文件（如里程碑目录表里的 01-xxx.md）→ 该文件的详情页 URL；
+ * - 指向不存在文件的相对 .md 链接 → 降级为纯文本，避免死链。
+ * attachments/* 等资源相对链接保持不变（已由构建脚本同步到静态目录）。
+ */
+export function rewriteRelativeMdLinks(section: DYSection, content: string): string {
+  let map: Record<string, string> | null = null
+  const getMap = () => {
+    if (map) return map
+    map = {}
+    for (const fp of collectFiles(section)) {
+      map[path.basename(fp)] = slugFromFileName(path.basename(fp))
+    }
+    return map
+  }
+  return content.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text: string, url: string) => {
+    const trimmed = url.trim()
+    if (/^(https?:)?\/\//i.test(trimmed) || trimmed.startsWith('#') || trimmed.startsWith('/')) return match
+    if (!trimmed.endsWith('.md')) return match
+    let decoded = trimmed
+    try {
+      decoded = decodeURIComponent(trimmed)
+    } catch {
+      // 保留原值
+    }
+    const slug = getMap()[decoded]
+    if (slug) return `[${text}](/duanyongping/${section}/${slug})`
+    return text
+  })
+}
+
+/** 用文件名的稳定短哈希作为 URL slug。
  * 段永平内容含大量中文标题，在 output:'export' 下：
  *  - 原始中文 slug 无法被 generateStaticParams 正确匹配（请求路径被编码）；
  *  - encodeURIComponent 后又会超过文件系统单段 255 字节上限（长标题）。

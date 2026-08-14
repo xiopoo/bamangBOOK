@@ -16,19 +16,26 @@ const { execSync } = require('child_process');
 const BLOGGERS_DIR = path.join(__dirname, '..', 'content', 'bloggers');
 const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
 const INDEX_FILE = 'bloggers-index.json';
-const DY_ATTACHMENTS_SOURCE = path.join(__dirname, '..', 'content', 'duanyongping', 'talks', 'attachments');
-const DY_ATTACHMENTS_PUBLIC = path.join(__dirname, '..', 'public', 'duanyongping', 'talks', 'attachments');
+const DY_ATTACHMENTS = [
+  { source: path.join(__dirname, '..', 'content', 'duanyongping', 'talks', 'attachments'), dest: path.join(__dirname, '..', 'public', 'duanyongping', 'talks', 'attachments') },
+  // BUG-2：里程碑页正文引用 attachments/*.png，附件需同步到静态目录
+  { source: path.join(__dirname, '..', 'content', 'duanyongping', 'milestones', 'attachments'), dest: path.join(__dirname, '..', 'public', 'duanyongping', 'milestones', 'attachments') },
+];
 
 function syncDuanyongpingAttachments() {
-  fs.rmSync(DY_ATTACHMENTS_PUBLIC, { recursive: true, force: true });
-  if (!fs.existsSync(DY_ATTACHMENTS_SOURCE)) return;
-  fs.mkdirSync(path.dirname(DY_ATTACHMENTS_PUBLIC), { recursive: true });
-  fs.cpSync(DY_ATTACHMENTS_SOURCE, DY_ATTACHMENTS_PUBLIC, { recursive: true });
-  console.log('🖼️  段永平附件已同步到静态目录');
+  for (const { source, dest } of DY_ATTACHMENTS) {
+    fs.rmSync(dest, { recursive: true, force: true });
+    if (!fs.existsSync(source)) continue;
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    fs.cpSync(source, dest, { recursive: true });
+  }
+  console.log('🖼️  段永平附件（talks / milestones）已同步到静态目录');
 }
 
 function cleanDuanyongpingAttachments() {
-  fs.rmSync(DY_ATTACHMENTS_PUBLIC, { recursive: true, force: true });
+  for (const { dest } of DY_ATTACHMENTS) {
+    fs.rmSync(dest, { recursive: true, force: true });
+  }
 }
 
 /**
@@ -252,6 +259,13 @@ function main() {
     stdio: 'inherit',
   });
 
+  // 股东大会英文原档索引（buffettfaq_cnbc）——需在 generate-static-data 之前，供搜索索引读取
+  console.log('\n🔄 生成股东大会英文原档索引...');
+  execSync('node scripts/generate-meetings-index.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
+
   console.log('\n🔄 生成静态前端数据...');
   execSync('node scripts/generate-static-data.js', {
     cwd: path.join(__dirname, '..'),
@@ -262,13 +276,6 @@ function main() {
   // 单一事实来源 = content/ 下的 md，索引 json 为纯派生物，构建时自动刷新，禁止手改。
   console.log('\n🔄 生成档案索引（从 frontmatter 派生）...');
   execSync('node scripts/generate-archive-index.mjs', {
-    cwd: path.join(__dirname, '..'),
-    stdio: 'inherit',
-  });
-
-  // 股东大会英文原档索引（buffettfaq_cnbc）
-  console.log('\n🔄 生成股东大会英文原档索引...');
-  execSync('node scripts/generate-meetings-index.mjs', {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
