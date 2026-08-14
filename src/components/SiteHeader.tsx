@@ -19,10 +19,10 @@ interface NavSection {
 }
 
 // 导航结构（阅读优先）：
-//   人物    —— 按人读原典的总入口（每个人的资料从对应人物页进入）
-//   原典    —— 按载体读：信件 / 问答 / 演讲与访谈（穷查理宝典、Wesco 等从芒格页进入）
-//   研究    —— 本站对原典的解读：公司研究、投资概念、思维模型
-//   延伸阅读 —— 衍生内容与外部文章：拆书、专栏、博主文章、中文文章，及全站总入口
+//   人物 —— 按人读原典的总入口（每个人的资料从对应人物页进入）
+//   原典 —— 按载体读：信件 / 问答 / 演讲与访谈（穷查理宝典、Wesco 等从芒格页进入）
+//   研究 —— 本站对原典的解读：公司研究、投资概念、思维模型
+// 拆书、专栏、博主文章、中文文章等延伸内容降级为次要入口（首页底部与页脚）。
 const navGroups: { label: string; activePrefixes: string[]; sections: NavSection[] }[] = [
   {
     label: '人物',
@@ -66,19 +66,6 @@ const navGroups: { label: string; activePrefixes: string[]; sections: NavSection
         { href: '/business-history/themes', label: '商业主题', meta: '从行业与商业史进入' },
         { href: '/concepts', label: '投资概念', meta: '概念索引' },
         { href: '/model', label: '思维模型', meta: '跨学科思维工具' },
-      ] },
-    ],
-  },
-  {
-    label: '延伸阅读',
-    activePrefixes: ['/books', '/columns', '/bloggers', '/articles', '/reading'],
-    sections: [
-      { links: [
-        { href: '/books', label: '拆书', meta: '经典书籍拆解' },
-        { href: '/columns', label: '专栏', meta: '系列文章' },
-        { href: '/bloggers', label: '博主文章', meta: '外部优质文章' },
-        { href: '/articles', label: '中文文章', meta: '本站整理' },
-        { href: '/reading', label: '阅读总库', meta: '全站入口' },
       ] },
     ],
   },

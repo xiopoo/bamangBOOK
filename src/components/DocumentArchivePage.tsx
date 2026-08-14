@@ -18,7 +18,7 @@ export default function DocumentArchivePage({ category, title, subtitle, pathnam
   const sorted = all.slice().sort((a, b) => (a.year ?? Number.POSITIVE_INFINITY) - (b.year ?? Number.POSITIVE_INFINITY) || a.fileName.localeCompare(b.fileName))
 
   return <PageContainer maxWidth="7xl">
-    <PageHeader title={title} subtitle={subtitle} backHref="/reading" backLabel="返回阅读总库" />
+    <PageHeader title={title} subtitle={subtitle} backHref="/" backLabel="返回首页" />
     <ArchiveList
       items={sorted.map(doc => {
         const ids = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id))

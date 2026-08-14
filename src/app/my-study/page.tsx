@@ -27,7 +27,7 @@ export default function MyStudyPage() {
             <p>不购买也可以继续阅读网站上的全部免费内容。购买后，只会获得对应产品的独立访问权益。</p>
             <div>
               <Link href="/bound-edition" className="archive-button archive-button--solid">查看巴芒文集 <ArrowRight size={16} /></Link>
-              <Link href="/reading" className="archive-button">继续浏览免费内容</Link>
+              <Link href="/" className="archive-button">继续浏览免费内容</Link>
             </div>
           </section>
           <section className="account-capabilities">

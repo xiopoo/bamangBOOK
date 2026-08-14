@@ -74,10 +74,6 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '芒格', href: '/munger' },
     { label: '思维模型', href: '/model' },
   ],
-  '/reading': [
-    { label: '首页', href: '/' },
-    { label: '阅读库', href: '/reading' },
-  ],
   '/business-history': [
     { label: '首页', href: '/' },
     { label: '公司深度研究', href: '/business-history' },
@@ -92,30 +88,25 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/duanyongping': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
   ],
   '/duanyongping/qa': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
     { label: '问答', href: '/duanyongping/qa' },
   ],
   '/duanyongping/blog': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
     { label: '博客', href: '/duanyongping/blog' },
   ],
   '/duanyongping/talks': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
     { label: '演讲', href: '/duanyongping/talks' },
   ],
   '/duanyongping/milestones': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '段永平', href: '/duanyongping' },
     { label: '里程碑', href: '/duanyongping/milestones' },
   ],
@@ -129,7 +120,6 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/munger/archive': [
     { label: '首页', href: '/' },
-    { label: '阅读', href: '/reading' },
     { label: '芒格资料', href: '/munger/archive' },
   ],
   '/munger/wesco': [
