@@ -111,7 +111,7 @@ export default async function LetterDetailPage({ params }: PageProps) {
             </div>
             <FontSizeControlFixed />
           </div>
-          <ReadingMetadata person="巴菲特" year={yearNum} contentType="信件" sourceLabel="伯克希尔·哈撒韦年度股东信" status="译文" readMinutes={Math.max(8, Math.round((letterData.content?.length || letterData.letters?.reduce((sum, item) => sum + item.content.length, 0) || 0) / 900))} />
+          <ReadingMetadata person="巴菲特" year={yearNum} contentType="信件" readMinutes={Math.max(8, Math.round((letterData.content?.length || letterData.letters?.reduce((sum, item) => sum + item.content.length, 0) || 0) / 900))} />
         </div>
       </header>
 

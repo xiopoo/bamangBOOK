@@ -69,11 +69,6 @@ export default function BloggerArticleDetailPage({ params }: PageProps) {
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
                 {doc.date && <span>{doc.date.slice(0, 10)}</span>}
                 {doc.author && doc.author !== bloggerName && <span>· {doc.author}</span>}
-                {doc.url && (
-                  <a href={doc.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    · 原文链接
-                  </a>
-                )}
               </p>
               {doc.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mt-1.5">

@@ -47,9 +47,6 @@ export default function BuffettFaqDetailPage({ params }: PageProps) {
       metadata={{
         year: topic.yearRange || undefined,
         contentType: '问答',
-        sourceLabel: 'Buffett FAQ',
-        sourceUrl: 'https://buffettfaq.com/',
-        status: '编辑整理',
         readMinutes: Math.max(3, Math.round(topic.wordCount / 220)),
       }}
       related={

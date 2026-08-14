@@ -42,7 +42,6 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
   const index = histories.findIndex(candidate => candidate.slug === slug)
   const previous = index > 0 ? histories[index - 1] : null
   const next = index >= 0 && index < histories.length - 1 ? histories[index + 1] : null
-  const sourceLabel = item.sourcePdf ? `${item.company} 公司研究资料` : '公司公开资料与研究档案'
 
   return (
     <ReadingArticleShell
@@ -50,7 +49,7 @@ export default function BusinessHistoryDetailPage({ params }: PageProps) {
       subtitle={item.summary}
       backHref="/business-history"
       backLabel="返回公司深度研究"
-      metadata={{ person: item.company, contentType: '公司研究', sourceLabel, status: '编辑整理', completeness: '完整', readMinutes: item.readMinutes }}
+      metadata={{ person: item.company, contentType: '公司研究', readMinutes: item.readMinutes }}
       previous={previous ? { href: businessHistoryHref(previous.slug), title: previous.title, meta: previous.company } : null}
       next={next ? { href: businessHistoryHref(next.slug), title: next.title, meta: next.company } : null}
       navigationLabel="相邻公司研究"

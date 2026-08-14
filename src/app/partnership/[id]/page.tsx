@@ -53,7 +53,8 @@ export default async function PartnershipLetterDetailPage({ params }: PageProps)
       subtitle={isAgreement ? '巴菲特有限合伙协议' : `巴菲特致合伙人的信（${formatPartnershipSubtitle(letter.subtitle)}）`}
       backHref="/partnership"
       backLabel="返回合伙人信全集"
-      metadata={{ person: '沃伦·巴菲特', year: letter.year, contentType: '合伙人信', sourceLabel: 'Buffett Partnership Letters', status: '译文', readMinutes: Math.max(5, Math.round(content.length / 900)) }}
+      metadata={{ person: '沃伦·巴菲特', year: letter.year, contentType: '合伙人信',
+ readMinutes: Math.max(5, Math.round(content.length / 900)) }}
       previous={prev ? { href: `/partnership/${prev.id}`, title: formatLetterTitle(prev), meta: formatPartnershipSubtitle(prev.subtitle) } : null}
       next={next ? { href: `/partnership/${next.id}`, title: formatLetterTitle(next), meta: formatPartnershipSubtitle(next.subtitle) } : null}
       navigationLabel="按时间从早到晚的相邻合伙人信"

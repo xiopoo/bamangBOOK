@@ -244,15 +244,9 @@ export default function MarkdownContent({
           }
         }
 
-        // 阅读优先重构：正文中的「编者按/来源说明」整段降噪——
-        // 默认折叠为可展开的小字说明（details/summary），不打断阅读节奏。
+        // 阅读优先：正文中的「编者按/来源说明」为编辑性外添文字，不再渲染。
         if (!isQA && /^(编者按|【编者按】|\(编者按|（编者按)/.test(text.trim())) {
-          return (
-            <details className="prose-editorial-note">
-              <summary>编者按</summary>
-              <div>{children}</div>
-            </details>
-          )
+          return null
         }
 
         return <p>{children}</p>

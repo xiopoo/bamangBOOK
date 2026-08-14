@@ -73,8 +73,6 @@ export default function MeetingDetailPage({ params }: PageProps) {
         person: '巴菲特 / 芒格',
         year: meeting.year,
         contentType: '股东大会',
-        sourceLabel: 'Buffett FAQ / CNBC',
-        status: '原文',
         readMinutes: Math.max(5, Math.round((meeting.itemCount || 200) / 45)),
       }}
       related={related}

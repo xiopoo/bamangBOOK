@@ -50,20 +50,6 @@
 .reading-metadata__primary span + span::before { content: '·'; margin-right: 1rem; color: var(--archive-gold); }
 .reading-metadata__secondary { margin-top: .5rem; color: var(--archive-ink-faint); font-size: .74rem; }
 .reading-status { color: var(--archive-oxblood); }
-
-/* 编辑性元数据（来源/状态/完整度/修订）默认折叠，避免打断阅读 */
-.reading-metadata__details { margin-top: .35rem; }
-.reading-metadata__details summary {
-  display: inline-flex;
-  align-items: center;
-  gap: .3rem;
-  cursor: pointer;
-  color: var(--archive-ink-faint);
-  font: .72rem var(--archive-sans);
-  list-style: none;
-}
-.reading-metadata__details summary::-webkit-details-marker { display: none; }
-.reading-metadata__details summary::before { content: 'ⓘ'; opacity: .75; }
 .reading-metadata__details[open] .reading-metadata__secondary { margin-top: .5rem; padding: .5rem .7rem; border-left: 2px solid var(--archive-rule); background: var(--archive-paper-tint); }
 @media (max-width: 640px) {
   .reading-metadata__primary {
@@ -290,14 +276,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-}
-
-.recording-player__notice {
-  padding: 0.7rem 1.4rem;
-  color: var(--archive-ink-faint);
-  border-top: 1px solid var(--archive-rule-soft);
-  font-family: var(--archive-sans);
-  font-size: 0.64rem;
 }
 
 .recording-browser__bar {

@@ -21,15 +21,8 @@ const SECTION_LABEL: Record<DYSection, string> = {
   milestones: '公司与里程碑',
 }
 
-function isUrl(value?: string): boolean {
-  return Boolean(value && /^https?:\/\//i.test(value))
-}
-
 export default function DuanReadingArticle({ doc, section, backLabel, contentType, intro, beforeBody, isQA }: DuanReadingArticleProps) {
   const { previous, next } = getDYNeighbors(section, doc.slug)
-  const sourceCandidate = doc.sourceUrl || doc.source
-  const sourceUrl = isUrl(sourceCandidate) ? sourceCandidate : undefined
-  const sourceLabel = doc.platform || (!isUrl(doc.source) && doc.source) || SECTION_LABEL[section]
   const body = section === 'talks' ? stripTalkSourceNote(doc.content) : rewriteRelativeMdLinks(section, doc.content)
   const year = doc.year ? Number(doc.year) : doc.date?.slice(0, 4)
   const hrefFor = (slug: string) => `/duanyongping/${section}/${slug}`
@@ -39,7 +32,7 @@ export default function DuanReadingArticle({ doc, section, backLabel, contentTyp
     subtitle={intro || `段永平${SECTION_LABEL[section]}资料`}
     backHref={`/duanyongping/${section}`}
     backLabel={backLabel}
-    metadata={{ person: '段永平', year, contentType, sourceLabel, sourceUrl, status: '编辑整理', readMinutes: Math.max(1, Math.round(body.length / 900)) }}
+    metadata={{ person: '段永平', year, contentType, readMinutes: Math.max(1, Math.round(body.length / 900)) }}
     previous={previous ? { href: hrefFor(previous.slug), title: previous.title, meta: previous.date?.slice(0, 10) || previous.year } : null}
     next={next ? { href: hrefFor(next.slug), title: next.title, meta: next.date?.slice(0, 10) || next.year } : null}
     navigationLabel={`相邻${SECTION_LABEL[section]}`}
