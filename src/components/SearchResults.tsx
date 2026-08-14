@@ -36,6 +36,43 @@ const typeLabels: Record<string, string> = {
   faq: '主题问答',
 }
 
+// B-06：内容角色 —— 让用户分清「主理人写的文章」和「归档资料」
+const roleOf: Record<string, string> = {
+  article: '博客',
+  column: '博客',
+  book: '博客',
+  model: '博客',
+  concept: '概念',
+  company: '公司',
+  person: '人物',
+  letter: '原典',
+  partnership: '原典',
+  qa: '原典',
+  talk: '原典',
+  interview: '原典',
+  meeting: '原典',
+  faq: '原典',
+  blogger: '外部资料',
+}
+
+const roleLabels: Record<string, string> = {
+  博客: '博客',
+  原典: '原典',
+  公司: '公司',
+  概念: '概念',
+  人物: '人物',
+  外部资料: '外部资料',
+}
+
+const roleStyles: Record<string, string> = {
+  博客: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400',
+  原典: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400',
+  公司: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400',
+  概念: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400',
+  人物: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400',
+  外部资料: 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
+}
+
 const typeIcons: Record<string, string> = {
   concept: '💡',
   company: '🏢',
@@ -163,23 +200,8 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
     )
   }
 
-  // 空结果
-  if (!isLoading && results.length === 0) {
-    return (
-      <div className="flex flex-col items-center justify-center py-16">
-        <div className="text-5xl mb-4">🔍</div>
-        <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
-          未找到相关结果
-        </h3>
-        <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
-          抱歉，没有找到与「{query}」相关的内容。请尝试其他关键词，如{'\u201C'}复利{'\u201D'}、{'\u201C'}可口可乐{'\u201D'}、{'\u201C'}巴菲特{'\u201D'}等。
-        </p>
-      </div>
-    )
-  }
-
-  // 无搜索词
-  if (!query) {
+  // 无搜索词：引导空态（优先于空结果判断，避免空查询被误判为“搜索失败”）
+  if (!query.trim()) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
         <div className="text-5xl mb-4">📖</div>
@@ -188,6 +210,21 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
         </h3>
         <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
           输入关键词搜索信件、问答、演讲、概念或公司，回到具体原文和研究材料
+        </p>
+      </div>
+    )
+  }
+
+  // 空结果：真实无结果
+  if (results.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center py-16">
+        <div className="text-5xl mb-4">🔍</div>
+        <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
+          未找到相关结果
+        </h3>
+        <p className="text-gray-500 dark:text-gray-400 text-center max-w-md">
+          抱歉，没有找到与「{query.trim()}」相关的内容。请尝试其他关键词，如{'\u201C'}复利{'\u201D'}、{'\u201C'}可口可乐{'\u201D'}、{'\u201C'}巴菲特{'\u201D'}等。
         </p>
       </div>
     )
@@ -203,9 +240,9 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
         </p>
       </div>
 
-      {/* 按分类展示结果 */}
+      {/* 按分类展示结果（B-06 排序：博客 → 实体 → 原典 → 研究 → 外部资料） */}
       <div className="space-y-8">
-        {(['concept', 'company', 'person', 'letter', 'partnership', 'article', 'qa', 'talk', 'interview', 'blogger', 'book', 'column', 'model'] as const).map(type => {
+        {(['column', 'article', 'book', 'model', 'concept', 'company', 'person', 'letter', 'partnership', 'qa', 'talk', 'interview', 'blogger'] as const).map(type => {
           const items = grouped[type]
           if (items.length === 0) return null
 
@@ -225,13 +262,18 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2 mb-1">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
                           <h3 className="font-medium text-text dark:text-dark-text">
                             {highlightMatch(item.name, query)}
                           </h3>
                           <span className={`text-xs px-1.5 py-0.5 rounded-full ${sectionBg[type]} ${sectionColors[type]} flex-shrink-0`}>
                             {typeLabels[type]}
                           </span>
+                          {roleOf[item.type] && (
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium flex-shrink-0 ${roleStyles[roleOf[item.type]]}`}>
+                              {roleLabels[roleOf[item.type]]}
+                            </span>
+                          )}
                         </div>
                         {item.description && (
                           <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">

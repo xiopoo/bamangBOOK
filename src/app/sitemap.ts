@@ -16,6 +16,7 @@ import { getAllBuffettFaqTopics } from '@/lib/buffett-faq'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
 import { getBloggers, getAllBloggerArticles } from '@/lib/bloggers'
 import { getDYDocs, type DYSection } from '@/lib/duanyongping'
+import { getAllBlogPosts, getBlogTags, getBlogCategories } from '@/lib/blog'
 
 function namesIn(directory: string): string[] {
   const fullPath = path.join(process.cwd(), 'content', directory)
@@ -38,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/duanyongping', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks', '/duanyongping/milestones',
     '/about/editorial', '/about/revisions',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
+    '/blog',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
 
@@ -58,6 +60,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getBooks().forEach(book => urls.add(`${baseUrl}/books/${encodeURIComponent(book.slug)}`))
   getColumns().forEach(column => urls.add(`${baseUrl}/columns/${encodeURIComponent(column.slug)}`))
   getAllArticles().forEach(article => urls.add(`${baseUrl}/articles/${encodeURIComponent(article.slug)}`))
+
+  // 博客：入口、精选旧文别名页（canonical 指向旧 URL）、标签与分类
+  getAllBlogPosts().forEach(post => urls.add(`${baseUrl}${post.canonicalPath}`))
+  getBlogTags(50).forEach(({ tag }) => urls.add(`${baseUrl}/blog/tag/${encodeURIComponent(tag)}`))
+  getBlogCategories().forEach(cat => urls.add(`${baseUrl}/blog/category/${encodeURIComponent(cat.label)}`))
   urls.add(`${baseUrl}/meetings`)
   getAllMeetingYears().forEach(({ year, sessions, clips }) => {
     [...sessions, ...clips].forEach(item => urls.add(`${baseUrl}/meetings/${year}/${encodeURIComponent(item.session)}`))

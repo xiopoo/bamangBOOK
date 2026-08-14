@@ -13,6 +13,25 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+// E-01：生产域名校验 —— 生产构建缺少 NEXT_PUBLIC_SITE_URL 时直接失败，
+// 避免 canonical / sitemap / robots.txt 回落到 http://localhost:3000 伤 SEO。
+function validateProductionUrl() {
+  if (process.env.NODE_ENV !== 'production' && process.env.VERCEL !== '1') {
+    // 本地开发（next dev / npm run build 本地）不做强制
+    return;
+  }
+  const configured = (process.env.NEXT_PUBLIC_SITE_URL || '').trim();
+  const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || '';
+  if (configured || vercelUrl) return;
+
+  console.error('\n❌ [E-01] 生产构建缺少生产域名配置！');
+  console.error('   当前 canonical/sitemap/robots 会回落到 http://localhost:3000，伤害 SEO。');
+  console.error('   请在部署平台设置环境变量：');
+  console.error('     NEXT_PUBLIC_SITE_URL=https://fulilab.com');
+  console.error('     NEXT_PUBLIC_SITE_DOMAIN=fulilab.com\n');
+  process.exit(1);
+}
+
 const BLOGGERS_DIR = path.join(__dirname, '..', 'content', 'bloggers');
 const ORIGINAL_DIR = path.join(__dirname, '..', 'content', 'bloggers_original');
 const INDEX_FILE = 'bloggers-index.json';
@@ -180,7 +199,16 @@ function main() {
     return;
   }
 
+  validateProductionUrl();
+
   syncDuanyongpingAttachments();
+
+  // P-02：大图预处理（>800KB 生成 WebP，原图保留为 source，md 引用优先 .webp）
+  console.log('\n🖼️  优化大图（生成 WebP）...');
+  execSync('node scripts/optimize-images.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
 
   // 音频不随 git 入库（365M），构建前按 manifest 补齐本地副本（已有则跳过）
   console.log('🎧 同步《穷查理宝典》有声书音频...');
@@ -262,6 +290,13 @@ function main() {
   // 股东大会英文原档索引（buffettfaq_cnbc）——需在 generate-static-data 之前，供搜索索引读取
   console.log('\n🔄 生成股东大会英文原档索引...');
   execSync('node scripts/generate-meetings-index.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
+
+  // 概念共现数据（R-01）——需在 generate-static-data 之前，供知识图谱/相关概念读取
+  console.log('\n🔄 生成概念共现数据...');
+  execSync('node scripts/generate-cooccurrence.mjs', {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });

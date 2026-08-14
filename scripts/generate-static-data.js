@@ -186,6 +186,14 @@ function truncateForSearch(text) {
   return clean.length < String(text).length ? `${clean}…` : clean
 }
 
+// lite 索引的短 description：首屏轻量索引只保留可展示的摘要
+const LITE_DESCRIPTION_LIMIT = 120
+function truncateForLite(text) {
+  if (!text) return ''
+  const clean = String(text).slice(0, LITE_DESCRIPTION_LIMIT)
+  return clean.length < String(text).length ? `${clean}…` : clean
+}
+
 // 股东大会英文实录：来自构建时生成的 meetings-index.json（含标题/摘要）
 function addMeetingItems(items) {
   const index = readJson(path.join(CONTENT_DIR, 'meetings-index.json'), null)
@@ -258,12 +266,28 @@ function generateSearchIndex(index) {
   // 写入前统一截断 content，控制索引体积
   const slimItems = items.map(item => ({ ...item, content: truncateForSearch(item.content) }))
 
+  // P-01：索引拆两层 —— lite 只含标题/类型/url/计数/年份/短描述，首屏与建议先加载它；
+  // content 层保留正文片段，仅在明确搜索正文或结果不足时懒加载。
+  const liteItems = slimItems.map(({ content: _content, ...rest }) => ({
+    ...rest,
+    description: truncateForLite(rest.description),
+  }))
+
   fs.writeFileSync(
-    path.join(PUBLIC_DIR, 'search-index.json'),
-    JSON.stringify({ generatedAt: new Date().toISOString(), items: slimItems }, null, 2),
+    path.join(PUBLIC_DIR, 'search-index-lite.json'),
+    JSON.stringify({ generatedAt: new Date().toISOString(), items: liteItems }),
     'utf-8'
   )
-  console.log(`🔎 静态搜索索引: ${items.length} 条 (content 已截断至 ${SEARCH_CONTENT_LIMIT} 字)`)
+  fs.writeFileSync(
+    path.join(PUBLIC_DIR, 'search-index-content.json'),
+    JSON.stringify({ generatedAt: new Date().toISOString(), items: slimItems }),
+    'utf-8'
+  )
+  const liteBytes = fs.statSync(path.join(PUBLIC_DIR, 'search-index-lite.json')).size
+  const contentBytes = fs.statSync(path.join(PUBLIC_DIR, 'search-index-content.json')).size
+  console.log(`🔎 静态搜索索引: ${items.length} 条`)
+  console.log(`   lite 索引:    ${(liteBytes / 1024 / 1024).toFixed(2)}MB (search-index-lite.json)`)
+  console.log(`   content 索引: ${(contentBytes / 1024 / 1024).toFixed(2)}MB (search-index-content.json)`)
 }
 
 function readEntityDescription(directory, id) {

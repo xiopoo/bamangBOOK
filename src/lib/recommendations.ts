@@ -45,12 +45,15 @@ const people = indexData.people
 const companies = indexData.companies
 const cooccurrence = indexData.cooccurrence
 
-export function getRelatedConcepts(targetConcept: string, limit: number = 5): Recommendation[] {
-  logger.info('recommendations:getRelatedConcepts', '计算关联概念', {
-    targetConcept,
-    limit,
+// L-01/R-01：共现数据缺失属于可预期状态，只在模块加载时输出一次汇总 warning，
+// 不在每个概念页（SSG 阶段每页调用一次）重复刷屏。
+if (cooccurrence.length === 0) {
+  logger.warn('recommendations:getRelatedConcepts', 'content/index.json 共现数据为空，相关概念推荐将走降级逻辑', {
     cooccurrenceSize: cooccurrence.length,
   })
+}
+
+export function getRelatedConcepts(targetConcept: string, limit: number = 5): Recommendation[] {
   const related: Recommendation[] = []
   
   cooccurrence.forEach((item: ConceptCooccurrence) => {
@@ -72,17 +75,14 @@ export function getRelatedConcepts(targetConcept: string, limit: number = 5): Re
   })
   
   const result = related.sort((a: Recommendation, b: Recommendation) => b.relevance - a.relevance).slice(0, limit)
+  // R-01 降级：个别概念无共现记录时，用同年高频概念兜底，避免推荐模块空白
   if (result.length === 0) {
-    logger.warn('recommendations:getRelatedConcepts', '未找到共现关联，返回空列表（检查 content/index.json 的 cooccurrence）', {
-      targetConcept,
-      cooccurrenceSize: cooccurrence.length,
-    })
-  } else {
-    logger.info('recommendations:getRelatedConcepts', '关联概念已生成', {
-      targetConcept,
-      count: result.length,
-      top: result.slice(0, 3).map((r: Recommendation) => r.id),
-    })
+    const concept = concepts.find((c: IndexItem) => c.id === targetConcept)
+    const recentYear = concept?.years && concept.years.length > 0 ? concept.years[concept.years.length - 1] : null
+    const fallback = recentYear
+      ? getRecommendedConceptsByYear(recentYear, limit + 1)
+      : getTopConcepts(limit + 1)
+    return fallback.filter((c: Recommendation) => c.id !== targetConcept).slice(0, limit)
   }
   return result
 }

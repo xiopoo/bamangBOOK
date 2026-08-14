@@ -18,28 +18,34 @@ interface NavSection {
   links: NavLink[]
 }
 
-// 导航结构（阅读优先）：
-//   人物 —— 按人读原典的总入口（每个人的资料从对应人物页进入）
-//   原典 —— 按载体读：信件 / 问答 / 演讲与访谈（穷查理宝典、Wesco 等从芒格页进入）
+// 导航结构（博客做入口，档案做底盘）：
+//   博客 —— 主理人文章、阅读札记、公司研究导读（首页为博客首页 + 档案入口）
+//   原典 —— 巴菲特、芒格、段永平的一手资料：人物专题 / 信件 / 问答 / 演讲与访谈
 //   研究 —— 本站对原典的解读：公司研究、投资概念、思维模型
-// 拆书、专栏、博主文章、中文文章等延伸内容降级为次要入口（首页底部与页脚）。
+//   资料库 —— 全站搜索、人物索引、拆书、博主文章、中文文章
+// 关于 —— 来源、编辑原则、修订记录、免责声明
 const navGroups: { label: string; activePrefixes: string[]; sections: NavSection[] }[] = [
   {
-    label: '人物',
-    activePrefixes: ['/buffett', '/munger', '/duanyongping', '/people'],
+    label: '博客',
+    activePrefixes: ['/blog'],
     sections: [
       { links: [
-        { href: '/buffett', label: '巴菲特', meta: '信件、问答、演讲与访谈' },
-        { href: '/munger', label: '芒格', meta: '演讲、Wesco、穷查理宝典与思维模型' },
-        { href: '/duanyongping', label: '段永平', meta: '博客、问答、演讲与访谈' },
-        { href: '/people', label: '人物索引', meta: '按人物查找全部内容' },
+        { href: '/blog', label: '博客首页', meta: '主理人的阅读札记与投资思考' },
+        { href: '/columns', label: '投资策略', meta: '原则、策略与独立思考' },
+        { href: '/business-history', label: '公司研究', meta: '经营、护城河与资本配置' },
       ] },
     ],
   },
   {
     label: '原典',
-    activePrefixes: ['/letters', '/partnership', '/qa', '/meetings', '/buffett-faq', '/talks', '/interviews', '/munger/archive'],
+    activePrefixes: ['/buffett', '/munger', '/duanyongping', '/people', '/letters', '/partnership', '/qa', '/meetings', '/buffett-faq', '/talks', '/interviews', '/munger/archive'],
     sections: [
+      { title: '人物', links: [
+        { href: '/buffett', label: '巴菲特', meta: '信件、问答、演讲与访谈' },
+        { href: '/munger', label: '芒格', meta: '演讲、Wesco、穷查理宝典与思维模型' },
+        { href: '/duanyongping', label: '段永平', meta: '博客、问答、演讲与访谈' },
+        { href: '/people', label: '人物索引', meta: '按人物查找全部内容' },
+      ] },
       { title: '信件', links: [
         { href: '/letters', label: '股东信', meta: '1965—至今' },
         { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
@@ -66,6 +72,18 @@ const navGroups: { label: string; activePrefixes: string[]; sections: NavSection
         { href: '/business-history/themes', label: '商业主题', meta: '从行业与商业史进入' },
         { href: '/concepts', label: '投资概念', meta: '概念索引' },
         { href: '/model', label: '思维模型', meta: '跨学科思维工具' },
+      ] },
+    ],
+  },
+  {
+    label: '资料库',
+    activePrefixes: ['/search', '/books', '/bloggers', '/articles'],
+    sections: [
+      { links: [
+        { href: '/search', label: '全站搜索', meta: '概念、公司、人物、原典' },
+        { href: '/books', label: '拆书', meta: '书评与核心要点' },
+        { href: '/bloggers', label: '博主文章', meta: '外部优质内容' },
+        { href: '/articles', label: '中文文章', meta: '整理存档' },
       ] },
     ],
   },

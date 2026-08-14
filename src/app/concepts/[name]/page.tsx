@@ -7,6 +7,7 @@ import MarkdownContent from '@/components/MarkdownContent'
 import ReadingProgress from '@/components/ReadingProgress'
 import { RecommendationList } from '@/components/RecommendationList'
 import EntityArticleLinks from '@/components/EntityArticleLinks'
+import BlogEntityLinks from '@/components/BlogEntityLinks'
 import { resolveEntityLink } from '@/lib/entity-resolver'
 import { getRelatedConcepts } from '@/lib/recommendations'
 import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
@@ -193,6 +194,9 @@ export default function ConceptDetailPage({ params }: PageProps) {
 
       {/* 延伸阅读：关联文章 */}
       <EntityArticleLinks entityName={conceptName} />
+
+      {/* 相关博客文章（B-05：博客与档案双向打通） */}
+      <BlogEntityLinks entityName={conceptName} />
 
     </PageContainer>
   )
