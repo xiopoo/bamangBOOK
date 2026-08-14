@@ -1,8 +1,6 @@
 import { getDocuments } from './documents'
 import { getShareholderLetters, getAllPartnershipLetters } from './partnership'
 import { getDYDocs } from './duanyongping'
-import { getAllBloggerArticles } from './bloggers'
-import { getColumns } from './columns'
 import { getAllArticles } from './articles'
 
 export interface RecentItem {
@@ -49,10 +47,6 @@ export function getRecentUpdates(limit = 14): RecentItem[] {
     push(d.title, `/duanyongping/blog/${d.slug}`, `段永平博客 · ${d.year}`, yearOf(d.year)))
   latest(getDYDocs('talks', false), 4, d => yearOf(d.year)).forEach(d =>
     push(d.title, `/duanyongping/talks/${d.slug}`, `段永平演讲 · ${d.year}`, yearOf(d.year)))
-  latest(getAllBloggerArticles(), 6, a => a.year || 0).forEach(a =>
-    push(a.title, `/bloggers/${encodeURIComponent(a.blogger)}/${encodeURIComponent(a.fileName)}`, `博主文章 · ${a.year}`, a.year || 0))
-  latest(getColumns(), 3, c => yearOf(c.date)).forEach(c =>
-    push(c.title, `/columns/${c.slug}`, `专栏 · ${yearOf(c.date)}`, yearOf(c.date)))
   latest(getAllArticles(), 3, a => yearOf(a.year)).forEach(a =>
     push(a.title, `/articles/${a.slug}`, `文章 · ${a.year}`, yearOf(a.year)))
 

@@ -15,7 +15,7 @@ export default function ArticlesPage() {
 
   return (
     <PageContainer maxWidth="7xl">
-      <PageHeader title="中文文章" backHref="/reading" backLabel="返回阅读总库" />
+      <PageHeader title="中文文章" backHref="/" backLabel="返回首页" />
       <ol className="archive-list">
         {articles.map(article => (
           <li key={article.slug}>

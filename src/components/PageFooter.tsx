@@ -1,13 +1,15 @@
 import Link from 'next/link'
 
-// 阅读优先重构：页脚只保留阅读内容入口，已移除电商（巴芒文集）、
-// 知识图谱、阅读历史、已购内容等平台功能入口。
+// 阅读优先：页脚保留核心原典入口，延伸内容（拆书/专栏/博主文章/中文文章）作为次要入口
 const footerLinks = [
   { href: '/buffett', label: '巴菲特' },
   { href: '/munger', label: '芒格' },
+  { href: '/duanyongping', label: '段永平' },
   { href: '/business-history', label: '公司研究' },
-  { href: '/concepts', label: '投资方法' },
-  { href: '/reading', label: '全部内容' },
+  { href: '/books', label: '拆书' },
+  { href: '/columns', label: '专栏' },
+  { href: '/bloggers', label: '博主文章' },
+  { href: '/articles', label: '中文文章' },
   { href: '/search', label: '全站搜索' },
 ]
 
