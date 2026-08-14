@@ -1,17 +1,16 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import CatalogStats from '@/components/CatalogStats'
-import { getBloggers, getAllBloggerTags } from '@/lib/bloggers'
+import { getBloggers } from '@/lib/bloggers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '博主文章',
-  description: '四位中文写作者的长期投资文章：把原典、企业案例和中国投资者的长期实践放在一起阅读。',
+  description: '中文写作者的长期投资文章：把原典、企业案例和中国投资者的长期实践放在一起阅读。',
   alternates: { canonical: '/bloggers' },
   openGraph: {
     title: '博主文章｜复利书房',
-    description: '四位中文写作者的长期投资文章索引。',
+    description: '中文写作者的长期投资文章索引。',
   },
 }
 
@@ -24,23 +23,16 @@ const BLOGGER_DESCRIPTIONS: Record<string, string> = {
 
 export default function BloggersPage() {
   const bloggers = getBloggers()
-  const totalArticles = bloggers.reduce((sum, b) => sum + b.count, 0)
 
   return (
     <PageContainer maxWidth="6xl">
       <PageHeader
         title="博主文章"
-        subtitle={`四位长期关注的投资写作者，共 ${totalArticles.toLocaleString()} 篇文章。可以按作者、年份和主题浏览。`}
+        subtitle="长期关注价值投资的中文写作者文章。"
         backHref="/"
         backLabel="返回首页"
         sticky
       />
-
-      <CatalogStats items={[
-        { value: bloggers.length, label: '位博主' },
-        { value: totalArticles.toLocaleString(), label: '篇文章' },
-        { value: getAllBloggerTags().length, label: '个主题标签' },
-      ]} />
 
       {/* Blogger cards */}
       <div className="archive-card-grid">

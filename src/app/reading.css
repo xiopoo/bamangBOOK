@@ -98,15 +98,31 @@
   text-indent: 0;
 }
 
-/* 阅读优先重构：正文中的「编者按/来源说明」整段降噪——小字、弱色、侧边细线，
-   与正文段落明显区分，读者可自然略过而不打断原文阅读节奏。 */
-.prose p.prose-editorial-note {
+/* 阅读优先重构：正文中的「编者按/来源说明」整段降噪——默认折叠为小字说明，
+   需要时点击展开；不打断原文阅读节奏。 */
+.prose details.prose-editorial-note {
   margin-top: 1.6em;
   margin-bottom: 1.8em;
-  padding: 0.85em 1.1em;
   font-size: 0.88em;
   line-height: 1.7;
   color: var(--reading-text-muted);
+}
+.prose details.prose-editorial-note > summary {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.4em 0.9em;
+  border: 1px solid color-mix(in srgb, var(--reading-accent) 35%, transparent);
+  border-radius: 2px;
+  list-style: none;
+  font-weight: 600;
+  color: var(--reading-text-muted);
+}
+.prose details.prose-editorial-note > summary::-webkit-details-marker { display: none; }
+.prose details.prose-editorial-note > summary::before { content: '编者按 ▾'; }
+.prose details.prose-editorial-note[open] > summary::before { content: '编者按 ▴'; }
+.prose details.prose-editorial-note > div {
+  margin-top: 0.7em;
+  padding: 0.85em 1.1em;
   text-indent: 0;
   background: color-mix(in srgb, var(--reading-text) 4%, transparent);
   border-left: 2px solid color-mix(in srgb, var(--reading-accent) 30%, transparent);

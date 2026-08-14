@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
-import { getShareholderLetters, getShareholderCount } from '@/lib/partnership'
+import { getShareholderLetters } from '@/lib/partnership'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,7 +27,6 @@ const DECADES: { label: string; range: [number, number] }[] = [
 
 export default function LettersPage() {
   const letters = getShareholderLetters()
-  const totalCount = getShareholderCount()
   const years = letters.map((l) => l.year)
   const firstYear = Math.min(...years)
   const lastYear = Math.max(...years)
@@ -36,28 +35,16 @@ export default function LettersPage() {
     <PageContainer maxWidth="7xl">
       <PageHeader
         title="巴菲特致股东信"
-        subtitle={`${firstYear}-${lastYear}年 · 伯克希尔哈撒韦年度致股东信完整收录`}
+        subtitle={`${firstYear}-${lastYear}年 · 伯克希尔哈撒韦年度致股东信`}
         backHref="/buffett"
         backLabel="返回巴菲特主页"
         sticky
       />
 
-      <div className="archive-stats-line" aria-label="档案统计"><span>{totalCount} 封信件</span><span>{firstYear}—{lastYear}</span><span>按时间从早到晚</span><Link href="/partnership">先读合伙人信（1956—1970） →</Link></div>
+      <p className="text-sm text-text-muted dark:text-dark-muted mb-8">
+        1965 年前，巴菲特以合伙基金方式管理资金，<Link href="/partnership" className="underline decoration-primary/40 hover:decoration-primary">合伙人信（1956—1970）</Link>另成一册。
+      </p>
 
-      {/* 时期衔接说明：合伙人信 → 股东信 */}
-      <div className="mb-10 p-5 rounded-card bg-gradient-to-r from-primary/5 to-transparent dark:from-primary/10 border border-primary/10">
-        <p className="text-sm text-text-muted dark:text-dark-muted leading-relaxed">
-          <span className="font-medium text-primary dark:text-primary-light">股东信时期</span>
-          始于1965年巴菲特取得伯克希尔控制权。
-          在此之前的
-          <Link href="/partnership" className="text-primary dark:text-primary-light underline decoration-primary/40 hover:decoration-primary mx-1 font-medium">
-            合伙基金时期（1956-1970）
-          </Link>
-          的信件另成一册。
-        </p>
-      </div>
-
-      {/* 连续档案列表：统一使用行式信息密度 */}
       <div className="archive-list archive-list--catalog">
         {DECADES.map((decade) => {
           const decadeLetters = letters.filter(
