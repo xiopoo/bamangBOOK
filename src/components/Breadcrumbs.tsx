@@ -80,17 +80,14 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/business-history': [
     { label: '首页', href: '/' },
-    { label: '研究', href: '/business-history' },
     { label: '公司深度研究', href: '/business-history' },
   ],
   '/bloggers': [
     { label: '首页', href: '/' },
-    { label: '文章', href: '/bloggers' },
     { label: '博主文章', href: '/bloggers' },
   ],
   '/columns': [
     { label: '首页', href: '/' },
-    { label: '文章', href: '/columns' },
     { label: '专栏', href: '/columns' },
   ],
   '/duanyongping': [
@@ -147,7 +144,6 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
   ],
   '/books': [
     { label: '首页', href: '/' },
-    { label: '研究', href: '/books' },
     { label: '经典书籍', href: '/books' },
   ],
 }
@@ -157,7 +153,9 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ fallbackParent }: BreadcrumbsProps) {
-  const pathname = usePathname()
+  // 兼容直连 *.html 静态文件：归一化后再匹配路由，避免面包屑出现 "letters.html" 之类片段
+  const rawPathname = usePathname()
+  const pathname = rawPathname.replace(/\.html$/, '')
 
   const getBreadcrumbs = (): BreadcrumbItem[] => {
     const basePath = Object.keys(pathMap)

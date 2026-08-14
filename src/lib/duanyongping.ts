@@ -191,7 +191,7 @@ function resolveDate(data: Record<string, unknown>): string | undefined {
 /** 列出某栏目的全部文档，blog/qa 按年份分目录。返回按时间正序，适合连续阅读。 */
 export function getDYDocs(section: DYSection, includeContent = true): DYDoc[] {
   const cached = docsCache.get(section)?.[includeContent ? 'withContent' : 'metadata']
-  if (cached) return [...cached]
+  if (cached) return disambiguateTitles(section, cached)
 
   const dir = sectionDir(section)
   if (!fs.existsSync(dir)) return []
@@ -216,7 +216,40 @@ export function getDYDocs(section: DYSection, includeContent = true): DYDoc[] {
   const entry = docsCache.get(section) || {}
   entry[includeContent ? 'withContent' : 'metadata'] = out
   docsCache.set(section, entry)
-  return [...out]
+  return disambiguateTitles(section, out)
+}
+
+/**
+ * 历史导入（网易博客）存在大量「同名不同文」的博文（如多篇《转载-芒格主义》《引用-巴菲特语录》，
+ * 甚至同名同日期，如三篇《2012年12月09日》）。
+ * 为避免列表与 SEO 标题重复，对同一栏目内标题相同的文档，自第 2 篇起追加发布日期消歧：
+ *   《转载-芒格主义》→《转载-芒格主义（2012-06-23）》
+ * 同名同日期时改用序号：《2012年12月09日》→《2012年12月09日（第2篇）》
+ * 不修改内容文件，也不污染缓存（对缓存数组做浅拷贝再改 title）。
+ */
+function disambiguateTitles(section: DYSection, docs: DYDoc[]): DYDoc[] {
+  if (section !== 'blog') return docs
+  const counts = new Map<string, number>()
+  for (const doc of docs) counts.set(doc.title, (counts.get(doc.title) || 0) + 1)
+  const emitted = new Map<string, number>()
+  const usedSuffix = new Map<string, Set<string>>()
+  return docs.map((doc) => {
+    if ((counts.get(doc.title) || 0) <= 1) return doc
+    const nth = (emitted.get(doc.title) || 0) + 1
+    emitted.set(doc.title, nth)
+    const datePart = (doc.date || '').slice(0, 10)
+    const suffixes = usedSuffix.get(doc.title) || new Set<string>()
+    if (nth === 1) {
+      if (datePart) suffixes.add(datePart)
+      usedSuffix.set(doc.title, suffixes)
+      return doc
+    }
+    let suffix = datePart && !suffixes.has(datePart) ? datePart : `第${nth}篇`
+    while (suffixes.has(suffix)) suffix = `${suffix}·${doc.slug.slice(0, 6)}`
+    suffixes.add(suffix)
+    usedSuffix.set(doc.title, suffixes)
+    return { ...doc, title: `${doc.title}（${suffix}）` }
+  })
 }
 
 /** 去掉详情页里已经由元数据显示的转载来源块，避免长 URL 在移动端撑出难看的多行文本。 */
@@ -244,9 +277,13 @@ export function getDYDoc(section: DYSection, slug: string): DYDoc | null {
   } catch {
     s = slug
   }
+  // 列表缓存里的标题已消歧（同名不同文追加日期），详情页沿用同一标题；
+  // 正文始终从文件完整读取。
+  const listed = getDYDocs(section, false).find((d) => d.slug === s)
   for (const fp of collectFiles(section)) {
     if (slugFromFileName(path.basename(fp)) === s) {
-      return readDoc(section, fp)
+      const doc = readDoc(section, fp)
+      return listed && listed.title !== doc.title ? { ...doc, title: listed.title } : doc
     }
   }
   return null

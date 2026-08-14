@@ -19,19 +19,30 @@ const TYPE_LABELS: Record<string, string> = {
 }
 
 function Player({ recording }: { recording: MungerArchiveRecording }) {
+  // 懒加载：YouTube 对国内网络不可达，默认不发起外部请求；用户点击后才嵌入。
+  // 若加载失败，iframe 内显示浏览器原生的连接错误，下方来源链接可兜底。
+  const [playing, setPlaying] = useState(false)
   return (
     <article className="recording-player" aria-live="polite">
       <div className="recording-player__screen">
         {recording.embedUrl ? (
-          <iframe
-            key={recording.embedUrl}
-            src={recording.embedUrl}
-            title={recording.titleZh}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
+          playing ? (
+            <iframe
+              key={recording.embedUrl}
+              src={recording.embedUrl}
+              title={recording.titleZh}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          ) : (
+            <button type="button" className="recording-player__launch" onClick={() => setPlaying(true)}>
+              <Play size={34} aria-hidden="true" />
+              <strong>点击播放：{recording.titleZh}</strong>
+              <p>视频托管于 YouTube 原始公开来源；若当前网络无法访问，请使用下方「来源」链接在浏览器中打开。</p>
+            </button>
+          )
         ) : (
           <div className="recording-player__empty">
             <Play size={34} aria-hidden="true" />
