@@ -736,6 +736,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.68rem;
 }
 
+/* 下拉内小节（如原典组：信件 / 问答 / 演讲与访谈） */
+.archive-dropdown__section + .archive-dropdown__section {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--archive-rule-soft);
+}
+.archive-dropdown__section-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--archive-sans);
+  color: var(--archive-gold-deep);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .archive-masthead__tools {
   display: flex;
   align-items: center;
@@ -3195,6 +3211,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--archive-ink-faint);
     font-family: var(--archive-sans);
     font-size: 0.62rem;
+  }
+
+  .archive-mobile-menu__section + .archive-mobile-menu__section {
+    margin-top: 0.7rem;
+  }
+  .archive-mobile-menu__section-title {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--archive-ink-faint);
+    font-family: var(--archive-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
   }
 
   .archive-drawers,
