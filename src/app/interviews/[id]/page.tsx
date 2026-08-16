@@ -9,7 +9,7 @@ import RelatedArticles from '@/components/RelatedArticles'
 import { personDisplayName } from '@/lib/people'
 
 export function generateStaticParams() { return interviewParams() }
-export const dynamicParams = false
+export const dynamicParams = true
 interface PageProps { params: { id: string } }
 
 export function generateMetadata({ params }: PageProps): Metadata {

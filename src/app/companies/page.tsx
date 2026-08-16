@@ -5,6 +5,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import type { Metadata } from 'next'
+import { Building2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '公司研究索引',
@@ -52,7 +53,7 @@ export default function CompaniesPage() {
       />
 
       <div className="mb-8">
-        <StatBadge icon="🏢" count={companies.length} label="投资案例公司" />
+        <StatBadge icon={<Building2 className="w-6 h-6" />} count={companies.length} label="投资案例公司" />
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">

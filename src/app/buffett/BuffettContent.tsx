@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import type { Person, RelatedPerson } from '@/lib/people'
+import { BookOpen, User, Lightbulb, Users, Send, Mic, HelpCircle, Building2 } from 'lucide-react'
 
 interface BuffettContentProps {
   person: Person
@@ -99,7 +100,7 @@ export default function BuffettContent({
             <ul className="space-y-3">
               {person.books.map((book, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="text-primary dark:text-primary-light mt-1">📚</span>
+                  <span className="text-primary dark:text-primary-light mt-1"><BookOpen className="w-5 h-5" /></span>
                   <div>
                     <span className="text-gray-900 dark:text-gray-100 font-medium">{book.title}</span>
                     {book.year && (
@@ -129,7 +130,7 @@ export default function BuffettContent({
                   className="flex items-center gap-3 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border px-4 py-3 hover:shadow-md transition-shadow"
                 >
                   <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center">
-                    👤
+                    <User className="w-5 h-5" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="font-medium text-text dark:text-dark-text">{rp.name}</div>
@@ -154,7 +155,7 @@ export default function BuffettContent({
               key={index}
               className="bg-white dark:bg-dark-card rounded-xl border border-gray-100 dark:border-dark-border p-6 hover:shadow-md transition-shadow"
             >
-              <div className="text-2xl mb-3">💡</div>
+              <div className="text-2xl mb-3"><Lightbulb className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
               <p className="text-gray-700 dark:text-gray-300 font-medium">{philosophy}</p>
             </div>
           ))}
@@ -181,7 +182,7 @@ export default function BuffettContent({
           >
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
-                🤝
+                <Users className="w-8 h-8 text-primary dark:text-primary-light" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-text dark:text-dark-text mb-2">
@@ -212,7 +213,7 @@ export default function BuffettContent({
           >
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
-                📬
+                <Send className="w-8 h-8 text-primary dark:text-primary-light" strokeWidth={1.5} />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-text dark:text-dark-text mb-2">
@@ -243,7 +244,7 @@ export default function BuffettContent({
             href="/talks?person=buffett"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🎤</div>
+            <div className="text-2xl mb-2"><Mic className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">演讲</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{talksCount}场</div>
           </Link>
@@ -251,7 +252,7 @@ export default function BuffettContent({
             href="/interviews?person=buffett"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🎙️</div>
+            <div className="text-2xl mb-2"><Mic className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">访谈</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{interviewsCount}场</div>
           </Link>
@@ -259,7 +260,7 @@ export default function BuffettContent({
             href="/qa"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">❓</div>
+            <div className="text-2xl mb-2"><HelpCircle className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">股东大会问答</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">40场</div>
           </Link>
@@ -287,7 +288,7 @@ export default function BuffettContent({
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">🔍 案例分析视角</h3>
+          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">案例分析视角</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white dark:bg-dark-card rounded-lg p-4">
               <div className="font-medium text-text dark:text-dark-text mb-2">消费品行业</div>
@@ -348,13 +349,13 @@ export default function BuffettContent({
       </section>
 
       <section className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6 mb-8">
-        <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">📚 快速导航</h2>
+        <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">快速导航</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Link
             href="/concepts"
             className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">💡</div>
+            <div className="text-2xl mb-2"><Lightbulb className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资概念</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">35+核心概念</div>
           </Link>
@@ -362,7 +363,7 @@ export default function BuffettContent({
             href="/companies"
             className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🏢</div>
+            <div className="text-2xl mb-2"><Building2 className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资公司</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">61家公司资料</div>
           </Link>

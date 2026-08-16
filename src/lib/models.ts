@@ -1,25 +1,43 @@
 import { existsSync, readFileSync, readdirSync } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import {
+  type LucideIcon,
+  Compass,
+  Brain,
+  Ruler,
+  TrendingUp,
+  Atom,
+  Dna,
+  Settings,
+  Network,
+  Landmark,
+  Coins,
+  Receipt,
+  Scale,
+  ScrollText,
+  Gem,
+  Pin,
+} from 'lucide-react'
 
 const MODELS_DIR = path.join(process.cwd(), 'content/models')
 
 /** 学科展示顺序（与 mungermodels.com 的格栅顺序一致） */
-export const DISCIPLINE_ORDER: Array<{ id: string; name: string; icon: string }> = [
-  { id: 'meta', name: '元认知与思维方法论', icon: '🧭' },
-  { id: 'psych', name: '心理学', icon: '🧠' },
-  { id: 'math', name: '数学与统计学', icon: '📐' },
-  { id: 'econ', name: '微观经济学', icon: '📈' },
-  { id: 'physics', name: '物理学与化学', icon: '⚛️' },
-  { id: 'bio', name: '生物学与进化论', icon: '🧬' },
-  { id: 'eng', name: '工程学', icon: '⚙️' },
-  { id: 'complex', name: '复杂系统与决策科学', icon: '🌀' },
-  { id: 'mgmt', name: '管理学与商业', icon: '🏛️' },
-  { id: 'invest', name: '投资学与金融学', icon: '💰' },
-  { id: 'accounting', name: '会计学', icon: '🧾' },
-  { id: 'law', name: '法学与政治学', icon: '⚖️' },
-  { id: 'history', name: '历史学与哲学', icon: '📜' },
-  { id: 'decision', name: '投资原则与品格', icon: '🪨' },
+export const DISCIPLINE_ORDER: Array<{ id: string; name: string; icon: LucideIcon }> = [
+  { id: 'meta', name: '元认知与思维方法论', icon: Compass },
+  { id: 'psych', name: '心理学', icon: Brain },
+  { id: 'math', name: '数学与统计学', icon: Ruler },
+  { id: 'econ', name: '微观经济学', icon: TrendingUp },
+  { id: 'physics', name: '物理学与化学', icon: Atom },
+  { id: 'bio', name: '生物学与进化论', icon: Dna },
+  { id: 'eng', name: '工程学', icon: Settings },
+  { id: 'complex', name: '复杂系统与决策科学', icon: Network },
+  { id: 'mgmt', name: '管理学与商业', icon: Landmark },
+  { id: 'invest', name: '投资学与金融学', icon: Coins },
+  { id: 'accounting', name: '会计学', icon: Receipt },
+  { id: 'law', name: '法学与政治学', icon: Scale },
+  { id: 'history', name: '历史学与哲学', icon: ScrollText },
+  { id: 'decision', name: '投资原则与品格', icon: Gem },
 ]
 
 export interface ModelMeta {
@@ -147,7 +165,7 @@ export function getModelBySlug(slug: string): ModelDetail | null {
 }
 
 /** 按学科分组（沿用固定学科顺序），组内按重要度排序。 */
-export function getModelsByDiscipline(): Array<{ id: string; name: string; icon: string; models: ModelMeta[] }> {
+export function getModelsByDiscipline(): Array<{ id: string; name: string; icon: LucideIcon; models: ModelMeta[] }> {
   const all = getModels()
   const groups = DISCIPLINE_ORDER.map(d => ({
     ...d,
@@ -157,7 +175,7 @@ export function getModelsByDiscipline(): Array<{ id: string; name: string; icon:
   const known = new Set(DISCIPLINE_ORDER.map(d => d.id))
   const others = all.filter(m => !known.has(m.discipline))
   if (others.length > 0) {
-    groups.push({ id: 'other', name: '其他', icon: '📌', models: others })
+    groups.push({ id: 'other', name: '其他', icon: Pin, models: others })
   }
   return groups
 }

@@ -8,6 +8,22 @@ import SearchResults from '@/components/SearchResults'
 import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { searchStaticContent, type StaticSearchItemType } from '@/lib/static-search-client'
+import {
+  type LucideIcon,
+  Search,
+  Lightbulb,
+  Building2,
+  User,
+  FileText,
+  Users,
+  PenLine,
+  HelpCircle,
+  Mic,
+  BookOpen,
+  Brain,
+  Landmark,
+  ClipboardList,
+} from 'lucide-react'
 
 interface SearchResult {
   name: string
@@ -59,23 +75,23 @@ const typeLabels: Record<string, string> = {
   faq: '主题问答',
 }
 
-const typeIcons: Record<string, string> = {
-  all: '🔍',
-  concept: '💡',
-  company: '🏢',
-  person: '👤',
-  letter: '📄',
-  partnership: '🤝',
-  article: '📝',
-  qa: '❓',
-  talk: '🎤',
-  interview: '🎙️',
-  blogger: '📚',
-  book: '📖',
-  column: '✍️',
-  model: '🧠',
-  meeting: '🏛️',
-  faq: '📋',
+const typeIcons: Record<string, LucideIcon> = {
+  all: Search,
+  concept: Lightbulb,
+  company: Building2,
+  person: User,
+  letter: FileText,
+  partnership: Users,
+  article: PenLine,
+  qa: HelpCircle,
+  talk: Mic,
+  interview: Mic,
+  blogger: BookOpen,
+  book: BookOpen,
+  column: PenLine,
+  model: Brain,
+  meeting: Landmark,
+  faq: ClipboardList,
 }
 
 function SearchContent() {
@@ -213,7 +229,8 @@ function SearchContent() {
             {allTypes.map((type) => {
               const count = type === 'all' ? total : typeStats[type]
               const isActive = selectedType === type
-              
+              const Icon = typeIcons[type]
+
               return (
                 <button
                   key={type}
@@ -224,7 +241,7 @@ function SearchContent() {
                       : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                   }`}
                 >
-                  <span>{typeIcons[type]}</span>
+                  {Icon && <Icon className="w-4 h-4" strokeWidth={1.75} />}
                   <span>{typeLabels[type]}</span>
                   <span className={`text-xs ${isActive ? 'text-white/80' : 'text-gray-400'}`}>
                     ({count})

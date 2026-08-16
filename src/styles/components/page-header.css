@@ -1,0 +1,128 @@
+/* ============================================================
+   components/page-header.css — 页面容器与页头（archive-page / archive-page-header）
+   + 阅读字号控件（reader-font-control）
+   来源：globals.css「全站界面」页头部分。
+   ============================================================ */
+
+.archive-page {
+  background: transparent;
+}
+
+.archive-page-header {
+  margin-bottom: 1.5rem;
+  padding: 0.25rem 0 1.25rem;
+  color: var(--archive-ink);
+  background: color-mix(in srgb, var(--archive-paper) 94%, transparent);
+  border-bottom: 1px solid var(--archive-rule);
+}
+
+.archive-page-header h1 {
+  color: var(--archive-ink);
+  font-size: clamp(1.95rem, 1.6rem + 1.2vw, 3rem);
+  font-weight: 680;
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.archive-page-header h1 + p {
+  max-width: 52rem;
+  margin-top: 0.7rem;
+  color: var(--archive-ink-faint);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.archive-page-header__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.archive-page-header__heading {
+  min-width: 0;
+}
+
+.archive-page-header__tools {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ---- 阅读字号控件（每格 ≥ 44×44 触控合规） ---- */
+.reader-font-control {
+  display: grid;
+  grid-template-columns: 44px 56px 44px;
+  height: 44px;
+  align-items: stretch;
+  color: var(--archive-ink-faint);
+  border: 1px solid var(--archive-rule);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--archive-paper);
+  font-family: var(--archive-sans);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.reader-font-control button {
+  width: 100%;
+  height: 100%;
+  min-height: 44px;
+  color: var(--archive-ink-soft);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.reader-font-control button:hover:not(:disabled) {
+  color: var(--archive-paper);
+  background: var(--archive-oxblood);
+}
+
+.reader-font-control button:focus-visible {
+  outline: 2px solid var(--archive-oxblood);
+  outline-offset: -3px;
+}
+
+.reader-font-control button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.reader-font-control output {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border-inline: 1px solid var(--archive-rule);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--archive-ink);
+  letter-spacing: 0.01em;
+}
+
+/* 移动端字号控件：更紧凑，高度保持 44，但列宽稍减 */
+@media (max-width: 640px) {
+  .archive-page-header__row {
+    flex-direction: column;
+  }
+
+  .archive-page-header__heading {
+    width: 100%;
+  }
+
+  .archive-page-header__tools {
+    align-self: flex-start;
+  }
+
+  .reader-font-control {
+    grid-template-columns: 44px 52px 44px;
+    height: 44px;
+  }
+}

@@ -72,7 +72,7 @@ export default function MeetingDetailPage({ params }: PageProps) {
       metadata={{
         person: '巴菲特 / 芒格',
         year: meeting.year,
-        contentType: '股东大会',
+        contentType: '股东大会实录',
         readMinutes: Math.max(5, Math.round((meeting.itemCount || 200) / 45)),
       }}
       related={related}

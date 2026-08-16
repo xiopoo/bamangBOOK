@@ -7,7 +7,7 @@ import { getWescoMeetingByYear, getWescoMeetings } from '@/lib/wesco-meetings'
 interface PageProps { params: { year: string } }
 
 export function generateStaticParams() { return getWescoMeetings().map(item => ({ year: String(item.year) })) }
-export const dynamicParams = false
+export const dynamicParams = true
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const meeting = getWescoMeetingByYear(Number(params.year))
@@ -32,7 +32,7 @@ export default function WescoMeetingDetailPage({ params }: PageProps) {
     subtitle={`查理·芒格 · ${meeting.edition}`}
     backHref="/munger/wesco"
     backLabel="返回 Wesco 股东大会目录"
-    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
+    metadata={{ person: '查理·芒格', year: meeting.year, contentType: '股东大会问答', readMinutes: Math.max(5, Math.round(meeting.content.length / 900)) }}
     previous={previous ? { href: `/munger/wesco/${previous.year}`, title: previous.title, meta: `${previous.year}年 · ${previous.edition}` } : null}
     next={next ? { href: `/munger/wesco/${next.year}`, title: next.title, meta: `${next.year}年 · ${next.edition}` } : null}
     navigationLabel="按时间从早到晚的相邻 Wesco 股东大会"

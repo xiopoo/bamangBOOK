@@ -1,5 +1,6 @@
 import type { Recommendation } from '@/lib/recommendations'
 import Link from 'next/link'
+import { Lightbulb, Building2, User, FileText, Pin } from 'lucide-react'
 
 interface RecommendationCardProps {
   item: Recommendation
@@ -9,15 +10,15 @@ export function RecommendationCard({ item }: RecommendationCardProps) {
   const getIcon = () => {
     switch (item.type) {
       case 'concept':
-        return '📚'
+        return <Lightbulb className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
       case 'company':
-        return '🏢'
+        return <Building2 className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
       case 'person':
-        return '👤'
+        return <User className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
       case 'letter':
-        return '📄'
+        return <FileText className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
       default:
-        return '📌'
+        return <Pin className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
     }
   }
 

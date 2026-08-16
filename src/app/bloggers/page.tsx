@@ -3,6 +3,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import { getBloggers } from '@/lib/bloggers'
 import type { Metadata } from 'next'
+import { Calendar } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '博主文章',
@@ -57,7 +58,7 @@ export default function BloggersPage() {
 
             <div className="archive-content-card__meta">
               <span className="flex items-center gap-1">
-                <span>📅</span>
+                <Calendar className="w-4 h-4" strokeWidth={1.75} />
                 <span>{blogger.dateRange}</span>
               </span>
               <span className="text-primary group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">

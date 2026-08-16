@@ -9,7 +9,7 @@ export function generateStaticParams() {
   return blogSlugParams().map((slug) => ({ slug }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { slug: string }
@@ -59,7 +59,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 </span>
                 {post.featured && (
                   <span className="text-xs font-medium text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 rounded-full">
-                    ★ 精选
+                    精选
                   </span>
                 )}
               </div>
@@ -70,7 +70,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 <p className="text-sm text-text-muted dark:text-dark-muted mt-1">{post.subtitle}</p>
               )}
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap mt-1.5">
-                <span>✍️ {post.author}</span>
+                <span>{post.author}</span>
                 <span>· {post.date}</span>
                 {post.updatedAt && <span>· 更新于 {post.updatedAt}</span>}
                 <span>· 约 {post.readingMinutes} 分钟</span>

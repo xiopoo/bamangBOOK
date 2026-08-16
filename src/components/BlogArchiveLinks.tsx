@@ -12,7 +12,7 @@ export default function BlogArchiveLinks({ archiveHref, limit = 5 }: { archiveHr
 
   return (
     <section className="mt-10 border-t border-primary/10 pt-6">
-      <h2 className="mb-4 text-lg font-semibold text-primary dark:text-primary-light">📖 读这份原典的导读文章</h2>
+      <h2 className="mb-4 text-lg font-semibold text-primary dark:text-primary-light">读这份原典的导读文章</h2>
       <ul className="space-y-2.5">
         {posts.map((post) => (
           <li key={post.slug}>

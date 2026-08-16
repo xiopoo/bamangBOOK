@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return bloggerParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { blogger: string }
@@ -19,14 +19,14 @@ interface PageProps {
 export function generateMetadata({ params }: PageProps): Metadata {
   const bloggerName = decodeURIComponent(params.blogger)
   const stats = getBloggerStats(bloggerName)
-  if (!stats) return { title: '博主档案未找到', robots: { index: false, follow: false } }
-  const description = `${bloggerName}投资文章档案，共 ${stats.total} 篇，时间范围 ${stats.dateRange}。`
+  if (!stats) return { title: '博主未找到', robots: { index: false, follow: false } }
+  const description = `${bloggerName}投资文章，共 ${stats.total} 篇，时间范围 ${stats.dateRange}。`
   const canonical = `/bloggers/${encodeURIComponent(bloggerName)}`
   return {
-    title: `${bloggerName}文章档案`,
+    title: `${bloggerName}文章`,
     description,
     alternates: { canonical },
-    openGraph: { title: `${bloggerName}文章档案`, description, url: canonical },
+    openGraph: { title: `${bloggerName}文章`, description, url: canonical },
   }
 }
 
@@ -66,7 +66,7 @@ export default function BloggerArticlesPage({ params }: PageProps) {
   return (
     <PageContainer maxWidth="6xl">
       <PageHeader
-        title={`📡 ${bloggerName}`}
+        title={bloggerName}
         subtitle={`共 ${stats.total} 篇文章 · ${stats.dateRange}`}
         backHref="/bloggers"
         backLabel="返回博主列表"

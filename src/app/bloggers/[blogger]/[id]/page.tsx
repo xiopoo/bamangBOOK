@@ -12,7 +12,7 @@ export function generateStaticParams() {
   return bloggerArticleParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { blogger: string; id: string }

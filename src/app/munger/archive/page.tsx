@@ -42,7 +42,7 @@ export default function MungerArchivePage() {
       <section className="archive-catalog__intro">
         <p>WATCH · LISTEN · READ</p>
         <h2>先看见他说话的语境，<br />再进入文字。</h2>
-        <span>仿照 Munger Archive 的影音档案方式：先浏览、筛选和播放，再沿着中文整理稿继续阅读。</span>
+        <span>仿照 Munger Archive 的影音资料方式：先浏览、筛选和播放，再沿着中文整理稿继续阅读。</span>
       </section>
 
       <MungerRecordingBrowser recordings={recordings} />

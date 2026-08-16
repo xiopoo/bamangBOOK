@@ -59,11 +59,11 @@ export const people: Record<string, Person> = {
       '护城河：投资拥有持久竞争优势的企业',
     ],
     contentCategories: [
-      { id: 'partnership', label: '合伙人信', href: '/partnership', count: 23, icon: '🤝' },
-      { id: 'letters', label: '股东信', href: '/letters', count: 59, icon: '📬' },
-      { id: 'talks', label: '演讲', href: '/talks?person=buffett', count: 11, icon: '🎤' },
-      { id: 'interviews', label: '访谈', href: '/interviews?person=buffett', count: 40, icon: '🎙️' },
-      { id: 'qa', label: '股东大会问答', href: '/qa', count: 40, icon: '❓' },
+      { id: 'partnership', label: '合伙人信', href: '/partnership', count: 23 },
+      { id: 'letters', label: '股东信', href: '/letters', count: 59 },
+      { id: 'talks', label: '演讲', href: '/talks?person=buffett', count: 11 },
+      { id: 'interviews', label: '访谈', href: '/interviews?person=buffett', count: 40 },
+      { id: 'qa', label: '股东大会问答', href: '/qa', count: 40 },
     ],
     relatedPeople: [
       { id: 'munger', name: '查理·芒格', nameEn: 'Charlie Munger', href: '/munger', relationship: '黄金搭档' },
@@ -103,10 +103,10 @@ export const people: Record<string, Person> = {
       '专注：在能力圈内追求卓越',
     ],
     contentCategories: [
-      { id: 'munger-concepts', label: '核心概念', href: '/munger', count: 49, icon: '💡' },
-      { id: 'wesco-meetings', label: 'Wesco 股东大会', href: '/munger/wesco', count: 14, icon: '❓' },
-      { id: 'talks', label: '演讲', href: '/talks?person=munger', count: 10, icon: '🎤' },
-      { id: 'interviews', label: '访谈', href: '/interviews?person=munger', count: 0, icon: '🎙️' },
+      { id: 'munger-concepts', label: '核心概念', href: '/munger', count: 49 },
+      { id: 'wesco-meetings', label: 'Wesco 股东大会', href: '/munger/wesco', count: 14 },
+      { id: 'talks', label: '演讲', href: '/talks?person=munger', count: 10 },
+      { id: 'interviews', label: '访谈', href: '/interviews?person=munger', count: 0 },
     ],
     relatedPeople: [
       { id: 'buffett', name: '沃伦·巴菲特', nameEn: 'Warren Buffett', href: '/buffett', relationship: '黄金搭档' },

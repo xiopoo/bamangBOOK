@@ -14,12 +14,13 @@ import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import type { Metadata } from 'next'
 import { conceptParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
+import { Lightbulb, Inbox, TrendingUp } from 'lucide-react'
 
 export function generateStaticParams() {
   return conceptParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 function processConceptLinks(content: string): string {
   if (!content.includes('[[')) return content
@@ -86,7 +87,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
 
       <div className="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 dark:border-primary/30 shadow-sm hover:shadow-md transition-shadow">
         <div className="flex items-center gap-4">
-          <div className="text-3xl">💡</div>
+          <div className="text-3xl"><Lightbulb className="w-8 h-8 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
           <div className="flex-1">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
@@ -106,7 +107,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
 
       {stats.years.length > 0 && (
         <div className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-6 mb-8 shadow-sm hover:shadow-md transition-shadow">
-          <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">📅 相关年份</h2>
+          <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">相关年份</h2>
           <div className="flex flex-wrap gap-2">
             {stats.years.slice(0, 20).map((year) => (
               <Link
@@ -131,7 +132,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
           <MarkdownContent content={content} />
         ) : (
           <div className="text-center py-12">
-            <div className="text-4xl mb-4">📭</div>
+            <Inbox className="w-12 h-12 mx-auto mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
             <p className="text-gray-500 dark:text-gray-400">该概念的详细内容暂未收录</p>
             <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">请查看相关年份的股东信获取更多信息</p>
           </div>
@@ -142,7 +143,7 @@ export default function ConceptDetailPage({ params }: PageProps) {
       {stats.years.length > 0 && (
         <div className="mt-8 bg-white dark:bg-dark-card rounded-card border border-gray-100 dark:border-dark-border p-8 shadow-card">
           <h2 className="text-xl font-semibold text-text dark:text-dark-text mb-6 flex items-center gap-2">
-            <span className="text-2xl">📈</span>
+            <span className="text-2xl"><TrendingUp className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></span>
             概念演变时间线
           </h2>
           <div className="relative">

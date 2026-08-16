@@ -12,7 +12,7 @@ export function generateStaticParams() {
   return columnParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { slug: string }
@@ -52,7 +52,7 @@ export default function ColumnDetailPage({ params }: PageProps) {
               </Link>
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text dark:text-dark-text tracking-tight">{column.title}</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
-                <span>✍️ {column.series}</span>
+                <span>{column.series}</span>
                 {column.date && <span>· {column.date}</span>}
                 <span>· 约 {column.readMinutes} 分钟</span>
               </p>

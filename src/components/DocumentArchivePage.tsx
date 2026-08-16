@@ -1,7 +1,7 @@
 import PageContainer from './PageContainer'
 import PageHeader from './PageHeader'
-import ArchiveList from './ArchiveList'
-import { getDocuments, type DocumentCategory } from '@/lib/documents'
+import DocumentArchiveFilters from './DocumentArchiveFilters'
+import { getDocuments, type DocumentCategory, type DocumentItem } from '@/lib/documents'
 import { personDisplayName } from '@/lib/people'
 
 interface DocumentArchivePageProps {
@@ -9,20 +9,22 @@ interface DocumentArchivePageProps {
   title: string
   subtitle?: string
   pathname: string
-  exclude?: (fileName: string) => boolean
+  /** 覆盖个别条目的跳转地址（如 Wesco 问答直接指向其专题页，而非站内跳转页）。 */
+  hrefFor?: (doc: DocumentItem) => string | undefined
 }
 
-/** 原典档案列表页：标题 + 按年代分组的朴素时间线，无统计、无筛选、无附加入口。 */
-export default function DocumentArchivePage({ category, title, subtitle, pathname, exclude }: DocumentArchivePageProps) {
-  const all = getDocuments(category).filter(doc => !exclude?.(doc.fileName))
+/** 类别档案列表页：标题 + 人物标签筛选 + 按年代分组的朴素时间线。
+ *  类别是页面维度（问答 / 演讲 / 访谈），人物标签提供内容维度的交叉浏览。 */
+export default function DocumentArchivePage({ category, title, subtitle, pathname, hrefFor }: DocumentArchivePageProps) {
+  const all = getDocuments(category)
   const sorted = all.slice().sort((a, b) => (a.year ?? Number.POSITIVE_INFINITY) - (b.year ?? Number.POSITIVE_INFINITY) || a.fileName.localeCompare(b.fileName))
 
   return <PageContainer maxWidth="7xl">
     <PageHeader title={title} subtitle={subtitle} backHref="/" backLabel="返回首页" />
-    <ArchiveList
+    <DocumentArchiveFilters
       items={sorted.map(doc => {
         const ids = (Array.isArray(doc.person) ? doc.person : [doc.person]).filter((id): id is string => Boolean(id))
-        return { id: doc.id, href: doc.href, title: doc.title, year: doc.year, personIds: ids, person: ids.map(personDisplayName).join('、'), contentType: doc.contentType, readMinutes: doc.readMinutes, status: doc.status }
+        return { id: doc.id, href: hrefFor?.(doc) || doc.href, title: doc.title, year: doc.year, personIds: ids, person: ids.map(personDisplayName).join('、'), contentType: doc.contentType, readMinutes: doc.readMinutes, status: doc.status }
       })}
     />
   </PageContainer>

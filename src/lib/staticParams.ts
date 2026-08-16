@@ -50,8 +50,9 @@ export function personParams() {
 }
 
 export function qaParams() {
-  return listIds(path.join(CONTENT_DIR, 'qa')).map((id) => ({
-    id,
+  // 必须与详情页的查找键一致（index 的 fileName，而非磁盘文件名——两者可能不同）
+  return getDocuments('qa').map((doc) => ({
+    id: doc.fileName,
   }))
 }
 

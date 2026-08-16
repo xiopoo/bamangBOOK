@@ -12,5 +12,5 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function Page({ params }: { params: { slug: string } }) {
   const doc = getDYDoc('blog', params.slug)
   if (!doc) notFound()
-  return <DuanReadingArticle doc={doc} section="blog" backLabel="返回网易博客" contentType="文章" />
+  return <DuanReadingArticle doc={doc} section="blog" backLabel="返回网易博客" contentType="网易博客" />
 }

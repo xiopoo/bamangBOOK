@@ -1,0 +1,402 @@
+/* ============================================================
+   components/header.css — 站点头部（masthead / logo / 导航 / 下拉 / 移动菜单）
+   来源：globals.css「全站界面」导航部分（含响应式）。
+   ============================================================ */
+
+.archive-masthead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: var(--archive-ink);
+  background: color-mix(in srgb, var(--archive-paper) 90%, transparent);
+  border-bottom: 1px solid var(--archive-rule);
+  box-shadow: 0 1px 0 var(--archive-gild);
+  backdrop-filter: saturate(1.35) blur(10px);
+}
+
+.archive-masthead__inner {
+  width: min(100% - 2.5rem, 90rem);
+  min-height: 78px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.archive-logo {
+  color: var(--archive-ink);
+}
+
+.archive-logo__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.archive-logo__mark {
+  flex: none;
+  color: var(--archive-oxblood);
+  display: block;
+}
+
+.archive-logo__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.archive-logo__title {
+  font-family: var(--archive-serif);
+  font-size: 1.48rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.archive-logo__subtitle {
+  margin-top: 0.3rem;
+  font-family: var(--archive-sans);
+  color: var(--archive-ink-faint);
+  font-size: 0.65rem;
+  line-height: 1;
+  letter-spacing: 0.24em;
+}
+
+/* 暗色模式下金色描边仍清晰 */
+@media (prefers-color-scheme: dark) {
+  .archive-logo__mark {
+    color: var(--archive-ink);
+  }
+}
+
+.archive-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.archive-nav__group {
+  position: relative;
+  padding: 1.25rem 0;
+}
+
+.archive-nav__trigger,
+.archive-nav > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.5rem 0.6rem;
+  color: var(--archive-ink-soft);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.archive-nav__trigger:hover,
+.archive-nav__trigger.is-active,
+.archive-nav > a:hover,
+.archive-nav > a.is-active {
+  color: var(--archive-oxblood);
+  border-bottom-color: var(--archive-oxblood);
+}
+
+.archive-nav__trigger svg {
+  transition: transform 160ms ease;
+}
+
+.archive-nav__trigger[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+.archive-dropdown {
+  position: absolute;
+  top: calc(100% - 0.35rem);
+  left: 50%;
+  width: 30rem;
+  padding: 0.95rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+  align-items: start;
+  transform: translateX(-50%);
+  color: var(--archive-ink);
+  background: var(--archive-paper);
+  border: 1px solid var(--archive-rule);
+  border-top: 2px solid var(--archive-gold);
+  box-shadow: 0 18px 45px rgba(33, 29, 22, 0.16);
+  /* 小高度视口（如 1025×700 笔记本）下防止下拉溢出视口底部 */
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+}
+
+.archive-nav__group:nth-last-of-type(-n + 2) .archive-dropdown {
+  left: auto;
+  right: -5rem;
+  transform: none;
+}
+
+.archive-dropdown__intro span,
+.archive-kicker {
+  font-family: var(--archive-sans);
+  color: var(--archive-oxblood);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.archive-dropdown__links {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.archive-dropdown__links a {
+  padding: 0.45rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
+  color: var(--archive-ink);
+  border-bottom: 1px solid var(--archive-rule-soft);
+}
+
+/* 「类别」分组的 meta 较短，改为标签与 meta 同行，压低下拉高度 */
+.archive-dropdown--inline .archive-dropdown__links a {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+.archive-dropdown--inline .archive-dropdown__links small {
+  flex: none;
+}
+
+.archive-dropdown__links a:hover {
+  color: var(--archive-oxblood);
+  background: var(--archive-paper-tint);
+}
+
+.archive-dropdown__links small {
+  font-family: var(--archive-sans);
+  color: var(--archive-ink-faint);
+  font-size: 0.68rem;
+}
+
+/* 下拉内小节（2×2 网格排布，section 间的分隔交给 grid gap） */
+.archive-dropdown__section-title {
+  margin: 0 0 0.28rem;
+  font-family: var(--archive-sans);
+  color: var(--archive-gold-deep);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.archive-masthead__tools {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.archive-tool,
+.archive-menu-toggle {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
+  padding: 0.5rem 0.8rem;
+  color: var(--archive-ink-soft);
+  border: 1px solid var(--archive-rule);
+  background: transparent;
+  font-size: 0.84rem;
+}
+
+.archive-tool:hover,
+.archive-menu-toggle:hover {
+  color: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+}
+
+.archive-tool--icon {
+  width: 44px;
+  padding: 0;
+}
+
+.archive-menu-toggle {
+  display: none;
+  width: 44px;
+  padding: 0;
+}
+
+.archive-mobile-menu {
+  display: none;
+}
+
+/* ============================================================
+   Header 响应式
+   ============================================================ */
+
+@media (max-width: 1180px) {
+  .archive-nav__trigger,
+  .archive-nav > a {
+    padding-inline: 0.38rem;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .archive-masthead__inner {
+    gap: 1.2rem;
+  }
+
+  .archive-nav__trigger,
+  .archive-nav > a {
+    padding-inline: 0.45rem;
+    font-size: 0.9rem;
+  }
+
+  .archive-tool span {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .archive-masthead__inner {
+    width: min(100% - 2rem, 90rem);
+    min-height: 68px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .archive-nav {
+    display: none;
+  }
+
+  .archive-menu-toggle {
+    display: inline-flex;
+  }
+
+  .archive-mobile-menu {
+    max-height: calc(100vh - 68px);
+    padding: 1rem;
+    display: block;
+    overflow-y: auto;
+    background: var(--archive-paper);
+    border-top: 1px solid var(--archive-rule);
+  }
+
+  .archive-mobile-menu__search {
+    display: flex;
+    min-height: 44px;
+    padding: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--archive-ink);
+    border: 1px solid var(--archive-rule);
+    font-family: var(--archive-sans);
+    font-size: 0.76rem;
+  }
+
+  .archive-mobile-menu__grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--archive-rule);
+    border-left: 1px solid var(--archive-rule);
+  }
+
+  .archive-mobile-menu section {
+    padding: 1rem;
+    border-right: 1px solid var(--archive-rule);
+    border-bottom: 1px solid var(--archive-rule);
+  }
+
+  .archive-mobile-menu section > p {
+    margin-bottom: 0.55rem;
+    font-family: var(--archive-sans);
+    color: var(--archive-oxblood);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .archive-mobile-menu section a {
+    min-height: 44px;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    color: var(--archive-ink-soft);
+    border-bottom: 1px solid var(--archive-rule-soft);
+    font-size: 0.82rem;
+  }
+
+  .archive-mobile-menu section a:last-child {
+    border-bottom: 0;
+  }
+
+  .archive-mobile-menu section small {
+    color: var(--archive-ink-faint);
+    font-family: var(--archive-sans);
+    font-size: 0.62rem;
+  }
+
+  .archive-mobile-menu__section + .archive-mobile-menu__section {
+    margin-top: 0.7rem;
+  }
+  .archive-mobile-menu__section-title {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--archive-ink-faint);
+    font-family: var(--archive-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .archive-mobile-menu__theme {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 0;
+    border-top: 1px solid var(--archive-rule);
+    background: transparent;
+    color: var(--archive-ink-soft);
+    font-family: var(--archive-sans);
+    font-size: 0.82rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 640px) {
+  .archive-masthead__inner {
+    width: calc(100% - 1.25rem);
+  }
+
+  .archive-logo__title {
+    font-size: 1.28rem;
+  }
+
+  .archive-logo__subtitle {
+    font-size: 0.56rem;
+    letter-spacing: 0.18em;
+  }
+
+  .archive-tool {
+    display: none;
+  }
+
+  .archive-mobile-menu__grid {
+    grid-template-columns: 1fr;
+  }
+}

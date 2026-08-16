@@ -1,0 +1,90 @@
+/* ============================================================
+   components/reader.css — 阅读器布局（文章目录吸顶栏 / 三栏正文布局）
+   注意：本文件须在 reading.css 之前加载——reading.css 的 .article-toc
+   完整覆盖版（移动端折叠抽屉）依赖本文件的基础规则在后覆盖。
+   来源：globals.css 阅读相关段落。
+   ============================================================ */
+
+/* ---- 目录侧栏：桌面吸顶（移动端由 reading.css 覆盖为折叠抽屉） ---- */
+.article-toc {
+  width: 13rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 7rem;
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
+}
+
+.article-toc > div {
+  padding: 1rem 0 0 1.2rem;
+  border-left: 1px solid var(--archive-rule);
+}
+
+.article-toc p {
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.article-toc h3 {
+  margin-top: 0.25rem;
+  color: var(--archive-ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.article-toc nav {
+  margin-top: 0.85rem;
+  display: grid;
+}
+
+.article-toc a {
+  padding-block: 0.42rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.article-toc a:hover,
+.article-toc a.is-active {
+  color: var(--archive-oxblood);
+}
+
+/* ---- 阅读页三栏：中间正文始终处于视口中心，目录占右栏，左栏仅作为对称留白。
+   P1-02 修复：中列改用 --reading-measure-layout（以正文 19px 基准换算后的 em 值，
+   见 reading.css），避免 39em 按 body 17px 解析导致中列偏窄；侧栏上限 12rem 为正文让位。 ---- */
+.reading-content-layout {
+  --toc-rail: minmax(10rem, 12rem);
+  display: grid;
+  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure-layout)) var(--toc-rail);
+  justify-content: center;
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.reading-content-layout__main {
+  grid-column: 2;
+  min-width: 0;
+}
+
+@media (min-width: 1180px) {
+  .reading-content-layout > .article-toc {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 1179px) {
+  .reading-content-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reading-content-layout > .article-toc {
+    order: -1;
+    width: 100%;
+  }
+}

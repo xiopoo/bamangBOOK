@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return getBlogCategories().map((cat) => ({ category: cat.label }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { category: string }
@@ -45,23 +45,19 @@ export default function BlogCategoryPage({ params }: PageProps) {
         sticky
       />
 
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex flex-wrap gap-x-4 gap-y-1.5 mb-8 text-sm">
         {categories.map((cat) => (
           <Link
             key={cat.key}
             href={`/blog/category/${encodeURIComponent(cat.label)}`}
-            className={`px-3 py-1.5 rounded-full text-sm transition-all ${
-              cat.label === category
-                ? 'bg-primary text-white'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-            }`}
+            className={`underline underline-offset-2 ${cat.label === category ? 'text-text dark:text-dark-text no-underline' : 'text-primary dark:text-primary-light hover:text-primary-light'}`}
           >
-            {cat.label} <span className="opacity-60">({cat.count})</span>
+            {cat.label}（{cat.count}）
           </Link>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="archive-list">
         {posts.map((post) => <BlogPostCard key={post.slug} post={post} />)}
       </div>
     </PageContainer>
