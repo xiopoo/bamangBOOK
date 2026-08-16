@@ -64,7 +64,7 @@ export default function MungerArchiveDetailPage({ params }: PageProps) {
       subtitle={navigation ? `${navigation.sectionLabel} · 第 ${navigation.position} / ${navigation.total} 篇` : '查理·芒格资料'}
       backHref="/munger/archive"
       backLabel="返回芒格资料"
-      metadata={{ person: '查理·芒格', year, contentType: slugParts[0] === 'recordings' ? '演讲' : '文章', readMinutes: Math.max(1, Math.round(doc.content.length / 900)) }}
+      metadata={{ person: '查理·芒格', year, contentType: slugParts[0] === 'recordings' ? '演讲' : '芒格文章', readMinutes: Math.max(1, Math.round(doc.content.length / 900)) }}
       previous={navigation?.previous ? { href: `/munger/archive/${navigation.previous.slug}`, title: navigation.previous.title, meta: navigation.sectionLabel } : null}
       next={navigation?.next ? { href: `/munger/archive/${navigation.next.slug}`, title: navigation.next.title, meta: navigation.sectionLabel } : null}
       navigationLabel="同类芒格资料相邻导航"

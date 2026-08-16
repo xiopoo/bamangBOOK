@@ -9,7 +9,7 @@ export default function BlogRelatedArchive({ links, title = '回到原典继续�
   if (!links || links.length === 0) return null
   return (
     <section className="mt-10 border-t border-primary/10 pt-6">
-      <h2 className="mb-4 text-lg font-semibold text-primary dark:text-primary-light">📜 {title}</h2>
+      <h2 className="mb-4 text-lg font-semibold text-primary dark:text-primary-light">{title}</h2>
       <ul className="space-y-2.5">
         {links.map((link, index) => (
           <li key={`${link.href}-${index}`}>

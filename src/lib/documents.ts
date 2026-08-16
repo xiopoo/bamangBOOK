@@ -2,6 +2,7 @@ import { readFileSync, existsSync } from 'fs'
 import path from 'path'
 import { documentHref } from './content-routes'
 import type { ReadingCompleteness, ReadingContentStatus, ReadingContentType } from './reading-content'
+import { type LucideIcon, Mic, HelpCircle } from 'lucide-react'
 
 export interface DocumentItem {
   id: string
@@ -48,19 +49,19 @@ const categories = {
     dir: 'content/talks',
     indexFile: 'content/talks-index.json',
     title: '演讲',
-    icon: '🎤'
+    icon: Mic
   },
   interviews: {
     dir: 'content/interviews',
     indexFile: 'content/interviews-index.json',
     title: '访谈',
-    icon: '🎙️'
+    icon: Mic
   },
   qa: {
     dir: 'content/qa',
     indexFile: 'content/qa-index.json',
     title: '股东大会问答',
-    icon: '❓'
+    icon: HelpCircle
   }
 }
 
@@ -146,7 +147,7 @@ export function getCategoryTitle(category: DocumentCategory): string {
   return categories[category].title
 }
 
-export function getCategoryIcon(category: DocumentCategory): string {
+export function getCategoryIcon(category: DocumentCategory): LucideIcon {
   return categories[category].icon
 }
 

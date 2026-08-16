@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return getBlogTags(100).map(({ tag }) => ({ tag }))
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { tag: string }
@@ -45,25 +45,21 @@ export default function BlogTagPage({ params }: PageProps) {
         sticky
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+      <div className="archive-list mb-10">
         {posts.map((post) => <BlogPostCard key={post.slug} post={post} />)}
       </div>
 
       {allTags.length > 0 && (
-        <section className="border-t border-gray-200 dark:border-gray-700 pt-6">
+        <section className="border-t border-gray-200 dark:border-dark-border pt-6">
           <h2 className="text-sm font-semibold text-text-muted dark:text-dark-muted mb-3">其他标签</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
             {allTags.map(({ tag: t, count }) => (
               <Link
                 key={t}
                 href={`/blog/tag/${encodeURIComponent(t)}`}
-                className={`px-2.5 py-1 rounded-full text-xs transition-all ${
-                  t === tag
-                    ? 'bg-primary text-white'
-                    : 'bg-primary/10 text-primary hover:bg-primary/20'
-                }`}
+                className={`underline underline-offset-2 ${t === tag ? 'text-text dark:text-dark-text no-underline' : 'text-primary dark:text-primary-light hover:text-primary-light'}`}
               >
-                #{t} <span className="opacity-60">({count})</span>
+                #{t}（{count}）
               </Link>
             ))}
           </div>

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ReadingProgress, getAllProgress, clearProgress } from '@/lib/reading-progress'
 import { logger } from '@/lib/logger'
+import { BookOpen } from 'lucide-react'
 
 const TYPE_LABELS: Record<string, string> = {
   letter: '股东信',
@@ -122,7 +123,7 @@ export default function ReadingHistory({ filterType, onDataChange }: ReadingHist
   if (history.length === 0) {
     return (
       <div className="text-center py-16">
-        <div className="text-5xl mb-4">📖</div>
+        <BookOpen className="w-12 h-12 mx-auto mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
         <h2 className="text-xl font-semibold text-text mb-2">
           暂无阅读记录
         </h2>

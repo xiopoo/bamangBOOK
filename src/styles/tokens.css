@@ -1,0 +1,124 @@
+/* ============================================================
+   设计令牌（单一真相来源 · Single Source of Truth）
+   ----------------------------------------------------------------------------
+   全站唯一视觉令牌：颜色 / 字体 / 间距 / 圆角 / 阴影 / 发丝线 / 阅读字号。
+   本文件的 --archive-* 与 --reading-* 变量是唯一的 CSS 令牌来源；
+   Tailwind 工具类（primary/accent/bg/text/dark/rule/gild 等）在
+   tailwind.config.js 中引用了*完全相同*的色值，两套体系须同步修改，禁止漂移。
+   颜色映射：
+     oxblood #AB1942  ↔ primary        / primary.light  #C64B6B  (暗面)
+     gold    #9A7A37  ↔ accent         / accent.light   #B69751  (暗面)
+     paper   #F7F2E7  ↔ bg / bg.card   / dark.bg        #17140F  (暗面)
+     ink     #211D16  ↔ text           / dark.text      #F1EADA  (暗面)
+     rule    rgba()   ↔ rule           / dark.border
+     gild    rgba()   ↔ gild           / dark-gild
+   圆角：--radius-card 须与 tailwind.config.js 的 borderRadius.card 一致。
+   ============================================================ */
+:root {
+  --font-size-base: 16px;
+  /* P3-04 修复：--text-size-base 唯一来源在 reading.css（19px，--reading-base-default），
+     此处历史遗留的 18px 定义已删除，避免双源误导维护。 */
+  --archive-paper: #f7f2e7;
+  --archive-paper-deep: #e9e0cc;
+  --archive-paper-tint: #f1eada;
+  --archive-ink: #211d16;
+  --archive-ink-soft: #4c4537;
+  --archive-ink-faint: #665d4b;
+  --archive-rule: rgba(33, 29, 22, 0.22);
+  --archive-rule-soft: rgba(33, 29, 22, 0.12);
+  --archive-gold: #9a7a37;
+  /* P3-02 修复：--archive-gold（浅面 3.61:1）只用于装饰（花饰/边框/分隔符/徽章）；
+     编号角标、序号等小号功能性文字改用 --archive-gold-deep（浅面 #87662c 对纸面 4.74:1，
+     暗面 #d9b96b 对暗背景 9.82:1，均达 WCAG AA ≥4.5:1）。 */
+  --archive-gold-deep: #87662c;
+  --archive-gild: rgba(154, 122, 55, 0.55);
+  --archive-oxblood: #ab1942;
+  --archive-oxblood-deep: #861230;
+  --archive-serif: 'Noto Serif SC', 'Songti SC', SimSun, STSong, Georgia, serif;
+  --archive-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+
+  /* ===== 杂志/书籍克制风 · 节奏与层次令牌（2026-08 升级） =====
+     目标：去工具感、增留白、建层次。组件统一引用这些变量，
+     禁止在组件里硬编码间距/投影，保证全站一致。 */
+  --archive-gap: 1.5rem;              /* 列表与区块的基础间距 */
+  --archive-gap-lg: 2.5rem;           /* 大区块间距 */
+  --archive-card-pad: 1.25rem 1.5rem; /* 资料卡片保持信息密度 */
+  --archive-radius: 0.375rem;         /* 微圆角：克制但非硬方 */
+  --archive-elevate: 0 1px 2px rgba(33,29,22,0.04), 0 8px 24px rgba(33,29,22,0.06);
+  --archive-elevate-hover: 0 2px 4px rgba(33,29,22,0.05), 0 16px 40px rgba(33,29,22,0.10);
+  --archive-hairline: rgba(33,29,22,0.14);   /* 细发丝分隔线 */
+  --archive-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --archive-t-dur: 0.32s;
+
+  /* —— 阅读层字号阶梯 (--text-size-base 由字号控件实时覆盖，默认 19px) —— */
+  --reading-base-min: 17px;
+  --reading-base-default: 19px;
+  --reading-base-max: 26px;
+  --text-size-base: var(--reading-base-default);
+
+  /* —— 阅读层颜色对比度 (WCAG AAA 7:1) —— */
+  --reading-text:          #2b2318;   /* 正文字：深色羊皮纸棕 */
+  --reading-text-muted:    #5d5448;   /* 辅助文：柔和灰棕 */
+  --reading-heading:       #1a1410;   /* 标题墨：接近纯黑 */
+  --reading-accent:        #AB1942;   /* 链接 / 强调  赭红 */
+  --reading-accent-soft:   rgba(171, 25, 66, 0.12);
+  --reading-paper:         var(--archive-paper);
+  --reading-card:          var(--archive-paper-tint);
+
+  /* —— 阅读层行长与间距 —— */
+  --reading-measure:       39em;       /* 中文 39±3 字 / 行（约 68–70ch 拉丁字符） */
+  /* 布局中列宽度：--reading-measure 的 em 按正文 19px 解析（.prose 内），而
+     .reading-content-layout 网格元素继承 body 17px，需换算为 39em × 19/17 ≈ 43.59em @17px
+     = 741px @19px，保证网格中列恰好容纳 39em 正文。 */
+  --reading-measure-layout: calc(var(--reading-measure) * 19 / 17);
+  --reading-leading:       1.82;       /* 正文保持舒适，但避免段落彼此漂浮 */
+  --reading-paragraph-gap: 1.25em;     /* P3-05 复核：段落辨识以 2em 首行缩进为主，段距由 1.15em 微调至 1.25em，长文段间呼吸更足而不失克制 */
+  --reading-heading-gap-factor: 1.5;   /* 标题上边距 = 字号 × 该系数 */
+
+  /* —— 列表与表格 —— */
+  --reading-list-leading:  1.78;
+  --reading-list-gap:      0.55em;     /* 列表项之间 0.5em 稍留白，但比段落紧 */
+}
+
+.dark {
+  --reading-text:          #e7decf;
+  --reading-text-muted:    #b8ad99;
+  --reading-heading:       #f7f1e5;
+  /* P3-01 修复：暗面赭红由 #d85273（4.70:1）提亮至 #e06a8c，对 #17140F 背景对比度 ≥5.5:1，
+     为正文链接与全局暗色链接留出 AAA 冗余，避免逼近 AA 下限。 */
+  --reading-accent:        #e06a8c;
+  --reading-accent-soft:   rgba(224, 106, 140, 0.18);
+  --reading-card:          #251f17;
+}
+
+.dark body {
+  --archive-paper: #17140f;
+  --archive-paper-deep: #2a241b;
+  --archive-paper-tint: #211d16;
+  --archive-ink: #f1eada;
+  --archive-ink-soft: #d6cbb6;
+  --archive-ink-faint: #b9ae97;
+  --archive-rule: rgba(241, 234, 218, 0.2);
+  --archive-rule-soft: rgba(241, 234, 218, 0.11);
+  --archive-gold: #b69751;       /* 暗面金：= Tailwind accent.light，保证两套体系一致 */
+  --archive-gold-deep: #d9b96b;  /* 暗面深金：小号功能性金字（编号角标/序号）用，对比度 9.82:1 */
+  --archive-gild: rgba(201, 169, 88, 0.45);
+  --archive-oxblood: #c64b6b;    /* 暗面红：= Tailwind primary.light，深背景可读性 */
+  --archive-oxblood-deep: #a83856;
+  background-image: none;
+}
+
+/* —— 阅读层移动端（≤ 640px）与平板（641–1024px）令牌调整 —— */
+@media (max-width: 640px) {
+  :root {
+    --reading-leading:       1.88;   /* 手机屏窄行距略放大 */
+    --reading-paragraph-gap: 1.15em;
+    --reading-measure:       100%;   /* 手机不限定 39em，充满宽度更自然 */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --reading-measure: 100%;
+  }
+}

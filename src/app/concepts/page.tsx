@@ -5,6 +5,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import type { Metadata } from 'next'
+import { Lightbulb } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '投资概念库',
@@ -52,7 +53,7 @@ export default function ConceptsPage() {
       />
 
       <div className="mb-8">
-        <StatBadge icon="💡" count={concepts.length} label="核心投资概念" />
+        <StatBadge icon={<Lightbulb className="w-6 h-6" />} count={concepts.length} label="核心投资概念" />
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">

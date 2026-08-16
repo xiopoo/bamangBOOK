@@ -2,6 +2,13 @@
 
 import Link from 'next/link'
 import { useProgress } from '@/hooks/useProgress'
+import { FileText, Lightbulb, Mail, Clock } from 'lucide-react'
+
+function ItemTypeIcon({ type }: { type: string }) {
+  if (type === 'article') return <FileText className="w-3.5 h-3.5" strokeWidth={1.75} />
+  if (type === 'concept') return <Lightbulb className="w-3.5 h-3.5" strokeWidth={1.75} />
+  return <Mail className="w-3.5 h-3.5" strokeWidth={1.75} />
+}
 
 interface PathItem {
   type: string
@@ -116,7 +123,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
               style={{ width: `${percent}%` }}
             />
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">⏱ {path.estimatedTime}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-500 mt-1"><Clock className="w-3.5 h-3.5 inline-block mr-1 align-[-2px]" strokeWidth={1.75} />{path.estimatedTime}</p>
         </div>
 
         {/* Steps */}
@@ -158,7 +165,7 @@ export function LearningPathBeginner({ path }: { path: LearningPath }) {
                         }`}
                       >
                         <span className="text-xs text-gray-400 dark:text-gray-600">
-                          {item.type === 'article' ? '📄' : item.type === 'concept' ? '💡' : '✉️'}
+                          <ItemTypeIcon type={item.type} />
                         </span>
                         <span>{getItemLabel(item)}</span>
                       </Link>
@@ -214,7 +221,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
               style={{ width: `${percent}%` }}
             />
           </div>
-          <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">⏱ {path.estimatedTime}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-500 mt-1"><Clock className="w-3.5 h-3.5 inline-block mr-1 align-[-2px]" strokeWidth={1.75} />{path.estimatedTime}</p>
         </div>
 
         <div className="space-y-5">
@@ -253,7 +260,7 @@ export function LearningPathIntermediate({ path }: { path: LearningPath }) {
                         }`}
                       >
                         <span className="text-xs text-gray-400 dark:text-gray-600">
-                          {item.type === 'article' ? '📄' : item.type === 'concept' ? '💡' : '✉️'}
+                          <ItemTypeIcon type={item.type} />
                         </span>
                         <span>{getItemLabel(item)}</span>
                       </Link>
@@ -342,7 +349,7 @@ export function LearningPathTopics({ topics }: { topics: TopicsPath }) {
                           }`}
                         >
                           <span className="text-[10px]">
-                            {item.type === 'article' ? '📄' : item.type === 'concept' ? '💡' : '✉️'}
+                            <ItemTypeIcon type={item.type} />
                           </span>
                           <span className="truncate">{getItemLabel(item)}</span>
                         </Link>

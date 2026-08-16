@@ -1,0 +1,97 @@
+/* ============================================================
+   components/cards.css — 目录内容卡片（archive-card-grid / content-card / tag）
+   来源：globals.css「全站界面」卡片部分。
+   ============================================================ */
+
+.archive-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.archive-content-card,
+.archive-list__item {
+  display: block;
+  color: var(--archive-ink);
+  border: 1px solid var(--archive-rule-soft);
+  background: var(--archive-paper-tint);
+  transition: border-color var(--archive-t-dur) var(--archive-ease), box-shadow var(--archive-t-dur) var(--archive-ease), transform var(--archive-t-dur) var(--archive-ease);
+}
+
+.archive-content-card {
+  min-height: 12rem;
+  padding: 1.35rem;
+}
+
+.archive-content-card:hover,
+.archive-list__item:hover {
+  border-color: var(--archive-gild);
+  box-shadow: var(--archive-elevate-hover);
+  transform: translateY(-2px);
+}
+
+.archive-content-card__title,
+.archive-list__title {
+  color: var(--archive-ink);
+  font-family: var(--archive-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.archive-content-card__badge {
+  display: inline-flex;
+  padding: .24rem .5rem;
+  color: var(--archive-oxblood);
+  background: rgba(171, 25, 66, .08);
+  font-family: var(--archive-sans);
+  font-size: .7rem;
+  white-space: nowrap;
+}
+
+.archive-content-card__summary,
+.archive-list__summary {
+  margin-top: .7rem;
+  color: var(--archive-ink-faint);
+  font-size: .86rem;
+  line-height: 1.75;
+}
+
+.archive-content-card__meta,
+.archive-list__meta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem 1rem;
+  color: var(--archive-ink-faint);
+  font-family: var(--archive-sans);
+  font-size: .7rem;
+}
+
+.archive-list__item {
+  padding: 1.25rem;
+}
+
+.archive-list__meta {
+  margin-top: 1.1rem;
+}
+
+.archive-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  padding: .22rem .5rem;
+  color: var(--archive-oxblood);
+  background: rgba(171, 25, 66, .08);
+}
+
+@media (max-width: 700px) {
+  .archive-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-content-card {
+    min-height: 0;
+  }
+}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Brain, BookOpen, ChevronRight } from 'lucide-react'
+import { type LucideIcon, Brain, BookOpen, ChevronRight, Lightbulb, Search, Compass, Building2, User, Mic, HelpCircle } from 'lucide-react'
 import type { Person, RelatedPerson } from '@/lib/people'
 import type { ModelMeta } from '@/lib/models'
 import { logger } from '@/lib/logger'
@@ -12,7 +12,7 @@ interface MungerContentProps {
   relatedPeople: RelatedPerson[]
   talksCount: number
   qaCount: number
-  modelGroups?: Array<{ id: string; name: string; icon: string; models: ModelMeta[] }>
+  modelGroups?: Array<{ id: string; name: string; icon: LucideIcon; models: ModelMeta[] }>
   modelStats?: { total: number; disciplines: number; scenarios: number; core: number }
   archiveStats: { profiles: number; recordings: number; quotes: number; total: number }
 }
@@ -159,7 +159,7 @@ export default function MungerContent({
             <ul className="space-y-3">
               {person.books.map((book, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="text-primary dark:text-primary-light mt-1">📚</span>
+                  <BookOpen className="w-4 h-4 text-primary dark:text-primary-light mt-1 shrink-0" strokeWidth={1.75} />
                   <div>
                     <span className="text-gray-900 dark:text-gray-100 font-medium">{book.title}</span>
                     {book.year && (
@@ -208,7 +208,7 @@ export default function MungerContent({
                   className="flex items-center gap-3 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border px-4 py-3 hover:shadow-md transition-shadow"
                 >
                   <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center">
-                    👤
+                    <User className="w-5 h-5 text-primary dark:text-primary-light" strokeWidth={1.5} />
                   </div>
                   <div>
                     <div className="font-medium text-text dark:text-dark-text">{rp.name}</div>
@@ -288,7 +288,7 @@ export default function MungerContent({
               key={index}
               className="bg-white dark:bg-dark-card rounded-xl border border-gray-100 dark:border-dark-border p-6 hover:shadow-md transition-shadow"
             >
-              <div className="text-2xl mb-3">💡</div>
+              <div className="text-2xl mb-3"><Lightbulb className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
               <p className="text-gray-700 dark:text-gray-300 font-medium">{philosophy}</p>
             </div>
           ))}
@@ -310,7 +310,7 @@ export default function MungerContent({
             {(modelGroups ?? []).map((group) => (
               <div key={group.id}>
                 <h4 className="flex items-center gap-2 text-base font-serif font-bold text-primary dark:text-primary-light mb-3">
-                  <span>{group.icon}</span>
+                  <group.icon className="w-4 h-4" strokeWidth={1.75} />
                   <span>{group.name}</span>
                   <span className="text-xs font-normal text-text-muted dark:text-dark-muted">
                     {group.models.length} 个
@@ -409,7 +409,7 @@ export default function MungerContent({
             href="/munger"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">💡</div>
+            <div className="text-2xl mb-2"><Lightbulb className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">核心概念</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">49个</div>
           </Link>
@@ -417,7 +417,7 @@ export default function MungerContent({
             href="/talks?person=munger"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🎤</div>
+            <div className="text-2xl mb-2"><Mic className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">演讲</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{talksCount}场</div>
           </Link>
@@ -425,7 +425,7 @@ export default function MungerContent({
             href="/munger/wesco"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">❓</div>
+            <div className="text-2xl mb-2"><HelpCircle className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">Wesco 问答</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{qaCount}场</div>
           </Link>
@@ -440,7 +440,7 @@ export default function MungerContent({
             href="/model"
             className="bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border p-4 text-center hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🧠</div>
+            <div className="text-2xl mb-2"><Brain className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">思维模型</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
               {modelStats?.total ?? 0} 个
@@ -449,11 +449,11 @@ export default function MungerContent({
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">📖 推荐阅读</h3>
+          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">推荐阅读</h3>
           <div className="space-y-3">
             {person.books.map((book) => (
               <div key={book.title} className="bg-white dark:bg-dark-card rounded-lg p-4 flex items-start gap-4">
-                <div className="text-2xl">📚</div>
+                <BookOpen className="w-6 h-6 text-primary dark:text-primary-light shrink-0 mt-0.5" strokeWidth={1.5} />
                 <div>
                   <div className="font-medium text-text dark:text-dark-text">{book.title}</div>
                   {book.year && (
@@ -490,7 +490,7 @@ export default function MungerContent({
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6">
-          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">🔍 案例分析视角</h3>
+          <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-4">案例分析视角</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white dark:bg-dark-card rounded-lg p-4">
               <div className="font-medium text-text dark:text-dark-text mb-2">零售行业</div>
@@ -551,13 +551,13 @@ export default function MungerContent({
       </section>
 
       <section className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6 mb-8">
-        <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">📚 快速导航</h2>
+        <h2 className="text-lg font-semibold text-text dark:text-dark-text mb-4">快速导航</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Link
             href="/concepts"
             className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">💡</div>
+            <div className="text-2xl mb-2"><Lightbulb className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资概念</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">35+核心概念</div>
           </Link>
@@ -565,7 +565,7 @@ export default function MungerContent({
             href="/companies"
             className="text-center p-4 bg-white dark:bg-dark-card rounded-lg border border-gray-100 dark:border-dark-border hover:shadow-md transition-shadow"
           >
-            <div className="text-2xl mb-2">🏢</div>
+            <div className="text-2xl mb-2"><Building2 className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
             <div className="text-sm font-medium text-text dark:text-dark-text">投资公司</div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">61家公司资料</div>
           </Link>

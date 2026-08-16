@@ -11,4 +11,11 @@
 .main strong { font-family: var(--archive-serif); font-size: 1rem; line-height: 1.45; }
 .status { text-align: right; }
 .empty { margin-top: 2rem; padding: 2rem 0; color: var(--archive-ink-faint); border-block: 1px solid var(--archive-rule); text-align: center; }
+
+/* 人物标签筛选行（类别列表页：问答 / 演讲 / 访谈） */
+.filters { margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.filtersLabel { color: var(--archive-ink-faint); font: 600 .72rem var(--archive-sans); letter-spacing: .08em; }
+.filters button { padding: .32rem .85rem; border: 1px solid var(--archive-rule-soft); border-radius: 2px; background: transparent; color: var(--archive-ink-soft); font: 600 .78rem var(--archive-sans); cursor: pointer; transition: color .15s ease, border-color .15s ease, background .15s ease; }
+.filters button:hover { color: var(--archive-oxblood); border-color: var(--archive-oxblood); }
+.filters .isActive { background: var(--archive-oxblood); border-color: var(--archive-oxblood); color: var(--archive-paper); }
 @media (max-width: 640px) { .row { grid-template-columns: 3.2rem minmax(0, 1fr) 1rem; gap: .6rem; } .status { grid-column: 2; grid-row: 2; text-align: left; } }

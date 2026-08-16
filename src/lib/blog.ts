@@ -66,7 +66,7 @@ export const BLOG_TYPE_LABELS: Record<BlogPostType, string> = {
   'company-study': '公司研究',
   'concept-note': '概念笔记',
   'book-note': '拆书',
-  'archive-guide': '档案导览',
+  'archive-guide': '原典导览',
 }
 
 function toStringArray(value: unknown): string[] {

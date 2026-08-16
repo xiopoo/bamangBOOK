@@ -4,6 +4,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { getColumnsBySeries, getColumnStats } from '@/lib/columns'
+import { PenLine, BookOpen, Tag } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '投资策略与思考',
@@ -18,7 +19,7 @@ export default function ColumnsPage() {
   return (
     <PageContainer maxWidth="5xl">
       <PageHeader
-        title="✍️ 投资策略与思考"
+        title="投资策略与思考"
         subtitle="价值投资的原则、策略与独立思考，按系列持续更新"
         backHref="/"
         backLabel="返回首页"
@@ -27,9 +28,9 @@ export default function ColumnsPage() {
 
       {/* Stats */}
       <div className="grid grid-cols-3 gap-3 mb-10">
-        <StatBadge icon="✍️" count={`${stats.total}篇`} label="专栏文章" sub="持续更新" />
-        <StatBadge icon="📚" count={`${stats.series}个`} label="系列专题" sub="成体系" />
-        <StatBadge icon="🏷️" count={`${stats.tags}个`} label="主题标签" sub="多维检索" />
+        <StatBadge icon={<PenLine className="w-6 h-6" />} count={`${stats.total}篇`} label="专栏文章" sub="持续更新" />
+        <StatBadge icon={<BookOpen className="w-6 h-6" />} count={`${stats.series}个`} label="系列专题" sub="成体系" />
+        <StatBadge icon={<Tag className="w-6 h-6" />} count={`${stats.tags}个`} label="主题标签" sub="多维检索" />
       </div>
 
       {series.length === 0 ? (

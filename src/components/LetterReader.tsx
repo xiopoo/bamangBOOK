@@ -8,6 +8,7 @@ import { useReadingProgress } from '@/hooks/useReadingProgress'
 import ReadingProgressBar from '@/components/ReadingProgress'
 import type { LetterData, LetterItem } from '@/lib/letters'
 import { normalizeLetterMarkdown } from '@/lib/normalize-letter-markdown'
+import { Inbox } from 'lucide-react'
 
 function slugify(text: string): string {
   return text
@@ -193,7 +194,7 @@ export default function LetterReader({
         ) : (
           letterData.content ? renderContent(letterData.content) : (
             <div className="text-center py-12">
-              <div className="text-4xl mb-4">📭</div>
+              <Inbox className="w-10 h-10 mx-auto mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
               <p className="text-gray-500 dark:text-gray-400">该年份的股东信暂未收录</p>
             </div>
           )

@@ -12,7 +12,7 @@ export function generateStaticParams() {
   return bookParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { slug: string }
@@ -55,7 +55,7 @@ export default function BookDetailPage({ params }: PageProps) {
               </Link>
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text dark:text-dark-text tracking-tight">{book.title}</h1>
               <p className="text-sm text-text-muted dark:text-dark-muted flex items-center gap-2 flex-wrap">
-                <span>📚 {book.category}</span>
+                <span>{book.category}</span>
                 {book.originalAuthor && <span>· 原著：{book.originalAuthor}</span>}
                 {book.author && <span>· 拆解：{book.author}</span>}
               </p>

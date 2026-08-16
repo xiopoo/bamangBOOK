@@ -35,9 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '', '/about', '/search', '/buffett', '/munger', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers', '/articles',
-    '/business-history', '/business-history/themes', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
+    '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/duanyongping', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks', '/duanyongping/milestones',
-    '/about/editorial', '/about/revisions',
+    '/about/revisions',
     '/bound-edition', '/terms', '/privacy', '/digital-product-policy',
     '/blog',
   ]

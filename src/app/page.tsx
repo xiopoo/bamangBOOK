@@ -1,145 +1,120 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { ArrowRight, BookOpen, CalendarDays, Search, Tags } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import SubdomainRootRouter from '@/components/SubdomainRootRouter'
-import BlogPostCard from '@/components/BlogPostCard'
-import { getRecentBlogPosts, getFeaturedBlogPosts } from '@/lib/blog'
-import { buffettArchive, mungerArchive, duanYongpingArchive, type ThinkerArchive } from '@/lib/thinker-archives'
-import './home.css'
+import { getShareholderLetters } from '@/lib/partnership'
+import { getBusinessHistories } from '@/lib/business-history'
+import { getDocuments } from '@/lib/documents'
+import { documentHref } from '@/lib/content-routes'
+import { getReadingStats } from '@/lib/reading-library'
+import { getDYDocs, type DYDoc, type DYSection } from '@/lib/duanyongping'
+import '@/styles/templates/home.css'
 
-export const metadata: Metadata = { title: { absolute: '复利书房｜巴菲特、芒格与段永平阅读档案' }, description: '巴菲特、芒格与段永平的第一手资料：股东信、合伙人信、股东大会问答、演讲与访谈，按人物与主题阅读。', alternates: { canonical: '/' } }
+export const metadata: Metadata = { title: { absolute: '复利书房｜巴菲特、芒格与公司研究' }, description: '巴菲特、芒格与段永平的第一手资料：股东信、合伙人信、股东大会问答、演讲与访谈，按人物与主题阅读。', alternates: { canonical: '/' } }
 
-// 三个人的档案入口（第二屏保留，档案做底盘）
-const FIGURES: { name: string; href: string; years: string; blurb: string; archive: ThinkerArchive }[] = [
-  { name: '沃伦·巴菲特', href: '/buffett', years: '1930—', blurb: '股东信、合伙人信、股东大会问答与演讲访谈', archive: buffettArchive },
-  { name: '查理·芒格', href: '/munger', years: '1924—2023', blurb: '演讲、Wesco、穷查理宝典与思维模型', archive: mungerArchive },
-  { name: '段永平', href: '/duanyongping', years: '1961—', blurb: '博客、雪球问答、演讲与访谈', archive: duanYongpingArchive },
-]
+// 今日推荐：编辑精选，显式配置（前端重构 Spec §5.1）
+const TODAY_RECOMMENDATION = {
+  title: '巴菲特致伯克希尔股东的信（1965）',
+  href: '/letters/1965',
+  meta: '股东信 · 1965 · 首封伯克希尔股东信',
+  reason: '这是巴菲特经营伯克希尔的第一封信：把股东当成合伙人，明确“账面价值不等于内在价值”，并立下衡量业绩的标准。此后六十年的股东信，都从这里开始。',
+}
 
-// 可持续专题入口
-const TOPICS = [
-  { href: '/companies/可口可乐', label: '可口可乐与品牌价值', icon: '🥤' },
-  { href: '/concepts/浮存金', label: '保险、浮存金与伯克希尔', icon: '🛡️' },
-  { href: '/concepts/能力圈', label: '能力圈', icon: '⭕' },
-  { href: '/concepts/市场先生', label: '市场先生', icon: '🎢' },
-  { href: '/concepts/资本配置', label: '资本配置', icon: '⚙️' },
-  { href: '/duanyongping', label: '段永平问答精选', icon: '❓' },
-]
-
-// 本周推荐阅读：人工维护，每篇说明「为什么值得读 + 连接到哪份原典 + 适合谁」
-const WEEKLY_PICKS = [
-  {
-    title: '安全边际不是"打折买"，而是"允许自己犯错"',
-    href: '/columns/安全边际不是打折',
-    reason: '开篇就把安全边际从"买便宜"纠正到"为判断误差留缓冲"，是理解格雷厄姆体系的起点。',
-    connects: '连接 1965 年起的股东信与「低估」「风险」概念',
-    audience: '适合刚接触价值投资、容易把便宜当安全边际的读者。',
-  },
-  {
-    title: '可口可乐：把一瓶饮料做成全球分发权',
-    href: '/business-history/05-可口可乐：把一杯饮料变成全球分工系统',
-    reason: '用一家公司讲清品牌、渠道与装瓶体系如何互相强化，是"品牌价值"专题的核心案例。',
-    connects: '可回到 1988 年股东信与「品牌」「渠道」概念页',
-    audience: '适合想通过真实案例理解护城河与复利的读者。',
-  },
+// 精选阅读路径（对齐 mungerarchive.com 的 crown jewels）
+const CROWN_PATHS = [
+  { href: '/partnership/1', title: '从第一封合伙人信开始', why: '方法形成期的起点：套利、控制型投资与业绩衡量，第一次被说清楚。' },
+  { href: '/buffett', title: '巴菲特的企业阅读', why: '从价格出发，最后回到企业和所有者收益。' },
+  { href: '/munger', title: '芒格的判断系统', why: '从投资出发，最后走向多元思维模型。' },
 ]
 
 export default function HomePage() {
-  const featured = getFeaturedBlogPosts(3)
-  const recent = getRecentBlogPosts(8)
+  const letters = getShareholderLetters()
+  const studies = getBusinessHistories()
+  const talks = getDocuments('talks')
+  const selectedTalks = talks.slice(0, 3)
+  const readingStats = getReadingStats()
+  const recentRevisions = (['blog', 'qa', 'talks', 'milestones'] as DYSection[])
+    .flatMap(section => getDYDocs(section, false).map(doc => ({ doc, section })))
+    .filter(item => item.doc.updatedAt)
+    .sort((a, b) => String(b.doc.updatedAt).localeCompare(String(a.doc.updatedAt)))
+    .slice(0, 4)
+  const duanCount = readingStats.authorCounts['段永平'] || 0
+  const buffettCount = readingStats.authorCounts['巴菲特'] || 0
+  const mungerCount = readingStats.authorCounts['芒格'] || 0
   return <>
     <SubdomainRootRouter />
     <PageContainer maxWidth="6xl" className="archive-home">
-      {/* Hero：主理人定位 */}
-      <header className="archive-home__hero">
-        <h1>复利书房</h1>
-        <p className="archive-home__hero-sub">我在这里整理巴菲特、芒格、段永平的原典，也写下自己的阅读札记、公司研究和投资思考。</p>
-        <div className="archive-home__hero-actions">
-          <Link href="/blog" className="archive-home__hero-btn archive-home__hero-btn--primary">读最新文章 →</Link>
-          <Link href="/buffett" className="archive-home__hero-btn">进入原典档案</Link>
-        </div>
-      </header>
+      {/* Hero：主题宣言 */}
+      <section className="archive-home__hero">
+        <p className="archive-kicker">复利书房 · 巴菲特、芒格与公司研究</p>
+        <h1><span>回到原典，</span><span>建立自己的判断。</span></h1>
+        <p className="archive-home__lede">以巴菲特、芒格和段永平的原典资料为核心，延伸到公司研究与商业史。我们整理来源、保留上下文，也把不完整的地方明确标出来。</p>
+        <Link href="/partnership/1" className="archive-button archive-button--solid">开始阅读 <ArrowRight size={17} /></Link>
+      </section>
 
-      {/* 最新文章 */}
-      <section className="archive-home__blog" aria-labelledby="blog-title">
-        <div className="archive-home__section-head">
-          <h2 id="blog-title">最新文章</h2>
-          <Link href="/blog" className="archive-home__section-more">全部博客 →</Link>
-        </div>
-        {featured.length > 0 && (
-          <div className="archive-home__featured">
-            {featured.map(post => <BlogPostCard key={post.slug} post={post} />)}
-          </div>
-        )}
-        <div className="archive-home__blog-list">
-          {recent.map(post => <BlogPostCard key={post.slug} post={post} />)}
+      {/* 阅读入口 */}
+      <section className="archive-entry-grid" aria-label="阅读入口">
+        <Link href="/people"><BookOpen size={20} /><span><strong>按人物</strong><small>巴菲特 · 芒格 · 段永平</small></span><ArrowRight size={16} /></Link>
+        <Link href="/letters"><CalendarDays size={20} /><span><strong>按年份</strong><small>从 1957 年的第一封信开始</small></span><ArrowRight size={16} /></Link>
+        <Link href="/model"><Tags size={20} /><span><strong>按主题</strong><small>资本配置 · 护城河 · 判断</small></span><ArrowRight size={16} /></Link>
+      </section>
+
+      {/* 今日推荐 */}
+      <section className="archive-home__section archive-featured" aria-labelledby="featured-reading-title">
+        <div className="archive-featured__meta"><p className="archive-kicker">今日推荐</p><span>{TODAY_RECOMMENDATION.meta}</span></div>
+        <div className="archive-featured__body">
+          <h2 id="featured-reading-title">{TODAY_RECOMMENDATION.title}</h2>
+          <p>{TODAY_RECOMMENDATION.reason}</p>
+          <Link href={TODAY_RECOMMENDATION.href}>开始阅读 <ArrowRight size={16} /></Link>
         </div>
       </section>
 
-      {/* 本周推荐阅读（人工维护） */}
-      <section className="archive-home__weekly" aria-labelledby="weekly-title">
-        <h2 id="weekly-title">本周推荐阅读</h2>
-        <div className="archive-home__weekly-grid">
-          {WEEKLY_PICKS.map(pick => (
-            <article key={pick.href} className="archive-home__weekly-card">
-              <Link href={pick.href}><h3>{pick.title}</h3></Link>
-              <p className="archive-home__weekly-reason">{pick.reason}</p>
-              <p className="archive-home__weekly-connects">{pick.connects}</p>
-              <p className="archive-home__weekly-audience">{pick.audience}</p>
-            </article>
-          ))}
+      {/* 全部内容：按人物与资料类型进入 */}
+      <section className="archive-home__section" aria-labelledby="archive-drawers-title">
+        <div className="archive-section-heading"><div><p className="archive-kicker">全部内容</p><h2 id="archive-drawers-title">按人物与资料类型进入</h2></div></div>
+        <div className="archive-drawer-grid">
+          <ArchiveDrawer href="/buffett" title="巴菲特" count={buffettCount} description="合伙人信、股东信与股东大会问答。" />
+          <ArchiveDrawer href="/munger" title="芒格" count={mungerCount} description="演讲、Wesco 问答与思维模型。" />
+          <ArchiveDrawer href="/duanyongping" title="段永平" count={duanCount} description="博客、问答、演讲与公司实践。" />
+          <ArchiveDrawer href="/letters" title="信件" count={letters.length} description="按时间从早到晚连续阅读。" />
+          <ArchiveDrawer href="/talks" title="演讲与访谈" count={talks.length} description="在真实对话与公开表达中理解判断。" />
+          <ArchiveDrawer href="/business-history" title="公司研究" count={studies.length} description="从历史、护城河与资本配置理解企业。" />
         </div>
       </section>
 
-      {/* 从三个人开始 */}
-      <section className="archive-home__figures" aria-label="按人物阅读">
-        {FIGURES.map(figure => (
-          <div key={figure.name} className="archive-home__figure">
-            <div className="archive-home__figure-head">
-              <Link href={figure.href}><h2>{figure.name}</h2></Link>
-              <span>{figure.years}</span>
-            </div>
-            <p className="archive-home__figure-blurb">{figure.blurb}</p>
-            <ul className="archive-home__figure-links">
-              {figure.archive.sources.slice(0, 4).map(source => (
-                <li key={source.href}>
-                  <Link href={source.href}>
-                    <span>{source.label}</span>
-                    <small>{source.meta}</small>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link href={figure.href} className="archive-home__figure-more">进入专题 →</Link>
-          </div>
-        ))}
+      {/* 编辑选读 */}
+      <section className="archive-home__section">
+        <div className="archive-section-heading"><div><p className="archive-kicker">编辑选读</p><h2>三篇值得重读的原典</h2></div><Link href="/talks">浏览演讲与访谈 <ArrowRight size={15} /></Link></div>
+        <div className="archive-list archive-list--home">{selectedTalks.map(item => <Link key={item.fileName} href={documentHref('talks', item)} className="archive-list__row"><span className="archive-list__year">{item.year || '待考'}</span><span className="archive-list__main"><strong>{item.title}</strong><small>演讲与访谈 · 原典资料</small></span><ArrowRight size={16} /></Link>)}</div>
       </section>
 
-      {/* 专题入口 */}
-      <section className="archive-home__topics" aria-labelledby="topics-title">
-        <h2 id="topics-title">从主题进入</h2>
-        <div className="archive-home__topics-grid">
-          {TOPICS.map(topic => (
-            <Link key={topic.href} href={topic.href} className="archive-home__topic">
-              <span className="archive-home__topic-icon">{topic.icon}</span>
-              <span>{topic.label}</span>
-            </Link>
-          ))}
-        </div>
+      {/* 精选阅读路径 */}
+      <section className="archive-home__section archive-home__paths">
+        <div className="archive-section-heading"><div><p className="archive-kicker">精选阅读路径</p><h2>从一条线索开始</h2></div></div>
+        <div className="archive-path-grid">{CROWN_PATHS.map((path, index) => <Link key={path.href} href={path.href}><span>0{index + 1}</span><strong>{path.title}</strong><small>{path.why}</small></Link>)}</div>
       </section>
 
-      {/* 搜索与资料库入口 */}
-      <section className="archive-home__search" aria-label="搜索与资料库">
-        <h2>继续查资料</h2>
-        <p>档案馆仍然完整可用：全站搜索、人物索引、拆书、博主文章与中文文章。</p>
-        <div className="archive-home__search-links">
-          <Link href="/search" className="archive-home__hero-btn archive-home__hero-btn--primary">🔍 全站搜索</Link>
-          <Link href="/people" className="archive-home__hero-btn">人物索引</Link>
-          <Link href="/books" className="archive-home__hero-btn">拆书</Link>
-          <Link href="/bloggers" className="archive-home__hero-btn">博主文章</Link>
-          <Link href="/articles" className="archive-home__hero-btn">中文文章</Link>
-        </div>
-      </section>
+      {/* 最近修订 */}
+      {recentRevisions.length > 0 && <section className="archive-home__section">
+        <div className="archive-section-heading"><div><p className="archive-kicker">最近修订</p><h2>刚刚整理过的资料</h2></div><Link href="/duanyongping">查看段永平档案 <ArrowRight size={15} /></Link></div>
+        <div className="archive-list archive-list--home">{recentRevisions.map(({ doc, section }) => <Link key={`${section}-${doc.slug}`} href={`/duanyongping/${section}/${doc.slug}`} className="archive-list__row"><span className="archive-list__year">{formatRevisionDate(doc)}</span><span className="archive-list__main"><strong>{doc.title}</strong><small>最近修订 · {sectionLabel(section)} · 编辑整理</small></span><ArrowRight size={16} /></Link>)}</div>
+      </section>}
+
+      {/* 搜索 */}
+      <div className="archive-home__search"><Search size={18} /><span>想找某个人、某一年或某家公司？</span><Link href="/search">搜索全站</Link><span className="archive-home__study-count">{studies.length} 份公司研究 · {letters.length} 封股东信</span></div>
     </PageContainer>
   </>
+}
+
+function ArchiveDrawer({ href, title, count, description }: { href: string; title: string; count: number; description: string }) {
+  return <Link href={href}><span>{count}</span><h3>{title}</h3><p>{description}</p><small>打开全部 →</small></Link>
+}
+
+function formatRevisionDate(doc: DYDoc): string {
+  return doc.updatedAt?.slice(0, 10) || '待考'
+}
+
+function sectionLabel(section: DYSection): string {
+  return ({ blog: '博客', qa: '问答', talks: '演讲与访谈', milestones: '公司里程碑' } as const)[section]
 }

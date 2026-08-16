@@ -2,13 +2,12 @@ import type { ReactNode } from 'react'
 import ReadingArticleShell from './ReadingArticleShell'
 import MarkdownContent from './MarkdownContent'
 import { getDYNeighbors, rewriteRelativeMdLinks, stripTalkSourceNote, type DYDoc, type DYSection } from '@/lib/duanyongping'
-import type { ReadingContentType } from '@/lib/reading-content'
 
 interface DuanReadingArticleProps {
   doc: DYDoc
   section: DYSection
   backLabel: string
-  contentType: ReadingContentType
+  contentType: string
   intro?: string
   beforeBody?: ReactNode
   isQA?: boolean

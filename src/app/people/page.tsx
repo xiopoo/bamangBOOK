@@ -6,6 +6,7 @@ import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { resolvePersonRouteId } from '@/lib/entity-resolver'
 import type { Metadata } from 'next'
+import { User } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '人物索引',
@@ -72,7 +73,7 @@ export default function PeoplePage() {
       />
 
       <div className="mb-8">
-        <StatBadge icon="👤" count={uniquePeople.length} label="关键人物" />
+        <StatBadge icon={<User className="w-6 h-6" />} count={uniquePeople.length} label="关键人物" />
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">

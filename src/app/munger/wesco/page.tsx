@@ -46,6 +46,11 @@ export default function WescoMeetingsPage() {
         <StatBadge icon="年" count={`${firstYear}-${lastYear}`} label="时间范围" sub="按年份归档" />
       </div>
 
+      <div className="mb-8 text-sm">
+        <span className="text-text-muted dark:text-dark-muted">每日期刊股东会另见 </span>
+        <Link href="/munger/daily-journal" className="text-primary dark:text-primary-light font-medium hover:underline">每日期刊股东会 →</Link>
+      </div>
+
       <section>
         <div className="flex items-center gap-3 mb-4">
           <h2 className="text-lg font-bold text-text dark:text-dark-text font-serif">按年份阅读</h2>

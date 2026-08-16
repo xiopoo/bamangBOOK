@@ -9,7 +9,7 @@ import MarkdownContent from '@/components/MarkdownContent'
 import RelatedArticles from '@/components/RelatedArticles'
 
 export function generateStaticParams() { return talkParams() }
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps { params: { id: string } }
 

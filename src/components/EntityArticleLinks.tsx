@@ -16,8 +16,7 @@ export default function EntityArticleLinks({ entityName, limit = 5 }: EntityArti
 
   return (
     <section className="mt-8 bg-white dark:bg-dark-card rounded-card border border-gray-100 dark:border-dark-border p-6 shadow-card">
-      <h2 className="text-xl font-semibold text-text dark:text-dark-text mb-4 flex items-center gap-2">
-        <span className="text-2xl">📖</span>
+      <h2 className="text-xl font-semibold text-text dark:text-dark-text mb-4">
         延伸阅读 · 相关文章
       </h2>
       <ul className="space-y-3">

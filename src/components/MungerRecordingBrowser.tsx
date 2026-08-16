@@ -48,7 +48,7 @@ function Player({ recording }: { recording: MungerArchiveRecording }) {
             <Play size={34} aria-hidden="true" />
             <strong>播放器正在整理</strong>
             <p>目前先保留完整索引和文字稿；取得稳定的公开播放地址后，会直接出现在这个窗口。</p>
-            <a href={recording.archiveUrl} target="_blank" rel="noreferrer">查看原始档案 <ExternalLink size={15} /></a>
+            <a href={recording.archiveUrl} target="_blank" rel="noreferrer">查看原始资料 <ExternalLink size={15} /></a>
           </div>
         )}
       </div>
@@ -90,7 +90,7 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
       <Player recording={selected} />
       <div className="recording-browser__bar">
         <div>
-          <p>RECORDING ARCHIVE · 影音档案</p>
+          <p>RECORDING ARCHIVE · 影音资料</p>
           <strong>{filtered.length} / {recordings.length}</strong>
         </div>
         <label>
@@ -120,7 +120,7 @@ export default function MungerRecordingBrowser({ recordings }: Props) {
             <small>{TYPE_LABELS[recording.type] ?? recording.type} · {recording.medium} {recording.duration && `· ${recording.duration}`}</small>
             <h3>{recording.titleZh}</h3>
             <p>{recording.title}</p>
-            <b>{recording.embedUrl ? <><Play size={14} />页内播放</> : recording.transcriptUrl ? '阅读整理稿 →' : '查看档案 →'}</b>
+            <b>{recording.embedUrl ? <><Play size={14} />页内播放</> : recording.transcriptUrl ? '阅读整理稿 →' : '查看资料 →'}</b>
           </button>
         ))}
       </div>

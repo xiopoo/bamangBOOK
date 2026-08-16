@@ -11,12 +11,13 @@ import JsonLd, { breadcrumbJsonLd } from '@/components/JsonLd'
 import EntityArticleLinks from '@/components/EntityArticleLinks'
 import BlogEntityLinks from '@/components/BlogEntityLinks'
 import type { Metadata } from 'next'
+import { User, PenLine } from 'lucide-react'
 
 export function generateStaticParams() {
   return personParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { name: string }
@@ -110,7 +111,7 @@ export default function PersonDetailPage({ params }: PageProps) {
 
   const info = personInfo[personName] || {
     title: personName,
-    description: '该人物在巴菲特、芒格与段永平的原典资料中被提及，详细档案整理中。',
+    description: '该人物在巴菲特、芒格与段永平的原典资料中被提及，详细资料整理中。',
   }
 
   const personPath = resolvePersonContentFile(personName)
@@ -150,7 +151,7 @@ export default function PersonDetailPage({ params }: PageProps) {
 
       <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5 rounded-lg p-6 mb-8 border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
         <div className="flex items-center gap-4">
-          <div className="text-2xl">👤</div>
+          <div className="text-2xl"><User className="w-7 h-7 text-primary dark:text-primary-light" strokeWidth={1.5} /></div>
           <div className="flex-1">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
@@ -212,7 +213,7 @@ export default function PersonDetailPage({ params }: PageProps) {
         </div>
       ) : (
         <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-dark-card rounded-card p-8 text-center border border-gray-100 dark:border-dark-border shadow-card">
-          <div className="text-4xl mb-4">📝</div>
+          <PenLine className="w-12 h-12 mx-auto mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
           <p className="text-gray-500 dark:text-gray-400">人物详细资料正在整理中</p>
           <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">请查看相关年份的股东信获取更多信息</p>
         </div>

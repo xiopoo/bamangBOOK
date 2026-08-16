@@ -20,7 +20,7 @@ export function generateStaticParams() {
   return almanackSectionParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { slug: string }

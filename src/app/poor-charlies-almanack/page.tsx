@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { BookOpen, ChevronRight, Library, Route } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
-import PageHeader from '@/components/PageHeader'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import AlmanackAudioPlayer from '@/components/AlmanackAudioPlayer'
 import { almanackSections } from '@/lib/poor-charlies-almanack'
 import { getAlmanackAudioTracks } from '@/lib/poor-charlies-audio'
@@ -46,12 +46,12 @@ export default function PoorCharliesAlmanackPage() {
 
   return (
     <PageContainer maxWidth="6xl">
-      <PageHeader
-        title="《穷查理宝典》"
-        subtitle="统一阅读入口"
-        backHref="/munger"
-        backLabel="返回芒格"
-      />
+      <Breadcrumbs fallbackParent={{ href: '/munger', label: '返回芒格' }} />
+      <header className="border-b-2 border-[var(--archive-ink)] pb-8 pt-6">
+        <p className="archive-kicker">Poor Charlie&rsquo;s Almanack</p>
+        <h1 className="mt-3 font-serif text-4xl font-bold leading-tight tracking-[-0.04em] text-text dark:text-dark-text md:text-6xl">《穷查理宝典》</h1>
+        <p className="mt-4 max-w-2xl text-base leading-8 text-text-muted dark:text-dark-muted">按原书顺序统一阅读：卷首、前三章方法论、十一场演讲与芒格推荐书目。</p>
+      </header>
 
       <section className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 via-white to-accent/10 p-6 shadow-card dark:from-primary/20 dark:via-dark-card dark:to-accent/10 md:p-10">
         <div className="absolute -right-16 -top-16 h-52 w-52 rounded-full border border-primary/10" />

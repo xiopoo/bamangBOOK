@@ -33,7 +33,7 @@ const tocBooks: EditionTocBook[] = [
     title: '《巴菲特文集》',
     sub: '五篇 · 十五章：所有者起点 → 好企业 → 人与制度 → 资本配置 → 风险与复利',
     parts: buffettOutline,
-    appendix: '附录A　斯科特费泽O/N会计桥完整档案 · 附录B　读者与复核检查清单 · 典藏层　年表／人物索引／企业索引／概念·问题·案例总索引',
+    appendix: '附录A　斯科特费泽O/N会计桥完整资料 · 附录B　读者与复核检查清单 · 典藏层　年表／人物索引／企业索引／概念·问题·案例总索引',
   },
   {
     id: 'munger',
@@ -125,7 +125,7 @@ export default function BoundEditionPage() {
           <p className="study-label">巴芒文集</p>
           <h1><span>巴菲特文集 · 芒格文集</span><span>两本电子书，完整收录原始记录</span></h1>
           <p>
-            基于两人六十余年的公开档案精读编排：巴菲特文集五篇十五章，从所有者思维推进到制度复利；芒格文集五篇十六章，从知识格栅推进到品格人生。每篇标注来源与年份，附交叉索引，是一套可以系统通读的电子书。
+            基于两人六十余年的公开资料精读编排：巴菲特文集五篇十五章，从所有者思维推进到制度复利；芒格文集五篇十六章，从知识格栅推进到品格人生。每篇标注来源与年份，附交叉索引，是一套可以系统通读的电子书。
           </p>
           <div className="edition-hero__stats" aria-label="巴芒文集内容规模">
             {heroStats.map(([num, label]) => (

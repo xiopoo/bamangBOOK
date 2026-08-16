@@ -4,6 +4,7 @@ import PageContainer from '@/components/PageContainer'
 import PageHeader from '@/components/PageHeader'
 import StatBadge from '@/components/StatBadge'
 import { getBooksByCategory, getBookStats } from '@/lib/books'
+import { BookOpen, FolderOpen, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '深度拆书',
@@ -18,7 +19,7 @@ export default function BooksPage() {
   return (
     <PageContainer maxWidth="6xl">
       <PageHeader
-        title="📚 深度拆书"
+        title="深度拆书"
         subtitle="价值投资经典的结构化拆解：核心观点、金句摘录与知识关联"
         backHref="/"
         backLabel="返回首页"
@@ -27,10 +28,10 @@ export default function BooksPage() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-        <StatBadge icon="📚" count={`${stats.total}本`} label="已拆解书籍" sub="持续更新" />
-        <StatBadge icon="📂" count={`${stats.categories}类`} label="主题分类" sub="按主题浏览" />
-        <StatBadge icon="📖" count={`${stats.totalChapters}章`} label="拆解章节" sub="结构化内容" />
-        <StatBadge icon="⭐" count={stats.avgRating.toFixed(1)} label="平均评分" sub="精选好书" />
+        <StatBadge icon={<BookOpen className="w-6 h-6" />} count={`${stats.total}本`} label="已拆解书籍" sub="持续更新" />
+        <StatBadge icon={<FolderOpen className="w-6 h-6" />} count={`${stats.categories}类`} label="主题分类" sub="按主题浏览" />
+        <StatBadge icon={<BookOpen className="w-6 h-6" />} count={`${stats.totalChapters}章`} label="拆解章节" sub="结构化内容" />
+        <StatBadge icon={<Star className="w-6 h-6" />} count={stats.avgRating.toFixed(1)} label="平均评分" sub="精选好书" />
       </div>
 
       {groups.length === 0 ? (
@@ -73,8 +74,8 @@ export default function BooksPage() {
                       <p className="text-sm text-text-muted dark:text-dark-muted mt-3 flex-1">{book.oneLiner}</p>
                     )}
                     <div className="flex items-center gap-4 mt-3 text-xs text-text-muted dark:text-dark-muted">
-                      {book.readTime && <span>⏱ {book.readTime}</span>}
-                      {book.chapters > 0 && <span>📖 {book.chapters} 章</span>}
+                      {book.readTime && <span>{book.readTime}</span>}
+                      {book.chapters > 0 && <span>{book.chapters} 章</span>}
                     </div>
                     {book.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mt-3">

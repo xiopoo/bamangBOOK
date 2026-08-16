@@ -13,12 +13,13 @@ import BlogEntityLinks from '@/components/BlogEntityLinks'
 import type { Metadata } from 'next'
 import { companyParams } from '@/lib/staticParams'
 import { getLetterArchiveHref } from '@/lib/letter-links'
+import { BarChart3 } from 'lucide-react'
 
 export function generateStaticParams() {
   return companyParams()
 }
 
-export const dynamicParams = false
+export const dynamicParams = true
 
 interface PageProps {
   params: { name: string }
@@ -84,7 +85,7 @@ export default async function CompanyDetailPage({ params }: PageProps) {
       />
 
       <div className="mb-6">
-        <StatBadge icon="📊" count={`${mentionCount}次`} label="股东信提及" />
+        <StatBadge icon={<BarChart3 className="w-6 h-6" />} count={`${mentionCount}次`} label="股东信提及" />
       </div>
 
       <article className="prose prose-lg max-w-none dark:prose-invert bg-bg-card dark:bg-dark-card rounded-card border border-primary/10 p-6 sm:p-8">

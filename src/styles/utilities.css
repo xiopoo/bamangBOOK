@@ -1,0 +1,241 @@
+/* ============================================================
+   utilities.css — 可复用原子类（目录列表 / 卡片 / 标签 / 按钮）
+   + Legacy 工具类纸面化重映射（.archive-page 内的灰色系/圆角/阴影）
+   顺序：在 reset 之后、组件样式之前加载。
+   ============================================================ */
+
+/* ---- 目录层与阅读层共用组件 ---- */
+.archive-kicker { margin: 0; color: var(--archive-oxblood); font: 700 .72rem/1.4 var(--archive-sans); letter-spacing: .14em; text-transform: uppercase; }
+.archive-list { display: grid; gap: .75rem; border-top: 2px solid var(--archive-ink); }
+.archive-list__row { display: flex; align-items: center; gap: 1rem; padding: 1rem .35rem; border-bottom: 1px solid var(--archive-hairline); color: var(--archive-ink); }
+.archive-list__row:hover { color: var(--archive-oxblood); background: var(--archive-paper-tint); }
+.archive-list__year { width: 3.5rem; color: var(--archive-ink-faint); font: 600 .78rem var(--archive-sans); }
+.archive-list__main { display: grid; gap: .25rem; flex: 1; }
+.archive-list__main strong { font: 600 1rem var(--archive-serif); }
+.archive-list__main small { color: var(--archive-ink-faint); font: .75rem var(--archive-sans); }
+.archive-catalog-section { margin-bottom: 2rem; }
+.archive-catalog-section > header { display: flex; align-items: baseline; gap: .8rem; padding: .75rem 0; border-bottom: 2px solid var(--archive-ink); }
+.archive-catalog-section > header h2 { margin: 0; font: 700 1.15rem var(--archive-serif); }
+.archive-catalog-section > header span { color: var(--archive-ink-faint); font: .75rem var(--archive-sans); }
+.archive-catalog-row { display: grid; grid-template-columns: 4.5rem minmax(0, 1.6fr) 1fr 6rem 1rem; gap: 1rem; align-items: center; padding: .9rem .35rem; border-bottom: 1px solid var(--archive-hairline); color: var(--archive-ink); font-family: var(--archive-sans); }
+.archive-catalog-row:hover { background: var(--archive-paper-tint); color: var(--archive-oxblood); }
+.archive-catalog-row__year { color: var(--archive-ink-faint); font-size: .8rem; }
+.archive-catalog-row__title { font: 600 .98rem var(--archive-serif); }
+.archive-catalog-row__type, .archive-catalog-row__read { color: var(--archive-ink-faint); font-size: .76rem; }
+.reading-metadata { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--archive-hairline); font-family: var(--archive-sans); }
+.reading-metadata__primary, .reading-metadata__secondary { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+.reading-metadata__primary { color: var(--archive-ink-soft); font-size: .82rem; font-weight: 700; }
+.reading-metadata__primary > * + *::before { content: '·'; margin-right: 1rem; color: var(--archive-gold); }
+.reading-metadata__primary a { color: inherit; border-bottom: 1px solid var(--archive-gold-deep); transition: color .15s ease, border-bottom-color .15s ease; }
+.reading-metadata__primary a:hover { color: var(--archive-oxblood); border-bottom-color: var(--archive-oxblood); }
+.reading-metadata__secondary { margin-top: .5rem; color: var(--archive-ink-faint); font-size: .74rem; }
+.reading-status { color: var(--archive-oxblood); }
+.reading-metadata__details[open] .reading-metadata__secondary { margin-top: .5rem; padding: .5rem .7rem; border-left: 2px solid var(--archive-rule); background: var(--archive-paper-tint); }
+@media (max-width: 640px) {
+  .reading-metadata__primary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem .8rem;
+  }
+  .reading-metadata__primary span + span::before { display: none; }
+  .reading-metadata__secondary {
+    display: grid;
+    gap: .35rem;
+  }
+  .reading-metadata__secondary span { overflow-wrap: anywhere; }
+}
+.reading-metadata__secondary a { color: inherit; border-bottom: 1px solid var(--archive-rule); }
+.reading-metadata__secondary a:hover { color: var(--archive-oxblood); border-bottom-color: var(--archive-oxblood); }
+@media (max-width: 700px) { .archive-catalog-row { grid-template-columns: 3.5rem minmax(0, 1fr) 1rem; gap: .5rem; } .archive-catalog-row__type, .archive-catalog-row__read { display: none; } }
+
+/* ---- 按钮 ---- */
+.archive-button {
+  min-height: 48px;
+  padding: 0.7rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--archive-ink);
+  border: 1.5px solid var(--archive-ink);
+  font-family: var(--archive-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.archive-button:hover {
+  color: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+  background: var(--archive-paper-tint);
+}
+
+.archive-button--solid {
+  color: var(--archive-paper);
+  background: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+}
+
+.archive-button--solid:hover {
+  color: #fff8ec;
+  background: var(--archive-oxblood-deep);
+}
+
+.archive-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+@media (max-width: 640px) {
+  .archive-button {
+    width: 100%;
+  }
+}
+
+/* ---- 可复用 archival 原子类（全站统一卡片/标签语言） ----
+   方角纸面 + 印章边框，与首页 study-* / 关于 about-study 同源。
+   任何页面想用"出版社卡片"都该用这些类，而非 ad-hoc Tailwind 边框。 */
+.archive-card {
+  background: var(--archive-paper);
+  border: 1px solid var(--archive-hairline);
+  border-radius: var(--archive-radius);
+  padding: var(--archive-card-pad);
+  box-shadow: var(--archive-elevate);
+  transition: transform var(--archive-t-dur) var(--archive-ease),
+              box-shadow var(--archive-t-dur) var(--archive-ease);
+}
+.archive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--archive-elevate-hover);
+}
+/* 克制风：去掉硬红顶线，改用左侧细色条点缀（可选） */
+.archive-card--accent { border-left: 2px solid var(--archive-gold); }
+.archive-card--plain { border-left: 0; box-shadow: none; background: var(--archive-paper-tint); }
+
+.archive-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--archive-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--archive-hairline);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--archive-ink-soft);
+}
+.archive-chip--oxblood { border-color: var(--archive-oxblood); color: var(--archive-oxblood); background: color-mix(in srgb, var(--archive-oxblood) 7%, transparent); }
+.archive-chip--gold { border-color: var(--archive-gold); color: var(--archive-gold); background: color-mix(in srgb, var(--archive-gold) 9%, transparent); }
+
+/* 暗色下：archive 卡片自动切换为深色纸面 */
+.dark .archive-card { background: var(--archive-paper-deep); border-color: var(--archive-rule); box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35); }
+.dark .archive-card:hover { box-shadow: 0 2px 4px rgba(0,0,0,0.35), 0 16px 40px rgba(0,0,0,0.45); }
+.dark .archive-card--plain { border-left: 0; box-shadow: none; background: rgba(241,234,218,0.04); }
+.dark .archive-chip { background: transparent; border-color: var(--archive-rule); color: var(--archive-ink-soft); }
+.dark .archive-chip--oxblood { color: var(--archive-oxblood); border-color: var(--archive-oxblood); background: color-mix(in srgb, var(--archive-oxblood) 16%, transparent); }
+.dark .archive-chip--gold { color: var(--archive-gold); border-color: var(--archive-gold); background: color-mix(in srgb, var(--archive-gold) 18%, transparent); }
+
+/* ---- Legacy 工具类纸面化重映射（.archive-page 内）----
+   灰底/圆角/阴影/白卡统一压成编辑纸面语言，使全站气质一致。 */
+.archive-page .rounded-lg,
+.archive-page .rounded-md,
+.archive-page .rounded-xl {
+  border-radius: 2px;
+}
+
+/* Pill chips (.rounded-full) flatten to the editorial square language so
+   tags/badges on list pages match the archive-card square corners. */
+.archive-page .rounded-full {
+  border-radius: 2px;
+}
+
+.archive-page .shadow,
+.archive-page .shadow-sm,
+.archive-page .shadow-md,
+.archive-page .shadow-lg,
+.archive-page .shadow-card,
+.archive-page .shadow-card-hover {
+  box-shadow: none;
+}
+
+/* Cards sit one notch deeper than the paper so they read as a surface,
+   not as a floating panel. */
+.archive-page .bg-white,
+.archive-page .bg-bg-card,
+.archive-page .bg-gray-50,
+.archive-page .bg-gray-100,
+.archive-page .bg-gray-200 {
+  background-color: var(--archive-paper-deep);
+}
+
+/* Dark-mode gray surfaces are remapped to the editorial dark paper so the
+   site never flashes a neutral admin-panel gray in either theme. */
+.archive-page :is([class*="dark:bg-gray-"]) {
+  background-color: var(--archive-paper-deep);
+}
+
+/* Hover/focus gray surfaces (hover:bg-gray-N) are remapped too, otherwise
+   the neutral gray only appears on interaction and reads as a leftover. */
+.archive-page :is([class*="hover:bg-gray-"], [class*="dark:hover:bg-gray-"]) {
+  background-color: color-mix(in srgb, var(--archive-oxblood) 8%, var(--archive-paper-deep));
+}
+
+/* Legacy gray / blue utility classes are remapped to the editorial palette
+   so every content page shares one consistent voice. */
+.archive-page :is([class*="text-gray-"]):not([class*="text-gray-900"]):not([class*="text-gray-800"]) {
+  color: var(--archive-ink-soft);
+}
+
+.archive-page :is([class*="dark:text-gray-"]) {
+  color: var(--archive-ink-soft);
+}
+
+.archive-page :is([class*="text-gray-900"]):not([class*="dark:text-gray-900"]) {
+  color: var(--archive-ink);
+}
+
+.archive-page :is([class*="dark:text-gray-900"]),
+.archive-page :is([class*="dark:text-white"]) {
+  color: var(--archive-paper);
+}
+
+.archive-page :is([class*="border-gray-"]) {
+  border-color: var(--archive-rule);
+}
+
+.archive-page :is([class*="hover:border-blue"]),
+.archive-page :is([class*="dark:hover:border-blue"]) {
+  border-color: color-mix(in srgb, var(--archive-oxblood) 35%, transparent);
+}
+
+/* Disabled / muted functional states keep a calm neutral instead of blue. */
+.archive-page :is([class*="disabled:bg-gray-300"]) {
+  background-color: var(--archive-paper-deep);
+  color: var(--archive-ink-faint);
+}
+
+/* White surfaces with an opacity modifier (bg-white/95, bg-white/80 …) are not
+   matched by the plain .bg-white rule above, so they would flash pure white.
+   Remap every bg-white* variant to the editorial paper surface. */
+.archive-page :is([class*="bg-white"]) {
+  background-color: var(--archive-paper-deep);
+}
+
+/* ---- Legacy 列表卡片皮肤统一（白卡 → 纸面风）---- */
+.rounded-card {
+  border-radius: 0;
+}
+.shadow-card {
+  box-shadow: none;
+}
+.hover\:shadow-card-hover:hover {
+  box-shadow: none;
+}
+.hover\:-translate-y-0\.5:hover {
+  transform: none;
+}
+.bg-white {
+  background-color: var(--archive-paper-tint);
+}

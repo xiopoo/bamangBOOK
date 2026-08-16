@@ -1,6 +1,22 @@
 'use client'
 
 import Link from 'next/link'
+import {
+  type LucideIcon,
+  Lightbulb,
+  Building2,
+  User,
+  FileText,
+  Users,
+  PenLine,
+  HelpCircle,
+  Mic,
+  BookOpen,
+  Brain,
+  Landmark,
+  ClipboardList,
+  Search,
+} from 'lucide-react'
 
 interface SearchResult {
   name: string
@@ -73,22 +89,22 @@ const roleStyles: Record<string, string> = {
   外部资料: 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400',
 }
 
-const typeIcons: Record<string, string> = {
-  concept: '💡',
-  company: '🏢',
-  person: '👤',
-  letter: '📄',
-  partnership: '🤝',
-  article: '📝',
-  qa: '❓',
-  talk: '🎤',
-  interview: '🎙️',
-  blogger: '📚',
-  book: '📖',
-  column: '✍️',
-  model: '🧠',
-  meeting: '🏛️',
-  faq: '📋',
+const typeIcons: Record<string, LucideIcon> = {
+  concept: Lightbulb,
+  company: Building2,
+  person: User,
+  letter: FileText,
+  partnership: Users,
+  article: PenLine,
+  qa: HelpCircle,
+  talk: Mic,
+  interview: Mic,
+  blogger: BookOpen,
+  book: BookOpen,
+  column: PenLine,
+  model: Brain,
+  meeting: Landmark,
+  faq: ClipboardList,
 }
 
 const typeColors: Record<string, string> = {
@@ -204,7 +220,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
   if (!query.trim()) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <div className="text-5xl mb-4">📖</div>
+        <BookOpen className="w-12 h-12 mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
         <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
           搜索「复利书房」全部内容
         </h3>
@@ -219,7 +235,7 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
   if (results.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-16">
-        <div className="text-5xl mb-4">🔍</div>
+        <Search className="w-12 h-12 mb-4 text-primary/40 dark:text-primary-light/40" strokeWidth={1.25} />
         <h3 className="text-lg font-semibold text-text dark:text-dark-text mb-2">
           未找到相关结果
         </h3>
@@ -245,11 +261,12 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
         {(['column', 'article', 'book', 'model', 'concept', 'company', 'person', 'letter', 'partnership', 'qa', 'talk', 'interview', 'blogger'] as const).map(type => {
           const items = grouped[type]
           if (items.length === 0) return null
+          const Icon = typeIcons[type]
 
           return (
             <section key={type}>
               <h2 className={`text-lg font-semibold ${sectionColors[type]} mb-3 flex items-center gap-2`}>
-                <span>{typeIcons[type]}</span>
+                {Icon && <Icon className="w-4 h-4" strokeWidth={1.75} />}
                 <span>{typeLabels[type]}</span>
                 <span className="text-sm font-normal text-gray-400 dark:text-gray-500">({items.length})</span>
               </h2>

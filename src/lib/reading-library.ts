@@ -1,6 +1,18 @@
 import { readFileSync, existsSync, readdirSync } from 'fs'
 import path from 'path'
 import { getDYDocs, type DYSection } from './duanyongping'
+import {
+  type LucideIcon,
+  Mail,
+  Send,
+  Mic,
+  HelpCircle,
+  MessageCircle,
+  BookOpen,
+  Flag,
+  Building2,
+  FileText,
+} from 'lucide-react'
 
 export interface ReadingItem {
   title: string
@@ -13,7 +25,7 @@ export interface ReadingItem {
 
 export interface ReadingCategory {
   name: string
-  icon: string
+  icon: LucideIcon
   items: ReadingItem[]
   totalCount: number
 }
@@ -30,20 +42,20 @@ export type CategoryId = 'partnership' | 'shareholder-letter' | 'talk' | 'interv
 interface CategoryDef {
   id: CategoryId
   name: string
-  icon: string
+  icon: LucideIcon
 }
 
 const CATEGORIES: Record<CategoryId, CategoryDef> = {
-  'partnership': { id: 'partnership', name: '合伙人信', icon: '📩' },
-  'shareholder-letter': { id: 'shareholder-letter', name: '股东信', icon: '📨' },
-  'talk': { id: 'talk', name: '演讲', icon: '🎤' },
-  'interview': { id: 'interview', name: '访谈', icon: '🎙️' },
-  'qa': { id: 'qa', name: '股东大会', icon: '❓' },
-  'duan-qa': { id: 'duan-qa', name: '问答', icon: '💬' },
-  'article': { id: 'article', name: '文章', icon: '📖' },
-  'milestone': { id: 'milestone', name: '公司里程碑', icon: '◆' },
-  'company-analysis': { id: 'company-analysis', name: '公司分析', icon: '🏢' },
-  'other': { id: 'other', name: '其他', icon: '📄' },
+  'partnership': { id: 'partnership', name: '合伙人信', icon: Mail },
+  'shareholder-letter': { id: 'shareholder-letter', name: '股东信', icon: Send },
+  'talk': { id: 'talk', name: '演讲', icon: Mic },
+  'interview': { id: 'interview', name: '访谈', icon: Mic },
+  'qa': { id: 'qa', name: '股东大会', icon: HelpCircle },
+  'duan-qa': { id: 'duan-qa', name: '问答', icon: MessageCircle },
+  'article': { id: 'article', name: '文章', icon: BookOpen },
+  'milestone': { id: 'milestone', name: '公司里程碑', icon: Flag },
+  'company-analysis': { id: 'company-analysis', name: '公司分析', icon: Building2 },
+  'other': { id: 'other', name: '其他', icon: FileText },
 }
 
 function partnershipDisplayTitle(fileName: string): { title: string; year: number | null } {
