@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { ArrowRight, BookOpen, CalendarDays, Search, Tags } from 'lucide-react'
+import { ArrowRight, Search } from 'lucide-react'
 import PageContainer from '@/components/PageContainer'
 import SubdomainRootRouter from '@/components/SubdomainRootRouter'
+import DailyQuotePanel from '@/components/DailyQuotePanel'
+import { getAllDailyQuotes } from '@/lib/daily-quote'
+import { getDailyReadings, dailyReadingForDate } from '@/lib/daily-reading'
 import { getShareholderLetters } from '@/lib/partnership'
 import { getBusinessHistories } from '@/lib/business-history'
 import { getDocuments } from '@/lib/documents'
@@ -12,14 +15,6 @@ import { getDYDocs, type DYDoc, type DYSection } from '@/lib/duanyongping'
 import '@/styles/templates/home.css'
 
 export const metadata: Metadata = { title: { absolute: '复利书房｜巴菲特、芒格与公司研究' }, description: '巴菲特、芒格与段永平的第一手资料：股东信、合伙人信、股东大会问答、演讲与访谈，按人物与主题阅读。', alternates: { canonical: '/' } }
-
-// 今日推荐：编辑精选，显式配置（前端重构 Spec §5.1）
-const TODAY_RECOMMENDATION = {
-  title: '巴菲特致伯克希尔股东的信（1965）',
-  href: '/letters/1965',
-  meta: '股东信 · 1965 · 首封伯克希尔股东信',
-  reason: '这是巴菲特经营伯克希尔的第一封信：把股东当成合伙人，明确“账面价值不等于内在价值”，并立下衡量业绩的标准。此后六十年的股东信，都从这里开始。',
-}
 
 // 精选阅读路径（对齐 mungerarchive.com 的 crown jewels）
 const CROWN_PATHS = [
@@ -34,6 +29,10 @@ export default function HomePage() {
   const talks = getDocuments('talks')
   const selectedTalks = talks.slice(0, 3)
   const readingStats = getReadingStats()
+  const dailyQuotes = getAllDailyQuotes()
+  const todayISO = new Date().toISOString().slice(0, 10)
+  const today = new Date()
+  const todayReading = dailyReadingForDate(getDailyReadings(), today)
   const recentRevisions = (['blog', 'qa', 'talks', 'milestones'] as DYSection[])
     .flatMap(section => getDYDocs(section, false).map(doc => ({ doc, section })))
     .filter(item => item.doc.updatedAt)
@@ -45,30 +44,28 @@ export default function HomePage() {
   return <>
     <SubdomainRootRouter />
     <PageContainer maxWidth="6xl" className="archive-home">
-      {/* Hero：主题宣言 */}
-      <section className="archive-home__hero">
-        <p className="archive-kicker">复利书房 · 巴菲特、芒格与公司研究</p>
-        <h1><span>回到原典，</span><span>建立自己的判断。</span></h1>
-        <p className="archive-home__lede">以巴菲特、芒格和段永平的原典资料为核心，延伸到公司研究与商业史。我们整理来源、保留上下文，也把不完整的地方明确标出来。</p>
-        <Link href="/partnership/1" className="archive-button archive-button--solid">开始阅读 <ArrowRight size={17} /></Link>
+      {/* 首屏：每日一读（每天一句巴菲特/芒格，选自可核验的原文） */}
+      <section className="archive-home__daily" aria-label="每日一读">
+        <p className="archive-kicker">复利书房 · 每日一读</p>
+        <DailyQuotePanel quotes={dailyQuotes} initialDateISO={todayISO} />
       </section>
 
-      {/* 阅读入口 */}
-      <section className="archive-entry-grid" aria-label="阅读入口">
-        <Link href="/people"><BookOpen size={20} /><span><strong>按人物</strong><small>巴菲特 · 芒格 · 段永平</small></span><ArrowRight size={16} /></Link>
-        <Link href="/letters"><CalendarDays size={20} /><span><strong>按年份</strong><small>从 1957 年的第一封信开始</small></span><ArrowRight size={16} /></Link>
-        <Link href="/model"><Tags size={20} /><span><strong>按主题</strong><small>资本配置 · 护城河 · 判断</small></span><ArrowRight size={16} /></Link>
-      </section>
-
-      {/* 今日推荐 */}
-      <section className="archive-home__section archive-featured" aria-labelledby="featured-reading-title">
-        <div className="archive-featured__meta"><p className="archive-kicker">今日推荐</p><span>{TODAY_RECOMMENDATION.meta}</span></div>
-        <div className="archive-featured__body">
-          <h2 id="featured-reading-title">{TODAY_RECOMMENDATION.title}</h2>
-          <p>{TODAY_RECOMMENDATION.reason}</p>
-          <Link href={TODAY_RECOMMENDATION.href}>开始阅读 <ArrowRight size={16} /></Link>
+      {/* 今日一读：每天一条值得读的原典（对齐 mungerarchive 的 Best thing to learn today） */}
+      {todayReading && <section className="archive-home__section archive-featured" aria-labelledby="featured-reading-title">
+        <div className="archive-featured__meta">
+          <p className="archive-kicker">今日一读 · {today.getMonth() + 1}月{today.getDate()}日</p>
+          <div className="archive-featured__tags">
+            <span>{todayReading.typeLabel}</span>
+            <span>{todayReading.year || '年份待考'}</span>
+            <span>约 {todayReading.readMinutes} 分钟</span>
+          </div>
         </div>
-      </section>
+        <div className="archive-featured__body">
+          <h2 id="featured-reading-title">{todayReading.title}</h2>
+          <p>{todayReading.excerpt}</p>
+          <Link href={todayReading.href}>阅读原文 <ArrowRight size={16} /></Link>
+        </div>
+      </section>}
 
       {/* 全部内容：按人物与资料类型进入 */}
       <section className="archive-home__section" aria-labelledby="archive-drawers-title">

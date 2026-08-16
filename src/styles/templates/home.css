@@ -1,29 +1,31 @@
 /* ============================================================
-   templates/home.css — 首页（复利书房门面，前端重构 Spec §5）
-   恢复自历史版本 534f7367（「移除重建遗留页面」，博客化改造之前）——
-   即与 mungerarchive.com 同构的首页形态：
-   hero 宣言（回到原典，建立自己的判断。）→ 三入口网格 →
-   今日推荐 → 6 格抽屉 → 编辑选读 → 精选阅读路径 01/02/03 →
-   最近修订 → 全站搜索。
+   templates/home.css — 首页（复利书房门面）
+   首屏为「每日一读」名言卡（每天一句巴菲特/芒格，可前后切换），
+   其后为今日一读（每天一条精选原典）→ 6 格抽屉 → 编辑选读 →
+   精选阅读路径 01/02/03 → 最近修订 → 全站搜索。
    通用类（.archive-kicker / .archive-list / .archive-button）在
    utilities.css，此处只含首页专属布局。
    ============================================================ */
 
 .archive-home { max-width: 72rem; }
-.archive-home__hero { padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(3.5rem, 7vw, 5.5rem); border-bottom: 1px solid var(--archive-hairline); }
-.archive-home__hero h1 { max-width: 9em; margin: .9rem 0 1.4rem; font: 700 clamp(2.9rem, 2rem + 4.3vw, 5.7rem)/1.08 var(--archive-serif); letter-spacing: -.06em; }
-.archive-home__hero h1 span { display: block; width: max-content; max-width: 100%; white-space: nowrap; }
-.archive-home__lede { max-width: 42rem; margin: 0 0 1.8rem; color: var(--archive-ink-soft); font-size: 1.08rem; line-height: 1.9; }
 
-/* 三入口网格：按人物 / 按年份 / 按主题 */
-.archive-entry-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--archive-hairline); }
-.archive-entry-grid a { display: flex; align-items: center; gap: .9rem; min-height: 6.5rem; padding: 1.3rem 1.1rem; border-right: 1px solid var(--archive-hairline); color: var(--archive-ink); transition: background .18s ease, color .18s ease; }
-.archive-entry-grid a:first-child { border-left: 1px solid var(--archive-hairline); }
-.archive-entry-grid a:hover { background: var(--archive-paper-tint); color: var(--archive-oxblood); }
-.archive-entry-grid span { display: grid; gap: .25rem; flex: 1; }
-.archive-entry-grid strong, .archive-entry-grid small { font-family: var(--archive-sans); }
-.archive-entry-grid strong { font-size: .98rem; }
-.archive-entry-grid small { color: var(--archive-ink-faint); font-size: .78rem; }
+/* 首屏：每日一读（紧凑名言卡） */
+.archive-home__daily { padding: 2.25rem 0 1.5rem; border-bottom: 1px solid var(--archive-hairline); }
+.archive-home__daily .archive-kicker { margin-bottom: .9rem; }
+.daily-quote__card { padding: 1.6rem 1.9rem; border: 1px solid var(--archive-rule); background: var(--archive-paper); }
+.daily-quote__date { margin-bottom: .7rem; font-family: var(--archive-sans); font-size: .72rem; font-weight: 700; letter-spacing: .14em; color: var(--archive-gold-deep); }
+.daily-quote__quote { max-width: 46rem; margin: 0; font: 600 1.2rem/1.85 var(--archive-serif); letter-spacing: -.01em; color: var(--archive-ink); }
+.daily-quote__meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .6rem; margin-top: .9rem; }
+.daily-quote__speaker { font: 700 .88rem var(--archive-sans); color: var(--archive-oxblood); }
+.daily-quote__source { font-size: .8rem; color: var(--archive-ink-soft); }
+.daily-quote__footer { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; margin-top: 1rem; padding-top: .9rem; border-top: 1px solid var(--archive-rule-soft); }
+.daily-quote__topic { display: inline-flex; align-items: center; gap: .3rem; color: var(--archive-ink); font: 700 .78rem var(--archive-sans); border: 1px solid var(--archive-rule); padding: .28rem .55rem; }
+.daily-quote__topic:hover { border-color: var(--archive-oxblood); color: var(--archive-oxblood); }
+.daily-quote__status { color: var(--archive-ink-faint); font-size: .72rem; }
+.daily-quote__nav { display: flex; align-items: center; gap: .4rem; margin-top: .9rem; }
+.daily-quote__nav button { display: inline-flex; align-items: center; gap: .25rem; padding: .3rem .55rem; color: var(--archive-ink-soft); border: 1px solid transparent; background: transparent; font: .74rem var(--archive-sans); cursor: pointer; }
+.daily-quote__nav button:hover { color: var(--archive-oxblood); border-color: var(--archive-rule); }
+.daily-quote__nav-hint { margin-left: auto; color: var(--archive-ink-faint); font: .7rem var(--archive-sans); }
 
 /* 区块通用：大留白 + 发丝线 */
 .archive-home__section { padding: 3.5rem 0; border-bottom: 1px solid var(--archive-hairline); }
@@ -39,12 +41,13 @@
 .archive-path-grid strong { font: 600 1.1rem var(--archive-serif); }
 .archive-path-grid small { color: var(--archive-ink-soft); line-height: 1.7; }
 
-/* 今日推荐（Best thing to learn today 大卡片） */
-.archive-featured { display: grid; grid-template-columns: minmax(10rem, .45fr) minmax(0, 1.55fr); gap: clamp(2rem, 6vw, 6rem); }
-.archive-featured__meta { display: flex; flex-direction: column; gap: .8rem; }
-.archive-featured__meta span { color: var(--archive-ink-faint); font: .76rem var(--archive-sans); }
-.archive-featured__body h2 { max-width: 20em; font: 700 clamp(1.8rem, 3vw, 2.8rem)/1.2 var(--archive-serif); letter-spacing: -.04em; }
-.archive-featured__body p { max-width: 42rem; margin: 1rem 0 1.25rem; color: var(--archive-ink-soft); line-height: 1.85; }
+/* 今日一读（对齐 mungerarchive 的 Best thing to learn today）：每日一条精选原典 */
+.archive-featured { display: grid; grid-template-columns: minmax(10rem, .45fr) minmax(0, 1.55fr); gap: clamp(2rem, 6vw, 6rem); padding: 2.75rem 0; }
+.archive-featured__meta { display: flex; flex-direction: column; gap: .9rem; }
+.archive-featured__tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.archive-featured__tags span { padding: .3rem .6rem; border: 1px solid var(--archive-rule); color: var(--archive-ink-soft); font: 700 .74rem var(--archive-sans); }
+.archive-featured__body h2 { max-width: 20em; font: 700 clamp(1.6rem, 1.2rem + 1.4vw, 2.3rem)/1.25 var(--archive-serif); letter-spacing: -.04em; }
+.archive-featured__body p { max-width: 42rem; margin: .9rem 0 1.1rem; color: var(--archive-ink-soft); line-height: 1.85; font-size: .95rem; }
 .archive-featured__body a { display: inline-flex; min-height: 44px; align-items: center; gap: .4rem; color: var(--archive-oxblood); font: 700 .82rem var(--archive-sans); }
 
 /* 全部内容：6 格抽屉（3 人物 + 3 类型） */
@@ -62,11 +65,11 @@
 .archive-home__study-count { margin-left: auto; }
 
 @media (max-width: 700px) {
-  .archive-home__hero { padding-block: 3.25rem 2.75rem; }
-  .archive-home__hero h1 { font-size: clamp(2.15rem, 10.5vw, 3rem); letter-spacing: -.055em; }
-  .archive-entry-grid, .archive-path-grid, .archive-drawer-grid { grid-template-columns: 1fr; }
+  .archive-home__daily { padding: 1.75rem 0 1.25rem; }
+  .daily-quote__card { padding: 1.3rem 1.15rem; }
+  .daily-quote__quote { font-size: 1.08rem; }
+  .daily-quote__nav-hint { display: none; }
+  .archive-path-grid, .archive-drawer-grid { grid-template-columns: 1fr; }
   .archive-featured { grid-template-columns: 1fr; gap: 1rem; }
-  .archive-entry-grid a { border-left: 1px solid var(--archive-hairline); border-bottom: 1px solid var(--archive-hairline); }
-  .archive-entry-grid a:last-child { border-bottom: 0; }
   .archive-home__search { flex-wrap: wrap; }
 }

@@ -79,10 +79,14 @@ const navGroups: NavGroup[] = [
     label: '公司研究',
     activePrefixes: ['/business-history', '/companies', '/concepts'],
     sections: [
-      { links: [
-        { href: '/business-history', label: '深度研究', meta: '经营、护城河与资本配置' },
-        { href: '/companies', label: '公司索引', meta: '按公司查找' },
-        { href: '/concepts', label: '投资概念', meta: '概念索引' },
+      { title: '深度研究', links: [
+        { href: '/business-history', label: '经营与资本配置', meta: '长篇研究' },
+      ] },
+      { title: '公司索引', links: [
+        { href: '/companies', label: '按公司查找', meta: '公司档案' },
+      ] },
+      { title: '投资概念', links: [
+        { href: '/concepts', label: '概念索引', meta: '护城河 · 能力圈' },
       ] },
     ],
   },
