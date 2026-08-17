@@ -104,8 +104,10 @@ export default function RootLayout({
               (function() {
                 try {
                   // ====== 1. 主题先于渲染生效（避免白/黑闪烁）======
-                  var theme = localStorage.getItem('reading-theme-v2');
-                  if (theme === 'dark') {
+                  // 手动设置优先；未设置时跟随系统深色模式（系统按固定时间自动切换时随之变黑）
+                  var storedTheme = localStorage.getItem('reading-theme-v2');
+                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (storedTheme === 'dark' || (storedTheme !== 'light' && prefersDark)) {
                     document.documentElement.classList.add('dark');
                   }
 

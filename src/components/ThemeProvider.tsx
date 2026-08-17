@@ -30,15 +30,23 @@ export default function ThemeProvider({
 
   useEffect(() => {
     setMounted(true)
-    // 阅读站默认使用纸张浅色；只有用户主动选择后才进入深色模式。
+    // 优先级：用户手动设置(localStorage) > 跟随系统深色模式 > 默认浅色。
+    // 未手动设置时跟随系统偏好，并监听系统切换实时生效（如系统按固定时间/日落自动进入深色）。
     const stored = localStorage.getItem('reading-theme-v2') as Theme | null
     if (stored === 'light' || stored === 'dark') {
       setTheme(stored)
       document.documentElement.classList.toggle('dark', stored === 'dark')
-    } else {
-      setTheme('light')
-      document.documentElement.classList.remove('dark')
+      return
     }
+    const media = window.matchMedia('(prefers-color-scheme: dark)')
+    const applySystem = () => {
+      const next: Theme = media.matches ? 'dark' : 'light'
+      setTheme(next)
+      document.documentElement.classList.toggle('dark', media.matches)
+    }
+    applySystem()
+    media.addEventListener('change', applySystem)
+    return () => media.removeEventListener('change', applySystem)
   }, [])
 
   const toggleTheme = useCallback(() => {
