@@ -1,5 +1,5 @@
 .archive {
-  padding-top: clamp(3.5rem, 7vw, 7rem);
+  padding-top: clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .hero {
@@ -27,11 +27,15 @@
   line-height: 1.05;
 }
 
-.sources,
 .ideas,
 .chapters,
 .cases {
   margin-top: clamp(5rem, 9vw, 8rem);
+}
+
+/* 「第一手资料」紧跟人物标题，顶部留白收紧，保证首屏即可看到内容 */
+.sources {
+  margin-top: clamp(1.75rem, 3.5vw, 3rem);
 }
 
 .sources > header,
@@ -187,7 +191,8 @@
 .cases > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #211d16;
+  border-top: 1px solid var(--archive-ink);
+  border-left: 1px solid var(--archive-rule);
 }
 
 .cases > div > a {
@@ -195,33 +200,34 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  color: #f7f2e7;
-  border-right: 1px solid rgba(247, 242, 231, .17);
+  color: var(--archive-ink);
+  border-right: 1px solid var(--archive-rule);
+  border-bottom: 1px solid var(--archive-rule);
 }
 
 .cases small {
-  color: #c9a958;
+  color: var(--archive-oxblood);
   font-family: var(--archive-sans);
   font-size: .72rem;
 }
 
 .cases h3 {
   margin-top: auto;
-  color: #f7f2e7;
+  color: var(--archive-ink);
   font-size: 1.45rem;
   font-weight: 600;
 }
 
 .cases a p {
   margin-top: .7rem;
-  color: #b9ae97;
+  color: var(--archive-ink-faint);
   font-size: .88rem;
   line-height: 1.65;
 }
 
 .cases svg {
   margin-top: 1rem;
-  color: #c9a958;
+  color: var(--archive-oxblood);
 }
 
 @media (max-width: 860px) {
