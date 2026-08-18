@@ -28,6 +28,10 @@ const SECRET_PATTERNS = [
   { name: 'OPENAI_KEY', pattern: /(?:sk-[A-Za-z0-9]{20,}|OPENAI_API_KEY\s*[:=]\s*["']?[A-Za-z0-9_\-]{16,})/ },
   { name: 'GITHUB_TOKEN', pattern: /(?:gh[pousr]_[A-Za-z0-9]{20,}|GITHUB_TOKEN\s*[:=]\s*["']?[A-Za-z0-9_\-]{16,})/ },
   { name: 'GENERIC_API_KEY', pattern: /(?:API_KEY|API_SECRET|ACCESS_TOKEN|SECRET_KEY|PRIVATE_KEY)\s*[:=]\s*["']?[A-Za-z0-9_\-/+=]{24,}/ },
+  // 国内平台会话凭据（防止 config.yaml / cookies.json 等再次泄露）
+  { name: 'BILIBILI_COOKIE', pattern: /(?:SESSDATA|bili_jct|DedeUserID|DedeUserID__ckMd5|sid)\s*[:=]\s*["']?[A-Za-z0-9_%]{12,}/ },
+  { name: 'WECHAT_SENSITIVE', pattern: /(?:wechat|wx|weixin)[_-]?(?:appsecret|secret|token|key)\s*[:=]\s*["']?[A-Za-z0-9_\-]{16,}/i },
+  { name: 'QQ_SENSITIVE', pattern: /(?:qq|openid|unionid)[_-]?(?:appsecret|secret|token|key)\s*[:=]\s*["']?[A-Za-z0-9_\-]{16,}/i },
 ]
 
 // 排除的文件/目录：凭据类文件本身只允许出现在 gitignore 覆盖范围内

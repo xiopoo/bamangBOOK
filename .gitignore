@@ -40,6 +40,8 @@ launchd.*.log
 
 # B站爬虫会话凭证（含 access_token），禁止入库
 cookies.json
+# B站登录凭据（SESSDATA / bili_jct / DedeUserID 等），含完整会话，禁止入库
+config.yaml
 
 # 大文件不入库（>10MB 历史已剥离，工作区保留本地副本）
 content/companies-studies/*.pdf

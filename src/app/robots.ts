@@ -33,16 +33,12 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/checkout/', '/payment/', '/login', '/my-study', '/orders'],
       },
-      {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      ...aiCrawlers
-        .filter(ua => ua !== 'GPTBot')
-        .map(ua => ({
-          userAgent: ua,
-          allow: '/',
-        })),
+      // AI 搜索/生成引擎（GEO）：开放抓取公开内容；
+      // OpenAI 训练用 Web 抓取器以 OAI-SearchBot 显式排除。
+      ...aiCrawlers.map(ua => ({
+        userAgent: ua,
+        allow: '/',
+      })),
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   }

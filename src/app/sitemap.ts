@@ -92,5 +92,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
   letterYears.forEach(year => urls.add(`${baseUrl}/letters/${year}`))
 
-  return [...urls].map(url => ({ url, changeFrequency: 'monthly', priority: url === baseUrl ? 1 : 0.7 }))
+  // 按栏目更新频率返回差异化 changeFrequency（SEO 抓取节奏优化）：
+  // - daily：首页（每日一读/今日一读每日刷新）
+  // - weekly：持续编辑的栏目（博客 / 段永平档案 / 股东信年份索引）
+  // - yearly：历史原文，几乎不再变动（股东信、穷查理宝典、概念/公司/人物词条）
+  // - monthly：其余访谈/问答/会议等中等频率栏目
+  function changeFrequencyFor(url: string): 'daily' | 'weekly' | 'monthly' | 'yearly' {
+    const path = url.slice(baseUrl.length) || '/'
+    if (path === '/') return 'daily'
+    if (/^\/blog(\/|$)/.test(path) || /^\/duanyongping(\/|$)/.test(path)) return 'weekly'
+    if (/^\/letters(\/|$)/.test(path) || /^\/poor-charlies-almanack(\/|$)/.test(path) || /^\/(concepts|companies|people)(\/|$)/.test(path)) return 'yearly'
+    return 'monthly'
+  }
+
+  return [...urls].map(url => ({
+    url,
+    changeFrequency: changeFrequencyFor(url),
+    priority: url === baseUrl ? 1 : /^\/blog(\/|$)/.test(url.slice(baseUrl.length)) ? 0.8 : 0.7,
+  }))
 }

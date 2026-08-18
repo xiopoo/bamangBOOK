@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 开发期暴露潜在副作用 bug（key 重复、effect 双触发等）
+  reactStrictMode: true,
   // 全站内容在构建时生成静态 HTML，避免 Hobby 计划为大量 SSG 页面
   // 创建超过 12 个 Serverless Functions。
   // 注意：output: 'export' 仅在构建（next build）时启用——dev 模式下 Next 对
