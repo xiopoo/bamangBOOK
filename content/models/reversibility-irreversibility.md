@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "可逆性与不可逆性"
 english: "Reversibility & Irreversibility"
 slug: "reversibility-irreversibility"

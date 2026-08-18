@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "AI时代有互联网平台级的投资机会吗？"
 author: "方伟Rey"
 account: "方伟看十年"

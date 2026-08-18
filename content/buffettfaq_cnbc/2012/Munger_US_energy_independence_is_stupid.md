@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: U.S. energy independence is "stupid"
 
 **原站时间**: 2012-05-05T17:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We've got the best job in the world"
 
 **原站时间**: 2000-04-29T17:00:00+0000

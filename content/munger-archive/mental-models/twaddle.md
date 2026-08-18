@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "23 废话倾向"
 source: "https://mungerarchive.com/zh/mental-models/twaddle/"
 ---

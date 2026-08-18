@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett doesn't invest in Intel and Microsoft
 
 **原站时间**: 1997-05-05T13:00:00+0000

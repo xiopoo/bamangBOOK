@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Phil Fisher's "scuttlebutt" method
 
 **原站时间**: 1998-05-04T17:00:00+0000

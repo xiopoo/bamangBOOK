@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # U.S.-China economic tensions are 'stupid, stupid, stupid'
 
 **原站时间**: 2023-05-08T07:00:28+0000  

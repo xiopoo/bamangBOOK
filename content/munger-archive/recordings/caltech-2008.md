@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "加州理工学院杜布里奇杰出讲座（2008）"
 source: "https://mungerarchive.com/zh/recordings/caltech-2008/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "二阶效应"
 english: "Second-Order Thinking"
 slug: "second-order-thinking"

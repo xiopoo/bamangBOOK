@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2005 Annual Meeting Highlight Reel
 
 **原站时间**: 2005-04-30T13:00:00+0000

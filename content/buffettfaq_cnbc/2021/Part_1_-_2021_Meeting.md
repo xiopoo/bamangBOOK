@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Part 1 - 2021 Meeting
 
 > 2021 年伯克希尔·哈撒韦股东大会

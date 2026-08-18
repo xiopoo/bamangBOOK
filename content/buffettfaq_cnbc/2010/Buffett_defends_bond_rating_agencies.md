@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett defends bond rating agencies
 
 **原站时间**: 2010-05-01T17:00:00+0000

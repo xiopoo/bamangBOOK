@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "物理学妒忌"
 english: "Physics Envy"
 slug: "physics-envy"

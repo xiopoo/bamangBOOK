@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "垄断与寡头"
 english: "Monopoly & Oligopoly"
 slug: "monopoly-oligopoly"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "双轨分析"
 source: "https://mungerarchive.com/zh/mental-models/two-track-analysis/"
 ---

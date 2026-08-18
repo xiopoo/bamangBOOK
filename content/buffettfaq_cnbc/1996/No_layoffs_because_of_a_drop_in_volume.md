@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # No layoffs because of "a drop in volume"
 
 **原站时间**: 1996-05-06T17:00:00+0000

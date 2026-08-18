@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 家庭
 source: https://mungerarchive.com/zh/family/
 ---

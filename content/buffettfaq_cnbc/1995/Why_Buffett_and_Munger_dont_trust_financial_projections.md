@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett and Munger don't trust financial projections
 
 **原站时间**: 1995-05-01T13:00:00+0000

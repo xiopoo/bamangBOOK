@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "对拼多多是“Costco+Disney”的三次思考"
 account: "方伟看十年"
 date: "2021-10-07 11:16"

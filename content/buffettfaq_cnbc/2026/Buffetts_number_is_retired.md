@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's 'number' is retired
 
 **原站时间**: 2026-05-04T04:37:16+0000  

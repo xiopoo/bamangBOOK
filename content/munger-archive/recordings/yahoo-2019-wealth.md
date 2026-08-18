@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格谈投资与成就财富的人生抉择（2019）"
 source: "https://mungerarchive.com/zh/recordings/yahoo-2019-wealth/"
 ---

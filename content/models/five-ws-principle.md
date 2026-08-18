@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "五何原则"
 english: "Five W's Principle"
 slug: "five-ws-principle"

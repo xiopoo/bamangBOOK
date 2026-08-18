@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Personal
 
 > 来源：https://buffettfaq.com/

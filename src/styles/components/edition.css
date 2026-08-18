@@ -1402,64 +1402,6 @@
   line-height: 1.8;
 }
 
-/* 读者反馈 */
-.edition-feedback__body {
-  display: grid;
-  gap: 1.4rem;
-}
-.edition-feedback__empty {
-  padding: 2.2rem 2rem;
-  border: 1.5px dashed var(--archive-rule);
-  background: var(--archive-paper-tint);
-  text-align: center;
-}
-.edition-feedback__empty p {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-.edition-feedback__empty small {
-  display: block;
-  max-width: 30rem;
-  margin: 0.7rem auto 0;
-  color: var(--archive-ink-soft);
-  font-family: var(--archive-sans);
-  font-size: 0.88rem;
-  line-height: 1.85;
-}
-.edition-feedback__alternatives {
-  display: grid;
-  gap: 0.6rem;
-}
-.edition-feedback__alternatives > a {
-  padding: 1rem 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  border: 1px solid var(--archive-rule);
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-.edition-feedback__alternatives > a:hover {
-  border-color: var(--archive-oxblood);
-  background: var(--archive-paper-tint);
-}
-.edition-feedback__alternatives svg {
-  color: var(--archive-oxblood);
-  flex-shrink: 0;
-}
-.edition-feedback__alternatives div {
-  flex: 1;
-}
-.edition-feedback__alternatives strong {
-  font-size: 1rem;
-}
-.edition-feedback__alternatives small {
-  display: block;
-  margin-top: 0.2rem;
-  color: var(--archive-ink-faint);
-  font-family: var(--archive-sans);
-  font-size: 0.8rem;
-}
-
 /* 购买流程三步 */
 .edition-steps {
   max-width: 46rem;
@@ -1613,9 +1555,6 @@
   .edition-preview__book h3 span {
     display: block;
     margin-top: 0.3rem;
-  }
-  .edition-feedback__empty {
-    padding: 1.6rem 1.2rem;
   }
   .about-study__rules {
     gap: 2rem;

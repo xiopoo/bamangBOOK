@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "富兰克林的自我修炼"
 english: "Franklin's Self-Improvement System"
 slug: "franklins-self-improvement-system"

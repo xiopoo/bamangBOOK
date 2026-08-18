@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "共振"
 english: "Resonance"
 slug: "resonance"

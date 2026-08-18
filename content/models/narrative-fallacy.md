@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "叙事谬误"
 english: "Narrative Fallacy"
 slug: "narrative-fallacy"

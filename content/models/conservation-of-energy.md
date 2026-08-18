@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "能量守恒"
 english: "Conservation of Energy"
 slug: "conservation-of-energy"

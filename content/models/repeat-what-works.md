@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "重复有效的行为"
 english: "Repeat What Works"
 slug: "repeat-what-works"

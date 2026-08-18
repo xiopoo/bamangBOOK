@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Precision Castparts is better with Berkshire
 
 **原站时间**: 2016-04-30T13:00:00+0000  

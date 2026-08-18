@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # We'll hold our Japanese stocks for '50 years or forever'
 
 **原站时间**: 2025-05-05T05:16:05+0000

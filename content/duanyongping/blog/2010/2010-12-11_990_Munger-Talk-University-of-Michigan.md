@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Munger Talk--University of Michigan"
 author: "段永平"
 date: "2010-12-11"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett threatens to come back if Berkshire does this after he's gone
 
 **原站时间**: 2025-12-31T19:29:29+0000

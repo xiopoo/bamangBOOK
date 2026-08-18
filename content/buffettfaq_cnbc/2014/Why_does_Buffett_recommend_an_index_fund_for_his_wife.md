@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why does Buffett recommend an index fund for his wife?
 
 **原站时间**: 2014-05-03T13:00:00+0000

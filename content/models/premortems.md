@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "极端情景模拟"
 english: "Premortems"
 slug: "premortems"

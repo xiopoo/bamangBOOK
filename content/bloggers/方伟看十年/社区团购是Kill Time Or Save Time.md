@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "社区团购是Kill Time Or Save Time"
 author: "方伟Rey"
 account: "方伟看十年"

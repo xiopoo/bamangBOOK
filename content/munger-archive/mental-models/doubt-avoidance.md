@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "04 避免怀疑倾向"
 source: "https://mungerarchive.com/zh/mental-models/doubt-avoidance/"
 ---

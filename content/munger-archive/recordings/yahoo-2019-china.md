@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格谈中国崛起与埃隆·马斯克（雅虎财经，2019）"
 source: "https://mungerarchive.com/zh/recordings/yahoo-2019-china/"
 ---

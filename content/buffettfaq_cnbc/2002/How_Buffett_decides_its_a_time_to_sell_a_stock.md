@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Buffett decides it's a time to sell a stock
 
 **原站时间**: 2002-05-04T13:00:00+0000

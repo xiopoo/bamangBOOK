@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # What Buffett looks for in annual reports
 
 **原站时间**: 1996-05-06T13:00:00+0000

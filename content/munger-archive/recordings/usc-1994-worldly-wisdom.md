@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "关于基本的世俗智慧的一课（南加州大学，1994）"
 source: "https://mungerarchive.com/zh/recordings/usc-1994-worldly-wisdom/"
 ---

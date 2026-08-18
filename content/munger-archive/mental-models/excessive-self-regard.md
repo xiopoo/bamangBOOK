@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "12 过度自我评价倾向"
 source: "https://mungerarchive.com/zh/mental-models/excessive-self-regard/"
 ---

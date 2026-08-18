@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire insurance chief encouraged by GEICO's turnaround
 
 **原站时间**: 2025-05-05T05:17:43+0000

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Vibe Coding 的CEO熬夜到两点都在写什么？"
 author: "可遥"
 account: "唐僧的碎碎念"

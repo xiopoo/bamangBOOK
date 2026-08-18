@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "迭代与原型"
 english: "Iteration & Prototyping"
 slug: "iteration-prototyping"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "别等B 站财报创造奇迹了，他很难赚大钱"
 author: "方伟Rey"
 account: "方伟看十年"

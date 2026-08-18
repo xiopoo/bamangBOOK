@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "系统思维"
 english: "Systems Thinking"
 slug: "systems-thinking"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett addresses the Klamath Dam controversy
 
 **原站时间**: 2007-05-05T17:00:00+0000

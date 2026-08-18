@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Work in the age of artificial intelligence
 
 **原站时间**: 2017-05-06T17:00:00+0000  

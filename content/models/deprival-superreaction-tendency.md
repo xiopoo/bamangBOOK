@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "被剥夺超级反应倾向"
 english: "Deprival-Superreaction Tendency"
 slug: "deprival-superreaction-tendency"

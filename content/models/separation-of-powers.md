@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "权力分立与制衡"
 english: "Separation of Powers"
 slug: "separation-of-powers"

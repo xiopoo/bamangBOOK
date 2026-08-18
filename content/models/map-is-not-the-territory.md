@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "地图不是疆域"
 english: "Map is Not the Territory"
 slug: "map-is-not-the-territory"

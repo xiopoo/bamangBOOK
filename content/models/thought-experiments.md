@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "思想实验"
 english: "Thought Experiments"
 slug: "thought-experiments"

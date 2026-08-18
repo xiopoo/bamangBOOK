@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The Investment Industry
 
 > 来源：https://buffettfaq.com/

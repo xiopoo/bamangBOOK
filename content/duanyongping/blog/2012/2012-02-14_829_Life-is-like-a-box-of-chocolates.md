@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Life is like a box of chocolates."
 author: "段永平"
 date: "2012-02-14"

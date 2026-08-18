@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "专利权、商标权与特许经营权"
 english: "Patents, Trademarks & Franchises"
 slug: "patents-trademarks-franchises"

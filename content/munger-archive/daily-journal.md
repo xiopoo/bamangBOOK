@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 每日期刊
 source: https://mungerarchive.com/zh/daily-journal/
 ---

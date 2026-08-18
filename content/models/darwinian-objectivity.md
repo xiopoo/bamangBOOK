@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "达尔文式客观态度"
 english: "Darwinian Objectivity"
 slug: "darwinian-objectivity"

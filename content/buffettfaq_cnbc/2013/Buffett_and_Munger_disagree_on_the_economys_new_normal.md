@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett and Munger disagree on the economy's "new normal"
 
 **原站时间**: 2013-05-05T03:00:00+0000

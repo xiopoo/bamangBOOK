@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "反脆弱设计"
 english: "Antifragile Design"
 slug: "antifragile-design"

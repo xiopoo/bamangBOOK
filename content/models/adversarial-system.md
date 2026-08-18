@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "对抗制与辩证过程"
 english: "Adversarial System"
 slug: "adversarial-system"

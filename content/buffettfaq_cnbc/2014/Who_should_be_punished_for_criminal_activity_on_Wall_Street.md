@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Who should be punished for criminal activity on Wall Street?
 
 **原站时间**: 2014-05-03T17:00:00+0000  

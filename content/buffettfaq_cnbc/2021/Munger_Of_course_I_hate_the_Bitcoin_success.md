@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: "Of course, I hate the Bitcoin success"
 
 **原站时间**: 2021-05-01T19:30:50+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格的最后一次CNBC访谈（2023）"
 source: "https://mungerarchive.com/zh/recordings/cnbc-final-interview-2023/"
 ---

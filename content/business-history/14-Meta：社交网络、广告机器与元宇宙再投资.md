@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Meta：社交网络、广告机器与元宇宙再投资"
 company: "Meta Platforms"
 sourcePdf: "Meta-Platforms-1.pdf"

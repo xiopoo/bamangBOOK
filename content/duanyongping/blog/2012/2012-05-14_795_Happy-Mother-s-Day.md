@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Happy Mother's Day!"
 author: "段永平"
 date: "2012-05-14"

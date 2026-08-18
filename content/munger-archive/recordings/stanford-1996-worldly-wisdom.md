@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "普世智慧再探（斯坦福法学院，1996）"
 source: "https://mungerarchive.com/zh/recordings/stanford-1996-worldly-wisdom/"
 ---

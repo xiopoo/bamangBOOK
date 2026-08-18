@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "自然选择与适者生存"
 english: "Natural Selection & Survival of the Fittest"
 slug: "natural-selection-survival-of-the-fittest"

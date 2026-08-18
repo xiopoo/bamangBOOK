@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "02 喜爱/热爱倾向"
 source: "https://mungerarchive.com/zh/mental-models/liking-loving/"
 ---

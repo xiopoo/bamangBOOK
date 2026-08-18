@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2007 Meeting
 
 **原站时间**: 2007-05-05T13:00:00+0000

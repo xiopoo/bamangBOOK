@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "折旧与摊销"
 english: "Depreciation & Amortization"
 slug: "depreciation-amortization"

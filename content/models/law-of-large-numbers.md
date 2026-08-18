@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "大数定律"
 english: "Law of Large Numbers"
 slug: "law-of-large-numbers"

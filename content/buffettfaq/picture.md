@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The Big Picture
 
 > 来源：https://buffettfaq.com/

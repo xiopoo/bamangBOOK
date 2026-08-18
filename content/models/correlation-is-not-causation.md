@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "相关不等于因果"
 english: "Correlation is not Causation"
 slug: "correlation-is-not-causation"

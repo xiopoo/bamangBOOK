@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "贝叶斯定理"
 english: "Bayes' Theorem"
 slug: "bayes-theorem"

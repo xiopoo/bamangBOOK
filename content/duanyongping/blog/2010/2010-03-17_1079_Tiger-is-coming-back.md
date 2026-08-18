@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Tiger is coming back!"
 author: "段永平"
 date: "2010-03-17"

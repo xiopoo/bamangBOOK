@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Never make an emotional investing decision
 
 **原站时间**: 2023-05-08T07:04:14+0000  

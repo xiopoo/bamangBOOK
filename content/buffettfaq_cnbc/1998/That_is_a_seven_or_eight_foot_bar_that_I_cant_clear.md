@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "That is a seven or eight foot bar that I can't clear"
 
 **原站时间**: 1998-05-04T13:00:00+0000

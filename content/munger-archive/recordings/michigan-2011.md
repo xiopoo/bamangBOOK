@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "与查理·芒格的对话（密歇根大学，2011年）"
 source: "https://mungerarchive.com/zh/recordings/michigan-2011/"
 ---

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Internet stocks were "a huge trap for the public"
 
 **原站时间**: 2001-04-28T13:00:00+0000

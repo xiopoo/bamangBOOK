@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2018 Berkshire Annual Meeting Highlight Reel (Mandarin)
 
 **原站时间**: 2018-08-01T17:47:44+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格，畅所欲言（《华尔街日报》/ 杰森·茨威格，2019）"
 source: "https://mungerarchive.com/zh/recordings/wsj-unplugged-2019/"
 ---

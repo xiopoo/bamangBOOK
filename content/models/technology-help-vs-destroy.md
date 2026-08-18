@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "技术对企业的利弊"
 english: "Technology: Help vs. Destroy"
 slug: "technology-help-vs-destroy"

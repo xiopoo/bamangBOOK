@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "15 社会认同倾向"
 source: "https://mungerarchive.com/zh/mental-models/social-proof/"
 ---

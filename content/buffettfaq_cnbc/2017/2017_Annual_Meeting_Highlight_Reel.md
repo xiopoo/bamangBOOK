@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2017 Annual Meeting Highlight Reel
 
 **原站时间**: 2017-05-06T13:00:00+0000  

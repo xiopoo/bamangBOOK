@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Should Berkshire guard against activist investors?
 
 **原站时间**: 2016-04-30T13:00:00+0000

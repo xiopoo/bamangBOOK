@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "边际效用"
 english: "Marginal Utility"
 slug: "marginal-utility"

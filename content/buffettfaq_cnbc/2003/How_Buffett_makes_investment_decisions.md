@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Buffett makes investment decisions
 
 **原站时间**: 2003-05-03T17:00:00+0000

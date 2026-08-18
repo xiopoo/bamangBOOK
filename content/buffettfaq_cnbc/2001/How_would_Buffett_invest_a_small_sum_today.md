@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How would Buffett invest a small sum today?
 
 **原站时间**: 2001-04-28T13:00:00+0000

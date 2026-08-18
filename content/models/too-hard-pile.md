@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "太难堆"
 english: "Too Hard Pile"
 slug: "too-hard-pile"

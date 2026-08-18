@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: China's BYD is a "damn miracle"
 
 **原站时间**: 2009-05-02T17:00:00+0000

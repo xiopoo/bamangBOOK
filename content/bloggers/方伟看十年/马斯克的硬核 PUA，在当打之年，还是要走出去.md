@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "马斯克的硬核 PUA，在当打之年，还是要走出去"
 account: "方伟看十年"
 date: "2024-02-08 11:30"

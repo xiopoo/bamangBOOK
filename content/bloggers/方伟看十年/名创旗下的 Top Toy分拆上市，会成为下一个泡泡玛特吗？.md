@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "名创旗下的 Top Toy分拆上市，会成为下一个泡泡玛特吗？"
 author: "方伟Rey"
 account: "方伟看十年"

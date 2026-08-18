@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "能力圈（元认知层面）"
 english: "Circle of Competence - Metacognitive Level"
 slug: "circle-of-competence-metacognitive-level"

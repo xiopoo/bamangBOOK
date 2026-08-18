@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "康德式公平倾向"
 english: "Kantian Fairness Tendency"
 slug: "kantian-fairness-tendency"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Independent' board directors aren't really independent
 
 **原站时间**: 2022-05-02T04:37:23+0000  

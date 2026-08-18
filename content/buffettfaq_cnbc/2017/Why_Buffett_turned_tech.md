@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett turned tech
 
 **原站时间**: 2017-05-06T17:00:00+0000  

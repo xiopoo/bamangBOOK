@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "This is a scummy way to keep the books"
 
 **原站时间**: 2001-04-28T17:00:00+0000

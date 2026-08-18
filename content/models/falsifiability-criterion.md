@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "可证伪性标准"
 english: "Falsifiability Criterion"
 slug: "falsifiability-criterion"

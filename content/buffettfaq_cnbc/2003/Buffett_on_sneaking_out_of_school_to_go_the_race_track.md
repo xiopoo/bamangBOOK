@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on sneaking out of school to go the race track
 
 **原站时间**: 2003-05-03T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "适应性辐射"
 english: "Adaptive Radiation"
 slug: "adaptive-radiation"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "find my friend（查找朋友）"
 author: "段永平"
 date: "2012-12-14"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "监管俘获"
 english: "Regulatory Capture"
 slug: "regulatory-capture"

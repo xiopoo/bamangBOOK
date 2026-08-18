@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "伯克希尔-哈撒韦年度股东大会（1994年至今）"
 source: "https://mungerarchive.com/zh/recordings/berkshire-hathaway-annual-meetings/"
 ---

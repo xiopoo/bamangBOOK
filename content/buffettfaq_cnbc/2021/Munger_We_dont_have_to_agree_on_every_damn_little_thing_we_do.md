@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: We don't have to agree on "every damn little thing we do"
 
 **原站时间**: 2021-05-01T17:30:36+0000  

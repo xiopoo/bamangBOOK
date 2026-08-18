@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire
 
 > 来源：https://buffettfaq.com/

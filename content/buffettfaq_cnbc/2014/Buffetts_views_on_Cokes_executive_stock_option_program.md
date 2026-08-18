@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's views on Coke's executive stock option program
 
 **原站时间**: 2014-05-03T13:00:00+0000

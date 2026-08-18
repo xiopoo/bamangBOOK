@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "【引用】2012年5月9日 Spring in the Bay Area on my iPhone 湾区的春天－8"
 author: "段永平"
 date: "2012-05-10"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "腾讯与字节的内容之争：精品化 vs 海量化"
 account: "方伟看十年"
 date: "2026-03-19 09:30"

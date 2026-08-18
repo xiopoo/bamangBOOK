@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "A lot of mischief can happen with derivatives"
 
 **原站时间**: 2004-05-01T13:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett is buying Activision as a merger arbitrage play
 
 **原站时间**: 2022-05-02T04:33:55+0000  

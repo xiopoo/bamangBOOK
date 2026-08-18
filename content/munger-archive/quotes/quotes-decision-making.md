@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论决策"
 source: "https://mungerarchive.com/zh/quotes/decision-making/"
 ---

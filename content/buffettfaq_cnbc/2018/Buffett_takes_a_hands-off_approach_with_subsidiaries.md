@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett takes a hands-off approach with subsidiaries
 
 **原站时间**: 2018-05-05T13:00:00+0000  

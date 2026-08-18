@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "I don't think I have any business speaking for Berkshire"
 
 **原站时间**: 2018-05-05T13:00:00+0000  

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 2009 Meeting
 
 **原站时间**: 2009-05-02T17:00:00+0000

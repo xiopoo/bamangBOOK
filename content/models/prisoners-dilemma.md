@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "囚徒困境"
 english: "Prisoner's Dilemma"
 slug: "prisoners-dilemma"

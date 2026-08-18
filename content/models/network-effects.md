@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "网络效应"
 english: "Network Effects"
 slug: "network-effects"

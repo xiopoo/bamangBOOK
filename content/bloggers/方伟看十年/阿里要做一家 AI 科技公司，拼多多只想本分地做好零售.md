@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "阿里要做一家 AI 科技公司，拼多多只想本分地做好零售"
 author: "方伟Rey"
 account: "方伟看十年"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's favorite quote on the dangers of gambling on stocks
 
 **原站时间**: 2021-05-01T17:30:39+0000  

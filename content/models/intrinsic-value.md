@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "内在价值"
 english: "Intrinsic Value"
 slug: "intrinsic-value"

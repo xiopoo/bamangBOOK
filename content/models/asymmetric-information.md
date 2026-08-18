@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "信息不对称"
 english: "Asymmetric Information"
 slug: "asymmetric-information"

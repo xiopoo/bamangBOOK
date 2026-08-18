@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "You Must Believe!"
 author: "段永平"
 date: "2012-04-26"

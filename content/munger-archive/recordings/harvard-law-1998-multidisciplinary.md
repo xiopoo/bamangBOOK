@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "对更多跨学科技能的需要（哈佛法学院50周年同学会，1998）"
 source: "https://mungerarchive.com/zh/recordings/harvard-law-1998-multidisciplinary/"
 ---

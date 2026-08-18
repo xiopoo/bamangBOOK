@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "2017 年每日期刊大会后的炉边谈话"
 source: "https://mungerarchive.com/zh/recordings/daily-journal-2017-fireside/"
 ---

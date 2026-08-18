@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "合同法基本原则"
 english: "Basics of Contract Law"
 slug: "basics-of-contract-law"

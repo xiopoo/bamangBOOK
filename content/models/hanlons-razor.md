@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "汉隆剃刀"
 english: "Hanlon's Razor"
 slug: "hanlons-razor"

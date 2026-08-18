@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "瓶颈效应与创始人效应"
 english: "Bottleneck Effect & Founder Effect"
 slug: "bottleneck-effect-founder-effect"

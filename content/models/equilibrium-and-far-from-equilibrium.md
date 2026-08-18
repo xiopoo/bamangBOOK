@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "均衡与远离均衡态"
 english: "Equilibrium and Far-from-Equilibrium"
 slug: "equilibrium-and-far-from-equilibrium"

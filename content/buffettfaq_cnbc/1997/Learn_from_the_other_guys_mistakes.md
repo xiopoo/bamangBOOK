@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Learn from the other guys' mistakes"
 
 **原站时间**: 1997-05-05T17:00:00+0000

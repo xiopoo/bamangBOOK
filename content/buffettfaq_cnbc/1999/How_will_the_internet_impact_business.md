@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How will the internet impact business?
 
 **原站时间**: 1999-05-03T13:00:00+0000

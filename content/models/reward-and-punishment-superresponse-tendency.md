@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "奖励和惩罚超级反应倾向"
 english: "Reward and Punishment Superresponse Tendency"
 slug: "reward-and-punishment-superresponse-tendency"

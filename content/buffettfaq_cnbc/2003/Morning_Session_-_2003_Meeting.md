@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2003 Meeting
 
 **原站时间**: 2003-05-03T13:00:00+0000

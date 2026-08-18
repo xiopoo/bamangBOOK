@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger thinks investing in China is worth the extra risk
 
 **原站时间**: 2022-05-02T04:34:58+0000  

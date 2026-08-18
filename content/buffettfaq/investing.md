@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Investing Approach
 
 > 来源：https://buffettfaq.com/

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Wells Fargo's biggest mistake
 
 **原站时间**: 2017-05-06T13:00:00+0000  

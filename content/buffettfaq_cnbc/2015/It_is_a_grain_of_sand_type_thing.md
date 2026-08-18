@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "It is a grain of sand type thing"
 
 **原站时间**: 2015-05-02T13:00:00+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "喜欢与热爱倾向"
 english: "Liking/Loving Tendency"
 slug: "liking-loving-tendency"

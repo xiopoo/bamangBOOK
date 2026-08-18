@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "苏格拉底式追问"
 english: "Socratic Method"
 slug: "socratic-method"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "The B has worked out as well as possible"
 
 **原站时间**: 1998-05-04T17:00:00+0000

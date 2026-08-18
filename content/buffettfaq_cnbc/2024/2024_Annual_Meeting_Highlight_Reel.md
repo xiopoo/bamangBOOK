@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2024 Annual Meeting Highlight Reel
 
 **原站时间**: 2024-05-06T04:03:36+0000

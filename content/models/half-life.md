@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "半衰期"
 english: "Half-Life"
 slug: "half-life"

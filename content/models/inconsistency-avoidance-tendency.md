@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "避免不一致性倾向"
 english: "Inconsistency-Avoidance Tendency"
 slug: "inconsistency-avoidance-tendency"

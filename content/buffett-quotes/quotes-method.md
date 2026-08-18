@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "巴菲特谈投资方法"
 ---
 

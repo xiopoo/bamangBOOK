@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "瓶颈理论"
 english: "Theory of Constraints"
 slug: "theory-of-constraints"

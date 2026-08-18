@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "安全边际（工程源头）"
 english: "Engineering Margin of Safety"
 slug: "engineering-margin-of-safety"

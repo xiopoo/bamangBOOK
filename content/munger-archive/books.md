@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 书籍
 source: https://mungerarchive.com/zh/books/
 ---

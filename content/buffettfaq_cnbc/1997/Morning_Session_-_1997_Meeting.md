@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 1997 Meeting
 
 **原站时间**: 2018-11-16T16:05:37+0000

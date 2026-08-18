@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We have this quirk" when it comes to selling businesses
 
 **原站时间**: 2000-04-29T13:00:00+0000

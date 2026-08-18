@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "知识产权法"
 english: "Intellectual Property Law"
 slug: "intellectual-property-law"

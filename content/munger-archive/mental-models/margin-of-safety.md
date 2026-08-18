@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "安全边际"
 source: "https://mungerarchive.com/zh/mental-models/margin-of-safety/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "独立思考"
 english: "Independence"
 slug: "independence"

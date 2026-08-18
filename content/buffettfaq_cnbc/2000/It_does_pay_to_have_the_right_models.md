@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "It does pay to have the right models"
 
 **原站时间**: 2000-04-29T17:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire will be patient with its big cash pile
 
 **原站时间**: 2025-05-05T05:16:33+0000

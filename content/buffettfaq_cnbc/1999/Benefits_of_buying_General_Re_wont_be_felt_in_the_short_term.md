@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Benefits of buying General Re won't be felt "in the short term"
 
 **原站时间**: 1999-05-03T17:00:00+0000

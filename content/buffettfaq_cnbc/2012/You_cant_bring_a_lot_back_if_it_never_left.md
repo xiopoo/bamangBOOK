@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "You can't bring a lot back if it never left"
 
 **原站时间**: 2012-05-05T13:00:00+0000

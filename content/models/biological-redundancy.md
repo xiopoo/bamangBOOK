@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "生物冗余设计"
 english: "Biological Redundancy"
 slug: "biological-redundancy"

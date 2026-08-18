@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "25 叠加效应倾向"
 source: "https://mungerarchive.com/zh/mental-models/lollapalooza/"
 ---

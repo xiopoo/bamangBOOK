@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "每日期刊2022年年会"
 source: "https://mungerarchive.com/zh/recordings/daily-journal-2022/"
 ---

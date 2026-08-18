@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "The ultimate problem of mankind"
 
 **原站时间**: 2006-05-06T13:00:00+0000

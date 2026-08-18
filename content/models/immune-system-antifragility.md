@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "免疫系统与抗脆弱性"
 english: "Immune System & Antifragility"
 slug: "immune-system-antifragility"

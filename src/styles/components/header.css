@@ -399,4 +399,78 @@
   .archive-mobile-menu__grid {
     grid-template-columns: 1fr;
   }
+
+  /* 移动菜单精简：一屏内可浏览全部入口
+     手机空间有限：隐去链接 meta 小字，行高收紧，
+     分组内部小节两列排布，大幅压缩纵向高度。 */
+  .archive-mobile-menu {
+    padding: 0.75rem;
+  }
+
+  .archive-mobile-menu__search {
+    min-height: 40px;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.74rem;
+  }
+
+  .archive-mobile-menu__grid {
+    margin-top: 0.75rem;
+  }
+
+  .archive-mobile-menu section {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .archive-mobile-menu section > p {
+    margin-bottom: 0.3rem;
+    font-size: 0.64rem;
+  }
+
+  .archive-mobile-menu section a {
+    min-height: 36px;
+    padding: 0.25rem 0;
+    font-size: 0.8rem;
+  }
+
+  /* 链接 meta 小字在手机上隐去（保留分组标题） */
+  .archive-mobile-menu section a small {
+    display: none;
+  }
+
+  /* 分组内小节两列排布，小节标题跨两列 */
+  .archive-mobile-menu__section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1rem;
+    align-items: start;
+  }
+
+  .archive-mobile-menu__section .archive-mobile-menu__section-title {
+    grid-column: 1 / -1;
+    margin-bottom: 0.1rem;
+  }
+
+  .archive-mobile-menu__section + .archive-mobile-menu__section {
+    margin-top: 0.5rem;
+  }
+
+  /* 带标题的分组（人物/类别）：小节两两并排，压缩纵向高度
+     电子书（第 3 位）与关于（第 4 位）为无 p 标题的直接链接分组，保持单列 */
+  .archive-mobile-menu__grid section:first-child,
+  .archive-mobile-menu__grid section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem 1rem;
+    align-items: start;
+  }
+
+  .archive-mobile-menu__grid section:first-child > p,
+  .archive-mobile-menu__grid section:nth-child(2) > p {
+    grid-column: 1 / -1;
+  }
+
+  .archive-mobile-menu__theme {
+    min-height: 40px;
+    margin-top: 0.75rem;
+  }
 }

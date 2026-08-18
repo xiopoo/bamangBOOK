@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "飞轮效应"
 english: "Flywheel Effect"
 slug: "flywheel-effect"

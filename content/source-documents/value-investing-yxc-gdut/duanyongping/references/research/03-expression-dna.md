@@ -1,3 +1,7 @@
+---
+content_type: article
+---
+
 # 03 - 段永平表达风格DNA
 
 ## 句式特征

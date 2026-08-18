@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "最近对SaaS的10点思考"
 author: "方伟Rey"
 account: "方伟看十年"

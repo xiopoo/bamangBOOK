@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "03 厌恶/憎恨倾向"
 source: "https://mungerarchive.com/zh/mental-models/disliking-hating/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "信号理论"
 english: "Signaling Theory"
 slug: "signaling-theory"

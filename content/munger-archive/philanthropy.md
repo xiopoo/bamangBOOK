@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 慈善
 source: https://mungerarchive.com/zh/philanthropy/
 ---

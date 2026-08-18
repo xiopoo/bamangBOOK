@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "价格歧视"
 english: "Price Discrimination"
 slug: "price-discrimination"

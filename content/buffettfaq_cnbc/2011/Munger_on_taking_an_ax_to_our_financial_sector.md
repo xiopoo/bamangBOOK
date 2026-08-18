@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger on "taking an ax to our financial sector"
 
 **原站时间**: 2011-04-30T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "商誉及其减值"
 english: "Goodwill & Impairment"
 slug: "goodwill-impairment"

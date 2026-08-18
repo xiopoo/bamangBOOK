@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格谈逆向思考"
 source: "https://mungerarchive.com/zh/quotes/inversion/"
 ---

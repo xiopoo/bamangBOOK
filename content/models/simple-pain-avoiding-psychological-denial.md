@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "避免痛苦的心理否认"
 english: "Simple, Pain-Avoiding Psychological Denial"
 slug: "simple-pain-avoiding-psychological-denial"

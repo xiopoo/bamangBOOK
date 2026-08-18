@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We'll probably have the CEO within a couple of months"
 
 **原站时间**: 2018-05-05T13:00:00+0000  

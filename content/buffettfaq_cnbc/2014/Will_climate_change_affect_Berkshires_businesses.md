@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Will climate change affect Berkshire's businesses?
 
 **原站时间**: 2014-05-03T13:00:00+0000

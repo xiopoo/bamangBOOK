@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "破坏性创新"
 english: "Disruptive Innovation"
 slug: "disruptive-innovation"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "The original purchase of Berkshire was a terrible mistake"
 
 **原站时间**: 2000-04-29T17:00:00+0000

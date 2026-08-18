@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "体验上千款SaaS后，教你3步快速理解一款SaaS"
 author: "方伟Rey"
 account: "方伟看十年"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett and Munger on Adam Smith's "The Wealth of Nations"
 
 **原站时间**: 2015-05-02T17:00:00+0000  

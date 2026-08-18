@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Accounting, Corporate Finance, & Investing
 
 > 来源：https://buffettfaq.com/

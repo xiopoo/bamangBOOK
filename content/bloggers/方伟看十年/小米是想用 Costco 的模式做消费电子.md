@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "小米是想用 Costco 的模式做消费电子"
 author: "方伟Rey"
 account: "方伟看十年"

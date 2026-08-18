@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's "five minute test"
 
 **原站时间**: 1997-05-05T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "边际成本与边际收益"
 english: "Marginal Cost & Marginal Revenue"
 slug: "marginal-cost-marginal-revenue"

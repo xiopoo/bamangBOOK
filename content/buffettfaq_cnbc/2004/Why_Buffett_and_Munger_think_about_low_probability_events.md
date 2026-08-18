@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett and Munger think about "low probability events"
 
 **原站时间**: 2004-05-01T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "当前的经济危机——芒格与约瑟夫·格伦德费斯特对谈（斯坦福，2009）"
 source: "https://mungerarchive.com/zh/recordings/stanford-grundfest-2009/"
 ---

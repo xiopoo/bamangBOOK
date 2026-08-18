@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett admits selling some Apple shares was "probably a mistake"
 
 **原站时间**: 2021-05-01T17:30:49+0000  

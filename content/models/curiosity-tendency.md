@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "好奇心倾向"
 english: "Curiosity Tendency"
 slug: "curiosity-tendency"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "权威错误影响倾向"
 english: "Authority-Misinfluence Tendency"
 slug: "authority-misinfluence-tendency"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 2019 Meeting
 
 > 2019 年伯克希尔·哈撒韦股东大会

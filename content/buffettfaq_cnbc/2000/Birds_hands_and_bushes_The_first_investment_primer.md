@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Birds, hands, and bushes: The first investment primer
 
 **原站时间**: 2000-04-29T13:00:00+0000

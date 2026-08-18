@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The "simple arithmetic" behind a Berkshire buyback
 
 **原站时间**: 2019-05-04T14:15:27+0000

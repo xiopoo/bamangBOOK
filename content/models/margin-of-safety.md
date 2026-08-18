@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "安全边际"
 english: "Margin of Safety"
 slug: "margin-of-safety"

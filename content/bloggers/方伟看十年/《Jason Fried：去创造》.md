@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "《Jason Fried：去创造》"
 author: "方伟Rey"
 account: "方伟看十年"

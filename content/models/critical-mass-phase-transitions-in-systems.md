@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "临界质量与相变"
 english: "Critical Mass & Phase Transitions in Systems"
 slug: "critical-mass-phase-transitions-in-systems"

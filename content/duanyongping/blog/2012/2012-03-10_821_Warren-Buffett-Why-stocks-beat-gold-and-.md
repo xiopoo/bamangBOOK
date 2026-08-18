@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Warren Buffett: Why stocks beat gold and bonds"
 author: "段永平"
 date: "2012-03-10"

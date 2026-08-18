@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "集中持仓"
 english: "Concentration / Less is More"
 slug: "concentration-less-is-more"

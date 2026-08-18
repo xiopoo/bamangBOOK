@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'The tapeworm won'
 
 **原站时间**: 2025-05-05T05:23:54+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "决策树理论"
 english: "Decision Tree Theory"
 slug: "decision-tree-theory"

@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "每日期刊 2018 年股东大会"
 source: "https://mungerarchive.com/zh/recordings/daily-journal-2018/"
 ---

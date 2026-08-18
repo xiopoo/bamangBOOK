@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "冗余备份系统"
 english: "Redundancy"
 slug: "redundancy"

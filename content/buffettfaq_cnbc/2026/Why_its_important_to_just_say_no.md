@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why it's important to 'just say no'
 
 **原站时间**: 2026-05-04T04:39:29+0000

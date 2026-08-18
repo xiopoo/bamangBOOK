@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "经验主义"
 english: "Empiricism"
 slug: "empiricism"

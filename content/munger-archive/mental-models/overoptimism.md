@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "13 过度乐观倾向"
 source: "https://mungerarchive.com/zh/mental-models/overoptimism/"
 ---

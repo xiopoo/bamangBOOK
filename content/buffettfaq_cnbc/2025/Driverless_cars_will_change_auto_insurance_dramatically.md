@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Driverless cars will change auto insurance 'dramatically'
 
 **原站时间**: 2025-05-05T05:19:55+0000  

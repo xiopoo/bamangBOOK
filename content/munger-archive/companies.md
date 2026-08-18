@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 公司
 source: https://mungerarchive.com/zh/companies/
 ---

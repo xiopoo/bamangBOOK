@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "沉没成本vs边际成本"
 english: "Sunk Cost vs. Marginal Cost"
 slug: "sunk-cost-vs-marginal-cost"

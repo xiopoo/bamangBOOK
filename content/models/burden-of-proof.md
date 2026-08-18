@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "举证责任与证据标准"
 english: "Burden of Proof"
 slug: "burden-of-proof"

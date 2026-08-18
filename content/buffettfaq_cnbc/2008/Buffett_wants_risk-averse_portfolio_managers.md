@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett wants risk-averse portfolio managers
 
 **原站时间**: 2008-05-03T17:00:00+0000

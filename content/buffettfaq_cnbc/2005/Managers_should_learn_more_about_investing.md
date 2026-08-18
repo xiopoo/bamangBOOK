@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Managers should learn more about investing
 
 **原站时间**: 2005-04-30T13:00:00+0000

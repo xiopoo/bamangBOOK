@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "谷歌、微软、Meta的财报一个比一个炸裂，为什么咱这边短期只能卷外卖？"
 author: "方伟Rey"
 account: "方伟看十年"

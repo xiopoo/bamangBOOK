@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "能力圈（管理层面）"
 english: "Circle of Competence - Management Level"
 slug: "circle-of-competence-management-level"

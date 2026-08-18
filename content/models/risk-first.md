@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "风险优先"
 english: "Risk First"
 slug: "risk-first"

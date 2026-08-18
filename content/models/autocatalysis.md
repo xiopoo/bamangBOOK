@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "自我催化模型"
 english: "Autocatalysis"
 slug: "autocatalysis"

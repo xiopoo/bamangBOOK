@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "过失与严格责任"
 english: "Negligence vs. Strict Liability"
 slug: "negligence-vs-strict-liability"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "艳羡与妒忌倾向"
 english: "Envy/Jealousy Tendency"
 slug: "envy-jealousy-tendency"

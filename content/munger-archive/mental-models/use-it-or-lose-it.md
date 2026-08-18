@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "19 用进废退倾向"
 source: "https://mungerarchive.com/zh/mental-models/use-it-or-lose-it/"
 ---

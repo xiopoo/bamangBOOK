@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Never Say Never"
 author: "段永平"
 date: "2011-02-12"

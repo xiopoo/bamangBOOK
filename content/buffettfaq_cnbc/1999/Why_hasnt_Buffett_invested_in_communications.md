@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why hasn't Buffett invested in communications?
 
 **原站时间**: 1999-05-03T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格与约翰·科里森（《最好的投资》，2023）"
 source: "https://mungerarchive.com/zh/recordings/invest-like-the-best-2023/"
 ---

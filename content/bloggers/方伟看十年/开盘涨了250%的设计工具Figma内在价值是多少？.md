@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "开盘涨了250%的设计工具Figma内在价值是多少？"
 author: "方伟Rey"
 account: "方伟看十年"

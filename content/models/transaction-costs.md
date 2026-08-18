@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "交易成本"
 english: "Transaction Costs"
 slug: "transaction-costs"

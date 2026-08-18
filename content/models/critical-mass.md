@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "临界质量"
 english: "Critical Mass"
 slug: "critical-mass"

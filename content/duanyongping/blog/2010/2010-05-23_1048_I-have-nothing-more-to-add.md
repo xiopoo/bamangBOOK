@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "I have nothing more to add。"
 author: "段永平"
 date: "2010-05-23"

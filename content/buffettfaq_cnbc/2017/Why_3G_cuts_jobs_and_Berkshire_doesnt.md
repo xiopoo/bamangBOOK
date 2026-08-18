@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why 3G cuts jobs and Berkshire doesn't
 
 **原站时间**: 2017-05-06T17:00:00+0000  

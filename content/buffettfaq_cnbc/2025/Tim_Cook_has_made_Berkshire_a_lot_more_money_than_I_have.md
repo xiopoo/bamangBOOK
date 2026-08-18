@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Tim Cook has made Berkshire a lot more money' than I have
 
 **原站时间**: 2025-05-05T05:15:14+0000

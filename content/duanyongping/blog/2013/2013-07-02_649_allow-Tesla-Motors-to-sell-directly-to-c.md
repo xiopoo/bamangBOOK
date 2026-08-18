@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "allow Tesla Motors to sell directly to consumers in all 50 states."
 author: "段永平"
 date: "2013-07-02"

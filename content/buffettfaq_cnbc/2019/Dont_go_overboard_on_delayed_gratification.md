@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Don't go overboard on delayed gratification"
 
 **原站时间**: 2019-05-04T14:15:20+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Y2K problem won't have a huge impact on Berkshire
 
 **原站时间**: 1998-05-04T13:00:00+0000

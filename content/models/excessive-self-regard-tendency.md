@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "自视过高的倾向"
 english: "Excessive Self-Regard Tendency"
 slug: "excessive-self-regard-tendency"

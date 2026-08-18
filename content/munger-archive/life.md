@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 生平
 source: https://mungerarchive.com/zh/life/
 ---

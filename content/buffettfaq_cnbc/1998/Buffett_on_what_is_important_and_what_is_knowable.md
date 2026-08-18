@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on what is important and what is knowable
 
 **原站时间**: 1998-05-04T13:00:00+0000

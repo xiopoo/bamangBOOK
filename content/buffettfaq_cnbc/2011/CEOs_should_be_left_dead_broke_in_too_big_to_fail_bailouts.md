@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # CEOs should be left "dead broke" in "too big to fail" bailouts
 
 **原站时间**: 2011-04-30T17:00:00+0000

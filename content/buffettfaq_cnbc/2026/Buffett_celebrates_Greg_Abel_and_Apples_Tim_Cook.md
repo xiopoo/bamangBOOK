@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett 'celebrates' Greg Abel and Apple's Tim Cook
 
 **原站时间**: 2026-05-04T04:37:40+0000  

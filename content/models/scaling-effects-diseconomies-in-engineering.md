@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "规模效应与反效应"
 english: "Scaling Effects & Diseconomies in Engineering"
 slug: "scaling-effects-diseconomies-in-engineering"

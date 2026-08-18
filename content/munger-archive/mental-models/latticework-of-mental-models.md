@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "思维格栅"
 source: "https://mungerarchive.com/zh/mental-models/latticework-of-mental-models/"
 ---

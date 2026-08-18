@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论性情"
 source: "https://mungerarchive.com/zh/quotes/temperament/"
 ---

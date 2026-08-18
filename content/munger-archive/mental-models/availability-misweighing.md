@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "18 易得性错误权衡倾向"
 source: "https://mungerarchive.com/zh/mental-models/availability-misweighing/"
 ---

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Derivatives will "cause a lot of trouble in due course"
 
 **原站时间**: 2007-05-05T13:00:00+0000

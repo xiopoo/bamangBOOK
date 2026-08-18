@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Poor messaging' is making Americans worry about their bank deposits
 
 **原站时间**: 2023-05-08T06:56:40+0000  

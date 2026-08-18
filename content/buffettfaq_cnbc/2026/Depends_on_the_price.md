@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Depends on the price'
 
 **原站时间**: 2026-05-04T04:39:45+0000

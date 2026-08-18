@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # On the "25 things you want to achieve" list
 
 **原站时间**: 2013-05-04T13:00:00+0000

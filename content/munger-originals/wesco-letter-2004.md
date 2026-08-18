@@ -1,5 +1,6 @@
 ---
 title: "Wesco Financial Corporation Letter to Shareholders 2004"
+content_type: "letter"
 year: 2004
 person: "munger"
 author: "Charles T. Munger"

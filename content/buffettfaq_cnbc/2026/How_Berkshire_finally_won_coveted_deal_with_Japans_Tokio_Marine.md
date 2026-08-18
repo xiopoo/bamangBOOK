@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Berkshire finally won coveted deal with Japan's Tokio Marine
 
 **原站时间**: 2026-05-04T04:38:26+0000

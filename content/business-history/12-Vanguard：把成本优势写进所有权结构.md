@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Vanguard：把成本优势写进所有权结构"
 company: "Vanguard"
 sourcePdf: "Vanguard.pdf"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The 'aha' moment that changed Buffett's life
 
 **原站时间**: 2022-05-02T04:32:11+0000

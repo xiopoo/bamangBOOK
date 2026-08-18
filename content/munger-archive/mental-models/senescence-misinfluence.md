@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "21 衰老错误影响倾向"
 source: "https://mungerarchive.com/zh/mental-models/senescence-misinfluence/"
 ---

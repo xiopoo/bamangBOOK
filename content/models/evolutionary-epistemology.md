@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "进化认识论"
 english: "Evolutionary Epistemology"
 slug: "evolutionary-epistemology"

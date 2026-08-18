@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "寻租行为"
 english: "Rent-Seeking"
 slug: "rent-seeking"

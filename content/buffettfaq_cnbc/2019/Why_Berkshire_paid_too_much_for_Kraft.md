@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Berkshire paid too much for Kraft
 
 **原站时间**: 2025-09-06T01:19:48+0000

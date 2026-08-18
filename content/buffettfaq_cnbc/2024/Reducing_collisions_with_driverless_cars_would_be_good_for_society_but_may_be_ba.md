@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Reducing collisions with driverless cars would be good for society but may be bad for GEICO
 
 **原站时间**: 2024-05-06T04:06:37+0000

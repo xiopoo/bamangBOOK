@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "沉没成本谬误"
 english: "Sunk Cost Fallacy"
 slug: "sunk-cost-fallacy"

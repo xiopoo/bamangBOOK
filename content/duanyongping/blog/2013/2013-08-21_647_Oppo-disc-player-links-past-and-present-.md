@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Oppo disc player links past and present of music, video"
 author: "段永平"
 date: "2013-08-21"

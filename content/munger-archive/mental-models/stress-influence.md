@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "17 压力影响倾向"
 source: "https://mungerarchive.com/zh/mental-models/stress-influence/"
 ---

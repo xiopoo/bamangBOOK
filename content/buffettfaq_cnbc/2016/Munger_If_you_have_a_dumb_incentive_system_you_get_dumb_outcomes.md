@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: "If you have a dumb incentive system, you get dumb outcomes"
 
 **原站时间**: 2016-04-30T17:00:00+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "20 药物错误影响倾向"
 source: "https://mungerarchive.com/zh/mental-models/drug-misinfluence/"
 ---

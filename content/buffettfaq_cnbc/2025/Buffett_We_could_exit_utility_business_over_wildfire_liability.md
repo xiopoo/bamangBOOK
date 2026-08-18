@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: We could exit utility business over wildfire liability
 
 **原站时间**: 2025-05-05T05:21:02+0000

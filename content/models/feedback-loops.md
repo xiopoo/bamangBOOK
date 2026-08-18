@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "反馈环"
 english: "Feedback Loops"
 slug: "feedback-loops"

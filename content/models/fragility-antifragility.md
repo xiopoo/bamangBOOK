@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "脆弱性与反脆弱性"
 english: "Fragility & Antifragility"
 slug: "fragility-antifragility"

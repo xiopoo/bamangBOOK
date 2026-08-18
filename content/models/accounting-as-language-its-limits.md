@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "会计作为商业语言及其局限"
 english: "Accounting as Language & Its Limits"
 slug: "accounting-as-language-its-limits"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's Blue Chip Stamps "wizardry"
 
 **原站时间**: 1994-04-25T13:00:00+0000

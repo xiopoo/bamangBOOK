@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "历史偶然性与路径依赖"
 english: "Historical Contingency & Path Dependence"
 slug: "historical-contingency-path-dependence"

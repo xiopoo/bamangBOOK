@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Growth and value are not distinct categories
 
 **原站时间**: 2000-04-29T13:00:00+0000

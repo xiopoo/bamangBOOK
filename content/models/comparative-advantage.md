@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "比较优势"
 english: "Comparative Advantage"
 slug: "comparative-advantage"

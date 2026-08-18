@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "与沃伦·巴菲特合伙的力量（2016）"
 source: "https://mungerarchive.com/zh/recordings/power-of-partnership-2016/"
 ---

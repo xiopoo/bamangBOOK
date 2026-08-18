@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How much should Buffett's successor get paid?
 
 **原站时间**: 2017-05-06T13:00:00+0000  

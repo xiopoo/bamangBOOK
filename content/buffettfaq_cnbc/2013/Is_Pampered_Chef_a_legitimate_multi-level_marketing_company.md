@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Is Pampered Chef a legitimate multi-level marketing company?
 
 **原站时间**: 2013-05-04T13:00:00+0000

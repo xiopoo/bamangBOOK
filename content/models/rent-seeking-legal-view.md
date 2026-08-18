@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "寻租行为法学视角"
 english: "Rent-Seeking - Legal View"
 slug: "rent-seeking-legal-view"

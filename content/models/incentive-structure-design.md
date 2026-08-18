@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "激励结构设计"
 english: "Incentive Structure Design"
 slug: "incentive-structure-design"

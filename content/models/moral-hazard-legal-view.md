@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "道德风险法学视角"
 english: "Moral Hazard - Legal View"
 slug: "moral-hazard-legal-view"

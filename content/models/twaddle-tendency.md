@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "废话倾向"
 english: "Twaddle Tendency"
 slug: "twaddle-tendency"

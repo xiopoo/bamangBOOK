@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "都是卖服装，为什么优衣库跟Shein就有护城河"
 author: "方伟Rey"
 account: "方伟看十年"

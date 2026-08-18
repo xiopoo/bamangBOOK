@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "If you are willing to do dumb things in insurance, the world will find you"
 
 **原站时间**: 2003-05-03T13:00:00+0000

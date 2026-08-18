@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire's Amazon buy isn't a shift away from "value" investing
 
 **原站时间**: 2019-05-04T14:15:14+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "启蒙运动的理性传统"
 english: "Enlightenment Rationalism"
 slug: "enlightenment-rationalism"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论激励"
 source: "https://mungerarchive.com/zh/quotes/incentives/"
 ---

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett doesn't recommend buying Berkshire stock
 
 **原站时间**: 2021-05-01T17:30:25+0000

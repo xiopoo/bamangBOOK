@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "智谱、Anthropic会是AI 时代的腾讯、谷歌吗？"
 author: "投资向善"
 account: "方伟看10年"

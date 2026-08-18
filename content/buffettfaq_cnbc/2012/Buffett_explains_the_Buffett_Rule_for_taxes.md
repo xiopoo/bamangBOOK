@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett explains the "Buffett Rule" for taxes
 
 **原站时间**: 2012-05-05T13:00:00+0000

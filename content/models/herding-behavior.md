@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "羊群行为"
 english: "Herding Behavior"
 slug: "herding-behavior"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "过度乐观倾向"
 english: "Overoptimism Tendency"
 slug: "overoptimism-tendency"

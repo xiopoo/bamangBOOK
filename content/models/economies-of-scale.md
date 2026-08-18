@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "规模优势"
 english: "Economies of Scale"
 slug: "economies-of-scale"

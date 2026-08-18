@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How will the internet impact newspapers?
 
 **原站时间**: 2000-04-29T13:00:00+0000

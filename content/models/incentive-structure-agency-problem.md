@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "激励结构与代理问题"
 english: "Incentive Structure & Agency Problem"
 slug: "incentive-structure-agency-problem"

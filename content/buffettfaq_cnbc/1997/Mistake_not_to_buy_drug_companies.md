@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Mistake" not to buy drug companies
 
 **原站时间**: 1997-05-05T17:00:00+0000

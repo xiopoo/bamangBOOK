@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "复式记账法"
 english: "Double-Entry Bookkeeping"
 slug: "double-entry-bookkeeping"

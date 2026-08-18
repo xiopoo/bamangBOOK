@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "企业文化作为资产"
 english: "Corporate Culture as Asset"
 slug: "corporate-culture-as-asset"

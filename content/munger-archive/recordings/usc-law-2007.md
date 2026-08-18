@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "南加州大学法学院毕业典礼演讲（2007）"
 source: "https://mungerarchive.com/zh/recordings/usc-law-2007/"
 ---

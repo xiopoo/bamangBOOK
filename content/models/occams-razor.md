@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "奥卡姆剃刀"
 english: "Occam's Razor"
 slug: "occams-razor"

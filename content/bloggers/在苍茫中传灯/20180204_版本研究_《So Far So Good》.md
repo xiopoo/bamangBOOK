@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "版本研究:《So Far So Good》"
 author: "姚斌"
 account: "在苍茫中传灯"

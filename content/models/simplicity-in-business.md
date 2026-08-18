@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "简单化在商业中的应用"
 english: "Simplicity in Business"
 slug: "simplicity-in-business"

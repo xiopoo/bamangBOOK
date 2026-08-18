@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Trader Joe's：小店型零售的反规模化胜利"
 company: "Trader Joe's"
 sourcePdf: "Trader-Joes.pdf"

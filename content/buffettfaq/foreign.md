@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Foreign Investments
 
 > 来源：https://buffettfaq.com/

@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "学院派经济学：长处与缺陷（加州大学圣巴巴拉分校，2003）"
 source: "https://mungerarchive.com/zh/recordings/ucsb-2003-academic-economics/"
 ---

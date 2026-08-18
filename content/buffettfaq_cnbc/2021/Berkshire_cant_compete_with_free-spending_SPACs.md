@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire can't compete with free-spending SPACs
 
 **原站时间**: 2021-05-01T17:30:44+0000  

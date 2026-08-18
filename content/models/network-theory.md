@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "网络理论"
 english: "Network Theory"
 slug: "network-theory"

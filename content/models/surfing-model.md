@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "冲浪模型"
 english: "Surfing Model"
 slug: "surfing-model"

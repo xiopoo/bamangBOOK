@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格谈金钱与费用"
 source: "https://mungerarchive.com/zh/quotes/money/"
 ---

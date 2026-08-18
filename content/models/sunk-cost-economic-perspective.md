@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "沉没成本（经济视角）"
 english: "Sunk Cost - Economic Perspective"
 slug: "sunk-cost-economic-perspective"

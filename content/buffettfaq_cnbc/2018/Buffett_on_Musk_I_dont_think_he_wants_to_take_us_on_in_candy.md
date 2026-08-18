@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on Musk: "I don't think he wants to take us on in candy"
 
 **原站时间**: 2018-05-05T13:00:00+0000  

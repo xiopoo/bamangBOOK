@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Notes from meeting with Warren Buffett"
 author: "段永平"
 date: "2010-04-13"

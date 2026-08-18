@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Index funds are getting too involved in corporate governance
 
 **原站时间**: 2022-05-02T04:34:24+0000  

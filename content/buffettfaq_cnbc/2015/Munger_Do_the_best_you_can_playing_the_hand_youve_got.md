@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: "Do the best you can playing the hand you've got"
 
 **原站时间**: 2015-05-02T13:00:00+0000  

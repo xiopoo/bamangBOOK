@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "与查理·芒格的对话（密歇根罗斯商学院，2017年）"
 source: "https://mungerarchive.com/zh/recordings/michigan-ross-2017/"
 ---

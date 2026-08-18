@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Catastrophic' if FDIC didn't backstop SVB deposits
 
 **原站时间**: 2023-05-08T06:44:56+0000  

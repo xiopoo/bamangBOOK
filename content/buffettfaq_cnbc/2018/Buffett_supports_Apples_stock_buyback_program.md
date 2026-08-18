@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett supports Apple's stock buyback program
 
 **原站时间**: 2018-05-05T17:00:00+0000

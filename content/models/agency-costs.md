@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "代理成本"
 english: "Agency Costs"
 slug: "agency-costs"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "正常事故"
 english: "Normal Accidents"
 slug: "normal-accidents"

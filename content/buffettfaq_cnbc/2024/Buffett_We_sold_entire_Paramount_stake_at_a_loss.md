@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: We sold entire Paramount stake at a loss
 
 **原站时间**: 2024-05-06T04:07:04+0000

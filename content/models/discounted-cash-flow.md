@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "现金流贴现法"
 english: "Discounted Cash Flow"
 slug: "discounted-cash-flow"

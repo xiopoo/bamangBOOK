@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett worries about the U.S. dollar
 
 **原站时间**: 2025-05-05T05:18:08+0000  

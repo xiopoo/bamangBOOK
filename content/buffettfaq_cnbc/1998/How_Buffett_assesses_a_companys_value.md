@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Buffett assesses a company's value
 
 **原站时间**: 1998-05-04T17:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Don't ask the barber whether you need a haircut"
 
 **原站时间**: 2011-04-30T17:00:00+0000

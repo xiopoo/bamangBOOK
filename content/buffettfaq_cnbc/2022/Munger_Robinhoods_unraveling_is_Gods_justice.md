@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: Robinhood's 'unraveling' is God's justice
 
 **原站时间**: 2022-05-02T04:32:52+0000  

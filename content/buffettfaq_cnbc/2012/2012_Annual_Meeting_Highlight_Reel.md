@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2012 Annual Meeting Highlight Reel
 
 **原站时间**: 2012-05-05T17:00:00+0000

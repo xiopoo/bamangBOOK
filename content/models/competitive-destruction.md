@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "竞争性毁灭"
 english: "Competitive Destruction"
 slug: "competitive-destruction"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Will Charlie Munger have a successor?
 
 **原站时间**: 2014-05-03T13:00:00+0000

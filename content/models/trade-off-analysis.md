@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "权衡分析"
 english: "Trade-off Analysis"
 slug: "trade-off-analysis"

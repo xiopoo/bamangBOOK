@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "01 奖惩超级反应倾向"
 source: "https://mungerarchive.com/zh/mental-models/incentive-superresponse/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Meta Q3简评：暴跌11%是股东对创始人的宏伟愿景的反对票"
 author: "方伟Rey"
 account: "方伟看十年"

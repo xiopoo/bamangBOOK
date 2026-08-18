@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "2004（左右）-段永平北大总裁班演讲：企业的诚信意识"
 author: "段永平"
 year: "unknown"

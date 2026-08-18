@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "双轨分析"
 english: "Two-Track Analysis"
 slug: "two-track-analysis"

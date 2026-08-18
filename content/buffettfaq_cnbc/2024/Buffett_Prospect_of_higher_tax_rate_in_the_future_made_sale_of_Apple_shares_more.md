@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: Prospect of higher tax rate in the future made sale of Apple shares more attractive now
 
 **原站时间**: 2024-05-06T04:05:10+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Alternatives to Common Stock
 
 > 来源：https://buffettfaq.com/

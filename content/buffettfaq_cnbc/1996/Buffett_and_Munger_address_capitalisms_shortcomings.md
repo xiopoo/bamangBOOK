@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett and Munger address capitalism's shortcomings
 
 **原站时间**: 1996-05-06T17:00:00+0000

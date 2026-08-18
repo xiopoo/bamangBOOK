@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "人类误判心理学（1995）"
 source: "https://mungerarchive.com/zh/recordings/psychology-of-human-misjudgment-1995/"
 ---

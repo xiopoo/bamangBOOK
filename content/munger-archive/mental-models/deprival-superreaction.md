@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "14 被剥夺超级反应倾向"
 source: "https://mungerarchive.com/zh/mental-models/deprival-superreaction/"
 ---

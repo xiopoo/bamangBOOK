@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "07 康德式公平倾向"
 source: "https://mungerarchive.com/zh/mental-models/kantian-fairness/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "叠加原理与涌现"
 english: "Superposition and Emergence"
 slug: "superposition-and-emergence"

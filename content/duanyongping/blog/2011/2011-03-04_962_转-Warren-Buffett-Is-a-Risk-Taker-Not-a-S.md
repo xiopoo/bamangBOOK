@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "(转）Warren Buffett Is a Risk Taker, Not a Sleepy Investor"
 author: "段永平"
 date: "2011-03-04"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "故障模式分析"
 english: "Failure Mode Analysis"
 slug: "failure-mode-analysis"

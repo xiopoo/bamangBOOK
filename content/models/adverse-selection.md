@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "逆向选择"
 english: "Adverse Selection"
 slug: "adverse-selection"

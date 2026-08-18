@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Specific Businesses
 
 > 来源：https://buffettfaq.com/

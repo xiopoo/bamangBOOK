@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "容错设计与优雅降级"
 english: "Fault Tolerance"
 slug: "fault-tolerance"

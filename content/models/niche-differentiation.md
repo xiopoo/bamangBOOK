@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "利基分化"
 english: "Niche Differentiation"
 slug: "niche-differentiation"

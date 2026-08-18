@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "存货计价方法"
 english: "Inventory Valuation Methods"
 slug: "inventory-valuation-methods"
