@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "人类误判心理学 - 概览"
 source: "https://mungerarchive.com/zh/mental-models/psychology-of-human-misjudgment/"
 ---

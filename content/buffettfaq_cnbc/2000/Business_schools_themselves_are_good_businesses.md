@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Business schools themselves are good businesses
 
 **原站时间**: 2000-04-29T17:00:00+0000

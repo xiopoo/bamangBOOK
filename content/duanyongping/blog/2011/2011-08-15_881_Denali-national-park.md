@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Denali national park"
 author: "段永平"
 date: "2011-08-15"

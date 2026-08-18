@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett has 'decidedly backed off' from politics
 
 **原站时间**: 2022-05-02T04:33:22+0000  

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # AI could make financial scams a 'growth industry'
 
 **原站时间**: 2024-05-06T04:05:37+0000

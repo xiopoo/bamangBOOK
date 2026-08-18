@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "11 心理否认倾向"
 source: "https://mungerarchive.com/zh/mental-models/psychological-denial/"
 ---

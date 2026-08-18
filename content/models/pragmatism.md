@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "实用主义"
 english: "Pragmatism"
 slug: "pragmatism"

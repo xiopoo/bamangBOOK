@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "审计与独立验证"
 english: "Audit & Independent Verification"
 slug: "audit-independent-verification"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2018 Meeting
 
 > 2018 年伯克希尔·哈撒韦股东大会

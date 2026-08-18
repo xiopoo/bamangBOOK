@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # There's no "degree of difficulty" factor in investing
 
 **原站时间**: 1998-05-04T13:00:00+0000

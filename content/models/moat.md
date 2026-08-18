@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "护城河（Moat）"
 english: "Moat"
 slug: "moat"

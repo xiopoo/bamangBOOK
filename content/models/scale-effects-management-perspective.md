@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "规模效应管理视角"
 english: "Scale Effects - Management Perspective"
 slug: "scale-effects-management-perspective"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "生存者偏差（历史视角）"
 english: "Survivorship Bias - Historical Perspective"
 slug: "survivorship-bias-historical-perspective"

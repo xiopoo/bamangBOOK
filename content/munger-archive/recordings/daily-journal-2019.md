@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "2019年每日期刊年度股东会"
 source: "https://mungerarchive.com/zh/recordings/daily-journal-2019/"
 ---

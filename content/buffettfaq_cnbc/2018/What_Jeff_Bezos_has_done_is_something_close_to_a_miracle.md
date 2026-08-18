@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "What Jeff Bezos has done is something close to a miracle"
 
 **原站时间**: 2018-05-05T17:00:00+0000  

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Bad bankers should be punished
 
 **原站时间**: 2023-05-08T06:57:04+0000  

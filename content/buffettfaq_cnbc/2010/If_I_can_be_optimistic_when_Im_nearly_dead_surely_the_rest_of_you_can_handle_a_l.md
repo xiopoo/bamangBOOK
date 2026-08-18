@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "If I can be optimistic when I'm nearly dead, surely the rest of you can handle a little inflation"
 
 **原站时间**: 2010-05-01T17:00:00+0000

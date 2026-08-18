@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We don't think we can improve on this group"
 
 **原站时间**: 1994-04-25T13:00:00+0000

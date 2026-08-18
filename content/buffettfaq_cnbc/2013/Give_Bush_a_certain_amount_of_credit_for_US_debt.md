@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Give Bush a certain amount of credit" for U.S. debt"
 
 **原站时间**: 2013-05-05T03:00:00+0000

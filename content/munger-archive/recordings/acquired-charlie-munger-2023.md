@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格做客 Acquired 播客（2023）"
 source: "https://mungerarchive.com/zh/recordings/acquired-charlie-munger-2023/"
 ---

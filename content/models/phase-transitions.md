@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "相变与临界现象"
 english: "Phase Transitions"
 slug: "phase-transitions"

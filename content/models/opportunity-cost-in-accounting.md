@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "机会成本会计视角"
 english: "Opportunity Cost in Accounting"
 slug: "opportunity-cost-in-accounting"

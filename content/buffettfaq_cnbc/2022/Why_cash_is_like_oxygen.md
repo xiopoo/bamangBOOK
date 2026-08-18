@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why cash is like oxygen
 
 **原站时间**: 2022-05-02T04:29:38+0000

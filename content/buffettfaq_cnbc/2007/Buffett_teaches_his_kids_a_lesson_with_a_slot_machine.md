@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett teaches his kids a lesson with a slot machine
 
 **原站时间**: 2007-05-05T13:00:00+0000

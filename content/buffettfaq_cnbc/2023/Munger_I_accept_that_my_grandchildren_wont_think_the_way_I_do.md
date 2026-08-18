@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: I accept that my grandchildren won't think the way I do
 
 **原站时间**: 2023-05-08T07:07:29+0000  

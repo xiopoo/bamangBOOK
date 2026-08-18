@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Robinhood takes advantage of "gambling instincts"
 
 **原站时间**: 2021-05-01T19:30:08+0000

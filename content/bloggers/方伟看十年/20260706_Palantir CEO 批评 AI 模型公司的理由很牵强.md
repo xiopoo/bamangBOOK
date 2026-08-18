@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Palantir CEO 批评 AI 模型公司的理由很牵强"
 author: "投资向善"
 account: "方伟看10年"

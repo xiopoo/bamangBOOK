@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2026 Annual Meeting Highlight Reel
 
 **原站时间**: 2026-05-04T04:32:35+0000

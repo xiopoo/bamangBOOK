@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'The cathedral and the casino'
 
 **原站时间**: 2025-05-05T05:21:32+0000

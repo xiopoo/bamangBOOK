@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The Market
 
 > 来源：https://buffettfaq.com/

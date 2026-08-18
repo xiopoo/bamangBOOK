@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 1995 Annual Meeting Highlight Reel
 
 **原站时间**: 2018-11-28T19:45:10+0000

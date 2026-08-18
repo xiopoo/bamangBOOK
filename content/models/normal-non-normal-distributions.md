@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "正态与非正态分布"
 english: "Normal & Non-Normal Distributions"
 slug: "normal-non-normal-distributions"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论避免愚蠢"
 source: "https://mungerarchive.com/zh/quotes/avoiding-stupidity/"
 ---

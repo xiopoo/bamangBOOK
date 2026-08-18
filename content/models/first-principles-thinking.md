@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "第一性原理思维"
 english: "First Principles Thinking"
 slug: "first-principles-thinking"

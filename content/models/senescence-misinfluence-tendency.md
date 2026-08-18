@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "衰老错误影响倾向"
 english: "Senescence-Misinfluence Tendency"
 slug: "senescence-misinfluence-tendency"

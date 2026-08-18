@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "受简单联想影响的倾向"
 english: "Influence-from-Mere-Association Tendency"
 slug: "influence-from-mere-association-tendency"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The effects of 9/11 on Berkshire and the insurance industry
 
 **原站时间**: 2002-05-04T13:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Learn as much as you can about the world around you"
 
 **原站时间**: 2008-05-03T13:00:00+0000

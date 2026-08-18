@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Berkshire's insurers deal with climate change risk
 
 **原站时间**: 2025-01-10T23:01:05+0000

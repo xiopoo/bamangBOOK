@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett rules out Occidental Petroleum acquisition
 
 **原站时间**: 2023-05-19T21:12:27+0000

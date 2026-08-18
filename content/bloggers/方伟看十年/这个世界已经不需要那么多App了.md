@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "这个世界已经不需要那么多App了"
 author: "方伟Rey"
 account: "方伟看十年"

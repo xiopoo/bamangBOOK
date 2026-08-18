@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "16 对比错误反应倾向"
 source: "https://mungerarchive.com/zh/mental-models/contrast-misreaction/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "进化论"
 english: "Modern Darwinian Synthesis"
 slug: "modern-darwinian-synthesis"

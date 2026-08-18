@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Raiders won't have enough money to target Berkshire after Buffett
 
 **原站时间**: 2023-05-08T07:02:31+0000  

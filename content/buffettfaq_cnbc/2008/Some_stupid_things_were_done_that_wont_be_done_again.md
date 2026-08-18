@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Some stupid things were done that won't be done again"
 
 **原站时间**: 2008-05-03T17:00:00+0000

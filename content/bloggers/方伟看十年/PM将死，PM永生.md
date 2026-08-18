@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "PM将死，PM永生"
 author: "方伟Rey"
 account: "方伟看十年"

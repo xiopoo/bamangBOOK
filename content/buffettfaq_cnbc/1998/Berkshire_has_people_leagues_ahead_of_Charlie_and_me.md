@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire has people "leagues ahead of Charlie and me"
 
 **原站时间**: 1998-05-04T13:00:00+0000

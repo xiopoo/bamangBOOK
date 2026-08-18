@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "06 好奇心倾向"
 source: "https://mungerarchive.com/zh/mental-models/curiosity/"
 ---

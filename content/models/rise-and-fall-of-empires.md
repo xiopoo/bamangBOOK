@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "帝国兴衰周期"
 english: "Rise and Fall of Empires"
 slug: "rise-and-fall-of-empires"

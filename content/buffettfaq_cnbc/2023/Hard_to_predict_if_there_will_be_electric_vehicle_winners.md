@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Hard to predict if there will be electric vehicle winners
 
 **原站时间**: 2023-05-08T07:05:15+0000  

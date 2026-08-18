@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "逆向思维"
 source: "https://mungerarchive.com/zh/mental-models/inversion/"
 ---

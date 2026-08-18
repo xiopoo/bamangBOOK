@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's successor must have a "money mind"
 
 **原站时间**: 2017-05-06T13:00:00+0000  

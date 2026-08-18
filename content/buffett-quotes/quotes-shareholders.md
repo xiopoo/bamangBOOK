@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "巴菲特谈合伙人"
 ---
 

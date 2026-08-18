@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "避免怀疑倾向"
 english: "Doubt-Avoidance Tendency"
 slug: "doubt-avoidance-tendency"

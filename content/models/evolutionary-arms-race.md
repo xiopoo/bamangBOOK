@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "进化军备竞赛"
 english: "Evolutionary Arms Race"
 slug: "evolutionary-arms-race"

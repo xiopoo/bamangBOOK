@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Valuation
 
 > 来源：https://buffettfaq.com/

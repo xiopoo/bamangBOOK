@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "递延收入与收入确认"
 english: "Deferred Revenue & Revenue Recognition"
 slug: "deferred-revenue-revenue-recognition"

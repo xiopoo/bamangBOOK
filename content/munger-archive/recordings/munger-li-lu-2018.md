@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格与李录谈中国（2018年）"
 source: "https://mungerarchive.com/zh/recordings/munger-li-lu-2018/"
 ---

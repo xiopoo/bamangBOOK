@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett doesn't take a performance fee
 
 **原站时间**: 2003-05-03T13:00:00+0000

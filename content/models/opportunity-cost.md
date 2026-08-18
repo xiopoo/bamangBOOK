@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "机会成本"
 english: "Opportunity Cost"
 slug: "opportunity-cost"

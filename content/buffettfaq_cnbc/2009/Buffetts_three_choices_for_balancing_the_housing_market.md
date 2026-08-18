@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's three choices for balancing the housing market
 
 **原站时间**: 2009-05-02T13:00:00+0000

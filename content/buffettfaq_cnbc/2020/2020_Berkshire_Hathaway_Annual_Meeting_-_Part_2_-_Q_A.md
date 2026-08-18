@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2020 Berkshire Hathaway Annual Meeting - Part 2 - Q&A
 
 > 2020 年伯克希尔·哈撒韦股东大会

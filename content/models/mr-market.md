@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "市场先生"
 english: "Mr. Market"
 slug: "mr-market"

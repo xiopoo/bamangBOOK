@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 建筑
 source: https://mungerarchive.com/zh/architecture/
 ---

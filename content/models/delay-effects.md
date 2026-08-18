@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "延迟效应"
 english: "Delay Effects"
 slug: "delay-effects"

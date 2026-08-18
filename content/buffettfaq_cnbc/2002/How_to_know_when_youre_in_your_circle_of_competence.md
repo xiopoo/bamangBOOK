@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How to know when you're in your "circle of competence"
 
 **原站时间**: 2002-05-04T17:00:00+0000

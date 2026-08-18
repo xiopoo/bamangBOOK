@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We won't trade reputation for money"
 
 **原站时间**: 2010-05-01T13:00:00+0000

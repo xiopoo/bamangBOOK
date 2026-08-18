@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "搜寻成本"
 english: "Search Costs"
 slug: "search-costs"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "They have jobs they love"
 
 **原站时间**: 2017-05-06T13:00:00+0000

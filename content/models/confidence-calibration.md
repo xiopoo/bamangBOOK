@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "置信度校准"
 english: "Confidence Calibration"
 slug: "confidence-calibration"

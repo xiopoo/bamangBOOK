@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Be More Aggressive"
 author: "方伟Rey"
 account: "方伟看十年"

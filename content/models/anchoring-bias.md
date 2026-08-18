@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "锚定偏差"
 english: "Anchoring Bias"
 slug: "anchoring-bias"

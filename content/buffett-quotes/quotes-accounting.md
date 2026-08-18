@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "巴菲特谈会计与数字"
 ---
 

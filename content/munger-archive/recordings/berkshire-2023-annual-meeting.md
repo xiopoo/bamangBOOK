@@ -1,4 +1,5 @@
 ---
+content_type: qa
 title: "伯克希尔-哈撒韦2023年年度股东大会——巴菲特与芒格最后一次同台"
 source: "https://mungerarchive.com/zh/recordings/berkshire-2023-annual-meeting/"
 ---

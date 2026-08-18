@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "安踏、耐克、Lululemon可都不是躺赚的生意"
 author: "方伟Rey"
 account: "方伟看十年"

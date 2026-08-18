@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "红皇后效应"
 english: "Red Queen Effect"
 slug: "red-queen-effect"

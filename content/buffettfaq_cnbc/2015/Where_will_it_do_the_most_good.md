@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Where will it do the most good?"
 
 **原站时间**: 2015-05-02T17:00:00+0000  

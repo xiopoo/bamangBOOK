@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "不对称性与凸性"
 english: "Asymmetry & Convexity"
 slug: "asymmetry-convexity"

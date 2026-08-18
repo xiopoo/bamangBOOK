@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "避蠢优于求智"
 english: "Avoiding Stupidity over Seeking Brilliance"
 slug: "avoiding-stupidity-over-seeking-brilliance"

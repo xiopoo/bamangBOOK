@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2015 Meeting
 
 > 2015 年伯克希尔·哈撒韦股东大会

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "协同进化"
 english: "Co-evolution"
 slug: "co-evolution"

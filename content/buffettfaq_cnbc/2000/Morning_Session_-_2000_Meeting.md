@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2000 Meeting
 
 **原站时间**: 2000-04-29T13:00:00+0000

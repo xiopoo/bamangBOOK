@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Get it corrected and get back to sleep"
 
 **原站时间**: 1998-05-04T13:00:00+0000

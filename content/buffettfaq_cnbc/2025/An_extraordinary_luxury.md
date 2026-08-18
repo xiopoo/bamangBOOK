@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'An extraordinary luxury'
 
 **原站时间**: 2025-05-05T05:24:32+0000  

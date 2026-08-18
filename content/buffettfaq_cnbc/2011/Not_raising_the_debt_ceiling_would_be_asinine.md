@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Not raising the debt ceiling would be "asinine"
 
 **原站时间**: 2011-04-30T17:00:00+0000

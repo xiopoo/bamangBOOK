@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: I wouldn't pay $25 for all the bitcoin in the world
 
 **原站时间**: 2022-05-02T04:35:59+0000  

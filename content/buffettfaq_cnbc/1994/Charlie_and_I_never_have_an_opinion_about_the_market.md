@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Charlie and I never have an opinion about the market"
 
 **原站时间**: 1994-04-25T13:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Coke and Gillette are "inevitable" in their industries
 
 **原站时间**: 2002-05-04T13:00:00+0000

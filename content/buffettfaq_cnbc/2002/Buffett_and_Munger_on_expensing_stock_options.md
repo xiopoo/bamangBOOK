@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett and Munger on expensing stock options
 
 **原站时间**: 2002-05-04T17:00:00+0000

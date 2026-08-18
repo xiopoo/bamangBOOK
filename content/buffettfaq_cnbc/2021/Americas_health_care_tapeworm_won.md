@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # America's health care "tapeworm" won
 
 **原站时间**: 2021-05-01T19:30:51+0000

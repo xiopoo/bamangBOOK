@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "否证思维"
 english: "Falsification"
 slug: "falsification"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Berkshire adds value to its subsidiaries
 
 **原站时间**: 1999-05-03T17:00:00+0000

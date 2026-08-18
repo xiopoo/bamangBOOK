@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "机会成本"
 source: "https://mungerarchive.com/zh/mental-models/opportunity-cost/"
 ---

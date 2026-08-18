@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "逆向思维"
 english: "Inversion"
 slug: "inversion"

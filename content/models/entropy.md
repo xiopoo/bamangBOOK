@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "熵"
 english: "Entropy"
 slug: "entropy"

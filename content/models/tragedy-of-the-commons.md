@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "公地悲剧"
 english: "Tragedy of the Commons"
 slug: "tragedy-of-the-commons"

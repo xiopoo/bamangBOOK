@@ -141,7 +141,7 @@ export default function AboutPage() {
           <p>网站适合随时查、随手读；但如果你打算把巴菲特或芒格从头到尾读一遍，我把这些公开材料整理、校订成了两卷书——每一章都标了出处，附插图、术语表与索引。不是秘密信息，是帮我（也帮你）省下组织材料的时间。</p>
           <div className="about-study__edition-actions">
             <Link href="/bound-edition" className="archive-button archive-button--solid">查看巴芒文集</Link>
-            <span>每本 99 元 · 微信确认后发送完整 EPUB</span>
+            <span>每本 99 元 · 微信确认后发送完整 PDF</span>
           </div>
         </section>
       </PageContainer>

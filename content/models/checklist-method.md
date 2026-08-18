@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "检查清单方法"
 english: "Checklist Method"
 slug: "checklist-method"

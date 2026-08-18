@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "转换成本"
 english: "Switching Costs"
 slug: "switching-costs"

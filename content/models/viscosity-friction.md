@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "粘滞性与摩擦力"
 english: "Viscosity & Friction"
 slug: "viscosity-friction"

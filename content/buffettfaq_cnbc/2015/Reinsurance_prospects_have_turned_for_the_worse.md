@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Reinsurance prospects "have turned for the worse"
 
 **原站时间**: 2015-05-02T17:00:00+0000  

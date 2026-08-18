@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett wants shareholders who are "in sync" with Berkshire
 
 **原站时间**: 1999-05-03T13:00:00+0000

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on how Sokol once gave up millions for a colleague
 
 **原站时间**: 2011-04-30T13:00:00+0000

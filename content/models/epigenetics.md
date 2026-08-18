@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "表观遗传学"
 english: "Epigenetics"
 slug: "epigenetics"

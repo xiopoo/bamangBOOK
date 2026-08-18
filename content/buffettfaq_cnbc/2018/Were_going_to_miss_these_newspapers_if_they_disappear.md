@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We're going to miss these newspapers if they disappear"
 
 **原站时间**: 2018-05-05T17:00:00+0000

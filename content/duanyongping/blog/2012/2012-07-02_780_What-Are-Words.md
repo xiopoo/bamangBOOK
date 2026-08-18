@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "What Are Words"
 author: "段永平"
 date: "2012-07-02"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'I do not sign a will until my children have read it'
 
 **原站时间**: 2023-05-08T07:01:39+0000

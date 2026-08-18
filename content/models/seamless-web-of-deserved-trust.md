@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "值得信赖的无缝网络"
 english: "Seamless Web of Deserved Trust"
 slug: "seamless-web-of-deserved-trust"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Not everybody gets the right parents"
 
 **原站时间**: 2014-05-03T17:00:00+0000  

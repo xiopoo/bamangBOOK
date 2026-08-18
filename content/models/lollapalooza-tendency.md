@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "Lollapalooza倾向"
 english: "Lollapalooza Tendency"
 slug: "lollapalooza-tendency"

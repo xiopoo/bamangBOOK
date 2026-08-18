@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 2024 Meeting
 
 > 2024 年伯克希尔·哈撒韦股东大会

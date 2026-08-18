@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 2023 Meeting
 
 > 2023 年伯克希尔·哈撒韦股东大会

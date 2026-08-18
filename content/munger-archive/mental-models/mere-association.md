@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "10 单纯联想影响倾向"
 source: "https://mungerarchive.com/zh/mental-models/mere-association/"
 ---

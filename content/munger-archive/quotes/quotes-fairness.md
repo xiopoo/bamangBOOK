@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论公平"
 source: "https://mungerarchive.com/zh/quotes/fairness/"
 ---

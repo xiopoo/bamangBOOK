@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How to Think About Businesses
 
 > 来源：https://buffettfaq.com/

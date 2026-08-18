@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: I was very lucky to have been born in the U.S.
 
 **原站时间**: 2025-05-05T05:16:58+0000

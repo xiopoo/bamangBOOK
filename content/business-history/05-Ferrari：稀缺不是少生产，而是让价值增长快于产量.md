@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Ferrari：稀缺不是少生产，而是让价值增长快于产量"
 company: "Ferrari"
 sourcePdf: "Ferrari.pdf"

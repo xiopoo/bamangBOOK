@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "非线性后果"
 english: "Nonlinear Consequences"
 slug: "nonlinear-consequences"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "产品力与性价比：STEPN会不会跟趣头条一样慢慢死去？"
 author: "方伟Rey"
 account: "方伟看十年"

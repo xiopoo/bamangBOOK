@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "There are a lot more interesting things that are going to happen"
 
 **原站时间**: 1997-05-05T13:00:00+0000

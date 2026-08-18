@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "AI时代，更需要一个有血有肉的人。"
 account: "方伟看十年"
 date: "2025-01-11 21:11"

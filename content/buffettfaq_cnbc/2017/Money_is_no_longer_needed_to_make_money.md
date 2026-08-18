@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Money is no longer needed to make money
 
 **原站时间**: 2017-05-06T13:00:00+0000  

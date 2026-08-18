@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett and Munger on friendship
 
 **原站时间**: 2002-05-04T13:00:00+0000

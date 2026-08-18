@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire's 'great culture' will be an asset in years ahead
 
 **原站时间**: 2025-05-05T05:20:23+0000  

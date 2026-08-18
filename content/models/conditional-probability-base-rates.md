@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "条件概率与基础比率"
 english: "Conditional Probability & Base Rates"
 slug: "conditional-probability-base-rates"

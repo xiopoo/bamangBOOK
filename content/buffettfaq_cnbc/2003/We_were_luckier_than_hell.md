@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We were luckier than hell"
 
 **原站时间**: 2003-05-03T17:00:00+0000

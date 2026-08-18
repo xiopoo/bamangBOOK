@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "多元思维模型框架"
 english: "Latticework of Mental Models"
 slug: "latticework-of-mental-models"

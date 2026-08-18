@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on the biggest problem facing the world
 
 **原站时间**: 2016-04-30T17:00:00+0000

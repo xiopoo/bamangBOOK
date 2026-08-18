@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Meta的护城河不如腾讯，但腾讯的成长性不如Meta"
 author: "方伟Rey"
 account: "方伟看十年"

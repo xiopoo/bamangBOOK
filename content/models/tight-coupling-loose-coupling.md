@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "紧耦合与松耦合"
 english: "Tight Coupling & Loose Coupling"
 slug: "tight-coupling-loose-coupling"

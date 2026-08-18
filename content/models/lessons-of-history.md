@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "以史为鉴"
 english: "Lessons of History"
 slug: "lessons-of-history"

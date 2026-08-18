@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Figure out what makes sense and follow your own course"
 
 **原站时间**: 2016-04-30T13:00:00+0000

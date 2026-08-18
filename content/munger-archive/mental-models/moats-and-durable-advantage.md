@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "护城河"
 source: "https://mungerarchive.com/zh/mental-models/moats-and-durable-advantage/"
 ---

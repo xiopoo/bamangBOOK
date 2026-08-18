@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "22 权威错误影响倾向"
 source: "https://mungerarchive.com/zh/mental-models/authority-misinfluence/"
 ---

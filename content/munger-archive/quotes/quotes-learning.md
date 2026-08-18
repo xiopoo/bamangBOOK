@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格谈学习"
 source: "https://mungerarchive.com/zh/quotes/learning/"
 ---

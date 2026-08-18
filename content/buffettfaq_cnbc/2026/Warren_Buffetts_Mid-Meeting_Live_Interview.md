@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Warren Buffett's Mid-Meeting Live Interview
 
 **原站时间**: 2026-05-04T04:36:52+0000

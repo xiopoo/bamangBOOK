@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Abel: Renewable energy is the goal, but some coal plants are still needed
 
 **原站时间**: 2025-05-05T05:23:23+0000

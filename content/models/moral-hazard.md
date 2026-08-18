@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "道德风险"
 english: "Moral Hazard"
 slug: "moral-hazard"

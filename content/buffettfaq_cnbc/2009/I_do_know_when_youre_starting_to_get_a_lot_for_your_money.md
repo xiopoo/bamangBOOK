@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "I do know when you're starting to get a lot for your money"
 
 **原站时间**: 2009-05-02T17:00:00+0000

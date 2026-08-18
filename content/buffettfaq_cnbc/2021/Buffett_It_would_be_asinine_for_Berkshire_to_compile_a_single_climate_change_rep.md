@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: It would be "asinine" for Berkshire to compile a single climate change report
 
 **原站时间**: 2021-05-01T17:30:52+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "指数增长与种群动力学"
 english: "Exponential Growth"
 slug: "exponential-growth"

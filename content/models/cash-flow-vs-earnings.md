@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "现金流量vs利润"
 english: "Cash Flow vs. Earnings"
 slug: "cash-flow-vs-earnings"

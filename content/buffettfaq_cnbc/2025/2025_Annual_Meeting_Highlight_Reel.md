@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 2025 Annual Meeting Highlight Reel
 
 **原站时间**: 2025-05-05T05:12:56+0000

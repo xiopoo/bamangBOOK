@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "讨厌与憎恨倾向"
 english: "Disliking/Hating Tendency"
 slug: "disliking-hating-tendency"

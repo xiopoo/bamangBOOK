@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "智谱、Minimax的暴涨会让价值投资者产生怀疑吗？"
 author: "方伟Rey"
 account: "方伟看十年"

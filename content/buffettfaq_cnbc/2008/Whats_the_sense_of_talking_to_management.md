@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "What's the sense of talking to management?"
 
 **原站时间**: 2008-05-03T17:00:00+0000

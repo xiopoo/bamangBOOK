@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "知识谦逊"
 english: "Intellectual Humility"
 slug: "intellectual-humility"

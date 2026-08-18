@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "阿里的“新零售梦”、“C2M梦”、“直播带货梦”全让美团、拼多多、抖音实现了"
 author: "方伟Rey"
 account: "方伟看十年"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Is climate change a risk for Berkshire's insurance subsidiaries?
 
 **原站时间**: 2015-05-02T17:00:00+0000  

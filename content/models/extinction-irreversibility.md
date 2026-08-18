@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "灭绝与不可逆性"
 english: "Extinction & Irreversibility"
 slug: "extinction-irreversibility"

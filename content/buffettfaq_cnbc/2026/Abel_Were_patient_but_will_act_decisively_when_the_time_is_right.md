@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Abel: We're patient but will act decisively when the time is right
 
 **原站时间**: 2026-05-04T04:39:08+0000

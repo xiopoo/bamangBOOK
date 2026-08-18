@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "IKEA：把设计、成本和自助体验装进同一套系统"
 company: "IKEA"
 sourcePdf: "IKEA.pdf"

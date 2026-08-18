@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "铁锤人倾向"
 english: "Man-with-a-Hammer Syndrome"
 slug: "man-with-a-hammer-syndrome"

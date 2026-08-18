@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: 'I look at Berkshire as a painting'
 
 **原站时间**: 2022-05-02T04:35:30+0000  

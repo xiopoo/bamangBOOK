@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Less than likely" Berkshire will buy outside the U.S.
 
 **原站时间**: 1995-05-01T17:00:00+0000

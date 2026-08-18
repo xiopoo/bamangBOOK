@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How to teach kids about money
 
 **原站时间**: 2001-04-28T13:00:00+0000

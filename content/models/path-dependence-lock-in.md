@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "路径依赖与锁定"
 english: "Path Dependence & Lock-in"
 slug: "path-dependence-lock-in"

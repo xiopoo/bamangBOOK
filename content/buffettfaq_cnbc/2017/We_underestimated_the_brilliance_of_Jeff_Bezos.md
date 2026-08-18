@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We underestimated the brilliance of Jeff Bezos"
 
 **原站时间**: 2017-05-06T17:00:00+0000  

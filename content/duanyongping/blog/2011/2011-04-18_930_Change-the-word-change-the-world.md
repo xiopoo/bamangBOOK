@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Change the word - change the world"
 author: "段永平"
 date: "2011-04-18"

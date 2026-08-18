@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "double free---golf"
 author: "段永平"
 date: "2011-01-14"

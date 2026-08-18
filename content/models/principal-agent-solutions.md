@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "委托代理问题的管理解法"
 english: "Principal-Agent Solutions"
 slug: "principal-agent-solutions"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "供给与需求"
 english: "Supply and Demand"
 slug: "supply-and-demand"

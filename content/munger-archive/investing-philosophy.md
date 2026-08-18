@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: 投资哲学
 source: https://mungerarchive.com/zh/investing-philosophy/
 ---

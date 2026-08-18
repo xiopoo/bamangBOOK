@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "one apple a day keeps the doctor away"
 author: "段永平"
 date: "2011-01-22"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "外部性"
 english: "Externalities"
 slug: "externalities"

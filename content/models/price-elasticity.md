@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "价格弹性与定价权"
 english: "Price Elasticity"
 slug: "price-elasticity"

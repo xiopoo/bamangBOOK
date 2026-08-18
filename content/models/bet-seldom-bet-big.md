@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "少下注下大注"
 english: "Bet Seldom, Bet Big"
 slug: "bet-seldom-bet-big"

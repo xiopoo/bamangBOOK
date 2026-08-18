@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "复杂适应系统"
 english: "Complex Adaptive Systems"
 slug: "complex-adaptive-systems"

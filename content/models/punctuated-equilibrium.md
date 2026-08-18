@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "间断均衡"
 english: "Punctuated Equilibrium"
 slug: "punctuated-equilibrium"

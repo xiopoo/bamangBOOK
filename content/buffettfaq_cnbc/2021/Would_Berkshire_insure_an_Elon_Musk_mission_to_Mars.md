@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Would Berkshire insure an Elon Musk mission to Mars?
 
 **原站时间**: 2021-05-01T19:30:40+0000  

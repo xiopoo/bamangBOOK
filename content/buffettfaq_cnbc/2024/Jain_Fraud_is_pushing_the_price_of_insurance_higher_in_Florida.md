@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Jain: Fraud is pushing the price of insurance higher in Florida
 
 **原站时间**: 2024-05-06T04:06:10+0000

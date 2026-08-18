@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "品牌认同"
 english: "Brand Power"
 slug: "brand-power"

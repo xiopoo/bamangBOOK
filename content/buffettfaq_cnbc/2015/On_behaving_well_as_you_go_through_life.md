@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # On "behaving well" as you go through life
 
 **原站时间**: 2015-05-02T17:00:00+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "斯多葛主义"
 english: "Stoicism"
 slug: "stoicism"

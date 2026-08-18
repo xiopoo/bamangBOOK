@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "We had the lunch with Buffett!"
 author: "段永平"
 date: "2007-05-11"

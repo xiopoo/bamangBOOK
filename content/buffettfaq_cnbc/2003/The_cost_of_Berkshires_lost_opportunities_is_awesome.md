@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The cost of Berkshire's lost opportunities is "awesome"
 
 **原站时间**: 2003-05-03T17:00:00+0000

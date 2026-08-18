@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # You should be a better person in the second half of your life
 
 **原站时间**: 2022-05-02T04:31:37+0000

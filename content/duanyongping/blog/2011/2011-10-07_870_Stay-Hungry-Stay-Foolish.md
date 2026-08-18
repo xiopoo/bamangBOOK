@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Stay Hungry. Stay Foolish."
 author: "段永平"
 date: "2011-10-07"

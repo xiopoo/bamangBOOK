@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "信托责任"
 english: "Fiduciary Duty"
 slug: "fiduciary-duty"

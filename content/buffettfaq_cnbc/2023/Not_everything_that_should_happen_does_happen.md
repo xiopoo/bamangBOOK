@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Not everything that should happen does happen'
 
 **原站时间**: 2023-05-08T07:05:58+0000  

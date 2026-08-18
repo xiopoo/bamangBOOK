@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: America needs a 'wartime' strategy for clean energy
 
 **原站时间**: 2023-05-08T07:03:41+0000  

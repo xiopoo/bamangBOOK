@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "SaaS软件股价为什么被屠杀？从AI时代的受益者变成了受害者"
 author: "方伟Rey"
 account: "方伟看十年"

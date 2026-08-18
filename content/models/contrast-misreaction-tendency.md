@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "对比错误反应倾向"
 english: "Contrast-Misreaction Tendency"
 slug: "contrast-misreaction-tendency"

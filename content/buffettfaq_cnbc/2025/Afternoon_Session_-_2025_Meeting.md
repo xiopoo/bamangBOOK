@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 2025 Meeting
 
 > 2025 年伯克希尔·哈撒韦股东大会

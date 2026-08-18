@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger on using company histories to teach finance
 
 **原站时间**: 2011-04-30T17:00:00+0000

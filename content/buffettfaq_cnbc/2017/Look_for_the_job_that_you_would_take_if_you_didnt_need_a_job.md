@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Look for the job that you would take if you didn't need a job"
 
 **原站时间**: 2017-05-06T17:00:00+0000  

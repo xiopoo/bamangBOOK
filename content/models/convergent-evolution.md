@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "趋同进化"
 english: "Convergent Evolution"
 slug: "convergent-evolution"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: We don't own too many Apple shares
 
 **原站时间**: 2023-05-08T06:58:38+0000

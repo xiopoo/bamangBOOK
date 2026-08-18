@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "重视理由倾向"
 english: "Reason-Respecting Tendency"
 slug: "reason-respecting-tendency"

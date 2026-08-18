@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "林迪效应"
 english: "Lindy Effect"
 slug: "lindy-effect"

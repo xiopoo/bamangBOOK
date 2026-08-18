@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "不用就忘倾向"
 english: "Use-It-or-Lose-It Tendency"
 slug: "use-it-or-lose-it-tendency"

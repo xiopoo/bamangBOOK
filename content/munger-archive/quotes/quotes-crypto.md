@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论加密货币"
 source: "https://mungerarchive.com/zh/quotes/crypto/"
 ---

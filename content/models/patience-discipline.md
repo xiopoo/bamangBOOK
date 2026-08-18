@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "耐心与纪律"
 english: "Patience & Discipline"
 slug: "patience-discipline"

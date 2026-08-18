@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "可维护性设计"
 english: "Design for Maintainability"
 slug: "design-for-maintainability"

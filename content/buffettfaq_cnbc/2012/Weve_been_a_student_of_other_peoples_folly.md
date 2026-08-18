@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We've been a student of other people's folly"
 
 **原站时间**: 2012-05-05T17:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: talk
 title: "如何确保一生悲惨（哈佛中学，1986）"
 source: "https://mungerarchive.com/zh/recordings/harvard-1986-misery/"
 ---

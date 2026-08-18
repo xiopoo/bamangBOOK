@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "心理账户"
 english: "Mental Accounting"
 slug: "mental-accounting"

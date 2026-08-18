@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'I think the time has arrived'
 
 **原站时间**: 2025-05-05T05:14:49+0000

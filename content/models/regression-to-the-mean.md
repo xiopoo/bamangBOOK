@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "回归均值"
 english: "Regression to the Mean"
 slug: "regression-to-the-mean"

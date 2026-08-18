@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "排列组合原理"
 english: "Permutations and Combinations"
 slug: "permutations-and-combinations"

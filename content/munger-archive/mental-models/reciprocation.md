@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "09 互惠倾向"
 source: "https://mungerarchive.com/zh/mental-models/reciprocation/"
 ---

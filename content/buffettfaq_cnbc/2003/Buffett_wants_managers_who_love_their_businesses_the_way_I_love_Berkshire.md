@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett wants managers who "love their businesses the way I love Berkshire"
 
 **原站时间**: 2003-05-03T13:00:00+0000

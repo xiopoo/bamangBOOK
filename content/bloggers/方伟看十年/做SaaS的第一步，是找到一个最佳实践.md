@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "做SaaS的第一步，是找到一个最佳实践"
 author: "方伟Rey"
 account: "方伟看十年"

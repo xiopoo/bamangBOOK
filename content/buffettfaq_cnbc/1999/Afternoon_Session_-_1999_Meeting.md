@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 1999 Meeting
 
 **原站时间**: 2018-11-02T20:17:51+0000

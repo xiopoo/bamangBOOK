@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "网易ntes、搜狐sohu、畅游cyou、完美世界pwrd、巨人ga"
 author: "段永平"
 date: "2010-07-09"

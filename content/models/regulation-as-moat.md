@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "监管作为护城河"
 english: "Regulation as Moat"
 slug: "regulation-as-moat"

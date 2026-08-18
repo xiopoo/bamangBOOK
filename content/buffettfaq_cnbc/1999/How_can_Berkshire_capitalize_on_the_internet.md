@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How can Berkshire capitalize on the internet?
 
 **原站时间**: 1999-05-03T17:00:00+0000

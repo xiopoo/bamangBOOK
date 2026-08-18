@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Do they love the money or do they love the business?"
 
 **原站时间**: 2005-04-30T13:00:00+0000

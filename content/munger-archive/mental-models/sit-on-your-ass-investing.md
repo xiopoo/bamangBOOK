@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "坐等不动投资"
 source: "https://mungerarchive.com/zh/mental-models/sit-on-your-ass-investing/"
 ---

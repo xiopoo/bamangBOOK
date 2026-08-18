@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "自组织临界性"
 english: "Self-Organized Criticality"
 slug: "self-organized-criticality"

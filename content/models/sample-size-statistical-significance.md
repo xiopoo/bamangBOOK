@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "样本量与统计显著性"
 english: "Sample Size & Statistical Significance"
 slug: "sample-size-statistical-significance"

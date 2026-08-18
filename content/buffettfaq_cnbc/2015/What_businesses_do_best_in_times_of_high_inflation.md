@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # What businesses do best in times of high inflation?
 
 **原站时间**: 2015-05-02T17:00:00+0000  

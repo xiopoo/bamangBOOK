@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "What bothers me is when companies pay a lot of money for mediocrity"
 
 **原站时间**: 1998-05-04T17:00:00+0000

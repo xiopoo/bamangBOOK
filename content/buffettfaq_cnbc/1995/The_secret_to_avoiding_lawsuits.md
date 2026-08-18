@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # The secret to avoiding lawsuits
 
 **原站时间**: 1995-05-01T17:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "最小能量原理"
 english: "Principle of Least Energy"
 slug: "principle-of-least-energy"

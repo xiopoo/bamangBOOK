@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Merry Christmas and Happy New Year!"
 author: "段永平"
 date: "2011-12-24"

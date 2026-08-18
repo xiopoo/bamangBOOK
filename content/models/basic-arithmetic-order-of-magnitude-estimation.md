@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "基本算术与数量级估算"
 english: "Basic Arithmetic & Order-of-Magnitude Estimation"
 slug: "basic-arithmetic-order-of-magnitude-estimation"

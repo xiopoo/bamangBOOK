@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "乘法系统思维"
 english: "Multiplicative Systems"
 slug: "multiplicative-systems"

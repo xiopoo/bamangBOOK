@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "BOSS直聘简评：护城河铁板一块，就是不够便宜"
 author: "方伟Rey"
 account: "方伟看十年"

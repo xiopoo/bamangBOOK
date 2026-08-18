@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "激励机制"
 english: "Incentives - Economic View"
 slug: "incentives-economic-view"

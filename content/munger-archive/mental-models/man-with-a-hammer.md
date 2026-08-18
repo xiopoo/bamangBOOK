@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "手里拿着锤子的人"
 source: "https://mungerarchive.com/zh/mental-models/man-with-a-hammer/"
 ---

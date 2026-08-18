@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "幂律分布"
 english: "Power Laws"
 slug: "power-laws"

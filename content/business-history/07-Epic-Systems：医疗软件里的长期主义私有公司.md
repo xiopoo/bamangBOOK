@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Epic Systems：医疗软件里的长期主义私有公司"
 company: "Epic Systems"
 sourcePdf: "Epic-Systems.pdf"

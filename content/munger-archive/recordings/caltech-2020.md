@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "与查理·芒格的一席谈——加州理工学院杰出校友（2020）"
 source: "https://mungerarchive.com/zh/recordings/caltech-2020/"
 ---

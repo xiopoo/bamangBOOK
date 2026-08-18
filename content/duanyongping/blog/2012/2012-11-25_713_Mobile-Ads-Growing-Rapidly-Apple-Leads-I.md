@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Mobile Ads Growing Rapidly: Apple Leads In Monetizing Content(转）"
 author: "段永平"
 date: "2012-11-25"

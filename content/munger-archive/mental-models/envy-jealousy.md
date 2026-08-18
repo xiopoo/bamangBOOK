@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "08 嫉妒/妒忌倾向"
 source: "https://mungerarchive.com/zh/mental-models/envy-jealousy/"
 ---

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "复利效应"
 english: "Compound Interest"
 slug: "compound-interest"

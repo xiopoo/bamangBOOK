@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "生态系统思维"
 english: "Ecosystem Thinking"
 slug: "ecosystem-thinking"

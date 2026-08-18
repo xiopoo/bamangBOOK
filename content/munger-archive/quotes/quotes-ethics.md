@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论道德伦理"
 source: "https://mungerarchive.com/zh/quotes/ethics/"
 ---

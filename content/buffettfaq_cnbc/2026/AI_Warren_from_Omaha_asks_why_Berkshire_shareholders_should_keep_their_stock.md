@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # AI 'Warren from Omaha' asks why Berkshire shareholders should keep their stock
 
 **原站时间**: 2026-05-04T04:38:46+0000  

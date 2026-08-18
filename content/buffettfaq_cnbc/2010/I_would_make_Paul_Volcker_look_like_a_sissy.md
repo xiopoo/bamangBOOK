@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "I would make Paul Volcker look like a sissy"
 
 **原站时间**: 2010-05-01T13:00:00+0000

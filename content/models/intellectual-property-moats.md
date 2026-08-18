@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "知识产权与护城河"
 english: "Intellectual Property & Moats"
 slug: "intellectual-property-moats"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "坚守腾Xun的原因是商业模式、商业模式、还是商业模式"
 author: "方伟Rey"
 account: "方伟看十年"

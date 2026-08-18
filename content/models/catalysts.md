@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "催化剂"
 english: "Catalysts"
 slug: "catalysts"

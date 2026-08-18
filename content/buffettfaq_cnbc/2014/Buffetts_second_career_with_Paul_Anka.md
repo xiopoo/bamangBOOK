@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's "second career" with Paul Anka
 
 **原站时间**: 2014-05-03T13:00:00+0000

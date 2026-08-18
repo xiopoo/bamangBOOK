@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Afternoon Session - 1994 Meeting
 
 **原站时间**: 2018-12-11T17:05:03+0000

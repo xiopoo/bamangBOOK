@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "We look at what the market says is the utility"
 
 **原站时间**: 1994-04-25T13:00:00+0000

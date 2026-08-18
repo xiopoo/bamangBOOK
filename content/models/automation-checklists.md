@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "自动化与检查清单"
 english: "Automation & Checklists"
 slug: "automation-checklists"

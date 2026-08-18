@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Morning Session - 2013 Meeting
 
 **原站时间**: 2013-05-04T13:00:00+0000

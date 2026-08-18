@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论能力圈"
 source: "https://mungerarchive.com/zh/quotes/circle-of-competence/"
 ---

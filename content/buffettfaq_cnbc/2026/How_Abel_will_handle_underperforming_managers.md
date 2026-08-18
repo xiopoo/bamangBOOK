@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How Abel will handle underperforming managers
 
 **原站时间**: 2026-05-04T04:40:57+0000

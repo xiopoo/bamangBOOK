@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'Trade should not be a weapon'
 
 **原站时间**: 2025-05-05T05:15:41+0000  

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: "If you mix raisins with turds, they're still turds"
 
 **原站时间**: 2000-04-29T13:00:00+0000

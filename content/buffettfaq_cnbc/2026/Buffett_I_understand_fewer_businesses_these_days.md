@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett: I 'understand' fewer businesses these days
 
 **原站时间**: 2026-05-04T04:40:16+0000

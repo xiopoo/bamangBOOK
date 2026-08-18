@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why are Buffett's family members on the board?
 
 **原站时间**: 1995-05-01T13:00:00+0000

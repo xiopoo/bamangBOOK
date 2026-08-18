@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # What's the difference between the A and B shares?
 
 **原站时间**: 1998-05-04T17:00:00+0000

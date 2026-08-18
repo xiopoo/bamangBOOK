@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Buy a stock that you don't ever want to sell"
 
 **原站时间**: 1998-05-04T13:00:00+0000

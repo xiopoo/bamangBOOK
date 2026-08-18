@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "复杂系统"
 english: "Complex Systems"
 slug: "complex-systems"

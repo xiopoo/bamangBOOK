@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: Bernie Sanders has won
 
 **原站时间**: 2021-05-01T17:30:57+0000  

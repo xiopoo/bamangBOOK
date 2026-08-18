@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "终身学习"
 english: "Lifelong Learning"
 slug: "lifelong-learning"

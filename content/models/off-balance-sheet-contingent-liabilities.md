@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "表外负债与或有负债"
 english: "Off-Balance-Sheet & Contingent Liabilities"
 slug: "off-balance-sheet-contingent-liabilities"

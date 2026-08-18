@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # A big cube of gold
 
 **原站时间**: 2011-04-30T13:00:00+0000

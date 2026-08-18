@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Derivatives are "a danger to the system"
 
 **原站时间**: 2009-05-02T13:00:00+0000

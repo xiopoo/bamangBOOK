@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "涌现性"
 english: "Emergence"
 slug: "emergence"

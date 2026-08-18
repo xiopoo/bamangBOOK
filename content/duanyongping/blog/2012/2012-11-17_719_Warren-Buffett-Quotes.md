@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Warren Buffett Quotes"
 author: "段永平"
 date: "2012-11-17"

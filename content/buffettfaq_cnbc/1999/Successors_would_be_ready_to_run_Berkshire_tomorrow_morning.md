@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Successors "would be ready to run Berkshire tomorrow morning"
 
 **原站时间**: 1999-05-03T13:00:00+0000

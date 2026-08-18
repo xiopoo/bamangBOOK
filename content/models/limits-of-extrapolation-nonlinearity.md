@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "趋势外推的局限"
 english: "Limits of Extrapolation & Nonlinearity"
 slug: "limits-of-extrapolation-nonlinearity"

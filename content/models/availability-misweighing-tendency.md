@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "错误衡量易得性倾向"
 english: "Availability-Misweighing Tendency"
 slug: "availability-misweighing-tendency"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "人类误判心理学"
 english: "The Psychology of Human Misjudgment"
 slug: "psychology-of-human-misjudgment"

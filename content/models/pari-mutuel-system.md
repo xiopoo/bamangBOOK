@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "彩池投注系统"
 english: "Pari-mutuel System"
 slug: "pari-mutuel-system"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Court win 'resets the stage' in fight over wildfires liability
 
 **原站时间**: 2026-05-04T04:38:08+0000  

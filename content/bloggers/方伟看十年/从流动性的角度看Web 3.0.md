@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "从流动性的角度看Web 3.0"
 author: "方伟Rey"
 account: "方伟看十年"

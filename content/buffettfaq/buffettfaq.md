@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett FAQ
 
 > A compendium of questions & answers with Warren Buffett.

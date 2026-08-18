@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "博弈论基础"
 english: "Basic Game Theory"
 slug: "basic-game-theory"

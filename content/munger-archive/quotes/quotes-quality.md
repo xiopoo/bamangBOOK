@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "芒格论质量与护城河"
 source: "https://mungerarchive.com/zh/quotes/quality/"
 ---

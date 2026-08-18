@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "Look twice at companies" with confusing accounting
 
 **原站时间**: 1995-05-01T17:00:00+0000

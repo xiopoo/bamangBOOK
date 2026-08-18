@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Gambling on Wall Street helps Berkshire buy big
 
 **原站时间**: 2022-05-02T04:30:06+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "05 避免不一致倾向"
 source: "https://mungerarchive.com/zh/mental-models/inconsistency-avoidance/"
 ---

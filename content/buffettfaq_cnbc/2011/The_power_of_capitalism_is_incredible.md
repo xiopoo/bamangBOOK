@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "The power of capitalism is incredible"
 
 **原站时间**: 2011-04-30T13:00:00+0000

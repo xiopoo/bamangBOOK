@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "能力圈"
 source: "https://mungerarchive.com/zh/mental-models/circle-of-competence/"
 ---

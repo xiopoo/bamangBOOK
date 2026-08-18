@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "世界上知道LLM是什么的人只有1‰"
 author: "方伟Rey"
 account: "方伟看十年"

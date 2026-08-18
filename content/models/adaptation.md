@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "适应性"
 english: "Adaptation"
 slug: "adaptation"

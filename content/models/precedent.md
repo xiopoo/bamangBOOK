@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "先例原则"
 english: "Precedent"
 slug: "precedent"

@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "论领导力与资本配置，与托德·库姆斯对谈（2022）"
 source: "https://mungerarchive.com/zh/recordings/singleton-prize-2022/"
 ---

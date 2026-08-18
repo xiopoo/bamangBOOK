@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "边际分析"
 english: "Marginal Analysis"
 slug: "marginal-analysis"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Sometimes "character and talents jump off the page"
 
 **原站时间**: 2006-05-06T13:00:00+0000

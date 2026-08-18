@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "SaaS在中国为什么不值钱？"
 author: "方伟Rey"
 account: "方伟看十年"

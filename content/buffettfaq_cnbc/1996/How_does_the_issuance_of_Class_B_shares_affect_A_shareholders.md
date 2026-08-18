@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # How does the issuance of Class B shares affect A shareholders?
 
 **原站时间**: 1996-05-06T13:00:00+0000

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "化学物质错误影响倾向"
 english: "Drug-Misinfluence Tendency"
 slug: "drug-misinfluence-tendency"

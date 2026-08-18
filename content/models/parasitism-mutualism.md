@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "寄生与共生"
 english: "Parasitism & Mutualism"
 slug: "parasitism-mutualism"

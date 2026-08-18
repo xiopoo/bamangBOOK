@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "People on the extremes of both sides are a little nuts"
 
 **原站时间**: 2021-05-01T17:30:50+0000  

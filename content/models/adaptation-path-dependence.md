@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "适应性与路径依赖"
 english: "Adaptation & Path Dependence"
 slug: "adaptation-path-dependence"

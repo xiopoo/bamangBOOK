@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "单点故障"
 english: "Single Point of Failure"
 slug: "single-point-of-failure"

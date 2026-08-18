@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "多数无知与从众谬误"
 english: "Pluralistic Ignorance"
 slug: "pluralistic-ignorance"

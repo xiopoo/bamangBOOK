@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "压力影响倾向"
 english: "Stress-Influence Tendency"
 slug: "stress-influence-tendency"

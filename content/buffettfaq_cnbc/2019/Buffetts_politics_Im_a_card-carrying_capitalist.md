@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett's politics: "I'm a card-carrying capitalist"
 
 **原站时间**: 2019-05-04T14:15:47+0000

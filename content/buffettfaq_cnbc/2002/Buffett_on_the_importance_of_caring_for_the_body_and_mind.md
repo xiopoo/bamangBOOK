@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on the importance of caring for the body and mind
 
 **原站时间**: 2002-05-04T17:00:00+0000

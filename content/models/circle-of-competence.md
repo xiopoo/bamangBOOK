@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "能力圈"
 english: "Circle of Competence"
 slug: "circle-of-competence"

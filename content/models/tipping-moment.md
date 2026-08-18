@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "倾覆力矩"
 english: "Tipping Moment"
 slug: "tipping-moment"

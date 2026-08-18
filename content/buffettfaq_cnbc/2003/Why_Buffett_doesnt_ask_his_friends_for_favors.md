@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett doesn't ask his friends for favors
 
 **原站时间**: 2003-05-03T17:00:00+0000

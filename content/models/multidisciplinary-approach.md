@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "跨学科思维"
 english: "Multidisciplinary Approach"
 slug: "multidisciplinary-approach"

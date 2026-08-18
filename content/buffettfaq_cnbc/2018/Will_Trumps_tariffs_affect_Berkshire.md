@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Will Trump's tariffs affect Berkshire?
 
 **原站时间**: 2018-05-05T13:00:00+0000  

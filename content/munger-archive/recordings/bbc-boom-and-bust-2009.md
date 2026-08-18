@@ -1,4 +1,5 @@
 ---
+content_type: interview
 title: "查理·芒格论繁荣与萧条（BBC，2009）"
 source: "https://mungerarchive.com/zh/recordings/bbc-boom-and-bust-2009/"
 ---

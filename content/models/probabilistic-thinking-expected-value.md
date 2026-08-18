@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "概率思维与期望值"
 english: "Probabilistic Thinking & Expected Value"
 slug: "probabilistic-thinking-expected-value"

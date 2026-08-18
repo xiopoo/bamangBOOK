@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "LOOK ME IN THE EYES"
 author: "唐二僧"
 account: "唐僧的碎碎念"

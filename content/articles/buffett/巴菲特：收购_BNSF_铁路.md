@@ -1,6 +1,6 @@
 ---
 title: "巴菲特：收购 BNSF 铁路"
-content_type: "article"
+content_type: "interview"
 person: "巴菲特"
 year: 2009
 entities: "巴菲特, 收购, 铁路运输, 优质企业"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "坐等投资法"
 english: "Sit-on-Your-Ass Investing"
 slug: "sit-on-your-ass-investing"

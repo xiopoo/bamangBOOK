@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # U.S. needs to reduce its budget deficits
 
 **原站时间**: 2025-05-05T05:22:17+0000  

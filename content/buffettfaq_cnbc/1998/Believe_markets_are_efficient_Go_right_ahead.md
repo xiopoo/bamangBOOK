@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Believe markets are efficient? Go right ahead
 
 **原站时间**: 1998-05-04T13:00:00+0000

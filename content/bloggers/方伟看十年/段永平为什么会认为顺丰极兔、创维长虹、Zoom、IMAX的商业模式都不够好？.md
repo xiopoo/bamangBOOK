@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "段永平为什么会认为顺丰极兔、创维长虹、Zoom、IMAX的商业模式都不够好？"
 author: "方伟Rey"
 account: "方伟看十年"

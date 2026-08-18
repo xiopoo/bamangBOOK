@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger has "no confidence" in bitcoin
 
 **原站时间**: 2013-05-04T13:00:00+0000  

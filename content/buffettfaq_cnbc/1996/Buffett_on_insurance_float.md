@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on insurance "float"
 
 **原站时间**: 1996-05-06T13:00:00+0000

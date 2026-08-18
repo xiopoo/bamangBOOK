@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett on cutting back Berkshire's bank holdings
 
 **原站时间**: 2021-05-01T19:30:37+0000

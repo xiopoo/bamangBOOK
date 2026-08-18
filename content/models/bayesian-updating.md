@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "贝叶斯更新"
 english: "Bayesian Updating"
 slug: "bayesian-updating"

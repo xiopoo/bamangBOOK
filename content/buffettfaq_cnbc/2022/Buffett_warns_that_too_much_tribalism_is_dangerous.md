@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Buffett warns that too much 'tribalism' is dangerous
 
 **原站时间**: 2022-05-02T04:36:49+0000  

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # 'We've never had people in a more gambling mood than now'
 
 **原站时间**: 2026-05-04T04:40:32+0000

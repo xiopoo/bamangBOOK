@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "I don't have to bet" on technology companies
 
 **原站时间**: 1999-05-03T17:00:00+0000

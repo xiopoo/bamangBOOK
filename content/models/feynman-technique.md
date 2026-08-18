@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "费曼技巧"
 english: "Feynman Technique"
 slug: "feynman-technique"

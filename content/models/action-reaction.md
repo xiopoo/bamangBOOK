@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "作用力与反作用力"
 english: "Action & Reaction"
 slug: "action-reaction"

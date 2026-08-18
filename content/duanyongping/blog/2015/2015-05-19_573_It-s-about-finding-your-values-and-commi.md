@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "“It’s about finding your values, and committing to them. It’s about finding your North Star."
 author: "段永平"
 date: "2015-05-19"

@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "做不到“绝对公正”与“全网比价”的AI购物助理，都不会成功"
 author: "方伟Rey"
 account: "方伟看十年"

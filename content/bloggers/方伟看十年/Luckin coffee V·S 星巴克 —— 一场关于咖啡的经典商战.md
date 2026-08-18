@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "Luckin coffee V·S 星巴克 —— 一场关于咖啡的经典商战"
 author: "方伟在学习"
 account: "方伟看十年"

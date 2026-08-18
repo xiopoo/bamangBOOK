@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "24 重视理由倾向"
 source: "https://mungerarchive.com/zh/mental-models/reason-respecting/"
 ---

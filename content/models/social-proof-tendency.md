@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "社会认同倾向"
 english: "Social-Proof Tendency"
 slug: "social-proof-tendency"

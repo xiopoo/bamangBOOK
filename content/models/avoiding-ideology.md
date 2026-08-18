@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "避免意识形态偏见"
 english: "Avoiding Ideology"
 slug: "avoiding-ideology"

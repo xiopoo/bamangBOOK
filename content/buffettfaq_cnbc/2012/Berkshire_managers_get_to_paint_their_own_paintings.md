@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Berkshire managers "get to paint their own paintings"
 
 **原站时间**: 2012-05-05T17:00:00+0000

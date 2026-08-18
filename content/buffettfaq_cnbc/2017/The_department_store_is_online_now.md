@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "The department store is online now"
 
 **原站时间**: 2017-05-06T17:00:00+0000  

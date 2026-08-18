@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Why Buffett got back on board with airline stocks
 
 **原站时间**: 2017-05-06T13:00:00+0000  

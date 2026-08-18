@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Munger: 'Old-fashioned intelligence works pretty well'
 
 **原站时间**: 2023-05-08T06:57:27+0000  

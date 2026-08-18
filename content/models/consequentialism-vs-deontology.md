@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "后果主义vs义务论"
 english: "Consequentialism vs Deontology"
 slug: "consequentialism-vs-deontology"

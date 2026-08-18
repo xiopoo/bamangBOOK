@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "幸存者偏差"
 english: "Survivorship Bias"
 slug: "survivorship-bias"

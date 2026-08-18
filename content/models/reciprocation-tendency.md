@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "回馈倾向"
 english: "Reciprocation Tendency"
 slug: "reciprocation-tendency"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # "All you had to do was figure that America was going to do well over time"
 
 **原站时间**: 2018-05-05T13:00:00+0000  

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "质量控制"
 english: "Quality Control"
 slug: "quality-control"

@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "动量与惯性"
 english: "Momentum"
 slug: "momentum"

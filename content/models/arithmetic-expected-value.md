@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "算术期望值"
 english: "Arithmetic Expected Value"
 slug: "arithmetic-expected-value"

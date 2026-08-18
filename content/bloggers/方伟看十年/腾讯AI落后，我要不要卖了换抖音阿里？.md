@@ -1,4 +1,5 @@
 ---
+content_type: article
 title: "腾讯AI落后，我要不要卖了换抖音阿里？"
 author: "方伟Rey"
 account: "方伟看十年"

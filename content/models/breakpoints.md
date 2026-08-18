@@ -1,4 +1,5 @@
 ---
+content_type: concept
 title: "断裂点"
 english: "Breakpoints"
 slug: "breakpoints"

@@ -1,3 +1,7 @@
+---
+content_type: qa
+---
+
 # Will anyone be Greg's 'Charlie?'
 
 **原站时间**: 2026-05-04T04:42:07+0000
