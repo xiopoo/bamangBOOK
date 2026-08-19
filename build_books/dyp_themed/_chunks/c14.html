@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>段永平文集</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  /* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+    text-align: justify;
+  }
+  .cover {
+    height: 247mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    break-after: page;
+  }
+  .cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+  .cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+  .cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+  .toc-page { break-before: page; }
+  .toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+  .toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+  .toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+  h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+  h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+  h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+  h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+  p { margin: 6px 0; }
+  blockquote {
+    border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+    color: #555; background: #fbf6f7; font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
+  code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  a { color: #AB1942; text-decoration: none; }
+  img { max-width: 100%; }
+
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">段永平文集</h1>
+</header>
+<h1 id="公司与行业见解">公司与行业见解</h1>
+<h2 id="金融银行保险券商">金融（银行/保险/券商）</h2>
+<h3
+id="中国最赚钱的十家上市公司银行占六而银行利润的23靠净利息收入息差一银行行长">中国最赚钱的十家上市公司银行占六，而银行利润的2/3靠净利息收入（息差）。一银行行长…</h3>
+<h4 id="提问">提问</h4>
+<p>中国最赚钱的十家上市公司银行占六，而银行利润的2/3靠净利息收入（息差）。一银行行长曾对我说，息差何时能降？要看政府意志。息差不降，利润都在银行，通过银行再给国家，国家看得清能放心；息差下降，等于利润让给企业民间，再通过税收等给国家，但不容易看清。
+银行高利润，与近年来的改革…</p>
+<h4 id="段永平回答">段永平回答</h4>
+<p>中国的息差可能是世界范围内最高的。我猜可能是因为中国的息差的调节里市场因素最小。也许中国的银行需要高息差带来的高利润去填补各种原因的坏账？</p>
+<h3
+id="回复-呼噜-我也一直用卖保险来比喻但两者其实最本质的差别是保险的费率大概是可以">回复
+<span class="citation" data-cites="呼噜">@呼噜</span>:
+我也一直用卖保险来比喻。但两者其实最本质的差别是保险的费率大概是可以…</h3>
+<p>回复 <span class="citation" data-cites="呼噜">@呼噜</span>:
+我也一直用卖保险来比喻。但两者其实最本质的差别是保险的费率大概是可以算出来的，put实际上不能。次级债实际上也是put，很多银行根据’算出来’的价钱卖给用户后就中招了。//<span
+class="citation"
+data-cites="呼噜:大道说的这个有点意思">@呼噜:大道说的这个有点意思</span>。前面有个朋友说的对，write
+put options本质上就是卖保险。当你对投资对象很有…<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：原帖已被作者删除2011-12-16
+08:06 · 转发 161 · 讨论 71 · 赞 1</p>
+<h3
+id="回复-峭壁边缘-卖put实际上就是为自己不拥有的东西投保我只为自己想拥有的股票">回复
+<span class="citation" data-cites="峭壁边缘">@峭壁边缘</span>:
+卖put实际上就是为自己不拥有的东西投保。我只为自己想拥有的股票…</h3>
+<p>回复 <span class="citation" data-cites="峭壁边缘">@峭壁边缘</span>:
+卖put实际上就是为自己不拥有的东西投保。我只为自己想拥有的股票投保，但次级债是为了自己不想拥有的东西投保，看起来一样的动作，实际上意义完全不一样。//<span
+class="citation" data-cites="峭壁边缘:回复">@峭壁边缘:回复</span><span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>:
+我是觉得次级债有个很大的问题是，银行可以替他们自己不拥有的东西投保。//<span
+class="citation" data-cites="大道无形我">@大道无形我</span>…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：原帖已被作者删除2011-12-16
+08:06 · 转发 161 · 讨论 71 · 赞 1</p>
+<h3 id="回复-baron-教科书是教小品的baron个人投资者怎么能够卖cal">回复
+<span class="citation" data-cites="Baron">@Baron</span>:
+教科书是教小品的？//<span class="citation"
+data-cites="Baron:个人投资者怎么能够卖Cal">@Baron:个人投资者怎么能够卖Cal</span>…</h3>
+<p>回复 <span class="citation" data-cites="Baron">@Baron</span>:
+教科书是教小品的？//<span class="citation"
+data-cites="Baron:个人投资者怎么能够卖Call">@Baron:个人投资者怎么能够卖Call</span>，貌似教科书上只是说了，Market
+Maker大券商投行才能Sell或者Write一个Call..@大道无形我有型：原帖已被作者删除2011-12-16
+08:06 · 转发 161 · 讨论 71 · 赞 1</p>
+<h3
+id="回复hh19-这应该是所谓的套利吧那么多投机者前赴后继我只是做了一下掮客当">回复@hh19:
+这应该是所谓的套利吧？那么多投机者前赴后继，我只是做了一下掮客。当…</h3>
+<p>回复@hh19:
+这应该是所谓的套利吧？那么多投机者前赴后继，我只是做了一下掮客。当然，掮客做得大的话就是保险公司?//<span
+class="citation"
+data-cites="hh19:这也算是做短线是吗">@hh19:这也算是做短线是吗</span>？大道做得更保险[胜利]<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：原帖已被作者删除2012-03-19
+01:00 · 转发 7 · 讨论 10</p>
+<h3 id="大道是不是对银行的有打算啦">大道是不是对银行的有打算啦</h3>
+<h4 id="提问-1">提问</h4>
+<p>大道是不是对银行的有打算啦</p>
+<h4 id="段永平回答-1">段永平回答</h4>
+<p>没有。最近老巴提了一句，所以我开始想想，准备花几年时间想，因为银行确实不可替代，但实体银行会不会被替代还不知道呢。</p>
+<h3
+id="大道你好个人通过盈透证券购买美股有一年了有个疑虑一直困惑如果盈透因违规出了问题">大道你好，个人通过盈透证券购买美股有一年了，有个疑虑一直困惑:如果盈透因违规出了问题…</h3>
+<h4 id="提问-2">提问</h4>
+<p>大道你好，个人通过盈透证券购买美股有一年了，有个疑虑一直困惑:如果盈透因违规出了问题甚至破产，个人通过盈透购买的股票以及账户里的现金还会完好吗？虽然盈透自己有购买保险，但是个人赔付的金额上限并不高。谢谢</p>
+<h4 id="段永平回答-2">段永平回答</h4>
+<p>我不知道盈透是哪家公司。一般来说，你买的证券是属于你自己的财产，不属于你的证券公司，所以就算证券公司破产你一般也是能拿回来的，但过程可能会有点长。用了margin的情况下可能会不一样。具体我也不是太清楚，你如果有担心的话，最好找专业人士问清楚。</p>
+<h3
+id="正在观看农夫保险公开赛张新军六洞过后并列第一">正在观看农夫保险公开赛，张新军六洞过后并列第一！</h3>
+<h4 id="提问-3">提问</h4>
+<p>正在观看农夫保险公开赛，张新军六洞过后并列第一！</p>
+<h4 id="段永平回答-3">段永平回答</h4>
+<p>快讯：张新军获得参加PGA锦标赛资格，这应该是他的第一次参加大满贯赛事，希望他打出好成绩！</p>
+<h3
+id="只要打开雪球第一时间就是看大道如果有更新提示会很期待地打开希望每一次都有所获益">只要打开雪球第一时间就是看大道，如果有更新提示会很期待地打开，希望每一次都有所获益。…</h3>
+<h4 id="提问-4">提问</h4>
+<p>只要打开雪球第一时间就是看大道，如果有更新提示会很期待地打开，希望每一次都有所获益。本人悟性差，关注了七八年，直到两年前才有一点点领悟，就这也让我获益匪浅。最后祝大道全家平平安安，开开心心！[跪了]</p>
+<h4 id="段永平回答-4">段永平回答</h4>
+<p>😀</p>
+<h3
+id="您好大道请问您是如何看待从事人寿保险的公司以及它们所提供的服务的谢谢">您好大道，请问您是如何看待从事人寿保险的公司以及它们所提供的服务的？谢谢！</h3>
+<h4 id="提问-5">提问</h4>
+<p>您好大道，请问您是如何看待从事人寿保险的公司以及它们所提供的服务的？谢谢！</p>
+<h4 id="段永平回答-5">段永平回答</h4>
+<p>不太了解保险业。</p>
+<h3
+id="回复littleking1988-李昊桐排名在100以内所以本来就有资格张新">回复@LittleKing1988:
+李昊桐排名在100以内，所以本来就有资格。张新…</h3>
+<p>回复@LittleKing1988:
+李昊桐排名在100以内，所以本来就有资格。张新军是候补进来的，不容易。也许打完这场就进前100了。最近这两场比赛张新军打得都不错，手感回来了，希望趁热打铁，再上一层楼。//<span
+class="citation"
+data-cites="LittleKing1988:回复">@LittleKing1988:回复</span><span
+class="citation"
+data-cites="大道无形我有型:wow">@大道无形我有型:wow</span>！恭喜张新军！国内媒体还没有报道这个。张新军上上周在…收起<span
+class="citation"
+data-cites="LittleKing1988">@LittleKing1988</span>：正在观看农夫保险公开赛，张新军六洞过后并列第一！
+正在观看农夫保险公开赛，张新军六洞过后并列第一！2020-01-23 11:29 · 转发
+9 · 讨论 18 · 赞 4</p>
+<h3
+id="回复旷怡投资-好吧简单总结一下卖put其实有点像卖保险收的就是保险费对我">回复@旷怡投资:
+好吧，简单总结一下。卖put其实有点像卖保险，收的就是保险费。对我…</h3>
+<p>回复@旷怡投资:
+好吧，简单总结一下。卖put其实有点像卖保险，收的就是保险费。对我来说，卖put比卖保险还要容易一些，这是为什么偶尔我会说我还开了家保险皮包公司的意思。//<span
+class="citation" data-cites="旷怡投资:回复">@旷怡投资:回复</span><span
+class="citation"
+data-cites="大道无形我有型:以前我认识的一个朋友是担心股价大跌">@大道无形我有型:以前我认识的一个朋友是担心股价大跌</span>（我理解错大道的意思，大道说的是赌大跌），…收起<span
+class="citation"
+data-cites="林帅LinTry">@林帅LinTry</span>：你卖了一个put，时间未过半，但收益已超75%，你会提前平仓吗？</p>
+<p>我的理解是，因为大道卖put是因为真的想买这个股票，如果put进来的话，所以会等到到期日自然清仓。</p>
+<p>（当然这里只是关注一下大道的做法，不代表每个人都要这样做。）<span
+class="citation"
+data-cites="大道无形我有型你卖了一个put">@大道无形我有型你卖了一个put</span>，时间未过半，但收益已超75%，你会提前平仓吗？
+我的理解是，因为大道卖put是因为真的想买这个股票，如果put进来的话，所以会等到到期日自然清仓。
+（当然这里只是关…2022-01-11 06:16 · 转发 565 · 讨论 243 · 赞 48</p>
+<h3
+id="哈见过大道不走小路-2023.2.2-1如果国际化指的是学到世界上的好东西的意思">哈，见过大道不走小路
+2023.2.2 1、如果国际化指的是学到世界上的好东西的意思…</h3>
+<h4 id="提问-6">提问</h4>
+<p>哈，见过大道不走小路 2023.2.2
+1、如果国际化指的是学到世界上的好东西的意思，就没问题，如果指的是拼命到别的国家去做生意的话，对中国绝大多数公司而言还是蛮危险的。
+2、负债的好处是可以发展快些。不负债的好处是可以活得长些。再说，一般来讲，银行都是要确认你不需要钱时才借钱给…</p>
+<h4 id="段永平回答-6">段永平回答</h4>
+<p>哈，好些话归纳的很好，谢谢！</p>
+<h3
+id="券商的差异化一般很小而且转换成本也很小所以一般来说很难是特别好的投资标的">券商的差异化一般很小而且转换成本也很小，所以一般来说很难是特别好的投资标的。</h3>
+<h4 id="提问-7">提问</h4>
+<p>券商的差异化一般很小而且转换成本也很小，所以一般来说很难是特别好的投资标的。</p>
+<h4 id="段永平回答-7">段永平回答</h4>
+<p>不过，客户在嘉信理财里面的资产绝大部分都是有保险的，所以应该大概率是安全的，除非客户本身用了margin。</p>
+<h3
+id="这种飞刀最好别接确实有危险的">这种飞刀最好别接，确实有危险的。</h3>
+<h4 id="提问-8">提问</h4>
+<p>这种飞刀最好别接，确实有危险的。</p>
+<h4 id="段永平回答-8">段永平回答</h4>
+<p>经过这次风波，FRC如果能活下来也可能要很长时间才能恢复元气。我猜很多人都把钱转走了，包括我自己在内。我们本来也是有些周转的钱在这家银行的，昨天本着多一事不如少一事的想法，已经把账号里的钱赚到余额在$25w以内了。现在就算没事，人们大概也不会马上把钱再转回去吧？</p>
+<h3 id="人家沒在那里开过户">人家沒在那里开过户。</h3>
+<h4 id="提问-9">提问</h4>
+<p>人家沒在那里开过户。</p>
+<h4 id="段永平回答-9">段永平回答</h4>
+<p>一般银行$25w以内是有保险的，超过的比较复杂。客户的债务（欠银行的钱）应该会继续存在。//
+:如果硅谷银行被其他银行收购了，那也是债权债务一起要接过去，是不是客户大额存款最后也不会有损失？</p>
+<p><strong>提及</strong>: <span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span></p>
+<h3 id="硅谷银行sivb"><span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span></h3>
+<p><span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span>
+人家沒在那里开过户。</p>
+<h3
+id="企业家大概率不会但很多企业很可能会尤其是初创企业融了很多钱还没来得及花">企业家大概率不会，但很多企业很可能会。尤其是初创企业，融了很多钱，还没来得及花。//…</h3>
+<p>企业家大概率不会，但很多企业很可能会。尤其是初创企业，融了很多钱，还没来得及花。//<span
+class="citation"
+data-cites="monsterbb:哪怕开了">@monsterbb:哪怕开了</span>，也就放点生活费方便用了不得了。哪个企业家会把身家存一家银行收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span></p>
+<p>人家沒在那里开过户。 <span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span>
+人家沒在那里开过户。2023-03-12 07:08 · 转发 78 · 讨论 9 · 赞 325</p>
+<h3
+id="回复不明真相的群众-有道理怪不得很多初创公司中招希望礼拜一会有办法解决吧不">回复@不明真相的群众:
+有道理，怪不得很多初创公司中招，希望礼拜一会有办法解决吧，不…</h3>
+<p>回复@不明真相的群众:
+有道理，怪不得很多初创公司中招，希望礼拜一会有办法解决吧，不然确实有很多公司开不下去的。//<span
+class="citation"
+data-cites="不明真相的群众:回复">@不明真相的群众:回复</span><span
+class="citation"
+data-cites="不明真相的群众:初创公司钱存在那里的原因是">@不明真相的群众:初创公司钱存在那里的原因是</span>，VC的主要往来银行是那里。收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span></p>
+<p>人家沒在那里开过户。 <span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span>
+人家沒在那里开过户。2023-03-12 07:08 · 转发 78 · 讨论 9 · 赞 325</p>
+<h3
+id="回复monsterbb-看到了我有朋友的公司的钱在里面现在不用担心了">回复@monsterbb:
+看到了。我有朋友的公司的钱在里面，现在不用担心了。//@…</h3>
+<p>回复@monsterbb:
+看到了。我有朋友的公司的钱在里面，现在不用担心了。//<span
+class="citation" data-cites="monsterbb:回复">@monsterbb:回复</span><span
+class="citation"
+data-cites="大道无形我有型:联储已经稳兑付了">@大道无形我有型:联储已经稳兑付了</span>，银行股东清零，高管走人。储户资金问题不大。收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span></p>
+<p>人家沒在那里开过户。 <span
+class="math inline"><em>硅</em><em>谷</em><em>银</em><em>行</em>(<em>S</em><em>I</em><em>V</em><em>B</em>)</span>
+人家沒在那里开过户。2023-03-12 07:08 · 转发 78 · 讨论 9 · 赞 325</p>
+<h3 id="嘉信理财schw"><span
+class="math inline"><em>嘉</em><em>信</em><em>理</em><em>财</em>(<em>S</em><em>C</em><em>H</em><em>W</em>)</span></h3>
+<p><span
+class="math inline"><em>嘉</em><em>信</em><em>理</em><em>财</em>(<em>S</em><em>C</em><em>H</em><em>W</em>)</span>
+券商的差异化一般很小而且转换成本也很小，所以一般来说很难是特别好的投资标的。</p>
+<h3 id="第一共和银行frc"><span
+class="math inline"><em>第</em><em>一</em><em>共</em><em>和</em><em>银</em><em>行</em>(<em>F</em><em>R</em><em>C</em>)</span></h3>
+<p><span
+class="math inline"><em>第</em><em>一</em><em>共</em><em>和</em><em>银</em><em>行</em>(<em>F</em><em>R</em><em>C</em>)</span>
+这种飞刀最好别接，确实有危险的。</p>
+<h3
+id="回复厚雪坡长-你需要了解一下资产和现金的区别2008年的时候我可以很认真地了解">回复@厚雪坡长:
+你需要了解一下资产和现金的区别。2008年的时候我可以很认真地了解…</h3>
+<p>回复@厚雪坡长:
+你需要了解一下资产和现金的区别。2008年的时候我可以很认真地了解过一次。//<span
+class="citation" data-cites="厚雪坡长:回复">@厚雪坡长:回复</span><span
+class="citation"
+data-cites="大道无形我有型:FDIC保险限额适用于您在一家银行的所有合格存款">@大道无形我有型:FDIC保险限额适用于您在一家银行的所有合格存款</span>。受保银行存款转存计划中，所有所有权类别的FDIC保险限额都是每家计划银行<span
+class="math inline">250, 000<em>美</em><em>元</em>.<em>P</em><em>r</em><em>o</em><em>t</em><em>e</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>f</em><em>o</em><em>r</em><em>s</em><em>e</em><em>c</em><em>u</em><em>r</em><em>i</em><em>t</em><em>i</em><em>e</em><em>s</em><em>a</em>...@<em>大</em><em>道</em><em>无</em><em>形</em><em>我</em><em>有</em><em>型</em>：</span>嘉信理财(SCHW)$
+券商的差异化一般很小而且转换成本也很小，所以一般来说很难是特别好的投资标的。2023-03-13
+14:32 · 转发 192 · 讨论 5 · 赞 612</p>
+<h3
+id="回复风沙-星辰-股票是你自己的资产银行只是代管用了margin时就不一样了">回复@风沙-星辰:
+股票是你自己的资产，银行只是代管。用了margin时就不一样了，…</h3>
+<p>回复@风沙-星辰:
+股票是你自己的资产，银行只是代管。用了margin时就不一样了，因为你将股票抵押给银行了。//<span
+class="citation" data-cites="风沙-星辰:回复">@风沙-星辰:回复</span><span
+class="citation"
+data-cites="大道无形我有型:美国银行里开设的股票投资账户">@大道无形我有型:美国银行里开设的股票投资账户</span>，如果这家银行出事，那么我在投资账户里的股票会怎么样，我查到的答案是这不会受到影响，请问是这样吧？<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>嘉</em><em>信</em><em>理</em><em>财</em>(<em>S</em><em>C</em><em>H</em><em>W</em>)</span>
+券商的差异化一般很小而且转换成本也很小，所以一般来说很难是特别好的投资标的。2023-03-13
+14:32 · 转发 192 · 讨论 5 · 赞 612</p>
+<h3
+id="回复大道无形我有型-果然如此钱走茶凉和想象的一样这种飞刀绝对不要接哈">回复@大道无形我有型:
+果然如此，钱走茶凉，和想象的一样。这种飞刀绝对不要接哈。//…</h3>
+<p>回复@大道无形我有型:
+果然如此，钱走茶凉，和想象的一样。这种飞刀绝对不要接哈。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="大道无形我有型:经过这次风波">@大道无形我有型:经过这次风波</span>，FRC如果能活下来也可能要很长时间才能恢复元气。我猜很多人都把钱转走了，包括我自己在内。我们本来也是有些周转的钱在这家银行的，昨天本着多一事不如少一事…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>第</em><em>一</em><em>共</em><em>和</em><em>银</em><em>行</em>(<em>F</em><em>R</em><em>C</em>)</span>
+这种飞刀最好别接，确实有危险的。2023-03-13 15:10 · 转发 582 · 讨论 24 ·
+赞 834</p>
+<h3
+id="大道只有1米69你要高一些我在股市卖保险怎么感觉大道身高和我一样一米七">大道只有1米69，你要高一些。//<span
+class="citation"
+data-cites="我在股市卖保险:怎么感觉大道身高和我一样">@我在股市卖保险:怎么感觉大道身高和我一样</span>？一米七…</h3>
+<p>大道只有1米69，你要高一些。//<span class="citation"
+data-cites="我在股市卖保险:怎么感觉大道身高和我一样">@我在股市卖保险:怎么感觉大道身高和我一样</span>？一米七的样子收起<span
+class="citation" data-cites="思弦君">@思弦君</span>：2023-05-05 18:37 ·
+转发 1755 · 讨论 472 · 赞 87</p>
+<h3
+id="月6号台风摩羯登陆海南家里经营十几年的果园在一天内全毁了重新恢复又需要3到5年">9月6号台风摩羯登陆海南，家里经营十几年的果园在一天内全毁了，重新恢复又需要3到5年…</h3>
+<h4 id="提问-10">提问</h4>
+<p>9月6号台风摩羯登陆海南，家里经营十几年的果园在一天内全毁了，重新恢复又需要3到5年才能有收益，但又不知道下次天灾什么时候来临，很矛盾。想请问一下段叔的看法。</p>
+<h4 id="段永平回答-10">段永平回答</h4>
+<p>很同情你，希望你买了保险，至少以后记得买。</p>
+<h3
+id="大道您好我不幸突发急性白血病家庭无力支付后续治疗费用可否请您帮忙转发一下水滴筹">大道您好，我不幸突发急性白血病，家庭无力支付后续治疗费用，可否请您帮忙转发一下水滴筹…</h3>
+<h4 id="提问-11">提问</h4>
+<p>大道您好，我不幸突发急性白血病，家庭无力支付后续治疗费用，可否请您帮忙转发一下水滴筹呢，万分感谢您能伸出援手
+附加一些照片，您看下，大家如有其他的疑问我会一一答复</p>
+<h4 id="段永平回答-11">段永平回答</h4>
+<p>哎…！首先，如果是真的的话，我很同情你的遭遇，但我如何去核实呢？我不转是我不义，转了会担心因此会经常被人如此要求。希望社会保障体系能越来越完善，每个人该买的保险也是最好要买的。好吧，看到的人自己去负责核实吧。下不为例！</p>
+<h3
+id="回复不明真相的群众-你看的房子太少了不明真相的群众回复看好股市的新人">回复@不明真相的群众:
+你看的房子太少了。//<span class="citation"
+data-cites="不明真相的群众:回复">@不明真相的群众:回复</span><span
+class="citation"
+data-cites="看好股市的新人">@看好股市的新人</span>…</h3>
+<p>回复@不明真相的群众: 你看的房子太少了。//<span class="citation"
+data-cites="不明真相的群众:回复">@不明真相的群众:回复</span><span
+class="citation"
+data-cites="看好股市的新人:我来补充几点美国小镇生活可能碰到的情况">@看好股市的新人:我来补充几点美国小镇生活可能碰到的情况</span>：
+1、所谓独栋别墅，按一个角度看也就是木头棚子。木头棚子也有木头棚子的好处，但坏处也是明显的，早上垃圾车过去，你会以为发生了地震。如果房子建在森林里，保险公…<span
+class="citation"
+data-cites="看好股市的新人">@看好股市的新人</span>：看看美国的小城镇。2024-03-15
+09:39 · 转发 45 · 讨论 1144 · 赞 107</p>
+<h3
+id="段前辈好想请教一个关于家庭保险配置问题现在的保险越来越贵如果全家人配置下啦估计">段前辈好，想请教一个关于家庭保险配置问题，现在的保险越来越贵，如果全家人配置下啦估计…</h3>
+<h4 id="提问-12">提问</h4>
+<p>段前辈好，想请教一个关于家庭保险配置问题，现在的保险越来越贵，如果全家人配置下啦估计每年5万元左右，这个资金您觉得是购买保险合适还是定投到有价值的公司好些，期待能得到您的观点</p>
+<h4 id="段永平回答-12">段永平回答</h4>
+<p>这种问题也许ai能回答的比较好一点。</p>
+<h3
+id="我觉得你还是存银行比较安全该用户已删除原帖已被作者删除2025-10-24-1">我觉得你还是存银行比较安全。<span
+class="citation"
+data-cites="该用户已删除">@该用户已删除</span>：原帖已被作者删除2025-10-24
+1…</h3>
+<p>我觉得你还是存银行比较安全。<span class="citation"
+data-cites="该用户已删除">@该用户已删除</span>：原帖已被作者删除2025-10-24
+19:41 · 转发 30 · 讨论 406 · 赞 49</p>
+</body>
+</html>

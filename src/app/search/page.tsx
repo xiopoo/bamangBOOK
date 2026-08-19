@@ -221,11 +221,11 @@ function SearchContent() {
         />
       </div>
 
-      {/* 分类筛选器 */}
+      {/* 分类筛选器：手机端 ui-chip-row 横向滚动 + 边缘渐隐 */}
       {query && (
         <div className="mb-6">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-sm text-gray-500 dark:text-gray-400 mr-2">筛选：</span>
+          <p className="mb-2 text-sm font-semibold text-[var(--archive-ink-soft)]">按类型筛选</p>
+          <div className="ui-chip-row">
             {allTypes.map((type) => {
               const count = type === 'all' ? total : typeStats[type]
               const isActive = selectedType === type
@@ -234,18 +234,14 @@ function SearchContent() {
               return (
                 <button
                   key={type}
+                  type="button"
                   onClick={() => handleTypeFilter(type)}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all ${
-                    isActive
-                      ? 'bg-primary text-white dark:text-white shadow-sm'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                  }`}
+                  aria-pressed={isActive}
+                  className="ui-chip"
                 >
-                  {Icon && <Icon className="w-4 h-4" strokeWidth={1.75} />}
+                  {Icon && <Icon className="h-4 w-4" strokeWidth={1.75} />}
                   <span>{typeLabels[type]}</span>
-                  <span className={`text-xs ${isActive ? 'text-white/80' : 'text-gray-400'}`}>
-                    ({count})
-                  </span>
+                  <span className="ui-chip__count">({count})</span>
                 </button>
               )
             })}

@@ -46,8 +46,10 @@
   letter-spacing: 0.08em;
 }
 
-.archive-footer nav > p,
-.archive-footer__follow > p {
+/* 主要栏目 nav 的标题与两列网格；
+   用独立 class（archive-footer__cols）而非 nav 标签选择器——
+   页脚「关于本站」也是 nav landmark，避免规则串扰到它的链接布局。 */
+.archive-footer__cols > p {
   margin-bottom: 0.8rem;
   font-family: var(--archive-sans);
   color: var(--archive-ink-faint);
@@ -56,18 +58,18 @@
   letter-spacing: 0.12em;
 }
 
-.archive-footer nav > div {
+.archive-footer__cols > div {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.48rem 1.5rem;
 }
 
-.archive-footer nav a {
+.archive-footer__cols a {
   color: var(--archive-ink-soft);
   font-size: 0.84rem;
 }
 
-.archive-footer nav a:hover {
+.archive-footer__cols a:hover {
   color: var(--archive-oxblood);
 }
 

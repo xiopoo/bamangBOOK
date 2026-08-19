@@ -9,7 +9,6 @@ const footerLinks = [
   { href: '/business-history', label: '公司研究' },
   { href: '/blog', label: '博客' },
   { href: '/concepts', label: '投资概念' },
-  { href: '/books', label: '拆书' },
   { href: '/search', label: '全站搜索' },
 ]
 
@@ -33,14 +32,14 @@ export default function PageFooter() {
             <Link href="/about" className="archive-footer__byline">由金融街小胖整理 · 了解来源与整理方法 →</Link>
           </div>
 
-          <nav aria-label="页脚阅读入口">
+          <nav aria-label="页脚阅读入口" className="archive-footer__cols">
             <p>主要栏目</p>
             <div>
               {footerLinks.map(link => <Link key={link.href} href={link.href}>{link.label}</Link>)}
             </div>
           </nav>
 
-          <div className="archive-footer__support">
+          <nav aria-label="页脚关于链接" className="archive-footer__support">
             <p>关于本站</p>
             <div className="archive-footer__support-links">
               {aboutLinks.map(link => (
@@ -49,7 +48,7 @@ export default function PageFooter() {
                 </Link>
               ))}
             </div>
-          </div>
+          </nav>
         </div>
         <div className="archive-footer__note">
           <span>© 2026 复利书房</span>

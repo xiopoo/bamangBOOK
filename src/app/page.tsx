@@ -12,6 +12,7 @@ import { getDocuments } from '@/lib/documents'
 import { documentHref } from '@/lib/content-routes'
 import { getReadingStats } from '@/lib/reading-library'
 import { getDYDocs, type DYDoc, type DYSection } from '@/lib/duanyongping'
+import Reveal from '@/components/ui/Reveal'
 import '@/styles/templates/home.css'
 
 export const metadata: Metadata = { title: { absolute: '复利书房｜巴菲特、芒格与公司研究' }, description: '巴菲特、芒格与段永平的第一手资料：股东信、合伙人信、股东大会问答、演讲与访谈，按人物与主题阅读。', alternates: { canonical: '/' } }
@@ -44,6 +45,11 @@ export default function HomePage() {
   return <>
     <SubdomainRootRouter />
     <PageContainer maxWidth="6xl" className="archive-home">
+      {/* 首页此前没有任何 h1，标题直接从 h2 起跳（SEO 缺失主题信号 + 违反 WCAG 1.3.1/2.4.6）。
+          视觉设计以「每日一读」开场、不适合露出大标题，故用 sr-only：
+          读屏与爬虫都能取到，视觉上不占位。注意不能用 hidden/display:none。 */}
+      <h1 className="sr-only">复利书房｜巴菲特、芒格与段永平的第一手投资资料</h1>
+
       {/* 首屏：每日一读（每天一句巴菲特/芒格，选自可核验的原文） */}
       <section className="archive-home__daily" aria-label="每日一读">
         <p className="archive-kicker">复利书房 · 每日一读</p>
@@ -68,6 +74,7 @@ export default function HomePage() {
       </section>}
 
       {/* 全部内容：按人物与资料类型进入 */}
+      <Reveal>
       <section className="archive-home__section" aria-labelledby="archive-drawers-title">
         <div className="archive-section-heading"><div><p className="archive-kicker">全部内容</p><h2 id="archive-drawers-title">按人物与资料类型进入</h2></div></div>
         <div className="archive-drawer-grid">
@@ -79,18 +86,23 @@ export default function HomePage() {
           <ArchiveDrawer href="/business-history" title="公司研究" count={studies.length} description="从历史、护城河与资本配置理解企业。" />
         </div>
       </section>
+      </Reveal>
 
       {/* 编辑选读 */}
+      <Reveal>
       <section className="archive-home__section">
         <div className="archive-section-heading"><div><p className="archive-kicker">编辑选读</p><h2>三篇值得重读的原典</h2></div><Link href="/talks">浏览演讲与访谈 <ArrowRight size={15} /></Link></div>
         <div className="archive-list archive-list--home">{selectedTalks.map(item => <Link key={item.fileName} href={documentHref('talks', item)} className="archive-list__row"><span className="archive-list__year">{item.year || '待考'}</span><span className="archive-list__main"><strong>{item.title}</strong><small>演讲与访谈 · 原典资料</small></span><ArrowRight size={16} /></Link>)}</div>
       </section>
+      </Reveal>
 
       {/* 精选阅读路径 */}
+      <Reveal>
       <section className="archive-home__section archive-home__paths">
         <div className="archive-section-heading"><div><p className="archive-kicker">精选阅读路径</p><h2>从一条线索开始</h2></div></div>
         <div className="archive-path-grid">{CROWN_PATHS.map((path, index) => <Link key={path.href} href={path.href}><span>0{index + 1}</span><strong>{path.title}</strong><small>{path.why}</small></Link>)}</div>
       </section>
+      </Reveal>
 
       {/* 最近修订 */}
       {recentRevisions.length > 0 && <section className="archive-home__section">

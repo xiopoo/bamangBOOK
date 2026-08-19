@@ -3,9 +3,11 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronDown, Menu, Moon, Search, Sun, X } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import Logo from './Logo'
 import { useTheme } from './ThemeProvider'
+import { openCommandPalette } from './CommandPalette'
 
 interface NavLink {
   href: string
@@ -92,73 +94,397 @@ const navGroups: NavGroup[] = [
   },
 ]
 
+/** 下拉关闭宽限期：鼠标从触发器斜向移进下拉时不会中途关掉（原实现一移开就关，极易误关） */
+const HOVER_CLOSE_GRACE = 160
+
 export default function SiteHeader() {
   const pathname = usePathname()
   const { theme, toggleTheme } = useTheme()
   const [openGroup, setOpenGroup] = useState<string | null>(null)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
   const headerRef = useRef<HTMLElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const drawerRef = useRef<HTMLDivElement>(null)
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout>>()
+  /** 各下拉内的链接引用，供方向键在下拉里移动焦点 */
+  const dropdownItemsRef = useRef<Map<string, HTMLAnchorElement[]>>(new Map())
 
-  useEffect(() => { setOpenGroup(null); setMobileOpen(false) }, [pathname])
+  // —— 路由变化：收起所有浮层 ——
   useEffect(() => {
-    const outside = (event: MouseEvent) => { if (headerRef.current && !headerRef.current.contains(event.target as Node)) setOpenGroup(null) }
-    const escape = (event: KeyboardEvent) => {
+    setOpenGroup(null)
+    setDrawerOpen(false)
+  }, [pathname])
+
+  // —— 滚动感知：滚过一屏内的 12px 后压缩头部并加深投影 ——
+  // 用 rAF 节流，避免 scroll 事件里直接 setState 造成的每帧重渲染
+  useEffect(() => {
+    let frame = 0
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 12)
+        frame = 0
+      })
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
+
+  // —— 点击外部 / Esc 关闭 ——
+  useEffect(() => {
+    const onPointerDown = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) setOpenGroup(null)
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Escape') return
       setOpenGroup(null)
-      setMobileOpen(value => {
-        if (value) requestAnimationFrame(() => menuButtonRef.current?.focus())
+      setDrawerOpen(prev => {
+        if (prev) requestAnimationFrame(() => menuButtonRef.current?.focus())
         return false
       })
     }
-    document.addEventListener('mousedown', outside); document.addEventListener('keydown', escape)
-    return () => { document.removeEventListener('mousedown', outside); document.removeEventListener('keydown', escape) }
+    document.addEventListener('mousedown', onPointerDown)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
   }, [])
+
+  // —— 抽屉打开时锁滚动（补偿滚动条宽度，避免布局横向跳动）——
   useEffect(() => {
-    if (!mobileOpen) return
+    if (!drawerOpen) return
     const previousOverflow = document.body.style.overflow
+    const previousPadding = document.body.style.paddingRight
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
     document.body.style.overflow = 'hidden'
-    return () => { document.body.style.overflow = previousOverflow }
-  }, [mobileOpen])
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`
+    // 焦点移入抽屉，键盘用户才能立刻操作它
+    const timer = setTimeout(() => {
+      drawerRef.current?.querySelector<HTMLElement>('button, [href]')?.focus()
+    }, 60)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.body.style.paddingRight = previousPadding
+      clearTimeout(timer)
+    }
+  }, [drawerOpen])
 
+  // —— 抽屉焦点陷阱：Tab 在抽屉内循环，不会溜到背后的页面 ——
+  const onDrawerKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key !== 'Tab') return
+    const focusables = drawerRef.current?.querySelectorAll<HTMLElement>('button:not([disabled]), [href]')
+    if (!focusables || focusables.length === 0) return
+    const first = focusables[0]
+    const last = focusables[focusables.length - 1]
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault()
+      last.focus()
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault()
+      first.focus()
+    }
+  }
+
+  const scheduleClose = useCallback(() => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
+    closeTimerRef.current = setTimeout(() => setOpenGroup(null), HOVER_CLOSE_GRACE)
+  }, [])
+
+  const cancelClose = useCallback(() => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
+  }, [])
+
+  useEffect(() => () => cancelClose(), [cancelClose])
+
+  /** 触发器键盘操作：↓ 打开并进入第一项，Esc 关闭 */
+  const onTriggerKeyDown = (event: React.KeyboardEvent, label: string) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      setOpenGroup(label)
+      requestAnimationFrame(() => dropdownItemsRef.current.get(label)?.[0]?.focus())
+    }
+  }
+
+  /** 下拉内方向键上下移动焦点；Esc 回到触发器 */
+  const onDropdownKeyDown = (event: React.KeyboardEvent, label: string) => {
+    const items = dropdownItemsRef.current.get(label) || []
+    if (items.length === 0) return
+    const currentIndex = items.indexOf(document.activeElement as HTMLAnchorElement)
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      items[(currentIndex + 1 + items.length) % items.length]?.focus()
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault()
+      items[(currentIndex - 1 + items.length) % items.length]?.focus()
+    } else if (event.key === 'Tab') {
+      // Tab 离开下拉即关闭，符合"下拉是临时浮层"的预期
+      setOpenGroup(null)
+    }
+  }
+
+  const registerItem = (label: string, index: number) => (node: HTMLAnchorElement | null) => {
+    const list = dropdownItemsRef.current.get(label) || []
+    if (node) list[index] = node
+    dropdownItemsRef.current.set(label, list.filter(Boolean))
+  }
+
+  // 结算/支付/登录流程页隐藏全站导航，避免分散注意力导致流程中断
   if (pathname.startsWith('/checkout') || pathname.startsWith('/payment') || pathname.startsWith('/login')) return null
-  const active = (prefixes: string[]) => prefixes.some(prefix => pathname === prefix || pathname.startsWith(`${prefix}/`))
 
-  return <header ref={headerRef} className="archive-masthead">
-    <div className="archive-masthead__inner">
-      <Logo />
-      <nav className="archive-nav" aria-label="主要栏目">
-        {navGroups.map(group => {
-          const isOpen = openGroup === group.label
-          const activeClass = active(group.activePrefixes) ? 'is-active' : ''
-          if (group.href) {
-            return <div key={group.label} className="archive-nav__group">
-              <Link href={group.href} className={`archive-nav__trigger ${activeClass}`}>{group.label}</Link>
-            </div>
-          }
-          return <div key={group.label} className="archive-nav__group" onMouseEnter={() => setOpenGroup(group.label)} onMouseLeave={() => setOpenGroup(null)}>
-            <button type="button" className={`archive-nav__trigger ${activeClass}`} aria-expanded={isOpen} aria-haspopup="true" aria-controls={`nav-dropdown-${group.label}`} onClick={() => setOpenGroup(isOpen ? null : group.label)}>
-              {group.label}<ChevronDown size={14} aria-hidden="true" />
-            </button>
-            {isOpen && <div id={`nav-dropdown-${group.label}`} className={`archive-dropdown${group.label === '类别' ? ' archive-dropdown--inline' : ''}`}>
-              {group.sections.map(section => (
-                <div key={section.title || group.label} className="archive-dropdown__section">
-                  {section.title && <p className="archive-dropdown__section-title">{section.title}</p>}
-                  <div className="archive-dropdown__links">{section.links.map(link => <Link key={`${group.label}-${link.href}-${link.label}`} href={link.href}><span>{link.label}</span><small>{link.meta}</small></Link>)}</div>
+  const isActive = (prefixes: string[]) =>
+    prefixes.some(prefix => pathname === prefix || pathname.startsWith(`${prefix}/`))
+
+  return (
+    <>
+      <header ref={headerRef} className="masthead" data-scrolled={scrolled}>
+        <div className="masthead__inner">
+          <Logo />
+
+          <nav className="masthead__nav" aria-label="主要栏目">
+            {navGroups.map(group => {
+              const groupActive = isActive(group.activePrefixes)
+
+              // 无下拉的直接链接（电子书 / 关于）
+              if (group.href) {
+                return (
+                  <div key={group.label} className="masthead__group">
+                    <Link
+                      href={group.href}
+                      className="masthead__trigger"
+                      data-active={groupActive}
+                      aria-current={pathname === group.href ? 'page' : undefined}
+                    >
+                      {group.label}
+                      {/* 当前栏目的下划线用 layoutId 做位移动画，切换栏目时"滑"过去 */}
+                      {groupActive && (
+                        <motion.span layoutId="nav-underline" className="masthead__underline" />
+                      )}
+                    </Link>
+                  </div>
+                )
+              }
+
+              const isOpen = openGroup === group.label
+              return (
+                <div
+                  key={group.label}
+                  className="masthead__group"
+                  onMouseEnter={() => {
+                    cancelClose()
+                    setOpenGroup(group.label)
+                  }}
+                  onMouseLeave={scheduleClose}
+                >
+                  <button
+                    type="button"
+                    className="masthead__trigger"
+                    data-active={groupActive}
+                    aria-expanded={isOpen}
+                    aria-haspopup="true"
+                    aria-controls={`nav-dropdown-${group.label}`}
+                    onClick={() => setOpenGroup(isOpen ? null : group.label)}
+                    onKeyDown={event => onTriggerKeyDown(event, group.label)}
+                  >
+                    {group.label}
+                    <ChevronDown size={14} aria-hidden="true" data-rotated={isOpen} />
+                    {groupActive && (
+                      <motion.span layoutId="nav-underline" className="masthead__underline" />
+                    )}
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        id={`nav-dropdown-${group.label}`}
+                        className={`masthead__dropdown${group.label === '类别' ? ' masthead__dropdown--wide masthead__dropdown--right' : ''}`}
+                        initial={{ opacity: 0, y: -6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -4 }}
+                        transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                        onKeyDown={event => onDropdownKeyDown(event, group.label)}
+                      >
+                        {group.sections.map(section => (
+                          <div key={section.title || group.label} className="masthead__dropdown-section">
+                            {section.title && <p className="masthead__dropdown-title">{section.title}</p>}
+                            <div className="masthead__dropdown-links">
+                              {section.links.map((link, linkIndex) => (
+                                <Link
+                                  key={`${group.label}-${link.href}-${link.label}`}
+                                  href={link.href}
+                                  ref={registerItem(
+                                    group.label,
+                                    group.sections
+                                      .slice(0, group.sections.indexOf(section))
+                                      .reduce((sum, s) => sum + s.links.length, 0) + linkIndex
+                                  )}
+                                  aria-current={pathname === link.href ? 'page' : undefined}
+                                >
+                                  <span>{link.label}</span>
+                                  {link.meta && <small>{link.meta}</small>}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-              ))}
-            </div>}
+              )
+            })}
+          </nav>
+
+          <div className="masthead__tools">
+            {/* 搜索：桌面端是带 ⌘K 提示的输入框造型（可发现性远高于一个放大镜图标），
+                窄屏退化为图标按钮 */}
+            <button type="button" className="masthead__search" onClick={openCommandPalette}>
+              <Search size={16} aria-hidden="true" />
+              <span className="masthead__search-label">搜索全站</span>
+              <kbd className="ui-kbd masthead__search-kbd">⌘K</kbd>
+              <span className="ui-sr-only">打开全站搜索，快捷键 Command 或 Control 加 K</span>
+            </button>
+
+            <button
+              type="button"
+              className="masthead__icon-btn"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}
+            >
+              {/* 图标旋转淡入，让"切换生效了"这件事有明确的视觉确认 */}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={theme}
+                  initial={{ opacity: 0, rotate: -60, scale: 0.7 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 60, scale: 0.7 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ display: 'grid', placeItems: 'center' }}
+                >
+                  {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                </motion.span>
+              </AnimatePresence>
+            </button>
+
+            <button
+              ref={menuButtonRef}
+              type="button"
+              className="masthead__icon-btn masthead__menu-toggle"
+              onClick={() => setDrawerOpen(value => !value)}
+              aria-expanded={drawerOpen}
+              aria-controls="site-drawer"
+              aria-label={drawerOpen ? '关闭菜单' : '打开菜单'}
+            >
+              {drawerOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
-        })}
-      </nav>
-      <div className="archive-masthead__tools">
-        <Link href="/search" className="archive-tool archive-tool--icon" aria-label="全站搜索"><Search size={18} /></Link>
-        <button type="button" className="archive-tool archive-tool--icon" onClick={toggleTheme} aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}>{theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}</button>
-        <button ref={menuButtonRef} type="button" className="archive-menu-toggle" onClick={() => setMobileOpen(value => !value)} aria-expanded={mobileOpen} aria-controls="mobile-navigation" aria-label={mobileOpen ? '关闭菜单' : '打开菜单'}>{mobileOpen ? <X size={22} /> : <Menu size={22} />}</button>
-      </div>
-    </div>
-    {mobileOpen && <div id="mobile-navigation" className="archive-mobile-menu"><Link href="/search" className="archive-mobile-menu__search"><Search size={17} />搜索人物、公司、年份或概念</Link><div className="archive-mobile-menu__grid">{navGroups.map(group => group.href
-      ? <section key={group.label}><Link href={group.href}>{group.label}</Link></section>
-      : <section key={group.label}><p>{group.label}</p>{group.sections.map(section => <div key={section.title || group.label} className="archive-mobile-menu__section">{section.title && <small className="archive-mobile-menu__section-title">{section.title}</small>}{section.links.map(link => <Link key={`${group.label}-${link.href}-${link.label}`} href={link.href}><span>{link.label}</span><small>{link.meta}</small></Link>)}</div>)}</section>)}</div><button type="button" onClick={toggleTheme} className="archive-mobile-menu__theme" aria-label={theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}>{theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}{theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}</button></div>}
-  </header>
+        </div>
+      </header>
+
+      {/* ===== 移动端抽屉 =====
+          改造前是 {mobileOpen && <div>} 的硬切换：没有进出场动画、没有遮罩、
+          没有焦点陷阱，且菜单挤在头部下方把内容推下去。
+          现在是从右侧滑入的独立浮层 + 半透明遮罩 + 焦点陷阱。 */}
+      <AnimatePresence>
+        {drawerOpen && (
+          <>
+            <motion.div
+              className="drawer-scrim"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setDrawerOpen(false)}
+            />
+            <motion.div
+              id="site-drawer"
+              ref={drawerRef}
+              className="drawer"
+              role="dialog"
+              aria-modal="true"
+              aria-label="站点导航"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+              onKeyDown={onDrawerKeyDown}
+            >
+              <div className="drawer__head">
+                <p className="drawer__title">目录</p>
+                <button
+                  type="button"
+                  className="masthead__icon-btn"
+                  onClick={() => setDrawerOpen(false)}
+                  aria-label="关闭菜单"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              <button
+                type="button"
+                className="drawer__search"
+                onClick={() => {
+                  setDrawerOpen(false)
+                  // 等抽屉退场再唤起搜索，避免两个浮层同时占屏
+                  setTimeout(openCommandPalette, 180)
+                }}
+              >
+                <Search size={16} aria-hidden="true" />
+                搜索人物、公司、年份或概念
+              </button>
+
+              <nav className="drawer__nav" aria-label="站点栏目">
+                {navGroups.map(group =>
+                  group.href ? (
+                    <Link
+                      key={group.label}
+                      href={group.href}
+                      className="drawer__solo"
+                      data-active={isActive(group.activePrefixes)}
+                      aria-current={pathname === group.href ? 'page' : undefined}
+                    >
+                      {group.label}
+                    </Link>
+                  ) : (
+                    <section key={group.label} className="drawer__group">
+                      <p className="drawer__group-title">{group.label}</p>
+                      {group.sections.map(section => (
+                        <div key={section.title || group.label} className="drawer__section">
+                          {section.links.map(link => (
+                            <Link
+                              key={`${group.label}-${link.href}-${link.label}`}
+                              href={link.href}
+                              className="drawer__link"
+                              data-active={pathname === link.href}
+                              aria-current={pathname === link.href ? 'page' : undefined}
+                            >
+                              <span>{link.label}</span>
+                              {link.meta && <small>{link.meta}</small>}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </section>
+                  )
+                )}
+              </nav>
+
+              <button type="button" className="drawer__theme" onClick={toggleTheme}>
+                {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+                {theme === 'dark' ? '切换到浅色模式' : '切换到深色模式'}
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  )
 }

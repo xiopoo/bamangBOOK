@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import { getColumns, type ColumnMeta } from './columns'
 import { getBusinessHistories, type BusinessHistoryMeta } from './business-history'
-import { getBooks, type BookMeta } from './books'
 import { getAllArticles, getArticleBySlug, type ArticleMeta } from './articles'
 import { formatDateValue } from './date-format'
 
@@ -236,33 +235,6 @@ function businessHistoryToPosts(): BlogPost[] {
     .filter((p): p is BlogPost => Boolean(p))
 }
 
-function booksToPosts(): BlogPost[] {
-  return getBooks()
-    .map((book: BookMeta) => {
-      const raw = readFileSync(path.join(process.cwd(), 'content/books', `${book.slug}.md`), 'utf-8')
-      const fields = commonBlogFields(book.slug, raw)
-      return toBlogPost({
-        slug: book.slug,
-        title: book.title,
-        summary: book.oneLiner || book.title,
-        type: fields.postType || 'book-note',
-        date: fields.date || book.date,
-        featured: fields.featured,
-        hidden: fields.hidden,
-        tags: fields.tags.length > 0 ? fields.tags : book.tags,
-        entities: fields.entities,
-        series: fields.series,
-        subtitle: fields.subtitle,
-        author: fields.author || book.author || BLOG_AUTHOR,
-        relatedArchiveLinks: fields.relatedArchiveLinks,
-        canonicalPath: `/books/${encodeURIComponent(book.slug)}`,
-        sourcePath: `books/${book.slug}`,
-        readingMinutes: estimateReadMinutes(raw),
-      })
-    })
-    .filter((p): p is BlogPost => Boolean(p))
-}
-
 function articlesToPosts(): BlogPost[] {
   return getAllArticles()
     .filter((a) => a.contentType === 'article')
@@ -341,7 +313,6 @@ export function getAllBlogPosts(): BlogPost[] {
   const all = [
     ...columnsToPosts(),
     ...businessHistoryToPosts(),
-    ...booksToPosts(),
     ...articlesToPosts(),
     ...contentBlogToPosts(),
   ]

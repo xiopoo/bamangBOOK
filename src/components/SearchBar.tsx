@@ -2,11 +2,12 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { Search } from 'lucide-react'
 import { suggestStaticContent } from '@/lib/static-search-client'
 
 interface Suggestion {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq'
   count: number
   url: string
 }
@@ -29,28 +30,32 @@ const typeLabels: Record<string, string> = {
   faq: '主题问答',
 }
 
-const typeColors: Record<string, string> = {
-  concept: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  company: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  person: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  letter: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  partnership: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  article: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  qa: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  talk: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  interview: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  blogger: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  book: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  column: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
-  model: 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light',
+// 徽章色调：与 ui.css .ui-badge[data-tone] 对应。
+// 博客=金 / 原典(信件·合伙人信·问答·演讲·访谈·股东大会·主题问答)=赭红 / 实体=墨 / 外部资料=弱。
+const typeTone: Record<string, 'oxblood' | 'gold' | 'ink' | 'muted'> = {
+  article: 'gold',
+  column: 'gold',
+  book: 'gold',
+  model: 'gold',
+  concept: 'ink',
+  company: 'ink',
+  person: 'ink',
+  letter: 'oxblood',
+  partnership: 'oxblood',
+  qa: 'oxblood',
+  talk: 'oxblood',
+  interview: 'oxblood',
+  meeting: 'oxblood',
+  faq: 'oxblood',
+  blogger: 'muted',
 }
 
-export default function SearchBar({ 
+export default function SearchBar({
   initialQuery = '',
   autoFocus = false,
   onSearch,
   onQueryChange,
-}: { 
+}: {
   initialQuery?: string
   autoFocus?: boolean
   onSearch?: (query: string) => void
@@ -63,7 +68,7 @@ export default function SearchBar({
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const [isLoading, setIsLoading] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
-  const dropdownRef = useRef<HTMLDivElement>(null)
+  const dropdownRef = useRef<HTMLUListElement>(null)
   const debounceTimer = useRef<ReturnType<typeof setTimeout>>()
 
   // 防抖搜索建议
@@ -108,33 +113,31 @@ export default function SearchBar({
     }, 250)
   }
 
-  // 键盘导航
+  // 键盘导航：combobox 虚拟焦点（aria-activedescendant），不移动 DOM 焦点
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!isOpen || suggestions.length === 0) return
 
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault()
-        setSelectedIndex(prev => 
+        setSelectedIndex(prev =>
           prev < suggestions.length - 1 ? prev + 1 : 0
         )
         break
       case 'ArrowUp':
         e.preventDefault()
-        setSelectedIndex(prev => 
+        setSelectedIndex(prev =>
           prev > 0 ? prev - 1 : suggestions.length - 1
         )
         break
       case 'Enter':
         e.preventDefault()
         if (selectedIndex >= 0 && selectedIndex < suggestions.length) {
-          // 选中建议项
           const selected = suggestions[selectedIndex]
           router.push(selected.url)
           setIsOpen(false)
           setQuery('')
         } else if (query.trim()) {
-          // 回车直接搜索
           handleSearch(query)
         }
         break
@@ -148,7 +151,7 @@ export default function SearchBar({
   // 执行搜索
   const handleSearch = (searchQuery: string) => {
     if (!searchQuery.trim()) return
-    
+
     if (onSearch) {
       onSearch(searchQuery)
     } else {
@@ -176,10 +179,10 @@ export default function SearchBar({
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        dropdownRef.current && 
-        !dropdownRef.current.contains(e.target as Node) &&
         inputRef.current &&
-        !inputRef.current.contains(e.target as Node)
+        !inputRef.current.contains(e.target as Node) &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
       ) {
         setIsOpen(false)
         setSelectedIndex(-1)
@@ -200,8 +203,9 @@ export default function SearchBar({
 
   return (
     <div className="relative">
-      <form onSubmit={handleSubmit}>
-        <div className="relative">
+      <form onSubmit={handleSubmit} role="search">
+        <div className="ui-field__box">
+          <Search className="h-4 w-4" aria-hidden="true" />
           <input
             ref={inputRef}
             type="text"
@@ -213,59 +217,53 @@ export default function SearchBar({
             }}
             placeholder="搜索概念、公司、人物..."
             autoFocus={autoFocus}
-            className="w-full pl-10 pr-4 py-2.5 bg-bg-card dark:bg-dark-bg-card border border-gray-200 dark:border-dark-border rounded-lg text-sm text-text dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary dark:focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+            aria-label="全站搜索"
+            aria-autocomplete="list"
+            aria-expanded={isOpen && suggestions.length > 0}
+            aria-controls="search-suggestions"
+            aria-activedescendant={selectedIndex >= 0 && isOpen ? `search-opt-${selectedIndex}` : undefined}
+            className="ui-input"
           />
-          {/* 搜索图标 */}
-          <button
-            type="submit"
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-primary transition-colors"
-            aria-label="搜索"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </button>
-          {/* 加载指示器 */}
+          {/* 加载指示器（本地索引，通常瞬时；保留以覆盖首次大索引冷加载） */}
           {isLoading && (
-            <div className="absolute right-3 top-1/2 -translate-y-1/2">
-              <svg className="animate-spin h-4 w-4 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
-            </div>
+            <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" aria-hidden="true">
+              <span className="block h-4 w-4 animate-[ui-spin_620ms_linear_infinite] rounded-full border-2 border-[var(--archive-ink-faint)] border-r-transparent" />
+            </span>
           )}
         </div>
       </form>
 
-      {/* 建议下拉框 */}
+      {/* 建议下拉框：token 化面板 + ARIA listbox/option */}
       {isOpen && suggestions.length > 0 && (
-        <div
+        <ul
           ref={dropdownRef}
-          className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-lg shadow-lg dark:shadow-black/30 z-50 max-h-72 overflow-y-auto"
+          id="search-suggestions"
+          role="listbox"
+          aria-label="搜索建议"
+          className="absolute left-0 right-0 top-full z-[60] mt-2 max-h-72 overflow-y-auto rounded-[var(--archive-radius)] border border-[var(--archive-hairline)] bg-[var(--surface-0)] p-1 shadow-[var(--elev-2)]"
         >
           {suggestions.map((suggestion, index) => (
-            <button
+            <li
               key={`${suggestion.type}-${suggestion.name}`}
+              id={`search-opt-${index}`}
+              role="option"
+              aria-selected={selectedIndex === index}
               onClick={() => handleSuggestionClick(suggestion)}
               onMouseEnter={() => setSelectedIndex(index)}
-              className={`w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors ${
+              className={`flex cursor-pointer items-center justify-between gap-2 rounded-[var(--archive-radius)] px-3 py-2.5 text-left transition-colors ${
                 index === selectedIndex
-                  ? 'bg-primary/5 dark:bg-primary/20 text-text dark:text-dark-text'
-                  : 'text-text dark:text-dark-text hover:bg-gray-50 dark:hover:bg-gray-800'
-              } ${index !== suggestions.length - 1 ? 'border-b border-gray-50 dark:border-dark-border' : ''}`}
+                  ? 'bg-[var(--surface-2)]'
+                  : 'hover:bg-[var(--surface-1)]'
+              }`}
             >
-              <div className="flex items-center gap-2 min-w-0">
-                <span className="text-sm font-medium truncate">{suggestion.name}</span>
-                <span className={`text-xs px-1.5 py-0.5 rounded-full flex-shrink-0 ${typeColors[suggestion.type]}`}>
-                  {typeLabels[suggestion.type]}
-                </span>
-              </div>
-              <span className="text-xs text-gray-400 dark:text-gray-500 ml-2 flex-shrink-0">
-                {suggestion.count}次
+              <span className="flex min-w-0 items-center gap-2">
+                <span className="truncate text-sm font-medium text-[var(--archive-ink)]">{suggestion.name}</span>
+                <span className="ui-badge" data-tone={typeTone[suggestion.type]}>{typeLabels[suggestion.type]}</span>
               </span>
-            </button>
+              <span className="flex-shrink-0 text-xs text-[var(--archive-ink-faint)]">{suggestion.count}次</span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   )

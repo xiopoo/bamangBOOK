@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>段永平文集</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  /* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+    text-align: justify;
+  }
+  .cover {
+    height: 247mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    break-after: page;
+  }
+  .cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+  .cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+  .cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+  .toc-page { break-before: page; }
+  .toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+  .toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+  .toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+  h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+  h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+  h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+  h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+  p { margin: 6px 0; }
+  blockquote {
+    border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+    color: #555; background: #fbf6f7; font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
+  code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  a { color: #AB1942; text-decoration: none; }
+  img { max-width: 100%; }
+
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">段永平文集</h1>
+</header>
+<h1 id="公司与行业见解">公司与行业见解</h1>
+<h2 id="其他公司与行业">其他公司与行业</h2>
+<h3
+id="请问这种破产保护的活动对公司股东有什么影响会被清零吗">请问,这种破产保护的活动对公司股东有什么影响?会被清零吗?</h3>
+<h4 id="提问">提问</h4>
+<p>请问,这种破产保护的活动对公司股东有什么影响?会被清零吗?</p>
+<h4 id="段永平回答">段永平回答</h4>
+<p>航空股很难不被清零。</p>
+<h3
+id="回复南加雪球-这里最关键的地方是当股票真的跌很多时你认为你会赚更多如果没这个">回复@南加雪球:
+这里最关键的地方是，当股票真的跌很多时你认为你会赚更多。如果没这个…</h3>
+<p>回复@南加雪球:
+这里最关键的地方是，当股票真的跌很多时你认为你会赚更多。如果没这个前提，就不应该碰。//<span
+class="citation" data-cites="南加雪球:回复">@南加雪球:回复</span><span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>:
+多谢大道！是不是可以这样理解，以out of the
+money的call为例，只要股票最后没被call走，你就可以一直write 下一批
+covered call, 积少成多，就算股票跌…<span class="citation"
+data-cites="utel">@utel</span>：<span
+class="math inline"><em>雅</em><em>虎</em>(<em>Y</em><em>H</em><em>O</em><em>O</em>)</span>我几乎同时建仓伯克希尔和yahoo。目前，伯克希尔的收益率要高于雅虎！情以何堪！2012-07-11
+21:56 · 转发 14 · 讨论 6 · 赞 1</p>
+<h3 id="达美航空dal-受老巴影响最近认真看了一下dalluv有点意思"><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思</h3>
+<p><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思</p>
+<h3 id="伯克希尔-哈撒韦abrk.a"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+网页链接 “成为巴菲特”这个纪录片很值得一看！</p>
+<h3
+id="回复tenbagger7-我对老巴清空航空公司是有点意外的因为他刚刚说过他不会">回复@TENBAGGER7:
+我对老巴清空航空公司是有点意外的，因为他刚刚说过他不会…</h3>
+<p>回复@TENBAGGER7:
+我对老巴清空航空公司是有点意外的，因为他刚刚说过他不会卖航空公司！这个时候卖就等于把粉丝套进去了哈，有点难以理解。当然，这个世界有很多难以理解的事情，多一件也不是个事情。我们自己也确实买了一些达美，起因也是因为老巴买了后吸引了我的注意力。我目前依然认为，如果…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思2020-04-18 18:46 · 转发 481
+· 讨论 123 · 赞 309</p>
+<h3
+id="回复每天学点巴菲特-无关他怎么认为我只是有点意外他为什么刚刚说不卖就卖了感觉">回复@每天学点巴菲特:
+无关他怎么认为。我只是有点意外他为什么刚刚说不卖就卖了，感觉…</h3>
+<p>回复@每天学点巴菲特:
+无关他怎么认为。我只是有点意外他为什么刚刚说不卖就卖了，感觉他在说不卖的时候其实已经决定要卖了，而且还是先把达美和西南卖到10%以下，为后面进一步减持方便而准备。好吧，也算活久见了。//<span
+class="citation"
+data-cites="每天学点巴菲特:回复">@每天学点巴菲特:回复</span><span
+class="citation"
+data-cites="大道无形我有型:老巴认为无法判断疫情结束">@大道无形我有型:老巴认为无法判断疫情结束</span>，人们的出行方…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思2020-04-18 18:46 · 转发 481
+· 讨论 123 · 赞 309</p>
+<h3
+id="回复大道无形我有型-我对老巴为什么卖航空公司没有兴趣我只是对他这种卖法感到不舒">回复@大道无形我有型:
+我对老巴为什么卖航空公司没有兴趣，我只是对他这种卖法感到不舒…</h3>
+<p>回复@大道无形我有型:
+我对老巴为什么卖航空公司没有兴趣，我只是对他这种卖法感到不舒服而已。刚刚对媒体说完不卖接着马上就卖了，而且是用了点技巧去卖的。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="TENBAGGER7:我对老巴清空航空公司是有点意外的">@TENBAGGER7:我对老巴清空航空公司是有点意外的</span>，因为他刚刚说过他不会卖航空公司！这个时候卖就等于把粉丝套进去…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思2020-04-18 18:46 · 转发 481
+· 讨论 123 · 赞 309</p>
+<h3
+id="回复思弦君-病毒显然已经改变了这个世界但人类会找到办法对付病毒恢复正常的生活">回复@思弦君:
+病毒显然已经改变了这个世界，但人类会找到办法对付病毒，恢复正常的生活…</h3>
+<p>回复@思弦君:
+病毒显然已经改变了这个世界，但人类会找到办法对付病毒，恢复正常的生活的。但所谓正常的生活可能和以前不再一样，比如需要保持社交距离，很多地方需要戴口罩，洗手时间和次数要多很多等等…//<span
+class="citation" data-cites="思弦君:回复">@思弦君:回复</span><span
+class="citation"
+data-cites="大道无形我有型:病毒会真的改变这个世界吗">@大道无形我有型:病毒会真的改变这个世界吗</span>？<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+受老巴影响，最近认真看了一下Dal/Luv，有点意思2020-04-18 18:46 · 转发 481
+· 讨论 123 · 赞 309</p>
+<h3 id="达美航空dal"><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span></h3>
+<p><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+如果这个数据是真的，人们确实不该恐慌。我没核实过。</p>
+<h3 id="达美航空dal-1"><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span></h3>
+<p><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+难得因为投资睡不好觉，拿着航空公司确实不踏实，总有想不透的东西。好吧，尊重老巴得想法，我也找机会撤了。</p>
+<h3
+id="回复菲凡士地坪-悟空-是啊视频确实方便现在做pilates-都是在线上接受教">回复@菲凡士地坪-悟空:
+是啊，视频确实方便，现在做Pilates 都是在线上接受教…</h3>
+<p>回复@菲凡士地坪-悟空: 是啊，视频确实方便，现在做Pilates
+都是在线上接受教练指导了。//<span class="citation"
+data-cites="菲凡士地坪-悟空:回复">@菲凡士地坪-悟空:回复</span><span
+class="citation"
+data-cites="大道无形我有型:今天想到估计疫情以后大家会习惯用视频会议">@大道无形我有型:今天想到估计疫情以后大家会习惯用视频会议</span>、大家会发现视频其实效果也是一样的。有时候坐几个小时的高铁、就和甲方老板讲几句话、心里想真是浪费明明打个电话就可以…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+难得因为投资睡不好觉，拿着航空公司确实不踏实，总有想不透的东西。好吧，尊重老巴得想法，我也找机会撤了。2020-05-06
+05:44 · 转发 330 · 讨论 46 · 赞 1059</p>
+<h3
+id="柳叶刀财经专栏巴菲特真的卖错航空股了么美国航空西南航空达美航空都从底部涨上来"><span
+class="citation"
+data-cites="柳叶刀财经">@柳叶刀财经</span>：专栏巴菲特真的卖错航空股了么美国航空、西南航空、达美航空都从底部涨上来…</h3>
+<p><span class="citation"
+data-cites="柳叶刀财经">@柳叶刀财经</span>：专栏巴菲特真的卖错航空股了么美国航空、西南航空、达美航空都从底部涨上来了，其中美国航空已经从底部8块多涨到现在的18块多了，换言之，巴菲特9元割肉的美国航空股，现在已经翻倍了，涨幅已经有100%了。西南航空也从底部开始涨了50%，达美航空同样是底部到现在的位置涨幅100%了。
+当然，为什么这么涨，主要是因为美国5月…2020-06-06 08:10 · 转发 231 · 讨论
+255 · 赞 222</p>
+<h3 id="达美航空dal-2"><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span></h3>
+<p><span
+class="math inline"><em>达</em><em>美</em><em>航</em><em>空</em>(<em>D</em><em>A</em><em>L</em>)</span>
+确实是最近得新高，但比去年同期还差不少。</p>
+<h3 id="伯克希尔-哈撒韦abrk.a-1"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+还有点闲钱，，卖了点brk/b 的at the
+money的put，这个和下个礼拜到期的。赚点小钱再说，给我就留着了。</p>
+<h3 id="伯克希尔-哈撒韦bbrk.b"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+新高了！</p>
+<h3
+id="网上看到消息比尔盖茨也确诊了-无数次近距离接触了那天omaha晚餐前盖茨就在">网上看到消息，比尔盖茨也确诊了…!
+无数次近距离接触了，那天Omaha晚餐前盖茨就在…</h3>
+<h4 id="提问-1">提问</h4>
+<p>网上看到消息，比尔盖茨也确诊了…!
+无数次近距离接触了，那天Omaha晚餐前盖茨就在我旁边坐了超过15分钟。有人说新冠就像感冒，可能最后每个人都会得。</p>
+<h4 id="段永平回答-1">段永平回答</h4>
+<p>大道别也中招了，这玩意还是不得为妙</p>
+<p><strong>提及</strong>: <span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></p>
+<h3
+id="今天打了一轮好球坐标sharon-heights-gold-tee.-一个三推">今天打了一轮好球。坐标：Sharon
+Heights, gold tee. 一个三推…</h3>
+<h4 id="提问-2">提问</h4>
+<p>今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！</p>
+<h4 id="段永平回答-2">段永平回答</h4>
+<p>“Your story may not have such a happy beginning but that does not
+make you who you are, it is the rest of it- who you choose to be”</p>
+<p><strong>提及</strong>: <span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></p>
+<h3
+id="月25日丨伯克希尔哈撒韦公司berkshire-hathaway-inc.周二">1月25日丨伯克希尔哈撒韦公司(Berkshire
+Hathaway Inc.)周二…</h3>
+<h4 id="提问-3">提问</h4>
+<p>1月25日丨伯克希尔哈撒韦公司(Berkshire Hathaway
+Inc.)周二在一份声明中说，该公司目前正计划将4月30日的年会现场举行。该活动仍将进行网络直播。
+伯克希尔哈撒韦公司还透露，巴菲特备受期待的年度致股东信件将于2月26日发布。
+该公司说，该报告应该会更详细地介绍这次会议。</p>
+<h4 id="段永平回答-3">段永平回答</h4>
+<p>今年国内去的人应该很少，不然回国要隔离，不容易啊。</p>
+<h3 id="伯克希尔-哈撒韦abrk.a-2"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！</p>
+<h3
+id="回复大道无形我有型-第一个洞就差点打爆了第二个洞又失误了但结果很不错虽然第">回复@大道无形我有型:
+第一个洞就差点打爆了，第二个洞又失误了，但结果很不错，虽然第…</h3>
+<p>回复@大道无形我有型:
+第一个洞就差点打爆了，第二个洞又失误了，但结果很不错，虽然第17洞又差点打爆了。打完我就想起功夫熊猫里的这段话了。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>:“Your story may not
+have such a happy beginning but that does not make you who you are, it
+is the rest o…收起<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></p>
+<p>今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！ <span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！2022-03-03 17:51 · 转发 129 ·
+讨论 9 · 赞 519</p>
+<h3
+id="回复东海之风-找到短板多加练习节奏非常重要掌握不容易东海之风回复">回复@东海之风:
+找到短板，多加练习。节奏非常重要，掌握不容易。//<span class="citation"
+data-cites="东海之风:回复">@东海之风:回复</span>…</h3>
+<p>回复@东海之风: 找到短板，多加练习。节奏非常重要，掌握不容易。//<span
+class="citation" data-cites="东海之风:回复">@东海之风:回复</span><span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>:，请教一下大道，见8后，要提升成绩，主要时间花在练短杆和推杆上？收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></p>
+<p>今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！ <span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+今天打了一轮好球。坐标：Sharon Heights, gold tee.
+一个三推一个OB的前提下打了71，很开心哈！2022-03-03 17:51 · 转发 129 ·
+讨论 9 · 赞 519</p>
+<h3 id="伯克希尔-哈撒韦abrk.a-3"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+BRKA新高50w/股了！</p>
+<h3
+id="回复看好2028-想起来了是这个名字看好2028回复大道无形我有型">回复@看好2028:
+想起来了，是这个名字。//<span class="citation"
+data-cites="看好2028:回复">@看好2028:回复</span><span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>…</h3>
+<p>回复@看好2028: 想起来了，是这个名字。//<span class="citation"
+data-cites="看好2028:回复">@看好2028:回复</span><span class="citation"
+data-cites="大道无形我有型:这家公司就是汉鼎宇佑">@大道无形我有型:这家公司就是汉鼎宇佑</span>，做着伯克希尔哈撒韦的梦，却有一颗贾跃亭的心。<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>海</em><em>峡</em><em>创</em><em>新</em>(<em>S</em><em>Z</em>300300)</span>
+说个冷笑话，不知道哪根神经起了作用，我居然买过这家公司。那是好几年前的事情了。当时听人说了一下这个公司，觉得有点意思，于是马上买了一点。开始研究后发现完全不是我以为的那样，就马上卖掉了，还幸运地小赚了一点，要是拿到现在可就亏大了。现在连名字都换了。2022-04-27
+15:54 · 转发 71 · 讨论 16 · 赞 681</p>
+<h3 id="伯克希尔-哈撒韦abrk.a-4"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+每年一度再来，生活回归正常。</p>
+<h3
+id="回复桑三-旧金山7天隔离旧金山现在要隔离吗桑三回复大道无形我有型">回复@桑三:
+旧金山7天隔离？旧金山现在要隔离吗？//<span class="citation"
+data-cites="桑三:回复">@桑三:回复</span><span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>:…</h3>
+<p>回复@桑三: 旧金山7天隔离？旧金山现在要隔离吗？//<span
+class="citation" data-cites="桑三:回复">@桑三:回复</span><span
+class="citation"
+data-cites="大道无形我有型:今年很想参加">@大道无形我有型:今年很想参加</span>，但是因为家里有事得回，现在刚到上海两天。在旧金山七天隔离的时候大道去了法国，感觉离得很近但总是差点@大道无形我有型：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+每年一度再来，生活回归正常。2022-04-30 10:32 · 转发 72 · 讨论 6 · 赞
+1745</p>
+<h3
+id="回复luyaojxplyq-明白了是飞之前的隔离不是旧金山的要求是离开旧金">回复@luyaojxplyq:
+明白了，是飞之前的隔离。不是旧金山的要求，是离开旧金…</h3>
+<p>回复@luyaojxplyq:
+明白了，是飞之前的隔离。不是旧金山的要求，是离开旧金山到达地的要求。//<span
+class="citation"
+data-cites="luyaojxplyq:回复">@luyaojxplyq:回复</span><span
+class="citation"
+data-cites="大道无形我有型:可能是因为他的居住地不在旧金山">@大道无形我有型:可能是因为他的居住地不在旧金山</span>，所以要先飞往旧金山做七天隔离，并做七日前检测，一日前和半日前检测，方可乘坐UA857飞往上海。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation" data-cites="桑三">@桑三</span>: 旧金…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+每年一度再来，生活回归正常。2022-04-30 10:32 · 转发 72 · 讨论 6 · 赞
+1745</p>
+<h3
+id="回复大道无形我有型-这个有点难受啊回去还要继续隔离一段时间大道无形我有">回复@大道无形我有型:
+这个有点难受啊，回去还要继续隔离一段时间。//<span class="citation"
+data-cites="大道无形我有">@大道无形我有</span>…</h3>
+<p>回复@大道无形我有型:
+这个有点难受啊，回去还要继续隔离一段时间。//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="luyaojxplyq:明白了">@luyaojxplyq:明白了</span>，是飞之前的隔离。不是旧金山的要求，是离开旧金山到达地的要求。<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+每年一度再来，生活回归正常。2022-04-30 10:32 · 转发 72 · 讨论 6 · 赞
+1745</p>
+<h3 id="伯克希尔-哈撒韦bbrk.b-1"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+网上看到消息，比尔盖茨也确诊了…!
+无数次近距离接触了，那天Omaha晚餐前盖茨就在我旁边坐了超过15分钟。有人说新冠就像感冒，可能最后每个人都会得。</p>
+<h3
+id="回复茶水铺-轻症也比感冒难受茶水铺回复大道无形我有型轻症可能就像感">回复@茶水铺:
+轻症也比感冒难受。//<span class="citation"
+data-cites="茶水铺:回复">@茶水铺:回复</span><span class="citation"
+data-cites="大道无形我有型:轻症可能就像感">@大道无形我有型:轻症可能就像感</span>…</h3>
+<p>回复@茶水铺: 轻症也比感冒难受。//<span class="citation"
+data-cites="茶水铺:回复">@茶水铺:回复</span><span class="citation"
+data-cites="大道无形我有型:轻症可能就像感冒">@大道无形我有型:轻症可能就像感冒</span>，肺也是很难受的，重症肺像火烧一样，总之要小心！收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></p>
+<p>网上看到消息，比尔盖茨也确诊了…!
+无数次近距离接触了，那天Omaha晚餐前盖茨就在我旁边坐了超过15分钟。有人说新冠就像感冒，可能最后每个人都会得。<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+网上看到消息，比尔盖茨也确诊了…!
+无数次近距离接触了，那天Omaha晚餐前盖茨就在我旁边坐了超过15分钟。有人说新冠就像感冒，可能最后每个人都会得。2022-05-10
+22:11 · 转发 96 · 讨论 11 · 赞 799</p>
+<h3
+id="去年四月三十股东大会后同桌吃的晚饭那么好的状态想着100岁应该大概率了真不知道">去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道…</h3>
+<h4 id="提问-4">提问</h4>
+<p>去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP</p>
+<h4 id="段永平回答-4">段永平回答</h4>
+<p>段总是61年3月的，今年也62岁咯</p>
+<p><strong>提及</strong>: <span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></p>
+<h3
+id="巴菲特租用了50年的办公室长什么样巴菲特的办公室只有17平方米-巴菲特我在">巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在…</h3>
+<h4 id="提问-5">提问</h4>
+<ul>
+<li>巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+: 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。</li>
+</ul>
+<h4 id="段永平回答-5">段永平回答</h4>
+<p>这个照片看着比平时要整洁一点点，平时的办公室里到处都是零食（至少4-5个零食放在外面，这个照片里面一个都看不到）。</p>
+<p><strong>提及</strong>: 网页链接</p>
+<h3
+id="上周四周五和本周一伯克希尔连续3天以每股56-58美元的价格买入了近220万股">上周四、周五和本周一，伯克希尔连续3天，以每股56-58美元的价格买入了近220万股…</h3>
+<h4 id="提问-6">提问</h4>
+<p>上周四、周五和本周一，伯克希尔连续3天，以每股56-58美元的价格买入了近220万股西方石油股票。
+伯克希尔目前持有西方石油2.139亿股股票，相当于24%的股份。这些股份的价值超过120亿美元。
+伯克希尔还持有价值90多亿美元的西方石油优先股，股息率为8%，以及近8400万份认股权证（可以略…</p>
+<h4 id="段永平回答-6">段永平回答</h4>
+<p>那我再卖点put</p>
+<h3 id="西方石油oxy"><span
+class="math inline"><em>西</em><em>方</em><em>石</em><em>油</em>(<em>O</em><em>X</em><em>Y</em>)</span></h3>
+<p><span
+class="math inline"><em>西</em><em>方</em><em>石</em><em>油</em>(<em>O</em><em>X</em><em>Y</em>)</span>
+买了一些，偶尔也抄下作业。</p>
+<h3
+id="回复大道无形我有型-其实有点像老巴买的动视暴雪老巴就是相信微软会买他就买了点">回复@大道无形我有型:
+其实有点像老巴买的动视暴雪，老巴就是相信微软会买，他就买了点…</h3>
+<p>回复@大道无形我有型:
+其实有点像老巴买的动视暴雪，老巴就是相信微软会买，他就买了点。千万别以为老巴懂暴雪，也千万别问我西方石油是怎么回事。这个行为简单讲就叫套利，当然也有被套的概率，但非常小。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="击鼓不传花:我啥都没看">@击鼓不传花:我啥都没看</span>，就看到老巴买了二十几个百分点。我知道他…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>西</em><em>方</em><em>石</em><em>油</em>(<em>O</em><em>X</em><em>Y</em>)</span>
+买了一些，偶尔也抄下作业。2023-02-24 17:09 · 转发 579 · 讨论 19 · 赞
+685</p>
+<h3 id="西方石油oxy-1"><span
+class="math inline"><em>西</em><em>方</em><em>石</em><em>油</em>(<em>O</em><em>X</em><em>Y</em>)</span></h3>
+<p><span
+class="math inline"><em>西</em><em>方</em><em>石</em><em>油</em>(<em>O</em><em>X</em><em>Y</em>)</span>
+感觉到Warren买铁路公司的味道了。</p>
+<h3
+id="ai模拟的办公室背景是有零食的-查看图片收起洪荒力ant网页链接---巴">Ai模拟的办公室，背景是有零食的。
+查看图片收起<span class="citation"
+data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 - 巴…</h3>
+<p>Ai模拟的办公室，背景是有零食的。 查看图片收起<span class="citation"
+data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="啊真有信是ai的吗那确实有点神奇了低功耗祥子这个图不是ai生成的嘛如">啊？！真有信是Ai的吗？那确实有点神奇了//<span
+class="citation"
+data-cites="低功耗祥子:这个图不是ai生成的嘛">@低功耗祥子:这个图不是ai生成的嘛</span>？如…</h3>
+<p>啊？！真有信是Ai的吗？那确实有点神奇了//<span class="citation"
+data-cites="低功耗祥子:这个图不是ai生成的嘛">@低功耗祥子:这个图不是ai生成的嘛</span>？如果不说我以为大道去奥马哈接巴老的班了收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="回复张修-这啥话这是现在的我90岁以后还能这样那得多那个啥那就是芒格的梦想">回复@张修:
+这啥话！这是现在的我！90岁以后还能这样那得多那个啥？那就是芒格的梦想…</h3>
+<p>回复@张修:
+这啥话！这是现在的我！90岁以后还能这样那得多那个啥？那就是芒格的梦想了。//<span
+class="citation" data-cites="张修:回复">@张修:回复</span><span
+class="citation"
+data-cites="洪荒力ant:哈哈哈">@洪荒力ant:哈哈哈</span>，仿佛看到了90岁后的你//<span
+class="citation"
+data-cites="大道无形我有型:Ai模拟的办公室">@大道无形我有型:Ai模拟的办公室</span>，背景是有零食的。
+查看图片收起<span class="citation"
+data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="确实是玩笑但不是最近拍的玖菲特的别墅大道在开玩笑应该不是ai收起洪">确实是玩笑，但不是最近拍的。//<span
+class="citation"
+data-cites="玖菲特的别墅:大道在开玩笑">@玖菲特的别墅:大道在开玩笑</span>，应该不是ai收起<span
+class="citation" data-cites="洪">@洪</span>…</h3>
+<p>确实是玩笑，但不是最近拍的。//<span class="citation"
+data-cites="玖菲特的别墅:大道在开玩笑">@玖菲特的别墅:大道在开玩笑</span>，应该不是ai收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="不要想偏了照个相好玩而已奥凯特编码器我还在想ps也不好弄啊这么说看样子">不要想偏了，照个相好玩而已！//<span
+class="citation"
+data-cites="奥凯特编码器:我还在想PS也不好弄啊">@奥凯特编码器:我还在想PS也不好弄啊</span>。这么说看样子…</h3>
+<p>不要想偏了，照个相好玩而已！//<span class="citation"
+data-cites="奥凯特编码器:我还在想PS也不好弄啊">@奥凯特编码器:我还在想PS也不好弄啊</span>。这么说看样子大道要接班了。收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="回复大道行走无疆-零食也像是真的大家可以看看有多少地方放着食物大道行走">回复@大道行走无疆:
+零食也像是真的，大家可以看看有多少地方放着食物。//<span class="citation"
+data-cites="大道行走">@大道行走</span>…</h3>
+<p>回复@大道行走无疆:
+零食也像是真的，大家可以看看有多少地方放着食物。//<span class="citation"
+data-cites="大道行走无疆:回复">@大道行走无疆:回复</span><span
+class="citation"
+data-cites="洪荒力ant:看着像是真人去照的大道还笑着/">@洪荒力ant:看着像是真人去照的大道还笑着/</span>/<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>:
+Ai模拟的办公室，背景是有零食的。查看图片收起<span class="citation"
+data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="我已经20多年没有办公室了英雄暮年大道习惯了这么小的办公室了国内的比这大">我已经20多年没有办公室了。//<span
+class="citation"
+data-cites="英雄暮年:大道习惯了这么小的办公室了">@英雄暮年:大道习惯了这么小的办公室了</span>，国内的比这大…</h3>
+<p>我已经20多年没有办公室了。//<span class="citation"
+data-cites="英雄暮年:大道习惯了这么小的办公室了">@英雄暮年:大道习惯了这么小的办公室了</span>，国内的比这大多了收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="是真的我几年前还回去过一次现在不知道了我说过其实不需要感觉有点浪费但可能公">是真的，我几年前还回去过一次，现在不知道了。我说过其实不需要，感觉有点浪费，但可能公…</h3>
+<p>是真的，我几年前还回去过一次，现在不知道了。我说过其实不需要，感觉有点浪费，但可能公司还没找到用处，所以可能还留着吧。//<span
+class="citation"
+data-cites="自认为能赚实际亏:听说国内公司一直留有你的办公室">@自认为能赚实际亏:听说国内公司一直留有你的办公室</span>，不知真假收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3
+id="嗯嗯显然腹肌比较厉害对即道心该内容现已无法查看收起洪荒力ant">嗯嗯，显然腹肌比较厉害。//<span
+class="citation"
+data-cites="对即道心">@对即道心</span>:[该内容现已无法查看]收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：…</h3>
+<p>嗯嗯，显然腹肌比较厉害。//<span class="citation"
+data-cites="对即道心">@对即道心</span>:[该内容现已无法查看]收起<span
+class="citation" data-cites="洪荒力ant">@洪荒力ant</span>：网页链接 -
+巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特的办公室只有17平方米!
+在中国，5亿人民币规模的企业大都把总部搞得象50亿、500亿的，而伯克希尔作为超5000亿美元规模的企业其总部搞得像0.5亿人民币都不到。
+伯克希尔的总部竟然没有自己的办公大楼，只在Kiewit
+Plaza大厦的14层租了半层楼做办公室。巴菲特曾说:“我在这座大楼里办公已经有50年了。我非常喜爱这座大楼和大楼的业主。他们特别给我优惠的租金。我在这里非常开心。”巴菲特的办公室更只有17平米，没有一台电脑
+，最多的是各种报刊杂志。 <span class="citation"
+data-cites="虎哥-虎哥$伯克希尔-哈撒韦A">@虎哥-虎哥$伯克希尔-哈撒韦A</span>(BRK.A)$网页链接
+- 巴菲特租用了50年的办公室，长什么样？巴菲特的办公室只有17平方米!
+巴菲特：“我在这座大楼里办公已经有50年了，我非常喜欢这座大楼和大楼的业主，他们给了我非常优惠的租金。我在这里感到非常愉快。”
+网页链接 : 巴菲特…2024-12-21 22:49 · 转发 385 · 讨论 500 · 赞 189</p>
+<h3 id="伯克希尔-哈撒韦bbrk.b-2"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP</p>
+<h3
+id="回复刘志超-我发现有白头发的人不容易掉头发但不确定因果关系是不是对我确实看到">回复@刘志超:
+我发现有白头发的人不容易掉头发，但不确定因果关系是不是对。我确实看到…</h3>
+<p>回复@刘志超:
+我发现有白头发的人不容易掉头发，但不确定因果关系是不是对。我确实看到这个年纪的人很多头发都掉光了，但不知道是不是年纪的关系，也可能是因为他们用了很多杠杆？//<span
+class="citation" data-cites="刘志超:回复">@刘志超:回复</span><span
+class="citation"
+data-cites="大道无形我有型:有一说一">@大道无形我有型:有一说一</span>，这个年纪有这么多头发已经赢了收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP
+<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP2023-11-28
+19:02 · 转发 212 · 讨论 26 · 赞 3373</p>
+<h3
+id="回复muson-其实大道是有能力没有皱纹也没有白头发的muson回复">回复@muson:
+其实大道是有能力没有皱纹也没有白头发的。//<span class="citation"
+data-cites="muson:回复">@muson:回复</span>@…</h3>
+<p>回复@muson: 其实大道是有能力没有皱纹也没有白头发的。//<span
+class="citation" data-cites="muson:回复">@muson:回复</span><span
+class="citation"
+data-cites="刘志超:原来大道皱纹已经这么多了收起">@刘志超:原来大道皱纹已经这么多了收起</span><span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP
+<span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+去年四月三十股东大会后同桌吃的晚饭，那么好的状态，想着100岁应该大概率了，真不知道能说啥。RIP2023-11-28
+19:02 · 转发 212 · 讨论 26 · 赞 3373</p>
+<h3
+id="大道曾说过如果中石油跌倒当年巴菲特买入价位我会毫不犹豫的买进去因为我现在看懂">大道曾说过，“如果中石油跌倒当年巴菲特买入价位，我会毫不犹豫的买进去，因为我现在看懂…</h3>
+<h4 id="提问-7">提问</h4>
+<p>大道曾说过，“如果中石油跌倒当年巴菲特买入价位，我会毫不犹豫的买进去，因为我现在看懂了。
+”现在达到了。请问大道现在买了?</p>
+<h4 id="段永平回答-7">段永平回答</h4>
+<p>真的吗？看着像市场认为由于某些原因世界会减少对原油的使用。我觉得值得关注。先看下美股能不能买。</p>
+<h3
+id="伯克希尔年会如期而至笔者对三个数字印象深刻1800亿美元800家公司和1天">伯克希尔年会如期而至，笔者对三个数字印象深刻：1800亿美元、800家公司和1天。
+…</h3>
+<h4 id="提问-8">提问</h4>
+<p>伯克希尔年会如期而至，笔者对三个数字印象深刻：1800亿美元、800家公司和1天。
+分别代表： 1. 巴菲特预计伯克希尔创纪录的1890亿美元现金储备将继续增长。
+近几年美国股市持续走高，在公开市场上很难有很好的机会，这也导致今年股票回购接近25亿美元。即使这样也看好美元升值，从日本…</p>
+<h4 id="段永平回答-8">段永平回答</h4>
+<p>800家能交50个亿其他人就不用交税的意思。</p>
+<h3
+id="方丈大人我昨天看巴菲特致股东信2023我就在想为什么我们这没有产生伯克希尔这样的">方丈大人，我昨天看巴菲特致股东信2023，我就在想为什么我们这没有产生伯克希尔这样的…</h3>
+<h4 id="提问-9">提问</h4>
+<p>方丈大人，我昨天看巴菲特致股东信2023，我就在想为什么我们这没有产生伯克希尔这样的公司，为什么我们这没有见到巴菲特和芒格这样的人？是土壤的问题吗？还是有这样的公司这样的人就是我不知道而已
+方丈能帮我解惑一下么</p>
+<h4 id="段永平回答-9">段永平回答</h4>
+<p>请教一下，高级黑是什么意思？</p>
+<h3 id="伯克希尔-哈撒韦abrk.a-5"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>A</em>(<em>B</em><em>R</em><em>K</em>.<em>A</em>)</span>
+我只是好奇目前的IP地址是哪里。一个多礼拜以前是在澳洲，刚刚是在美国。</p>
+<h3 id="伯克希尔-哈撒韦bbrk.b-3"><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span></h3>
+<p><span
+class="math inline"><em>伯</em><em>克</em><em>希</em><em>尔</em> − <em>哈</em><em>撒</em><em>韦</em><em>B</em>(<em>B</em><em>R</em><em>K</em>.<em>B</em>)</span>
+test我在哪里！</p>
+<h3 id="段哥您对稳定币的看法如何">段哥，您对稳定币的看法如何？</h3>
+<h4 id="提问-10">提问</h4>
+<p>段哥，您对稳定币的看法如何？</p>
+<h4 id="段永平回答-10">段永平回答</h4>
+<p>比航空公司的差异化要小。</p>
+<h3
+id="我买的国内航空股我该怎么办拿着56年了坚持不下去有点怀疑">我买的国内航空股，我该怎么办？拿着56年了，坚持不下去！有点怀疑！</h3>
+<h4 id="提问-11">提问</h4>
+<p>我买的国内航空股，我该怎么办？拿着56年了，坚持不下去！有点怀疑！</p>
+<h4 id="段永平回答-11">段永平回答</h4>
+<p>你怀疑什么？</p>
+<h3
+id="回复诚意的增长小机智-目前没有任何计划原计划就是买个油田等个10年20年看">回复@诚意的增长小机智:
+目前没有任何计划。原计划就是买个“油田”等个10年20年看…</h3>
+<p>回复@诚意的增长小机智:
+目前没有任何计划。原计划就是买个“油田”等个10年20年看看会发生什么。不过，如果巴菲特卖OXY我会跟。//<span
+class="citation"
+data-cites="诚意的增长小机智:回复">@诚意的增长小机智:回复</span><span
+class="citation"
+data-cites="大道无形我有型:请问大道最近有减持或者清仓oxy的计划吗">@大道无形我有型:请问大道最近有减持或者清仓oxy的计划吗</span><span
+class="citation" data-cites="pdd小股东">@pdd小股东</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+请问大道您如何看待巴菲特对于Oxychem的收购，这种生意对于西方石油是好事还是坏事呢？2025-10-02
+08:22 · 转发 13 · 讨论 40 · 赞 19</p>
+<h3
+id="也许这个是原因-查看图片慢慢变富的小狮子大道无形我有型-大道老师您怎么看伯">也许这个是原因？
+查看图片@慢慢变富的小狮子：<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师，您怎么看伯…</h3>
+<p>也许这个是原因？ 查看图片@慢慢变富的小狮子：<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师，您怎么看伯克希尔这两年持有这么多现金？除了美股主要科技股涨得猛但巴菲特不怎么买科技股外，还有其他原因吗，是不是变相在押注全球性的大暴跌2025-11-02
+05:42 · 转发 109 · 讨论 117 · 赞 29</p>
+<h3
+id="回复大道无形我有型-查看图片大道无形我有型回复创造的存钱小狮子也许这">回复@大道无形我有型:
+查看图片//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="创造的存钱小狮子:也许这">@创造的存钱小狮子:也许这</span>…</h3>
+<p>回复@大道无形我有型: 查看图片//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="创造的存钱小狮子:也许这个是原因">@创造的存钱小狮子:也许这个是原因</span>？
+查看图片@慢慢变富的小狮子：<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师，您怎么看伯克希尔这两年持有这么多现金？除了美股主要科技股涨得猛但巴菲特不怎么买科技股外，还有其他原因吗，是不是变相在押注全球性的大暴跌2025-11-02
+05:42 · 转发 109 · 讨论 117 · 赞 29</p>
+</body>
+</html>

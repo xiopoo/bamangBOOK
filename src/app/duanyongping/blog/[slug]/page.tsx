@@ -7,7 +7,18 @@ export function generateStaticParams() { return getDYSlugs('blog').map(slug => (
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const doc = getDYDoc('blog', params.slug)
   if (!doc) return { title: '未找到' }
-  return { title: `${doc.title} · 段永平网易博客`, description: `${doc.title}，段永平公开博客资料归档。`, alternates: { canonical: `/duanyongping/blog/${params.slug}` } }
+  return {
+    title: `${doc.title} · 段永平网易博客`,
+    description: `${doc.title}，段永平公开博客资料归档。`,
+    alternates: { canonical: `/duanyongping/blog/${params.slug}` },
+    // 内容页必须覆盖 RootLayout 的 og:type='website'，否则社交平台与爬虫
+    // 会把文章当作站点首页处理，也拿不到发布/修改时间。
+    openGraph: {
+      type: 'article',
+      ...(doc.publishedAt || doc.date ? { publishedTime: doc.publishedAt || doc.date } : {}),
+      ...(doc.updatedAt ? { modifiedTime: doc.updatedAt } : {}),
+    },
+  }
 }
 export default function Page({ params }: { params: { slug: string } }) {
   const doc = getDYDoc('blog', params.slug)

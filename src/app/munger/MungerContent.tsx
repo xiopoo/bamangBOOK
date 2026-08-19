@@ -105,17 +105,15 @@ export default function MungerContent({
 
   return (
     <>
-      <nav className="bg-white/95 dark:bg-dark-card/95 rounded-lg border border-gray-200 dark:border-gray-700 px-4 py-3 mb-8">
-        <div className="flex flex-wrap gap-1">
+      <nav className="mb-8" aria-label="人物页内导航">
+        <div className="ui-chip-row">
           {navSections.map((section) => (
             <button
               key={section.id}
+              type="button"
               onClick={() => scrollToSection(section.id)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                activeNav === section.id
-                  ? 'bg-primary text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-              }`}
+              aria-pressed={activeNav === section.id}
+              className="ui-chip"
             >
               {section.label}
             </button>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>段永平文集</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  /* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+    text-align: justify;
+  }
+  .cover {
+    height: 247mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    break-after: page;
+  }
+  .cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+  .cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+  .cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+  .toc-page { break-before: page; }
+  .toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+  .toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+  .toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+  h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+  h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+  h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+  h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+  p { margin: 6px 0; }
+  blockquote {
+    border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+    color: #555; background: #fbf6f7; font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
+  code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  a { color: #AB1942; text-decoration: none; }
+  img { max-width: 100%; }
+
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">段永平文集</h1>
+</header>
+<h1 id="社会观察与公共话题">社会观察与公共话题</h1>
+<h2 id="经济政策与宏观">经济、政策与宏观</h2>
+<h3
+id="我好像印象中没见过经济学家最后成为投资大家的似乎经济学家都不太会投资不知道是不是">我好像印象中没见过经济学家最后成为投资大家的，似乎经济学家都不太会投资。不知道是不是…</h3>
+<p>我好像印象中没见过经济学家最后成为投资大家的，似乎经济学家都不太会投资。不知道是不是他们都太过于关注宏观了？<span
+class="citation"
+data-cites="组合小二">@组合小二</span>：原帖已被作者删除2011-10-23 19:43
+· 转发 18 · 讨论 10</p>
+<h3
+id="大道怎么看待孙正义几十亿去买科技股等的看涨期权啊总觉得他这样的大神不差钱啊去做这">大道怎么看待孙正义几十亿去买科技股等的看涨期权啊？总觉得他这样的大神不差钱啊，去做这…</h3>
+<h4 id="提问">提问</h4>
+<p>大道怎么看待孙正义几十亿去买科技股等的看涨期权啊？总觉得他这样的大神不差钱啊，去做这样的风骚操作，意味着他深深看科技股的多嘛？还是因为巨量的放水巨差的经济导致推广巨高的科技股？</p>
+<h4 id="段永平回答">段永平回答</h4>
+<p>我觉得我啥都不应该说，不然下次打球见到就不好意思了。</p>
+<h3
+id="回复大道无形我有型-大家不要误解成我跟孙正义很熟其实我不认识他也没打过球但">回复@大道无形我有型:
+大家不要误解成我跟孙正义很熟。其实我不认识他，也没打过球。但…</h3>
+<p>回复@大道无形我有型:
+大家不要误解成我跟孙正义很熟。其实我不认识他，也没打过球。但我有些朋友跟他非常熟，而且我们还都是某个球会的会员，万一碰上多不好意思。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="复利-力量和回撤:我觉得我啥都不应该说">@复利-力量和回撤:我觉得我啥都不应该说</span>，不然下次打球见到就不好意思了。<span
+class="citation"
+data-cites="复利-力量和回撤">@复利-力量和回撤</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span>
+大道怎么看待孙正义几十亿去买科技股等的看涨期权啊？总觉得他这样的大神不差钱啊，去做这样的风骚操作，意味着他深深看科技股的多嘛？还是因为巨量的放水巨差的经济导致推广巨高的科技股？2020-10-28
+20:42 · 转发 17 · 讨论 45 · 赞 16</p>
+<h3
+id="我有不少brk不是很懂你的问题我个人认为brk大概率可以打败通胀大于51的机">我有不少BRK，不是很懂你的问题。我个人认为BRK大概率可以打败通胀，大于51%的机…</h3>
+<p>我有不少BRK，不是很懂你的问题。我个人认为BRK大概率可以打败通胀，大于51%的机会可以打败S&amp;P500，以及大概率会打败99%以上说自己不喜欢巴菲特的人们。<span
+class="citation"
+data-cites="Wangzhe0220">@Wangzhe0220</span>：悬赏¥1000.00原帖已被作者删除2022-03-17
+00:22 · 转发 600 · 讨论 379 · 赞 100</p>
+<h3
+id="回复东海之风-我就戴口罩啊现在这里的政策戴口罩是自愿的而且已经不再要求任何别">回复@东海之风:
+我就戴口罩啊。现在这里的政策戴口罩是自愿的，而且已经不再要求任何别…</h3>
+<p>回复@东海之风:
+我就戴口罩啊。现在这里的政策戴口罩是自愿的，而且已经不再要求任何别的东西了，但也只有大约5-10%的人戴口罩。上去表演的人里面有一个男生戴口罩，可能有家人需要保护，看着有点怪异。//<span
+class="citation" data-cites="东海之风:回复">@东海之风:回复</span><span
+class="citation"
+data-cites="大道无形我有型:大道">@大道无形我有型:大道</span>，看照片，现场好像几乎没有人带口罩收起<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>：Go
+Warriors! Go Warriors!2022-05-13 19:25 · 转发 125 · 讨论 20 · 赞
+1030</p>
+<h3
+id="回复飞奔老年-想起有个认识的人大概不到两年前跟我说他不喜欢巴菲特但喜欢孙正义">回复@飞奔老年:
+想起有个认识的人，大概不到两年前跟我说他不喜欢巴菲特，但喜欢孙正义…</h3>
+<p>回复@飞奔老年:
+想起有个认识的人，大概不到两年前跟我说他不喜欢巴菲特，但喜欢孙正义。于是我们就打了一个一块钱的赌，赌8年是BRK涨的多还是SFTBY（软银）涨得多。//<span
+class="citation" data-cites="飞奔老年:回复">@飞奔老年:回复</span><span
+class="citation" data-cites="Wangzhe0220:/">@Wangzhe0220:/</span>/<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>:
+我有不少BRK，不是很懂你的问题。我个人认为BRK大概率可以打败通胀，大于51%的…<span
+class="citation"
+data-cites="Wangzhe0220">@Wangzhe0220</span>：悬赏¥1000.00原帖已被作者删除2022-03-17
+00:22 · 转发 600 · 讨论 379 · 赞 100</p>
+<h3
+id="回复大道无形我有型-我没有花过时间去研究到底在发生什么但礼拜五现场的情况看勇">回复@大道无形我有型:
+我没有花过时间去研究到底在发生什么，但礼拜五现场的情况看，勇…</h3>
+<p>回复@大道无形我有型:
+我没有花过时间去研究到底在发生什么，但礼拜五现场的情况看，勇士今年大概是走不远了。国王的教练也许是因素之一，勇士所有的长项似乎都在国王的控制之中，大概是没辙了。85%勇士今年就这样了吧。不过，湾区经济实力强大，三五年后又会卷土从来的。//<span
+class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span>@…收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：下半场开始了，勇士好运！
+下半场开始了，勇士好运！2023-04-28 18:44 · 转发 53 · 讨论 7 · 赞 512</p>
+<h3
+id="回复j哥投资-大概率不会有机会的机会很可能已经远逝了我前些年回去过几次很努">回复@J哥投资:
+大概率不会有机会的，机会很可能已经远逝了。我前些年回去过几次，很努…</h3>
+<p>回复@J哥投资:
+大概率不会有机会的，机会很可能已经远逝了。我前些年回去过几次，很努力滴寻找过家乡的感觉，但过去的都过去了……//<span
+class="citation" data-cites="J哥投资:回复">@J哥投资:回复</span><span
+class="citation"
+data-cites="大道无形我有型:江西好地方啊">@大道无形我有型:江西好地方啊</span>，可惜现在经济落后周边省太多，段总有机会投资点家乡产业收起<span
+class="citation" data-cites="思弦君">@思弦君</span>：2023-05-05 18:20 ·
+转发 204 · 讨论 241 · 赞 50</p>
+<h3
+id="回复彬2jz-我最早听到的段子是说去海南时说的刚在网上看到的是这个就是个段子">回复@彬2jz:
+我最早听到的段子是说去海南时说的，刚在网上看到的是这个。就是个段子…</h3>
+<p>回复@彬2jz:
+我最早听到的段子是说去海南时说的，刚在网上看到的是这个。就是个段子哈。//<span
+class="citation" data-cites="彬2jz:回复">@彬2jz:回复</span><span
+class="citation"
+data-cites="大道无形我有型:一直以为是去到海南说的">@大道无形我有型:一直以为是去到海南说的</span>，原来是去北京//<span
+class="citation"
+data-cites="大道无形我有型:据说">@大道无形我有型:据说</span>，当年潘石屹和冯仑在海南掘得第一桶金后，发现海南经济过热，二人决定转战北京。于是老潘就北上来考察市场，来到…收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：4/1/2023 起步:
+177,753,286.57 6/14/2023 再投入: 20,358,962.90 共投入：198,112,249.47
+9/30/2024: 265,186,992.08 增加了: 33.9%
+9/30号结束了一个账号，未来几年会逐渐关掉大部分帮人管钱的账号。4/1/2023
+起步: 177,753,286.57 6/14/2023 再投入: 20,358,962.90
+共投入：198,112,249.47 9/30/2024: 265,186,992.08 增加了: 33.9%
+9/30号结束了一个账号，未来几年会逐渐关掉大部分帮人管钱的账号。2024-10-05
+17:51 · 转发 658 · 讨论 22 · 赞 2282</p>
+<h3
+id="像老虎伍兹或者李昊桐那样就可以清净的开源小剧院大道无形我有型-大道老师您好">像老虎伍兹或者李昊桐那样就可以。<span
+class="citation"
+data-cites="清净的开源小剧院">@清净的开源小剧院</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师您好，…</h3>
+<p>像老虎伍兹或者李昊桐那样就可以。<span class="citation"
+data-cites="清净的开源小剧院">@清净的开源小剧院</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师您好，请问具备什么样的经济状况就可以不上班，每天悠闲的打golf了？02-01
+21:09 · 转发 23 · 讨论 95 · 赞 10</p>
+<h3
+id="你觉得关注这种宏观消息对你会有帮助吗与yang共舞大道无形我有型-大道老师好">你觉得关注这种宏观消息对你会有帮助吗？<span
+class="citation" data-cites="与Yang共舞">@与Yang共舞</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师好…</h3>
+<p>你觉得关注这种宏观消息对你会有帮助吗？<span class="citation"
+data-cites="与Yang共舞">@与Yang共舞</span>：<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>
+大道老师好，沃什的上任会对美股整体上涨预期产生负面影响吗？02-01 21:23 ·
+转发 26 · 讨论 22 · 赞 5</p>
+<h3
+id="回复川糖周掌门-你这是什么打字法川糖周掌门回复大道无形我有型转持">回复@川糖周掌门:
+你这是什么打字法？//<span class="citation"
+data-cites="川糖周掌门:回复">@川糖周掌门:回复</span><span
+class="citation"
+data-cites="大道无形我有型:转">@大道无形我有型:转</span>，持…</h3>
+<p>回复@川糖周掌门: 你这是什么打字法？//<span class="citation"
+data-cites="川糖周掌门:回复">@川糖周掌门:回复</span><span
+class="citation"
+data-cites="大道无形我有型:转">@大道无形我有型:转</span>，持有标普确实不售虑，个人感受。<span
+class="citation"
+data-cites="AnnaTianhxj">@AnnaTianhxj</span>：大道：您好一直看你的访谈，你认为标普500定投好还是金融危机的时候投资比较好@大道无形我有型03-23
+05:03 · 转发 57 · 讨论 101 · 赞 10</p>
+<h3
+id="回复大道赢小富-哈年纪大了学拼音有点困难我以前也是手写版实在是太不方便了">回复@大道赢小富:
+哈，年纪大了学拼音有点困难？我以前也是手写版，实在是太不方便了，…</h3>
+<p>回复@大道赢小富:
+哈，年纪大了学拼音有点困难？我以前也是手写版，实在是太不方便了，打梦幻的时候手忙脚乱的，于是改了拼音，也就几天时间就习惯了哈。不过，我现在依然是一指禅，而且不是盲打，但也蛮快的。//<span
+class="citation"
+data-cites="大道赢小富:回复">@大道赢小富:回复</span><span
+class="citation"
+data-cites="AnnaTianhxj:手写的">@AnnaTianhxj:手写的</span>，周掌门不会拼音？<span
+class="citation"
+data-cites="AnnaTianhxj">@AnnaTianhxj</span>：大道：您好一直看你的访谈，你认为标普500定投好还是金融危机的时候投资比较好@大道无形我有型03-23
+05:03 · 转发 57 · 讨论 101 · 赞 10</p>
+</body>
+</html>

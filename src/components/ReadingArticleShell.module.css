@@ -52,25 +52,98 @@
   line-height: 1.7;
 }
 
+/* A4 文档版式：中列为固定 210mm 纸张，左右栏仅作对称留白/目录，
+   保证文章始终以 A4（≈794px@96dpi）标准宽度渲染，而非手机窄栏。 */
 .layout {
-  --toc-rail: minmax(10rem, 12rem);
-  width: min(100% - 2rem, 78rem);
+  --toc-rail: minmax(7rem, 10rem);
+  width: min(100% - 2rem, 1280px);
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 1.25rem 0 2.5rem;
   display: grid;
-  /* P1-02 修复：中列改用以正文 19px 基准换算的 --reading-measure-layout（见 reading.css） */
-  grid-template-columns: var(--toc-rail) minmax(0, var(--reading-measure-layout)) var(--toc-rail);
+  grid-template-columns: var(--toc-rail) minmax(0, 210mm) var(--toc-rail);
   justify-content: center;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
 }
 
+/* 正文容器即「一张 A4 纸」：固定宽度、纸张底色、投影、页边距。 */
 .main {
   grid-column: 2;
   min-width: 0;
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 16mm 18mm 22mm;
+  background: #fffdf8;
+  color: var(--archive-ink);
+  box-shadow: 0 1px 2px rgba(20, 16, 10, 0.08), 0 14px 44px rgba(20, 16, 10, 0.14);
+  border: 1px solid var(--archive-rule-soft);
+  border-radius: 2px;
 }
 
 .article {
   min-width: 0;
+}
+
+/* 在 A4 纸内，正文铺满纸面并按文章密度排版（更紧凑、行距更小）。 */
+.main :global(.prose) {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.62;
+  letter-spacing: 0.01em;
+}
+
+.main :global(.prose p),
+.main :global(.prose li),
+.main :global(.prose blockquote),
+.main :global(.prose td),
+.main :global(.prose th) {
+  line-height: 1.62;
+}
+
+.main :global(.prose p) {
+  margin-bottom: 0.8em;
+}
+
+.main :global(.prose h1),
+.main :global(.prose h2),
+.main :global(.prose h3),
+.main :global(.prose h4) {
+  line-height: 1.25;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+/* 评论区锚点目标：为悬浮导航的「评论」按钮提供落点。 */
+.comments {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--archive-rule);
+  scroll-margin-top: 5rem;
+}
+
+.commentsTitle {
+  font-family: var(--archive-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--archive-ink);
+}
+
+.commentsMeta {
+  margin-top: .5rem;
+  color: var(--archive-ink-soft);
+  font-size: .92rem;
+  line-height: 1.7;
+}
+
+.commentsLink {
+  display: inline-block;
+  margin-top: .75rem;
+  color: var(--archive-oxblood);
+  font-family: var(--archive-sans);
+  font-size: .85rem;
+  font-weight: 700;
 }
 
 @media (min-width: 1180px) {
@@ -80,24 +153,19 @@
   }
 }
 
+/* 不再塌缩为手机窄栏：无论视口多窄，文章始终以 A4 纸张比例渲染，
+   目录在中屏/窄屏隐藏，仅保留居中的 A4 纸张。 */
 @media (max-width: 1179px) {
   .layout {
-    display: flex;
-    flex-direction: column;
-    width: min(100% - 2rem, 44em);
+    grid-template-columns: minmax(0, 210mm);
   }
 
   .layout :global(.article-toc) {
-    order: -1;
+    display: none;
   }
 }
 
 @media (max-width: 640px) {
-  .headerInner,
-  .layout {
-    width: min(100% - 2rem, 44em);
-  }
-
   .headerInner {
     flex-direction: column;
     gap: 1rem;
@@ -113,5 +181,43 @@
 
   .heading h1 {
     font-size: clamp(1.85rem, 8.5vw, 2.5rem);
+  }
+}
+
+/* 打印：A4 纸张铺满页面，去掉投影与边框，页边距交给 @page。 */
+@media print {
+  .page {
+    background: #ffffff;
+    min-height: 0;
+  }
+
+  .layout {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+
+  .main {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .layout :global(.article-toc) {
+    display: none;
+  }
+
+  .comments {
+    break-before: page;
+  }
+
+  @page {
+    size: A4;
+    margin: 16mm;
   }
 }

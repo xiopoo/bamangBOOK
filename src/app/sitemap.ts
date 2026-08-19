@@ -32,8 +32,10 @@ export function generateStaticParams() {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url.replace(/\/$/, '')
+  // 注意：/search 已移出 sitemap —— 该页纯客户端渲染，SSR 仅输出「加载中...」，
+  // 属 thin content，且已在 src/app/search/layout.tsx 设为 noindex。
   const routes = [
-    '', '/about', '/search', '/buffett', '/munger', '/letters', '/partnership',
+    '', '/about', '/buffett', '/munger', '/letters', '/partnership',
     '/concepts', '/companies', '/people', '/qa', '/talks', '/interviews', '/bloggers', '/articles',
     '/business-history', '/poor-charlies-almanack', '/munger/wesco', '/model', '/books', '/columns',
     '/duanyongping', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks', '/duanyongping/milestones',
@@ -42,6 +44,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
   ]
   const urls = new Set(routes.map(route => `${baseUrl}${route}`))
+
+  // lastmod 是 Google 唯一真正采用的 sitemap 信号（changefreq/priority 已被明确忽略）。
+  // 关键前提：必须是真实修改时间。编造或全站同一时间会让 Google 直接忽略该字段，
+  // 因此这里只为「确实有日期元数据」的内容写入，其余 URL 不带 lastmod（规范允许省略）。
+  const lastmod = new Map<string, string>()
+  const setLastmod = (url: string, value?: string | null) => {
+    if (!value) return
+    const date = new Date(value)
+    if (Number.isNaN(date.getTime())) return   // 脏数据不写入，避免生成非法 XML
+    const prev = lastmod.get(url)
+    if (!prev || date > new Date(prev)) lastmod.set(url, date.toISOString())
+  }
 
   namesIn('concepts').forEach(name => urls.add(`${baseUrl}/concepts/${encodeURIComponent(name)}`))
   namesIn('companies').forEach(name => urls.add(`${baseUrl}/companies/${encodeURIComponent(name)}`))
@@ -62,7 +76,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   getAllArticles().forEach(article => urls.add(`${baseUrl}/articles/${encodeURIComponent(article.slug)}`))
 
   // 博客：入口、精选旧文别名页（canonical 指向旧 URL）、标签与分类
-  getAllBlogPosts().forEach(post => urls.add(`${baseUrl}${post.canonicalPath}`))
+  getAllBlogPosts().forEach(post => {
+    const url = `${baseUrl}${post.canonicalPath}`
+    urls.add(url)
+    setLastmod(url, post.updatedAt || post.date)
+  })
   getBlogTags(50).forEach(({ tag }) => urls.add(`${baseUrl}/blog/tag/${encodeURIComponent(tag)}`))
   getBlogCategories().forEach(cat => urls.add(`${baseUrl}/blog/category/${encodeURIComponent(cat.label)}`))
   urls.add(`${baseUrl}/meetings`)
@@ -84,7 +102,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const duanSections: DYSection[] = ['blog', 'qa', 'talks', 'milestones']
   duanSections.forEach(section => {
-    getDYDocs(section, false).forEach(doc => urls.add(`${baseUrl}/duanyongping/${section}/${doc.slug}`))
+    getDYDocs(section, false).forEach(doc => {
+      const url = `${baseUrl}/duanyongping/${section}/${doc.slug}`
+      urls.add(url)
+      setLastmod(url, doc.updatedAt || doc.publishedAt || doc.date)
+    })
   })
 
   const letterYears = new Set(
@@ -105,9 +127,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return 'monthly'
   }
 
-  return [...urls].map(url => ({
-    url,
-    changeFrequency: changeFrequencyFor(url),
-    priority: url === baseUrl ? 1 : /^\/blog(\/|$)/.test(url.slice(baseUrl.length)) ? 0.8 : 0.7,
-  }))
+  return [...urls].map(url => {
+    const modified = lastmod.get(url)
+    return {
+      url,
+      // 仅在有真实修改时间时输出 lastModified，其余留空由爬虫自行判断。
+      ...(modified ? { lastModified: modified } : {}),
+      changeFrequency: changeFrequencyFor(url),
+      priority: url === baseUrl ? 1 : /^\/blog(\/|$)/.test(url.slice(baseUrl.length)) ? 0.8 : 0.7,
+    }
+  })
 }

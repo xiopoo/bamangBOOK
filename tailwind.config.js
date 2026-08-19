@@ -44,13 +44,25 @@ module.exports = {
       fontFamily: {
         serif: ['"Noto Serif SC"', 'SimSun', 'STSong', 'Georgia', 'serif'],
         body: ['"Noto Serif SC"', 'SimSun', 'STSong', 'Georgia', 'serif'],
+        // 与 tokens.css --archive-sans 同源：界面层（导航/元信息/按钮）用无衬线，
+        // 阅读层用衬线，两层分工是全站版式语言的基础。
+        sans: ['"Noto Sans SC"', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
       },
+      // 与 tokens.css --elev-1/2/3 同值（原 rgba(60,36,21) 色偏已纠正为墨色 rgba(33,29,22)）
       boxShadow: {
-        'card': '0 1px 3px rgba(60, 36, 21, 0.08), 0 1px 2px rgba(60, 36, 21, 0.06)',
-        'card-hover': '0 4px 12px rgba(60, 36, 21, 0.1), 0 2px 4px rgba(60, 36, 21, 0.06)',
+        'card': '0 1px 2px rgba(33, 29, 22, 0.05), 0 8px 24px rgba(33, 29, 22, 0.07)',
+        'card-hover': '0 2px 6px rgba(33, 29, 22, 0.07), 0 18px 48px rgba(33, 29, 22, 0.14)',
       },
+      // 与 tokens.css --archive-radius 同值（原 0.5rem 漂移已纠正为 0.375rem）
       borderRadius: {
-        'card': '0.5rem',
+        'card': '0.375rem',
+      },
+      // 与 tokens.css BREAKPOINTS 注释同值：全站只用这 4 档
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
       },
     },
   },

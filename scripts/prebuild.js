@@ -314,6 +314,13 @@ function main() {
     cwd: path.join(__dirname, '..'),
     stdio: 'inherit',
   });
+
+  // 段永平网易博客阅读优化：生成轻量索引 + 单篇全文碎片（构建期预生成，供客户端按需加载）
+  console.log('\n🔄 生成段永平博客索引与全文碎片...');
+  execSync('node scripts/generate-blog-index.mjs', {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'inherit',
+  });
   
   // 同时把索引文件复制到 bloggers_original，防止 Next.js 输出文件追踪时报 ENOENT
   const srcIndex = path.join(BLOGGERS_DIR, INDEX_FILE);

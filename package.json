@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/generate-archive-index.mjs && node scripts/generate-meetings-index.mjs && next dev",
+    "dev": "node scripts/generate-archive-index.mjs && node scripts/generate-meetings-index.mjs && node scripts/generate-blog-index.mjs && next dev",
     "build": "node scripts/prebuild.js && next build && if [ -z \"$VERCEL\" ]; then node scripts/prebuild.js --restore; fi",
     "start": "next start",
     "lint": "next lint",
@@ -24,6 +24,7 @@
     "build:editorial-pdf": "node scripts/build-editorial-pdfs.mjs"
   },
   "dependencies": {
+    "framer-motion": "^11.18.2",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.400.0",
     "next": "^14.2.0",

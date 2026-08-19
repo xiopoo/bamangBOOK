@@ -5,11 +5,16 @@ import { ProgressProvider } from '@/hooks/useProgress'
 import BackToTop from '@/components/BackToTop'
 import PageFooter from '@/components/PageFooter'
 import JsonLd from '@/components/JsonLd'
+import MotionProvider from '@/components/ui/MotionProvider'
+import RouteProgress from '@/components/ui/RouteProgress'
+import ToastProvider from '@/components/ui/ToastProvider'
+import CommandPalette from '@/components/CommandPalette'
 import './globals.css'
-// CSS 分层：tokens → reset → utilities → components/* → reading（阅读层规范，须在 reader.css 之后）
+// CSS 分层：tokens → reset → utilities → ui（交互原语）→ components/* → reading（阅读层规范，须在 reader.css 之后）
 import '@/styles/tokens.css'
 import '@/styles/reset.css'
 import '@/styles/utilities.css'
+import '@/styles/components/ui.css'
 import '@/styles/components/header.css'
 import '@/styles/components/footer.css'
 import '@/styles/components/page-header.css'
@@ -72,7 +77,8 @@ export const metadata: Metadata = {
     images: [{ url: '/og-v2.jpg', width: 1200, height: 630, alt: '复利书房｜巴菲特、芒格与公司研究' }],
   },
   twitter: {
-    card: 'summary',
+    // OG 图为 1200×630，用 summary_large_image 才能出大图卡片；summary 会裁成小方图
+    card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
   },
@@ -130,14 +136,27 @@ export default function RootLayout({
       </head>
       <body className="bg-bg dark:bg-dark-bg text-text dark:text-dark-text min-h-screen transition-colors duration-300 overflow-x-hidden">
         <ThemeProvider>
-          <ProgressProvider>
-            <SiteHeader />
-            <main className="min-w-0 min-h-screen">
-              {children}
-            </main>
-            <PageFooter />
-            <BackToTop />
-          </ProgressProvider>
+          <MotionProvider>
+            <ToastProvider>
+              <ProgressProvider>
+                {/* WCAG 2.4.1 绕过区块：键盘/读屏用户可跳过 masthead 与两级下拉导航。
+                    平时用 .skip-link 移出视口（非 display:none，否则无法聚焦），聚焦时显形。 */}
+                <a href="#main-content" className="skip-link">跳到主要内容</a>
+                {/* 跨页导航的等待反馈：静态导出站点跳转仍有真实网络等待 */}
+                <RouteProgress />
+                <SiteHeader />
+                {/* tabIndex={-1}：让 skip-link 跳转后焦点真正落在 <main> 上，
+                    否则读屏光标仍停在页首，跳过区块形同虚设 */}
+                <main id="main-content" tabIndex={-1} className="min-w-0 min-h-screen">
+                  {children}
+                </main>
+                <PageFooter />
+                <BackToTop />
+                {/* ⌘K / Ctrl+K 全站搜索浮层：挂在最外层，任意页面可唤起 */}
+                <CommandPalette />
+              </ProgressProvider>
+            </ToastProvider>
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

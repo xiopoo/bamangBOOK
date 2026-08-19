@@ -1,0 +1,99 @@
+/* 常驻阅读导航：移动端底部居中胶囊；桌面端（≥1180px）左侧竖向 rail。 */
+
+.floatingNav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(clamp(14px, 3vh, 28px) + env(safe-area-inset-bottom, 0px));
+  right: auto;
+  top: auto;
+  z-index: 55;
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--reading-card, #fff);
+  border: 1px solid color-mix(in srgb, var(--reading-accent, #ab1942) 25%, transparent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* 空闲（停止滚动）后降透明度，减少遮挡；hover/focus 恢复完全可见。 */
+.isIdle {
+  opacity: 0.5;
+}
+.floatingNav:hover,
+.floatingNav:focus-within {
+  opacity: 1;
+}
+
+.navBtn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 62px;
+  min-height: 46px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--reading-accent, #ab1942);
+  font-family: var(--archive-sans, system-ui, sans-serif);
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+.navBtn:hover {
+  background: color-mix(in srgb, var(--reading-accent, #ab1942) 12%, transparent);
+}
+.navBtn:focus-visible {
+  outline: 2px solid var(--reading-accent, #ab1942);
+  outline-offset: 2px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* 桌面端：左侧竖向 rail，利用正文栅格左留白，避开右侧 TOC 与右下返回顶部。 */
+@media (min-width: 1180px) {
+  .floatingNav {
+    left: clamp(12px, 2vw, 24px);
+    right: auto;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+  }
+  .navBtn {
+    min-width: 46px;
+    min-height: 46px;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingNav {
+    transition: none;
+  }
+}

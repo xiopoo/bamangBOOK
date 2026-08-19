@@ -1,0 +1,37 @@
+/* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+@page {
+  size: A4;
+  margin: 22mm 20mm;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+  text-align: justify;
+}
+.cover {
+  height: 247mm; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  break-after: page;
+}
+.cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+.cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+.cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+.toc-page { break-before: page; }
+.toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+.toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+.toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+p { margin: 6px 0; }
+blockquote {
+  border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+  color: #555; background: #fbf6f7; font-size: 10pt;
+}
+ul, ol { padding-left: 22px; margin: 6px 0; }
+code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+a { color: #AB1942; text-decoration: none; }
+img { max-width: 100%; }

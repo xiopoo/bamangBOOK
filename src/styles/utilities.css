@@ -4,6 +4,26 @@
    顺序：在 reset 之后、组件样式之前加载。
    ============================================================ */
 
+/* ---- 跳过导航（WCAG 2.4.1 绕过区块 / 2.4.7 聚焦可见）----
+   用 left:-9999px 而非 display:none —— 后者会让元素无法被键盘聚焦，跳转链接就失效了。
+   聚焦时用 --archive-oxblood（对纸面 6.38:1）描边，确保焦点态明显可见。 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  font: 700 .85rem var(--archive-sans);
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: .6rem 1rem;
+  color: var(--archive-ink);
+  background: var(--archive-paper);
+  outline: 3px solid var(--archive-oxblood);
+  outline-offset: 2px;
+}
+
 /* ---- 目录层与阅读层共用组件 ---- */
 .archive-kicker { margin: 0; color: var(--archive-oxblood); font: 700 .72rem/1.4 var(--archive-sans); letter-spacing: .14em; text-transform: uppercase; }
 .archive-list { display: grid; gap: .75rem; border-top: 2px solid var(--archive-ink); }

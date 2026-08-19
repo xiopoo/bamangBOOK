@@ -16,6 +16,9 @@ content/bloggers/_inbox/
 content/bloggers_original/
 public/graph-nodes.json
 public/search-index.json
+# 段永平网易博客阅读优化：构建期由 scripts/generate-blog-index.mjs 预生成（纯派生，禁止手改）
+public/duanyongping/blog-index.json
+public/duanyongping/blog-content/
 # 《穷查理宝典》有声书（365M，单文件最大 91M，不入库；构建时由 scripts/download-almanack-audio.mjs 补齐）
 public/audio/
 tsconfig.tsbuildinfo
@@ -47,3 +50,5 @@ config.yaml
 content/companies-studies/*.pdf
 content/巴菲特致股东信60年合集*.pdf
 recovery_archive/*.tar.gz
+# 段永平文集打印版 PDF（321MB，远超 GitHub 单文件 100MB 上限，不入库）
+build_books/dyp_themed/*.pdf

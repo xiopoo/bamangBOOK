@@ -1,0 +1,272 @@
+/* ============================================================
+   components/command-palette.css — ⌘K 全站检索浮层
+   ------------------------------------------------------------
+   版式取向：不是"弹窗"，而是一张从顶部落下的检索卡片。
+   桌面端居上偏中（视线自然落点，不用把眼睛拉到屏幕正中），
+   手机端整屏铺开（小屏上任何居中卡片都会被键盘顶掉一半）。
+   ============================================================ */
+
+.cmdk-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-palette);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(3rem, 12vh, 8rem) var(--space-4) var(--space-4);
+  background: var(--surface-overlay);
+  backdrop-filter: blur(3px);
+}
+
+.cmdk-panel {
+  width: min(100%, 40rem);
+  max-height: min(32rem, calc(100vh - 8rem));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface-0);
+  border: 1px solid var(--archive-rule);
+  /* 顶部金线：与站内下拉、页眉同一条装饰语汇 */
+  border-top: 2px solid var(--archive-gold);
+  border-radius: var(--archive-radius);
+  box-shadow: var(--elev-3);
+}
+
+/* —— 输入行 —— */
+.cmdk-input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4);
+  border-bottom: 1px solid var(--archive-hairline);
+}
+
+.cmdk-input-row__icon {
+  flex: none;
+  color: var(--archive-oxblood);
+}
+
+.cmdk-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--archive-ink);
+  font: var(--step-1) / 1.4 var(--archive-serif);
+}
+
+.cmdk-input::placeholder {
+  color: var(--archive-ink-faint);
+  font-size: var(--step-0);
+}
+
+/* 输入框本身不画焦点环：面板已是模态焦点，再画一圈反而噪音；
+   焦点位置由输入光标与高亮行共同表达 */
+.cmdk-input:focus {
+  outline: none;
+}
+
+.cmdk-spinner {
+  flex: none;
+  color: var(--archive-ink-faint);
+  animation: ui-spin 700ms linear infinite;
+}
+
+.cmdk-close {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--archive-ink-faint);
+  cursor: pointer;
+  transition: color var(--mo-fast) var(--ease-standard), border-color var(--mo-fast) var(--ease-standard);
+}
+
+.cmdk-close:hover {
+  color: var(--archive-oxblood);
+  border-color: var(--archive-rule);
+}
+
+/* —— 结果列表 —— */
+.cmdk-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-2) var(--space-2) var(--space-3);
+  overscroll-behavior: contain;
+}
+
+.cmdk-group {
+  margin: var(--space-3) var(--space-3) var(--space-1);
+  color: var(--archive-gold-deep);
+  font: 700 var(--step--2) / 1.2 var(--archive-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cmdk-row {
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: 0;
+  border-radius: var(--archive-radius);
+  background: transparent;
+  color: var(--archive-ink);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--mo-instant) var(--ease-standard);
+}
+
+/* 高亮态由 data-active 驱动（键盘虚拟焦点与鼠标悬停共用同一视觉），
+   避免"键盘高亮一行、鼠标又高亮另一行"的双光标混乱 */
+.cmdk-row[data-active='true'] {
+  background: color-mix(in srgb, var(--archive-oxblood) 9%, transparent);
+}
+
+.cmdk-row[data-active='true'] .cmdk-row__arrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.cmdk-row[data-active='true'] .cmdk-row__text strong {
+  color: var(--archive-oxblood);
+}
+
+.cmdk-row__icon {
+  flex: none;
+  color: var(--archive-gold-deep);
+}
+
+.cmdk-row__text {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 1px;
+}
+
+.cmdk-row__text strong {
+  font: 600 var(--step-0) / 1.4 var(--archive-serif);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cmdk-row__text small {
+  color: var(--archive-ink-faint);
+  font: var(--step--2) / 1.4 var(--archive-sans);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cmdk-row__type {
+  flex: none;
+  padding: 0.15rem 0.45rem;
+  color: var(--archive-ink-soft);
+  border: 1px solid var(--archive-rule);
+  border-radius: 999px;
+  font: 600 var(--step--2) / 1.3 var(--archive-sans);
+}
+
+.cmdk-row__arrow {
+  flex: none;
+  color: var(--archive-oxblood);
+  opacity: 0;
+  transition: opacity var(--mo-fast) var(--ease-standard), transform var(--mo-fast) var(--ease-standard);
+}
+
+/* —— 空态 —— */
+.cmdk-empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-7) var(--space-4);
+  text-align: center;
+  color: var(--archive-ink-faint);
+}
+
+.cmdk-empty svg {
+  color: var(--archive-gold);
+}
+
+.cmdk-empty p {
+  margin: 0;
+  color: var(--archive-ink);
+  font: 600 var(--step-0) var(--archive-serif);
+}
+
+.cmdk-empty span {
+  font: var(--step--1) / 1.6 var(--archive-sans);
+}
+
+/* —— 底部快捷键条 —— */
+.cmdk-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  border-top: 1px solid var(--archive-hairline);
+  background: var(--surface-1);
+  color: var(--archive-ink-faint);
+  font: var(--step--2) / 1 var(--archive-sans);
+}
+
+.cmdk-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cmdk-footer__hint {
+  margin-left: auto;
+  letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   响应式：手机整屏铺开
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .cmdk-scrim {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .cmdk-panel {
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid var(--archive-gold);
+    /* 刘海屏安全区：输入行不被状态栏压住 */
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .cmdk-input {
+    /* iOS 上 <16px 的输入框会触发自动放大页面，必须 ≥16px */
+    font-size: 16px;
+  }
+
+  .cmdk-footer {
+    padding-bottom: max(var(--space-2), env(safe-area-inset-bottom));
+  }
+
+  /* 手机上快捷键提示没有意义（没有物理键盘），只留品牌标记 */
+  .cmdk-footer span:not(.cmdk-footer__hint) {
+    display: none;
+  }
+
+  .cmdk-footer__hint {
+    margin-left: 0;
+  }
+}

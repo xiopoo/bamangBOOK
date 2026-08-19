@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>段永平文集</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  /* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+    text-align: justify;
+  }
+  .cover {
+    height: 247mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    break-after: page;
+  }
+  .cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+  .cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+  .cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+  .toc-page { break-before: page; }
+  .toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+  .toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+  .toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+  h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+  h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+  h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+  h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+  p { margin: 6px 0; }
+  blockquote {
+    border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+    color: #555; background: #fbf6f7; font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
+  code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  a { color: #AB1942; text-decoration: none; }
+  img { max-width: 100%; }
+
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">段永平文集</h1>
+</header>
+<div class="cover">
+<p class="booktitle">
+做对的事情
+</p>
+<p class="subtitle">
+段永平文集 · 主题分类全编
+</p>
+<p class="compile">
+二〇二六年八月 · 汇编
+</p>
+</div>
+<nav class="toc-page" role="doc-toc">
+<h1 class="toc-title">
+目　　录
+</h1>
+<ul class="toc-list">
+<li class="part">
+<span class="t-tit">投资理念</span><span class="t-dots"></span><span
+class="t-count">（4102 篇）</span>
+<ul>
+<li>
+<span class="t-tit">价值投资的根本：买股票就是买公司</span><span
+class="t-dots"></span><span class="t-count">（1155 篇）</span>
+</li>
+<li>
+<span class="t-tit">能力圈与不懂不做</span><span
+class="t-dots"></span><span class="t-count">（541 篇）</span>
+</li>
+<li>
+<span class="t-tit">商业模式、护城河与好生意</span><span
+class="t-dots"></span><span class="t-count">（617 篇）</span>
+</li>
+<li>
+<span class="t-tit">估值、价格与安全边际</span><span
+class="t-dots"></span><span class="t-count">（601 篇）</span>
+</li>
+<li>
+<span class="t-tit">集中投资与持仓纪律</span><span
+class="t-dots"></span><span class="t-count">（291 篇）</span>
+</li>
+<li>
+<span class="t-tit">市场、波动与长期视角</span><span
+class="t-dots"></span><span class="t-count">（493 篇）</span>
+</li>
+<li>
+<span class="t-tit">风险、错误与避免损失</span><span
+class="t-dots"></span><span class="t-count">（252 篇）</span>
+</li>
+<li>
+<span class="t-tit">投资学习与方法论</span><span
+class="t-dots"></span><span class="t-count">（152 篇）</span>
+</li>
+</ul>
+</li>
+<li class="part">
+<span class="t-tit">公司与行业见解</span><span
+class="t-dots"></span><span class="t-count">（1404 篇）</span>
+<ul>
+<li>
+<span class="t-tit">苹果与科技硬件</span><span
+class="t-dots"></span><span class="t-count">（540 篇）</span>
+</li>
+<li>
+<span class="t-tit">互联网与平台（腾讯/拼多多/网易/阿里等）</span><span
+class="t-dots"></span><span class="t-count">（348 篇）</span>
+</li>
+<li>
+<span class="t-tit">消费与食品饮料（茅台/白酒/可乐等）</span><span
+class="t-dots"></span><span class="t-count">（251 篇）</span>
+</li>
+<li>
+<span
+class="t-tit">步步高体系与电子制造（OPPO/vivo/小天才等）</span><span
+class="t-dots"></span><span class="t-count">（87 篇）</span>
+</li>
+<li>
+<span class="t-tit">金融（银行/保险/券商）</span><span
+class="t-dots"></span><span class="t-count">（31 篇）</span>
+</li>
+<li>
+<span class="t-tit">汽车与新能源</span><span class="t-dots"></span><span
+class="t-count">（60 篇）</span>
+</li>
+<li>
+<span class="t-tit">房地产与基建</span><span class="t-dots"></span><span
+class="t-count">（12 篇）</span>
+</li>
+<li>
+<span class="t-tit">医药与健康</span><span class="t-dots"></span><span
+class="t-count">（18 篇）</span>
+</li>
+<li>
+<span class="t-tit">其他公司与行业</span><span
+class="t-dots"></span><span class="t-count">（57 篇）</span>
+</li>
+</ul>
+</li>
+<li class="part">
+<span class="t-tit">企业管理与经营</span><span
+class="t-dots"></span><span class="t-count">（1259 篇）</span>
+<ul>
+<li>
+<span class="t-tit">企业文化：本分与诚信</span><span
+class="t-dots"></span><span class="t-count">（468 篇）</span>
+</li>
+<li>
+<span class="t-tit">消费者导向与产品</span><span
+class="t-dots"></span><span class="t-count">（284 篇）</span>
+</li>
+<li>
+<span class="t-tit">品牌与营销</span><span class="t-dots"></span><span
+class="t-count">（121 篇）</span>
+</li>
+<li>
+<span class="t-tit">组织、团队与人才</span><span
+class="t-dots"></span><span class="t-count">（209 篇）</span>
+</li>
+<li>
+<span class="t-tit">战略与决策：做对的事情</span><span
+class="t-dots"></span><span class="t-count">（128 篇）</span>
+</li>
+<li>
+<span class="t-tit">长期经营：更健康更长久</span><span
+class="t-dots"></span><span class="t-count">（49 篇）</span>
+</li>
+</ul>
+</li>
+<li class="part">
+<span class="t-tit">人生哲学</span><span class="t-dots"></span><span
+class="t-count">（1109 篇）</span>
+<ul>
+<li>
+<span class="t-tit">平常心与心态</span><span class="t-dots"></span><span
+class="t-count">（227 篇）</span>
+</li>
+<li>
+<span class="t-tit">诚信、道德与做人</span><span
+class="t-dots"></span><span class="t-count">（52 篇）</span>
+</li>
+<li>
+<span class="t-tit">快乐、幸福与财富观</span><span
+class="t-dots"></span><span class="t-count">（284 篇）</span>
+</li>
+<li>
+<span class="t-tit">慈善与公益</span><span class="t-dots"></span><span
+class="t-count">（115 篇）</span>
+</li>
+<li>
+<span class="t-tit">健康、运动与生活</span><span
+class="t-dots"></span><span class="t-count">（234 篇）</span>
+</li>
+<li>
+<span class="t-tit">面对成败与人生选择</span><span
+class="t-dots"></span><span class="t-count">（197 篇）</span>
+</li>
+</ul>
+</li>
+<li class="part">
+<span class="t-tit">教育观点</span><span class="t-dots"></span><span
+class="t-count">（967 篇）</span>
+<ul>
+<li>
+<span class="t-tit">给年轻人的建议</span><span
+class="t-dots"></span><span class="t-count">（676 篇）</span>
+</li>
+<li>
+<span class="t-tit">学习与思维方法</span><span
+class="t-dots"></span><span class="t-count">（186 篇）</span>
+</li>
+<li>
+<span class="t-tit">家庭与子女教育</span><span
+class="t-dots"></span><span class="t-count">（105 篇）</span>
+</li>
+</ul>
+</li>
+<li class="part">
+<span class="t-tit">社会观察与公共话题</span><span
+class="t-dots"></span><span class="t-count">（976 篇）</span>
+<ul>
+<li>
+<span class="t-tit">社会现象与时事</span><span
+class="t-dots"></span><span class="t-count">（901 篇）</span>
+</li>
+<li>
+<span class="t-tit">经济、政策与宏观</span><span
+class="t-dots"></span><span class="t-count">（13 篇）</span>
+</li>
+<li>
+<span class="t-tit">转载与引用文献</span><span
+class="t-dots"></span><span class="t-count">（62 篇）</span>
+</li>
+</ul>
+</li>
+</ul>
+<p class="toc-foot">
+共 9817 篇
+</p>
+</nav>
+</body>
+</html>

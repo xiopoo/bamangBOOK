@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>段永平文集</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  /* 分块渲染专用：去掉块内强制分页(每章独立成 PDF，避免首章空白页)，仅封面/目录保留分页 */
+  @page {
+    size: A4;
+    margin: 22mm 20mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    font-size: 10.5pt; line-height: 1.62; color: #1a1a1a;
+    text-align: justify;
+  }
+  .cover {
+    height: 247mm; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    break-after: page;
+  }
+  .cover .booktitle { font-size: 34pt; font-weight: 700; color: #AB1942; letter-spacing: 4px; margin: 0; }
+  .cover .subtitle { font-size: 15pt; color: #444; margin: 14px 0 0; letter-spacing: 2px; }
+  .cover .compile { font-size: 11pt; color: #888; margin-top: 40px; }
+  .toc-page { break-before: page; }
+  .toc-page .toc-title { font-size: 18pt; color: #AB1942; text-align: center; margin-bottom: 18px; font-weight: 700; }
+  .toc-vol { font-size: 13pt; font-weight: 700; color: #222; margin: 14px 0 4px; }
+  .toc-ch { font-size: 10.5pt; color: #333; margin: 2px 0 2px 18px; }
+  h1 { font-size: 19pt; color: #AB1942; border-bottom: 2px solid #AB1942; padding-bottom: 6px; margin-top: 4px; }
+  h2 { font-size: 14pt; color: #222; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin-top: 20px; }
+  h3 { font-size: 11.5pt; color: #AB1942; margin-top: 14px; font-weight: 700; }
+  h4, h5, h6 { font-size: 10.5pt; color: #333; margin-top: 10px; font-weight: 700; }
+  p { margin: 6px 0; }
+  blockquote {
+    border-left: 3px solid #AB1942; padding: 2px 12px; margin: 8px 0;
+    color: #555; background: #fbf6f7; font-size: 10pt;
+  }
+  ul, ol { padding-left: 22px; margin: 6px 0; }
+  code { background: #f3f1ee; padding: 1px 4px; border-radius: 3px; font-size: 9.5pt; }
+  hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+  a { color: #AB1942; text-decoration: none; }
+  img { max-width: 100%; }
+
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">段永平文集</h1>
+</header>
+<h1 id="企业管理与经营">企业管理与经营</h1>
+<h2 id="长期经营更健康更长久">长期经营：更健康更长久</h2>
+<h3 id="对-说请问大道师怎么定义伟大的企业">对
+说：请问大道师怎么定义伟大的企业？</h3>
+<h4 id="提问">提问</h4>
+<p>对 说：请问大道师怎么定义伟大的企业？</p>
+<h4 id="段永平回答">段永平回答</h4>
+<p>自己不打算去定义，但《基业长青》（Built To Last)和《优秀到卓越》(Good
+To Great)里说了很多。</p>
+<h3 id="回复-copad-正是copad感觉不到他的存在cook不就是基">回复 <span
+class="citation" data-cites="COPAD">@COPAD</span>: 正是！//<span
+class="citation"
+data-cites="COPAD">@COPAD</span>:“感觉不到他的存在”，cook不就是基…</h3>
+<p>回复 <span class="citation" data-cites="COPAD">@COPAD</span>:
+正是！//<span class="citation"
+data-cites="COPAD">@COPAD</span>:“感觉不到他的存在”，cook不就是基业长青里伟大ceo的类型嘛@Mega：失去乔布斯的苹果不值得投资苹果是乔布斯个人的苹果。
+《乔布斯传》用丰满的细节带着不容置疑的权威支持着这个观点。事实上，看完全书，我认为失去乔布斯的苹果再也不会是那个可令全人类为之着迷的公司，辉煌注定难续。因为驱动这家公司达到卓越的动力，就是乔布斯。
+乔布斯对苹果的影响是整体性的，渗透公司方方面面…2011-12-20 17:33 · 转发
+26 · 讨论 20 · 赞 1</p>
+<h3
+id="大道您好感谢您一直以来的分享获益良多您曾说过最关注企业的健康度具体是指那些方">大道您好！感谢您一直以来的分享，获益良多！您曾说过最关注企业的健康度，具体是指那些方…</h3>
+<h4 id="提问-1">提问</h4>
+<p>大道您好！感谢您一直以来的分享，获益良多！您曾说过最关注企业的健康度，具体是指那些方面呢？（隐约似乎也知道答案，再次感谢）</p>
+<h4 id="段永平回答-1">段永平回答</h4>
+<p>我们常说要更健康更长久，所以和不健康不长久相关的东西都是和健康度相关的东西。</p>
+<h3
+id="声明本回复仅代表该作者观点不构成任何投资建议更健康更长久大道无形我有型">（声明：本回复仅代表该作者观点，不构成任何投资建议）<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>…</h3>
+<p>（声明：本回复仅代表该作者观点，不构成任何投资建议）<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥200.00]</span>
+A股全仓茅台，我现在能做到茅台大跌心情几乎不受影响，但涨了还是有些得意，谢谢大道2019-03-18
+15:49 · 转发 4 · 讨论 5 · 赞 37</p>
+<h3
+id="我看着那些让企业更健康更长久的因素声明本回复仅代表该作者观点不构成任何投资建">我看着那些让企业更健康更长久的因素。（声明：本回复仅代表该作者观点，不构成任何投资建…</h3>
+<p>我看着那些让企业更健康更长久的因素。（声明：本回复仅代表该作者观点，不构成任何投资建议）<span
+class="citation"
+data-cites="isme123">@isme123</span>：原帖已被作者删除2019-04-08 15:28 ·
+转发 28 · 讨论 9 · 赞 2</p>
+<h3
+id="回复更健康更长久-4567888也算步步高哈更健康更长久回复思弦君">回复@更健康更长久:
+4567888也算步步高哈。//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation" data-cites="思弦君">@思弦君</span>:…</h3>
+<p>回复@更健康更长久: 4567888也算步步高哈。//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="思弦君:456789是步步高">@思弦君:456789是步步高</span>。<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥200.00]</span>
+第20届巴菲特慈善午餐于太平洋时间7:30在eBay结束拍卖，成交价创出历史新高，达到4567888美元。网站结果显示，最终得标的是一名匿名账号S***5的竞标者。大道拍下了？2019-05-31
+19:56 · 转发 24 · 讨论 48 · 赞 13</p>
+<h3
+id="我很好奇为什么关心这件事情的人居然极少人知道这个拍卖是怎么进行的那大家平时又是怎么">我很好奇为什么关心这件事情的人居然极少人知道这个拍卖是怎么进行的，那大家平时又是怎么…</h3>
+<p>我很好奇为什么关心这件事情的人居然极少人知道这个拍卖是怎么进行的，那大家平时又是怎么看公司的呢？<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥200.00]</span>
+第20届巴菲特慈善午餐于太平洋时间7:30在eBay结束拍卖，成交价创出历史新高，达到4567888美元。网站结果显示，最终得标的是一名匿名账号S***5的竞标者。大道拍下了？2019-05-31
+19:56 · 转发 24 · 讨论 48 · 赞 13</p>
+<h3
+id="回复laiqc-但极少人明白这是什么意思laiqc回复大道无形我有型">回复@laiqc:
+但极少人明白这是什么意思。//<span class="citation"
+data-cites="laiqc:回复">@laiqc:回复</span><span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>…</h3>
+<p>回复@laiqc: 但极少人明白这是什么意思。//<span class="citation"
+data-cites="laiqc:回复">@laiqc:回复</span><span class="citation"
+data-cites="大道无形我有型:大道之前有说过">@大道无形我有型:大道之前有说过</span>，每年的拍卖都会应邀当个“托”，一是帮慈善机构募款，二是告诉世人老巴的东西很值钱。4567888步步高@更健康更长久：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥200.00]</span>
+第20届巴菲特慈善午餐于太平洋时间7:30在eBay结束拍卖，成交价创出历史新高，达到4567888美元。网站结果显示，最终得标的是一名匿名账号S***5的竞标者。大道拍下了？2019-05-31
+19:56 · 转发 24 · 讨论 48 · 赞 13</p>
+<h3
+id="回复市场特许权-其实该说的他们都说了翻译可能不太理解所以我可能做了一下价投翻">回复@市场特许权:
+其实该说的他们都说了，翻译可能不太理解，所以我可能做了一下价投翻…</h3>
+<p>回复@市场特许权:
+其实该说的他们都说了，翻译可能不太理解，所以我可能做了一下价投翻译哈。//<span
+class="citation"
+data-cites="市场特许权:回复">@市场特许权:回复</span><span
+class="citation"
+data-cites="更健康更长久:大道对巴芒做了重要补充">@更健康更长久:大道对巴芒做了重要补充</span>，提供了几个看生意的视角。这个定位已经相当高了@更健康更长久：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥200.00]</span>
+没事想着玩，想大道像哪个武侠人物，个人觉得张三丰像的比较多，为人正派，创立武当派，培养了7个徒弟，一个徒孙，自创太极拳，很有点像大道和步步高哈，不像的地方是张三丰没有做好传承，而步步高在大道退休后发展的比大道在的时候更好了。大道觉得像吗？2019-09-17
+08:33 · 转发 56 · 讨论 35 · 赞 14</p>
+<h3
+id="平常人很难有平常心除非他们想有声明本回复仅代表该作者观点不构成任何投资建议">平常人很难有平常心，除非他们想有。（声明：本回复仅代表该作者观点，不构成任何投资建议…</h3>
+<p>平常人很难有平常心，除非他们想有。（声明：本回复仅代表该作者观点，不构成任何投资建议）<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：原帖已被作者删除2019-09-24
+17:51 · 转发 56 · 讨论 39 · 赞 12</p>
+<h3
+id="回复暮烟风雨-那个时候的我们只知道法家和儒家暮烟风雨回复大道无形我有">回复@暮烟风雨:
+那个时候的我们只知道法家和儒家。//<span class="citation"
+data-cites="暮烟风雨:回复">@暮烟风雨:回复</span><span class="citation"
+data-cites="大道无形我有">@大道无形我有</span>…</h3>
+<p>回复@暮烟风雨: 那个时候的我们只知道法家和儒家。//<span
+class="citation" data-cites="暮烟风雨:回复">@暮烟风雨:回复</span><span
+class="citation"
+data-cites="大道无形我有型:大道年轻的时候应该学习了不少道家思想">@大道无形我有型:大道年轻的时候应该学习了不少道家思想</span><span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：原帖已被作者删除2019-09-24
+17:51 · 转发 56 · 讨论 39 · 赞 12</p>
+<h3
+id="回复leewalter-看不下去有两种情况1看懂了2没看懂lee">回复@leewalter:
+看不下去有两种情况：1，看懂了。2，没看懂。//<span class="citation"
+data-cites="lee">@lee</span>…</h3>
+<p>回复@leewalter: 看不下去有两种情况：1，看懂了。2，没看懂。//<span
+class="citation" data-cites="leewalter:回复">@leewalter:回复</span><span
+class="citation"
+data-cites="babygirl:大道一推荐">@babygirl:大道一推荐</span>，我就买了，基业长青这本书，看了一半看不下去了。作为大道的粉丝，有点伤心。几年后，在网易博客上，大道说过，他没有认真看基业长青这本书，只是顺便翻翻，他喜欢的是这本书的名字。<span
+class="citation"
+data-cites="babygirl">@babygirl</span>：《从优秀到卓越》《基业长青》这两本书，是大道仅有的反复推荐书目，并说《Good
+to Great》和《Built to
+Last》确实是经营企业者该读的书，第一次看到这两本书很兴奋，觉得这么多年做企业的体会和心得都被人写出来了。
+一起温习一下全书的主要理念： 1、造钟而不是报时
+最好领导者，书中叫第五级经理人，不以个人表…2020-12-04 02:27 · 转发 97 ·
+讨论 25 · 赞 65</p>
+<h3
+id="回复更健康更长久-不是很清楚你想问什么你想传承什么呢一般来说言传身教尤其">回复@更健康更长久:
+不是很清楚你想问什么。你想传承什么呢？一般来说，言传身教，尤其…</h3>
+<p>回复@更健康更长久:
+不是很清楚你想问什么。你想传承什么呢？一般来说，言传身教，尤其是身教会起主要作用（大概99%）。家长的那些坏毛病小朋友学起来快得很，你完全不用担心他们学不会。至于那些家长希望小朋友能学会但自己却没有的优点，一般来说也不用太担心，小朋友依然是有样学样的。好东西要…<span
+class="citation"
+data-cites="六和公益">@六和公益</span>：专栏【雪球用户资助】六和公益新安县正村镇阅读教育项目方案本项目由
+雪球用户 全额资助，深表感谢！ 一、机构简介
+六和公益是致力于让乡村学生读好书的公益机构，通过区域化的服务模式，为项目区提供深度的阅读教育支持。自2012年底开始，六和公益已先后在贵州、安徽、河南和四川等11个区域推动阅读，为620所学校捐建立班级阅读角4903个，阅览空间…2019-05-04
+08:20 · 转发 188 · 讨论 273 · 赞 60</p>
+<h3
+id="没忍住刚刚顺手卖了200个今天到期的750的call收了1-块多一点个-小赌">没忍住，刚刚顺手卖了200个今天到期的750的call，收了1
+块多一点/个。 小赌…</h3>
+<h4 id="提问-2">提问</h4>
+<p>没忍住，刚刚顺手卖了200个今天到期的750的call，收了1 块多一点/个。
+小赌怡情，不要模仿。</p>
+<h4 id="段永平回答-2">段永平回答</h4>
+<p>我们就是觉得没有比更健康更长久更有意义的东西了。// :回复
+:还是从未来看回来，没啥别的办法。</p>
+<h3
+id="既然你觉得茅台可以永续经营你就用一万年折算呗如果你真的知道现金流折现的意思的话">既然你觉得茅台可以永续经营，你就用一万年折算呗，如果你真的知道现金流折现的意思的话。…</h3>
+<p>既然你觉得茅台可以永续经营，你就用一万年折算呗，如果你真的知道现金流折现的意思的话。（声明：本回复仅代表该作者观点，不构成任何投资建议）<span
+class="citation"
+data-cites="我是月上树">@我是月上树</span>：原帖已被作者删除2020-11-05
+22:22 · 转发 44 · 讨论 90 · 赞 13</p>
+<h3
+id="你的经历很了不起哈我当时没想过学啥专业只是想换个环境看看世界声明本回复仅">你的经历很了不起哈。我当时没想过学啥专业，只是想换个环境，看看世界。（声明：本回复仅…</h3>
+<p>你的经历很了不起哈。我当时没想过学啥专业，只是想换个环境，看看世界。（声明：本回复仅代表该作者观点，不构成任何投资建议）收起<span
+class="citation" data-cites="Jackkkkyy">@Jackkkkyy</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span>
+大道您好，我是一个孤儿，由爷爷奶奶养大(奶奶在我8岁去世，爷爷在我17岁去世)，我读到初二就辍学了。然后就是一直打各种苦工生活很多年。后来是因为机缘巧合，自己自学英语几年，进入一家外贸公司由仓库发货开始直到后来做到了业务主管，然后看不到更多机会也是想挑战自己，就辞职开了家外贸公司，几年下来，现在也发展到10个人了，今年的净利润也会达到约600万。然后就是今年因为做空GSX亏了约80万，才机缘巧合下看到大道的东西，然后这段时间都是在看大道推荐的书
+(赢 基业长青
+等)，还有雪球整理的大道的帖子也是看了几遍。然后觉得自己因为做空才看到大道的东西，那亏的那些钱真的值了。因为学到的真的太多。大道对投资还有做公司的理念我都已铭记在心。在此非常非常感谢。我没有问题，只有一点好奇，就是大道离开小霸王后本来是想去美国留学，好奇大道当时想选什么专业？(因为自己现在已经快考完成人英语专本连读，也有以后去留学的想法)
+<span class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span>
+大道您好，我是一个孤儿，由爷爷奶奶养大(奶奶在我8岁去世，爷爷在我17岁去世)，我读到初二就辍学了。然后就是一直打各种苦工生活很多年。后来是因为机缘巧合，自己自学英语几年，进入一家外贸公司由仓库发货开始直到后来做到了业务主管，然后看不到更多机会也是想挑战…2020-11-29
+10:30 · 转发 23 · 讨论 48 · 赞 95</p>
+<h3
+id="我问过巴菲特同样的问题他说这是一个很好玩的游戏啊声明本回复仅代表该作者观点">我问过巴菲特同样的问题，他说：这是一个很好玩的游戏啊！（声明：本回复仅代表该作者观点…</h3>
+<p>我问过巴菲特同样的问题，他说：这是一个很好玩的游戏啊！（声明：本回复仅代表该作者观点，不构成任何投资建议）收起<span
+class="citation" data-cites="日IV">@日IV</span>：<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型 [¥199.99]</span>
+想问大道对于投资的目的是什么呢？ 是寻找永续增值资产的方法？
+还是个人兴趣？ 或者 为社会是创造价值呢？
+看了大道在视频，博客和雪球留下的智慧。非常感谢您分享您的智慧。看看能不能给翻牌。马上要从Omaha毕业了，怎么让自己一直铭记这些信仰，相伴终身呢。</p>
+<p><span class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span> 想问大道对于投资的目的是什么呢？
+是寻找永续增值资产的方法？ 还是个人兴趣？ 或者 为社会是创造价值呢？
+看了大道在视频，博客和雪球留下的智慧。非常感谢您分享您的智慧。看看能不能给翻牌。马上要从Omaha毕业了，怎么让自己一直铭记这些信仰，相伴终身呢。2020-12-02
+10:26 · 转发 74 · 讨论 26 · 赞 9</p>
+<h3
+id="我不记得我跟丁磊讨论过麦肯锡7s的事情我不在一线已经快20年了对这些东西已经有些">我不记得我跟丁磊讨论过麦肯锡7S的事情。我不在一线已经快20年了，对这些东西已经有些…</h3>
+<p>我不记得我跟丁磊讨论过麦肯锡7S的事情。我不在一线已经快20年了，对这些东西已经有些生疏了。我记得7S中最有道理的就是每个S要朝着一个方向，不然内耗就很大。7S是个不错的工具。（声明：本回复仅代表该作者观点，不构成任何投资建议）收起<span
+class="citation" data-cites="愚者老谢">@愚者老谢</span>：<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span>
+尊敬的大道老师，您好！最近在拼多多上买了一本《段永平传》，看了感觉像是一个段粉在看另一个段粉写的毕业论文，其中书中有提到您手把手教丁磊理解麦肯锡7S，我不知道作者是自己演绎的还是确有其事。之前在网易博客上有看您谈到过7S，但说得不详细，麦肯锡7S我找了很多资料发现主要是《追求卓越》这本书里有，并没有看到其他专著。我的问题是：在提高把事情做对这方面的能力7S模型是一个很好的学习内容吗？一直看您有推荐《基业长青》和《从优秀到卓越》这两本书，没看到您推荐《追求卓越》这本书，所以想问一问，如何帮助把事情做对的能力更好地提高
+<span class="citation" data-cites="大道无形我有型">@大道无形我有型
+[¥199.99]</span>
+尊敬的大道老师，您好！最近在拼多多上买了一本《段永平传》，看了感觉像是一个段粉在看另一个段粉写的毕业论文，其中书中有提到您手把手教丁磊理解麦肯锡7S，我不知道作者是自己演绎的还是确有其事。之前在网易博客上有看您谈到过7S，但说得不详细，麦肯锡7S我找了…2020-12-05
+18:02 · 转发 42 · 讨论 2 · 赞 4</p>
+<h3
+id="回复更健康更长久-食品是一次性消费的东西鉴别非常不容易比如不常喝茅台的消费者">回复@更健康更长久:
+食品是一次性消费的东西，鉴别非常不容易。比如不常喝茅台的消费者…</h3>
+<p>回复@更健康更长久:
+食品是一次性消费的东西，鉴别非常不容易。比如不常喝茅台的消费者可能不那么容易鉴别53度飞天和别的酱香型酒的差别？15年和50年的差别等等…手机要容易很多，不过也有一些不容易的，比如用老iPhone冒充新iPhone就不容易鉴别（对认真且懂的用户而言不是问题）。我觉得茅台这种…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>阿</em><em>里</em><em>巴</em><em>巴</em>(<em>B</em><em>A</em><em>B</em><em>A</em>)</span>
+想象中，因为天猫是厂家的旗舰店，所以应该很难有假货吧？感觉电商平台是无法完全靠自己的力量杜绝假货的，天猫似乎是个不错的办法。哎…,因为自己不是消费者，要真的理解他们的生意不容易啊。2021-12-27
+23:18 · 转发 149 · 讨论 16 · 赞 439</p>
+<h3
+id="回复更健康更长久-你买保险的的时候是赌出事吗更健康更长久回复大道无形">回复@更健康更长久:
+你买保险的的时候是赌出事吗？//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation" data-cites="大道无形">@大道无形</span>…</h3>
+<p>回复@更健康更长久: 你买保险的的时候是赌出事吗？//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:单就期权我的理解是">@大道无形我有型:单就期权我的理解是</span>“可买可不买的价格卖put，可卖可不卖的价格卖call。买call是赌大涨，买put是赌大跌。”收起<span
+class="citation"
+data-cites="林帅LinTry">@林帅LinTry</span>：你卖了一个put，时间未过半，但收益已超75%，你会提前平仓吗？</p>
+<p>我的理解是，因为大道卖put是因为真的想买这个股票，如果put进来的话，所以会等到到期日自然清仓。</p>
+<p>（当然这里只是关注一下大道的做法，不代表每个人都要这样做。）<span
+class="citation"
+data-cites="大道无形我有型你卖了一个put">@大道无形我有型你卖了一个put</span>，时间未过半，但收益已超75%，你会提前平仓吗？
+我的理解是，因为大道卖put是因为真的想买这个股票，如果put进来的话，所以会等到到期日自然清仓。
+（当然这里只是关…2022-01-11 06:16 · 转发 565 · 讨论 243 · 赞 48</p>
+<h3
+id="回复更健康更长久-更健康更长久回复大道无形我有型段永平因为没人知道">回复@更健康更长久:
+//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:段永平">@大道无形我有型:段永平</span>：因为没人知道…</h3>
+<p>回复@更健康更长久: //<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:段永平">@大道无形我有型:段永平</span>：因为没人知道市场疯狂起来到底有多疯狂，负债的好处是，可以发展快些；不负债的好处是，可以活得长些。
+不论你借不借钱，一生当中都会失去无穷机会的，但借钱可能会让你再也没有机会了。
+巴菲特说过类似的话：如果你…<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>腾</em><em>讯</em><em>控</em><em>股</em>(00700)</span>
+提醒一下，任何时候都不应该用margin！2022-03-06 19:18 · 转发 467 · 讨论
+15 · 赞 1444</p>
+<h3
+id="回复更健康更长久-你觉得我打球也是做善事吗我其实没怎么做过善事不喜欢的事">回复@更健康更长久:
+你觉得我打球也是做善事吗？我其实没怎么做过“善事”，不喜欢的事…</h3>
+<p>回复@更健康更长久:
+你觉得我打球也是做善事吗？我其实没怎么做过“善事”，不喜欢的事情我会尽量避免做。//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:记得以前看过李嘉诚的一次采访片段">@大道无形我有型:记得以前看过李嘉诚的一次采访片段</span>，忘记记者问什么了。李嘉诚说的大概意思是，如果我跟你交谈两三个小时，收你两三百万，对你来说是很有价值的。想想…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>苹</em><em>果</em>(<em>A</em><em>A</em><em>P</em><em>L</em>)</span>
+希望苹果再多掉一点，时间再长一点，我猜老巴还会再出手买一点。好像这三个一点的意思是不一样的。2022-05-09
+14:05 · 转发 1193 · 讨论 68 · 赞 648</p>
+<h3
+id="回复更健康更长久-是的目前还不到1还不算实质性投入还在想更健康">回复@更健康更长久:
+是的，目前还不到1%，还不算实质性投入。还在想…。//<span class="citation"
+data-cites="更健康">@更健康</span>…</h3>
+<p>回复@更健康更长久:
+是的，目前还不到1%，还不算实质性投入。还在想…。//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="学着悟道的小孙:我也想了一下">@学着悟道的小孙:我也想了一下</span>，ADR到<span
+class="math inline">30<em>以</em><em>下</em>，<em>市</em><em>值</em><em>大</em><em>概</em><em>再</em>2.3<em>万</em><em>亿</em><em>港</em><em>币</em>，<em>如</em><em>果</em><em>能</em><em>判</em><em>断</em><em>腾</em><em>讯</em><em>年</em><em>净</em><em>利</em><em>润</em><em>未</em><em>来</em>10<em>年</em><em>平</em><em>均</em><em>能</em><em>维</em><em>持</em><em>在</em>1500<em>亿</em><em>以</em><em>上</em>，<em>那</em><em>么</em><em>腾</em><em>讯</em><em>这</em><em>个</em><em>价</em><em>格</em><em>确</em><em>实</em><em>不</em><em>贵</em>。<em>也</em><em>感</em><em>觉</em><em>大</em><em>道</em><em>在</em><em>腾</em><em>讯</em><em>的</em><em>买</em><em>入</em><em>上</em>（<em>数</em><em>量</em><em>和</em><em>价</em><em>格</em>）<em>还</em><em>是</em>...@<em>大</em><em>道</em><em>无</em><em>形</em><em>我</em><em>有</em><em>型</em>：</span>腾讯控股ADR(TCEHY)$
+刚刚$37.37再买了10万股。2022-08-01 07:52 · 转发 1499 · 讨论 60 · 赞
+3174</p>
+<h3
+id="回复更健康更长久-那个负责人就是现在oppo的ceo-tony更健康更">回复@更健康更长久:
+那个“负责人”就是现在OPPO的CEO Tony//<span class="citation"
+data-cites="更健康更">@更健康更</span>…</h3>
+<p>回复@更健康更长久: 那个“负责人”就是现在OPPO的CEO Tony//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:记得大道曾说过一个例子">@大道无形我有型:记得大道曾说过一个例子</span>：“步步高当时有个电视机项目，大道跟项目负责人探讨电视机的未来，最后结论是，电视机这种家电很难做出差异化，不太容易有一个好的未来。过了一段时间，段永平的一个朋友问…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>腾</em><em>讯</em><em>控</em><em>股</em><em>A</em><em>D</em><em>R</em>(<em>T</em><em>C</em><em>E</em><em>H</em><em>Y</em>)</span>
+刚刚$37.37再买了10万股。2022-08-01 07:52 · 转发 1499 · 讨论 60 · 赞
+3174</p>
+<h3
+id="回复相信理性的力量-其实这句话是老巴或者芒格说的确实很精辟相信理性的力">回复@相信理性的力量:
+其实这句话是老巴或者芒格说的。确实很精辟！//<span class="citation"
+data-cites="相信理性的力">@相信理性的力</span>…</h3>
+<p>回复@相信理性的力量:
+其实这句话是老巴或者芒格说的。确实很精辟！//<span class="citation"
+data-cites="相信理性的力量:回复">@相信理性的力量:回复</span><span
+class="citation"
+data-cites="更健康更长久:大道的东西">@更健康更长久:大道的东西</span>，每次看一下，都很有感觉！闪烁着商业智慧的光芒！“如果你懂投资，你就不需要用杠杆，因为你早晚都会有钱的”！只要能成为有钱人，早点晚点都没关系，只要能成就行[…<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：大道:条条道路都可能通罗马，这里是一条“未必”最好但肯定能到的。2022-09-21
+03:48 · 转发 329 · 讨论 91 · 赞 152</p>
+<h3
+id="回复olddrivermax-未来现金流看不透olddrivermax">回复@OlddriverMax:
+未来现金流看不透。//<span class="citation"
+data-cites="OlddriverMax">@OlddriverMax</span>:…</h3>
+<p>回复@OlddriverMax: 未来现金流看不透。//<span class="citation"
+data-cites="OlddriverMax:回复">@OlddriverMax:回复</span><span
+class="citation"
+data-cites="大道无形我有型:大道能谈一下">@大道无形我有型:大道能谈一下</span>，对于腾讯最疑虑（最懂不透）的点是哪些吗？<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：大道:我更了解苹果2022.3.8号腾讯380左右，苹果156左右。今天2022.10.4号腾讯263，苹果142。2022-10-04
+00:20 · 转发 420 · 讨论 251 · 赞 65</p>
+<h3
+id="回复狂海net-不会因为价钱掉了就后悔但确实没能真的看透所以下不了重手">回复@狂海net:
+不会因为价钱掉了就后悔，但确实没能真的看透，所以下不了重手。//…</h3>
+<p>回复@狂海net:
+不会因为价钱掉了就后悔，但确实没能真的看透，所以下不了重手。//<span
+class="citation" data-cites="狂海net:回复">@狂海net:回复</span><span
+class="citation"
+data-cites="狂海net:我感觉大道有点后悔买入腾讯了">@狂海net:我感觉大道有点后悔买入腾讯了</span>，大道心中，腾讯的确定性不如苹果，茅台@更健康更长久：大道:我更了解苹果2022.3.8号腾讯380左右，苹果156左右。今天2022.10.4号腾讯263，苹果142。2022-10-04
+00:20 · 转发 420 · 讨论 251 · 赞 65</p>
+<h3
+id="回复兴义三和胶-如果真的到30以下也许还会再多买一些但真的下重手的概率依然不大">回复@兴义三和胶:
+如果真的到30以下也许还会再多买一些，但真的下重手的概率依然不大…</h3>
+<p>回复@兴义三和胶:
+如果真的到30以下也许还会再多买一些，但真的下重手的概率依然不大。虽然我喜欢的东西依然在但我担心的东西也去不掉。//<span
+class="citation"
+data-cites="兴义三和胶:回复">@兴义三和胶:回复</span><span
+class="citation"
+data-cites="大道无形我有型:就想问30以下多买点儿">@大道无形我有型:就想问30以下多买点儿</span>？过几天真到30他会下重手吗？<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：大道:我更了解苹果2022.3.8号腾讯380左右，苹果156左右。今天2022.10.4号腾讯263，苹果142。2022-10-04
+00:20 · 转发 420 · 讨论 251 · 赞 65</p>
+<h3
+id="哈确实给过建议应该不太会有年轻人听进去的吧更健康更长久主持人对所有渴">哈，确实给过建议，应该不太会有年轻人听进去的吧？//<span
+class="citation"
+data-cites="更健康更长久:主持人">@更健康更长久:主持人</span>：对所有渴…</h3>
+<p>哈，确实给过建议，应该不太会有年轻人听进去的吧？//<span
+class="citation"
+data-cites="更健康更长久:主持人">@更健康更长久:主持人</span>：对所有渴望成功的所谓年轻人，你想说一句什么话？段永平：成功没有捷径，就是说你必须要付出你该付出的努力，然后得不得到结果，这个有时候是成事在天的，但是最重要你要享受这个过程，就算结果有时候不一定有你想的那么…<span
+class="citation"
+data-cites="光阴似箭_">@光阴似箭_</span>：悬赏¥5.00@大道无形我有型
+大道您好，您一直强调：“人的乐趣是在过程中而不是结果”，我能理解这句话，但是作为一个二十多岁的普通人，在做一份自己想做的事业之前，总会担心最终的结果是失败的，总会担心自己荒废了时间，兜兜转转个两三年没有成绩过得还不如以前。想请教您，如何克服这种心理。2022-10-12
+10:18 · 转发 781 · 讨论 322 · 赞 70</p>
+<h3
+id="回复更健康更长久-读书和看短视频并没有本质差别都可以娱乐也都可以学习我发现">回复@更健康更长久:
+读书和看短视频并没有本质差别，都可以娱乐，也都可以学习。我发现…</h3>
+<p>回复@更健康更长久:
+读书和看短视频并没有本质差别，都可以娱乐，也都可以学习。我发现看短视频的学习效率有时候会高很多。//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:通过读很多很多书来提高自己">@大道无形我有型:通过读很多很多书来提高自己</span>，效率应该是比较低的。有时候一本书，精华的就是那么几句话。但这几句话真正的理解可能需要很长时间去悟…<span
+class="citation"
+data-cites="不明真相的群众">@不明真相的群众</span>：为什么老罗比老俞靠谱先说老俞。
+首先我认为<span
+class="math inline"><em>新</em><em>东</em><em>方</em>(<em>E</em><em>D</em><em>U</em>)</span>是非常成功的企业，俞敏洪是非常成功的企业家，这次做空风波，处理也是非常得体的。
+其次我对俞敏洪老师的人品也没有怀疑，比如我不认为他会偷股东的钱，不认为他会做假账。
+对于中国企业家来说，这已经很不容易了，可以打70分了。
+接下来要讲…2012-07-20 17:36 · 转发 2306 · 讨论 1699 · 赞 922</p>
+<h3
+id="乌龟师傅这话翻译成中文怎么觉得味道有点点不太一样了更健康更长久做自己喜欢的">乌龟师傅这话翻译成中文怎么觉得味道有点点不太一样了？//<span
+class="citation"
+data-cites="更健康更长久:做自己喜欢的">@更健康更长久:做自己喜欢的</span>…</h3>
+<p>乌龟师傅这话翻译成中文怎么觉得味道有点点不太一样了？//<span
+class="citation"
+data-cites="更健康更长久:做自己喜欢的事情前提就是回避自己不喜欢的事情">@更健康更长久:做自己喜欢的事情前提就是回避自己不喜欢的事情</span>。比如“无意义的饭局”“无意义的聚会”等。时间是珍贵和有限的。乌龟大师说：“昨天是段历史，明天是个谜团，而今天是天赐的礼物，像珍惜礼物那样珍惜今天。”<span
+class="citation"
+data-cites="民生银行">@民生银行</span>(SH600016)：70岁卢志强“英雄迟暮”，3000亿泛海系危机四伏《风暴眼》出品
+“闷似蛟龙离海岛，愁如猛虎困荒田。”如今，面对着泛海系“千疮百孔”的局面，喜爱水浒的卢志强，此时心情恐怕比豹子头林冲更加苦闷。
+被民生银行（600016）起诉、被山东高速（600350）追债、被朝阳法院限制高消费……开年…
+网页链接2023-02-23 00:25 · 转发 495 · 讨论 208 · 赞 161</p>
+<h3
+id="回复凡事于我有益-你很老了吗凡事于我有益回复更健康更长久遇见偶像的">回复@凡事于我有益:
+你很老了吗？//<span class="citation"
+data-cites="凡事于我有益:回复">@凡事于我有益:回复</span><span
+class="citation"
+data-cites="更健康更长久:遇见偶像的">@更健康更长久:遇见偶像的</span>…</h3>
+<p>回复@凡事于我有益: 你很老了吗？//<span class="citation"
+data-cites="凡事于我有益:回复">@凡事于我有益:回复</span><span
+class="citation"
+data-cites="更健康更长久:遇见偶像的文字太晚了">@更健康更长久:遇见偶像的文字太晚了</span>！
+//<span class="citation"
+data-cites="大道无形我有型:10年过得很快">@大道无形我有型:10年过得很快</span>，未来来得也蛮快的。<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：大道在茅台塑化剂事情的部分观点今日清晨段永平发布微博就有关做空茅台的报道进行回应，他在微博中表示：“我绝不可能做空任何一只股票的，当然也绝不会做空茅台，看了这次检验结果后想多买点倒是真的。这个价钱拿个5年或更长的时间的回报应该会不错。”段永平之后在与微博网友的互动中表…2023-03-15
+16:29 · 转发 153 · 讨论 8 · 赞 130</p>
+<h3
+id="回复雨碎江南ltp-后悔什么刚刚看过医生雨碎江南ltp回复更健康更">回复@雨碎江南ltp:
+后悔什么？刚刚看过医生？//<span class="citation"
+data-cites="雨碎江南ltp:回复">@雨碎江南ltp:回复</span><span
+class="citation" data-cites="更健康更">@更健康更</span>…</h3>
+<p>回复@雨碎江南ltp: 后悔什么？刚刚看过医生？//<span class="citation"
+data-cites="雨碎江南ltp:回复">@雨碎江南ltp:回复</span><span
+class="citation"
+data-cites="更健康更长久:后悔没有早点认识段总">@更健康更长久:后悔没有早点认识段总</span>!//<span
+class="citation"
+data-cites="大道无形我有型:10年过得很快">@大道无形我有型:10年过得很快</span>，未来来得也蛮快的。<span
+class="citation"
+data-cites="更健康更长久">@更健康更长久</span>：大道在茅台塑化剂事情的部分观点今日清晨段永平发布微博就有关做空茅台的报道进行回应，他在微博中表示：“我绝不可能做空任何一只股票的，当然也绝不会做空茅台，看了这次检验结果后想多买点倒是真的。这个价钱拿个5年或更长的时间的回报应该会不错。”段永平之后在与微博网友的互动中表…2023-03-15
+16:29 · 转发 153 · 讨论 8 · 赞 130</p>
+<h3
+id="回复更健康更长久-逻辑上和比例大小关系不大更健康更长久回复大道无形我">回复@更健康更长久:
+逻辑上和比例大小关系不大。//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation" data-cites="大道无形我">@大道无形我</span>…</h3>
+<p>回复@更健康更长久: 逻辑上和比例大小关系不大。//<span class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:小比例感觉就是个游戏">@大道无形我有型:小比例感觉就是个游戏</span>。有可能会多赚，最差结果是少赚。（大道说：我不想把大家引入歧途。我不靠卖option赚钱，确实只是好玩（是个能赚钱但会少赚钱的办法）。我这十年赚钱的办法非常简单，就是买了苹果@大道无形我有型：<span
+class="math inline"><em>苹</em><em>果</em>(<em>A</em><em>A</em><em>P</em><em>L</em>)</span>
+这是新高了么？不记得以前收在180以上。2023-06-02 13:38 · 转发 910 · 讨论
+33 · 赞 621</p>
+<h3
+id="回复谦诺毓卓-能不能增厚利润不是很确定但下手难度减少了不少内心没那么折腾受">回复@谦诺毓卓:
+能不能增厚利润不是很确定，但下手难度减少了不少，内心没那么折腾，受…</h3>
+<p>回复@谦诺毓卓:
+能不能增厚利润不是很确定，但下手难度减少了不少，内心没那么折腾，受市场影响会降低一些。//<span
+class="citation" data-cites="谦诺毓卓:回复">@谦诺毓卓:回复</span><span
+class="citation"
+data-cites="更健康更长久:不得不说">@更健康更长久:不得不说</span>，如果有一家真正懂的公司，option
+是能增厚不少利润的。所以确定性最重要。//<span class="citation"
+data-cites="大道无形我有型:严格讲">@大道无形我有型:严格讲</span>，我现在已经不能说我不靠卖Option赚钱了。事…<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：大道:
+我不想把大家引入歧途。我不靠卖option赚钱，确实只是好玩（是个能赚钱但会少赚钱的办法）大道:
+根本就没有所谓的“卖put的策略”！”卖put的策略“和卖苹果的put是两回事。千万别以为看到大道卖了苹果的put就以为找到发财术了。敢卖苹果的put是建立在对苹果的生意的了解之上的。不了解的公司千万别碰，你要是卖了乐视的put就血本无归了。(2023-9)
+大道： 我不知道什么是做t。我说的…2023-09-28 18:29 · 转发 194 · 讨论 12 ·
+赞 93</p>
+<h3
+id="这个最关键月光宝盒-陈大道-卖这种put看着好玩但背后的逻辑还是严密的">这个最关键！//<span
+class="citation" data-cites="月光宝盒-陈:大道">@月光宝盒-陈:大道</span>:
+卖这种put看着好玩，但背后的逻辑还是严密的…</h3>
+<p>这个最关键！//<span class="citation"
+data-cites="月光宝盒-陈:大道">@月光宝盒-陈:大道</span>:
+卖这种put看着好玩，但背后的逻辑还是严密的。首先，从十年的角度看，170的
+苹果 其实不贵（功夫全在这里），然后就好玩了。(2022-1)<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：大道:
+我不想把大家引入歧途。我不靠卖option赚钱，确实只是好玩（是个能赚钱但会少赚钱的办法）大道:
+根本就没有所谓的“卖put的策略”！”卖put的策略“和卖苹果的put是两回事。千万别以为看到大道卖了苹果的put就以为找到发财术了。敢卖苹果的put是建立在对苹果的生意的了解之上的。不了解的公司千万别碰，你要是卖了乐视的put就血本无归了。(2023-9)
+大道： 我不知道什么是做t。我说的…2023-09-28 18:29 · 转发 194 · 讨论 12 ·
+赞 93</p>
+<h3
+id="回复简单的老孙-你难受是有道理的国债不是margin但其他股票是你连这个都">回复@简单的老孙:
+你难受是有道理的。国债不是margin，但其他股票是！你连这个都…</h3>
+<p>回复@简单的老孙:
+你难受是有道理的。国债不是margin，但其他股票是！你连这个都搞不清楚，给你苦头吃是应该的。//<span
+class="citation"
+data-cites="简单的老孙:回复">@简单的老孙:回复</span><span
+class="citation"
+data-cites="大道无形我有型:是的">@大道无形我有型:是的</span>，现金抵押品很难受。主要我在国内用富途，不是很方便。大道是用国债做margin吗？还是也可以用其他股票？<span
+class="citation" data-cites="更健康更长久">@更健康更长久</span>：大道:
+我不想把大家引入歧途。我不靠卖option赚钱，确实只是好玩（是个能赚钱但会少赚钱的办法）大道:
+根本就没有所谓的“卖put的策略”！”卖put的策略“和卖苹果的put是两回事。千万别以为看到大道卖了苹果的put就以为找到发财术了。敢卖苹果的put是建立在对苹果的生意的了解之上的。不了解的公司千万别碰，你要是卖了乐视的put就血本无归了。(2023-9)
+大道： 我不知道什么是做t。我说的…2023-09-28 18:29 · 转发 194 · 讨论 12 ·
+赞 93</p>
+<h3
+id="回复更健康更长久-10多年前曾经盛传苹果要推电视机有业内资深人士甚至告诉我他已">回复@更健康更长久:
+10多年前曾经盛传苹果要推电视机，有业内资深人士甚至告诉我他已…</h3>
+<p>回复@更健康更长久:
+10多年前曾经盛传苹果要推电视机，有业内资深人士甚至告诉我他已经看到样机了。我说，你可能不太了解苹果，样机不说明任何问题。同理，差不多的时期，有人问我iPhone会不会出大屏，我说一定会的。尽管后来还是等了三年。//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:记得一开始传苹果">@大道无形我有型:记得一开始传苹果</span>…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>苹</em><em>果</em>(<em>A</em><em>A</em><em>P</em><em>L</em>)</span>
+苹果果然取消了电动车项目！2024-02-27 15:41 · 转发 202 · 讨论 22 · 赞
+1181</p>
+<h3
+id="回复基业长青-哈已经分拆很久了看来我确实退休很久了基业长青回复大">回复@基业长青:
+哈，已经分拆很久了？看来我确实退休很久了。//<span class="citation"
+data-cites="基业长青:回复">@基业长青:回复</span><span class="citation"
+data-cites="大">@大</span>…</h3>
+<p>回复@基业长青: 哈，已经分拆很久了？看来我确实退休很久了。//<span
+class="citation" data-cites="基业长青:回复">@基业长青:回复</span><span
+class="citation"
+data-cites="大道无形我有型:已经分拆啦">@大道无形我有型:已经分拆啦</span>，您那会用的bonding机是后道封装设备，现在是ASM
+pacific的业务，在港股上市。 ASML主要是光刻机相关业务。//<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>:
+回复@大道无形我有型: bonding机是用来软封装芯片的。硬…<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：<span
+class="math inline"><em>英</em><em>伟</em><em>达</em>(<em>N</em><em>V</em><em>D</em><em>A</em>)</span>
+看懂一家公司确实很难。以前没看懂，现在再看也还是没懂。搞不清楚这家公司10年后会是更好还是不如现在。2024-04-19
+11:22 · 转发 565 · 讨论 23 · 赞 1577</p>
+<h3
+id="这个价格一下继续买2024-04-30-1756-转发-323-讨论-2">这个价格一下继续买！2024-04-30
+17:56 · 转发 323 · 讨论 2…</h3>
+<p>这个价格一下继续买！2024-04-30 17:56 · 转发 323 · 讨论 24 · 赞
+1128</p>
+<h3
+id="回复更健康更长久-平均回报没有任何意义的因为规模不一样老巴对投资的理解确实是">回复@更健康更长久:
+平均回报没有任何意义的，因为规模不一样。老巴对投资的理解确实是…</h3>
+<p>回复@更健康更长久:
+平均回报没有任何意义的，因为规模不一样。老巴对投资的理解确实是比我好的，我没有任何不同意见。//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:说大道投资比不上巴菲特依据是什么">@大道无形我有型:说大道投资比不上巴菲特依据是什么</span>？这些年大道投资的平均回报率应该是超过巴菲特的。<span
+class="citation"
+data-cites="陈中梁">@陈中梁</span>：我原来认为老巴和芒格差不多，但是大佬认为老巴比较厉害。从历史和与两者接触的程度上来看，大佬的判断和认识程度比我强，所以，很大概率是我错了。
+那么，把老巴的东西再看几遍，是极有必要的。2024-05-06 18:58 · 转发 229 ·
+讨论 460 · 赞 46</p>
+<h3
+id="大道老师请问有什么投资相关的书籍您读到觉得影响您很深的吗">大道老师，请问有什么投资相关的书籍您读到觉得影响您很深的吗？</h3>
+<h4 id="提问-3">提问</h4>
+<p>大道老师，请问有什么投资相关的书籍您读到觉得影响您很深的吗？</p>
+<h4 id="段永平回答-3">段永平回答</h4>
+<p>基业长青。</p>
+<h3
+id="更健康更长久争取下个三十年我还能来">更健康更长久！争取下个三十年我还能来！</h3>
+<h4 id="提问-4">提问</h4>
+<p>更健康更长久！争取下个三十年我还能来！</p>
+<h4 id="段永平回答-4">段永平回答</h4>
+<p>公司历史墙上看到的，很有感触哈。</p>
+<h3
+id="更健康更长久争取下个三十年我还能来-1">更健康更长久！争取下个三十年我还能来！</h3>
+<p>更健康更长久！争取下个三十年我还能来！</p>
+<h3
+id="回复xlli-777-xlli-777回复大道无形我有型在小红薯上看">回复@xlli-777:
+//<span class="citation"
+data-cites="xlli-777:回复">@xlli-777:回复</span><span class="citation"
+data-cites="大道无形我有型:在小红薯上看">@大道无形我有型:在小红薯上看</span>…</h3>
+<p>回复@xlli-777: //<span class="citation"
+data-cites="xlli-777:回复">@xlli-777:回复</span><span class="citation"
+data-cites="大道无形我有型:在小红薯上看到了一张照片">@大道无形我有型:在小红薯上看到了一张照片</span>，最右面这位大学生模样的男子莫非就是。。。！
+查看图片收起<span class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：更健康更长久！争取下个三十年我还能来！
+更健康更长久！争取下个三十年我还能来！2025-09-17 16:36 · 转发 367 · 讨论
+20 · 赞 3871</p>
+<h3 id="回复babygirl-小天才是昨天晚上babygirl回复xlli-">回复@babygirl:
+小天才是昨天晚上。//<span class="citation"
+data-cites="babygirl:回复">@babygirl:回复</span><span class="citation"
+data-cites="xlli">@xlli</span>-…</h3>
+<p>回复@babygirl: 小天才是昨天晚上。//<span class="citation"
+data-cites="babygirl:回复">@babygirl:回复</span><span class="citation"
+data-cites="xlli-777:左边三位兄弟左手拿花">@xlli-777:左边三位兄弟左手拿花</span>，右手拿奖，最右边这个大学生一手插兜，云淡风轻……
+网上没看到大道去vivo和步步高教育电子30周年庆的图片。收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：更健康更长久！争取下个三十年我还能来！
+更健康更长久！争取下个三十年我还能来！2025-09-17 16:36 · 转发 367 · 讨论
+20 · 赞 3871</p>
+<h3
+id="回复大道无形我有型-查看图片大道无形我有型回复babygirl小天才">回复@大道无形我有型:
+查看图片//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="babygirl:小天才">@babygirl:小天才</span>…</h3>
+<p>回复@大道无形我有型: 查看图片//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="babygirl:小天才是昨天晚上">@babygirl:小天才是昨天晚上</span>。收起<span
+class="citation"
+data-cites="大道无形我有型">@大道无形我有型</span>：更健康更长久！争取下个三十年我还能来！
+更健康更长久！争取下个三十年我还能来！2025-09-17 16:36 · 转发 367 · 讨论
+20 · 赞 3871</p>
+<h3
+id="回复更健康更长久-2002年去读研究生2004年毕业后认识的很诡异为什么会">回复@更健康更长久:
+2002年去读研究生，2004年毕业后认识的。很诡异，为什么会…</h3>
+<p>回复@更健康更长久:
+2002年去读研究生，2004年毕业后认识的。很诡异，为什么会被莫名其妙质疑我的记忆呢？//<span
+class="citation"
+data-cites="更健康更长久:回复">@更健康更长久:回复</span><span
+class="citation"
+data-cites="大道无形我有型:大道是不是记错了">@大道无形我有型:大道是不是记错了</span>？黄峥在2018
+年《财经》专访《对话拼多多黄峥：他们建帝国、争地盘，我要错位竞…收起<span
+class="citation"
+data-cites="元广志">@元广志</span>：有点好奇大道当初为什么会建议黄峥去google而不是微软？<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+有点好奇大道当初为什么会建议黄峥去google而不是微软？<span
+class="citation"
+data-cites="大道无形我有型2025-09-25">@大道无形我有型2025-09-25</span>
+07:07 · 转发 45 · 讨论 168 · 赞 20</p>
+<h3
+id="回复大道无形我有型-逻辑是个好东西大道无形我有型回复更健康更长久2">回复@大道无形我有型:
+逻辑是个好东西！//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="更健康更长久:2">@更健康更长久:2</span>…</h3>
+<p>回复@大道无形我有型: 逻辑是个好东西！//<span class="citation"
+data-cites="大道无形我有型:回复">@大道无形我有型:回复</span><span
+class="citation"
+data-cites="更健康更长久:2002年去读研究生">@更健康更长久:2002年去读研究生</span>，2004年毕业后认识的。很诡异，为什么会被莫名其妙质疑我的记忆呢？收起<span
+class="citation"
+data-cites="元广志">@元广志</span>：有点好奇大道当初为什么会建议黄峥去google而不是微软？<span
+class="citation" data-cites="大道无形我有型">@大道无形我有型</span>
+有点好奇大道当初为什么会建议黄峥去google而不是微软？<span
+class="citation"
+data-cites="大道无形我有型2025-09-25">@大道无形我有型2025-09-25</span>
+07:07 · 转发 45 · 讨论 168 · 赞 20</p>
+</body>
+</html>

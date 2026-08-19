@@ -1,0 +1,990 @@
+/* ============================================================
+   components/ui.css — 交互原语层（Interaction Primitives）
+   ------------------------------------------------------------
+   全站可复用的交互构件，是"交互体验"的唯一实现来源：
+     焦点环 / 跳转链接 · 按钮 · 表单域 · 筛选片 · 卡片
+     骨架屏 · 吐司 · 空态 · 路由进度条 · 遮罩 · 布局原语
+   规则：
+     1) 只消费 tokens.css 的令牌，禁止硬编码颜色/间距/时长/层级。
+     2) 所有可点击元素触控高度 ≥ var(--tap-min)（44px，WCAG 2.5.5）。
+     3) 所有动效必须在 prefers-reduced-motion 下降级（见文件末尾统一兜底）。
+     4) 新页面优先复用本文件的 .ui-* 原语，不要再写一次性 Tailwind 灰阶。
+   加载顺序：须在 utilities.css 之后、模板层之前（见 src/app/layout.tsx）。
+   ============================================================ */
+
+/* ============================================================
+   1. 焦点可见性 · 跳转到主内容
+   ------------------------------------------------------------
+   改造前全站仅 2 个文件写过 focus-visible，键盘用户几乎看不到焦点。
+   这里给出全局兜底：任何原生可聚焦元素都有双环焦点指示。
+   ============================================================ */
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+  border-radius: 2px;
+}
+
+/* 鼠标点击不显示焦点环，键盘才显示（现代浏览器由 :focus-visible 保证，
+   这里显式清掉 UA 的 :focus 轮廓，避免双重描边） */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 深色/图片等复杂底色上的焦点环：加一圈纸色光晕保证任何底色都可辨识 */
+.ui-focus-halo:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+  box-shadow: 0 0 0 calc(var(--focus-width) + var(--focus-offset)) var(--focus-halo);
+}
+
+/* 跳转到主内容：已有实现见 utilities.css 的 .skip-link（不在此重复定义，
+   避免同一能力两套真相）。本文件只负责保证它的焦点态由上面的全局焦点环兜底。 */
+
+/* 屏幕阅读器专用文本（用于图标按钮的可读名称、aria-live 播报区） */
+.ui-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   2. 按钮 .ui-btn
+   ------------------------------------------------------------
+   变体：--solid（主操作）/ --outline（次操作）/ --ghost（工具栏）/ --link（行内）
+   尺寸：默认 44px / --sm 36px（仅限密集工具栏）/ --lg 52px
+   状态：hover 抬升 · active 下压 · disabled 降透明 · [data-loading] 转圈
+   ============================================================ */
+
+.ui-btn {
+  --btn-h: var(--tap-min);
+  position: relative;
+  min-height: var(--btn-h);
+  padding: 0 var(--space-5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--archive-radius);
+  background: transparent;
+  color: var(--archive-ink);
+  font: 700 var(--step--1) / 1 var(--archive-sans);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--mo-fast) var(--ease-standard),
+    border-color var(--mo-fast) var(--ease-standard),
+    color var(--mo-fast) var(--ease-standard),
+    box-shadow var(--mo-fast) var(--ease-standard),
+    transform var(--mo-instant) var(--ease-standard);
+}
+
+.ui-btn > svg {
+  flex: none;
+  transition: transform var(--mo-base) var(--ease-emphasis);
+}
+
+/* 按压反馈：所有变体统一下压 1px，让点击"有回应" */
+.ui-btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.ui-btn:disabled,
+.ui-btn[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* —— 主操作：实心赭红 —— */
+.ui-btn--solid {
+  background: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+  color: #fff8ec;
+  box-shadow: var(--elev-1);
+}
+
+.ui-btn--solid:hover:not(:disabled) {
+  background: var(--archive-oxblood-deep);
+  border-color: var(--archive-oxblood-deep);
+  box-shadow: var(--elev-2);
+}
+
+/* —— 次操作：描边 —— */
+.ui-btn--outline {
+  border-color: var(--archive-rule);
+  color: var(--archive-ink);
+}
+
+.ui-btn--outline:hover:not(:disabled) {
+  border-color: var(--archive-oxblood);
+  background: var(--surface-1);
+  color: var(--archive-oxblood);
+}
+
+/* —— 工具栏：无边框，悬停才出底 —— */
+.ui-btn--ghost {
+  color: var(--archive-ink-soft);
+  padding-inline: var(--space-3);
+}
+
+.ui-btn--ghost:hover:not(:disabled) {
+  background: var(--surface-1);
+  color: var(--archive-oxblood);
+}
+
+/* —— 行内文字按钮：带箭头位移反馈 —— */
+.ui-btn--link {
+  min-height: var(--tap-min);
+  padding: 0;
+  color: var(--archive-oxblood);
+  letter-spacing: 0.02em;
+}
+
+.ui-btn--link:hover:not(:disabled) {
+  color: var(--archive-oxblood-deep);
+}
+
+.ui-btn--link:hover > svg:last-child {
+  transform: translateX(3px);
+}
+
+/* —— 尺寸 —— */
+.ui-btn--sm {
+  --btn-h: 36px;
+  padding-inline: var(--space-3);
+  font-size: var(--step--2);
+}
+
+.ui-btn--lg {
+  --btn-h: 52px;
+  padding-inline: var(--space-6);
+  font-size: var(--step-0);
+}
+
+.ui-btn--icon {
+  width: var(--btn-h);
+  padding: 0;
+}
+
+.ui-btn--block {
+  width: 100%;
+}
+
+/* —— 加载中：文字降透明，中央转圈；同时用 aria-busy 播报 —— */
+.ui-btn[data-loading='true'] {
+  cursor: progress;
+  pointer-events: none;
+}
+
+.ui-btn[data-loading='true'] > * {
+  opacity: 0;
+}
+
+.ui-btn[data-loading='true']::after {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 1.05em;
+  height: 1.05em;
+  margin: -0.525em 0 0 -0.525em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: ui-spin 620ms linear infinite;
+}
+
+@keyframes ui-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 手机端主操作默认通栏，避免出现"小按钮难点"的情况 */
+@media (max-width: 640px) {
+  .ui-btn--solid:not(.ui-btn--icon):not(.ui-btn--keep-width),
+  .ui-btn--lg:not(.ui-btn--icon):not(.ui-btn--keep-width) {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   3. 表单域 .ui-field
+   ------------------------------------------------------------
+   结构：<div class="ui-field"><label><div class="ui-field__box"><input>
+         <p class="ui-field__help"> / <p class="ui-field__error" role="alert">
+   要点：标签永久可见（不用 placeholder 当标签）、错误态有色+图标+文字
+         三重编码（不只靠颜色）、输入框 ≥48px 便于触控。
+   ============================================================ */
+
+.ui-field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.ui-field__label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  color: var(--archive-ink);
+  font: 700 var(--step--1) var(--archive-sans);
+  letter-spacing: 0.04em;
+}
+
+.ui-field__label[data-optional]::after {
+  content: '选填';
+  color: var(--archive-ink-faint);
+  font-weight: 400;
+  font-size: var(--step--2);
+}
+
+.ui-field__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ui-field__box > svg:first-child {
+  position: absolute;
+  left: var(--space-3);
+  color: var(--archive-ink-faint);
+  pointer-events: none;
+  transition: color var(--mo-fast) var(--ease-standard);
+}
+
+.ui-input,
+.ui-textarea {
+  width: 100%;
+  min-height: var(--tap-comfort);
+  padding: var(--space-3) var(--space-4);
+  color: var(--archive-ink);
+  background: var(--surface-1);
+  border: 1px solid var(--archive-rule);
+  border-radius: var(--archive-radius);
+  font: var(--step-0) / 1.5 var(--archive-sans);
+  transition:
+    border-color var(--mo-fast) var(--ease-standard),
+    background-color var(--mo-fast) var(--ease-standard),
+    box-shadow var(--mo-fast) var(--ease-standard);
+}
+
+.ui-textarea {
+  min-height: 7.5rem;
+  padding: var(--space-3) var(--space-4);
+  resize: vertical;
+  font-family: var(--archive-serif);
+  line-height: 1.7;
+}
+
+/* 带前置图标时让出空间 */
+.ui-field__box > svg:first-child ~ .ui-input {
+  padding-left: calc(var(--space-4) + 1.35rem);
+}
+
+.ui-input::placeholder,
+.ui-textarea::placeholder {
+  color: var(--archive-ink-faint);
+  opacity: 0.85;
+}
+
+.ui-input:hover:not(:disabled),
+.ui-textarea:hover:not(:disabled) {
+  border-color: var(--archive-ink-faint);
+}
+
+/* 聚焦：边框转品牌色 + 外扩光环，比单纯 outline 更贴合输入语境 */
+.ui-input:focus-visible,
+.ui-textarea:focus-visible {
+  outline: none;
+  background: var(--surface-0);
+  border-color: var(--archive-oxblood);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--archive-oxblood) 16%, transparent);
+}
+
+.ui-field__box:focus-within > svg:first-child {
+  color: var(--archive-oxblood);
+}
+
+.ui-input:disabled,
+.ui-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--surface-2);
+}
+
+/* 错误态：颜色 + 图标 + 文案三重编码 */
+.ui-input[aria-invalid='true'],
+.ui-textarea[aria-invalid='true'] {
+  border-color: var(--archive-oxblood);
+  background: color-mix(in srgb, var(--archive-oxblood) 6%, var(--surface-1));
+}
+
+.ui-field__help {
+  color: var(--archive-ink-faint);
+  font: var(--step--2) / 1.5 var(--archive-sans);
+}
+
+.ui-field__error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--archive-oxblood);
+  font: 600 var(--step--2) / 1.5 var(--archive-sans);
+}
+
+.ui-field__error::before {
+  content: '!';
+  flex: none;
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--archive-oxblood);
+  color: var(--archive-paper);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+/* ============================================================
+   4. 筛选片 .ui-chip / 横向滚动条 .ui-chip-row
+   ------------------------------------------------------------
+   搜索页与列表页的类型筛选。手机上横向滚动 + 边缘渐隐 + 吸附，
+   替代原先"16 个圆角灰按钮换行成 4 排"的糟糕版式。
+   ============================================================ */
+
+.ui-chip {
+  min-height: 38px;
+  padding: 0 var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--archive-ink-soft);
+  background: transparent;
+  border: 1px solid var(--archive-rule);
+  border-radius: 999px;
+  font: 600 var(--step--1) / 1 var(--archive-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition:
+    color var(--mo-fast) var(--ease-standard),
+    background-color var(--mo-fast) var(--ease-standard),
+    border-color var(--mo-fast) var(--ease-standard);
+}
+
+.ui-chip:hover:not(:disabled) {
+  color: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+  background: color-mix(in srgb, var(--archive-oxblood) 7%, transparent);
+}
+
+.ui-chip[aria-pressed='true'],
+.ui-chip[data-selected='true'] {
+  color: #fff8ec;
+  background: var(--archive-oxblood);
+  border-color: var(--archive-oxblood);
+}
+
+.ui-chip__count {
+  color: currentColor;
+  opacity: 0.7;
+  font-size: var(--step--2);
+  font-variant-numeric: tabular-nums;
+}
+
+.ui-chip:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.ui-chip-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .ui-chip-row {
+    margin-inline: calc(var(--space-gutter) * -1);
+    padding-inline: var(--space-gutter);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    /* 边缘渐隐：暗示"右边还有更多筛选项" */
+    mask-image: linear-gradient(to right, transparent 0, #000 var(--space-4), #000 calc(100% - var(--space-5)), transparent 100%);
+  }
+
+  .ui-chip-row::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================================
+   5. 卡片 .ui-card
+   ------------------------------------------------------------
+   编辑纸面语言：纸底 + 发丝线 + 极轻阴影。可交互卡片整块可点，
+   悬停时抬升 2px 并让标题转品牌色、尾部箭头右移。
+   ============================================================ */
+
+.ui-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--surface-0);
+  border: 1px solid var(--archive-hairline);
+  border-radius: var(--archive-radius);
+  color: var(--archive-ink);
+  transition:
+    transform var(--mo-base) var(--ease-standard),
+    box-shadow var(--mo-base) var(--ease-standard),
+    border-color var(--mo-base) var(--ease-standard),
+    background-color var(--mo-base) var(--ease-standard);
+}
+
+.ui-card--interactive {
+  cursor: pointer;
+}
+
+.ui-card--interactive:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--archive-oxblood) 32%, var(--archive-hairline));
+  box-shadow: var(--elev-2);
+}
+
+.ui-card--interactive:active {
+  transform: translateY(0);
+  box-shadow: var(--elev-1);
+}
+
+.ui-card--interactive:hover .ui-card__title {
+  color: var(--archive-oxblood);
+}
+
+.ui-card--interactive:hover .ui-card__arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.ui-card--flush {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.ui-card__eyebrow {
+  color: var(--archive-gold-deep);
+  font: 700 var(--step--2) / 1.2 var(--archive-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ui-card__title {
+  margin: 0;
+  font: 700 var(--step-1) / 1.4 var(--archive-serif);
+  letter-spacing: -0.01em;
+  transition: color var(--mo-fast) var(--ease-standard);
+}
+
+.ui-card__body {
+  margin: 0;
+  color: var(--archive-ink-soft);
+  font: var(--step--1) / 1.75 var(--archive-serif);
+}
+
+.ui-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  color: var(--archive-ink-faint);
+  font: var(--step--2) / 1.4 var(--archive-sans);
+}
+
+.ui-card__meta > * + *::before {
+  content: '·';
+  margin-right: var(--space-2);
+  color: var(--archive-gold);
+}
+
+.ui-card__footer {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.ui-card__arrow {
+  flex: none;
+  color: var(--archive-oxblood);
+  opacity: 0.55;
+  transition:
+    transform var(--mo-base) var(--ease-emphasis),
+    opacity var(--mo-fast) var(--ease-standard);
+}
+
+/* 整卡可点：用绝对定位链接铺满，保证标题是唯一可读的链接名称
+   （避免屏幕阅读器把整段描述读成链接文本） */
+.ui-card__link-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.ui-card__link-overlay:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+/* 自适应卡片网格：无需断点即可 1→2→3 列 */
+.ui-card-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+
+/* ============================================================
+   5b. 角色/类型徽章 .ui-badge
+   ------------------------------------------------------------
+   搜索结果、阅读页、卡片共用的小标记。替代原先"彩虹色"的
+   roleStyles（amber/indigo/blue/emerald/purple/gray 各一色），
+   统一收束到品牌四调：oxblood（原典）/ gold（博客）/ ink（实体）/
+   muted（外部资料）。data-tone 切换，不在组件里写颜色。
+   ============================================================ */
+
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.12em 0.55em;
+  border-radius: 999px;
+  font: 600 var(--step--2) / 1.2 var(--archive-sans);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ui-badge[data-tone='oxblood'] {
+  color: var(--archive-oxblood);
+  background: color-mix(in srgb, var(--archive-oxblood) 12%, transparent);
+}
+
+.ui-badge[data-tone='gold'] {
+  color: var(--archive-gold-deep);
+  background: color-mix(in srgb, var(--archive-gold) 20%, transparent);
+}
+
+.ui-badge[data-tone='ink'] {
+  color: var(--archive-ink-soft);
+  background: var(--surface-2);
+}
+
+.ui-badge[data-tone='muted'] {
+  color: var(--archive-ink-faint);
+  background: var(--surface-1);
+}
+
+.dark .ui-badge[data-tone='ink'] { color: var(--archive-ink-soft); background: var(--surface-2); }
+.dark .ui-badge[data-tone='muted'] { color: var(--archive-ink-faint); background: var(--surface-2); }
+
+/* ============================================================
+   6. 骨架屏 .ui-skeleton
+   ------------------------------------------------------------
+   替代"转圈 + 加载中…"。骨架屏让等待有形状，感知等待更短，
+   且避免内容到位时的布局跳动（CLS）。
+   ============================================================ */
+
+.ui-skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--archive-radius);
+  background: var(--surface-1);
+}
+
+.ui-skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    color-mix(in srgb, var(--archive-paper) 55%, transparent) 50%,
+    transparent 100%
+  );
+  animation: ui-shimmer 1.35s var(--ease-in-out) infinite;
+}
+
+@keyframes ui-shimmer {
+  to { transform: translateX(100%); }
+}
+
+.ui-skeleton--text {
+  height: 0.85em;
+  border-radius: 3px;
+}
+
+.ui-skeleton--title {
+  height: 1.5em;
+  width: 60%;
+}
+
+.ui-skeleton--line-short { width: 45%; }
+.ui-skeleton--line-mid { width: 72%; }
+
+.ui-skeleton-row {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--archive-hairline);
+}
+
+/* ============================================================
+   7. 吐司 .ui-toast
+   ------------------------------------------------------------
+   全站唯一的操作反馈出口（改造前站内 0 处提示机制）。
+   容器带 aria-live=polite，成功/错误分别用金/赭红左侧色条区分。
+   ============================================================ */
+
+.ui-toast-viewport {
+  position: fixed;
+  z-index: var(--z-toast);
+  bottom: max(var(--space-5), env(safe-area-inset-bottom));
+  right: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: min(24rem, calc(100vw - var(--space-5) * 2));
+  pointer-events: none;
+}
+
+.ui-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-0);
+  border: 1px solid var(--archive-rule);
+  border-left: 3px solid var(--archive-ink-faint);
+  border-radius: var(--archive-radius);
+  box-shadow: var(--elev-3);
+  color: var(--archive-ink);
+  font: var(--step--1) / 1.55 var(--archive-sans);
+}
+
+.ui-toast--success { border-left-color: var(--archive-gold); }
+.ui-toast--error { border-left-color: var(--archive-oxblood); }
+.ui-toast--info { border-left-color: var(--archive-ink-faint); }
+
+.ui-toast__icon {
+  flex: none;
+  margin-top: 0.1em;
+}
+
+.ui-toast--success .ui-toast__icon { color: var(--archive-gold-deep); }
+.ui-toast--error .ui-toast__icon { color: var(--archive-oxblood); }
+
+.ui-toast__content { flex: 1; min-width: 0; }
+
+.ui-toast__title {
+  font-weight: 700;
+}
+
+.ui-toast__desc {
+  margin-top: 0.15em;
+  color: var(--archive-ink-soft);
+  font-size: var(--step--2);
+}
+
+.ui-toast__close {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--archive-ink-faint);
+  cursor: pointer;
+  transition: color var(--mo-fast) var(--ease-standard), background-color var(--mo-fast) var(--ease-standard);
+}
+
+.ui-toast__close:hover {
+  color: var(--archive-oxblood);
+  background: var(--surface-1);
+}
+
+@media (max-width: 640px) {
+  .ui-toast-viewport {
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: max(var(--space-4), env(safe-area-inset-bottom));
+    width: auto;
+  }
+}
+
+/* ============================================================
+   8. 空态 .ui-empty
+   ------------------------------------------------------------
+   空态必须给出下一步动作，不能只写"没有结果"。
+   ============================================================ */
+
+.ui-empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+}
+
+.ui-empty__icon {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  color: var(--archive-gold);
+  border: 1px solid var(--archive-rule);
+  border-radius: 50%;
+}
+
+.ui-empty__title {
+  margin: 0;
+  font: 700 var(--step-2) / 1.35 var(--archive-serif);
+}
+
+.ui-empty__desc {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--archive-ink-soft);
+  font: var(--step--1) / 1.8 var(--archive-serif);
+}
+
+.ui-empty__actions {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* ============================================================
+   9. 路由进度条 .ui-route-progress
+   ------------------------------------------------------------
+   静态导出站点跨页跳转有真实等待，改造前完全没有反馈（用户会反复点击）。
+   顶部 2px 赭红进度条 = 最低成本的"系统在响应"信号。
+   ============================================================ */
+
+.ui-route-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-progress);
+  height: 2px;
+  width: 100%;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--archive-oxblood), var(--archive-gold));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--archive-oxblood) 55%, transparent);
+  pointer-events: none;
+}
+
+/* ============================================================
+   10. 遮罩 .ui-scrim
+   ============================================================ */
+
+.ui-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: var(--surface-overlay);
+  backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   11. 布局原语（stack / cluster / 分栏）
+   ------------------------------------------------------------
+   用组合式布局类替代到处重复的 flex + gap 工具类堆叠。
+   ============================================================ */
+
+.ui-stack {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.ui-stack--tight { gap: var(--space-2); }
+.ui-stack--loose { gap: var(--space-6); }
+
+.ui-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.ui-section {
+  padding-block: var(--space-section);
+  border-bottom: 1px solid var(--archive-hairline);
+}
+
+.ui-section:last-child { border-bottom: 0; }
+
+/* 区块表头：标题在左，"查看全部"在右，手机上自动换行 */
+.ui-section__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.ui-section__title {
+  margin: var(--space-2) 0 0;
+  font: 700 var(--step-3) / 1.25 var(--archive-serif);
+  letter-spacing: -0.03em;
+}
+
+.ui-section__lede {
+  margin: var(--space-2) 0 0;
+  max-width: 44rem;
+  color: var(--archive-ink-soft);
+  font: var(--step-0) / 1.8 var(--archive-serif);
+}
+
+@media (max-width: 640px) {
+  .ui-section__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}
+
+/* ============================================================
+   12. 键盘提示 .ui-kbd（⌘K 等快捷键徽章）
+   ============================================================ */
+
+.ui-kbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15em;
+  min-width: 1.5em;
+  padding: 0.15em 0.4em;
+  justify-content: center;
+  color: var(--archive-ink-faint);
+  background: var(--surface-1);
+  border: 1px solid var(--archive-rule);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font: 600 var(--step--2) / 1.2 var(--archive-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   13. 分段控件 .ui-segmented（视图/排序切换）
+   ============================================================ */
+
+.ui-segmented {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  background: var(--surface-1);
+  border: 1px solid var(--archive-rule);
+  border-radius: 999px;
+}
+
+.ui-segmented__item {
+  min-height: 34px;
+  padding: 0 var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--archive-ink-soft);
+  font: 600 var(--step--1) / 1 var(--archive-sans);
+  cursor: pointer;
+  transition: color var(--mo-fast) var(--ease-standard), background-color var(--mo-fast) var(--ease-standard);
+}
+
+.ui-segmented__item:hover {
+  color: var(--archive-oxblood);
+}
+
+.ui-segmented__item[aria-selected='true'] {
+  background: var(--surface-0);
+  color: var(--archive-ink);
+  box-shadow: var(--elev-1);
+}
+
+/* ============================================================
+   14. 暗面覆盖
+   ============================================================ */
+
+.dark .ui-card {
+  background: var(--surface-1);
+  border-color: var(--archive-rule);
+}
+
+.dark .ui-card--interactive:hover {
+  background: var(--surface-2);
+}
+
+.dark .ui-input,
+.dark .ui-textarea {
+  background: var(--surface-2);
+}
+
+.dark .ui-input:focus-visible,
+.dark .ui-textarea:focus-visible {
+  background: var(--surface-1);
+}
+
+.dark .ui-toast {
+  background: var(--surface-1);
+}
+
+.dark .ui-skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0,
+    rgba(241, 234, 218, 0.07) 50%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   15. 动效降级（prefers-reduced-motion）
+   ------------------------------------------------------------
+   前庭功能障碍用户会因位移动画眩晕。这里取消所有位移与循环动画，
+   仅保留不引起不适的颜色/透明度变化。
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-btn:active:not(:disabled),
+  .ui-card--interactive:hover,
+  .ui-card--interactive:hover .ui-card__arrow,
+  .ui-btn--link:hover > svg:last-child {
+    transform: none;
+  }
+
+  .ui-skeleton::after {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .ui-btn[data-loading='true']::after {
+    animation-duration: 1.8s;
+  }
+}

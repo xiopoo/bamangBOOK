@@ -1,0 +1,86 @@
+<style>
+@page {
+  size: A4;
+  margin: 22mm 20mm 22mm 20mm;
+}
+html { background: white; }
+body {
+  font-family: "Songti SC", "STSong", "Source Han Serif SC", "Noto Serif CJK SC", "SimSun", serif;
+  font-size: 11pt;
+  line-height: 1.85;
+  color: #1a1a1a;
+  text-align: justify;
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+/* 隐藏 pandoc 自动注入的标题与目录 */
+#title-block-header, nav#TOC { display: none !important; }
+
+/* 封面（独占第1页）*/
+.cover {
+  height: 240mm;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  page-break-after: always; break-after: page;
+}
+.booktitle { font-size: 38pt; letter-spacing: 8px; margin: 0 0 20px; font-weight: bold; color: #1a1a1a; }
+.subtitle { font-size: 15pt; color: #555; margin: 0 0 70px; letter-spacing: 3px; }
+.compile { font-size: 11pt; color: #888; letter-spacing: 1px; }
+
+/* 目录页（独占第2页）*/
+.toc-page {
+  page-break-before: always; break-before: page;
+  page-break-after: always;  break-after: page;
+  padding: 10mm 0;
+}
+.toc-title {
+  font-size: 24pt; text-align: center; color: #AB1942;
+  border-bottom: 2px solid #AB1942; padding-bottom: 10px;
+  margin: 0 0 24px; font-weight: bold;
+  page-break-before: avoid; break-before: avoid;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li.part { font-size: 14pt; font-weight: bold; color: #AB1942; margin: 14px 0 4px; }
+.toc-list li.part ul { list-style: none; padding-left: 1.6em; margin: 4px 0 8px; }
+.toc-list li.part ul li {
+  font-size: 11pt; font-weight: normal; color: #1a1a1a;
+  display: flex; align-items: baseline;
+  margin: 3px 0;
+}
+.toc-list .t-tit { white-space: nowrap; }
+.toc-list .t-dots { flex: 1; border-bottom: 1px dotted #ccc; margin: 0 6px 4px; min-width: 12px; }
+.toc-list .t-count { color: #888; font-size: 9.5pt; white-space: nowrap; }
+.toc-foot { text-align: right; color: #888; font-size: 10pt; margin-top: 16px; }
+
+/* 章节标题 */
+h1 {
+  font-size: 22pt; text-align: center;
+  border-bottom: 2px solid #AB1942; padding-bottom: 10px;
+  margin: 0 0 26px;
+  page-break-before: always; break-before: page;
+  font-weight: bold;
+}
+h2 {
+  font-size: 15pt; color: #AB1942;
+  margin: 26px 0 12px; padding-left: 10px;
+  border-left: 5px solid #AB1942; font-weight: bold;
+  page-break-after: avoid; break-after: avoid;
+}
+h3 {
+  font-size: 12.5pt; margin: 16px 0 6px; font-weight: bold;
+  page-break-after: avoid; break-after: avoid;
+}
+h4, h5, h6 { font-weight: bold; }
+p { margin: 6px 0; orphans: 3; widows: 3; }
+blockquote {
+  border-left: 3px solid #ddd; margin: 8px 0;
+  padding: 2px 14px; color: #444; background: #fafafa;
+}
+code { font-family: "Sarasa Mono SC", "Menlo", monospace; font-size: 9.5pt; }
+a { color: #AB1942; text-decoration: none; }
+img { max-width: 100%; }
+hr { border: none; border-top: 1px solid #eee; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 10pt; }
+th, td { border: 1px solid #ddd; padding: 5px 8px; }
+</style>

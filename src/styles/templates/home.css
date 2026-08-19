@@ -35,8 +35,8 @@
 
 /* 精选阅读路径（crown jewels 卡片） */
 .archive-path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--archive-hairline); border: 1px solid var(--archive-hairline); }
-.archive-path-grid a { display: grid; gap: .7rem; min-height: 11rem; padding: 1.35rem; background: var(--archive-paper); color: var(--archive-ink); }
-.archive-path-grid a:hover { background: var(--archive-paper-tint); }
+.archive-path-grid a { display: grid; gap: .7rem; min-height: 11rem; padding: 1.35rem; background: var(--archive-paper); color: var(--archive-ink); transition: background-color var(--mo-base) var(--ease-standard), transform var(--mo-base) var(--ease-standard), box-shadow var(--mo-base) var(--ease-standard), border-color var(--mo-base) var(--ease-standard); }
+.archive-path-grid a:hover { background: var(--archive-paper-tint); transform: translateY(-2px); box-shadow: var(--elev-2); }
 .archive-path-grid span { color: var(--archive-oxblood); font: 700 .75rem var(--archive-sans); }
 .archive-path-grid strong { font: 600 1.1rem var(--archive-serif); }
 .archive-path-grid small { color: var(--archive-ink-soft); line-height: 1.7; }
@@ -52,12 +52,12 @@
 
 /* 全部内容：6 格抽屉（3 人物 + 3 类型） */
 .archive-drawer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--archive-hairline); border-left: 1px solid var(--archive-hairline); }
-.archive-drawer-grid > a { min-height: 11rem; padding: 1.2rem; display: flex; flex-direction: column; color: var(--archive-ink); border-right: 1px solid var(--archive-hairline); border-bottom: 1px solid var(--archive-hairline); }
+.archive-drawer-grid > a { min-height: 11rem; padding: 1.2rem; display: flex; flex-direction: column; color: var(--archive-ink); border-right: 1px solid var(--archive-hairline); border-bottom: 1px solid var(--archive-hairline); transition: background-color var(--mo-base) var(--ease-standard), transform var(--mo-base) var(--ease-standard), box-shadow var(--mo-base) var(--ease-standard); }
 .archive-drawer-grid > a > span { color: var(--archive-oxblood); font: 700 .72rem var(--archive-sans); }
 .archive-drawer-grid h3 { margin-top: 1rem; font: 700 1.25rem var(--archive-serif); }
 .archive-drawer-grid p { margin-top: .55rem; color: var(--archive-ink-soft); font-size: .84rem; line-height: 1.65; }
 .archive-drawer-grid small { margin-top: auto; padding-top: 1rem; color: var(--archive-oxblood); font: 700 .72rem var(--archive-sans); }
-.archive-drawer-grid > a:hover { background: var(--archive-paper-tint); }
+.archive-drawer-grid > a:hover { background: var(--archive-paper-tint); transform: translateY(-2px); box-shadow: var(--elev-2); }
 
 /* 全站搜索 */
 .archive-home__search { display: flex; align-items: center; gap: .65rem; padding: 1.25rem 0 0; color: var(--archive-ink-faint); font: .8rem var(--archive-sans); }

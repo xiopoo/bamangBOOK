@@ -61,6 +61,15 @@ function normalizeMarkdownStructure(content: string): string {
       // 导致正文变成大面积黑底且不换行、无法阅读。
       // 仅对非列表/非引用/非表格的缩进行去掉缩进，还原为普通段落。
       let normalized = line.replace(/^(\t+| {4,})(?![*+\-\d]|>\s|\|)/, '')
+
+      // 引用块内部的段落续行/列表项，常被历史导入带入 4+ 空格缩进。
+      // CommonMark 会把「引用标记 + 4+ 空格」解析成「引用内的缩进代码块」，
+      // 渲染为黑底白字的 pre，导致正文（如段永平网易博客）出现大量黑底引用块、
+      // 文字无法阅读。这类缩进实为续行/列表项，折叠为单个空格，还原为普通引用文本。
+      // （围栏代码块 ``` 不在本规则之列，已在上方 inFence 中跳过，不受影响。）
+      if (!inFence) {
+        normalized = normalized.replace(/^((?:>[ \t]?)+)[ \t]{4,}/, '$1')
+      }
       normalized = normalized.replace(/^(\s*)(#{1,6})(?=[^\s#])/, '$1$2 ')
       normalized = normalized.replace(/^(\s*\*{2,3})#(?=关于付费星球)/, '$1')
       if (/\*{4,}/.test(normalized)) {

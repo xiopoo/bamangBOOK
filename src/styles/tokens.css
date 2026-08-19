@@ -31,6 +31,10 @@
      编号角标、序号等小号功能性文字改用 --archive-gold-deep（浅面 #87662c 对纸面 4.74:1，
      暗面 #d9b96b 对暗背景 9.82:1，均达 WCAG AA ≥4.5:1）。 */
   --archive-gold-deep: #87662c;
+  /* 与 tailwind accent.dark / text.light / dark.border 对齐（补齐历史漂移的三个缺口） */
+  --archive-gold-dark: #705722;
+  --archive-ink-light: #9b927d;
+  --archive-border-dark: #4a4235;
   --archive-gild: rgba(154, 122, 55, 0.55);
   --archive-oxblood: #ab1942;
   --archive-oxblood-deep: #861230;
@@ -78,6 +82,113 @@
   /* —— 列表与表格 —— */
   --reading-list-leading:  1.78;
   --reading-list-gap:      0.55em;     /* 列表项之间 0.5em 稍留白，但比段落紧 */
+
+  /* ==========================================================
+     版式重构层（2026-08 v3）· 流体字阶 / 空间 / 动效 / 层级 / 焦点
+     ----------------------------------------------------------
+     设计原则：色彩基因不变（赭红+金+纸色+衬线），重构版式语言。
+     1) 字号全部改用 clamp 流体字阶，390px→1440px 平滑缩放，
+        不再靠断点跳变，消除平板端"字太小/太挤"的断层。
+     2) 空间用 8pt 基准阶梯，组件禁止硬编码 padding/margin。
+     3) 断点收敛为 4 档（见下方 BREAKPOINTS 注释），
+        禁止再新增 700/720/900/1120/1180 这类魔数。
+     ========================================================== */
+
+  /* —— 标准断点（仅作文档；@media 不支持 var，须手写同值）——
+     BREAKPOINTS
+       sm  640px   手机横屏 / 大屏手机
+       md  768px   平板竖屏
+       lg  1024px  平板横屏 / 小笔记本（导航在此切换为抽屉）
+       xl  1280px  桌面
+     全站 @media 只允许出现这 4 个值。 */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* —— 流体字阶（1.25 模块比例，视口 390→1440px）——
+     用法：font-size: var(--step-2)。禁止再写死 rem 字号。 */
+  --step--2: clamp(0.69rem, 0.67rem + 0.10vw, 0.75rem);   /* 角标 / 计数 */
+  --step--1: clamp(0.78rem, 0.75rem + 0.14vw, 0.86rem);   /* 元信息 / 小字 */
+  --step-0:  clamp(0.94rem, 0.91rem + 0.17vw, 1.03rem);   /* 界面正文 */
+  --step-1:  clamp(1.09rem, 1.03rem + 0.28vw, 1.25rem);   /* 卡片标题 */
+  --step-2:  clamp(1.25rem, 1.13rem + 0.52vw, 1.55rem);   /* 小节标题 */
+  --step-3:  clamp(1.45rem, 1.22rem + 0.98vw, 2.05rem);   /* 区块标题 */
+  --step-4:  clamp(1.70rem, 1.28rem + 1.78vw, 2.75rem);   /* 页面标题 */
+  --step-5:  clamp(2.00rem, 1.32rem + 2.90vw, 3.75rem);   /* 首屏主标题 */
+
+  /* —— 空间阶梯（8pt 基准，含流体区块间距）—— */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-section: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);  /* 区块纵向节奏 */
+  --space-gutter: clamp(1rem, 0.45rem + 2.2vw, 2.5rem);    /* 页面左右留白 */
+
+  /* —— 动效令牌（统一时长与缓动，杜绝各组件自定 0.32s/160ms 漂移）——
+     instant 用于按钮/链接反色；fast 用于悬停位移与色变；
+     base 用于下拉/面板；slow 用于抽屉与页面过渡。 */
+  --mo-instant: 90ms;
+  --mo-fast: 160ms;
+  --mo-base: 260ms;
+  --mo-slow: 400ms;
+  --ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);   /* = 历史 --archive-ease */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);            /* 强出场（抽屉/面板） */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);        /* 对称过渡 */
+  --ease-emphasis: cubic-bezier(0.34, 1.32, 0.64, 1);   /* 轻微回弹（图标/徽章） */
+
+  /* —— 表面与层次（浅面显式字面量：不用 var 间接引用 body 级令牌，
+        否则在 :root 处会被解析为浅色值并向下继承，暗色失效）—— */
+  --surface-0: #f7f2e7;   /* 页面纸底 */
+  --surface-1: #f1eada;   /* 卡片/行悬停 */
+  --surface-2: #e9e0cc;   /* 抬升面/输入框底 */
+  --surface-overlay: rgba(33, 29, 22, 0.42);  /* 遮罩 */
+  --surface-glass: rgba(247, 242, 231, 0.86); /* 毛玻璃头部/面板 */
+
+  /* —— 高度阴影（三档，暗色下另有覆盖）—— */
+  --elev-1: 0 1px 2px rgba(33, 29, 22, 0.05);
+  --elev-2: 0 1px 2px rgba(33, 29, 22, 0.05), 0 8px 24px rgba(33, 29, 22, 0.07);
+  --elev-3: 0 2px 6px rgba(33, 29, 22, 0.07), 0 18px 48px rgba(33, 29, 22, 0.14);
+
+  /* —— 焦点环（键盘可达性的唯一来源）——
+     赭红双环：内圈纸色隔离 + 外圈品牌色，深浅底都能看清。 */
+  --focus-color: #ab1942;
+  --focus-halo: #f7f2e7;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* —— 层级（z-index 唯一来源，禁止组件内写数字）—— */
+  --z-base: 1;
+  --z-sticky: 20;
+  --z-header: 50;
+  --z-dropdown: 60;
+  --z-drawer: 80;
+  --z-overlay: 90;
+  --z-palette: 100;
+  --z-toast: 110;
+  --z-progress: 120;
+
+  /* —— 触控目标（WCAG 2.5.5 / iOS HIG 44px）—— */
+  --tap-min: 44px;
+  --tap-comfort: 48px;
+}
+
+/* 暗面：表面/阴影/焦点环同步换算（字面量，理由同上） */
+.dark {
+  --surface-0: #17140f;
+  --surface-1: #211d16;
+  --surface-2: #2a241b;
+  --surface-overlay: rgba(0, 0, 0, 0.62);
+  --surface-glass: rgba(23, 20, 15, 0.86);
+  --elev-1: 0 1px 2px rgba(0, 0, 0, 0.34);
+  --elev-2: 0 1px 2px rgba(0, 0, 0, 0.34), 0 8px 24px rgba(0, 0, 0, 0.4);
+  --elev-3: 0 2px 6px rgba(0, 0, 0, 0.4), 0 18px 48px rgba(0, 0, 0, 0.55);
+  --focus-color: #e06a8c;
+  --focus-halo: #17140f;
 }
 
 .dark {
