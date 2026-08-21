@@ -5,7 +5,8 @@ import PageContainer from '@/components/PageContainer'
 import SubdomainRootRouter from '@/components/SubdomainRootRouter'
 import DailyQuotePanel from '@/components/DailyQuotePanel'
 import { getAllDailyQuotes } from '@/lib/daily-quote'
-import { getDailyReadings, dailyReadingForDate } from '@/lib/daily-reading'
+import { getDailyReadings } from '@/lib/daily-reading'
+import DailyReadingPanel from '@/components/DailyReadingPanel'
 import { getShareholderLetters } from '@/lib/partnership'
 import { getBusinessHistories } from '@/lib/business-history'
 import { getDocuments } from '@/lib/documents'
@@ -32,8 +33,7 @@ export default function HomePage() {
   const readingStats = getReadingStats()
   const dailyQuotes = getAllDailyQuotes()
   const todayISO = new Date().toISOString().slice(0, 10)
-  const today = new Date()
-  const todayReading = dailyReadingForDate(getDailyReadings(), today)
+  const dailyReadings = getDailyReadings()
   const recentRevisions = (['blog', 'qa', 'talks', 'milestones'] as DYSection[])
     .flatMap(section => getDYDocs(section, false).map(doc => ({ doc, section })))
     .filter(item => item.doc.updatedAt)
@@ -56,22 +56,10 @@ export default function HomePage() {
         <DailyQuotePanel quotes={dailyQuotes} initialDateISO={todayISO} />
       </section>
 
-      {/* 今日一读：每天一条值得读的原典（对齐 mungerarchive 的 Best thing to learn today） */}
-      {todayReading && <section className="archive-home__section archive-featured" aria-labelledby="featured-reading-title">
-        <div className="archive-featured__meta">
-          <p className="archive-kicker">今日一读 · {today.getMonth() + 1}月{today.getDate()}日</p>
-          <div className="archive-featured__tags">
-            <span>{todayReading.typeLabel}</span>
-            <span>{todayReading.year || '年份待考'}</span>
-            <span>约 {todayReading.readMinutes} 分钟</span>
-          </div>
-        </div>
-        <div className="archive-featured__body">
-          <h2 id="featured-reading-title">{todayReading.title}</h2>
-          <p>{todayReading.excerpt}</p>
-          <Link href={todayReading.href}>阅读原文 <ArrowRight size={16} /></Link>
-        </div>
-      </section>}
+      {/* 今日一读：每天一条值得读的原典（对齐 mungerarchive 的 Best thing to learn today）。
+          改为客户端组件：静态导出页的服务端 new Date() 冻结于构建时刻，会在浏览器端
+          取真实当前日期，使“今日一读”随日期滚动（同日不闪烁）。 */}
+      <DailyReadingPanel readings={dailyReadings} initialDateISO={todayISO} />
 
       {/* 全部内容：按人物与资料类型进入 */}
       <Reveal>
