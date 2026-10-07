@@ -203,3 +203,68 @@ export const mungerArchive: ThinkerArchive = {
     { href: '/companies/伯克希尔哈撒韦', label: '伯克希尔', meta: '伙伴关系', description: '六十年几乎没有争执的共同事业。' },
   ],
 }
+
+export const liKaShingArchive: ThinkerArchive = {
+  eyebrow: '李嘉诚 · 1928—',
+  name: '李嘉诚',
+  years: '1950—2018',
+  headline: '好景时不过分乐观，坏景时不过度悲观。',
+  introduction:
+    '从潮汕逃难到香港的少年，到长江实业、和记黄埔、电能实业的掌门人。他谈投资却很少只谈投资——抢学问、现金为王、90% 考虑失败、稳中求进，是把做人的底线放在做生意前面的一代人。',
+  sourceHeading: '年报、演讲、访谈与公开记录',
+  sources: [
+    {
+      href: '/li-ka-shing/annual-addresses',
+      label: '年报主席报告书',
+      meta: '1972—2018',
+      description: '长江实业年报里连续四十余年的主席报告书，是他自己写下的经营史与方法论。',
+    },
+    {
+      href: '/li-ka-shing/shantou-university',
+      label: '汕头大学演讲',
+      meta: '1981—2025',
+      description: '每一年毕业典礼上的致辞，是他对年轻人最完整、最连续的公开表达。',
+    },
+    {
+      href: '/li-ka-shing/interviews',
+      label: '访谈实录',
+      meta: '1998—2020',
+      description: '南方周末、财新、福布斯、亚洲周刊等媒体专访原文，谈进退、谈中国、谈第三个儿子。',
+    },
+    {
+      href: '/li-ka-shing/agm',
+      label: '股东会记者会答问',
+      meta: '2010—2018',
+      description: '长和系业绩发布会现场答问，是他面对最尖锐问题时最直接的判断。',
+    },
+    {
+      href: '/li-ka-shing/letters',
+      label: '声明与信函',
+      meta: '2018—2026',
+      description: '退休信、致毕业生信等公开署名文件。',
+    },
+  ],
+  ideas: [
+    { href: '/li-ka-shing/letters', title: '建立自我，追求无我', thesis: '先把人立住，再把事做成；最后把自己交出去。' },
+    { href: '/li-ka-shing/shantou-university', title: '抢学问', thesis: '知识不是等出来的，是抢回来的；命运就算颠沛，也要自己挣。' },
+    { href: '/li-ka-shing/annual-addresses', title: '90% 考虑失败', thesis: '做一件事之前，先把所有可能失败的环节想清楚。' },
+    { href: '/li-ka-shing/annual-addresses', title: '现金为王', thesis: '无论市道好坏，账上一定要有足够现金，才谈得上进退。' },
+    { href: '/li-ka-shing/interviews', title: '稳健中求进取', thesis: '进取不忘稳健，稳健不忘进取；两者不是折中，是顺序。' },
+    { href: '/li-ka-shing/agm', title: '知所进退', thesis: '什么时候卖、什么时候退，比什么时候买更重要。' },
+    { href: '/li-ka-shing/letters', title: '第三个儿子', thesis: '基金会是他第三个儿子，把财富投回教育、医疗与家乡。' },
+    { href: '/li-ka-shing/interviews', title: '好人与好人生意', thesis: '找合伙人、找同事，先看人品，再看能力。' },
+  ],
+  chapters: [
+    { period: '1928—1940s', title: '战乱、逃难与少年谋生', description: '潮州沦陷，随家人逃难到香港；父亲去世后辍学，到玩具厂做推销员养家。' },
+    { period: '1950—1970s', title: '长江塑胶厂与上市', description: '1950 年创办长江塑胶厂，以塑料花起家；1972 年上市，抓住地产周期。' },
+    { period: '1979—1980s', title: '收购和黄与多元化', description: '从汇丰手中购入和记黄埔，成为首位掌控英资洋行的华人；向港口、电信、零售扩张。' },
+    { period: '1990s—2010s', title: 'Orange、3G 与全球配置', description: 'Orange 一战成名，随后全球并购电信、能源、基建；同时把大量财富投入汕头大学与基金会。' },
+    { period: '2018—', title: '退休与传承', description: '把长和系交给李泽钜，自己全身心投入基金会，继续在汕大毕业典礼上讲故事。' },
+  ],
+  cases: [
+    { href: '/li-ka-shing/annual-addresses', label: '和记黄埔收购', meta: '1979', description: '华人首次掌控英资洋行，奠定全球化底盘。' },
+    { href: '/li-ka-shing/interviews', label: 'Orange 电信', meta: '1999', description: '在高点卖出，被他自己称为一生最成功的交易之一。' },
+    { href: '/li-ka-shing/annual-addresses', label: '赫斯基能源', meta: '1986—2015', description: '低谷买入、长持近三十年的能源投资样本。' },
+    { href: '/li-ka-shing/shantou-university', label: '汕头大学与基金会', meta: '1981—', description: '他口中的"第三个儿子"，超越生命的承诺。' },
+  ],
+}

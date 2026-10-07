@@ -36,7 +36,7 @@ interface NavGroup {
 const navGroups: NavGroup[] = [
   {
     label: '人物',
-    activePrefixes: ['/buffett', '/munger', '/duanyongping', '/people', '/bloggers', '/poor-charlies-almanack', '/munger/archive', '/munger/wesco', '/munger/daily-journal', '/munger/originals', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks'],
+    activePrefixes: ['/buffett', '/munger', '/duanyongping', '/li-ka-shing', '/people', '/bloggers', '/poor-charlies-almanack', '/munger/archive', '/munger/wesco', '/munger/daily-journal', '/munger/originals', '/duanyongping/blog', '/duanyongping/qa', '/duanyongping/talks'],
     sections: [
       { title: '巴菲特', links: [
         { href: '/buffett', label: '巴菲特', meta: '信件、问答、演讲与访谈' },
@@ -46,6 +46,9 @@ const navGroups: NavGroup[] = [
       ] },
       { title: '段永平', links: [
         { href: '/duanyongping', label: '段永平', meta: '博客、问答、演讲与访谈' },
+      ] },
+      { title: '李嘉诚', links: [
+        { href: '/li-ka-shing', label: '李嘉诚', meta: '年报、汕大演讲、访谈与业绩会答问' },
       ] },
       { title: '博主文章', links: [
         { href: '/bloggers', label: '博主文章', meta: '四位微信博主投资写作' },
