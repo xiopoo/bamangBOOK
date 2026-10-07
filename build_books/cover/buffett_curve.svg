@@ -10,6 +10,7 @@
       <stop offset="100%" stop-color="#AB1942" stop-opacity="1"/>
     </linearGradient>
   </defs>
+  <g transform="translate(-25 0)">
   <!-- 极简坐标网格 -->
   <g stroke="#AB1942" stroke-width="0.7" opacity="0.14">
     <line x1="70" y1="40" x2="70" y2="400"/>
@@ -32,4 +33,5 @@
   <!-- 时间轴起点与终点点缀 -->
   <circle cx="70" cy="400" r="4" fill="#AB1942" opacity="0.8"/>
   <circle cx="580" cy="52" r="5.5" fill="#AB1942"/>
+  </g>
 </svg>

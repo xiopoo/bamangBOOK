@@ -57,6 +57,7 @@
   tagline: none,       // 封面宣传句
   blurb: none,         // 背面简介
   quotes: none,        // 背面推荐语（数组）
+  disclaimer_subject: "巴菲特、芒格",  // 版权页免责声明中的主体人名
   body: none,          // 正文 content
   toc_depth: 1,        // 目录深度
 ) = {
@@ -83,7 +84,7 @@
   // ---------- 封面（正面 · 无页码，全幅）A4 · 国际出版级主图比例 ----------
   // 国际投资类精装（Wiley Finance、Penguin Press、HBR Press）主图一般占封面垂直 30~38%，宽度 55~70%
   // 主图高度=9.8cm=34.8%页面总高，宽自动按SVG 6:5比例=11.8cm=56%封面宽
-  // 目标y%：系列名9-10.5 · 书名17±1 · 副书名26±1 · 主图顶33-35 · 主图底67-69
+  // 目标y%：系列名9-10.5 · 书名17±1（38pt→48pt，A4幅面放大）· 副书名26±1（14pt→17pt）· 主图顶33-35 · 主图底67-69
   //           宣传语74±1 · 分隔线79 · 编者83±1 · 年份87±1
   {
     set page(numbering: none, margin: 0pt, fill: paper)
@@ -92,9 +93,9 @@
       #v(0.8cm)
       #align(center, text(size: 11.5pt, fill: brand, tracking: 0.3em)[#series])
       #v(2.2cm)
-      #align(center, text(size: 38pt, weight: "bold", fill: brand)[#book_title])
+      #align(center, text(size: 48pt, weight: "bold", fill: brand)[#book_title])
       #v(1.6cm)
-      #align(center, text(size: 14pt, fill: ink)[#book_subtitle])
+      #align(center, text(size: 17pt, fill: ink)[#book_subtitle])
       #v(2.0cm)
       #align(center, image(cover_img, height: 9.8cm))
       #v(1.5cm)
@@ -110,9 +111,8 @@
 
   pagebreak()
 
-  // ---------- 版权页（罗马页码，从 I 起算） ----------
-  set page(numbering: "I", number-align: center + bottom)
-  counter(page).update(1)
+  // ---------- 版权页（不编页码） ----------
+  set page(numbering: none)
   set par(first-line-indent: 0em, leading: 0.55em, spacing: 0.9em)
   align(center + horizon)[
     // ── 书名区：书名 + 副书名（正式版权页惯例，居中）──
@@ -128,14 +128,14 @@
       row-gutter: 0.8em,
       text(size: 10pt)[编　者], text(size: 10pt)[#editor],
       text(size: 10pt)[系　列], text(size: 10pt)[#series],
-      text(size: 10pt)[版　次], text(size: 10pt)[二〇二六年八月　初稿第 1 版],
+      text(size: 10pt)[版　次], text(size: 10pt)[2026 年 9 月　第二版],
       text(size: 10pt)[开　本], text(size: 10pt)[210 × 297 毫米（A4）],
     ))
     #v(2.6em)
 
     // ── 版权声明：两端对齐，小字 ──
     #align(center, block(width: 80%, text(size: 8.5pt, fill: gray)[
-      本书为档案材料的整理与再编辑，为非商业出版物，与巴菲特、芒格本人及其名下机构均无隶属或授权关系。书中全部引文均标注原始出处，引文、录音与档案的版权归原作者及原权利人所有。本书无意复制、替代或侵犯任何正式出版物的权益。
+      本书为档案材料的整理与再编辑，为非商业出版物，与#(disclaimer_subject)本人及其名下机构均无隶属或授权关系。书中全部引文均标注原始出处，引文、录音与档案的版权归原作者及原权利人所有。本书无意复制、替代或侵犯任何正式出版物的权益。
     ]))
     #v(1.5em)
     #align(center, text(size: 9.5pt, weight: "bold", fill: ink)[版权所有 · 翻印必究])
@@ -172,12 +172,35 @@
 
   pagebreak()
 
-  // ---------- 目录（罗马页码） ----------
+  // ---------- 目录（页码独立起编，从 I 重新算） ----------
+  set page(numbering: "I", number-align: center + bottom)
+  counter(page).update(1)
   text(size: 20pt, weight: "bold", fill: brand)[目录]
   v(1em)
   // 目录条目行距：此处继承版权页的 par.spacing(0.9em)，条目间距仅 16.2pt 偏窄，
   // 用块间距撑宽至 ~22pt；title: none 去掉 outline 自动生成的黑色「目录」标题
-  show outline.entry: set block(above: 1em, below: 0.6em)
+  // 目录条目按层级区分：篇（level 0）大字加粗、章（level 1）中字加粗、小节（level 2）常规
+  // 目录条目按标题文本分级：第X篇 14pt 加粗、第X章 12pt 加粗、其余小节 11pt 常规
+  // （三卷标题层级不一致：段永平篇L1/章L2/节L3，巴芒篇L1/章L1/节L2，按 level 分级会错乱）
+  show outline.entry: it => {
+    // ElementSequence 无法直接取纯文本，用 repr 得到调试串再做正则匹配
+    // set 必须提到顶层：if 分支内的 set 作用域不覆盖分支外的 it
+    let ttl = repr(it.element.body)
+    let sz = 12pt
+    let wt = "regular"
+    let above = 0.9em
+    if ttl.match(regex("第[一二三四五六七八九十]+篇")) != none {
+      sz = 16pt
+      wt = "bold"
+      above = 1.1em
+    } else if ttl.match(regex("第[一二三四五六七八九十]+章")) != none {
+      sz = 14pt
+      wt = "bold"
+    }
+    set text(size: sz, weight: wt)
+    set block(above: above, below: 0.5em)
+    it
+  }
   outline(depth: toc_depth, title: none)
 
   pagebreak()
@@ -207,10 +230,10 @@
   counter(page).update(1)
 
   // ---- 正文全局样式：出版级中文排版标准，段间距 > 行间距 ----
-  //   正文 13pt · 行距 1.15em（≈15pt 行距空白，行高 ≈1.9 倍字高，疏朗不拥挤）
-  //   段首空两格 · 段间距 1.5em（≈19.5pt 段间距，段落一眼能看出两段）
+  //   正文 14pt · 行距 1.05em（≈14.7pt 行距空白，疏朗不拥挤）
+  //   段首空两格 · 段间距 1.5em（≈19.5pt 段间距，段落一眼能看出两段，不过度注水）
   set text(
-    size: 13pt,
+    size: 14pt,
     font: ("Songti SC", "STSong", "PingFang SC"),
     fill: ink,
   )
@@ -218,7 +241,7 @@
     first-line-indent: 2em,
     justify: true,
     spacing: 1.5em,
-    leading: 1.15em,
+    leading: 1.05em,
   )
   // 避免极端窄容器里中文被挤成"叠字"
 
@@ -230,13 +253,13 @@
   show list: it => {
     set block(above: 0.7em, below: 0.7em, inset: (left: 0.5em))
     set list(indent: 1.4em, body-indent: 0em)
-    set par(first-line-indent: 0em, leading: 1.15em, spacing: 0.8em)
+    set par(first-line-indent: 0em, leading: 1.05em, spacing: 0.55em)
     it
   }
   show enum: it => {
     set block(above: 0.7em, below: 0.7em, inset: (left: 0.5em))
     set enum(indent: 1.4em, body-indent: 0em, numbering: "1.")
-    set par(first-line-indent: 0em, leading: 1.15em, spacing: 0.8em)
+    set par(first-line-indent: 0em, leading: 1.05em, spacing: 0.55em)
     it
   }
 
@@ -262,7 +285,7 @@
     set block(above: 0.9em, below: 0.9em, breakable: true, inset: 0pt)
     set par(first-line-indent: 0em, leading: 0.4em, spacing: 0.55em)
     set text(size: 10.5pt)
-    it
+    align(center, it)
   }
   show table.header: set text(weight: "bold", fill: ink, size: 11pt)
 
@@ -282,17 +305,19 @@
   }
 
   // 引用 / 档案证据 / 侧栏（blockquote）：
-  // 文字格式与正文完全一致（13pt · 行距 1.15em · 段间距 1.5em），
+  // 文字格式与正文完全一致（14pt · 行距 1.05em · 段间距 1.5em），
   // 首段缩进与正文一致（每段首行空两格，all: true 保证标题后首段也缩进），
-  // 仅用左边线 + 缩进做视觉区分，避免字号/行距与正文不一致。
+  // 引文块整体右缩 0.5em，竖线在块左缘、文字与竖线之间留出约 0.5em 间距，
+  // 避免竖线贴住文字（实测 left: -1em 时竖线中心恰与文字起点重合、切着字）。
+  // 注：show quote 包裹的 quote 元素自带约 1em 左侧偏移，故用 -0.5em 抵消到目标缩进。
   show quote.where(block: true): it => block(
-    above: 1.5em,
-    below: 1.5em,
-    inset: (left: 1.2em, top: 0.8em, bottom: 0.8em, right: 0.8em),
-    stroke: (left: 2.5pt + brand),
+    above: 1.1em,
+    below: 1.1em,
+    inset: (left: -0.5em, top: 0.7em, bottom: 0.7em, right: 0.8em),
+    stroke: (left: 1.2pt + brand), fill: color.transparentize(brand, 93%),
     {
-      set par(first-line-indent: (amount: 2em, all: true), leading: 1.15em, spacing: 1.5em)
-      set text(size: 13pt, fill: ink)
+      set par(first-line-indent: 0pt, leading: 1.0em, spacing: 0.7em)
+      set text(size: 14pt, fill: ink)
       it
     },
   )
@@ -326,39 +351,42 @@
     )
   }
 
-  // 篇 / 章标题
+  // 篇标题（level 1）：整页大标题 + 系列名
   show heading.where(level: 1): it => {
-    let lab = it.label
-    let is_part = lab != none and str(lab).contains("part")
-    if (is_part) {
-      current_chap.update(it.body)
-      pagebreak(weak: true)
-      block(height: 55%, width: 100%)[
-        #v(1fr)
-        #align(center, text(size: 26pt, weight: "bold", fill: brand)[#it.body])
-        #v(1.2em)
-        #align(center, text(size: 11pt, fill: faint)[#series])
-        #v(1fr)
-      ]
-      // 篇首导读（#part_lead[...]）紧随其后渲染在篇首页下方，不再单独成页
-    } else {
-      current_chap.update(it.body)
-      pagebreak(weak: true)
-      set text(fill: brand, size: 18pt, weight: "bold")
-      set block(above: 2em, below: 1.3em)
-      it
-    }
+    current_chap.update(it.body)
+    pagebreak(weak: true)
+    block(height: 55%, width: 100%)[
+      #v(1fr)
+      #align(center, text(size: 26pt, weight: "bold", fill: brand)[#it.body])
+      #v(1.2em)
+      #align(center, text(size: 11pt, fill: faint)[#series])
+      #v(1fr)
+    ]
+    // 篇首导读（#part_lead[...]）紧随其后渲染在篇首页下方，不再单独成页
+  }
+  // 章标题（level 2）：品牌色加粗
+  show heading.where(level: 2): it => {
+    current_chap.update(it.body)
+    pagebreak(weak: true)
+    set text(fill: brand, size: 18pt, weight: "bold")
+    set block(above: 1.2em, below: 1.3em)
+    it
   }
   // 节标题：黑色加粗（章红·节黑·段黑），字号与前后间距拉开层级
   // 标题与下文间距 ≥ 段间距（1.5em≈19.5pt），避免标题紧贴段落
-  show heading.where(level: 2): it => {
+  show heading.where(level: 3): it => {
     set text(size: 16pt, weight: "bold")
-    set block(above: 2.2em, below: 1.4em)
+    set block(above: 1.2em, below: 1.3em)
     it
   }
-  show heading.where(level: 3): it => {
+  show heading.where(level: 4): it => {
     set text(size: 14.5pt, weight: "bold")
-    set block(above: 2.0em, below: 1.5em)
+    set block(above: 1.2em, below: 1.3em)
+    it
+  }
+  show heading.where(level: 5): it => {
+    set text(size: 13pt, weight: "bold")
+    set block(above: 1.1em, below: 1.3em)
     it
   }
 
