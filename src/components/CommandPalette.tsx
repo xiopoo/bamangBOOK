@@ -43,6 +43,8 @@ const TYPE_LABELS: Record<string, string> = {
   model: '思维模型',
   meeting: '股东大会实录',
   faq: '主题问答',
+  duanyongping: '段永平',
+  'li-ka-shing': '李嘉诚',
 }
 
 const TYPE_ICONS: Record<string, typeof Search> = {
@@ -61,6 +63,8 @@ const TYPE_ICONS: Record<string, typeof Search> = {
   model: Brain,
   meeting: Landmark,
   faq: ClipboardList,
+  duanyongping: Users,
+  'li-ka-shing': Landmark,
 }
 
 /** 空态时给出的高频入口，避免用户对着空输入框发呆 */
@@ -68,6 +72,7 @@ const QUICK_LINKS: { href: string; label: string; meta: string }[] = [
   { href: '/buffett', label: '巴菲特', meta: '信件 · 问答 · 演讲' },
   { href: '/munger', label: '芒格', meta: '演讲 · Wesco 问答 · 思维模型' },
   { href: '/duanyongping', label: '段永平', meta: '博客 · 问答 · 公司实践' },
+  { href: '/li-ka-shing', label: '李嘉诚', meta: '年报 · 汕大演讲 · 业绩会答问' },
   { href: '/letters', label: '股东信', meta: '1965 年至今，按年连读' },
   { href: '/partnership', label: '合伙人信', meta: '1956—1970' },
   { href: '/business-history', label: '公司研究', meta: '护城河与资本配置' },

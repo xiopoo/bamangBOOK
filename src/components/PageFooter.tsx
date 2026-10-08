@@ -5,6 +5,7 @@ const footerLinks = [
   { href: '/buffett', label: '巴菲特' },
   { href: '/munger', label: '芒格' },
   { href: '/duanyongping', label: '段永平' },
+  { href: '/li-ka-shing', label: '李嘉诚' },
   { href: '/letters', label: '股东信' },
   { href: '/business-history', label: '公司研究' },
   { href: '/blog', label: '博客' },

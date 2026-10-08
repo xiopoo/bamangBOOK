@@ -14,6 +14,8 @@ export type StaticSearchItemType =
   | 'model'
   | 'meeting'
   | 'faq'
+  | 'duanyongping'
+  | 'li-ka-shing'
 
 export interface StaticSearchItem {
   id: string

@@ -243,6 +243,18 @@ export const liKaShingArchive: ThinkerArchive = {
       meta: '2018—2026',
       description: '退休信、致毕业生信等公开署名文件。',
     },
+    {
+      href: '/li-ka-shing/media-transcripts',
+      label: '纪录片与访谈逐字稿',
+      meta: '2007',
+      description: 'RTHK《杰出华人系列》、《相约东南》的长篇转写，是他最完整的一次口语自述。',
+    },
+    {
+      href: '/li-ka-shing/media-archive',
+      label: '媒体报道存档',
+      meta: '2007',
+      description: '《商业周刊》第1047期「李嘉诚传奇」专题等第三方报道存档，非一手发言。',
+    },
   ],
   ideas: [
     { href: '/li-ka-shing/letters', title: '建立自我，追求无我', thesis: '先把人立住，再把事做成；最后把自己交出去。' },

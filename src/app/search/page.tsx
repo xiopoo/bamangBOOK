@@ -54,6 +54,8 @@ const emptyTypeStats: TypeStats = {
   model: 0,
   meeting: 0,
   faq: 0,
+  duanyongping: 0,
+  'li-ka-shing': 0,
 }
 
 const typeLabels: Record<string, string> = {
@@ -73,6 +75,8 @@ const typeLabels: Record<string, string> = {
   model: '思维模型',
   meeting: '股东大会实录',
   faq: '主题问答',
+  duanyongping: '段永平',
+  'li-ka-shing': '李嘉诚',
 }
 
 const typeIcons: Record<string, LucideIcon> = {
@@ -92,6 +96,8 @@ const typeIcons: Record<string, LucideIcon> = {
   model: Brain,
   meeting: Landmark,
   faq: ClipboardList,
+  duanyongping: Users,
+  'li-ka-shing': Landmark,
 }
 
 function SearchContent() {

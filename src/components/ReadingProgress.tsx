@@ -28,6 +28,7 @@ const HISTORY_ROUTE_MAP: ReadonlyArray<readonly [string, ReadingProgressType]> =
   ['/poor-charlies-almanack', 'almanack'],
   ['/business-history', 'business-history'],
   ['/duanyongping', 'duanyongping'],
+  ['/li-ka-shing', 'li-ka-shing'],
   ['/partnership', 'partnership'],
   ['/concepts', 'concept'],
   ['/companies', 'company'],

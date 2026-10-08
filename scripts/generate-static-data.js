@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const crypto = require('crypto')
 
 const ROOT = path.join(__dirname, '..')
 const CONTENT_DIR = path.join(ROOT, 'content')
@@ -177,6 +178,117 @@ function addFlatItems(items, directory, type, route) {
   }
 }
 
+// ============================================================================
+// 人物专题档案（李嘉诚 / 段永平）补入搜索索引
+//
+// 站点的静态搜索索引原先只覆盖「按内容类型」组织的部分（ concept/company/人物词条/
+// 股东信/问答/演讲/访谈/博主…），两位人物的专题档案整套不在索引里 —— 搜不到豆瓣。
+//
+// 关键约束：URL slug 必须与运行时数据层取法完全一致，否则搜索结果会指向 404。
+//   - 李嘉诚：md5(相对路径 fileName).slice(0, 10)，见 src/lib/li-ka-shing.ts
+//   - 段永平：md5(文件名 fileName).slice(0, 16)，见 src/lib/duanyongping.ts
+// 栏目归属规则也与 src/lib/li-ka-shing.ts 的 LI_CATEGORIES 对应，改一处要改两处。
+// ============================================================================
+
+function md5(text) {
+  return crypto.createHash('md5').update(text).digest('hex')
+}
+
+// 媒体素材/文字稿/ 下同时存在纪录片逐字稿与杂志专题报道，按文件名细分栏目。
+// 与 src/lib/li-ka-shing.ts 中 media-transcripts 的 fileNames 保持同步。
+const LI_TRANSCRIPT_FILES = new Set([
+  '杰出华人李嘉诚(RTHK)-普通话对照.md',
+  '杰出华人李嘉诚(RTHK)-转写.md',
+  '相约东南(福建东南电视台)访谈录像-转写.md',
+])
+
+const LI_CATEGORY_SLUGS = {
+  '01_年报主席报告书': 'annual-addresses',
+  '02_汕大演讲': 'shantou-university',
+  '03_长江商学院': 'ckgsb',
+  '04_访谈实录': 'interviews',
+  '05_声明信函': 'letters',
+  '06_股东会记者会': 'agm',
+  '媒体素材': 'media-archive',
+}
+
+function liCategorySlug(fileName) {
+  const base = path.basename(fileName)
+  if (LI_TRANSCRIPT_FILES.has(base)) return 'media-transcripts'
+  return LI_CATEGORY_SLUGS[fileName.split('/')[0]] || null
+}
+
+function addLiKaShingItems(items) {
+  const root = path.join(CONTENT_DIR, '李嘉诚原典')
+  const entries = readJson(path.join(root, '李嘉诚原典-index.json'), [])
+  if (!Array.isArray(entries)) return
+
+  for (const entry of entries) {
+    const filePath = path.join(root, entry.fileName)
+    if (!fs.existsSync(filePath)) continue
+    const categorySlug = liCategorySlug(entry.fileName)
+    if (!categorySlug) continue
+    const content = readMarkdown(filePath)
+    const fileName = path.basename(entry.fileName, '.md')
+    items.push({
+      id: `li-ka-shing/${entry.fileName}`,
+      name: entry.title || titleFromContent(content, fileName),
+      type: 'li-ka-shing',
+      description: descriptionFromContent(content),
+      count: 1,
+      years: entry.year ? [entry.year] : [],
+      url: `/li-ka-shing/${categorySlug}/${md5(entry.fileName).slice(0, 10)}`,
+      content,
+    })
+  }
+}
+
+// 段永平档案：blog / talks / milestones 全量进索引。
+// qa（雪球问答）9k+ 篇独立 md，全部纳入会让 lite 索引翻两倍以上（估算 ~6MB），
+// 首屏建议的懒加载成本远高于搜索收益，故暂不纳入；后续如要做，
+// 建议在 addDuanYongpingItems 里按年份/主题聚合后再补。
+const DY_SECTIONS = ['blog', 'talks', 'milestones']
+
+function duanFiles(section) {
+  const dir = path.join(CONTENT_DIR, 'duanyongping', section)
+  if (!fs.existsSync(dir)) return []
+  const out = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    // attachments / 按年份 是资源与归档视图，不是正文
+    if (entry.isDirectory()) {
+      if (entry.name === 'attachments' || entry.name === '按年份') continue
+      for (const f of fs.readdirSync(path.join(dir, entry.name))) {
+        if (f.endsWith('.md')) out.push(path.join(dir, entry.name, f))
+      }
+    } else if (entry.name.endsWith('.md')) {
+      // talks 目录下的「目录」索引页不是单篇正文
+      if (!(section === 'talks' && entry.name.includes('目录'))) out.push(path.join(dir, entry.name))
+    }
+  }
+  return out
+}
+
+function addDuanYongpingItems(items) {
+  for (const section of DY_SECTIONS) {
+    for (const filePath of duanFiles(section)) {
+      const fileName = path.basename(filePath)
+      const content = readMarkdown(filePath)
+      const title = content.match(/^title:\s*(.+)$/m)?.[1]?.trim()
+      const year = (fileName + content.slice(0, 400)).match(/(?:19|20)\d{2}/)?.[0]
+      items.push({
+        id: `duanyongping/${section}/${fileName}`,
+        name: (title || titleFromContent(content, fileName.replace(/\.md$/, ''))).replace(/记念/g, '纪念'),
+        type: 'duanyongping',
+        description: descriptionFromContent(content),
+        count: 1,
+        years: year ? [Number(year)] : [],
+        url: `/duanyongping/${section}/${md5(fileName).slice(0, 16)}`,
+        content,
+      })
+    }
+  }
+}
+
 // 搜索只需关键词命中，无需保留全文。截断到固定长度，
 // 既保留基本全文命中能力，又避免索引体积膨胀（全文会撑到 20MB+）。
 const SEARCH_CONTENT_LIMIT = 400
@@ -262,6 +374,8 @@ function generateSearchIndex(index) {
   addFlatItems(items, 'articles', 'article', 'articles')
   addMeetingItems(items)
   addBuffettFaqItems(items)
+  addLiKaShingItems(items)
+  addDuanYongpingItems(items)
 
   // 写入前统一截断 content，控制索引体积
   const slimItems = items.map(item => ({ ...item, content: truncateForSearch(item.content) }))

@@ -4,7 +4,7 @@ export type ReadingProgressType =
   | 'letter' | 'partnership' | 'concept' | 'company' | 'people'
   | 'qa' | 'talks' | 'interviews' | 'model' | 'almanack'
   | 'book' | 'column' | 'blogger' | 'business-history'
-  | 'duanyongping' | 'wesco' | 'archive'
+  | 'duanyongping' | 'wesco' | 'archive' | 'li-ka-shing'
 
 export interface ReadingProgress {
   letterId: string

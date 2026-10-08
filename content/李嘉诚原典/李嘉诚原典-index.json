@@ -1,31 +1,87 @@
 [
   {
-    "fileName": "媒体素材/商业周刊1047期-万变社会 不变承诺.md",
-    "title": "万变社会 不变承诺",
-    "year": 2007,
-    "wordCount": 1510,
-    "contentLength": 3584
-  },
-  {
-    "fileName": "媒体素材/杰出华人李嘉诚(RTHK)-普通话对照.md",
+    "fileName": "媒体素材/文字稿/杰出华人李嘉诚(RTHK)-普通话对照.md",
     "title": "杰出华人系列·李嘉诚（RTHK 2007-12-16 首播）粤语原文 + 普通话对照",
     "year": 2007,
     "wordCount": 53968,
     "contentLength": 136951
   },
   {
-    "fileName": "媒体素材/杰出华人李嘉诚(RTHK)-转写.md",
+    "fileName": "媒体素材/文字稿/杰出华人李嘉诚(RTHK)-转写.md",
     "title": "杰出华人系列·李嘉诚（RTHK 2007-12-16 首播）粤语纪录片逐字稿",
     "year": 2007,
     "wordCount": 29683,
     "contentLength": 73477
   },
   {
-    "fileName": "媒体素材/相约东南(福建东南电视台)访谈录像-转写.md",
+    "fileName": "媒体素材/文字稿/相约东南(福建东南电视台)访谈录像-转写.md",
     "title": "相约东南（福建东南电视台）录像—访谈逐字稿/摘要",
     "year": null,
     "wordCount": 2296,
     "contentLength": 5473
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-万变社会 不变承诺.md",
+    "title": "《商业周刊》1047期 · 万变社会 不变承诺",
+    "year": 2007,
+    "wordCount": 1510,
+    "contentLength": 3584
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-专题封面.md",
+    "title": "《商业周刊》1047期 · 专题封面",
+    "year": 2007,
+    "wordCount": 1127,
+    "contentLength": 2081
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-总编办公室.md",
+    "title": "《商业周刊》1047期 · 总编办公室——首富指挥总部",
+    "year": 2007,
+    "wordCount": 2999,
+    "contentLength": 7702
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-总编辑看总编辑.md",
+    "title": "《商业周刊》1047期 · 总编辑看总编辑",
+    "year": 2007,
+    "wordCount": 3019,
+    "contentLength": 7651
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-总编辑观点.md",
+    "title": "《商业周刊》1047期 · 总编辑观点——创业57年没有一年亏损",
+    "year": 2007,
+    "wordCount": 8345,
+    "contentLength": 22894
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-成功三部曲.md",
+    "title": "《商业周刊》1047期 · 成功三部曲——人生两度转折",
+    "year": 2007,
+    "wordCount": 5739,
+    "contentLength": 15209
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-成功二部曲.md",
+    "title": "《商业周刊》1047期 · 成功二部曲——3G事业扩张关键战役",
+    "year": 2007,
+    "wordCount": 9103,
+    "contentLength": 24509
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-成功首部曲.md",
+    "title": "《商业周刊》1047期 · 成功首部曲——孤独少年的自学翻身",
+    "year": 2007,
+    "wordCount": 5646,
+    "contentLength": 15108
+  },
+  {
+    "fileName": "媒体素材/文字稿/商业周刊1047期-百年华商第一人.md",
+    "title": "《商业周刊》1047期 · 百年华商第一人（专题封面/目录页）",
+    "year": 2007,
+    "wordCount": 1413,
+    "contentLength": 2779
   },
   {
     "fileName": "05_声明信函/2018_退休信全文：天地之间_至诚无息.md",
@@ -689,9 +745,9 @@
     "contentLength": 4071
   },
   {
-    "fileName": "02_汕大演讲/奉献的艺术长江商学院『与大师同行』讲座系列.md",
-    "title": "奉献的艺术长江商学院『与大师同行』讲座系列",
-    "year": null,
+    "fileName": "03_长江商学院/奉献的艺术长江商学院『与大师同行』讲座系列.md",
+    "title": "奉献的艺术",
+    "year": 2004,
     "wordCount": 4797,
     "contentLength": 13173
   },
@@ -738,8 +794,8 @@
     "contentLength": 10389
   },
   {
-    "fileName": "02_汕大演讲/强者的有为长江商学院首届毕业典礼.md",
-    "title": "强者的有为长江商学院首届毕业典礼",
+    "fileName": "03_长江商学院/强者的有为长江商学院首届毕业典礼.md",
+    "title": "强者的有为",
     "year": null,
     "wordCount": 1154,
     "contentLength": 2700
@@ -1074,8 +1130,8 @@
     "contentLength": 2723
   },
   {
-    "fileName": "02_汕大演讲/管理的艺术长江商学院『与大师同行』讲座系列.md",
-    "title": "管理的艺术长江商学院『与大师同行』讲座系列",
+    "fileName": "03_长江商学院/管理的艺术长江商学院『与大师同行』讲座系列.md",
+    "title": "管理的艺术",
     "year": null,
     "wordCount": 3588,
     "contentLength": 9788
@@ -1102,8 +1158,8 @@
     "contentLength": 4821
   },
   {
-    "fileName": "02_汕大演讲/行动英雄长江商学院成立十周年庆典.md",
-    "title": "行动英雄长江商学院成立十周年庆典",
+    "fileName": "03_长江商学院/行动英雄长江商学院成立十周年庆典.md",
+    "title": "行动英雄",
     "year": null,
     "wordCount": 1492,
     "contentLength": 3808
@@ -1123,9 +1179,9 @@
     "contentLength": 3811
   },
   {
-    "fileName": "02_汕大演讲/赚钱的艺术长江商学院「与大师同行」讲座系列.md",
-    "title": "赚钱的艺术长江商学院「与大师同行」讲座系列",
-    "year": null,
+    "fileName": "03_长江商学院/赚钱的艺术长江商学院「与大师同行」讲座系列.md",
+    "title": "赚钱的艺术",
+    "year": 2002,
     "wordCount": 3735,
     "contentLength": 9919
   },

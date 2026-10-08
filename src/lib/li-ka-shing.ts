@@ -25,6 +25,12 @@ export interface LiCategory {
   title: string
   /** 一句话描述 */
   description: string
+  /**
+   * 同一目录下再按文件名细分的开关：命中列表的篇归入本栏目，
+   * 其余篇回落到 dirPrefix 相同的那个兜底栏目。
+   * 例：媒体素材/文字稿/ 下既有纪录片逐字稿，也有杂志专题报道。
+   */
+  fileNames?: string[]
 }
 
 export interface LiDocument {
@@ -83,13 +89,36 @@ export const LI_CATEGORIES: LiCategory[] = [
   {
     slug: 'media-transcripts',
     dirPrefix: '媒体素材',
-    title: '媒体纪录片逐字稿',
-    description: 'RTHK《杰出华人系列》、《相约东南》等纪录片与访谈录像的文字转写。',
+    title: '纪录片与访谈逐字稿',
+    description: 'RTHK《杰出华人系列》、《相约东南》等纪录片与访谈录像的逐字转写，是他最长篇的口语化自述。',
+    fileNames: [
+      '杰出华人李嘉诚(RTHK)-普通话对照.md',
+      '杰出华人李嘉诚(RTHK)-转写.md',
+      '相约东南(福建东南电视台)访谈录像-转写.md',
+    ],
+  },
+  {
+    slug: 'media-archive',
+    dirPrefix: '媒体素材',
+    title: '媒体报道存档',
+    description: '《商业周刊》第1047期「李嘉诚传奇」等专题报道存档；除〈万变社会 不变承诺〉为其署名专栏外，其余均为第三方叙述，非一手发言。',
   },
 ]
 
-const CATEGORY_BY_DIR_PREFIX = new Map(LI_CATEGORIES.map(c => [c.dirPrefix, c]))
 const CATEGORY_BY_SLUG = new Map(LI_CATEGORIES.map(c => [c.slug, c]))
+
+/**
+ * 栏目归属：先按文件名细分（同一目录内区分逐字稿与杂志报道），
+ * 再回落到一级目录前缀。
+ */
+function resolveCategory(fileName: string): LiCategory | undefined {
+  const base = fileName.split('/').pop() || ''
+  const byFile = LI_CATEGORIES.find(c => c.fileNames?.includes(base))
+  if (byFile) return byFile
+  const slashIdx = fileName.indexOf('/')
+  const prefix = slashIdx >= 0 ? fileName.slice(0, slashIdx) : ''
+  return LI_CATEGORIES.find(c => !c.fileNames && c.dirPrefix === prefix)
+}
 
 const ROOT_DIR = path.join(process.cwd(), 'content', '李嘉诚原典')
 const INDEX_FILE = path.join(ROOT_DIR, '李嘉诚原典-index.json')
@@ -123,9 +152,7 @@ export function getLiDocuments(): LiDocument[] {
   const docs: LiDocument[] = []
   slugToFileName = new Map()
   for (const item of raw) {
-    const slashIdx = item.fileName.indexOf('/')
-    const prefix = slashIdx >= 0 ? item.fileName.slice(0, slashIdx) : ''
-    const category = CATEGORY_BY_DIR_PREFIX.get(prefix)
+    const category = resolveCategory(item.fileName)
     if (!category) continue
     const fullPath = path.join(ROOT_DIR, item.fileName)
     if (!existsSync(fullPath)) continue

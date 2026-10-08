@@ -16,6 +16,7 @@ import { getAllBuffettFaqTopics } from '@/lib/buffett-faq'
 import { getMungerLocalArchiveItems } from '@/lib/munger-archive'
 import { getBloggers, getAllBloggerArticles } from '@/lib/bloggers'
 import { getDYDocs, type DYSection } from '@/lib/duanyongping'
+import { getLiDocuments, LI_CATEGORIES } from '@/lib/li-ka-shing'
 import { getAllBlogPosts, getBlogTags, getBlogCategories } from '@/lib/blog'
 
 function namesIn(directory: string): string[] {
@@ -109,6 +110,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
+  // 李嘉诚专题：入口 + 各栏目 + 全部原典正文
+  urls.add(`${baseUrl}/li-ka-shing`)
+  LI_CATEGORIES.forEach(category => urls.add(`${baseUrl}/li-ka-shing/${category.slug}`))
+  getLiDocuments().forEach(doc => urls.add(`${baseUrl}${doc.href}`))
+
   const letterYears = new Set(
     namesIn('letters').map(name => name.match(/(?:19|20)\d{2}/)?.[0]).filter(Boolean) as string[]
   )
@@ -123,7 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const path = url.slice(baseUrl.length) || '/'
     if (path === '/') return 'daily'
     if (/^\/blog(\/|$)/.test(path) || /^\/duanyongping(\/|$)/.test(path)) return 'weekly'
-    if (/^\/letters(\/|$)/.test(path) || /^\/poor-charlies-almanack(\/|$)/.test(path) || /^\/(concepts|companies|people)(\/|$)/.test(path)) return 'yearly'
+    if (/^\/letters(\/|$)/.test(path) || /^\/poor-charlies-almanack(\/|$)/.test(path) || /^\/(concepts|companies|people|li-ka-shing)(\/|$)/.test(path)) return 'yearly'
     return 'monthly'
   }
 

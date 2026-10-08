@@ -14,6 +14,7 @@ const PERSON_HREF: Record<string, string> = {
   '芒格': '/munger',
   '查理·芒格': '/munger',
   '段永平': '/duanyongping',
+  '李嘉诚': '/li-ka-shing',
 }
 
 // 类别标签 → 类别列表页（一个目的地只保留一个标签文案，避免同一标签映射多个页面）

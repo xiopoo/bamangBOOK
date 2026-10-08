@@ -7,7 +7,7 @@ import { suggestStaticContent } from '@/lib/static-search-client'
 
 interface Suggestion {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq' | 'duanyongping' | 'li-ka-shing'
   count: number
   url: string
 }
@@ -28,6 +28,8 @@ const typeLabels: Record<string, string> = {
   model: '思维模型',
   meeting: '股东大会实录',
   faq: '主题问答',
+  duanyongping: '段永平',
+  'li-ka-shing': '李嘉诚',
 }
 
 // 徽章色调：与 ui.css .ui-badge[data-tone] 对应。
@@ -47,6 +49,8 @@ const typeTone: Record<string, 'oxblood' | 'gold' | 'ink' | 'muted'> = {
   interview: 'oxblood',
   meeting: 'oxblood',
   faq: 'oxblood',
+  duanyongping: 'oxblood',
+  'li-ka-shing': 'oxblood',
   blogger: 'muted',
 }
 

@@ -13,6 +13,7 @@ import { getDocuments } from '@/lib/documents'
 import { documentHref } from '@/lib/content-routes'
 import { getReadingStats } from '@/lib/reading-library'
 import { getDYDocs, type DYDoc, type DYSection } from '@/lib/duanyongping'
+import { getLiDocuments } from '@/lib/li-ka-shing'
 import Reveal from '@/components/ui/Reveal'
 import '@/styles/templates/home.css'
 
@@ -42,6 +43,7 @@ export default function HomePage() {
   const duanCount = readingStats.authorCounts['段永平'] || 0
   const buffettCount = readingStats.authorCounts['巴菲特'] || 0
   const mungerCount = readingStats.authorCounts['芒格'] || 0
+  const liKaShingCount = getLiDocuments().length
   return <>
     <SubdomainRootRouter />
     <PageContainer maxWidth="6xl" className="archive-home">
@@ -69,6 +71,7 @@ export default function HomePage() {
           <ArchiveDrawer href="/buffett" title="巴菲特" count={buffettCount} description="合伙人信、股东信与股东大会问答。" />
           <ArchiveDrawer href="/munger" title="芒格" count={mungerCount} description="演讲、Wesco 问答与思维模型。" />
           <ArchiveDrawer href="/duanyongping" title="段永平" count={duanCount} description="博客、问答、演讲与公司实践。" />
+          <ArchiveDrawer href="/li-ka-shing" title="李嘉诚" count={liKaShingCount} description="年报主席报告书、汕大演讲、访谈与业绩会答问。" />
           <ArchiveDrawer href="/letters" title="信件" count={letters.length} description="按时间从早到晚连续阅读。" />
           <ArchiveDrawer href="/talks" title="演讲与访谈" count={talks.length} description="在真实对话与公开表达中理解判断。" />
           <ArchiveDrawer href="/business-history" title="公司研究" count={studies.length} description="从历史、护城河与资本配置理解企业。" />

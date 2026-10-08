@@ -22,6 +22,7 @@ const TYPE_LABELS: Record<string, string> = {
   blogger: '博主文章',
   'business-history': '商业史',
   duanyongping: '段永平',
+  'li-ka-shing': '李嘉诚',
   wesco: 'Wesco 问答',
   archive: '芒格原典',
 }
@@ -42,6 +43,7 @@ const TYPE_COLORS: Record<string, string> = {
   blogger: 'bg-primary/10 text-primary',
   'business-history': 'bg-primary/10 text-primary',
   duanyongping: 'bg-primary/10 text-primary',
+  'li-ka-shing': 'bg-primary/10 text-primary',
   wesco: 'bg-primary/10 text-primary',
   archive: 'bg-primary/10 text-primary',
 }

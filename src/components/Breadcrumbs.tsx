@@ -78,6 +78,10 @@ const pathMap: Record<string, BreadcrumbItem[]> = {
     { label: '首页', href: '/' },
     { label: '专栏', href: '/columns' },
   ],
+  '/li-ka-shing': [
+    { label: '首页', href: '/' },
+    { label: '李嘉诚', href: '/li-ka-shing' },
+  ],
   '/duanyongping': [
     { label: '首页', href: '/' },
     { label: '段永平', href: '/duanyongping' },

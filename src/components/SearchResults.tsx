@@ -21,7 +21,7 @@ import { SkeletonList } from '@/components/ui/Skeleton'
 
 interface SearchResult {
   name: string
-  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq'
+  type: 'concept' | 'company' | 'person' | 'letter' | 'partnership' | 'article' | 'qa' | 'talk' | 'interview' | 'blogger' | 'book' | 'column' | 'model' | 'meeting' | 'faq' | 'duanyongping' | 'li-ka-shing'
   description: string
   count: number
   years: number[]
@@ -51,6 +51,8 @@ const typeLabels: Record<string, string> = {
   model: '思维模型',
   meeting: '股东大会实录',
   faq: '主题问答',
+  duanyongping: '段永平',
+  'li-ka-shing': '李嘉诚',
 }
 
 // B-06：内容角色 —— 让用户分清「主理人写的文章」和「归档资料」
@@ -69,6 +71,8 @@ const roleOf: Record<string, string> = {
   interview: '原典',
   meeting: '原典',
   faq: '原典',
+  duanyongping: '原典',
+  'li-ka-shing': '原典',
   blogger: '外部资料',
 }
 
@@ -108,6 +112,8 @@ const typeIcons: Record<string, LucideIcon> = {
   model: Brain,
   meeting: Landmark,
   faq: ClipboardList,
+  duanyongping: Users,
+  'li-ka-shing': Landmark,
 }
 
 // 分组顺序（B-06：博客 → 实体 → 原典 → 外部资料）。
@@ -116,6 +122,7 @@ const GROUP_ORDER = [
   'column', 'article', 'book', 'model',
   'concept', 'company', 'person',
   'letter', 'partnership', 'qa', 'talk', 'interview', 'meeting', 'faq',
+  'duanyongping', 'li-ka-shing',
   'blogger',
 ] as const
 
@@ -161,6 +168,8 @@ export default function SearchResults({ query, results, total, isLoading }: Sear
     model: results.filter(r => r.type === 'model'),
     meeting: results.filter(r => r.type === 'meeting'),
     faq: results.filter(r => r.type === 'faq'),
+    duanyongping: results.filter(r => r.type === 'duanyongping'),
+    'li-ka-shing': results.filter(r => r.type === 'li-ka-shing'),
   }
 
   // 加载状态 → 骨架屏（替代"转圈"，CLS≈0，且形状与真实结果对齐）
